@@ -8,6 +8,10 @@
 
 - AI agent documents MUST stay bilingual with equivalent content (the file without a suffix is the English version), for example SKILL.md = SKILL_ch.md, AGENTS.md = AGENTS_ch.md, and so on.
 - Links in AI agent documents MUST match the document's language: an English file links to the English target, and a Traditional Chinese file links to the _ch target when one exists.
+- The site is published with Netlify. [netlify.toml](netlify.toml) publishes the `public/` directory with no build command:
+  - All site files (HTML, CSS, images) go under `public/`; files outside `public/` do not appear on the site.
+  - Pages link to each other with relative paths to `.html` files and do not rely on Netlify pretty URLs, so they also work when opened as local files.
+  - When adding a topic page, also add a row to the research index table in `public/index.html`.
 
 ## Game Writing Rules
 

@@ -8,6 +8,10 @@
 
 - AI agent 文件維持雙語且內容等價 (無後綴即英文版)，例如 SKILL.md=SKILL_ch.md、AGENTS.md=AGENTS_ch.md 等等。
 - AI agent 文件中維持語言對應連結：英文檔案連到英文目標，繁體中文檔案在有 _ch 目標時連到 _ch 目標。
+- 網站以 Netlify 發佈，[netlify.toml](netlify.toml) 指定發佈 `public/` 目錄，不需建置指令：
+  - 網站檔案 (HTML、CSS、圖片) 一律放在 `public/` 下；`public/` 以外的檔案不會出現在網站上。
+  - 頁面間以相對路徑連到 `.html` 檔，不依賴 Netlify 的 pretty URL，本機直接開檔也能瀏覽。
+  - 新增主題頁面時，同時在 `public/index.html` 的研究索引表新增一列。
 
 ## 遊戲撰寫守則
 
