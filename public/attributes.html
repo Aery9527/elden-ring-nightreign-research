@@ -6,17 +6,17 @@
   <title>能力值涵義表</title>
   <meta name="description" content="《艾爾登法環 黑夜君臨》能力值選單 12 項的主要用途、遺物數值及查證限制。">
   <link rel="stylesheet" href="styles.css">
+  <script src="render.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <nav><a href="index.html">黑夜君臨研究資料庫</a><span class="version">遊戲版本 1.03.5</span></nav>
+    <nav><a href="index.html">黑夜君臨研究資料庫</a><span class="version">遊戲版本 <span data-game-version></span></span></nav>
   </header>
 
   <main>
     <h1>能力值涵義表</h1>
     <ul>
-      <li>「遺物數值 +1／+2／+3」欄的效果可跨遺物疊加，同級與不同級都會生效；能力值點數直接相加，例如生命力 +1 與生命力 +3 合計 +4，提供倍率套用前的 HP 上限 +80；本表固定資源增量均未計其他上限倍率。<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ARelics" target="_blank" rel="noopener noreferrer">遺物說明</a></li>
-      <li>「遺物數值」欄的固定值（例如 HP 上限 +100）只出現在特定遺物，同一效果不重複生效；百分比（例如 HP 上限 +10%）只出現在深層遺物並必伴隨負面效果，可跨遺物疊加；其中 HP 百分比效果以倍率相乘，例如兩個 HP 上限 +10% 為 ×1.21，FP、精力的多份效果合成方式尚未核實。<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>、<a href="https://paraphrazetutorials.github.io/nightreign-data-tools/Data/reliquary.json" target="_blank" rel="noopener noreferrer">遺物資料集</a>、<a href="https://www.reddit.com/r/Nightreign/comments/1nws4xe/depth_4_wylder/" target="_blank" rel="noopener noreferrer">HP 疊加計算討論</a></li>
+      <li>「遺物數值」兩欄的說明列出各效果的取得方式與疊加規則，例如<span data-example="tier-sum" data-effect="vigor-up" data-tier-list="1,3"></span>；<span data-example="stack" data-effect="max-hp-percent" data-count="2"></span>。本表數值均為單一效果本身的增量；固定增量與百分比效果的計算順序尚未核實。<span data-sources="vigor-up max-hp-percent"></span></li>
     </ul>
 
     <nav class="toc" aria-label="目錄" id="toc">
@@ -38,76 +38,76 @@
           </thead>
           <tbody>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-hp-up.png" width="48" height="48" alt="HP 提升效果圖示" loading="lazy">提升 HP 上限<span class="en">Increased Maximum HP</span></span></td>
+              <td class="item" data-item="effect:max-hp-flat"></td>
               <td>增加生命量表可容納的上限；HP 是受傷時消耗的生存資源。</td>
-              <td class="value">HP 上限 +100<span class="sub">等同生命力 +5；同一效果不重複生效</span><span class="alt">HP 上限 +10%</span><span class="sub">深層遺物；可疊加；必伴隨負面效果</span></td>
+              <td class="value" data-values="max-hp-flat max-hp-percent"></td>
               <td class="value">—</td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-fp-up.png" width="48" height="48" alt="FP 提升效果圖示" loading="lazy">提升 FP 上限<span class="en">Increased Maximum FP</span></span></td>
+              <td class="item" data-item="effect:max-fp-flat"></td>
               <td>增加 FP 容量，供需要 FP 的戰技、魔術及禱告使用。</td>
-              <td class="value">FP 上限 +25<span class="sub">等同集中力 +5；同一效果不重複生效</span><span class="alt">FP 上限 +15%</span><span class="sub">深層遺物；可疊加；必伴隨負面效果</span></td>
+              <td class="value" data-values="max-fp-flat max-fp-percent"></td>
               <td class="value">—</td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-stamina-up.png" width="48" height="48" alt="精力提升效果圖示" loading="lazy">提升精力上限<span class="en">Increased Maximum Stamina</span></span></td>
+              <td class="item" data-item="effect:max-stamina-flat"></td>
               <td>增加精力量表容量，支應攻擊、迴避等消耗精力的動作。</td>
-              <td class="value">精力上限 +10<span class="sub">等同耐力 +5；同一效果不重複生效</span><span class="alt">精力上限 +12%</span><span class="sub">深層遺物；可疊加；必伴隨負面效果</span></td>
+              <td class="value" data-values="max-stamina-flat max-stamina-percent"></td>
               <td class="value">—</td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-hp-up.png" width="48" height="48" alt="HP 提升效果圖示" loading="lazy">生命力<span class="en">Vigor / VIG</span></span></td>
+              <td class="item" data-item="stat:vigor"></td>
               <td>決定 HP 上限的基礎能力值。</td>
               <td class="value">—</td>
-              <td class="value">HP 上限 +20／+40／+60</td>
+              <td class="value" data-tiers="vigor-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-fp-up.png" width="48" height="48" alt="FP 提升效果圖示" loading="lazy">集中力<span class="en">Mind / MND</span></span></td>
+              <td class="item" data-item="stat:mind"></td>
               <td>決定 FP 上限的基礎能力值。</td>
               <td class="value">—</td>
-              <td class="value">FP 上限 +5／+10／+15</td>
+              <td class="value" data-tiers="mind-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-stamina-up.png" width="48" height="48" alt="精力提升效果圖示" loading="lazy">耐力<span class="en">Endurance / END</span></span></td>
+              <td class="item" data-item="stat:endurance"></td>
               <td>決定精力上限的基礎能力值。</td>
               <td class="value">—</td>
-              <td class="value">精力上限 +2／+4／+6</td>
+              <td class="value" data-tiers="endurance-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-attack-up.png" width="48" height="48" alt="攻擊力提升效果圖示" loading="lazy">力氣<span class="en">Strength / STR</span></span></td>
+              <td class="item" data-item="stat:strength"></td>
               <td>提升具有力氣補正之武器的攻擊力。</td>
               <td class="value">—</td>
-              <td class="value">力氣 +1／+2／+3</td>
+              <td class="value" data-tiers="strength-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-attack-up.png" width="48" height="48" alt="攻擊力提升效果圖示" loading="lazy">靈巧<span class="en">Dexterity / DEX</span></span></td>
+              <td class="item" data-item="stat:dexterity"></td>
               <td>提升具有靈巧補正之武器的攻擊力；也參與施法速度。</td>
               <td class="value">—</td>
-              <td class="value">靈巧 +1／+2／+3</td>
+              <td class="value" data-tiers="dexterity-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-spell-up.png" width="48" height="48" alt="法術提升效果圖示" loading="lazy">智力<span class="en">Intelligence / INT</span></span></td>
+              <td class="item" data-item="stat:intelligence"></td>
               <td>提升具有智力補正之武器的攻擊力，是法杖施放魔術的重要能力值。</td>
               <td class="value">—</td>
-              <td class="value">智力 +1／+2／+3</td>
+              <td class="value" data-tiers="intelligence-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-spell-up.png" width="48" height="48" alt="法術提升效果圖示" loading="lazy">信仰<span class="en">Faith / FAI</span></span></td>
+              <td class="item" data-item="stat:faith"></td>
               <td>提升具有信仰補正之武器的攻擊力，是聖印記施放禱告的重要能力值。</td>
               <td class="value">—</td>
-              <td class="value">信仰 +1／+2／+3</td>
+              <td class="value" data-tiers="faith-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-attack-up.png" width="48" height="48" alt="攻擊力提升效果圖示" loading="lazy">感應<span class="en">Arcane / ARC</span></span></td>
+              <td class="item" data-item="stat:arcane"></td>
               <td>提升具有感應補正之武器的攻擊力，並影響毒、出血等適用攻擊的異常狀態累積。</td>
               <td class="value">—</td>
-              <td class="value">感應 +1／+2／+3</td>
+              <td class="value" data-tiers="arcane-up"></td>
             </tr>
             <tr>
-              <td class="item"><span class="item-name"><img class="icon" src="images/effect-defense-up.png" width="48" height="48" alt="防禦提升效果圖示" loading="lazy">強韌度<span class="en">Poise</span></span></td>
+              <td class="item" data-item="stat:poise"></td>
               <td>抵抗受擊硬直與動作中斷的能力。</td>
               <td class="value">—</td>
-              <td class="value">承受削韌 -5%／-10%／-15%<span class="sub">Eldenpedia 列為 -10%／-15%／-20%；見查證限制</span></td>
+              <td class="value" data-tiers="poise-up"></td>
             </tr>
           </tbody>
         </table>
@@ -119,8 +119,8 @@
       <h2 id="understanding">如何理解提升效果</h2>
       <ul>
         <li>生命力、集中力、耐力是基礎能力值；HP、FP、精力是由它們影響的資源。選單中「提升上限」描述最終效果，不能據此判定底層一定使用獨立乘區；例如社群資料將部分上限效果列為等同增加集中力或耐力。<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a></li>
-        <li>角色升級時，能力值依角色自動成長；本作不是在升級畫面逐點自由分配能力值。這不表示每項能力值每級都會增加，例如社群資料中的<img class="icon icon-char" src="images/nightfarer-duchess.png" width="24" height="24" alt="女爵圖示" loading="lazy">女爵感應在等級 1 與 15 均為 11。<a href="https://www.fromsoftware.jp/manual/nightreign/win/basic.html" target="_blank" rel="noopener noreferrer">官方升級說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
-        <li>攻擊能力值的實際收益取決於武器補正與角色能力值；「力氣 +3」不能直接解讀成「所有傷害 +3%」。<a href="https://media-center.bandainamcoent.eu/games/elden-ring-nightreign/ERN_FuturePress_StarterGuide.pdf" target="_blank" rel="noopener noreferrer">官方入門指南</a></li>
+        <li>角色升級時，能力值依角色自動成長；本作不是在升級畫面逐點自由分配能力值。這不表示每項能力值每級都會增加，例如社群資料中的<img class="icon icon-char" src="images/nightfarer-duchess.png" width="24" height="24" alt="女爵圖示" loading="lazy">女爵感應在等級 1 與 15 分別為 <span data-character="duchess:1:arcane"></span> 與 <span data-character="duchess:15:arcane"></span>。<a href="https://www.fromsoftware.jp/manual/nightreign/win/basic.html" target="_blank" rel="noopener noreferrer">官方升級說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
+        <li>攻擊能力值的實際收益取決於武器補正與角色能力值；「<span data-tier-text="strength-up:3"></span>」這類能力值增量不能直接換算成固定的傷害百分比。<a href="https://media-center.bandainamcoent.eu/games/elden-ring-nightreign/ERN_FuturePress_StarterGuide.pdf" target="_blank" rel="noopener noreferrer">官方入門指南</a></li>
       </ul>
 
       <figure>
@@ -156,9 +156,9 @@
       <h2 id="limitations">查證限制</h2>
       <ul>
         <li>感應與發現力／稀有掉落：來源存在不同說法，現有查證不足以判定。本表不將「增加稀有掉落」列為已確認收益。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="https://www.reddit.com/r/Nightreign/comments/1l33h2x/a_question_about_arcane/" target="_blank" rel="noopener noreferrer">社群異議</a></li>
-        <li>感應與升級：Game8 稱升級會提升包含感應在內的所有能力值，與 Eldenpedia 女爵等級 1 和 15 的感應同為 11 不符。本文採女爵數值作例子，尚未實測。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
-        <li>耐力 +3：Eldenpedia 的<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果分頁</a>列為精力 +6，<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a>列為 +5。本文採分頁數值；<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes" target="_blank" rel="noopener noreferrer">能力值表</a>中<img class="icon icon-char" src="images/nightfarer-wylder.png" width="24" height="24" alt="追蹤者圖示" loading="lazy">追蹤者等級 1→2 的耐力 3→6、精力 54→60 也符合 +3 對應 +6，但尚未在本機實測該遺物。</li>
-        <li>強韌度 +1／+2／+3：<a href="https://paraphrazetutorials.github.io/nightreign-data-tools/Data/reliquary.json" target="_blank" rel="noopener noreferrer">遺物資料集</a>的社群詳細說明列承受削韌倍率 0.95／0.9／0.85，<a href="https://relics.pro/compendium/" target="_blank" rel="noopener noreferrer">Relics.pro 遺物圖鑑</a>同為 -5%／-10%／-15%；Eldenpedia <a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>分頁列為 -10%／-15%／-20%。本表採 Round Table Codex 的社群詳細說明，與 Relics.pro 一致；尚未以原始遊戲參數或實測確認。</li>
+        <li>感應與升級：Game8 稱升級會提升包含感應在內的所有能力值，與 Eldenpedia 女爵等級 1 和 15 的感應（<span data-character="duchess:1:arcane"></span>、<span data-character="duchess:15:arcane"></span>）不符。本文採女爵數值作例子，尚未實測。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
+        <li>耐力 +3 的精力增量：Eldenpedia 的<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果分頁</a>與<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a>數值不同，表格並列兩者；<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes" target="_blank" rel="noopener noreferrer">能力值表</a>中<img class="icon icon-char" src="images/nightfarer-wylder.png" width="24" height="24" alt="追蹤者圖示" loading="lazy">追蹤者等級 1→2 的耐力 <span data-character="wylder:1:endurance"></span>→<span data-character="wylder:2:endurance"></span>、精力上限 <span data-character="wylder:1:maxStamina"></span>→<span data-character="wylder:2:maxStamina"></span> 與遺物效果分頁一致，但尚未在本機實測該遺物。</li>
+        <li>強韌度 +1／+2／+3 的承受削韌：<a href="https://paraphrazetutorials.github.io/nightreign-data-tools/Data/reliquary.json" target="_blank" rel="noopener noreferrer">遺物資料集</a>的社群詳細說明與 <a href="https://relics.pro/compendium/" target="_blank" rel="noopener noreferrer">Relics.pro 遺物圖鑑</a>一致，與 Eldenpedia <a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>分頁不同，表格並列兩組數值，不預設採用任何一組；尚未以原始遊戲參數或實測確認。</li>
         <li>本文沒有驗證所有能力值對防禦力、異常抗性、發現力的附帶影響，也沒有驗證補正軟上限、疊加順序或強韌度門檻；這些不屬於本表的已確認結論。</li>
         <li>引用頁面的查閱日期不代表它適用當前所有補丁。需要精確配裝計算時，須核對效果、遊戲版本及相同條件下的實測。</li>
       </ul>
