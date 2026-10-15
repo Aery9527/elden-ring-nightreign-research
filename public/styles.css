@@ -1,0 +1,241 @@
+:root {
+  color-scheme: light;
+  --bg: oklch(0.985 0.004 85);
+  --surface: oklch(0.995 0.002 85);
+  --text: oklch(0.26 0.015 60);
+  --muted: oklch(0.48 0.015 60);
+  --border: oklch(0.87 0.012 70);
+  --accent: oklch(0.5 0.11 65);
+  --accent-soft: oklch(0.95 0.03 80);
+  --code-bg: oklch(0.94 0.01 80);
+  --row-alt: oklch(0.97 0.006 80);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: oklch(0.18 0.012 60);
+    --surface: oklch(0.21 0.013 60);
+    --text: oklch(0.92 0.01 80);
+    --muted: oklch(0.72 0.015 70);
+    --border: oklch(0.35 0.015 60);
+    --accent: oklch(0.8 0.11 80);
+    --accent-soft: oklch(0.28 0.04 70);
+    --code-bg: oklch(0.27 0.012 60);
+    --row-alt: oklch(0.2 0.012 60);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.site-header nav,
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.version {
+  color: var(--muted);
+}
+
+main {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+h1,
+h2 {
+  line-height: 1.35;
+  scroll-margin-top: 16px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 1.9rem;
+}
+
+h2 {
+  margin: 48px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.4rem;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+ul {
+  padding-left: 1.4em;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+code {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--code-bg);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.toc {
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.toc strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.toc ul {
+  margin: 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+.table-wide {
+  min-width: 700px;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--accent-soft);
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--row-alt);
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+figure {
+  overflow-x: auto;
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+figure svg {
+  display: block;
+  width: 100%;
+  min-width: 600px;
+  height: auto;
+}
+
+.diagram .box {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.diagram .edge {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+
+.diagram .arrowhead {
+  fill: var(--muted);
+}
+
+.diagram text {
+  fill: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.diagram .label {
+  fill: var(--muted);
+  font-size: 13px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  vertical-align: -6px;
+}
+
+.icon-char {
+  padding: 2px;
+  border-radius: 50%;
+  background: oklch(0.25 0.012 60);
+}
+
+td.item {
+  white-space: nowrap;
+}
+
+.back {
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
