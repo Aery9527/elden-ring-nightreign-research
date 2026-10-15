@@ -16,3 +16,8 @@
 - 提及遊戲內項目時，必須找到該遊戲內對應的圖片，圖片來源為 [Eldenpedia](https://eldenring.wiki.gg/)
   - 只採用檔案頁授權標示為遊戲素材 (`{{License|game}}`) 的圖片；社群編修圖 (例如檔名含 `Custom`) 不算遊戲內圖片。
   - 圖片下載至 `public/images/`，並在頁面的資料來源列出 wiki 檔案頁。
+  - 同一種編排位置的圖片維持相同大小；圖片一律使用 `.icon` class，尺寸只在 `public/styles.css` 依位置設定，不在個別圖片上另外調整：
+    - 表格內：48px (`td .icon`)。
+    - 正文內：24px (`.icon`)。
+    - 出現新的編排方式時，先在 `public/styles.css` 新增該位置的尺寸規則。
+    - `<img>` 的 `width`/`height` 屬性與該位置的尺寸一致。

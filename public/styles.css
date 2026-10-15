@@ -225,6 +225,13 @@ figure svg {
   vertical-align: -6px;
 }
 
+/* 圖片尺寸只依位置設定：正文 24px，表格內 48px */
+td .icon {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
 .icon-char {
   padding: 2px;
   border-radius: 50%;
@@ -233,6 +240,23 @@ figure svg {
 
 td.item {
   white-space: nowrap;
+}
+
+.item-name {
+  display: grid;
+  grid-template-columns: 48px auto;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.item-name .icon {
+  grid-row: span 2;
+  margin: 0;
+}
+
+.item-name .en {
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .back {

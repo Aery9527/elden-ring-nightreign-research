@@ -16,3 +16,8 @@
 - When mentioning an in-game item, agents MUST find the corresponding in-game image. The image source is [Eldenpedia](https://eldenring.wiki.gg/).
   - Use only images whose file page marks the license as a game asset (`{{License|game}}`); community edits (for example, filenames containing `Custom`) do not count as in-game images.
   - Download images to `public/images/`, and list the wiki file pages in the page's sources.
+  - Images in the same layout position MUST keep the same size. Every image uses the `.icon` class, and its size is set only in `public/styles.css` by position, never adjusted on an individual image:
+    - Inside a table: 48px (`td .icon`).
+    - In body text: 24px (`.icon`).
+    - When a new layout appears, first add a size rule for that position in `public/styles.css`.
+    - The `width`/`height` attributes of `<img>` match the size for its position.
