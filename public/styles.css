@@ -227,15 +227,24 @@ figure svg {
 .icon {
   width: 24px;
   height: 24px;
+  object-fit: contain;
   margin-right: 6px;
   vertical-align: -6px;
 }
 
-/* 圖片尺寸只依位置設定：正文 24px，表格內 48px */
+/* 圖片尺寸只依位置設定：正文 24px，表格內 48px，表格內效果說明的名稱清單 24px */
 td .icon {
   width: 48px;
   height: 48px;
   vertical-align: middle;
+}
+
+td .entry .icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin: 0 4px 0 0;
+  vertical-align: -6px;
 }
 
 .icon-char {

@@ -4,27 +4,328 @@
   "icons": {
     "hp-up": {
       "src": "images/effect-hp-up.png",
-      "alt": "HP 提升效果圖示"
+      "alt": "HP 提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_HP_Up.png"
     },
     "fp-up": {
       "src": "images/effect-fp-up.png",
-      "alt": "FP 提升效果圖示"
+      "alt": "FP 提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_FP_Up.png"
     },
     "stamina-up": {
       "src": "images/effect-stamina-up.png",
-      "alt": "精力提升效果圖示"
+      "alt": "精力提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Stamina_Up.png"
     },
     "attack-up": {
       "src": "images/effect-attack-up.png",
-      "alt": "攻擊力提升效果圖示"
+      "alt": "攻擊力提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Attack_Up.png"
     },
     "spell-up": {
       "src": "images/effect-spell-up.png",
-      "alt": "法術提升效果圖示"
+      "alt": "法術提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Spell_Up.png"
     },
     "defense-up": {
       "src": "images/effect-defense-up.png",
-      "alt": "防禦提升效果圖示"
+      "alt": "防禦提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Defense_Up.png"
+    },
+    "basic-action": {
+      "src": "images/effect-basic-action.png",
+      "alt": "基本動作效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Basic_Action.png"
+    },
+    "hp-down": {
+      "src": "images/effect-hp-down.png",
+      "alt": "HP 降低效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_HP_Down.png"
+    },
+    "item-up": {
+      "src": "images/effect-item-up.png",
+      "alt": "道具提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Item_Up.png"
+    },
+    "attack-down": {
+      "src": "images/effect-attack-down.png",
+      "alt": "攻擊力降低效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Attack_Down.png"
+    },
+    "defense-down": {
+      "src": "images/effect-defense-down.png",
+      "alt": "防禦降低效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Defense_Down.png"
+    },
+    "weapon-skill-up": {
+      "src": "images/effect-weapon-skill-up.png",
+      "alt": "戰技提升效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Weapon_Skill_Up.png"
+    },
+    "character-skill": {
+      "src": "images/effect-character-skill.png",
+      "alt": "技藝效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Character_Skill.png"
+    },
+    "ultimate-art": {
+      "src": "images/effect-ultimate-art.png",
+      "alt": "絕活效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Ultimate_Art.png"
+    },
+    "item-down": {
+      "src": "images/effect-item-down.png",
+      "alt": "道具降低效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Item_Down.png"
+    },
+    "ultimate-art-down": {
+      "src": "images/effect-ultimate-art-down.png",
+      "alt": "絕活降低效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GSBg_Ultimate_Art_Down.png"
+    },
+    "attack-up-blue": {
+      "src": "images/effect-attack-up-blue.png",
+      "alt": "攻擊力提升（藍框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_BSBg_Attack_Up.png"
+    },
+    "hp-up-blue": {
+      "src": "images/effect-hp-up-blue.png",
+      "alt": "HP 提升（藍框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_BSBg_HP_Up.png"
+    },
+    "fp-up-blue": {
+      "src": "images/effect-fp-up-blue.png",
+      "alt": "FP 提升（藍框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_BSBg_FP_Up.png"
+    },
+    "stamina-up-blue": {
+      "src": "images/effect-stamina-up-blue.png",
+      "alt": "精力提升（藍框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_BSBg_Stamina_Up.png"
+    },
+    "defense-up-diamond": {
+      "src": "images/effect-defense-up-diamond.png",
+      "alt": "防禦提升（菱形框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GDBg_Defense_Up.png"
+    },
+    "enemy-attention-diamond": {
+      "src": "images/effect-enemy-attention-diamond.png",
+      "alt": "吸引敵人注意（菱形框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GDBg_Enemy_Attention.png"
+    },
+    "hp-up-diamond": {
+      "src": "images/effect-hp-up-diamond.png",
+      "alt": "HP 提升（菱形框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GDBg_HP_Up.png"
+    },
+    "fp-up-diamond": {
+      "src": "images/effect-fp-up-diamond.png",
+      "alt": "FP 提升（菱形框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_GDBg_FP_Up.png"
+    },
+    "hp-down-plain": {
+      "src": "images/effect-hp-down-plain.png",
+      "alt": "HP 降低（無框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_NoBg_HP_Down.png"
+    },
+    "attack-down-plain": {
+      "src": "images/effect-attack-down-plain.png",
+      "alt": "攻擊力降低（無框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_NoBg_Attack_Down.png"
+    },
+    "defense-down-plain": {
+      "src": "images/effect-defense-down-plain.png",
+      "alt": "防禦降低（無框）效果圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Effect_Icon_NoBg_Defense_Down.png"
+    },
+    "relic-night-of-the-beast": {
+      "src": "images/relic-night-of-the-beast.png",
+      "alt": "野獸的暗夜、野獸的黑夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Beast.png"
+    },
+    "relic-night-of-the-baron": {
+      "src": "images/relic-night-of-the-baron.png",
+      "alt": "爵的黑夜、爵的暗夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Baron.png"
+    },
+    "relic-night-of-the-wise": {
+      "src": "images/relic-night-of-the-wise.png",
+      "alt": "智的黑夜、智的暗夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Wise.png"
+    },
+    "relic-night-of-the-fathom": {
+      "src": "images/relic-night-of-the-fathom.png",
+      "alt": "深海的黑夜、深海的暗夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Fathom.png"
+    },
+    "relic-night-of-the-demon": {
+      "src": "images/relic-night-of-the-demon.png",
+      "alt": "魔的黑夜、魔的暗夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Demon.png"
+    },
+    "relic-night-of-the-champion": {
+      "src": "images/relic-night-of-the-champion.png",
+      "alt": "獵人的黑夜、獵人的暗夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Champion.png"
+    },
+    "relic-night-of-the-miasma": {
+      "src": "images/relic-night-of-the-miasma.png",
+      "alt": "霧霾的暗夜、霧霾的黑夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Miasma.png"
+    },
+    "relic-night-of-the-lord": {
+      "src": "images/relic-night-of-the-lord.png",
+      "alt": "王的黑夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Night_of_the_Lord.png"
+    },
+    "relic-the-will-of-the-balancers": {
+      "src": "images/relic-the-will-of-the-balancers.png",
+      "alt": "安定者的遺志、安定的遺志圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_The_Will_of_the_Balancers.png"
+    },
+    "relic-the-night-of-dregs": {
+      "src": "images/relic-the-night-of-dregs.png",
+      "alt": "廢棄物之夜圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_The_Night_of_Dregs.png"
+    },
+    "relic-old-pocketwatch": {
+      "src": "images/relic-old-pocketwatch.png",
+      "alt": "老舊懷錶圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Old_Pocketwatch.png"
+    },
+    "relic-besmirched-frame": {
+      "src": "images/relic-besmirched-frame.png",
+      "alt": "骯髒相框圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Besmirched_Frame.png"
+    },
+    "relic-fell-omen-fetish": {
+      "src": "images/relic-fell-omen-fetish.png",
+      "alt": "惡兆妖鬼的詛咒物圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Fell_Omen_Fetish.png"
+    },
+    "relic-the-wylder-s-earring": {
+      "src": "images/relic-the-wylder-s-earring.png",
+      "alt": "追蹤者的耳環圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_key_item_The_Wylder's_Earring.png"
+    },
+    "relic-silver-tear": {
+      "src": "images/relic-silver-tear.png",
+      "alt": "銀色淚滴圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Silver_Tear.png"
+    },
+    "relic-witch-s-brooch": {
+      "src": "images/relic-witch-s-brooch.png",
+      "alt": "魔女胸針圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Witch's_Brooch.png"
+    },
+    "relic-cracked-witch-s-brooch": {
+      "src": "images/relic-cracked-witch-s-brooch.png",
+      "alt": "碎裂的魔女胸針圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Cracked_Witch's_Brooch.png"
+    },
+    "relic-golden-dew": {
+      "src": "images/relic-golden-dew.png",
+      "alt": "金色露珠圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Golden_Dew.png"
+    },
+    "relic-blessed-iron-coin": {
+      "src": "images/relic-blessed-iron-coin.png",
+      "alt": "祝福鐵幣圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Blessed_Iron_Coin.png"
+    },
+    "relic-old-portrait": {
+      "src": "images/relic-old-portrait.png",
+      "alt": "老舊袖珍畫圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Old_Portrait.png"
+    },
+    "relic-bone-like-stone": {
+      "src": "images/relic-bone-like-stone.png",
+      "alt": "似骨石圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Bone-Like_Stone.png"
+    },
+    "relic-cleansing-tear": {
+      "src": "images/relic-cleansing-tear.png",
+      "alt": "清淨淚滴圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Cleansing_Tear.png"
+    },
+    "relic-note-my-dear-successor": {
+      "src": "images/relic-note-my-dear-successor.png",
+      "alt": "記錄「致繼承人」圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Note_\"My_Dear_Successor\".png"
+    },
+    "relic-leather-monocle-case": {
+      "src": "images/relic-leather-monocle-case.png",
+      "alt": "單眼鏡的皮革袋圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Leather_Monocle_Case.png"
+    },
+    "relic-glass-necklace": {
+      "src": "images/relic-glass-necklace.png",
+      "alt": "玻璃項鍊圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Glass_Necklace.png"
+    },
+    "relic-grand-burning-scene-1": {
+      "src": "images/relic-grand-burning-scene-1.png",
+      "alt": "遼闊的火燃情景圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Grand_Burning_Scene_1.png"
+    },
+    "relic-grand-drizzly-scene-2": {
+      "src": "images/relic-grand-drizzly-scene-2.png",
+      "alt": "遼闊的水滴情景圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Grand_Drizzly_Scene_2.png"
+    },
+    "relic-grand-luminous-scene-2": {
+      "src": "images/relic-grand-luminous-scene-2.png",
+      "alt": "遼闊的光耀情景圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Grand_Luminous_Scene_2.png"
+    },
+    "relic-grand-tranquil-scene-2": {
+      "src": "images/relic-grand-tranquil-scene-2.png",
+      "alt": "遼闊的幽靜情景圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Grand_Tranquil_Scene_2.png"
+    },
+    "relic-grand-tranquil-scene-3": {
+      "src": "images/relic-grand-tranquil-scene-3.png",
+      "alt": "遼闊的幽靜情景圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_relic_Grand_Tranquil_Scene_3.png"
+    },
+    "nightfarer-wylder": {
+      "src": "images/nightfarer-wylder.png",
+      "alt": "追蹤者圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Wylder.png"
+    },
+    "nightfarer-guardian": {
+      "src": "images/nightfarer-guardian.png",
+      "alt": "守護者圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Guardian.png"
+    },
+    "nightfarer-ironeye": {
+      "src": "images/nightfarer-ironeye.png",
+      "alt": "鐵之眼圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Ironeye.png"
+    },
+    "nightfarer-duchess": {
+      "src": "images/nightfarer-duchess.png",
+      "alt": "女爵圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Duchess.png"
+    },
+    "nightfarer-raider": {
+      "src": "images/nightfarer-raider.png",
+      "alt": "無賴圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Raider.png"
+    },
+    "nightfarer-revenant": {
+      "src": "images/nightfarer-revenant.png",
+      "alt": "復仇者圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Revenant.png"
+    },
+    "nightfarer-recluse": {
+      "src": "images/nightfarer-recluse.png",
+      "alt": "隱士圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Recluse.png"
+    },
+    "nightfarer-executor": {
+      "src": "images/nightfarer-executor.png",
+      "alt": "執行者圖示",
+      "page": "https://eldenring.wiki.gg/wiki/File:ERN_Nightfarer_Icon_Executor.png"
     }
   },
   "stats": {
@@ -125,20 +426,12 @@
     }
   },
   "characters": {
-    "duchess": {
-      "levels": {
-        "1": {
-          "arcane": 11
-        },
-        "15": {
-          "arcane": 11
-        }
-      },
-      "sources": [
-        "eldenpedia-duchess"
-      ]
-    },
     "wylder": {
+      "name": {
+        "zh": "追蹤者",
+        "en": "Wylder"
+      },
+      "icon": "nightfarer-wylder",
       "levels": {
         "1": {
           "endurance": 3,
@@ -152,6 +445,80 @@
       "sources": [
         "eldenpedia-attributes"
       ]
+    },
+    "guardian": {
+      "name": {
+        "zh": "守護者",
+        "en": "Guardian"
+      },
+      "icon": "nightfarer-guardian"
+    },
+    "ironeye": {
+      "name": {
+        "zh": "鐵之眼",
+        "en": "Ironeye"
+      },
+      "icon": "nightfarer-ironeye"
+    },
+    "duchess": {
+      "name": {
+        "zh": "女爵",
+        "en": "Duchess"
+      },
+      "icon": "nightfarer-duchess",
+      "levels": {
+        "1": {
+          "arcane": 11
+        },
+        "15": {
+          "arcane": 11
+        }
+      },
+      "sources": [
+        "eldenpedia-duchess"
+      ]
+    },
+    "raider": {
+      "name": {
+        "zh": "無賴",
+        "en": "Raider"
+      },
+      "icon": "nightfarer-raider"
+    },
+    "revenant": {
+      "name": {
+        "zh": "復仇者",
+        "en": "Revenant"
+      },
+      "icon": "nightfarer-revenant"
+    },
+    "recluse": {
+      "name": {
+        "zh": "隱士",
+        "en": "Recluse"
+      },
+      "icon": "nightfarer-recluse"
+    },
+    "executor": {
+      "name": {
+        "zh": "執行者",
+        "en": "Executor"
+      },
+      "icon": "nightfarer-executor"
+    },
+    "scholar": {
+      "name": {
+        "zh": "學者",
+        "en": "Scholar"
+      },
+      "icon": null
+    },
+    "undertaker": {
+      "name": {
+        "zh": "送葬者",
+        "en": "Undertaker"
+      },
+      "icon": null
     }
   },
   "labels": {
@@ -188,12 +555,14 @@
     "conflict": "來源分歧",
     "unverified": "尚未核實",
     "tierBase": "基本",
-    "iconMissing": "沒有可用的遊戲內圖示"
+    "iconMissing": "沒有可用的遊戲內圖示",
+    "characters": "限定角色",
+    "relics": "固定遺物"
   },
   "sources": {
     "reliquary-json": {
       "title": "Round Table Codex 遺物資料集",
-      "url": "https://paraphrazetutorials.github.io/nightreign-data-tools/Data/reliquary.json"
+      "url": "https://github.com/paraphrazetutorials/nightreign-data-tools/blob/dafcb2de9837b58cef64960b672d21e3841b0abe/Data/reliquary.json"
     },
     "relics-pro": {
       "title": "Relics.pro 遺物圖鑑",
@@ -222,6 +591,14 @@
     "reddit-hp-stacking": {
       "title": "HP 疊加計算討論",
       "url": "https://www.reddit.com/r/Nightreign/comments/1nws4xe/depth_4_wylder/"
+    },
+    "game-params": {
+      "title": "遊戲參數 1.03.5（chillreign 原版快照）",
+      "url": "https://github.com/gajodoramas/chillreign/tree/a411bcbedc776e143d8c8a1bcff9466e3a932b49/params"
+    },
+    "game-text": {
+      "title": "遊戲文字（存檔編輯器擷取）",
+      "url": "https://github.com/alfizari/Elden-Ring-Nightreign-Save-Editor/tree/0d2ad1494c372098e689c23159656df70ff2d76d/src/Resources/Text"
     }
   }
 }

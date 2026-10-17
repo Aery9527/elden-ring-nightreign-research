@@ -1,0 +1,1554 @@
+{
+  "6001401": {
+    "en": "1.105x all sources of physical damage",
+    "zh": "所有來源的物理傷害 ×1.105。"
+  },
+  "6001500": {
+    "en": "1.105x all sources of magic damage",
+    "zh": "所有來源的魔力屬性傷害 ×1.105。"
+  },
+  "6001501": {
+    "en": "1.12x all sources of magic damage",
+    "zh": "所有來源的魔力屬性傷害 ×1.12。"
+  },
+  "6001600": {
+    "en": "1.105x all sources of fire damage",
+    "zh": "所有來源的火屬性傷害 ×1.105。"
+  },
+  "6001601": {
+    "en": "1.12x all sources of fire damage",
+    "zh": "所有來源的火屬性傷害 ×1.12。"
+  },
+  "6001700": {
+    "en": "1.105x all sources of lightning damage",
+    "zh": "所有來源的雷屬性傷害 ×1.105。"
+  },
+  "6001701": {
+    "en": "1.12x all sources of lightning damage",
+    "zh": "所有來源的雷屬性傷害 ×1.12。"
+  },
+  "6001800": {
+    "en": "1.105x all sources of holy damage",
+    "zh": "所有來源的聖屬性傷害 ×1.105。"
+  },
+  "6001801": {
+    "en": "1.12x all sources of holy damage",
+    "zh": "所有來源的聖屬性傷害 ×1.12。"
+  },
+  "6002600": {
+    "en": "0.85x magic damage taken",
+    "zh": "受到的魔力屬性傷害 ×0.85。"
+  },
+  "6002601": {
+    "en": "0.84x magic damage taken",
+    "zh": "受到的魔力屬性傷害 ×0.84。"
+  },
+  "6002700": {
+    "en": "0.85x fire damage taken",
+    "zh": "受到的火屬性傷害 ×0.85。"
+  },
+  "6002701": {
+    "en": "0.84x fire damage taken",
+    "zh": "受到的火屬性傷害 ×0.84。"
+  },
+  "6002800": {
+    "en": "0.85x lightning damage taken",
+    "zh": "受到的雷屬性傷害 ×0.85。"
+  },
+  "6002801": {
+    "en": "0.84x lightning damage taken",
+    "zh": "受到的雷屬性傷害 ×0.84。"
+  },
+  "6002900": {
+    "en": "0.85x holy damage taken",
+    "zh": "受到的聖屬性傷害 ×0.85。"
+  },
+  "6002901": {
+    "en": "0.84x holy damage taken",
+    "zh": "受到的聖屬性傷害 ×0.84。"
+  },
+  "6003000": {
+    "en": "+110 poison resistance",
+    "zh": "中毒抵抗力 +110。"
+  },
+  "6003100": {
+    "en": "+110 blood loss resistance",
+    "zh": "出血抵抗力 +110。"
+  },
+  "6003200": {
+    "en": "+110 sleep resistance",
+    "zh": "催眠抵抗力 +110。"
+  },
+  "6003300": {
+    "en": "+110 death blight resistance",
+    "zh": "驟死抵抗力 +110。"
+  },
+  "6003400": {
+    "en": "+110 rot resistance",
+    "zh": "腐敗抵抗力 +110。"
+  },
+  "6003500": {
+    "en": "+110 frost resistance",
+    "zh": "凍傷抵抗力 +110。"
+  },
+  "6003600": {
+    "en": "+110 madness resistance",
+    "zh": "發狂抵抗力 +110。"
+  },
+  "6005600": {
+    "en": "Damage taken over the past 4 seconds can be healed by dealing damage with melee attacks, ranged attacks, and spells. Healing from this effect is increased by 1.25x, and this does not stack with similar effects except for the +2 variant",
+    "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與法術造成傷害來恢復。此效果的恢復量 ×1.25，且不與同類效果疊加，+2 版本除外。"
+  },
+  "6005601": {
+    "en": "Damage taken over the past 4 seconds can be healed by dealing damage with melee attacks, ranged attacks, and spells. Healing from this effect is increased by 1.35x, and this does not stack with similar effects except for the +1 variant",
+    "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與法術造成傷害來恢復。此效果的恢復量 ×1.35，且不與同類效果疊加，+1 版本除外。"
+  },
+  "6030200": {
+    "en": "Consuming an edible item restores 80 HP to the user\n(TODO: verify this only applies to boluses)",
+    "zh": "食用可食用道具時，為使用者恢復 80 HP。（原文註記：待核實此效果是否僅適用於苔藥。）"
+  },
+  "6030600": {
+    "en": "Upon guarding an attack, gain 1.5 ultimate charge",
+    "zh": "防禦住攻擊時，獲得 1.5 絕活量表累積量。"
+  },
+  "6030800": {
+    "en": "Upon performing a critical hit, gain 6.5 ultimate charge",
+    "zh": "使出致命一擊時，獲得 6.5 絕活量表累積量。"
+  },
+  "6030900": {
+    "en": "When using a grease, 1.17x physical damage of weapons for 30 seconds\n(TODO: verify what the effect buffs)",
+    "zh": "使用油脂類道具時，武器物理傷害 ×1.17，持續 30 秒。（原文註記：待核實此效果強化的對象。）"
+  },
+  "6030901": {
+    "en": "When using a grease, 1.20x physical damage of weapons for 30 seconds\n(TODO: verify what the effect buffs)",
+    "zh": "使用油脂類道具時，武器物理傷害 ×1.20，持續 30 秒。（原文註記：待核實此效果強化的對象。）"
+  },
+  "6035100": {
+    "en": "Upon performing a critical hit, buff self with +17 stamina recovery speed for 15 seconds",
+    "zh": "使出致命一擊時，使自己獲得精力恢復速度 +17 的增益，持續 15 秒。"
+  },
+  "6040100": {
+    "en": "1.25x damage for guard counter attacks",
+    "zh": "防禦反擊傷害 ×1.25。"
+  },
+  "6040101": {
+    "en": "1.29x damage for guard counter attacks",
+    "zh": "防禦反擊傷害 ×1.29。"
+  },
+  "6040300": {
+    "en": "1.3x damage of throwing pots",
+    "zh": "投擲壺傷害 ×1.3。"
+  },
+  "6040400": {
+    "en": "1.3x damage of throwing knives",
+    "zh": "投擲小刀傷害 ×1.3。"
+  },
+  "6040500": {
+    "en": "1.3x damage of glintstone consumables and gravity stones",
+    "zh": "輝石道具與重力石道具傷害 ×1.3。"
+  },
+  "6043100": {
+    "en": "1.3x damage of perfuming arts",
+    "zh": "調香術傷害 ×1.3。"
+  },
+  "6060300": {
+    "en": "Upon clearing the boss of a great church, 1.05x maximum HP (stacking for each clear)",
+    "zh": "擊敗大教堂的強敵後，HP 上限 ×1.05（每次擊敗皆可疊加）。"
+  },
+  "6060400": {
+    "en": "Upon clearing the boss of a fort, 1.065x rune gain from enemies and +16 item discovery (stacking for each clear)",
+    "zh": "擊敗小型要塞的強敵後，從敵人獲得的盧恩 ×1.065，觀察力 +16（每次擊敗皆可疊加）。"
+  },
+  "6060500": {
+    "en": "Upon clearing the boss of a great church, +4 arcane (stacking for each clear)",
+    "zh": "擊敗大教堂（原文如此）的強敵後，感應 +4（每次擊敗皆可疊加）。"
+  },
+  "6060600": {
+    "en": "Upon clearing the boss of a great church, 1.075x maximum stamina (stacking for each clear)",
+    "zh": "擊敗大教堂（原文如此）的強敵後，精力上限 ×1.075（每次擊敗皆可疊加）。"
+  },
+  "6090000": {
+    "en": "Upon the death of an enemy, gain 6.5 ultmate charge",
+    "zh": "敵人死亡時，獲得 6.5 絕活量表累積量。"
+  },
+  "6160000": {
+    "en": "Upon performing a thrusting counterattack (damage dealt when an enemy has an active hitbox out), restore [0.033x max HP] HP",
+    "zh": "使出突刺反擊（於敵人攻擊判定生效期間造成的傷害）時，恢復 [HP 上限 ×0.033] HP。"
+  },
+  "6260400": {
+    "en": "1.16x damage of all sources to targets afflicted with frostbite",
+    "zh": "對陷入凍傷的目標，所有來源的傷害 ×1.16。"
+  },
+  "6260401": {
+    "en": "1.2x damage of all sources to targets afflicted with frostbite",
+    "zh": "對陷入凍傷的目標，所有來源的傷害 ×1.2。"
+  },
+  "6500000": {
+    "en": "Claw Shot builds up an additional 6 accumuVal and 60 blood loss when going out and builds up an additional 6 accumuVal and 55 blood loss when pulling",
+    "zh": "技藝（Claw Shot）射出時額外累積 6 accumuVal 與 60 出血累積值，拉回時額外累積 6 accumuVal 與 55 出血累積值。"
+  },
+  "6500100": {
+    "en": "Whirlwind buffs nearby allies with 0.82x damage taken from all sources for 30 seconds",
+    "zh": "技藝（Whirlwind）使周圍隊友受到的所有來源傷害 ×0.82，持續 30 秒。"
+  },
+  "6500200": {
+    "en": "Marking builds up an additional 6 accumuVal and 70 poison buildup, and if target is poisoned, they take [250 + 0.0025x max HP] damage",
+    "zh": "技藝（Marking）額外累積 6 accumuVal 與 70 中毒累積值；若目標已中毒，則受到 [250 + HP 上限 ×0.0025] 傷害。"
+  },
+  "6500300": {
+    "en": "Restage grants invulnerability, preventing the user from getting hit or taking damage for 0.4 seconds",
+    "zh": "技藝（Restage）給予無敵效果，0.4 秒內不會被命中或受到傷害。"
+  },
+  "6500400": {
+    "en": "Retaliate builds up an additional 12 accumuVal by default and 18 accumuVal at full power, and debuffs targets hit with 0.87x all sources of damage for 13 seconds",
+    "zh": "技藝（Retaliate）預設額外累積 12 accumuVal，全力時額外累積 18 accumuVal；並使命中的目標所有來源的傷害 ×0.87，持續 13 秒。"
+  },
+  "6500500": {
+    "en": "When Necromancy is triggered (passive spawning a spirit of recently killed enemy), permanently increase max FP, providing 1.0075x max FP for 1 stack and 1.51x max FP at a max of 60 stacks",
+    "zh": "能力（Necromancy）觸發時（被動能力：召喚近期被打倒敵人的靈魂），永久提升 FP 上限：1 層為 FP 上限 ×1.0075，最多 60 層時為 FP 上限 ×1.51。"
+  },
+  "6500600": {
+    "en": "When collecting an affinity with Magic Cocktail, buffs self with 0.8x damage negation of corresponding affinity absorbed for 30 seconds",
+    "zh": "以技藝（Magic Cocktail）收集屬性時，自身獲得所吸收對應屬性的減傷率 ×0.8 增益，持續 30 秒。"
+  },
+  "6500700": {
+    "en": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 25 seconds",
+    "zh": "能力（Tenacity）觸發時（被動能力：陷入異常狀態後獲得增益），每 1 秒恢復 [3 + HP 上限 ×0.0027] HP，持續 25 秒。"
+  },
+  "6500800": {
+    "en": "When Analyze is used on self, buff self with 0.85x FP consumption for skills, spells, and items",
+    "zh": "對自身使用技藝（Analyze）時，自身的戰技、法術與道具 FP 消耗 ×0.85。"
+  },
+  "6500900": {
+    "en": "When Loathesome Hex is used, instantly referesh the cooldown of Trance\n(TODO: verify w/ in-game testing)",
+    "zh": "使用絕活（Loathesome Hex）時，立即重置技藝（Trance）的冷卻時間。（原文註記：待以遊戲內實測核實）"
+  },
+  "6600000": {
+    "en": "When a nearby enemy or player (including self) is afflicted with sleep, 1.12x all sources of damage for 20 seconds",
+    "zh": "附近的敵人或玩家（包含自己）陷入催眠時，所有來源的傷害 ×1.12，持續 20 秒。"
+  },
+  "6600001": {
+    "en": "When a nearby enemy or player (including self) is afflicted with sleep, 1.22x all sources of damage for 20 seconds",
+    "zh": "附近的敵人或玩家（包含自己）陷入催眠時，所有來源的傷害 ×1.22，持續 20 秒。"
+  },
+  "6600100": {
+    "en": "When a nearby enemy or player (including self) is afflicted with madness, 1.12x all sources of damage for 20 seconds",
+    "zh": "附近的敵人或玩家（包含自己）陷入發狂時，所有來源的傷害 ×1.12，持續 20 秒。"
+  },
+  "6600101": {
+    "en": "When a nearby enemy or player (including self) is afflicted with madness, 1.22x all sources of damage for 20 seconds",
+    "zh": "附近的敵人或玩家（包含自己）陷入發狂時，所有來源的傷害 ×1.22，持續 20 秒。"
+  },
+  "6610400": {
+    "en": "1.1x maximum HP",
+    "zh": "HP 上限 ×1.1。"
+  },
+  "6610500": {
+    "en": "1.15x maximum FP",
+    "zh": "FP 上限 ×1.15。"
+  },
+  "6610600": {
+    "en": "1.12x maximum stamina",
+    "zh": "精力上限 ×1.12。"
+  },
+  "6610700": {
+    "en": "0.92x FP consumption for skills, spells, and items",
+    "zh": "戰技、法術與道具的 FP 消耗 ×0.92。"
+  },
+  "6610800": {
+    "en": "1.05x all sources of affinity (magic/fire/lightning/holy) damage",
+    "zh": "所有來源的屬性（魔力、火、雷、聖）傷害 ×1.05。"
+  },
+  "6610801": {
+    "en": "1.08x all sources of affinity (magic/fire/lightning/holy) damage",
+    "zh": "所有來源的屬性（魔力、火、雷、聖）傷害 ×1.08。"
+  },
+  "6610802": {
+    "en": "1.1x all sources of affinity (magic/fire/lightning/holy) damage",
+    "zh": "所有來源的屬性（魔力、火、雷、聖）傷害 ×1.1。"
+  },
+  "6611001": {
+    "en": "0.895x physical damage recieved",
+    "zh": "受到的物理傷害 ×0.895。"
+  },
+  "6611002": {
+    "en": "0.88x physical damage recieved",
+    "zh": "受到的物理傷害 ×0.88。"
+  },
+  "6611100": {
+    "en": "0.94x affinity damage recieved",
+    "zh": "受到的屬性傷害 ×0.94。"
+  },
+  "6611101": {
+    "en": "0.895x affinity damage recieved",
+    "zh": "受到的屬性傷害 ×0.895。"
+  },
+  "6611102": {
+    "en": "0.88x affinity damage recieved",
+    "zh": "受到的屬性傷害 ×0.88。"
+  },
+  "6611200": {
+    "en": "1.05x sorcery damage",
+    "zh": "魔法傷害 ×1.05。"
+  },
+  "6611201": {
+    "en": "1.085x sorcery damage",
+    "zh": "魔法傷害 ×1.085。"
+  },
+  "6611202": {
+    "en": "1.1x sorcery damage",
+    "zh": "魔法傷害 ×1.1。"
+  },
+  "6611300": {
+    "en": "1.05x incantation damage",
+    "zh": "禱告傷害 ×1.05。"
+  },
+  "6611301": {
+    "en": "1.085x incantation damage",
+    "zh": "禱告傷害 ×1.085。"
+  },
+  "6611302": {
+    "en": "1.1x incantation damage",
+    "zh": "禱告傷害 ×1.1。"
+  },
+  "6611400": {
+    "en": "1.1x HP restored from flask",
+    "zh": "聖杯瓶的 HP 恢復量 ×1.1。"
+  },
+  "6621000": {
+    "en": "Start with 1 Crimsonspill Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「漫紅結晶露滴」；學者則持有 2 個。"
+  },
+  "6621100": {
+    "en": "Start with 1 Crimson Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「紅結晶露滴」；學者則持有 2 個。"
+  },
+  "6621200": {
+    "en": "Start with 1 Cerulean Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「藍結晶露滴」；學者則持有 2 個。"
+  },
+  "6621300": {
+    "en": "Start with 1 Speckled Hardtear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「斑斕硬露滴」；學者則持有 2 個。"
+  },
+  "6621400": {
+    "en": "Start with 1 Crimson Bubbletear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「紅泡狀露滴」；學者則持有 2 個。"
+  },
+  "6621500": {
+    "en": "Start with 1 Opaline Bubbletear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「珍珠泡狀露滴」；學者則持有 2 個。"
+  },
+  "6621600": {
+    "en": "Start with 1 Crimsonburst Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「湧紅結晶露滴」；學者則持有 2 個。"
+  },
+  "6621700": {
+    "en": "Start with 1 Greenburst Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「湧綠結晶露滴」；學者則持有 2 個。"
+  },
+  "6621800": {
+    "en": "Start with 1 Opaline Hardtear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「珍珠硬露滴」；學者則持有 2 個。"
+  },
+  "6621900": {
+    "en": "Start with 1 Thorny Cracked Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「連刺破露滴」；學者則持有 2 個。"
+  },
+  "6622000": {
+    "en": "Start with 1 Spiked Cracked Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「大刺破露滴」；學者則持有 2 個。"
+  },
+  "6622100": {
+    "en": "Start with 1 Windy Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「風結晶露滴」；學者則持有 2 個。"
+  },
+  "6622200": {
+    "en": "Start with 1 Ruptured Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「爆裂結晶露滴」；學者則持有 2 個。"
+  },
+  "6622300": {
+    "en": "Start with 1 Leaden Hardtear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「鉛化硬露滴」；學者則持有 2 個。"
+  },
+  "6622400": {
+    "en": "Start with 1 Twiggy Cracked Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「細枝破露滴」；學者則持有 2 個。"
+  },
+  "6622500": {
+    "en": "Start with 1 Crimsonspill Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「漫紅結晶露滴」（原文如此）；學者則持有 2 個。"
+  },
+  "6622600": {
+    "en": "Start with 1 Cerulean Hidden Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「藍祕密露滴」；學者則持有 2 個。"
+  },
+  "6622700": {
+    "en": "Start with 1 Stonebarb Cracked Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「岩刺破露滴」；學者則持有 2 個。"
+  },
+  "6622800": {
+    "en": "Start with 1 Flame-Shrouding Cracked Tear in, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「帶火破露滴」；學者則持有 2 個。"
+  },
+  "6622900": {
+    "en": "Start with 1 Magic-Shrouding Cracked Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「帶魔力破露滴」；學者則持有 2 個。"
+  },
+  "6623000": {
+    "en": "Start with 1 Lightning-Shrouding Cracked Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「帶雷破露滴」；學者則持有 2 個。"
+  },
+  "6623100": {
+    "en": "Start with 1 Holy-Shrouding Cracked Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「帶聖破露滴」；學者則持有 2 個。"
+  },
+  "6623200": {
+    "en": "Start with 1 Greenspill Crystal Tear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「湧綠結晶露滴」；學者則持有 2 個。"
+  },
+  "6630000": {
+    "en": "Replaces preferred weapon discovery for dormant powers with daggers. This makes dormant powers that roll for class weapon instead roll for this new preferred weapon. Only the first \"Dormant Power Helps Discover X\" relic applies",
+    "zh": "將潛在能力偏好發現的武器改為短劍。原本抽選職業武器的潛在能力，會改為抽選此新偏好武器。僅第一個「透過潛在能力，能比較容易找到 X」遺物生效"
+  },
+  "6630100": {
+    "en": "Replaces preferred weapon discovery for dormant powers with straight swords",
+    "zh": "將潛在能力偏好發現的武器改為直劍"
+  },
+  "6630200": {
+    "en": "Replaces preferred weapon discovery for dormant powers with greatswords",
+    "zh": "將潛在能力偏好發現的武器改為大劍"
+  },
+  "6630300": {
+    "en": "Replaces preferred weapon discovery for dormant powers with colossal swords",
+    "zh": "將潛在能力偏好發現的武器改為特大劍"
+  },
+  "6630400": {
+    "en": "Replaces preferred weapon discovery for dormant powers with curved swords",
+    "zh": "將潛在能力偏好發現的武器改為曲劍"
+  },
+  "6630500": {
+    "en": "Replaces preferred weapon discovery for dormant powers with curved greatswords",
+    "zh": "將潛在能力偏好發現的武器改為大曲劍"
+  },
+  "6630600": {
+    "en": "Replaces preferred weapon discovery for dormant powers with katanas",
+    "zh": "將潛在能力偏好發現的武器改為刀"
+  },
+  "6630700": {
+    "en": "Replaces preferred weapon discovery for dormant powers with twinblades",
+    "zh": "將潛在能力偏好發現的武器改為雙頭劍"
+  },
+  "6630800": {
+    "en": "Replaces preferred weapon discovery for dormant powers with thrusting swords",
+    "zh": "將潛在能力偏好發現的武器改為刺劍"
+  },
+  "6630900": {
+    "en": "Replaces preferred weapon discovery for dormant powers with heavy thrusting swords",
+    "zh": "將潛在能力偏好發現的武器改為重刺劍"
+  },
+  "6631000": {
+    "en": "Replaces preferred weapon discovery for dormant powers with axes",
+    "zh": "將潛在能力偏好發現的武器改為斧"
+  },
+  "6631100": {
+    "en": "Replaces preferred weapon discovery for dormant powers with greataxes",
+    "zh": "將潛在能力偏好發現的武器改為大斧"
+  },
+  "6631200": {
+    "en": "Replaces preferred weapon discovery for dormant powers with hammers",
+    "zh": "將潛在能力偏好發現的武器改為槌"
+  },
+  "6631300": {
+    "en": "Replaces preferred weapon discovery for dormant powers with great hammers",
+    "zh": "將潛在能力偏好發現的武器改為大槌"
+  },
+  "6631400": {
+    "en": "Replaces preferred weapon discovery for dormant powers with flails",
+    "zh": "將潛在能力偏好發現的武器改為連枷"
+  },
+  "6631500": {
+    "en": "Replaces preferred weapon discovery for dormant powers with spears",
+    "zh": "將潛在能力偏好發現的武器改為矛"
+  },
+  "6631600": {
+    "en": "Replaces preferred weapon discovery for dormant powers with great spears",
+    "zh": "將潛在能力偏好發現的武器改為大矛"
+  },
+  "6631700": {
+    "en": "Replaces preferred weapon discovery for dormant powers with halberds",
+    "zh": "將潛在能力偏好發現的武器改為戟"
+  },
+  "6631800": {
+    "en": "Replaces preferred weapon discovery for dormant powers with reapers",
+    "zh": "將潛在能力偏好發現的武器改為鐮刀"
+  },
+  "6631900": {
+    "en": "Replaces preferred weapon discovery for dormant powers with fists",
+    "zh": "將潛在能力偏好發現的武器改為拳頭"
+  },
+  "6632000": {
+    "en": "Replaces preferred weapon discovery for dormant powers with claws",
+    "zh": "將潛在能力偏好發現的武器改為鉤爪"
+  },
+  "6632100": {
+    "en": "Replaces preferred weapon discovery for dormant powers with whips",
+    "zh": "將潛在能力偏好發現的武器改為軟鞭"
+  },
+  "6632200": {
+    "en": "Replaces preferred weapon discovery for dormant powers with colossal weapons",
+    "zh": "將潛在能力偏好發現的武器改為特大武器"
+  },
+  "6632300": {
+    "en": "Replaces preferred weapon discovery for dormant powers with bows",
+    "zh": "將潛在能力偏好發現的武器改為弓"
+  },
+  "6632400": {
+    "en": "Replaces preferred weapon discovery for dormant powers with greatbows",
+    "zh": "將潛在能力偏好發現的武器改為大弓"
+  },
+  "6632500": {
+    "en": "Replaces preferred weapon discovery for dormant powers with crossbows",
+    "zh": "將潛在能力偏好發現的武器改為弩"
+  },
+  "6632600": {
+    "en": "Replaces preferred weapon discovery for dormant powers with ballistas",
+    "zh": "將潛在能力偏好發現的武器改為弩砲"
+  },
+  "6632700": {
+    "en": "Replaces preferred weapon discovery for dormant powers with small shields",
+    "zh": "將潛在能力偏好發現的武器改為小盾"
+  },
+  "6632800": {
+    "en": "Replaces preferred weapon discovery for dormant powers with medium shields",
+    "zh": "將潛在能力偏好發現的武器改為中盾"
+  },
+  "6632900": {
+    "en": "Replaces preferred weapon discovery for dormant powers with greatshields",
+    "zh": "將潛在能力偏好發現的武器改為大盾"
+  },
+  "6633000": {
+    "en": "Replaces preferred weapon discovery for dormant powers with staves",
+    "zh": "將潛在能力偏好發現的武器改為手杖"
+  },
+  "6633100": {
+    "en": "Replaces preferred weapon discovery for dormant powers with sacred seals",
+    "zh": "將潛在能力偏好發現的武器改為聖印記"
+  },
+  "6640000": {
+    "en": "+10 mind, -5 vigor at level 12-15\n+1 mind, -1 vigor at level 1\n(scales linearly from level 1-12)",
+    "zh": "等級 12-15：集中力 +10、生命力 -5；等級 1：集中力 +1、生命力 -1（等級 1-12 間線性成長）。"
+  },
+  "6640100": {
+    "en": "+15 intellignce, +15 faith, -7 strength, - 5 dex at level 12-15\n+1 intelligence, +1 faith, -1 strength, -1 dexterity at level 1",
+    "zh": "等級 12-15：智力 +15、信仰 +15、力氣 -7、靈巧 -5；等級 1：智力 +1、信仰 +1、力氣 -1、靈巧 -1。"
+  },
+  "6641000": {
+    "en": "+9 strength, +19 dexterity, -8 vigor at level 12-15\n+1 strength, +2 dexterity, -1 vigor at level 1",
+    "zh": "等級 12-15：力氣 +9、靈巧 +19、生命力 -8；等級 1：力氣 +1、靈巧 +2、生命力 -1。"
+  },
+  "6641100": {
+    "en": "+8 mind, +17 faith, -6 vigor at level 12-15\n+1 mind, +2 faith, -1 vigor at level 1",
+    "zh": "等級 12-15：集中力 +8、信仰 +17、生命力 -6；等級 1：集中力 +1、信仰 +2、生命力 -1。"
+  },
+  "6642000": {
+    "en": "+15 arcane, -9 dexterity at level 12-15\n+2 arcane, -1 dexterity at level 1",
+    "zh": "等級 12-15：感應 +15、靈巧 -9；等級 1：感應 +2、靈巧 -1。"
+  },
+  "6642100": {
+    "en": "+5 vigor, +20 strength, -13 dexterity at level 12-15\n+1 vigor, +2 strength, -2 dexterity at level 1",
+    "zh": "等級 12-15：生命力 +5、力氣 +20、靈巧 -13；等級 1：生命力 +1、力氣 +2、靈巧 -2。"
+  },
+  "6643000": {
+    "en": "+3 vigor, +24 strength, -14 mind at level 12-15\n+1 vigor, +2 strength, -2 mind at level 1",
+    "zh": "等級 12-15：生命力 +3、力氣 +24、集中力 -14；等級 1：生命力 +1、力氣 +2、集中力 -2。"
+  },
+  "6643100": {
+    "en": "+3 mind, +13 faith, -5 intelligence at level 12-15\n+1 mind, +2 faith, -1 intelligence at level 1",
+    "zh": "等級 12-15：集中力 +3、信仰 +13、智力 -5；等級 1：集中力 +1、信仰 +2、智力 -1。"
+  },
+  "6644000": {
+    "en": "+9 mind, +35 intelligence, -8 vigor, -4 endurance at level 12-15\n+1 mind, +2 intelligence, -1 vigor, -1 endurance at level 1",
+    "zh": "等級 12-15：集中力 +9、智力 +35、生命力 -8、耐力 -4；等級 1：集中力 +1、智力 +2、生命力 -1、耐力 -1。"
+  },
+  "6644100": {
+    "en": "+17 arcane, -4 vigor at level 12-15\n+2 arcane, -1 vigor at level 1",
+    "zh": "等級 12-15：感應 +17、生命力 -4；等級 1：感應 +2、生命力 -1。"
+  },
+  "6645000": {
+    "en": "+5 vigor, -11 mind at level 12-15\n+1 vigor, -1 mind at level 1",
+    "zh": "等級 12-15：生命力 +5、集中力 -11；等級 1：生命力 +1、集中力 -1。"
+  },
+  "6645100": {
+    "en": "+25 strength, -6 faith at level 12-15\n+2 strength, -1 fath at level 1",
+    "zh": "等級 12-15：力氣 +25、信仰 -6；等級 1：力氣 +2、信仰 -1。"
+  },
+  "6646000": {
+    "en": "+4 vigor, +5 endurance, +20 dexterity, -10 intelligence, -10 faith at level 12-15\n+1 vigor, +1 endurance, +2 dexterity, -1 intelligence, -1 faith at level 1",
+    "zh": "等級 12-15：生命力 +4、耐力 +5、靈巧 +20、智力 -10、信仰 -10；等級 1：生命力 +1、耐力 +1、靈巧 +2、智力 -1、信仰 -1。"
+  },
+  "6646100": {
+    "en": "+12 intelligence, +12 faith, -13 mind at level 12-15\n+2 intelligence, +2 faith, -2 mind at level 1",
+    "zh": "等級 12-15：智力 +12、信仰 +12、集中力 -13；等級 1：智力 +2、信仰 +2、集中力 -2。"
+  },
+  "6647000": {
+    "en": "+5 vigor, +6 endurance, -13 arcane at level 12-15\n+1 vigor, +1 endurance, -2 arcane at level 1",
+    "zh": "等級 12-15：生命力 +5、耐力 +6、感應 -13；等級 1：生命力 +1、耐力 +1、感應 -2。"
+  },
+  "6647100": {
+    "en": "+12 dexterity, +9 arcane, -7 vigor at level 12-15\n+1 dexterity, +1 arcane, -1 vigor at level 1",
+    "zh": "等級 12-15：靈巧 +12、感應 +9、生命力 -7；等級 1：靈巧 +1、感應 +1、生命力 -1。"
+  },
+  "6647200": {
+    "en": "+9 mind, -3 vigor at level 12-15\n+1 mind, -1 vigor at level 1",
+    "zh": "等級 12-15：集中力 +9、生命力 -3；等級 1：集中力 +1、生命力 -1。"
+  },
+  "6647300": {
+    "en": "+6 endurance, +40 dexterity, -4 intelligence, -20 arcane at level 12-15\n+1 endurance, +6 dexterity, -1 intelligence, -5 arcane at level 1",
+    "zh": "等級 12-15：耐力 +6、靈巧 +40、智力 -4、感應 -20；等級 1：耐力 +1、靈巧 +6、智力 -1、感應 -5。"
+  },
+  "6647400": {
+    "en": "+19 dexterity, -5 vigor, -13 faith at level 12-15\n+2 dexterity, -1 vigor, -2 faith at level 1",
+    "zh": "等級 12-15：靈巧 +19、生命力 -5、信仰 -13；等級 1：靈巧 +2、生命力 -1、信仰 -2。"
+  },
+  "6647500": {
+    "en": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 vigor, +1 faith, -2 strength at level 1",
+    "zh": "等級 12-15：集中力 +9、信仰 +12、力氣 -15；等級 1：生命力（原文如此）+1、信仰 +1、力氣 -2。"
+  },
+  "6820000": {
+    "en": "Upon getting hit, recieve 52 poison buildup (a hit for these effects is defined as an attack that deals damage and is unblocked)",
+    "zh": "受到攻擊時，中毒量表累積 52。（此類效果中的「受到攻擊」，定義為造成傷害且未被防禦的攻擊）"
+  },
+  "6820100": {
+    "en": "Upon getting hit, recieve 44 scarlet rot buildup",
+    "zh": "受到攻擊時，猩紅腐敗量表累積 44。"
+  },
+  "6820200": {
+    "en": "Upon getting hit, recieve 44 frostbite buildup",
+    "zh": "受到攻擊時，凍傷量表累積 44。"
+  },
+  "6820300": {
+    "en": "Upon getting hit, recieve 44 blood loss buildup",
+    "zh": "受到攻擊時，出血量表累積 44。"
+  },
+  "6820400": {
+    "en": "Upon getting hit, recieve 40 madness buildup",
+    "zh": "受到攻擊時，發狂量表累積 40。"
+  },
+  "6820500": {
+    "en": "Upon getting hit, recieve 40 sleep buildup",
+    "zh": "受到攻擊時，催眠量表累積 40。"
+  },
+  "6820600": {
+    "en": "Upon getting hit, recieve 32 death blight buildup",
+    "zh": "受到攻擊時，死亡量表累積 32。"
+  },
+  "6830000": {
+    "en": "-3 strength, -3 intelligence",
+    "zh": "力氣 -3，智力 -3。"
+  },
+  "6830100": {
+    "en": "-3 dexterity, -3 faith",
+    "zh": "靈巧 -3，信仰 -3。"
+  },
+  "6830200": {
+    "en": "-3 intelligence, -3 dexterity",
+    "zh": "智力 -3，靈巧 -3。"
+  },
+  "6830300": {
+    "en": "-3 faith, -3 strength",
+    "zh": "信仰 -3，力氣 -3。"
+  },
+  "6830400": {
+    "en": "-3 vigor, -3 arcane",
+    "zh": "生命力 -3，感應 -3。"
+  },
+  "6840000": {
+    "en": "0.9x rune gain from enemies",
+    "zh": "從敵人獲得的盧恩 ×0.9。"
+  },
+  "6840100": {
+    "en": "0.85x HP restored from flask",
+    "zh": "聖杯瓶的 HP 恢復量 ×0.85。"
+  },
+  "6840200": {
+    "en": "0.85x passive ultimate art charge and 0.85x ultimate art charge from attacks",
+    "zh": "自然累積的絕活量表累積量 ×0.85，攻擊獲得的絕活量表累積量 ×0.85。"
+  },
+  "7000000": {
+    "en": "+1 vigor (+20 maximum HP)",
+    "zh": "生命力 +1（HP 上限 +20）。"
+  },
+  "7000001": {
+    "en": "+2 vigor (+40 maximum HP)",
+    "zh": "生命力 +2（HP 上限 +40）。"
+  },
+  "7000002": {
+    "en": "+3 vigor (+60 maximum HP)",
+    "zh": "生命力 +3（HP 上限 +60）。"
+  },
+  "7000100": {
+    "en": "+1 mind (+5 maximum FP)",
+    "zh": "集中力 +1（FP 上限 +5）。"
+  },
+  "7000101": {
+    "en": "+2 mind (+10 maximum FP)",
+    "zh": "集中力 +2（FP 上限 +10）。"
+  },
+  "7000102": {
+    "en": "+3 mind (+15 maximum FP)",
+    "zh": "集中力 +3（FP 上限 +15）。"
+  },
+  "7000200": {
+    "en": "+1 endurance (+2 maximum stamina)",
+    "zh": "耐力 +1（精力上限 +2）。"
+  },
+  "7000201": {
+    "en": "+2 endurance (+4 maximum stamina)",
+    "zh": "耐力 +2（精力上限 +4）。"
+  },
+  "7000202": {
+    "en": "+3 endurance (+6 maximum stamina)",
+    "zh": "耐力 +3（精力上限 +6）。"
+  },
+  "7000800": {
+    "en": "0.95x character skill cooldown (does not apply to Recluse, Revenant, or Executor)",
+    "zh": "技藝冷卻時間 ×0.95（不適用於隱士、復仇者、執行者）。"
+  },
+  "7000801": {
+    "en": "0.925x character skill cooldown (does not apply to Recluse, Revenant, or Executor)",
+    "zh": "技藝冷卻時間 ×0.925（不適用於隱士、復仇者、執行者）。"
+  },
+  "7000802": {
+    "en": "0.9x character skill cooldown (does not apply to Recluse, Revenant, or Executor)",
+    "zh": "技藝冷卻時間 ×0.9（不適用於隱士、復仇者、執行者）。"
+  },
+  "7000900": {
+    "en": "1.05x passive ultimate art charge rate",
+    "zh": "絕活量表自然累積速度 ×1.05。"
+  },
+  "7000901": {
+    "en": "1.075x passive ultimate art charge rate",
+    "zh": "絕活量表自然累積速度 ×1.075。"
+  },
+  "7000902": {
+    "en": "1.1x passive ultimate art charge rate",
+    "zh": "絕活量表自然累積速度 ×1.1。"
+  },
+  "7001000": {
+    "en": "0.95x poise damage recieved",
+    "zh": "受到的削韌 ×0.95。"
+  },
+  "7001001": {
+    "en": "0.9x poise damage recieved",
+    "zh": "受到的削韌 ×0.9。"
+  },
+  "7001002": {
+    "en": "0.85x poise damage recieved",
+    "zh": "受到的削韌 ×0.85。"
+  },
+  "7001400": {
+    "en": "1.04x all sources of physical damage",
+    "zh": "所有來源的物理傷害 ×1.04。"
+  },
+  "7001401": {
+    "en": "1.05x all sources of physical damage",
+    "zh": "所有來源的物理傷害 ×1.05。"
+  },
+  "7001402": {
+    "en": "1.06x all sources of physical damage",
+    "zh": "所有來源的物理傷害 ×1.06。"
+  },
+  "7001500": {
+    "en": "1.045x all sources of magic damage",
+    "zh": "所有來源的魔力屬性傷害 ×1.045。"
+  },
+  "7001501": {
+    "en": "1.055x all sources of magic damage",
+    "zh": "所有來源的魔力屬性傷害 ×1.055。"
+  },
+  "7001502": {
+    "en": "1.065x all sources of magic damage",
+    "zh": "所有來源的魔力屬性傷害 ×1.065。"
+  },
+  "7001600": {
+    "en": "1.045x all sources of fire damage",
+    "zh": "所有來源的火屬性傷害 ×1.045。"
+  },
+  "7001601": {
+    "en": "1.055x all sources of fire damage",
+    "zh": "所有來源的火屬性傷害 ×1.055。"
+  },
+  "7001602": {
+    "en": "1.065x all sources of fire damage",
+    "zh": "所有來源的火屬性傷害 ×1.065。"
+  },
+  "7001700": {
+    "en": "1.045x all sources of lightning damage",
+    "zh": "所有來源的雷屬性傷害 ×1.045。"
+  },
+  "7001701": {
+    "en": "1.055x all sources of lightning damage",
+    "zh": "所有來源的雷屬性傷害 ×1.055。"
+  },
+  "7001702": {
+    "en": "1.065x all sources of lightning damage",
+    "zh": "所有來源的雷屬性傷害 ×1.065。"
+  },
+  "7001800": {
+    "en": "1.045x all sources of holy damage",
+    "zh": "所有來源的聖屬性傷害 ×1.045。"
+  },
+  "7001801": {
+    "en": "1.055x all sources of holy damage",
+    "zh": "所有來源的聖屬性傷害 ×1.055。"
+  },
+  "7001802": {
+    "en": "1.065x all sources of holy damage",
+    "zh": "所有來源的聖屬性傷害 ×1.065。"
+  },
+  "7002600": {
+    "en": "0.9x magic damage taken",
+    "zh": "受到的魔力屬性傷害 ×0.9。"
+  },
+  "7002700": {
+    "en": "0.9x fire damage taken",
+    "zh": "受到的火屬性傷害 ×0.9。"
+  },
+  "7002800": {
+    "en": "0.9x lightning damage taken",
+    "zh": "受到的雷屬性傷害 ×0.9。"
+  },
+  "7002900": {
+    "en": "0.9x holy damage taken",
+    "zh": "受到的聖屬性傷害 ×0.9。"
+  },
+  "7003000": {
+    "en": "+75 poison resistance",
+    "zh": "中毒抵抗力 +75。"
+  },
+  "7003100": {
+    "en": "+75 blood loss resistance",
+    "zh": "出血抵抗力 +75。"
+  },
+  "7003200": {
+    "en": "+75 sleep resistance",
+    "zh": "催眠抵抗力 +75。"
+  },
+  "7003300": {
+    "en": "+75 death blight resistance",
+    "zh": "驟死抵抗力 +75。"
+  },
+  "7003400": {
+    "en": "+75 rot resistance",
+    "zh": "猩紅腐敗抵抗力 +75。"
+  },
+  "7003500": {
+    "en": "+75 frost resistance",
+    "zh": "凍傷抵抗力 +75。"
+  },
+  "7003600": {
+    "en": "+75 madness resistance",
+    "zh": "發狂抵抗力 +75。"
+  },
+  "7005600": {
+    "en": "Damage taken over the past 4 seconds can be healed by dealing damage with melee attacks, ranged attacks, and spells. This does not stack with similar effects",
+    "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與法術造成傷害來恢復。此效果不與同類效果疊加。"
+  },
+  "7010200": {
+    "en": "Flask now restores [0.5x max HP] HP to self and [0.3x max HP] HP to nearby allies. With Gradual Restoration by Flask, flask instead restores [0.1x max HP] HP on use and [0.01x max HP] HP every 0.1 seconds for 8 seconds for self, and restores [0.05x max HP] HP on use and [0.01x max HP] HP every 0.1 seconds for 4 seconds for nearby allies. With Unifying Fate, flask also restores [0.3x max FP] FP to self and [0.15x max FP] FP to nearby allies\n(TODO: test if scales with user max HP or reciever max HP)",
+    "zh": "聖杯瓶改為為自身恢復 [HP 上限 ×0.5] HP，並為周圍我方人物恢復 [HP 上限 ×0.3] HP。搭配「使用聖杯瓶時，改為緩慢恢復」時，改為：自身於使用時恢復 [HP 上限 ×0.1] HP，之後 8 秒內每 0.1 秒恢復 [HP 上限 ×0.01] HP；周圍我方人物於使用時恢復 [HP 上限 ×0.05] HP，之後 4 秒內每 0.1 秒恢復 [HP 上限 ×0.01] HP。搭配 Unifying Fate 時，聖杯瓶另為自身恢復 [FP 上限 ×0.3] FP，並為周圍我方人物恢復 [FP 上限 ×0.15] FP。（原文註記：待測試數值依使用者的 HP 上限或接受者的 HP 上限計算）"
+  },
+  "7010500": {
+    "en": "Onslaught Stake now leaves a pool of fire on the ground, dealing 31 fire damage at level 1 and 63 fire damage at level 15 (skills and ultimates that scale with level scale linearly from level 1 to level 15)",
+    "zh": "絕活（Onslaught Stake）改為在地面留下火焰區域，等級 1 時造成 31 火屬性傷害，等級 15 時造成 63 火屬性傷害（隨等級成長的技藝與絕活，從等級 1 至等級 15 線性成長）。"
+  },
+  "7010700": {
+    "en": "Landing the final attack of a light attack chain or powerstanced attack chain with daggers triggers Restage, repeating 0.4x of direct damage, stance damage, and status buildup dealt over the past 3 seconds (overriding a recently used Restage skill and being overrided if Restage skill is used after it's triggered)",
+    "zh": "以短劍命中輕攻擊連擊或雙持攻擊連擊的最後一擊時，觸發技藝（Restage），重現過去 3 秒內造成的直接傷害、削韌與異常狀態累積值 ×0.4（會覆蓋最近使用的技藝效果；觸發後若再使用技藝，此效果會被覆蓋）。"
+  },
+  "7010900": {
+    "en": "Immortal March now deals [0.5x max HP] damage to self and heals targeted allies for [1x max HP] HP",
+    "zh": "絕活（Immortal March）改為對自身造成 [HP 上限 ×0.5] 傷害，並為目標隊友恢復 [HP 上限 ×1] HP。"
+  },
+  "7011000": {
+    "en": "Whirlwind now deals constant damage in a medium radius, dealing 13 physical damage per hit at level 1 and 26 physical damage per hit at level 15 as well as 0.75 stance damage every 0.5 seconds, lasting 4 seconds if uncharged and 7 seconds if charged (damage level of 2 on hit)",
+    "zh": "技藝（Whirlwind）改為在中等範圍內持續造成傷害：每次命中造成物理傷害，等級 1 時 13 點、等級 15 時 26 點；並每 0.5 秒造成 0.75 削韌。未蓄力時持續 4 秒，蓄力時持續 7 秒（命中時傷害等級為 2）。"
+  },
+  "7011200": {
+    "en": "Immortal March now triggers a ghostflame explosion, dealing magic 240 damage at level 1 and 475 damage at level 15",
+    "zh": "絕活（Immortal March）改為引發靈火爆炸，等級 1 時造成 240 魔力傷害，等級 15 時造成 475 傷害。"
+  },
+  "7011600": {
+    "en": "Landing a charged attack with a halberd triggers a small Whirlwind, dealing 36 physical damage at level 1 and 71 physical damage at level 15 as well as 5 stance damage",
+    "zh": "以戟命中蓄力攻擊時，引發小型旋風，造成物理傷害（等級 1 時 36 點、等級 15 時 71 點）及 5 削韌。"
+  },
+  "7011700": {
+    "en": "Roaring while Aspects of the Crucible: Beast is active heals self and allies hit by the roar by [0.15x max HP] HP",
+    "zh": "絕活（Aspects of the Crucible: Beast）發動期間咆哮時，為自身與被咆哮命中的隊友恢復 [HP 上限 ×0.15] HP。"
+  },
+  "7012000": {
+    "en": "While Wings of Salvation is being held in its defensive stance, apply a buff that heals self and allies by [0.15x max HP] HP every 1 second",
+    "zh": "絕活（Wings of Salvation）維持防禦架勢期間，施加增益，每 1 秒為自身與隊友恢復 [HP 上限 ×0.15] HP。"
+  },
+  "7012200": {
+    "en": "When below [0.4x max HP] HP, apply a buff to self and allies that restores [1 + 0.005x max HP] HP per second for 50 seconds",
+    "zh": "HP 低於 [HP 上限 ×0.4] 時，對自己與隊友施加增益效果，每秒恢復 [1 + HP 上限 ×0.005] HP，持續 50 秒。"
+  },
+  "7012300": {
+    "en": "When below [0.4x max HP] HP, 0.84x damage taken from all sources",
+    "zh": "HP 低於 [HP 上限 ×0.4] 時，受到的所有來源傷害 ×0.84。"
+  },
+  "7020000": {
+    "en": "Performing a light attack after landing Claw Shot triggers a unique followup, applying a buff of 12 fire damage for 20 seconds to the greatsword used and dealing [1.55x greatsword AR] damage, 16.5 stance damage, and building up 10 accumuVal",
+    "zh": "技藝（Claw Shot）命中後進行輕攻擊，觸發專屬追加攻擊：為所用大劍附加 12 火屬性傷害增益，持續 20 秒，並造成 [大劍攻擊力 ×1.55] 傷害、16.5 削韌，累積 10 accumuVal。"
+  },
+  "7030000": {
+    "en": "When Totem Stela is used, self and nearby allies are buffed with 0.5x poise damage taken for the duration of the ultimate\n(TODO: test more interactions with allies)",
+    "zh": "使用圖騰碑石時，自身與周圍隊友在絕活持續期間受到的削韌 ×0.5。（原文註記：待進一步測試與隊友的互動）"
+  },
+  "7030200": {
+    "en": "Consuming an edible item restores 80 HP to the user\n(TODO: verify this only applies to boluses)",
+    "zh": "食用可食用道具時，為使用者恢復 80 HP。（原文註記：待核實此效果是否僅適用於苔藥。）"
+  },
+  "7030600": {
+    "en": "Upon guarding an attack, gain 1 ultimate charge",
+    "zh": "防禦住攻擊時，獲得 1 絕活量表累積量。"
+  },
+  "7030700": {
+    "en": "Upon guarding an attack, gan 300 target priority for 2 seconds",
+    "zh": "防禦住攻擊時，獲得 300 目標優先度，持續 2 秒。"
+  },
+  "7030800": {
+    "en": "Upon performing a critical hit, gain 5 ultimate charge",
+    "zh": "使出致命一擊時，獲得 5 絕活量表累積量。"
+  },
+  "7030900": {
+    "en": "When using a grease, 1.1x physical damage of weapons for 30 seconds\n(TODO: verify what the effect buffs)",
+    "zh": "使用油脂類道具時，武器物理傷害 ×1.1，持續 30 秒。（原文註記：待核實此效果強化的對象。）"
+  },
+  "7031200": {
+    "en": "Immortal March also buffs allies affected with 1.25x damage of all sources for 30 seconds",
+    "zh": "絕活（Immortal March）同時使受影響的隊友所有來源的傷害 ×1.25，持續 30 秒。"
+  },
+  "7031300": {
+    "en": "Getting hit while using Retaliate buffs self with 1.1x damage of all sources and 1.2x maximum stamina for 2 seconds",
+    "zh": "使用技藝（Retaliate）期間受到攻擊時，自身所有來源的傷害 ×1.1、精力上限 ×1.2，持續 2 秒。"
+  },
+  "7031800": {
+    "en": "Upon performing a backstab, apply a concealment effect, adjust enemy vision of self by 0.01x and enemy hearing of self by 0.00x for 10 seconds \n(TODO: test more to understand what this actually means)",
+    "zh": "使出背刺時，施加隱匿效果：敵人對自身的視覺 ×0.01、聽覺 ×0.00，持續 10 秒。（原文註記：待進一步測試以理解此效果的實際意義）"
+  },
+  "7031900": {
+    "en": "Upon performing a critical hit, gain 600 runes",
+    "zh": "使出致命一擊時，獲得 600 盧恩。"
+  },
+  "7032200": {
+    "en": "When taking damage, 1.15x all sources of damage for 10 seconds\n(TODO: determine all ways of activating buff)",
+    "zh": "受到傷害時，所有來源的傷害 ×1.15，持續 10 秒。（原文註記：待核實觸發此增益的所有方式。）"
+  },
+  "7032400": {
+    "en": "Upon triggering Sixth Sense, gain 18% ultimate charge",
+    "zh": "觸發能力（Sixth Sense）時，獲得 18% 絕活量表累積量。"
+  },
+  "7032700": {
+    "en": "Upon using Finale, for the next 12.5 seconds, enemies killed buff self with 1.15x damage of all sources for 30 seconds, stacking multiplicatively with each kill and with every buff having an independent timer",
+    "zh": "使用絕活（Finale）後的 12.5 秒內，每次打倒敵人時，自身所有來源的傷害 ×1.15，持續 30 秒；每次擊殺的增益以乘算疊加，且各自獨立計時。"
+  },
+  "7032800": {
+    "en": "Upon collecting affinity residue using Magic Cocktail, spawn Terra Magica that lasts for 30 seconds, buffing targets in its radius with 1.15x magic damage of all sources, lingering for 1.5 seconds after leaving the radius (cooldown per activation: 30 seconds)",
+    "zh": "以技藝（Magic Cocktail）收集屬性痕時，生成持續 30 秒的「魔法之境」，使範圍內目標所有來源的魔力傷害 ×1.15；離開範圍後效果殘留 1.5 秒（每次發動冷卻：30 秒）。"
+  },
+  "7032900": {
+    "en": "Soulblood Song applies 9999 blood loss to self, dealing [0.2x max HP] damage, and buffs self with 1.16x damage of all sources for 30 seconds",
+    "zh": "絕活（Soulblood Song）對自身施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害，並使自身所有來源的傷害 ×1.16，持續 30 秒。"
+  },
+  "7033200": {
+    "en": "Allows Wylder to store +1 additional use of Claw Shot",
+    "zh": "讓追蹤者可額外儲存 +1 次技藝（Claw Shot）使用次數。"
+  },
+  "7033400": {
+    "en": "Upon guarding while Steel Guard is active, fire a close range shockwave, dealing 60 physical damage (cooldown per activation: 3 seconds)",
+    "zh": "能力（Steel Guard）發動期間防禦時，發出近距離衝擊波，造成 60 物理傷害（每次發動冷卻：3 秒）。"
+  },
+  "7034100": {
+    "en": "Soulblood Song buffs self with 1.5x maximum HP. After 30 seconds, buff is lost upon taking damage",
+    "zh": "絕活（Soulblood Song）使自身 HP 上限 ×1.5。30 秒後，受到傷害時會失去此增益。"
+  },
+  "7034400": {
+    "en": "When Suncatcher is equipped, buff self with 1.08x character skill damage, and landing attacks with Suncatcher deals 10 damage to self",
+    "zh": "裝備技藝（Suncatcher）時，自身技藝傷害 ×1.08；以該技藝命中攻擊時，對自身造成 10 傷害（原文如此）。"
+  },
+  "7034500": {
+    "en": "Upon charging the empowered skill of Suncatcher, restore 100 HP",
+    "zh": "為妖刀（Suncatcher）的強化技能蓄力時，恢復 100 HP。"
+  },
+  "7034600": {
+    "en": "Single Shot applies 300 poison buildup when hitting with the arrow",
+    "zh": "絕活（Single Shot）的箭矢命中時，施加 300 中毒累積值。"
+  },
+  "7034700": {
+    "en": "Single Shot buffs self with 1.2x damage to thrusting counterattacks for 30 seconds",
+    "zh": "絕活（Single Shot）使自身突刺反擊傷害 ×1.2，持續 30 秒。"
+  },
+  "7035100": {
+    "en": "Upon performing a critical hit, buff self with +10 stamina recovery per second for 15 seconds",
+    "zh": "使出致命一擊時，使自己獲得每秒 +10 精力恢復的增益，持續 15 秒。"
+  },
+  "7036200": {
+    "en": "Greatly reduces the rate of which progress for Analyze decays \n(TODO: find and verify specific numbers for this)",
+    "zh": "大幅降低技藝（Analyze）進行率的衰減速度。（原文註記：待查明並核實具體數值）"
+  },
+  "7036300": {
+    "en": "Analyze can now target allies in its radius, and when used, buffs them with 1.2x physical damage and 1.15x affinity damage of all sources for 30 seconds",
+    "zh": "技藝（Analyze）可指定範圍內的隊友；使用時，使其所有來源的物理傷害 ×1.2、屬性傷害 ×1.15，持續 30 秒。"
+  },
+  "7036400": {
+    "en": "Communion applies a damage over time effect on enemies, dealing 15 damage per 1 second for a 20 second duration",
+    "zh": "絕活（Communion）對敵人施加持續傷害效果，每 1 秒造成 15 傷害，持續 20 秒。"
+  },
+  "7036500": {
+    "en": "Upon using Analyze on a unique enemy for the first time, gain 1300 runes\n(TODO: figure out what enemies count as being different from one another)",
+    "zh": "首次對某種獨特敵人使用技藝（Analyze）時，獲得 1300 盧恩。（原文註記：待釐清哪些敵人視為彼此不同）"
+  },
+  "7036800": {
+    "en": "Loathesome Hex buffs self with 1.14x damage of all sources for 40 seconds when used",
+    "zh": "使用絕活（Loathesome Hex）時，自身所有來源的傷害 ×1.14，持續 40 秒。"
+  },
+  "7036900": {
+    "en": "Upon landing the last hit of a light attack chain or powerstanced attack chain, buff self with 1.12x damage of all sources for 20 seconds",
+    "zh": "命中輕攻擊連擊或雙持攻擊連擊的最後一擊時，自身所有來源的傷害 ×1.12，持續 20 秒。"
+  },
+  "7037000": {
+    "en": "Upon using an incantation that applies a buff to self, buff self with 1.15x physical damage of all sources for 60 seconds",
+    "zh": "使用對自身施加增益的禱告時，自身所有來源的物理傷害 ×1.15，持續 60 秒。"
+  },
+  "7037300": {
+    "en": "Landing Loathesome Hex on allies heals them for [0.3x max HP + 100] HP",
+    "zh": "絕活（Loathesome Hex）命中隊友時，為其恢復 [HP 上限 ×0.3 + 100] HP。"
+  },
+  "7040000": {
+    "en": "1.15x damage for the first attack in a light attack chain or powerstance attack chain",
+    "zh": "輕攻擊連段或雙持攻擊連段的第一擊傷害 ×1.15。"
+  },
+  "7040100": {
+    "en": "1.18x damage for guard counter attacks",
+    "zh": "防禦反擊傷害 ×1.18。"
+  },
+  "7040200": {
+    "en": "1.18x damage for critical hits",
+    "zh": "致命一擊傷害 ×1.18。"
+  },
+  "7040300": {
+    "en": "1.15x damage of throwing pots",
+    "zh": "投擲壺傷害 ×1.15。"
+  },
+  "7040400": {
+    "en": "1.15x damage of throwing knives",
+    "zh": "投擲小刀傷害 ×1.15。"
+  },
+  "7040500": {
+    "en": "1.15x damage of glintstone consumables and gravity stones",
+    "zh": "輝石道具與重力石道具傷害 ×1.15。"
+  },
+  "7043200": {
+    "en": "1.12x damage of stonedigger sorceries",
+    "zh": "挖石的魔法傷害 ×1.12。"
+  },
+  "7043300": {
+    "en": "1.12x damage of carian sword sorceries",
+    "zh": "卡利亞劍的魔法傷害 ×1.12。"
+  },
+  "7043400": {
+    "en": "1.12x damage of glintblade sorceries",
+    "zh": "輝劍的魔法傷害 ×1.12。"
+  },
+  "7043500": {
+    "en": "1.12x damage of invisibility sorceries",
+    "zh": "隱形的魔法傷害 ×1.12。"
+  },
+  "7043600": {
+    "en": "1.12x damage of crystalian sorceries",
+    "zh": "結晶人的魔法傷害 ×1.12。"
+  },
+  "7043700": {
+    "en": "1.12x damage of gravity sorceries",
+    "zh": "重力的魔法傷害 ×1.12。"
+  },
+  "7043800": {
+    "en": "1.12x damage of thorn sorceries",
+    "zh": "荊棘的魔法傷害 ×1.12。"
+  },
+  "7044000": {
+    "en": "1.12x damage of fundamentalist incantations",
+    "zh": "黃金律法基本主義的禱告傷害 ×1.12。"
+  },
+  "7044100": {
+    "en": "1.12x damage of dragon cult incantations",
+    "zh": "王城古龍信仰的禱告傷害 ×1.12。"
+  },
+  "7044200": {
+    "en": "1.12x damage of giants' flame incantations",
+    "zh": "巨人火焰的禱告傷害 ×1.12。"
+  },
+  "7044300": {
+    "en": "1.12x damage of godslayer incantations",
+    "zh": "狩獵神祇的禱告傷害 ×1.12。"
+  },
+  "7044400": {
+    "en": "1.12x damage of bestial incantations",
+    "zh": "野獸的禱告傷害 ×1.12。"
+  },
+  "7044500": {
+    "en": "1.12x damage of frenzied flame incantations",
+    "zh": "癲火的禱告傷害 ×1.12。"
+  },
+  "7044600": {
+    "en": "1.12x damage of dragon communion incantations",
+    "zh": "龍饗的禱告傷害 ×1.12。"
+  },
+  "7050000": {
+    "en": "Apply a buff to nearby allies (10 hit radius bullet) every 1 second, giving +4 stamina recovery per second for 1 second",
+    "zh": "每 1 秒對周圍我方人物（bullet 判定半徑 10）施加增益，使精力恢復速度每秒 +4，持續 1 秒。"
+  },
+  "7050100": {
+    "en": "Using starlight shards, boluses, or food consumables applies a respective buff to nearby allies (15 hit radius bullet) \n(TODO: document specific buffs)",
+    "zh": "使用星光碎片、苔藥或食物類消耗品時，對周圍我方人物（bullet 判定半徑 15）施加對應的增益。（原文註記：待記錄具體增益）"
+  },
+  "7060000": {
+    "en": "Upon clearing an evergaol, 1.05x all sources of damage (stacking multiplicatively for each evergaol cleared)",
+    "zh": "攻略封印監牢後，所有來源的傷害 ×1.05（每攻略一座封印監牢，以乘算疊加）。"
+  },
+  "7060100": {
+    "en": "Upon unlocking a sorcerer's rise, 1.18x max FP (stacking multiplicatively for each rise unlocked)",
+    "zh": "解開魔法師塔的機關後，FP 上限 ×1.18（每解開一座魔法師塔，以乘算疊加）。"
+  },
+  "7060200": {
+    "en": "Upon killing a night invader, 1.05x all sources of damage (stacking multiplicatively for each invader killed)",
+    "zh": "擊殺黑夜入侵者後，所有來源的傷害 ×1.05（每擊殺一名入侵者，以乘算疊加）。"
+  },
+  "7080000": {
+    "en": "When 3 or more daggers are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上短劍時，所有傷害來源 ×1.2"
+  },
+  "7080100": {
+    "en": "When 3 or more straight swords are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上直劍時，所有傷害來源 ×1.2"
+  },
+  "7080200": {
+    "en": "When 3 or more greatswords are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上大劍時，所有傷害來源 ×1.2"
+  },
+  "7080300": {
+    "en": "When 3 or more colossal swords are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上特大劍時，所有傷害來源 ×1.2"
+  },
+  "7080400": {
+    "en": "When 3 or more curved swords are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上曲劍時，所有傷害來源 ×1.2"
+  },
+  "7080500": {
+    "en": "When 3 or more curved greatswords are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上大曲劍時，所有傷害來源 ×1.2"
+  },
+  "7080600": {
+    "en": "When 3 or more katanas are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上刀時，所有傷害來源 ×1.2"
+  },
+  "7080700": {
+    "en": "When 3 or more twinblades are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上雙頭劍時，所有傷害來源 ×1.2"
+  },
+  "7080800": {
+    "en": "When 3 or more thrusting swords are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上刺劍時，所有傷害來源 ×1.2"
+  },
+  "7080900": {
+    "en": "When 3 or more heavy thrusting swords are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上重刺劍時，所有傷害來源 ×1.2"
+  },
+  "7081000": {
+    "en": "When 3 or more axes are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上斧時，所有傷害來源 ×1.2"
+  },
+  "7081100": {
+    "en": "When 3 or more greataxes are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上大斧時，所有傷害來源 ×1.2"
+  },
+  "7081200": {
+    "en": "When 3 or more hammers are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上槌時，所有傷害來源 ×1.2"
+  },
+  "7081300": {
+    "en": "When 3 or more great hammers are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上大槌時，所有傷害來源 ×1.2"
+  },
+  "7081400": {
+    "en": "When 3 or more flails are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上連枷時，所有傷害來源 ×1.2"
+  },
+  "7081500": {
+    "en": "When 3 or more spears are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上矛時，所有傷害來源 ×1.2"
+  },
+  "7081700": {
+    "en": "When 3 or more great spears are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上大矛時，所有傷害來源 ×1.2"
+  },
+  "7081800": {
+    "en": "When 3 or more halberds are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上戟時，所有傷害來源 ×1.2"
+  },
+  "7081900": {
+    "en": "When 3 or more reapers are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上鐮刀時，所有傷害來源 ×1.2"
+  },
+  "7082000": {
+    "en": "When 3 or more fists are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上拳頭時，所有傷害來源 ×1.2"
+  },
+  "7082100": {
+    "en": "When 3 or more claws are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上鉤爪時，所有傷害來源 ×1.2"
+  },
+  "7082200": {
+    "en": "When 3 or more whips are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上軟鞭時，所有傷害來源 ×1.2"
+  },
+  "7082300": {
+    "en": "When 3 or more colossal weapons are equipped, 1.2x all sources of damage",
+    "zh": "裝備 3 把以上特大武器時，所有傷害來源 ×1.2"
+  },
+  "7082400": {
+    "en": "When 3 or more bows are equipped, 1.2x all sources of damage\n(buffed in 1.03 despite patch notes?)",
+    "zh": "裝備 3 把以上弓時，所有傷害來源 ×1.2（原文註記：1.03 版本疑似已加強，與更新說明不符？）"
+  },
+  "7082500": {
+    "en": "When 3 or more staves are equipped, +10 mind (+50 maximum FP)",
+    "zh": "裝備 3 把以上手杖時，集中力 +10（FP 上限 +50）"
+  },
+  "7082600": {
+    "en": "When 3 or more sacred seals are equipped, +10 mind (+50 maximum FP)",
+    "zh": "裝備 3 把以上聖印記時，集中力 +10（FP 上限 +50）"
+  },
+  "7090300": {
+    "en": "When Totem Stela is used, self and nearby allies are buffed, healing [0.2x max HP] HP when an enemy is killed during the duration of the ultimate\n(TODO: test more interactions with allies)",
+    "zh": "使用圖騰碑石時，自身與周圍隊友獲得增益：在絕活持續期間打倒敵人時，恢復 [HP 上限 ×0.2] HP。（原文註記：待進一步測試與隊友的互動）"
+  },
+  "7150000": {
+    "en": "Upon triggering Sixth Sense, gain 18 ultimate charge",
+    "zh": "觸發 Sixth Sense（原文如此）時，獲得 18 絕活量表累積量。"
+  },
+  "7220000": {
+    "en": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with [0.01x max HP] HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x damage taken from all sources",
+    "zh": "技藝（Summon Spirit）依當前出現的靈魂給予自身不同的獨特增益：Helen 使自身每 1 秒恢復 [HP 上限 ×0.01] HP；Fredrick 使自身所有來源的傷害 ×1.1；Sebastian 使自身受到的所有來源傷害 ×0.8。"
+  },
+  "7260400": {
+    "en": "1.1x damage of all sources to targets afflicted with frostbite",
+    "zh": "對陷入凍傷的目標，所有來源的傷害 ×1.1。"
+  },
+  "7270100": {
+    "en": "Allows Ironeye to store +1 additional use of Marking",
+    "zh": "讓鐵之眼可額外儲存 +1 次技藝（Marking）使用次數。"
+  },
+  "7280000": {
+    "en": "Increases the duration of the weak point from Marking from 17.5 seconds to 22.5 seconds\n(TODO: verify with in-game testing)",
+    "zh": "技藝（Marking）造成的弱點顯露時間從 17.5 秒延長至 22.5 秒。（原文註記：待以遊戲內實測核實）"
+  },
+  "7290000": {
+    "en": "Restage now repeats 0.6x direct damage, stance damage, and status buildup dealt over the past 3 seconds instead of 0.5x",
+    "zh": "技藝（Restage）改為重現過去 3 秒內造成的直接傷害、削韌與異常狀態累積值 ×0.6，原為 ×0.5。"
+  },
+  "7310000": {
+    "en": "Increases the duration of Totem Stela and relic buffs applied by it from 20 seconds to 30 seconds, and extends the 1.15x damage buff to all non-spell sources from 30 seconds to 45 seconds\n(TODO: verify discrepancy between Totem Stela duration and attack buff duration)",
+    "zh": "絕活「圖騰碑石」及其施加的遺物增益持續時間從 20 秒延長至 30 秒，並將對所有非法術來源的傷害 ×1.15 增益從 30 秒延長至 45 秒。（原文註記：待核實圖騰碑石持續時間與攻擊力增益持續時間的差異）"
+  },
+  "7330000": {
+    "en": "1.09x damage of daggers",
+    "zh": "短劍的傷害 ×1.09"
+  },
+  "7330100": {
+    "en": "1.09x damage of straight swords",
+    "zh": "直劍的傷害 ×1.09"
+  },
+  "7330200": {
+    "en": "1.09x damage of greatswords",
+    "zh": "大劍的傷害 ×1.09"
+  },
+  "7330300": {
+    "en": "1.09x damage of colossal swords",
+    "zh": "特大劍的傷害 ×1.09"
+  },
+  "7330400": {
+    "en": "1.09x damage of curved swords",
+    "zh": "曲劍的傷害 ×1.09"
+  },
+  "7330500": {
+    "en": "1.09x damage of curved greatswords",
+    "zh": "大曲劍的傷害 ×1.09"
+  },
+  "7330600": {
+    "en": "1.09x damage of katanas",
+    "zh": "刀的傷害 ×1.09"
+  },
+  "7330700": {
+    "en": "1.09x damage of twinblades",
+    "zh": "雙頭劍的傷害 ×1.09"
+  },
+  "7330800": {
+    "en": "1.09x damage of thrusting swords",
+    "zh": "刺劍的傷害 ×1.09"
+  },
+  "7330900": {
+    "en": "1.09x damage of heavy thrusting swords",
+    "zh": "重刺劍的傷害 ×1.09"
+  },
+  "7331000": {
+    "en": "1.09x damage of axes",
+    "zh": "斧的傷害 ×1.09"
+  },
+  "7331100": {
+    "en": "1.09x damage of greataxes",
+    "zh": "大斧的傷害 ×1.09"
+  },
+  "7331200": {
+    "en": "1.09x damage of hammers",
+    "zh": "槌的傷害 ×1.09"
+  },
+  "7331300": {
+    "en": "1.09x damage of great hammers",
+    "zh": "大槌的傷害 ×1.09"
+  },
+  "7331400": {
+    "en": "1.09x damage of flails",
+    "zh": "連枷的傷害 ×1.09"
+  },
+  "7331500": {
+    "en": "1.09x damage of spears",
+    "zh": "矛的傷害 ×1.09"
+  },
+  "7331700": {
+    "en": "1.09x damage of great spears",
+    "zh": "大矛的傷害 ×1.09"
+  },
+  "7331800": {
+    "en": "1.09x damage of halberds",
+    "zh": "戟的傷害 ×1.09"
+  },
+  "7331900": {
+    "en": "1.09x damage of reapers",
+    "zh": "鐮刀的傷害 ×1.09"
+  },
+  "7332000": {
+    "en": "1.09x damage of fists",
+    "zh": "拳頭的傷害 ×1.09"
+  },
+  "7332100": {
+    "en": "1.09x damage of claws",
+    "zh": "鉤爪的傷害 ×1.09"
+  },
+  "7332200": {
+    "en": "1.09x damage of whips",
+    "zh": "軟鞭的傷害 ×1.09"
+  },
+  "7332300": {
+    "en": "1.09x damage of colossal weapons",
+    "zh": "特大武器的傷害 ×1.09"
+  },
+  "7332400": {
+    "en": "1.09x damage of bows\n(buffed in 1.03 despite patch notes?)",
+    "zh": "弓的傷害 ×1.09（原文註記：1.03 版本疑似已加強，與更新說明不符？）"
+  },
+  "7340000": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340100": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340200": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340300": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340400": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340500": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340600": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340700": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340800": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7340900": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341000": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341100": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341200": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341300": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341400": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341500": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341700": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341800": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7341900": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7342000": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7342100": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7342200": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7342300": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7342400": {
+    "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350000": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350100": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350200": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350300": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350400": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350500": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350600": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350700": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350800": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7350900": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351000": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351100": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351200": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351300": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351400": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351500": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351700": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351800": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7351900": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7352000": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7352100": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7352200": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7352300": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  },
+  "7352400": {
+    "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)",
+    "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）"
+  }
+}

@@ -78,45 +78,69 @@ function tierText(data, effect, tierNumber) {
   return `${statName(data, effect.modifier.stat)} ${formatAmount(data, effect.modifier.unit, tier.value)}`;
 }
 
+function stackingParts(data, stacking) {
+  if (!stacking) return [];
+  const parts = [ruleLabel(data, "stacks", stacking.stacks)];
+  if ("acrossTiers" in stacking) parts.push(ruleLabel(data, "acrossTiers", stacking.acrossTiers));
+  if (stacking.stacks === true) parts.push(ruleLabel(data, "combine", stacking.combine));
+  return parts;
+}
+
+// requiresCurse 為 false 或未記錄時不顯示；true、null、conflict 都顯示對應狀態。
+function curseParts(data, holder) {
+  return "requiresCurse" in holder && holder.requiresCurse !== false
+    ? [ruleLabel(data, "requiresCurse", holder.requiresCurse)]
+    : [];
+}
+
+function availabilityParts(data, holder) {
+  return "availability" in holder ? [ruleLabel(data, "availability", holder.availability)] : [];
+}
+
+// 規則順序：等同值、取得方式、各級規則、疊加、負面效果。各級規則記在 tier 上，相同的等級合併列出，例如「+1、+2：一般遺物」。
 function ruleText(data, effect) {
   const { labels } = data;
-  const { stacking } = effect;
+  if (!effect.stacking && !effect.tiers?.every((tier) => tier.stacking)) {
+    throw new Error(`效果缺少疊加規則：${effect.name.en}`);
+  }
   const parts = [];
   if (effect.equivalent) {
     const { stat, unit, value } = effect.equivalent;
     parts.push(`${labels.equivalent}${statName(data, stat)} ${formatAmount(data, unit, value)}`);
   }
-  if ("availability" in effect) parts.push(ruleLabel(data, "availability", effect.availability));
-  // 各級取得方式不同時記在 tier 上，依取得方式合併等級，例如「+1、+2：一般遺物」。
-  const byAvailability = new Map();
+  parts.push(...availabilityParts(data, effect));
+  const byRule = new Map();
   for (const tier of effect.tiers ?? []) {
-    if (!("availability" in tier)) continue;
-    const label = ruleLabel(data, "availability", tier.availability);
-    byAvailability.set(label, [...(byAvailability.get(label) ?? []), tierLabel(data, tier.tier)]);
+    const text = [...availabilityParts(data, tier), ...stackingParts(data, tier.stacking), ...curseParts(data, tier)].join("，");
+    if (text) byRule.set(text, [...(byRule.get(text) ?? []), tierLabel(data, tier.tier)]);
   }
-  for (const [label, tiers] of byAvailability) parts.push(`${tiers.join("、")}：${label}`);
-  parts.push(ruleLabel(data, "stacks", stacking.stacks));
-  if ("acrossTiers" in stacking) parts.push(ruleLabel(data, "acrossTiers", stacking.acrossTiers));
-  if (stacking.stacks === true) parts.push(ruleLabel(data, "combine", stacking.combine));
-  // requiresCurse 為 false 時不顯示；true、null、conflict 都顯示對應狀態。
-  if ("requiresCurse" in effect && effect.requiresCurse !== false) {
-    parts.push(ruleLabel(data, "requiresCurse", effect.requiresCurse));
-  }
+  for (const [text, tiers] of byRule) parts.push(`${tiers.join("、")}：${text}`);
+  parts.push(...stackingParts(data, effect.stacking), ...curseParts(data, effect));
   return parts.join("；");
 }
 
-// icon 為 null 表示沒有可用的遊戲內圖片，保留同寬空位；缺少 icon 欄位則丟出錯誤。
+// 圖示：null 表示沒有可用的遊戲內圖片，保留同尺寸空位；size 為該編排位置的尺寸 (styles.css 同步設定)。
+function iconNode(data, key, size) {
+  if (key === undefined) throw new Error("缺少圖示欄位");
+  if (key === null) return el("span", { class: "icon icon-missing", role: "img", "aria-label": data.labels.iconMissing });
+  const { src, alt } = lookup(data.icons, key, "圖示");
+  return el("img", { class: "icon", src, width: size, height: size, alt, loading: "lazy" });
+}
+
 function itemName(data, kind, id) {
   const item = kind === "effect" ? lookup(data.effects, id, "效果") : lookup(data.stats, id, "能力值");
-  if (item.icon === undefined) throw new Error(`缺少圖示欄位：${id}`);
   const en = item.abbr ? `${item.name.en} / ${item.abbr}` : item.name.en;
-  const icon =
-    item.icon === null
-      ? el("span", { class: "icon icon-missing", role: "img", "aria-label": data.labels.iconMissing })
-      : (({ src, alt }) => el("img", { class: "icon", src, width: "48", height: "48", alt, loading: "lazy" }))(
-          lookup(data.icons, item.icon, "圖示")
-        );
-  return el("span", { class: "item-name" }, icon, item.name.zh, el("span", { class: "en" }, en));
+  return el("span", { class: "item-name" }, iconNode(data, item.icon, "48"), item.name.zh, el("span", { class: "en" }, en));
+}
+
+// 附圖的名稱清單，例如「限定角色：[圖]女爵、[圖]執行者」。
+function namedList(data, label, items) {
+  const nodes = [`${label}：`];
+  items.forEach((item, index) => {
+    if (index > 0) nodes.push("、");
+    nodes.push(iconNode(data, item.icon, "24"), item.name);
+  });
+  return el("span", { class: "entry" }, el("span", { class: "sub" }, ...nodes));
 }
 
 function valueEntries(data, ids) {
@@ -223,7 +247,15 @@ function effectEntries(data, key, effect) {
   if (effect.modifier && effect.tiers) values = tierEntries(data, effect);
   else if (effect.modifier) values = valueEntries(data, [key]);
   else values = [el("span", { class: "entry" }, el("span", { class: "sub" }, ruleText(data, effect)))];
-  return [...detailEntries(data, effect), ...values];
+  const extras = [];
+  if (effect.characters) {
+    const characters = effect.characters.map((id) => lookup(data.characters, id, "角色"));
+    extras.push(namedList(data, data.labels.characters, characters.map((c) => ({ icon: c.icon, name: c.name.zh }))));
+  }
+  if (effect.relics) {
+    extras.push(namedList(data, data.labels.relics, effect.relics.map((r) => ({ icon: r.icon, name: r.zh }))));
+  }
+  return [...detailEntries(data, effect), ...values, ...extras];
 }
 
 // <tbody data-relic-table="子分類鍵">：依資料檔順序列出該子分類的全部效果。
@@ -282,6 +314,13 @@ function render(data) {
   }
   for (const node of document.querySelectorAll("[data-character]")) {
     node.textContent = characterValue(data, node.dataset.character);
+  }
+  // 圖片來源：列出本頁已顯示圖示的 wiki 檔案頁，須在所有圖示產生之後執行。
+  for (const node of document.querySelectorAll("[data-icon-sources]")) {
+    const used = new Set([...document.querySelectorAll("main img.icon")].map((img) => img.getAttribute("src")));
+    const icons = Object.values(data.icons).filter((icon) => used.has(icon.src) && icon.page);
+    const links = icons.map((icon) => el("a", { href: icon.page, target: "_blank", rel: "noopener noreferrer" }, icon.alt));
+    node.replaceChildren(...links.flatMap((link, index) => (index > 0 ? ["、", link] : [link])));
   }
 }
 

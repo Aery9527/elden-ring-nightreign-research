@@ -1,0 +1,639 @@
+{
+  "sources": {
+    "params": {
+      "repo": "gajodoramas/chillreign",
+      "commit": "a411bcbedc776e143d8c8a1bcff9466e3a932b49",
+      "files": {
+        "AttachEffectParam": "params/AttachEffectParam.csv",
+        "AttachEffectTableParam": "params/AttachEffectTableParam.csv",
+        "AttachEffectFilterParam": "params/AttachEffectFilterParam.csv",
+        "AttachEffectFilterSubCategoryParam": "params/AttachEffectFilterSubCategoryParam.csv",
+        "EquipParamAntique": "params/EquipParamAntique.csv"
+      }
+    },
+    "text": {
+      "repo": "alfizari/Elden-Ring-Nightreign-Save-Editor",
+      "commit": "0d2ad1494c372098e689c23159656df70ff2d76d",
+      "files": {
+        "effectZh": "src/Resources/Text/zh_TW/AttachEffectName.fmg.xml",
+        "effectZhDlc": "src/Resources/Text/zh_TW/AttachEffectName_dlc01.fmg.xml",
+        "effectEn": "src/Resources/Text/en_US/AttachEffectName.fmg.xml",
+        "effectEnDlc": "src/Resources/Text/en_US/AttachEffectName_dlc01.fmg.xml",
+        "relicZh": "src/Resources/Text/zh_TW/AntiqueName.fmg.xml",
+        "relicZhDlc": "src/Resources/Text/zh_TW/AntiqueName_dlc01.fmg.xml",
+        "relicEn": "src/Resources/Text/en_US/AntiqueName.fmg.xml",
+        "relicEnDlc": "src/Resources/Text/en_US/AntiqueName_dlc01.fmg.xml"
+      }
+    },
+    "reliquary": {
+      "repo": "paraphrazetutorials/nightreign-data-tools",
+      "commit": "dafcb2de9837b58cef64960b672d21e3841b0abe",
+      "files": {
+        "reliquary": "Data/reliquary.json"
+      }
+    }
+  },
+  "categories": [
+    {
+      "id": "general",
+      "gameId": "30",
+      "name": {
+        "zh": "一般",
+        "en": "General"
+      },
+      "subcategories": [
+        {
+          "id": "attributes",
+          "gameId": "30000",
+          "name": {
+            "zh": "能力值",
+            "en": "Attributes"
+          }
+        },
+        {
+          "id": "skills-arts",
+          "gameId": "30010",
+          "name": {
+            "zh": "技藝／絕活",
+            "en": "Character Skills / Ultimate Arts"
+          }
+        },
+        {
+          "id": "attack-power",
+          "gameId": "30020",
+          "name": {
+            "zh": "攻擊力",
+            "en": "Attack Power"
+          }
+        },
+        {
+          "id": "sorceries-incantations",
+          "gameId": "30030",
+          "name": {
+            "zh": "魔法／禱告",
+            "en": "Sorceries / Incantations"
+          }
+        },
+        {
+          "id": "damage-negation",
+          "gameId": "30040",
+          "name": {
+            "zh": "減傷率",
+            "en": "Damage Negation"
+          }
+        },
+        {
+          "id": "ailment-resistances",
+          "gameId": "30050",
+          "name": {
+            "zh": "異常狀態抵抗力",
+            "en": "Status Ailment Resistances"
+          }
+        },
+        {
+          "id": "restoration",
+          "gameId": "30060",
+          "name": {
+            "zh": "恢復",
+            "en": "Restoration"
+          }
+        },
+        {
+          "id": "actions",
+          "gameId": "30070",
+          "name": {
+            "zh": "動作",
+            "en": "Actions"
+          }
+        },
+        {
+          "id": "starting-armament-skill",
+          "gameId": "30080",
+          "name": {
+            "zh": "出擊時的武器（戰技）",
+            "en": "Starting Armaments (Skill)"
+          }
+        },
+        {
+          "id": "starting-armament-imbue",
+          "gameId": "30090",
+          "name": {
+            "zh": "出擊時的武器（附加）",
+            "en": "Starting Armaments (Imbue)"
+          }
+        },
+        {
+          "id": "starting-armament-spell",
+          "gameId": "30100",
+          "name": {
+            "zh": "出擊時的武器（法術）",
+            "en": "Starting Armaments (Spell)"
+          }
+        },
+        {
+          "id": "starting-item",
+          "gameId": "30110",
+          "name": {
+            "zh": "出擊時的道具",
+            "en": "Starting Item"
+          }
+        },
+        {
+          "id": "starting-item-tear",
+          "gameId": "30120",
+          "name": {
+            "zh": "出擊時的道具（露滴）",
+            "en": "Starting Item (Tear)"
+          }
+        },
+        {
+          "id": "environment",
+          "gameId": "30130",
+          "name": {
+            "zh": "環境",
+            "en": "Environment"
+          }
+        },
+        {
+          "id": "team-members",
+          "gameId": "30140",
+          "name": {
+            "zh": "隊伍成員",
+            "en": "Team members"
+          }
+        }
+      ]
+    },
+    {
+      "id": "character",
+      "gameId": "10",
+      "name": {
+        "zh": "角色專屬",
+        "en": "Character-specific"
+      },
+      "subcategories": [
+        {
+          "id": "character-wylder",
+          "gameId": "10000",
+          "name": {
+            "zh": "追蹤者",
+            "en": "Wylder"
+          }
+        },
+        {
+          "id": "character-guardian",
+          "gameId": "10010",
+          "name": {
+            "zh": "守護者",
+            "en": "Guardian"
+          }
+        },
+        {
+          "id": "character-ironeye",
+          "gameId": "10020",
+          "name": {
+            "zh": "鐵之眼",
+            "en": "Ironeye"
+          }
+        },
+        {
+          "id": "character-duchess",
+          "gameId": "10030",
+          "name": {
+            "zh": "女爵",
+            "en": "Duchess"
+          }
+        },
+        {
+          "id": "character-raider",
+          "gameId": "10040",
+          "name": {
+            "zh": "無賴",
+            "en": "Raider"
+          }
+        },
+        {
+          "id": "character-revenant",
+          "gameId": "10050",
+          "name": {
+            "zh": "復仇者",
+            "en": "Revenant"
+          }
+        },
+        {
+          "id": "character-recluse",
+          "gameId": "10060",
+          "name": {
+            "zh": "隱士",
+            "en": "Recluse"
+          }
+        },
+        {
+          "id": "character-executor",
+          "gameId": "10070",
+          "name": {
+            "zh": "執行者",
+            "en": "Executor"
+          }
+        },
+        {
+          "id": "character-scholar",
+          "gameId": "10080",
+          "name": {
+            "zh": "學者",
+            "en": "Scholar"
+          }
+        },
+        {
+          "id": "character-undertaker",
+          "gameId": "10090",
+          "name": {
+            "zh": "送葬者",
+            "en": "Undertaker"
+          }
+        }
+      ]
+    },
+    {
+      "id": "armament",
+      "gameId": "20",
+      "name": {
+        "zh": "武器專屬",
+        "en": "Armament-specific"
+      },
+      "subcategories": [
+        {
+          "id": "armament-dagger",
+          "gameId": "20000",
+          "name": {
+            "zh": "短劍",
+            "en": "Dagger"
+          }
+        },
+        {
+          "id": "armament-straight-sword",
+          "gameId": "20010",
+          "name": {
+            "zh": "直劍",
+            "en": "Straight Sword"
+          }
+        },
+        {
+          "id": "armament-greatsword",
+          "gameId": "20020",
+          "name": {
+            "zh": "大劍",
+            "en": "Greatsword"
+          }
+        },
+        {
+          "id": "armament-colossal-sword",
+          "gameId": "20030",
+          "name": {
+            "zh": "特大劍",
+            "en": "Colossal Sword"
+          }
+        },
+        {
+          "id": "armament-curved-sword",
+          "gameId": "20040",
+          "name": {
+            "zh": "曲劍",
+            "en": "Curved Sword"
+          }
+        },
+        {
+          "id": "armament-curved-greatsword",
+          "gameId": "20050",
+          "name": {
+            "zh": "大曲劍",
+            "en": "Curved Greatsword"
+          }
+        },
+        {
+          "id": "armament-katana",
+          "gameId": "20060",
+          "name": {
+            "zh": "刀",
+            "en": "Katana"
+          }
+        },
+        {
+          "id": "armament-twinblade",
+          "gameId": "20070",
+          "name": {
+            "zh": "雙頭劍",
+            "en": "Twinblade"
+          }
+        },
+        {
+          "id": "armament-thrusting-sword",
+          "gameId": "20080",
+          "name": {
+            "zh": "刺劍",
+            "en": "Thrusting Sword"
+          }
+        },
+        {
+          "id": "armament-heavy-thrusting-sword",
+          "gameId": "20090",
+          "name": {
+            "zh": "重刺劍",
+            "en": "Heavy Thrusting Sword"
+          }
+        },
+        {
+          "id": "armament-axe",
+          "gameId": "20100",
+          "name": {
+            "zh": "斧",
+            "en": "Axe"
+          }
+        },
+        {
+          "id": "armament-greataxe",
+          "gameId": "20110",
+          "name": {
+            "zh": "大斧",
+            "en": "Greataxe"
+          }
+        },
+        {
+          "id": "armament-hammer",
+          "gameId": "20120",
+          "name": {
+            "zh": "槌",
+            "en": "Hammer"
+          }
+        },
+        {
+          "id": "armament-great-hammer",
+          "gameId": "20130",
+          "name": {
+            "zh": "大槌",
+            "en": "Great Hammer"
+          }
+        },
+        {
+          "id": "armament-flail",
+          "gameId": "20140",
+          "name": {
+            "zh": "連枷",
+            "en": "Flail"
+          }
+        },
+        {
+          "id": "armament-spear",
+          "gameId": "20150",
+          "name": {
+            "zh": "矛",
+            "en": "Spear"
+          }
+        },
+        {
+          "id": "armament-great-spear",
+          "gameId": "20160",
+          "name": {
+            "zh": "大矛",
+            "en": "Great Spear"
+          }
+        },
+        {
+          "id": "armament-halberd",
+          "gameId": "20170",
+          "name": {
+            "zh": "戟",
+            "en": "Halberd"
+          }
+        },
+        {
+          "id": "armament-reaper",
+          "gameId": "20180",
+          "name": {
+            "zh": "鐮刀",
+            "en": "Reaper"
+          }
+        },
+        {
+          "id": "armament-fist",
+          "gameId": "20190",
+          "name": {
+            "zh": "拳頭",
+            "en": "Fist"
+          }
+        },
+        {
+          "id": "armament-claw",
+          "gameId": "20200",
+          "name": {
+            "zh": "鉤爪",
+            "en": "Claw"
+          }
+        },
+        {
+          "id": "armament-whip",
+          "gameId": "20210",
+          "name": {
+            "zh": "軟鞭",
+            "en": "Whip"
+          }
+        },
+        {
+          "id": "armament-colossal-weapon",
+          "gameId": "20220",
+          "name": {
+            "zh": "特大武器",
+            "en": "Colossal Weapon"
+          }
+        },
+        {
+          "id": "armament-bow",
+          "gameId": "20230",
+          "name": {
+            "zh": "弓",
+            "en": "Bow"
+          }
+        },
+        {
+          "id": "armament-glintstone-staff",
+          "gameId": "20240",
+          "name": {
+            "zh": "手杖",
+            "en": "Glintstone Staff"
+          }
+        },
+        {
+          "id": "armament-sacred-seal",
+          "gameId": "20250",
+          "name": {
+            "zh": "聖印記",
+            "en": "Sacred Seal"
+          }
+        },
+        {
+          "id": "armament-greatbow",
+          "gameId": "20260",
+          "name": {
+            "zh": "大弓",
+            "en": "Greatbow"
+          }
+        },
+        {
+          "id": "armament-crossbow",
+          "gameId": "20270",
+          "name": {
+            "zh": "弩",
+            "en": "Crossbow"
+          }
+        },
+        {
+          "id": "armament-ballista",
+          "gameId": "20280",
+          "name": {
+            "zh": "弩砲",
+            "en": "Ballista"
+          }
+        },
+        {
+          "id": "armament-small-shield",
+          "gameId": "20300",
+          "name": {
+            "zh": "小盾",
+            "en": "Small Shield"
+          }
+        },
+        {
+          "id": "armament-medium-shield",
+          "gameId": "20310",
+          "name": {
+            "zh": "中盾",
+            "en": "Medium Shield"
+          }
+        },
+        {
+          "id": "armament-greatshield",
+          "gameId": "20320",
+          "name": {
+            "zh": "大盾",
+            "en": "Greatshield"
+          }
+        }
+      ]
+    },
+    {
+      "id": "demerit",
+      "gameId": "40",
+      "name": {
+        "zh": "負面效果",
+        "en": "Demerits"
+      },
+      "subcategories": [
+        {
+          "id": "demerit-attributes",
+          "gameId": "40000",
+          "name": {
+            "zh": "負面效果（能力值）",
+            "en": "Demerits (Attributes)"
+          }
+        },
+        {
+          "id": "demerit-damage-negation",
+          "gameId": "40010",
+          "name": {
+            "zh": "負面效果（減傷率）",
+            "en": "Demerits (Damage Negation)"
+          }
+        },
+        {
+          "id": "demerit-actions",
+          "gameId": "40020",
+          "name": {
+            "zh": "負面效果（動作）",
+            "en": "Demerits (Action)"
+          }
+        }
+      ]
+    }
+  ],
+  "characters": {
+    "allowWylder": "wylder",
+    "allowGuardian": "guardian",
+    "allowIroneye": "ironeye",
+    "allowDuchess": "duchess",
+    "allowRaider": "raider",
+    "allowRevenant": "revenant",
+    "allowRecluse": "recluse",
+    "allowExecutor": "executor",
+    "allowScholar": "scholar",
+    "allowUndertaker": "undertaker"
+  },
+  "statusIcons": {
+    "20006": "attack-up-blue",
+    "20013": "hp-up-blue",
+    "20014": "fp-up-blue",
+    "20015": "stamina-up-blue",
+    "20022": null,
+    "20060": "hp-down-plain",
+    "20068": "attack-down-plain",
+    "20069": "defense-down-plain",
+    "20206": "attack-up",
+    "20207": "spell-up",
+    "20208": "defense-up",
+    "20222": "basic-action",
+    "20260": "hp-down",
+    "20267": "item-up",
+    "20268": "attack-down",
+    "20269": "defense-down",
+    "20291": "hp-up",
+    "20292": "fp-up",
+    "20293": "stamina-up",
+    "20295": "weapon-skill-up",
+    "20296": "character-skill",
+    "20297": "ultimate-art",
+    "20302": "item-down",
+    "20315": "ultimate-art-down",
+    "20408": "defense-up-diamond",
+    "20429": "enemy-attention-diamond",
+    "20491": "hp-up-diamond",
+    "20492": "fp-up-diamond",
+    "20980": null,
+    "20981": null,
+    "20982": null,
+    "20983": null,
+    "20984": null,
+    "20985": null,
+    "20986": null
+  },
+  "relicIcons": {
+    "19108": "relic-grand-burning-scene-1",
+    "19121": "relic-grand-drizzly-scene-2",
+    "19122": "relic-grand-luminous-scene-2",
+    "19123": "relic-grand-tranquil-scene-2",
+    "19135": "relic-grand-tranquil-scene-3",
+    "19140": "relic-night-of-the-beast",
+    "19141": "relic-night-of-the-baron",
+    "19142": "relic-night-of-the-wise",
+    "19143": "relic-night-of-the-fathom",
+    "19144": "relic-night-of-the-demon",
+    "19145": "relic-night-of-the-champion",
+    "19146": "relic-night-of-the-miasma",
+    "19147": "relic-night-of-the-lord",
+    "19148": "relic-the-will-of-the-balancers",
+    "19149": "relic-the-night-of-dregs",
+    "19150": "relic-old-pocketwatch",
+    "19151": "relic-besmirched-frame",
+    "19152": "relic-the-wylder-s-earring",
+    "19154": "relic-silver-tear",
+    "19155": "relic-golden-dew",
+    "19157": "relic-blessed-iron-coin",
+    "19166": "relic-bone-like-stone",
+    "19172": "relic-witch-s-brooch",
+    "19173": "relic-cracked-witch-s-brooch",
+    "19176": "relic-old-portrait",
+    "19177": "relic-fell-omen-fetish",
+    "19180": "relic-leather-monocle-case",
+    "19181": "relic-glass-necklace",
+    "19182": "relic-cleansing-tear",
+    "19183": "relic-note-my-dear-successor"
+  }
+}

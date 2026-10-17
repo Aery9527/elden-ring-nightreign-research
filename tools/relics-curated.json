@@ -1,0 +1,695 @@
+{
+  "effects": {
+    "max-hp-flat": {
+      "gameId": "7000090",
+      "subcategory": "attributes",
+      "name": {
+        "zh": "提升 HP 上限",
+        "en": "Increased Maximum HP"
+      },
+      "icon": "hp-up",
+      "modifier": {
+        "stat": "maxHp",
+        "unit": "flat",
+        "value": 100
+      },
+      "equivalent": {
+        "stat": "vigor",
+        "unit": "point",
+        "value": 5
+      },
+      "availability": "specific-relic",
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "eldenpedia-relic-effects"
+      ]
+    },
+    "max-fp-flat": {
+      "gameId": "7000190",
+      "subcategory": "attributes",
+      "name": {
+        "zh": "提升 FP 上限",
+        "en": "Increased Maximum FP"
+      },
+      "icon": "fp-up",
+      "modifier": {
+        "stat": "maxFp",
+        "unit": "flat",
+        "value": 25
+      },
+      "equivalent": {
+        "stat": "mind",
+        "unit": "point",
+        "value": 5
+      },
+      "availability": "specific-relic",
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "eldenpedia-relic-effects"
+      ]
+    },
+    "max-stamina-flat": {
+      "gameId": "7000290",
+      "subcategory": "attributes",
+      "name": {
+        "zh": "提升精力上限",
+        "en": "Increased Maximum Stamina"
+      },
+      "icon": "stamina-up",
+      "modifier": {
+        "stat": "maxStamina",
+        "unit": "flat",
+        "value": 10
+      },
+      "equivalent": {
+        "stat": "endurance",
+        "unit": "point",
+        "value": 5
+      },
+      "availability": "specific-relic",
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "eldenpedia-relic-effects"
+      ]
+    },
+    "max-hp-percent": {
+      "subcategory": "attributes",
+      "gameId": "6610400",
+      "name": {
+        "zh": "提升 HP 上限",
+        "en": "Increased Maximum HP"
+      },
+      "icon": "hp-up",
+      "modifier": {
+        "stat": "maxHp",
+        "unit": "percent",
+        "value": 10
+      },
+      "availability": "deep-relic",
+      "requiresCurse": true,
+      "stacking": {
+        "stacks": true,
+        "combine": "multiply"
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "reddit-hp-stacking"
+        ]
+      }
+    },
+    "max-fp-percent": {
+      "subcategory": "attributes",
+      "gameId": "6610500",
+      "name": {
+        "zh": "提升 FP 上限",
+        "en": "Increased Maximum FP"
+      },
+      "icon": "fp-up",
+      "modifier": {
+        "stat": "maxFp",
+        "unit": "percent",
+        "value": 15
+      },
+      "availability": "deep-relic",
+      "requiresCurse": true,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "max-stamina-percent": {
+      "subcategory": "attributes",
+      "gameId": "6610600",
+      "name": {
+        "zh": "提升精力上限",
+        "en": "Increased Maximum Stamina"
+      },
+      "icon": "stamina-up",
+      "modifier": {
+        "stat": "maxStamina",
+        "unit": "percent",
+        "value": 12
+      },
+      "availability": "deep-relic",
+      "requiresCurse": true,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "vigor-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "生命力",
+        "en": "Vigor"
+      },
+      "icon": "hp-up",
+      "modifier": {
+        "stat": "vigor",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000000",
+          "value": 1,
+          "resourceDelta": {
+            "stat": "maxHp",
+            "unit": "flat",
+            "value": 20
+          }
+        },
+        {
+          "tier": 2,
+          "gameId": "7000001",
+          "value": 2,
+          "resourceDelta": {
+            "stat": "maxHp",
+            "unit": "flat",
+            "value": 40
+          }
+        },
+        {
+          "tier": 3,
+          "gameId": "7000002",
+          "value": 3,
+          "resourceDelta": {
+            "stat": "maxHp",
+            "unit": "flat",
+            "value": 60
+          }
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "mind-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "集中力",
+        "en": "Mind"
+      },
+      "icon": "fp-up",
+      "modifier": {
+        "stat": "mind",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000100",
+          "value": 1,
+          "resourceDelta": {
+            "stat": "maxFp",
+            "unit": "flat",
+            "value": 5
+          }
+        },
+        {
+          "tier": 2,
+          "gameId": "7000101",
+          "value": 2,
+          "resourceDelta": {
+            "stat": "maxFp",
+            "unit": "flat",
+            "value": 10
+          }
+        },
+        {
+          "tier": 3,
+          "gameId": "7000102",
+          "value": 3,
+          "resourceDelta": {
+            "stat": "maxFp",
+            "unit": "flat",
+            "value": 15
+          }
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "endurance-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "耐力",
+        "en": "Endurance"
+      },
+      "icon": "stamina-up",
+      "modifier": {
+        "stat": "endurance",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000200",
+          "value": 1,
+          "resourceDelta": {
+            "stat": "maxStamina",
+            "unit": "flat",
+            "value": 2
+          }
+        },
+        {
+          "tier": 2,
+          "gameId": "7000201",
+          "value": 2,
+          "resourceDelta": {
+            "stat": "maxStamina",
+            "unit": "flat",
+            "value": 4
+          }
+        },
+        {
+          "tier": 3,
+          "gameId": "7000202",
+          "value": 3,
+          "resourceDelta": {
+            "stat": "maxStamina",
+            "unit": "flat",
+            "value": {
+              "conflict": [
+                {
+                  "value": 6,
+                  "sources": [
+                    "reliquary-json",
+                    "eldenpedia-relic-effects"
+                  ]
+                },
+                {
+                  "value": 5,
+                  "sources": [
+                    "eldenpedia-effects"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "strength-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "力氣",
+        "en": "Strength"
+      },
+      "icon": "attack-up",
+      "modifier": {
+        "stat": "strength",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000300",
+          "value": 1
+        },
+        {
+          "tier": 2,
+          "gameId": "7000301",
+          "value": 2
+        },
+        {
+          "tier": 3,
+          "gameId": "7000302",
+          "value": 3
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "dexterity-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "靈巧",
+        "en": "Dexterity"
+      },
+      "icon": "attack-up",
+      "modifier": {
+        "stat": "dexterity",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000400",
+          "value": 1
+        },
+        {
+          "tier": 2,
+          "gameId": "7000401",
+          "value": 2
+        },
+        {
+          "tier": 3,
+          "gameId": "7000402",
+          "value": 3
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "intelligence-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "智力",
+        "en": "Intelligence"
+      },
+      "icon": "spell-up",
+      "modifier": {
+        "stat": "intelligence",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000500",
+          "value": 1
+        },
+        {
+          "tier": 2,
+          "gameId": "7000501",
+          "value": 2
+        },
+        {
+          "tier": 3,
+          "gameId": "7000502",
+          "value": 3
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "faith-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "信仰",
+        "en": "Faith"
+      },
+      "icon": "spell-up",
+      "modifier": {
+        "stat": "faith",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000600",
+          "value": 1
+        },
+        {
+          "tier": 2,
+          "gameId": "7000601",
+          "value": 2
+        },
+        {
+          "tier": 3,
+          "gameId": "7000602",
+          "value": 3
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "arcane-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "感應",
+        "en": "Arcane"
+      },
+      "icon": "attack-up",
+      "modifier": {
+        "stat": "arcane",
+        "unit": "point"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7000700",
+          "value": 1
+        },
+        {
+          "tier": 2,
+          "gameId": "7000701",
+          "value": 2
+        },
+        {
+          "tier": 3,
+          "gameId": "7000702",
+          "value": 3
+        }
+      ],
+      "availability": "standard-relic",
+      "stacking": {
+        "stacks": true,
+        "combine": "add",
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.combine": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ],
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    },
+    "poise-up": {
+      "subcategory": "attributes",
+      "name": {
+        "zh": "強韌度",
+        "en": "Poise"
+      },
+      "icon": "defense-up",
+      "modifier": {
+        "stat": "poiseDamageTaken",
+        "unit": "percent"
+      },
+      "tiers": [
+        {
+          "tier": 1,
+          "gameId": "7001000",
+          "availability": "standard-relic",
+          "value": {
+            "conflict": [
+              {
+                "value": -5,
+                "sources": [
+                  "reliquary-json",
+                  "relics-pro"
+                ]
+              },
+              {
+                "value": -10,
+                "sources": [
+                  "eldenpedia-relic-effects"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tier": 2,
+          "gameId": "7001001",
+          "availability": "standard-relic",
+          "value": {
+            "conflict": [
+              {
+                "value": -10,
+                "sources": [
+                  "reliquary-json",
+                  "relics-pro"
+                ]
+              },
+              {
+                "value": -15,
+                "sources": [
+                  "eldenpedia-relic-effects"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tier": 3,
+          "gameId": "7001002",
+          "availability": "both-relics",
+          "value": {
+            "conflict": [
+              {
+                "value": -15,
+                "sources": [
+                  "reliquary-json",
+                  "relics-pro"
+                ]
+              },
+              {
+                "value": -20,
+                "sources": [
+                  "eldenpedia-relic-effects"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "stacking": {
+        "stacks": true,
+        "combine": null,
+        "acrossTiers": true
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stacking.acrossTiers": [
+          "eldenpedia-relic-effects",
+          "eldenpedia-relics"
+        ]
+      }
+    }
+  }
+}
