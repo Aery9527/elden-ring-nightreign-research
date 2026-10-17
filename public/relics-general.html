@@ -3,34 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>能力值涵義表</title>
-  <meta name="description" content="《艾爾登法環 黑夜君臨》能力值選單 12 項的主要用途、遺物數值及查證限制。">
+  <title>一般遺物詞條</title>
+  <meta name="description" content="《艾爾登法環 黑夜君臨》遊戲內遺物篩選「一般」大類的遺物詞條、數值、疊加規則及查證限制。">
   <link rel="stylesheet" href="styles.css">
   <script src="render.js" defer></script>
 </head>
-<body>
+<body data-load="common relics/general">
   <header class="site-header">
     <nav><a href="index.html">黑夜君臨研究資料庫</a><span class="version">遊戲版本 <span data-game-version></span></span></nav>
   </header>
 
   <main>
-    <h1>能力值涵義表</h1>
+    <h1>一般遺物詞條</h1>
     <ul>
-      <li>「遺物數值」兩欄的說明列出各效果的取得方式與疊加規則，例如<span data-example="tier-sum" data-effect="vigor-up" data-tier-list="1,3"></span>；<span data-example="stack" data-effect="max-hp-percent" data-count="2"></span>。本表數值均為單一效果本身的增量；固定增量與百分比效果的計算順序尚未核實。<span data-sources="vigor-up max-hp-percent"></span></li>
+      <li>本頁依遊戲內遺物篩選的「一般」大類分章，各章列出本站目前收錄的詞條；分類名稱為本站暫譯。</li>
+      <li>「能力值對照表」的「遺物數值」兩欄說明列出各效果的取得方式與疊加規則，例如<span data-example="tier-sum" data-effect="vigor-up" data-tier-list="1,3"></span>；<span data-example="stack" data-effect="max-hp-percent" data-count="2"></span>。本表數值均為單一效果本身的增量；固定增量與百分比效果的計算順序尚未核實。<span data-sources="vigor-up max-hp-percent"></span></li>
     </ul>
 
     <nav class="toc" aria-label="目錄" id="toc">
       <strong>目錄</strong>
       <ul>
-        <li><a href="#attribute-table">能力值對照表</a></li>
-        <li><a href="#understanding">如何理解提升效果</a></li>
+        <li>
+          <a href="#attributes" data-subcategory-name="attributes"></a>
+          <ul>
+            <li><a href="#attribute-table">能力值對照表</a></li>
+            <li><a href="#understanding">如何理解提升效果</a></li>
+            <li><a href="#attribute-effects">詞條一覽</a></li>
+          </ul>
+        </li>
         <li><a href="#limitations">查證限制</a></li>
         <li><a href="#sources">資料來源</a></li>
       </ul>
     </nav>
 
     <section>
-      <h2 id="attribute-table">能力值對照表</h2>
+      <h2 id="attributes" data-subcategory-name="attributes"></h2>
+      <h3 id="attribute-table">能力值對照表</h3>
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
@@ -45,7 +53,7 @@
             </tr>
             <tr>
               <td class="item" data-item="effect:max-fp-flat"></td>
-              <td>增加 FP 容量，供需要 FP 的戰技、魔術及禱告使用。</td>
+              <td>增加 FP 容量，供需要 FP 的戰技、魔法及禱告使用。</td>
               <td class="value" data-values="max-fp-flat max-fp-percent"></td>
               <td class="value">—</td>
             </tr>
@@ -87,7 +95,7 @@
             </tr>
             <tr>
               <td class="item" data-item="stat:intelligence"></td>
-              <td>提升具有智力補正之武器的攻擊力，是法杖施放魔術的重要能力值。</td>
+              <td>提升具有智力補正之武器的攻擊力，是法杖施放魔法的重要能力值。</td>
               <td class="value">—</td>
               <td class="value" data-tiers="intelligence-up"></td>
             </tr>
@@ -112,11 +120,8 @@
           </tbody>
         </table>
       </div>
-      <p class="back"><a href="#toc">回到目錄</a></p>
-    </section>
 
-    <section>
-      <h2 id="understanding">如何理解提升效果</h2>
+      <h3 id="understanding">如何理解提升效果</h3>
       <ul>
         <li>生命力、集中力、耐力是基礎能力值；HP、FP、精力是由它們影響的資源。選單中「提升上限」描述最終效果，不能據此判定底層一定使用獨立乘區；例如社群資料將部分上限效果列為等同增加集中力或耐力。<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a></li>
         <li>角色升級時，能力值依角色自動成長；本作不是在升級畫面逐點自由分配能力值。這不表示每項能力值每級都會增加，例如社群資料中的<img class="icon icon-char" src="images/nightfarer-duchess.png" width="24" height="24" alt="女爵圖示" loading="lazy">女爵感應在等級 1 與 15 分別為 <span data-character="duchess:1:arcane"></span> 與 <span data-character="duchess:15:arcane"></span>。<a href="https://www.fromsoftware.jp/manual/nightreign/win/basic.html" target="_blank" rel="noopener noreferrer">官方升級說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
@@ -148,9 +153,18 @@
           <text x="675" y="100">目前可用資源</text>
         </svg>
       </figure>
+
+      <h3 id="attribute-effects">詞條一覽</h3>
+      <div class="table-wrap">
+        <table class="table-wide">
+          <thead>
+            <tr><th>詞條</th><th>效果數值與規則</th><th>來源</th></tr>
+          </thead>
+          <tbody data-relic-table="attributes"></tbody>
+        </table>
+      </div>
       <p class="back"><a href="#toc">回到目錄</a></p>
     </section>
-
 
     <section>
       <h2 id="limitations">查證限制</h2>

@@ -77,7 +77,8 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   line-height: 1.35;
   scroll-margin-top: 16px;
 }
@@ -92,6 +93,11 @@ h2 {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
   font-size: 1.4rem;
+}
+
+h3 {
+  margin: 32px 0 12px;
+  font-size: 1.15rem;
 }
 
 a {
@@ -262,6 +268,23 @@ td.item {
 
 td.value {
   white-space: nowrap;
+}
+
+/* 社群詳細說明可能很長，詞條一覽的效果欄允許換行 */
+[data-relic-table] td.value .entry {
+  white-space: normal;
+}
+
+td.source {
+  min-width: 8em;
+  font-size: 0.85rem;
+}
+
+/* 沒有可用遊戲內圖片時保留與圖片相同的空位 */
+.icon-missing {
+  display: inline-block;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
 }
 
 td.value .sub {

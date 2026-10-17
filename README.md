@@ -3,20 +3,22 @@
 - 集中記錄《艾爾登法環 黑夜君臨》（ELDEN RING NIGHTREIGN）的能力值、遊戲機制與研究來源。
 - 網站內容位於 `public/`；Netlify 依 `netlify.toml` 直接發佈該目錄，不需建置指令。
 - 本機預覽：`python -m http.server -d public`，再開啟 `http://localhost:8000/`。頁面以 `fetch` 載入資料，直接開啟本機檔案無法顯示數值。
+- 舊網址 `attributes.html` 由 [netlify.toml](netlify.toml) 轉址到一般遺物詞條頁；本機預覽不套用轉址。
 
 ## 頁面
 
 | 檔案 | 內容 |
 | --- | --- |
-| [public/index.html](public/index.html) | 研究索引。 |
-| [public/attributes.html](public/attributes.html) | 能力值涵義表。 |
-| [public/data/nightreign.json](public/data/nightreign.json) | 遊戲數值資料，所有頁面共用。 |
-| [public/render.js](public/render.js) | 載入遊戲數值資料並填入頁面佔位元素。 |
+| [public/index.html](public/index.html) | 研究索引，依主題分組。 |
+| [public/relics-general.html](public/relics-general.html) | 遺物詞條：遊戲內篩選「一般」大類，含能力值涵義與查證限制。 |
+| [public/data/common.json](public/data/common.json) | 所有頁面共用的遊戲版本、能力值、圖示、角色、標籤與來源。 |
+| [public/data/relics/general.json](public/data/relics/general.json) | 「一般」大類的分類定義與遺物效果。 |
+| [public/render.js](public/render.js) | 依頁面宣告載入資料檔並填入頁面佔位元素、產生遺物詞條表。 |
 
 ## 資料記錄方式
 
-- 新主題在 `public/` 新增頁面，並在 `public/index.html` 的研究索引表新增一列。
-- 遊戲數值記錄在 `public/data/nightreign.json`，頁面不寫死數值。
+- 新主題在 `public/` 新增頁面，並在 `public/index.html` 研究索引的對應分組新增一列。
+- 遊戲數值記錄在 `public/data/` 的資料檔，頁面不寫死數值。
 - 各主題附來源、查閱日期與適用範圍；區分官方說明、社群資料及尚未解決的問題。
 - 有數值的結論記錄作用條件；實測記錄遊戲版本、角色、等級、裝備與可重現步驟。
 - 官方更新公告用來追蹤變更；涉及舊版資料時重新核對，不以查閱日期代替遊戲版本。

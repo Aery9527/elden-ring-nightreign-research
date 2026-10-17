@@ -12,11 +12,16 @@
   - 網站檔案 (HTML、CSS、圖片) 一律放在 `public/` 下；`public/` 以外的檔案不會出現在網站上。
   - 頁面間以相對路徑連到 `.html` 檔，不依賴 Netlify 的 pretty URL。
   - 頁面以 `fetch` 載入遊戲資料，本機預覽須透過 HTTP 伺服器 (例如 `python -m http.server -d public`)；直接開啟本機檔案 (`file://`) 無法載入資料。
-  - 新增主題頁面時，同時在 `public/index.html` 的研究索引表新增一列。
+  - 新增主題頁面時，同時在 [public/index.html](public/index.html) 研究索引中該主題分組的表格新增一列；新主題另立分組標題。
+  - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址，並保留原標題 id，讓舊錨點仍可使用。
 
 ## 遊戲資料守則
 
-- 遊戲數值 (數字與規則標籤)、數值佔位元素產生的效果及能力值名稱，以及它們的來源，只記錄在 [public/data/nightreign.json](public/data/nightreign.json)。HTML 放 `data-*` 佔位元素，由 [public/render.js](public/render.js) 填入；禁止在 HTML 寫死遊戲數值，內文例子中的數值也一樣。內文敘述 (例如角色名稱) 與 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
+- 遊戲數值 (數字與規則標籤)、佔位元素產生的效果、能力值及分類名稱，以及它們的來源，只記錄在 `public/data/`：
+  - [public/data/common.json](public/data/common.json)：所有頁面共用的遊戲版本、能力值、圖示、角色、標籤與來源。
+  - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)，記錄該大類、其子分類及效果。
+  - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 遇到重複的效果鍵、效果或等級的 `gameId`，或子分類鍵時以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
+- HTML 放 `data-*` 佔位元素，由 [public/render.js](public/render.js) 填入；禁止在 HTML 寫死遊戲數值，內文例子中的數值也一樣。內文敘述 (例如角色名稱) 與 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
 - 數值狀態：
   - 一般值代表該效果 `sources` 的記載。
   - `null` 代表尚未核實，禁止當成 0 或 false。
@@ -26,6 +31,9 @@
 - 百分比以有號數字儲存 (例如 `10`、`-5`)，倍率由程式推導。
 - 有 +1／+2／+3 等級的效果是一個效果加 `tiers` 陣列；每級保留遊戲內 `gameId`。
 - 每個效果的資源增量依來源記載逐筆記錄，不以通用的每點換算推導。
+- 遺物效果依遊戲內遺物篩選的分類樹歸類：每個效果都有 `subcategory`，每個大類與子分類保留遊戲參數 `gameId`。分類的中文名稱在找到官方繁體中文來源前為本站暫譯，頁面必須註明。
+- 每個效果都有 `name` (`zh` 與 `en`) 與 `icon`。`icon: null` 表示沒有符合圖片守則的遊戲內圖片，嚴禁改用其他圖片替代。
+- 遺物詞條表的效果列以 `<tbody data-relic-table="<subcategory>">` 由資料產生；嚴禁在 HTML 手寫效果列。
 
 ## 遊戲撰寫守則
 

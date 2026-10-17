@@ -12,11 +12,16 @@
   - All site files (HTML, CSS, images) go under `public/`; files outside `public/` do not appear on the site.
   - Pages link to each other with relative paths to `.html` files and do not rely on Netlify pretty URLs.
   - Pages load game data with `fetch`, so preview them locally through an HTTP server (for example `python -m http.server -d public`); a page opened directly as a local file (`file://`) cannot load the data.
-  - When adding a topic page, also add a row to the research index table in `public/index.html`.
+  - When adding a topic page, also add a row to its topic group's table in the research index of [public/index.html](public/index.html); a new topic gets its own group heading.
+  - When a page is renamed or merged into another page, add a 301 redirect from the old path in [netlify.toml](netlify.toml) and keep the old heading ids so old anchors still work.
 
 ## Game Data Rules
 
-- Game values (numbers and rule tags), the effect and stat names that the value placeholders render, and their sources live only in [public/data/nightreign.json](public/data/nightreign.json). HTML holds `data-*` placeholders that [public/render.js](public/render.js) fills in; game values, including those in body-text examples, MUST NOT be hard-coded in HTML. Body prose (for example character names) and selection keys in `data-*` attributes (for example tier or level numbers) may stay in HTML.
+- Game values (numbers and rule tags), the effect, stat, and category names that the placeholders render, and their sources live only in `public/data/`:
+  - [public/data/common.json](public/data/common.json): game version, stats, icons, characters, labels, and sources shared by all pages.
+  - `public/data/relics/<category>.json`: one file per top category of the in-game relic filter (`general`, `character`, `armament`, `demerit`), holding that category, its subcategories, and its effects.
+  - Each page lists the files it loads in `<body data-load>`, for example `common relics/general`. [public/render.js](public/render.js) stops with an error on a duplicate effect key, effect or tier `gameId`, or subcategory key; it MUST NOT let a later file override an earlier one.
+- HTML holds `data-*` placeholders that [public/render.js](public/render.js) fills in; game values, including those in body-text examples, MUST NOT be hard-coded in HTML. Body prose (for example character names) and selection keys in `data-*` attributes (for example tier or level numbers) may stay in HTML.
 - Value states:
   - A plain value is what the effect's `sources` report.
   - `null` means unverified; it MUST NOT be treated as 0 or false.
@@ -26,6 +31,9 @@
 - Store percentages as signed numbers (for example `10`, `-5`); code derives multipliers.
 - An effect with +1/+2/+3 tiers is one effect with a `tiers` array; each tier keeps its in-game `gameId`.
 - Record each effect's resource change as the source states it; do not derive it from a universal per-point conversion.
+- Relic effects follow the in-game relic filter tree: every effect has a `subcategory`, and each category and subcategory keeps its in-game param `gameId`. Category Chinese names are site translations until an official Traditional Chinese source is found, and pages MUST say so.
+- Every effect has `name` (`zh` and `en`) and `icon`. `icon: null` means no in-game image that meets the image rules exists; it MUST NOT be replaced with a different image.
+- Effect rows of a relic table are rendered from data with `<tbody data-relic-table="<subcategory>">`; effect rows MUST NOT be hand-written in HTML.
 
 ## Game Writing Rules
 

@@ -1,8 +1,7 @@
-// 從 data/nightreign.json 讀取遊戲數值，填入頁面上的 data-* 佔位元素。
+// 依 <body data-load> 列出的資料檔 (例如 "common relics/general") 讀取遊戲數值，填入頁面上的 data-* 佔位元素。
+// common 放共用的能力值、圖示、角色、標籤與來源；relics/* 各放一個遺物詞條大類的分類定義與效果。
 // 資料慣例：一般值依該效果的 sources；null 表示尚未核實；{ conflict: [...] } 表示來源分歧，不預設採用任何候選值；
 // sourcesFor 以欄位路徑取代該欄位的 sources。
-
-const DATA_URL = "data/nightreign.json";
 
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
@@ -88,6 +87,14 @@ function ruleText(data, effect) {
     parts.push(`${labels.equivalent}${statName(data, stat)} ${formatAmount(data, unit, value)}`);
   }
   if ("availability" in effect) parts.push(ruleLabel(data, "availability", effect.availability));
+  // 各級取得方式不同時記在 tier 上，依取得方式合併等級，例如「+1、+2：一般遺物」。
+  const byAvailability = new Map();
+  for (const tier of effect.tiers ?? []) {
+    if (!("availability" in tier)) continue;
+    const label = ruleLabel(data, "availability", tier.availability);
+    byAvailability.set(label, [...(byAvailability.get(label) ?? []), tierLabel(data, tier.tier)]);
+  }
+  for (const [label, tiers] of byAvailability) parts.push(`${tiers.join("、")}：${label}`);
   parts.push(ruleLabel(data, "stacks", stacking.stacks));
   if ("acrossTiers" in stacking) parts.push(ruleLabel(data, "acrossTiers", stacking.acrossTiers));
   if (stacking.stacks === true) parts.push(ruleLabel(data, "combine", stacking.combine));
@@ -98,17 +105,18 @@ function ruleText(data, effect) {
   return parts.join("；");
 }
 
+// icon 為 null 表示沒有可用的遊戲內圖片，保留同寬空位；缺少 icon 欄位則丟出錯誤。
 function itemName(data, kind, id) {
   const item = kind === "effect" ? lookup(data.effects, id, "效果") : lookup(data.stats, id, "能力值");
-  const icon = lookup(data.icons, item.icon, "圖示");
+  if (item.icon === undefined) throw new Error(`缺少圖示欄位：${id}`);
   const en = item.abbr ? `${item.name.en} / ${item.abbr}` : item.name.en;
-  return el(
-    "span",
-    { class: "item-name" },
-    el("img", { class: "icon", src: icon.src, width: "48", height: "48", alt: icon.alt, loading: "lazy" }),
-    item.name.zh,
-    el("span", { class: "en" }, en)
-  );
+  const icon =
+    item.icon === null
+      ? el("span", { class: "icon icon-missing", role: "img", "aria-label": data.labels.iconMissing })
+      : (({ src, alt }) => el("img", { class: "icon", src, width: "48", height: "48", alt, loading: "lazy" }))(
+          lookup(data.icons, item.icon, "圖示")
+        );
+  return el("span", { class: "item-name" }, icon, item.name.zh, el("span", { class: "en" }, en));
 }
 
 function valueEntries(data, ids) {
@@ -196,7 +204,53 @@ function characterValue(data, path) {
   return value === null ? data.labels.unverified : isConflict(value) ? data.labels.conflict : String(value);
 }
 
+function tierLabel(data, tierNumber) {
+  return tierNumber === 0 ? data.labels.tierBase : `+${tierNumber}`;
+}
+
+// 社群詳細說明 (detail) 依效果或各等級列出；沒有 detail 的效果不輸出。
+function detailEntries(data, effect) {
+  const entries = effect.detail ? [el("span", { class: "entry" }, effect.detail.zh)] : [];
+  for (const tier of effect.tiers ?? []) {
+    if (tier.detail) entries.push(el("span", { class: "entry" }, `${tierLabel(data, tier.tier)}：${tier.detail.zh}`));
+  }
+  return entries;
+}
+
+// 詞條表的效果欄：有結構化數值 (modifier) 時列出數值與規則，否則只列規則；社群詳細說明放在最前面。
+function effectEntries(data, key, effect) {
+  let values;
+  if (effect.modifier && effect.tiers) values = tierEntries(data, effect);
+  else if (effect.modifier) values = valueEntries(data, [key]);
+  else values = [el("span", { class: "entry" }, el("span", { class: "sub" }, ruleText(data, effect)))];
+  return [...detailEntries(data, effect), ...values];
+}
+
+// <tbody data-relic-table="子分類鍵">：依資料檔順序列出該子分類的全部效果。
+function relicRows(data, subcategoryId) {
+  lookup(data.subcategories, subcategoryId, "子分類");
+  const rows = Object.entries(data.effects)
+    .filter(([, effect]) => effect.subcategory === subcategoryId)
+    .map(([key, effect]) =>
+      el(
+        "tr",
+        { id: `effect-${key}` },
+        el("td", { class: "item" }, itemName(data, "effect", key)),
+        el("td", { class: "value" }, ...effectEntries(data, key, effect)),
+        el("td", { class: "source" }, ...sourceLinks(data, effectSources(effect)))
+      )
+    );
+  if (rows.length === 0) throw new Error(`子分類沒有效果：${subcategoryId}`);
+  return rows;
+}
+
 function render(data) {
+  for (const node of document.querySelectorAll("[data-subcategory-name]")) {
+    node.textContent = lookup(data.subcategories, node.dataset.subcategoryName, "子分類").name.zh;
+  }
+  for (const node of document.querySelectorAll("[data-relic-table]")) {
+    node.replaceChildren(...relicRows(data, node.dataset.relicTable));
+  }
   for (const node of document.querySelectorAll("[data-game-version]")) node.textContent = data.gameVersion;
   for (const node of document.querySelectorAll("[data-item]")) {
     const [kind, id] = node.dataset.item.split(":");
@@ -237,10 +291,37 @@ function showError(error) {
   document.querySelector("main").prepend(notice);
 }
 
-fetch(DATA_URL)
-  .then((response) => {
-    if (!response.ok) throw new Error(`${DATA_URL}：HTTP ${response.status}`);
+function loadJson(name) {
+  const url = `data/${name}.json`;
+  return fetch(url).then((response) => {
+    if (!response.ok) throw new Error(`${url}：HTTP ${response.status}`);
     return response.json();
-  })
-  .then(render)
-  .catch(showError);
+  });
+}
+
+// 合併 common 與各遺物大類檔：效果鍵、遊戲內 ID 與子分類鍵重複時丟出錯誤，不以後者覆蓋前者。
+function mergeData([common, ...relicFiles]) {
+  const data = { ...common, effects: {}, subcategories: {} };
+  const gameIds = new Set();
+  const claim = (id, owner) => {
+    if (gameIds.has(id)) throw new Error(`遊戲內 ID 重複：${id}（${owner}）`);
+    gameIds.add(id);
+  };
+  for (const file of relicFiles) {
+    for (const sub of file.category.subcategories) {
+      if (data.subcategories[sub.id]) throw new Error(`子分類重複：${sub.id}`);
+      data.subcategories[sub.id] = { ...sub, category: file.category.id };
+    }
+    for (const [key, effect] of Object.entries(file.effects)) {
+      if (data.effects[key]) throw new Error(`效果重複：${key}`);
+      lookup(data.subcategories, effect.subcategory, `子分類（效果 ${key}）`);
+      if (effect.gameId) claim(effect.gameId, key);
+      for (const tier of effect.tiers ?? []) claim(tier.gameId, key);
+      data.effects[key] = effect;
+    }
+  }
+  return data;
+}
+
+const files = document.body.dataset.load.split(" ");
+Promise.all(files.map(loadJson)).then(mergeData).then(render).catch(showError);

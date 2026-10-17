@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "1.03.5",
+  "icons": {
+    "hp-up": {
+      "src": "images/effect-hp-up.png",
+      "alt": "HP 提升效果圖示"
+    },
+    "fp-up": {
+      "src": "images/effect-fp-up.png",
+      "alt": "FP 提升效果圖示"
+    },
+    "stamina-up": {
+      "src": "images/effect-stamina-up.png",
+      "alt": "精力提升效果圖示"
+    },
+    "attack-up": {
+      "src": "images/effect-attack-up.png",
+      "alt": "攻擊力提升效果圖示"
+    },
+    "spell-up": {
+      "src": "images/effect-spell-up.png",
+      "alt": "法術提升效果圖示"
+    },
+    "defense-up": {
+      "src": "images/effect-defense-up.png",
+      "alt": "防禦提升效果圖示"
+    }
+  },
+  "stats": {
+    "maxHp": {
+      "name": {
+        "zh": "HP 上限",
+        "en": "Maximum HP"
+      }
+    },
+    "maxFp": {
+      "name": {
+        "zh": "FP 上限",
+        "en": "Maximum FP"
+      }
+    },
+    "maxStamina": {
+      "name": {
+        "zh": "精力上限",
+        "en": "Maximum Stamina"
+      }
+    },
+    "vigor": {
+      "name": {
+        "zh": "生命力",
+        "en": "Vigor"
+      },
+      "abbr": "VIG",
+      "icon": "hp-up"
+    },
+    "mind": {
+      "name": {
+        "zh": "集中力",
+        "en": "Mind"
+      },
+      "abbr": "MND",
+      "icon": "fp-up"
+    },
+    "endurance": {
+      "name": {
+        "zh": "耐力",
+        "en": "Endurance"
+      },
+      "abbr": "END",
+      "icon": "stamina-up"
+    },
+    "strength": {
+      "name": {
+        "zh": "力氣",
+        "en": "Strength"
+      },
+      "abbr": "STR",
+      "icon": "attack-up"
+    },
+    "dexterity": {
+      "name": {
+        "zh": "靈巧",
+        "en": "Dexterity"
+      },
+      "abbr": "DEX",
+      "icon": "attack-up"
+    },
+    "intelligence": {
+      "name": {
+        "zh": "智力",
+        "en": "Intelligence"
+      },
+      "abbr": "INT",
+      "icon": "spell-up"
+    },
+    "faith": {
+      "name": {
+        "zh": "信仰",
+        "en": "Faith"
+      },
+      "abbr": "FAI",
+      "icon": "spell-up"
+    },
+    "arcane": {
+      "name": {
+        "zh": "感應",
+        "en": "Arcane"
+      },
+      "abbr": "ARC",
+      "icon": "attack-up"
+    },
+    "poise": {
+      "name": {
+        "zh": "強韌度",
+        "en": "Poise"
+      },
+      "icon": "defense-up"
+    },
+    "poiseDamageTaken": {
+      "name": {
+        "zh": "承受削韌",
+        "en": "Poise Damage Taken"
+      }
+    }
+  },
+  "characters": {
+    "duchess": {
+      "levels": {
+        "1": {
+          "arcane": 11
+        },
+        "15": {
+          "arcane": 11
+        }
+      },
+      "sources": [
+        "eldenpedia-duchess"
+      ]
+    },
+    "wylder": {
+      "levels": {
+        "1": {
+          "endurance": 3,
+          "maxStamina": 54
+        },
+        "2": {
+          "endurance": 6,
+          "maxStamina": 60
+        }
+      },
+      "sources": [
+        "eldenpedia-attributes"
+      ]
+    }
+  },
+  "labels": {
+    "availability": {
+      "specific-relic": "特定遺物",
+      "standard-relic": "一般遺物",
+      "deep-relic": "深層遺物",
+      "both-relics": "一般與深層遺物"
+    },
+    "stacks": {
+      "true": "可疊加",
+      "false": "同一效果不重複生效",
+      "null": "是否可疊加尚未核實",
+      "conflict": "是否可疊加來源分歧"
+    },
+    "acrossTiers": {
+      "true": "同級與不同級都會生效",
+      "false": "不同等級不同時生效",
+      "null": "不同等級是否同時生效尚未核實",
+      "conflict": "不同等級是否同時生效來源分歧"
+    },
+    "combine": {
+      "multiply": "多份以倍率相乘",
+      "add": "多份數值相加",
+      "null": "多份合成方式尚未核實",
+      "conflict": "多份合成方式來源分歧"
+    },
+    "requiresCurse": {
+      "true": "必伴隨負面效果",
+      "null": "是否必伴隨負面效果尚未核實",
+      "conflict": "是否必伴隨負面效果來源分歧"
+    },
+    "equivalent": "等同",
+    "conflict": "來源分歧",
+    "unverified": "尚未核實",
+    "tierBase": "基本",
+    "iconMissing": "沒有可用的遊戲內圖示"
+  },
+  "sources": {
+    "reliquary-json": {
+      "title": "Round Table Codex 遺物資料集",
+      "url": "https://paraphrazetutorials.github.io/nightreign-data-tools/Data/reliquary.json"
+    },
+    "relics-pro": {
+      "title": "Relics.pro 遺物圖鑑",
+      "url": "https://relics.pro/compendium/"
+    },
+    "eldenpedia-relic-effects": {
+      "title": "Eldenpedia 遺物效果",
+      "url": "https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects"
+    },
+    "eldenpedia-effects": {
+      "title": "Eldenpedia 效果總表",
+      "url": "https://eldenring.wiki.gg/wiki/Nightreign%3AEffects"
+    },
+    "eldenpedia-relics": {
+      "title": "Eldenpedia 遺物說明",
+      "url": "https://eldenring.wiki.gg/wiki/Nightreign%3ARelics"
+    },
+    "eldenpedia-duchess": {
+      "title": "Eldenpedia 女爵能力值資料",
+      "url": "https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess"
+    },
+    "eldenpedia-attributes": {
+      "title": "Eldenpedia 能力值表",
+      "url": "https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes"
+    },
+    "reddit-hp-stacking": {
+      "title": "HP 疊加計算討論",
+      "url": "https://www.reddit.com/r/Nightreign/comments/1nws4xe/depth_4_wylder/"
+    }
+  }
+}

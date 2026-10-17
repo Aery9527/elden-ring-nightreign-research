@@ -1,2 +1,8 @@
 [build]
   publish = "public"
+
+# 能力值涵義表已併入一般遺物詞條頁；保留舊網址，錨點沿用原 id。
+[[redirects]]
+  from = "/attributes.html"
+  to = "/relics-general.html"
+  status = 301
