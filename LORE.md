@@ -20,6 +20,7 @@
 - The site reads game values (numbers and rule tags), the effect, stat, and category names that the placeholders render, and their sources only from `public/data/`; maintenance inputs that produce part of these files live in `tools/` (see Relic Data Generation):
   - [public/data/common.json](public/data/common.json): game version, stats, icons, characters, labels, and sources shared by all pages.
   - `public/data/relics/<category>.json`: one file per top category of the in-game relic filter (`general`, `character`, `armament`, `demerit`), holding that category, its subcategories, and its effects.
+  - Data for another game topic goes in its own file or directory under `public/data/` named after the topic and split by the game's own grouping, as `relics/` follows the in-game relic filter; definitions shared by several topics stay in `common.json`.
   - Each page lists the files it loads in `<body data-load>`, for example `common relics/general`. [public/render.js](public/render.js) stops with an error on a duplicate effect key, effect or tier `gameId`, or subcategory key; it MUST NOT let a later file override an earlier one.
 - HTML holds `data-*` placeholders that [public/render.js](public/render.js) fills in; game values, including those in body-text examples, MUST NOT be hard-coded in HTML. Body prose (for example character names) and selection keys in `data-*` attributes (for example tier or level numbers) may stay in HTML.
 - Value states:

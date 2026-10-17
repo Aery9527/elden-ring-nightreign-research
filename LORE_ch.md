@@ -20,6 +20,7 @@
 - 網站只從 `public/data/` 讀取遊戲數值 (數字與規則標籤)、佔位元素產生的效果、能力值及分類名稱，以及它們的來源；產生其中部分檔案的維護輸入放在 `tools/` (見遺物資料產生)：
   - [public/data/common.json](public/data/common.json)：所有頁面共用的遊戲版本、能力值、圖示、角色、標籤與來源。
   - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)，記錄該大類、其子分類及效果。
+  - 其他遊戲主題的資料放在 `public/data/` 下以主題命名的檔案或目錄，並依遊戲本身的分組拆分，如同 `relics/` 依遊戲內遺物篩選拆分；多個主題共用的定義留在 `common.json`。
   - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 遇到重複的效果鍵、效果或等級的 `gameId`，或子分類鍵時以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
 - HTML 放 `data-*` 佔位元素，由 [public/render.js](public/render.js) 填入；禁止在 HTML 寫死遊戲數值，內文例子中的數值也一樣。內文敘述 (例如角色名稱) 與 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
 - 數值狀態：
