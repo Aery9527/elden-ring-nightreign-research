@@ -257,6 +257,12 @@ td.item {
   white-space: nowrap;
 }
 
+/* 詞條一覽的遊戲詞條名稱很長，允許換行並保留最小欄寬 */
+[data-relic-table] td.item {
+  min-width: 14em;
+  white-space: normal;
+}
+
 .item-name {
   display: grid;
   grid-template-columns: 48px auto;

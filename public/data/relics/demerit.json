@@ -1,0 +1,521 @@
+{
+  "category": {
+    "id": "demerit",
+    "gameId": "40",
+    "name": {
+      "zh": "負面效果",
+      "en": "Demerits"
+    },
+    "subcategories": [
+      {
+        "id": "demerit-attributes",
+        "gameId": "40000",
+        "name": {
+          "zh": "負面效果（能力值）",
+          "en": "Demerits (Attributes)"
+        }
+      },
+      {
+        "id": "demerit-damage-negation",
+        "gameId": "40010",
+        "name": {
+          "zh": "負面效果（減傷率）",
+          "en": "Demerits (Damage Negation)"
+        }
+      },
+      {
+        "id": "demerit-actions",
+        "gameId": "40020",
+        "name": {
+          "zh": "負面效果（動作）",
+          "en": "Demerits (Action)"
+        }
+      }
+    ]
+  },
+  "effects": {
+    "reduced-vigor-and-arcane": {
+      "subcategory": "demerit-attributes",
+      "gameId": "6830400",
+      "name": {
+        "zh": "降低生命力、感應",
+        "en": "Reduced Vigor and Arcane"
+      },
+      "icon": "hp-down",
+      "detail": {
+        "zh": "生命力 -3，感應 -3。",
+        "en": "-3 vigor, -3 arcane"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-strength-and-intelligence": {
+      "subcategory": "demerit-attributes",
+      "gameId": "6830000",
+      "name": {
+        "zh": "降低力氣、智力",
+        "en": "Reduced Strength and Intelligence"
+      },
+      "icon": "attack-down",
+      "detail": {
+        "zh": "力氣 -3，智力 -3。",
+        "en": "-3 strength, -3 intelligence"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-dexterity-and-faith": {
+      "subcategory": "demerit-attributes",
+      "gameId": "6830100",
+      "name": {
+        "zh": "降低靈巧、信仰",
+        "en": "Reduced Dexterity and Faith"
+      },
+      "icon": "attack-down",
+      "detail": {
+        "zh": "靈巧 -3，信仰 -3。",
+        "en": "-3 dexterity, -3 faith"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-intelligence-and-dexterity": {
+      "subcategory": "demerit-attributes",
+      "gameId": "6830200",
+      "name": {
+        "zh": "降低智力、靈巧",
+        "en": "Reduced Intelligence and Dexterity"
+      },
+      "icon": "attack-down",
+      "detail": {
+        "zh": "智力 -3，靈巧 -3。",
+        "en": "-3 intelligence, -3 dexterity"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-faith-and-strength": {
+      "subcategory": "demerit-attributes",
+      "gameId": "6830300",
+      "name": {
+        "zh": "降低信仰、力氣",
+        "en": "Reduced Faith and Strength"
+      },
+      "icon": "attack-down",
+      "detail": {
+        "zh": "信仰 -3，力氣 -3。",
+        "en": "-3 faith, -3 strength"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-rune-acquisition": {
+      "subcategory": "demerit-attributes",
+      "gameId": "6840000",
+      "name": {
+        "zh": "減少獲得的盧恩",
+        "en": "Reduced Rune Acquisition"
+      },
+      "icon": "item-down",
+      "detail": {
+        "zh": "從敵人獲得的盧恩 ×0.9。",
+        "en": "0.9x rune gain from enemies"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "continuous-hp-loss": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6850500",
+      "name": {
+        "zh": "持續減少 HP",
+        "en": "Continuous HP Loss"
+      },
+      "icon": "hp-down",
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "all-resistances-down": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6850200",
+      "name": {
+        "zh": "降低對所有異常狀態的抵抗力",
+        "en": "All Resistances Down"
+      },
+      "icon": "defense-down",
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-damage-negation-for-flask-usages": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6850900",
+      "name": {
+        "zh": "使用聖杯瓶時，降低減傷率",
+        "en": "Reduced Damage Negation for Flask Usages"
+      },
+      "icon": "defense-down-plain",
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-damage-negation-after-evading": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6850700",
+      "name": {
+        "zh": "閃避後的當下，降低減傷率",
+        "en": "Reduced Damage Negation After Evading"
+      },
+      "icon": "defense-down-plain",
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "repeated-evasions-lower-damage-negation": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6850800",
+      "name": {
+        "zh": "連續閃避時，降低減傷率",
+        "en": "Repeated Evasions Lower Damage Negation"
+      },
+      "icon": "defense-down-plain",
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "taking-damage-causes-poison-buildup": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6820000",
+      "name": {
+        "zh": "受到損傷時，會累積中毒量表",
+        "en": "Taking Damage Causes Poison Buildup"
+      },
+      "icon": null,
+      "detail": {
+        "zh": "受到攻擊時，中毒量表累積 52。（此類效果中的「受到攻擊」，定義為造成傷害且未被防禦的攻擊）",
+        "en": "Upon getting hit, recieve 52 poison buildup (a hit for these effects is defined as an attack that deals damage and is unblocked)"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "taking-damage-causes-rot-buildup": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6820100",
+      "name": {
+        "zh": "受到損傷時，會累積猩紅腐敗量表",
+        "en": "Taking Damage Causes Rot Buildup"
+      },
+      "icon": null,
+      "detail": {
+        "zh": "受到攻擊時，猩紅腐敗量表累積 44。",
+        "en": "Upon getting hit, recieve 44 scarlet rot buildup"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "taking-damage-causes-blood-loss-buildup": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6820300",
+      "name": {
+        "zh": "受到損傷時，會累積出血量表",
+        "en": "Taking Damage Causes Blood Loss Buildup"
+      },
+      "icon": null,
+      "detail": {
+        "zh": "受到攻擊時，出血量表累積 44。",
+        "en": "Upon getting hit, recieve 44 blood loss buildup"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "taking-damage-causes-frost-buildup": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6820200",
+      "name": {
+        "zh": "受到損傷時，會累積凍傷量表",
+        "en": "Taking Damage Causes Frost Buildup"
+      },
+      "icon": null,
+      "detail": {
+        "zh": "受到攻擊時，凍傷量表累積 44。",
+        "en": "Upon getting hit, recieve 44 frostbite buildup"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "taking-damage-causes-sleep-buildup": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6820500",
+      "name": {
+        "zh": "受到損傷時，會累積催眠量表",
+        "en": "Taking Damage Causes Sleep Buildup"
+      },
+      "icon": null,
+      "detail": {
+        "zh": "受到攻擊時，催眠量表累積 40。",
+        "en": "Upon getting hit, recieve 40 sleep buildup"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "taking-damage-causes-madness-buildup": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6820400",
+      "name": {
+        "zh": "受到損傷時，會累積發狂量表",
+        "en": "Taking Damage Causes Madness Buildup"
+      },
+      "icon": null,
+      "detail": {
+        "zh": "受到攻擊時，發狂量表累積 40。",
+        "en": "Upon getting hit, recieve 40 madness buildup"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "taking-damage-causes-death-buildup": {
+      "subcategory": "demerit-damage-negation",
+      "gameId": "6820600",
+      "name": {
+        "zh": "受到損傷時，會累積死亡量表",
+        "en": "Taking Damage Causes Death Buildup"
+      },
+      "icon": null,
+      "detail": {
+        "zh": "受到攻擊時，死亡量表累積 32。",
+        "en": "Upon getting hit, recieve 32 death blight buildup"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "reduced-flask-hp-restoration": {
+      "subcategory": "demerit-actions",
+      "gameId": "6840100",
+      "name": {
+        "zh": "降低聖杯瓶恢復量",
+        "en": "Reduced Flask HP Restoration"
+      },
+      "icon": "hp-down",
+      "detail": {
+        "zh": "聖杯瓶的 HP 恢復量 ×0.85。",
+        "en": "0.85x HP restored from flask"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "ultimate-art-charging-impaired": {
+      "subcategory": "demerit-actions",
+      "gameId": "6840200",
+      "name": {
+        "zh": "降低絕活量表累積",
+        "en": "Ultimate Art Charging Impaired"
+      },
+      "icon": "ultimate-art-down",
+      "detail": {
+        "zh": "自然累積的絕活量表累積量 ×0.85，攻擊獲得的絕活量表累積量 ×0.85。",
+        "en": "0.85x passive ultimate art charge and 0.85x ultimate art charge from attacks"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "lower-attack-when-below-max-hp": {
+      "subcategory": "demerit-actions",
+      "gameId": "6851200",
+      "name": {
+        "zh": "HP 沒有全滿時，降低攻擊力",
+        "en": "Lower Attack When Below Max HP"
+      },
+      "icon": "attack-down-plain",
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "poison-buildup-when-below-max-hp": {
+      "subcategory": "demerit-actions",
+      "gameId": "6851300",
+      "name": {
+        "zh": "HP 沒有全滿時，累積中毒量表",
+        "en": "Poison Buildup When Below Max HP"
+      },
+      "icon": null,
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "rot-buildup-when-below-max-hp": {
+      "subcategory": "demerit-actions",
+      "gameId": "6851400",
+      "name": {
+        "zh": "HP 沒有全滿時，累積猩紅腐敗量表",
+        "en": "Rot Buildup When Below Max HP"
+      },
+      "icon": null,
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "near-death-reduces-max-hp": {
+      "subcategory": "demerit-actions",
+      "gameId": "6851700",
+      "name": {
+        "zh": "瀕死時，降低 HP 上限",
+        "en": "Near Death Reduces Max HP"
+      },
+      "icon": "hp-down-plain",
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    }
+  }
+}

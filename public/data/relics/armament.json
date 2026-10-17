@@ -1,0 +1,3075 @@
+{
+  "category": {
+    "id": "armament",
+    "gameId": "20",
+    "name": {
+      "zh": "武器專屬",
+      "en": "Armament-specific"
+    },
+    "subcategories": [
+      {
+        "id": "armament-dagger",
+        "gameId": "20000",
+        "name": {
+          "zh": "短劍",
+          "en": "Dagger"
+        }
+      },
+      {
+        "id": "armament-straight-sword",
+        "gameId": "20010",
+        "name": {
+          "zh": "直劍",
+          "en": "Straight Sword"
+        }
+      },
+      {
+        "id": "armament-greatsword",
+        "gameId": "20020",
+        "name": {
+          "zh": "大劍",
+          "en": "Greatsword"
+        }
+      },
+      {
+        "id": "armament-colossal-sword",
+        "gameId": "20030",
+        "name": {
+          "zh": "特大劍",
+          "en": "Colossal Sword"
+        }
+      },
+      {
+        "id": "armament-curved-sword",
+        "gameId": "20040",
+        "name": {
+          "zh": "曲劍",
+          "en": "Curved Sword"
+        }
+      },
+      {
+        "id": "armament-curved-greatsword",
+        "gameId": "20050",
+        "name": {
+          "zh": "大曲劍",
+          "en": "Curved Greatsword"
+        }
+      },
+      {
+        "id": "armament-katana",
+        "gameId": "20060",
+        "name": {
+          "zh": "刀",
+          "en": "Katana"
+        }
+      },
+      {
+        "id": "armament-twinblade",
+        "gameId": "20070",
+        "name": {
+          "zh": "雙頭劍",
+          "en": "Twinblade"
+        }
+      },
+      {
+        "id": "armament-thrusting-sword",
+        "gameId": "20080",
+        "name": {
+          "zh": "刺劍",
+          "en": "Thrusting Sword"
+        }
+      },
+      {
+        "id": "armament-heavy-thrusting-sword",
+        "gameId": "20090",
+        "name": {
+          "zh": "重刺劍",
+          "en": "Heavy Thrusting Sword"
+        }
+      },
+      {
+        "id": "armament-axe",
+        "gameId": "20100",
+        "name": {
+          "zh": "斧",
+          "en": "Axe"
+        }
+      },
+      {
+        "id": "armament-greataxe",
+        "gameId": "20110",
+        "name": {
+          "zh": "大斧",
+          "en": "Greataxe"
+        }
+      },
+      {
+        "id": "armament-hammer",
+        "gameId": "20120",
+        "name": {
+          "zh": "槌",
+          "en": "Hammer"
+        }
+      },
+      {
+        "id": "armament-great-hammer",
+        "gameId": "20130",
+        "name": {
+          "zh": "大槌",
+          "en": "Great Hammer"
+        }
+      },
+      {
+        "id": "armament-flail",
+        "gameId": "20140",
+        "name": {
+          "zh": "連枷",
+          "en": "Flail"
+        }
+      },
+      {
+        "id": "armament-spear",
+        "gameId": "20150",
+        "name": {
+          "zh": "矛",
+          "en": "Spear"
+        }
+      },
+      {
+        "id": "armament-great-spear",
+        "gameId": "20160",
+        "name": {
+          "zh": "大矛",
+          "en": "Great Spear"
+        }
+      },
+      {
+        "id": "armament-halberd",
+        "gameId": "20170",
+        "name": {
+          "zh": "戟",
+          "en": "Halberd"
+        }
+      },
+      {
+        "id": "armament-reaper",
+        "gameId": "20180",
+        "name": {
+          "zh": "鐮刀",
+          "en": "Reaper"
+        }
+      },
+      {
+        "id": "armament-fist",
+        "gameId": "20190",
+        "name": {
+          "zh": "拳頭",
+          "en": "Fist"
+        }
+      },
+      {
+        "id": "armament-claw",
+        "gameId": "20200",
+        "name": {
+          "zh": "鉤爪",
+          "en": "Claw"
+        }
+      },
+      {
+        "id": "armament-whip",
+        "gameId": "20210",
+        "name": {
+          "zh": "軟鞭",
+          "en": "Whip"
+        }
+      },
+      {
+        "id": "armament-colossal-weapon",
+        "gameId": "20220",
+        "name": {
+          "zh": "特大武器",
+          "en": "Colossal Weapon"
+        }
+      },
+      {
+        "id": "armament-bow",
+        "gameId": "20230",
+        "name": {
+          "zh": "弓",
+          "en": "Bow"
+        }
+      },
+      {
+        "id": "armament-glintstone-staff",
+        "gameId": "20240",
+        "name": {
+          "zh": "手杖",
+          "en": "Glintstone Staff"
+        }
+      },
+      {
+        "id": "armament-sacred-seal",
+        "gameId": "20250",
+        "name": {
+          "zh": "聖印記",
+          "en": "Sacred Seal"
+        }
+      },
+      {
+        "id": "armament-greatbow",
+        "gameId": "20260",
+        "name": {
+          "zh": "大弓",
+          "en": "Greatbow"
+        }
+      },
+      {
+        "id": "armament-crossbow",
+        "gameId": "20270",
+        "name": {
+          "zh": "弩",
+          "en": "Crossbow"
+        }
+      },
+      {
+        "id": "armament-ballista",
+        "gameId": "20280",
+        "name": {
+          "zh": "弩砲",
+          "en": "Ballista"
+        }
+      },
+      {
+        "id": "armament-small-shield",
+        "gameId": "20300",
+        "name": {
+          "zh": "小盾",
+          "en": "Small Shield"
+        }
+      },
+      {
+        "id": "armament-medium-shield",
+        "gameId": "20310",
+        "name": {
+          "zh": "中盾",
+          "en": "Medium Shield"
+        }
+      },
+      {
+        "id": "armament-greatshield",
+        "gameId": "20320",
+        "name": {
+          "zh": "大盾",
+          "en": "Greatshield"
+        }
+      }
+    ]
+  },
+  "effects": {
+    "improved-dagger-attack-power": {
+      "subcategory": "armament-dagger",
+      "gameId": "7330000",
+      "name": {
+        "zh": "提升短劍的攻擊力",
+        "en": "Improved Dagger Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "短劍的傷害 ×1.09",
+        "en": "1.09x damage of daggers"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-dagger-attacks": {
+      "subcategory": "armament-dagger",
+      "gameId": "7340000",
+      "name": {
+        "zh": "以短劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Dagger Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-dagger-attacks": {
+      "subcategory": "armament-dagger",
+      "gameId": "7350000",
+      "name": {
+        "zh": "以短劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Dagger Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-daggers-equipped": {
+      "subcategory": "armament-dagger",
+      "gameId": "7080000",
+      "name": {
+        "zh": "裝備三把以上類別為短劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Daggers Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上短劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more daggers are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-daggers": {
+      "subcategory": "armament-dagger",
+      "gameId": "6630000",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到短劍",
+        "en": "Dormant Power Helps Discover Daggers"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為短劍。原本抽選職業武器的潛在能力，會改為抽選此新偏好武器。僅第一個「透過潛在能力，能比較容易找到 X」遺物生效",
+        "en": "Replaces preferred weapon discovery for dormant powers with daggers. This makes dormant powers that roll for class weapon instead roll for this new preferred weapon. Only the first \"Dormant Power Helps Discover X\" relic applies"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-straight-sword-attack-power": {
+      "subcategory": "armament-straight-sword",
+      "gameId": "7330100",
+      "name": {
+        "zh": "提升直劍的攻擊力",
+        "en": "Improved Straight Sword Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "直劍的傷害 ×1.09",
+        "en": "1.09x damage of straight swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-straight-sword-attacks": {
+      "subcategory": "armament-straight-sword",
+      "gameId": "7340100",
+      "name": {
+        "zh": "以直劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Straight Sword Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-straight-sword-attacks": {
+      "subcategory": "armament-straight-sword",
+      "gameId": "7350100",
+      "name": {
+        "zh": "以直劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Straight Sword Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-straight-swords-equipped": {
+      "subcategory": "armament-straight-sword",
+      "gameId": "7080100",
+      "name": {
+        "zh": "裝備三把以上類別為直劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Straight Swords Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上直劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more straight swords are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-straight-swords": {
+      "subcategory": "armament-straight-sword",
+      "gameId": "6630100",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到直劍",
+        "en": "Dormant Power Helps Discover Straight Swords"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為直劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with straight swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-greatsword-attack-power": {
+      "subcategory": "armament-greatsword",
+      "gameId": "7330200",
+      "name": {
+        "zh": "提升大劍的攻擊力",
+        "en": "Improved Greatsword Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "大劍的傷害 ×1.09",
+        "en": "1.09x damage of greatswords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-greatsword-attacks": {
+      "subcategory": "armament-greatsword",
+      "gameId": "7340200",
+      "name": {
+        "zh": "以大劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Greatsword Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-greatsword-attacks": {
+      "subcategory": "armament-greatsword",
+      "gameId": "7350200",
+      "name": {
+        "zh": "以大劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Greatsword Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-greatswords-equipped": {
+      "subcategory": "armament-greatsword",
+      "gameId": "7080200",
+      "name": {
+        "zh": "裝備三把以上類別為大劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Greatswords Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上大劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more greatswords are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-greatswords": {
+      "subcategory": "armament-greatsword",
+      "gameId": "6630200",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到大劍",
+        "en": "Dormant Power Helps Discover Greatswords"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為大劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with greatswords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-colossal-sword-attack-power": {
+      "subcategory": "armament-colossal-sword",
+      "gameId": "7330300",
+      "name": {
+        "zh": "提升特大劍的攻擊力",
+        "en": "Improved Colossal Sword Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "特大劍的傷害 ×1.09",
+        "en": "1.09x damage of colossal swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-colossal-sword-attacks": {
+      "subcategory": "armament-colossal-sword",
+      "gameId": "7340300",
+      "name": {
+        "zh": "以特大劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Colossal Sword Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-colossal-sword-attacks": {
+      "subcategory": "armament-colossal-sword",
+      "gameId": "7350300",
+      "name": {
+        "zh": "以特大劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Colossal Sword Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-colossal-swords-equipped": {
+      "subcategory": "armament-colossal-sword",
+      "gameId": "7080300",
+      "name": {
+        "zh": "裝備三把以上類別為特大劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Colossal Swords Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上特大劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more colossal swords are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-colossal-swords": {
+      "subcategory": "armament-colossal-sword",
+      "gameId": "6630300",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到特大劍",
+        "en": "Dormant Power Helps Discover Colossal Swords"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為特大劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with colossal swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-curved-sword-attack-power": {
+      "subcategory": "armament-curved-sword",
+      "gameId": "7330400",
+      "name": {
+        "zh": "提升曲劍的攻擊力",
+        "en": "Improved Curved Sword Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "曲劍的傷害 ×1.09",
+        "en": "1.09x damage of curved swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-curved-sword-attacks": {
+      "subcategory": "armament-curved-sword",
+      "gameId": "7340400",
+      "name": {
+        "zh": "以曲劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Curved Sword Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-curved-sword-attacks": {
+      "subcategory": "armament-curved-sword",
+      "gameId": "7350400",
+      "name": {
+        "zh": "以曲劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Curved Sword Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-curved-swords-equipped": {
+      "subcategory": "armament-curved-sword",
+      "gameId": "7080400",
+      "name": {
+        "zh": "裝備三把以上類別為曲劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Curved Swords Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上曲劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more curved swords are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-curved-swords": {
+      "subcategory": "armament-curved-sword",
+      "gameId": "6630400",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到曲劍",
+        "en": "Dormant Power Helps Discover Curved Swords"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為曲劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with curved swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-curved-greatsword-attack-power": {
+      "subcategory": "armament-curved-greatsword",
+      "gameId": "7330500",
+      "name": {
+        "zh": "提升大曲劍的攻擊力",
+        "en": "Improved Curved Greatsword Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "大曲劍的傷害 ×1.09",
+        "en": "1.09x damage of curved greatswords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-curved-greatsword-attacks": {
+      "subcategory": "armament-curved-greatsword",
+      "gameId": "7340500",
+      "name": {
+        "zh": "以大曲劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Curved Greatsword Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-curved-greatsword-attacks": {
+      "subcategory": "armament-curved-greatsword",
+      "gameId": "7350500",
+      "name": {
+        "zh": "以大曲劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Curved Greatsword Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-curved-greatswords-equipped": {
+      "subcategory": "armament-curved-greatsword",
+      "gameId": "7080500",
+      "name": {
+        "zh": "裝備三把以上類別為大曲劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Curved Greatswords Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上大曲劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more curved greatswords are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-curved-greatswords": {
+      "subcategory": "armament-curved-greatsword",
+      "gameId": "6630500",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到大曲劍",
+        "en": "Dormant Power Helps Discover Curved Greatswords"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為大曲劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with curved greatswords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-katana-attack-power": {
+      "subcategory": "armament-katana",
+      "gameId": "7330600",
+      "name": {
+        "zh": "提升刀的攻擊力",
+        "en": "Improved Katana Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "刀的傷害 ×1.09",
+        "en": "1.09x damage of katanas"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-katana-attacks": {
+      "subcategory": "armament-katana",
+      "gameId": "7340600",
+      "name": {
+        "zh": "以刀攻擊時，恢復 HP",
+        "en": "HP Restoration upon Katana Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-katana-attacks": {
+      "subcategory": "armament-katana",
+      "gameId": "7350600",
+      "name": {
+        "zh": "以刀攻擊時，恢復 FP",
+        "en": "FP Restoration upon Katana Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-katana-equipped": {
+      "subcategory": "armament-katana",
+      "gameId": "7080600",
+      "name": {
+        "zh": "裝備三把以上類別為刀的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Katana Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上刀時，所有傷害來源 ×1.2",
+        "en": "When 3 or more katanas are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-katana": {
+      "subcategory": "armament-katana",
+      "gameId": "6630600",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到刀",
+        "en": "Dormant Power Helps Discover Katana"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為刀",
+        "en": "Replaces preferred weapon discovery for dormant powers with katanas"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-twinblade-attack-power": {
+      "subcategory": "armament-twinblade",
+      "gameId": "7330700",
+      "name": {
+        "zh": "提升雙頭劍的攻擊力",
+        "en": "Improved Twinblade Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "雙頭劍的傷害 ×1.09",
+        "en": "1.09x damage of twinblades"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-twinblade-attacks": {
+      "subcategory": "armament-twinblade",
+      "gameId": "7340700",
+      "name": {
+        "zh": "以雙頭劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Twinblade Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-twinblade-attacks": {
+      "subcategory": "armament-twinblade",
+      "gameId": "7350700",
+      "name": {
+        "zh": "以雙頭劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Twinblade Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-twinblades-equipped": {
+      "subcategory": "armament-twinblade",
+      "gameId": "7080700",
+      "name": {
+        "zh": "裝備三把以上類別為雙頭劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Twinblades Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上雙頭劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more twinblades are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-twinblades": {
+      "subcategory": "armament-twinblade",
+      "gameId": "6630700",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到雙頭劍",
+        "en": "Dormant Power Helps Discover Twinblades"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為雙頭劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with twinblades"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-thrusting-sword-attack-power": {
+      "subcategory": "armament-thrusting-sword",
+      "gameId": "7330800",
+      "name": {
+        "zh": "提升刺劍的攻擊力",
+        "en": "Improved Thrusting Sword Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "刺劍的傷害 ×1.09",
+        "en": "1.09x damage of thrusting swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-thrusting-sword-attacks": {
+      "subcategory": "armament-thrusting-sword",
+      "gameId": "7340800",
+      "name": {
+        "zh": "以刺劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Thrusting Sword Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-thrusting-sword-attacks": {
+      "subcategory": "armament-thrusting-sword",
+      "gameId": "7350800",
+      "name": {
+        "zh": "以刺劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Thrusting Sword Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-thrusting-swords-equipped": {
+      "subcategory": "armament-thrusting-sword",
+      "gameId": "7080800",
+      "name": {
+        "zh": "裝備三把以上類別為刺劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Thrusting Swords Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上刺劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more thrusting swords are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-thrusting-swords": {
+      "subcategory": "armament-thrusting-sword",
+      "gameId": "6630800",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到刺劍",
+        "en": "Dormant Power Helps Discover Thrusting Swords"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為刺劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with thrusting swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-heavy-thrusting-sword-attack-power": {
+      "subcategory": "armament-heavy-thrusting-sword",
+      "gameId": "7330900",
+      "name": {
+        "zh": "提升重刺劍的攻擊力",
+        "en": "Improved Heavy Thrusting Sword Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "重刺劍的傷害 ×1.09",
+        "en": "1.09x damage of heavy thrusting swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-heavy-thrusting-sword-attacks": {
+      "subcategory": "armament-heavy-thrusting-sword",
+      "gameId": "7340900",
+      "name": {
+        "zh": "以重刺劍攻擊時，恢復 HP",
+        "en": "HP Restoration upon Heavy Thrusting Sword Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-heavy-thrusting-sword-attacks": {
+      "subcategory": "armament-heavy-thrusting-sword",
+      "gameId": "7350900",
+      "name": {
+        "zh": "以重刺劍攻擊時，恢復 FP",
+        "en": "FP Restoration upon Heavy Thrusting Sword Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-heavy-thrusting-swords-equipped": {
+      "subcategory": "armament-heavy-thrusting-sword",
+      "gameId": "7080900",
+      "name": {
+        "zh": "裝備三把以上類別為重刺劍的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Heavy Thrusting Swords Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上重刺劍時，所有傷害來源 ×1.2",
+        "en": "When 3 or more heavy thrusting swords are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-heavy-thrusting-swords": {
+      "subcategory": "armament-heavy-thrusting-sword",
+      "gameId": "6630900",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到重刺劍",
+        "en": "Dormant Power Helps Discover Heavy Thrusting Swords"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為重刺劍",
+        "en": "Replaces preferred weapon discovery for dormant powers with heavy thrusting swords"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-axe-attack-power": {
+      "subcategory": "armament-axe",
+      "gameId": "7331000",
+      "name": {
+        "zh": "提升斧的攻擊力",
+        "en": "Improved Axe Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "斧的傷害 ×1.09",
+        "en": "1.09x damage of axes"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-axe-attacks": {
+      "subcategory": "armament-axe",
+      "gameId": "7341000",
+      "name": {
+        "zh": "以斧攻擊時，恢復 HP",
+        "en": "HP Restoration upon Axe Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-axe-attacks": {
+      "subcategory": "armament-axe",
+      "gameId": "7351000",
+      "name": {
+        "zh": "以斧攻擊時，恢復 FP",
+        "en": "FP Restoration upon Axe Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-axes-equipped": {
+      "subcategory": "armament-axe",
+      "gameId": "7081000",
+      "name": {
+        "zh": "裝備三把以上類別為斧的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Axes Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上斧時，所有傷害來源 ×1.2",
+        "en": "When 3 or more axes are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-axes": {
+      "subcategory": "armament-axe",
+      "gameId": "6631000",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到斧",
+        "en": "Dormant Power Helps Discover Axes"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為斧",
+        "en": "Replaces preferred weapon discovery for dormant powers with axes"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-greataxe-attack-power": {
+      "subcategory": "armament-greataxe",
+      "gameId": "7331100",
+      "name": {
+        "zh": "提升大斧的攻擊力",
+        "en": "Improved Greataxe Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "大斧的傷害 ×1.09",
+        "en": "1.09x damage of greataxes"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-greataxe-attacks": {
+      "subcategory": "armament-greataxe",
+      "gameId": "7341100",
+      "name": {
+        "zh": "以大斧攻擊時，恢復 HP",
+        "en": "HP Restoration upon Greataxe Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-greataxe-attacks": {
+      "subcategory": "armament-greataxe",
+      "gameId": "7351100",
+      "name": {
+        "zh": "以大斧攻擊時，恢復 FP",
+        "en": "FP Restoration upon Greataxe Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-greataxes-equipped": {
+      "subcategory": "armament-greataxe",
+      "gameId": "7081100",
+      "name": {
+        "zh": "裝備三把以上類別為大斧的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Greataxes Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上大斧時，所有傷害來源 ×1.2",
+        "en": "When 3 or more greataxes are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-greataxes": {
+      "subcategory": "armament-greataxe",
+      "gameId": "6631100",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到大斧",
+        "en": "Dormant Power Helps Discover Greataxes"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為大斧",
+        "en": "Replaces preferred weapon discovery for dormant powers with greataxes"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-hammer-attack-power": {
+      "subcategory": "armament-hammer",
+      "gameId": "7331200",
+      "name": {
+        "zh": "提升槌的攻擊力",
+        "en": "Improved Hammer Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "槌的傷害 ×1.09",
+        "en": "1.09x damage of hammers"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-hammer-attacks": {
+      "subcategory": "armament-hammer",
+      "gameId": "7341200",
+      "name": {
+        "zh": "以槌攻擊時，恢復 HP",
+        "en": "HP Restoration upon Hammer Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-hammer-attacks": {
+      "subcategory": "armament-hammer",
+      "gameId": "7351200",
+      "name": {
+        "zh": "以槌攻擊時，恢復 FP",
+        "en": "FP Restoration upon Hammer Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-hammers-equipped": {
+      "subcategory": "armament-hammer",
+      "gameId": "7081200",
+      "name": {
+        "zh": "裝備三把以上類別為槌的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Hammers Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上槌時，所有傷害來源 ×1.2",
+        "en": "When 3 or more hammers are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-hammers": {
+      "subcategory": "armament-hammer",
+      "gameId": "6631200",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到槌",
+        "en": "Dormant Power Helps Discover Hammers"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為槌",
+        "en": "Replaces preferred weapon discovery for dormant powers with hammers"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-great-hammer-attack-power": {
+      "subcategory": "armament-great-hammer",
+      "gameId": "7331300",
+      "name": {
+        "zh": "提升大槌的攻擊力",
+        "en": "Improved Great Hammer Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "大槌的傷害 ×1.09",
+        "en": "1.09x damage of great hammers"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-great-hammer-attacks": {
+      "subcategory": "armament-great-hammer",
+      "gameId": "7341300",
+      "name": {
+        "zh": "以大槌攻擊時，恢復 HP",
+        "en": "HP Restoration upon Great Hammer Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-great-hammer-attacks": {
+      "subcategory": "armament-great-hammer",
+      "gameId": "7351300",
+      "name": {
+        "zh": "以大槌攻擊時，恢復 FP",
+        "en": "FP Restoration upon Great Hammer Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-great-hammers-equipped": {
+      "subcategory": "armament-great-hammer",
+      "gameId": "7081300",
+      "name": {
+        "zh": "裝備三把以上類別為大槌的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Great Hammers Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上大槌時，所有傷害來源 ×1.2",
+        "en": "When 3 or more great hammers are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-great-hammers": {
+      "subcategory": "armament-great-hammer",
+      "gameId": "6631300",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到大槌",
+        "en": "Dormant Power Helps Discover Great Hammers"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為大槌",
+        "en": "Replaces preferred weapon discovery for dormant powers with great hammers"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-flail-attack-power": {
+      "subcategory": "armament-flail",
+      "gameId": "7331400",
+      "name": {
+        "zh": "提升連枷的攻擊力",
+        "en": "Improved Flail Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "連枷的傷害 ×1.09",
+        "en": "1.09x damage of flails"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-flail-attacks": {
+      "subcategory": "armament-flail",
+      "gameId": "7341400",
+      "name": {
+        "zh": "以連枷攻擊時，恢復 HP",
+        "en": "HP Restoration upon Flail Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-flail-attacks": {
+      "subcategory": "armament-flail",
+      "gameId": "7351400",
+      "name": {
+        "zh": "以連枷攻擊時，恢復 FP",
+        "en": "FP Restoration upon Flail Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-flails-equipped": {
+      "subcategory": "armament-flail",
+      "gameId": "7081400",
+      "name": {
+        "zh": "裝備三把以上類別為連枷的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Flails Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上連枷時，所有傷害來源 ×1.2",
+        "en": "When 3 or more flails are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-flails": {
+      "subcategory": "armament-flail",
+      "gameId": "6631400",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到連枷",
+        "en": "Dormant Power Helps Discover Flails"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為連枷",
+        "en": "Replaces preferred weapon discovery for dormant powers with flails"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-spear-attack-power": {
+      "subcategory": "armament-spear",
+      "gameId": "7331500",
+      "name": {
+        "zh": "提升矛的攻擊力",
+        "en": "Improved Spear Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "矛的傷害 ×1.09",
+        "en": "1.09x damage of spears"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-spear-attacks": {
+      "subcategory": "armament-spear",
+      "gameId": "7341500",
+      "name": {
+        "zh": "以矛攻擊時，恢復 HP",
+        "en": "HP Restoration upon Spear Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-spear-attacks": {
+      "subcategory": "armament-spear",
+      "gameId": "7351500",
+      "name": {
+        "zh": "以矛攻擊時，恢復 FP",
+        "en": "FP Restoration upon Spear Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-spears-equipped": {
+      "subcategory": "armament-spear",
+      "gameId": "7081500",
+      "name": {
+        "zh": "裝備三把以上類別為矛的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Spears Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上矛時，所有傷害來源 ×1.2",
+        "en": "When 3 or more spears are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-spears": {
+      "subcategory": "armament-spear",
+      "gameId": "6631500",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到矛",
+        "en": "Dormant Power Helps Discover Spears"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為矛",
+        "en": "Replaces preferred weapon discovery for dormant powers with spears"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-great-spear-attack-power": {
+      "subcategory": "armament-great-spear",
+      "gameId": "7331700",
+      "name": {
+        "zh": "提升大矛的攻擊力",
+        "en": "Improved Great Spear Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "大矛的傷害 ×1.09",
+        "en": "1.09x damage of great spears"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-great-spear-attacks": {
+      "subcategory": "armament-great-spear",
+      "gameId": "7341700",
+      "name": {
+        "zh": "以大矛攻擊時，恢復 HP",
+        "en": "HP Restoration upon Great Spear Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-great-spear-attacks": {
+      "subcategory": "armament-great-spear",
+      "gameId": "7351700",
+      "name": {
+        "zh": "以大矛攻擊時，恢復 FP",
+        "en": "FP Restoration upon Great Spear Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-great-spears-equipped": {
+      "subcategory": "armament-great-spear",
+      "gameId": "7081700",
+      "name": {
+        "zh": "裝備三把以上類別為大矛的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Great Spears Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上大矛時，所有傷害來源 ×1.2",
+        "en": "When 3 or more great spears are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-great-spears": {
+      "subcategory": "armament-great-spear",
+      "gameId": "6631600",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到大矛",
+        "en": "Dormant Power Helps Discover Great Spears"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為大矛",
+        "en": "Replaces preferred weapon discovery for dormant powers with great spears"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-halberd-attack-power": {
+      "subcategory": "armament-halberd",
+      "gameId": "7331800",
+      "name": {
+        "zh": "提升戟的攻擊力",
+        "en": "Improved Halberd Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "戟的傷害 ×1.09",
+        "en": "1.09x damage of halberds"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-halberd-attacks": {
+      "subcategory": "armament-halberd",
+      "gameId": "7341800",
+      "name": {
+        "zh": "以戟攻擊時，恢復 HP",
+        "en": "HP Restoration upon Halberd Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-halberd-attacks": {
+      "subcategory": "armament-halberd",
+      "gameId": "7351800",
+      "name": {
+        "zh": "以戟攻擊時，恢復 FP",
+        "en": "FP Restoration upon Halberd Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-halberds-equipped": {
+      "subcategory": "armament-halberd",
+      "gameId": "7081800",
+      "name": {
+        "zh": "裝備三把以上類別為戟的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Halberds Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上戟時，所有傷害來源 ×1.2",
+        "en": "When 3 or more halberds are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-halberds": {
+      "subcategory": "armament-halberd",
+      "gameId": "6631700",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到戟",
+        "en": "Dormant Power Helps Discover Halberds"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為戟",
+        "en": "Replaces preferred weapon discovery for dormant powers with halberds"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-reaper-attack-power": {
+      "subcategory": "armament-reaper",
+      "gameId": "7331900",
+      "name": {
+        "zh": "提升鐮刀的攻擊力",
+        "en": "Improved Reaper Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "鐮刀的傷害 ×1.09",
+        "en": "1.09x damage of reapers"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-reaper-attacks": {
+      "subcategory": "armament-reaper",
+      "gameId": "7341900",
+      "name": {
+        "zh": "以鐮刀攻擊時，恢復 HP",
+        "en": "HP Restoration upon Reaper Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-reaper-attacks": {
+      "subcategory": "armament-reaper",
+      "gameId": "7351900",
+      "name": {
+        "zh": "以鐮刀攻擊時，恢復 FP",
+        "en": "FP Restoration upon Reaper Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-reapers-equipped": {
+      "subcategory": "armament-reaper",
+      "gameId": "7081900",
+      "name": {
+        "zh": "裝備三把以上類別為鐮刀的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Reapers Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上鐮刀時，所有傷害來源 ×1.2",
+        "en": "When 3 or more reapers are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-reapers": {
+      "subcategory": "armament-reaper",
+      "gameId": "6631800",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到鐮刀",
+        "en": "Dormant Power Helps Discover Reapers"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為鐮刀",
+        "en": "Replaces preferred weapon discovery for dormant powers with reapers"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-fist-attack-power": {
+      "subcategory": "armament-fist",
+      "gameId": "7332000",
+      "name": {
+        "zh": "提升拳頭的攻擊力",
+        "en": "Improved Fist Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "拳頭的傷害 ×1.09",
+        "en": "1.09x damage of fists"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-fist-attacks": {
+      "subcategory": "armament-fist",
+      "gameId": "7342000",
+      "name": {
+        "zh": "以拳頭攻擊時，恢復 HP",
+        "en": "HP Restoration upon Fist Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-fist-attacks": {
+      "subcategory": "armament-fist",
+      "gameId": "7352000",
+      "name": {
+        "zh": "以拳頭攻擊時，恢復 FP",
+        "en": "FP Restoration upon Fist Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-fists-equipped": {
+      "subcategory": "armament-fist",
+      "gameId": "7082000",
+      "name": {
+        "zh": "裝備三把以上類別為拳頭的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Fists Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上拳頭時，所有傷害來源 ×1.2",
+        "en": "When 3 or more fists are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-fists": {
+      "subcategory": "armament-fist",
+      "gameId": "6631900",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到拳頭",
+        "en": "Dormant Power Helps Discover Fists"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為拳頭",
+        "en": "Replaces preferred weapon discovery for dormant powers with fists"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-claw-attack-power": {
+      "subcategory": "armament-claw",
+      "gameId": "7332100",
+      "name": {
+        "zh": "提升鉤爪的攻擊力",
+        "en": "Improved Claw Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "鉤爪的傷害 ×1.09",
+        "en": "1.09x damage of claws"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-claw-attacks": {
+      "subcategory": "armament-claw",
+      "gameId": "7342100",
+      "name": {
+        "zh": "以鉤爪攻擊時，恢復 HP",
+        "en": "HP Restoration upon Claw Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-claw-attacks": {
+      "subcategory": "armament-claw",
+      "gameId": "7352100",
+      "name": {
+        "zh": "以鉤爪攻擊時，恢復 FP",
+        "en": "FP Restoration upon Claw Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-claws-equipped": {
+      "subcategory": "armament-claw",
+      "gameId": "7082100",
+      "name": {
+        "zh": "裝備三把以上類別為鉤爪的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Claws Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上鉤爪時，所有傷害來源 ×1.2",
+        "en": "When 3 or more claws are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-claws": {
+      "subcategory": "armament-claw",
+      "gameId": "6632000",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到鉤爪",
+        "en": "Dormant Power Helps Discover Claws"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為鉤爪",
+        "en": "Replaces preferred weapon discovery for dormant powers with claws"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-whip-attack-power": {
+      "subcategory": "armament-whip",
+      "gameId": "7332200",
+      "name": {
+        "zh": "提升軟鞭的攻擊力",
+        "en": "Improved Whip Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "軟鞭的傷害 ×1.09",
+        "en": "1.09x damage of whips"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-whip-attacks": {
+      "subcategory": "armament-whip",
+      "gameId": "7342200",
+      "name": {
+        "zh": "以軟鞭攻擊時，恢復 HP",
+        "en": "HP Restoration upon Whip Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-whip-attacks": {
+      "subcategory": "armament-whip",
+      "gameId": "7352200",
+      "name": {
+        "zh": "以軟鞭攻擊時，恢復 FP",
+        "en": "FP Restoration upon Whip Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-whips-equipped": {
+      "subcategory": "armament-whip",
+      "gameId": "7082200",
+      "name": {
+        "zh": "裝備三把以上類別為軟鞭的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Whips Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上軟鞭時，所有傷害來源 ×1.2",
+        "en": "When 3 or more whips are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-whips": {
+      "subcategory": "armament-whip",
+      "gameId": "6632100",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到軟鞭",
+        "en": "Dormant Power Helps Discover Whips"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為軟鞭",
+        "en": "Replaces preferred weapon discovery for dormant powers with whips"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-colossal-weapon-attack-power": {
+      "subcategory": "armament-colossal-weapon",
+      "gameId": "7332300",
+      "name": {
+        "zh": "提升特大武器的攻擊力",
+        "en": "Improved Colossal Weapon Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "特大武器的傷害 ×1.09",
+        "en": "1.09x damage of colossal weapons"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-colossal-weapon-attacks": {
+      "subcategory": "armament-colossal-weapon",
+      "gameId": "7342300",
+      "name": {
+        "zh": "以特大武器攻擊時，恢復 HP",
+        "en": "HP Restoration upon Colossal Weapon Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-colossal-weapon-attacks": {
+      "subcategory": "armament-colossal-weapon",
+      "gameId": "7352300",
+      "name": {
+        "zh": "以特大武器攻擊時，恢復 FP",
+        "en": "FP Restoration upon Colossal Weapon Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-colossal-weapons-equipped": {
+      "subcategory": "armament-colossal-weapon",
+      "gameId": "7082300",
+      "name": {
+        "zh": "裝備三把以上類別為特大武器的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Colossal Weapons Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上特大武器時，所有傷害來源 ×1.2",
+        "en": "When 3 or more colossal weapons are equipped, 1.2x all sources of damage"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-colossal-weapons": {
+      "subcategory": "armament-colossal-weapon",
+      "gameId": "6632200",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到特大武器",
+        "en": "Dormant Power Helps Discover Colossal Weapons"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為特大武器",
+        "en": "Replaces preferred weapon discovery for dormant powers with colossal weapons"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-bow-attack-power": {
+      "subcategory": "armament-bow",
+      "gameId": "7332400",
+      "name": {
+        "zh": "提升弓的攻擊力",
+        "en": "Improved Bow Attack Power"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "弓的傷害 ×1.09（原文註記：1.03 版本疑似已加強，與更新說明不符？）",
+        "en": "1.09x damage of bows\n(buffed in 1.03 despite patch notes?)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "hp-restoration-upon-bow-attacks": {
+      "subcategory": "armament-bow",
+      "gameId": "7342400",
+      "name": {
+        "zh": "以弓攻擊時，恢復 HP",
+        "en": "HP Restoration upon Bow Attacks"
+      },
+      "icon": "hp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 15 HP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 15 HP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "fp-restoration-upon-bow-attacks": {
+      "subcategory": "armament-bow",
+      "gameId": "7352400",
+      "name": {
+        "zh": "以弓攻擊時，恢復 FP",
+        "en": "FP Restoration upon Bow Attacks"
+      },
+      "icon": "fp-up-blue",
+      "detail": {
+        "zh": "以此類武器命中攻擊時，恢復 2 FP（每次觸發的冷卻時間：1 秒）",
+        "en": "Landing attacks with this weapon class restores 2 FP (cooldown per activation: 1 second)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-attack-power-with-3-bows-equipped": {
+      "subcategory": "armament-bow",
+      "gameId": "7082400",
+      "name": {
+        "zh": "裝備三把以上類別為弓的武器，能提升攻擊力",
+        "en": "Improved Attack Power with 3+ Bows Equipped"
+      },
+      "icon": "attack-up",
+      "detail": {
+        "zh": "裝備 3 把以上弓時，所有傷害來源 ×1.2（原文註記：1.03 版本疑似已加強，與更新說明不符？）",
+        "en": "When 3 or more bows are equipped, 1.2x all sources of damage\n(buffed in 1.03 despite patch notes?)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-bows": {
+      "subcategory": "armament-bow",
+      "gameId": "6632300",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到弓",
+        "en": "Dormant Power Helps Discover Bows"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為弓",
+        "en": "Replaces preferred weapon discovery for dormant powers with bows"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-greatbows": {
+      "subcategory": "armament-greatbow",
+      "gameId": "6632400",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到大弓",
+        "en": "Dormant Power Helps Discover Greatbows"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為大弓",
+        "en": "Replaces preferred weapon discovery for dormant powers with greatbows"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-crossbows": {
+      "subcategory": "armament-crossbow",
+      "gameId": "6632500",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到弩",
+        "en": "Dormant Power Helps Discover Crossbows"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為弩",
+        "en": "Replaces preferred weapon discovery for dormant powers with crossbows"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-ballistas": {
+      "subcategory": "armament-ballista",
+      "gameId": "6632600",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到弩砲",
+        "en": "Dormant Power Helps Discover Ballistas"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為弩砲",
+        "en": "Replaces preferred weapon discovery for dormant powers with ballistas"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "max-fp-up-with-3-staves-equipped": {
+      "subcategory": "armament-glintstone-staff",
+      "gameId": "7082500",
+      "name": {
+        "zh": "裝備三把以上類別為手杖的武器，能提升 FP 上限",
+        "en": "Max FP Up with 3+ Staves Equipped"
+      },
+      "icon": "fp-up",
+      "detail": {
+        "zh": "裝備 3 把以上手杖時，集中力 +10（FP 上限 +50）",
+        "en": "When 3 or more staves are equipped, +10 mind (+50 maximum FP)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-staves": {
+      "subcategory": "armament-glintstone-staff",
+      "gameId": "6633000",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到手杖",
+        "en": "Dormant Power Helps Discover Staves"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為手杖",
+        "en": "Replaces preferred weapon discovery for dormant powers with staves"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "max-fp-up-with-3-sacred-seals-equipped": {
+      "subcategory": "armament-sacred-seal",
+      "gameId": "7082600",
+      "name": {
+        "zh": "裝備三把以上類別為聖印記的武器，能提升 FP 上限",
+        "en": "Max FP Up with 3+ Sacred Seals Equipped"
+      },
+      "icon": "fp-up",
+      "detail": {
+        "zh": "裝備 3 把以上聖印記時，集中力 +10（FP 上限 +50）",
+        "en": "When 3 or more sacred seals are equipped, +10 mind (+50 maximum FP)"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-sacred-seals": {
+      "subcategory": "armament-sacred-seal",
+      "gameId": "6633100",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到聖印記",
+        "en": "Dormant Power Helps Discover Sacred Seals"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為聖印記",
+        "en": "Replaces preferred weapon discovery for dormant powers with sacred seals"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "max-hp-up-with-3-small-shields-equipped": {
+      "subcategory": "armament-small-shield",
+      "gameId": "7082700",
+      "name": {
+        "zh": "裝備三把以上類別為小盾的武器，能提升 HP 上限",
+        "en": "Max HP Up with 3+ Small Shields Equipped"
+      },
+      "icon": "hp-up",
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-small-shields": {
+      "subcategory": "armament-small-shield",
+      "gameId": "6632700",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到小盾",
+        "en": "Dormant Power Helps Discover Small Shields"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為小盾",
+        "en": "Replaces preferred weapon discovery for dormant powers with small shields"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "max-hp-up-with-3-medium-shields-equipped": {
+      "subcategory": "armament-medium-shield",
+      "gameId": "7082800",
+      "name": {
+        "zh": "裝備三把以上類別為中盾的武器，能提升 HP 上限",
+        "en": "Max HP Up with 3+ Medium Shields Equipped"
+      },
+      "icon": "hp-up",
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-medium-shields": {
+      "subcategory": "armament-medium-shield",
+      "gameId": "6632800",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到中盾",
+        "en": "Dormant Power Helps Discover Medium Shields"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為中盾",
+        "en": "Replaces preferred weapon discovery for dormant powers with medium shields"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "max-hp-up-with-3-greatshields-equipped": {
+      "subcategory": "armament-greatshield",
+      "gameId": "7082900",
+      "name": {
+        "zh": "裝備三把以上類別為大盾的武器，能提升 HP 上限",
+        "en": "Max HP Up with 3+ Greatshields Equipped"
+      },
+      "icon": "hp-up",
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": null
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "dormant-power-helps-discover-greatshields": {
+      "subcategory": "armament-greatshield",
+      "gameId": "6632900",
+      "name": {
+        "zh": "透過潛在能力，能比較容易找到大盾",
+        "en": "Dormant Power Helps Discover Greatshields"
+      },
+      "icon": "item-up",
+      "detail": {
+        "zh": "將潛在能力偏好發現的武器改為大盾",
+        "en": "Replaces preferred weapon discovery for dormant powers with greatshields"
+      },
+      "availability": "both-relics",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    }
+  }
+}

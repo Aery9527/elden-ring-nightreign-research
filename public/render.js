@@ -248,7 +248,9 @@ function effectEntries(data, key, effect) {
   else if (effect.modifier) values = valueEntries(data, [key]);
   else values = [el("span", { class: "entry" }, el("span", { class: "sub" }, ruleText(data, effect)))];
   const extras = [];
-  if (effect.characters) {
+  // 限定角色與所在子分類的角色相同時 (角色專屬詞條) 不重複列出。
+  const subCharacter = data.subcategories[effect.subcategory].character;
+  if (effect.characters && !(effect.characters.length === 1 && effect.characters[0] === subCharacter)) {
     const characters = effect.characters.map((id) => lookup(data.characters, id, "角色"));
     extras.push(namedList(data, data.labels.characters, characters.map((c) => ({ icon: c.icon, name: c.name.zh }))));
   }
@@ -277,8 +279,11 @@ function relicRows(data, subcategoryId) {
 }
 
 function render(data) {
+  // 角色專屬子分類以渡夜者命名，名稱前附角色圖示。
   for (const node of document.querySelectorAll("[data-subcategory-name]")) {
-    node.textContent = lookup(data.subcategories, node.dataset.subcategoryName, "子分類").name.zh;
+    const sub = lookup(data.subcategories, node.dataset.subcategoryName, "子分類");
+    const icon = sub.character ? [iconNode(data, lookup(data.characters, sub.character, "角色").icon, "24")] : [];
+    node.replaceChildren(...icon, sub.name.zh);
   }
   for (const node of document.querySelectorAll("[data-relic-table]")) {
     node.replaceChildren(...relicRows(data, node.dataset.relicTable));

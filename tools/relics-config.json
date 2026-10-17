@@ -178,7 +178,8 @@
           "name": {
             "zh": "追蹤者",
             "en": "Wylder"
-          }
+          },
+          "character": "wylder"
         },
         {
           "id": "character-guardian",
@@ -186,7 +187,8 @@
           "name": {
             "zh": "守護者",
             "en": "Guardian"
-          }
+          },
+          "character": "guardian"
         },
         {
           "id": "character-ironeye",
@@ -194,7 +196,8 @@
           "name": {
             "zh": "鐵之眼",
             "en": "Ironeye"
-          }
+          },
+          "character": "ironeye"
         },
         {
           "id": "character-duchess",
@@ -202,7 +205,8 @@
           "name": {
             "zh": "女爵",
             "en": "Duchess"
-          }
+          },
+          "character": "duchess"
         },
         {
           "id": "character-raider",
@@ -210,7 +214,8 @@
           "name": {
             "zh": "無賴",
             "en": "Raider"
-          }
+          },
+          "character": "raider"
         },
         {
           "id": "character-revenant",
@@ -218,7 +223,8 @@
           "name": {
             "zh": "復仇者",
             "en": "Revenant"
-          }
+          },
+          "character": "revenant"
         },
         {
           "id": "character-recluse",
@@ -226,7 +232,8 @@
           "name": {
             "zh": "隱士",
             "en": "Recluse"
-          }
+          },
+          "character": "recluse"
         },
         {
           "id": "character-executor",
@@ -234,7 +241,8 @@
           "name": {
             "zh": "執行者",
             "en": "Executor"
-          }
+          },
+          "character": "executor"
         },
         {
           "id": "character-scholar",
@@ -242,7 +250,8 @@
           "name": {
             "zh": "學者",
             "en": "Scholar"
-          }
+          },
+          "character": "scholar"
         },
         {
           "id": "character-undertaker",
@@ -250,7 +259,8 @@
           "name": {
             "zh": "送葬者",
             "en": "Undertaker"
-          }
+          },
+          "character": "undertaker"
         }
       ]
     },

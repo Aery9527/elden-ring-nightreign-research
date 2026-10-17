@@ -11,8 +11,11 @@
 | --- | --- |
 | [public/index.html](public/index.html) | 研究索引，依主題分組。 |
 | [public/relics-general.html](public/relics-general.html) | 遺物詞條：遊戲內篩選「一般」大類，含能力值涵義與查證限制。 |
+| [public/relics-character.html](public/relics-character.html) | 遺物詞條：遊戲內篩選「角色專屬」大類。 |
+| [public/relics-armament.html](public/relics-armament.html) | 遺物詞條：遊戲內篩選「武器專屬」大類。 |
+| [public/relics-demerit.html](public/relics-demerit.html) | 遺物詞條：遊戲內篩選「負面效果」大類。 |
 | [public/data/common.json](public/data/common.json) | 所有頁面共用的遊戲版本、能力值、圖示、角色、標籤與來源。 |
-| [public/data/relics/general.json](public/data/relics/general.json) | 「一般」大類的分類定義與遺物效果，由產生腳本輸出。 |
+| `public/data/relics/<category>.json` | 遊戲內遺物篩選各大類 (`general`、`character`、`armament`、`demerit`) 的分類定義與遺物效果，由產生腳本輸出。 |
 | [public/render.js](public/render.js) | 依頁面宣告載入資料檔並填入頁面佔位元素、產生遺物詞條表。 |
 | [tools/import-relics.mjs](tools/import-relics.mjs) | 由鎖定版本的遊戲參數、遊戲文字與社群資料集產生 `public/data/relics/*.json`，不在網站上發佈。 |
 
