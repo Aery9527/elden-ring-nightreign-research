@@ -45,7 +45,11 @@ body {
   line-height: 1.75;
 }
 
+/* 頁首固定在上方；--header-h 由 nav.js 依實際高度設定 */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   border-bottom: 1px solid var(--border);
   background: var(--surface);
 }
@@ -59,16 +63,44 @@ main {
 
 .site-header nav {
   display: flex;
-  flex-wrap: wrap;
+  align-items: baseline;
   justify-content: space-between;
-  gap: 4px 16px;
+  gap: 16px;
   padding-top: 12px;
   padding-bottom: 12px;
   font-size: 0.95rem;
 }
 
-.version {
+/* 階層不換行，維持頁首單行高度；窄螢幕時可橫向捲動，nav.js 會捲到最後一層 */
+.crumbs {
+  display: flex;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  list-style: none;
+  scrollbar-width: none;
+}
+
+.crumbs li + li {
+  margin-top: 0;
+}
+
+.crumbs li + li::before {
+  content: "›";
+  margin: 0 8px;
   color: var(--muted);
+}
+
+.crumbs [aria-current] {
+  color: var(--text);
+}
+
+.version {
+  flex: none;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 main {
@@ -80,7 +112,7 @@ h1,
 h2,
 h3 {
   line-height: 1.35;
-  scroll-margin-top: 16px;
+  scroll-margin-top: calc(var(--header-h, 52px) + 16px);
 }
 
 h1 {
@@ -322,9 +354,4 @@ td.value .entry + .entry {
   border: 1px solid var(--accent);
   border-radius: 8px;
   background: var(--accent-soft);
-}
-
-.back {
-  margin-top: 16px;
-  font-size: 0.9rem;
 }

@@ -14,6 +14,7 @@
   - 頁面以 `fetch` 載入遊戲資料，本機預覽須透過 HTTP 伺服器 (例如 `python -m http.server -d public`)；直接開啟本機檔案 (`file://`) 無法載入資料。
   - 新增主題頁面時，同時在 [public/index.html](public/index.html) 研究索引中該主題分組的表格新增一列；新主題另立分組標題。
   - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址，並保留原標題 id，讓舊錨點仍可使用。
+  - 每個頁面載入 [public/nav.js](public/nav.js)，並使用與現有頁面相同的固定頁首 `<header class="site-header">` 標記；腳本在頁首填入階層：網站首頁、本頁 `h1` (首頁本身省略，因首頁連結已代表該頁)，以及讀者目前所在的 `h2` 與 `h3`，每層連到該層開頭。只有帶 `id` 的 `h2` 與 `h3` 會出現在階層中，因此每個章節標題必須有 `id`。
 
 ## 遊戲資料守則
 

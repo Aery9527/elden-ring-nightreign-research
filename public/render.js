@@ -382,5 +382,18 @@ function mergeData([common, ...relicFiles]) {
   return data;
 }
 
+// 瀏覽器在資料填入前就跳到網址的錨點，填入後內容變長會讓落點偏移；渲染完成後重新對準。
+// 格式錯誤的錨點 (例如 #%) 無法解碼時直接忽略，不當成資料載入失敗。
+function scrollToHash() {
+  let id;
+  try {
+    id = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    return;
+  }
+  const target = id && document.getElementById(id);
+  if (target) target.scrollIntoView({ behavior: "instant" });
+}
+
 const files = document.body.dataset.load.split(" ");
-Promise.all(files.map(loadJson)).then(mergeData).then(render).catch(showError);
+Promise.all(files.map(loadJson)).then(mergeData).then(render).then(scrollToHash).catch(showError);

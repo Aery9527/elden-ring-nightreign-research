@@ -14,6 +14,7 @@
   - Pages load game data with `fetch`, so preview them locally through an HTTP server (for example `python -m http.server -d public`); a page opened directly as a local file (`file://`) cannot load the data.
   - When adding a topic page, also add a row to its topic group's table in the research index of [public/index.html](public/index.html); a new topic gets its own group heading.
   - When a page is renamed or merged into another page, add a 301 redirect from the old path in [netlify.toml](netlify.toml) and keep the old heading ids so old anchors still work.
+  - Every page loads [public/nav.js](public/nav.js) and uses the same sticky `<header class="site-header">` markup as the existing pages; the script fills the header breadcrumb with the site home, the page `h1` (omitted on the home page, where the home link already names the page), and the `h2` and `h3` the reader is currently in, each linking to the top of that level. Only `h2` and `h3` headings with an `id` appear in the breadcrumb, so every section heading MUST have an `id`.
 
 ## Game Data Rules
 
