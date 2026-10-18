@@ -398,6 +398,36 @@ td.value .entry + .entry {
   transform: translateX(-50%);
 }
 
+/* 圖例說明：滑鼠移上或點選 (聚焦) 時顯示；以整個圖例置中，避免窄螢幕溢出 */
+.tone-legend [data-tip] {
+  cursor: help;
+}
+
+.tone-legend [data-tip]:hover::after,
+.tone-legend [data-tip]:focus::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  width: max-content;
+  max-width: min(320px, calc(100vw - 32px));
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.15);
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: normal;
+  transform: translateX(-50%);
+}
+
+/* 滑鼠移到圖例時只顯示滑鼠所在項目，避免與聚焦項目的說明重疊 */
+.tone-legend:hover [data-tip]:focus:not(:hover)::after {
+  content: none;
+}
+
 body:has(.tone-legend) main {
   padding-bottom: 112px;
 }
