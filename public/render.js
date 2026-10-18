@@ -99,13 +99,14 @@ function tierText(data, effect, tierNumber) {
   return `${statName(data, effect.modifier.stat)} ${formatAmount(data, effect.modifier.unit, tier.value)}`;
 }
 
-// 增益的可否疊加由文字色調表示 (見圖例)，只有來源分歧時列出各來源的說法；
-// 負面效果一律為紅色，色調無法表示可否疊加，因此 showStacks 為真時一律列出。
+// 增益的可否疊加由文字色調表示 (見圖例)，只有來源分歧時列出各來源的說法；藍色也代表多份數值相加，
+// 因此增益的合成方式只在相乘或未核實時列出；不同等級同時生效 (acrossTiers: true) 也不列出，只列例外。
+// 負面效果一律為紅色，色調無法表示這些規則，因此 showStacks 為真時一律列出。
 function stackingParts(data, stacking, showStacks) {
   if (!stacking) return [];
   const parts = showStacks || isConflict(stacking.stacks) ? [ruleNode(data, "stacks", stacking.stacks)] : [];
-  if ("acrossTiers" in stacking) parts.push(ruleNode(data, "acrossTiers", stacking.acrossTiers));
-  if (stacking.stacks === true) parts.push(ruleNode(data, "combine", stacking.combine));
+  if ("acrossTiers" in stacking && (showStacks || stacking.acrossTiers !== true)) parts.push(ruleNode(data, "acrossTiers", stacking.acrossTiers));
+  if (stacking.stacks === true && (showStacks || stacking.combine !== "add")) parts.push(ruleNode(data, "combine", stacking.combine));
   return parts;
 }
 
