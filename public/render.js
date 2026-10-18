@@ -326,13 +326,33 @@ function tierLabel(data, tierNumber) {
   return tierNumber === 0 ? data.labels.tierBase : `+${tierNumber}`;
 }
 
+// 說明結尾的括號附註，例如「技藝冷卻時間 ×0.95（不適用於隱士、復仇者、執行者）。」中的括號部分。
+const TRAILING_NOTE = /（[^（）]*）(?=。?$)/;
+
+// 每一級都有說明且結尾附註相同時回傳該附註，否則回傳 null。
+function sharedTierNote(effect) {
+  const tiers = effect.tiers ?? [];
+  if (tiers.length < 2 || !tiers.every((tier) => tier.detail)) return null;
+  const notes = tiers.map((tier) => tier.detail.zh.match(TRAILING_NOTE)?.[0]);
+  return notes[0] && notes.every((note) => note === notes[0]) ? notes[0] : null;
+}
+
 // 社群詳細說明 (detail) 依效果或各等級列出；沒有 detail 的效果不輸出。
+// 各級相同的結尾附註從每一級移除，改在各級之後列一次，例如「各等級：不適用於隱士、復仇者、執行者。」。
 function detailEntries(data, effect) {
   const entries = effect.detail ? [el("span", { class: "entry" }, toned(data, effect, effectStacks(effect), effect.detail.zh, effect.detail.penalties))] : [];
+  const note = sharedTierNote(effect);
   for (const tier of effect.tiers ?? []) {
     if (!tier.detail) continue;
-    const text = `${tierLabel(data, tier.tier)}：${tier.detail.zh}`;
+    const zh = note ? tier.detail.zh.replace(TRAILING_NOTE, "") : tier.detail.zh;
+    const text = `${tierLabel(data, tier.tier)}：${zh}`;
     entries.push(el("span", { class: "entry" }, toned(data, effect, tierStacks(effect, tier), text, tier.detail.penalties)));
+  }
+  if (note) {
+    const inner = note.slice(1, -1);
+    const text = `${data.labels.allTiers}：${inner}${inner.endsWith("。") ? "" : "。"}`;
+    const penalties = [...new Set(effect.tiers.flatMap((tier) => tier.detail.penalties ?? []))];
+    entries.push(el("span", { class: "entry" }, toned(data, effect, effectStacks(effect), text, penalties)));
   }
   return entries;
 }
