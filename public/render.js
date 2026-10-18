@@ -35,8 +35,16 @@ function ruleKey(value) {
 }
 
 // 規則狀態的顯示文字；欄位缺漏 (undefined) 或標籤缺漏時丟出錯誤，不以空白帶過。
+// 來源分歧時在標籤後列出每個候選值與其來源名稱，例如「是否可疊加來源分歧（試算表：可疊加／Fextralife：同一效果不重複生效）」。
 function ruleLabel(data, field, value) {
-  return lookup(lookup(data.labels, field, "規則標籤組"), ruleKey(value), `規則標籤 ${field}`);
+  const labels = lookup(data.labels, field, "規則標籤組");
+  const label = lookup(labels, ruleKey(value), `規則標籤 ${field}`);
+  if (!isConflict(value)) return label;
+  const candidates = value.conflict.map((candidate) => {
+    const names = candidate.sources.map((id) => lookup(data.sources, id, "來源").title).join("、");
+    return `${names}：${ruleLabel(data, field, candidate.value)}`;
+  });
+  return `${label}（${candidates.join("／")}）`;
 }
 
 // 是否阻止計算與顯示文字分開判斷：任一規則不符預期即阻止，並回傳該規則的狀態文字。

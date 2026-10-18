@@ -257,6 +257,9 @@ function translate(gameId, en) {
     for (const field of ["en", "zh", "params"]) {
       if (typeof correction[field] !== "string" || !correction[field].trim()) return fail(`參數修正 ${gameId} 缺少 ${field}`);
     }
+    if ("sources" in correction && (!Array.isArray(correction.sources) || correction.sources.length === 0)) {
+      return fail(`參數修正 ${gameId} 的 sources 必須是非空陣列，或省略以使用 game-params`);
+    }
     usedCorrections.add(gameId);
     return { zh: correction.zh, en: correction.en, sources: correction.sources ?? ["game-params"] };
   }
@@ -422,6 +425,12 @@ for (const [key, effect] of keyed) {
   for (const icon of icons) if (icon !== null && !common.icons[icon]) fail(`效果 ${key} 的圖示 ${icon} 不在 common.json`);
   for (const id of effect.characters ?? []) if (!common.characters[id]) fail(`效果 ${key} 的角色 ${id} 不在 common.json`);
   for (const id of sourceRefs(effect)) if (!common.sources[id]) fail(`效果 ${key} 的來源 ${id} 不在 common.json`);
+  // 規則欄位只能記在效果層或各等級其中一處；人工值與分級產生值同時存在時，頁面會出現互相矛盾的規則。
+  for (const field of ["availability", "requiresCurse", "stacking"]) {
+    if (field in effect && (effect.tiers ?? []).some((tier) => field in tier)) {
+      fail(`效果 ${key} 的 ${field} 同時記在效果層與等級，只能保留一處`);
+    }
+  }
 }
 
 if (diffs.length) console.log(`人工值與產生值不同 (以人工值為準)：\n  ${diffs.join("\n  ")}`);

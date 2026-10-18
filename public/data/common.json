@@ -526,7 +526,9 @@
       "specific-relic": "特定遺物",
       "standard-relic": "一般遺物",
       "deep-relic": "深層遺物",
-      "both-relics": "一般與深層遺物"
+      "both-relics": "一般與深層遺物",
+      "null": "取得方式尚未核實",
+      "conflict": "取得方式來源分歧"
     },
     "stacks": {
       "true": "可疊加",
@@ -547,6 +549,7 @@
       "conflict": "多份合成方式來源分歧"
     },
     "requiresCurse": {
+      "false": "不必伴隨負面效果",
       "true": "必伴隨負面效果",
       "null": "是否必伴隨負面效果尚未核實",
       "conflict": "是否必伴隨負面效果來源分歧"
