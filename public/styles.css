@@ -380,6 +380,11 @@ td.value .entry + .entry {
   color: var(--tone-debuff);
 }
 
+/* 尚未核實或來源分歧：維持原本的文字顏色，以粗體標示 */
+.tone-unverified {
+  font-weight: 700;
+}
+
 /* 遺物頁的顏色圖例固定在視窗底部；main 加大底部留白，避免最後一行被遮住 */
 .tone-legend {
   position: fixed;

@@ -524,6 +524,12 @@
       "icon": null
     }
   },
+  "legend": [
+    { "tone": "solo", "label": "不可疊加", "tip": "增益；同一詞條裝在多個遺物上不重複生效" },
+    { "tone": "stack", "label": "可疊加", "tip": "增益；同一詞條可在多個遺物上同時生效" },
+    { "tone": "debuff", "label": "負面", "tip": "負面效果、增益詞條說明中的代價，以及「必伴隨負面效果」" },
+    { "tone": "unverified", "label": "未核實", "tip": "尚未核實或來源說法分歧的資訊；增益數值為粗體時，表示可否疊加尚未核實" }
+  ],
   "labels": {
     "availability": {
       "specific-relic": "特定遺物",

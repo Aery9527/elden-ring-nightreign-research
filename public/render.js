@@ -47,6 +47,12 @@ function ruleLabel(data, field, value) {
   return `${label}（${candidates.join("／")}）`;
 }
 
+// 規則狀態節點：尚未核實或來源分歧時以粗體標示 (tone-unverified)，與圖例的「未核實」一致。
+function ruleNode(data, field, value) {
+  const label = ruleLabel(data, field, value);
+  return value === null || isConflict(value) ? el("span", { class: "tone-unverified" }, label) : label;
+}
+
 // 是否阻止計算與顯示文字分開判斷：任一規則不符預期即阻止，並回傳該規則的狀態文字。
 function blockingRule(data, stacking, required) {
   const failed = required.find(([field, expected]) => stacking[field] !== expected);
@@ -97,17 +103,17 @@ function tierText(data, effect, tierNumber) {
 // 負面效果一律為紅色，色調無法表示可否疊加，因此 showStacks 為真時一律列出。
 function stackingParts(data, stacking, showStacks) {
   if (!stacking) return [];
-  const parts = showStacks || isConflict(stacking.stacks) ? [ruleLabel(data, "stacks", stacking.stacks)] : [];
-  if ("acrossTiers" in stacking) parts.push(ruleLabel(data, "acrossTiers", stacking.acrossTiers));
-  if (stacking.stacks === true) parts.push(ruleLabel(data, "combine", stacking.combine));
+  const parts = showStacks || isConflict(stacking.stacks) ? [ruleNode(data, "stacks", stacking.stacks)] : [];
+  if ("acrossTiers" in stacking) parts.push(ruleNode(data, "acrossTiers", stacking.acrossTiers));
+  if (stacking.stacks === true) parts.push(ruleNode(data, "combine", stacking.combine));
   return parts;
 }
 
 // requiresCurse 為 false 或未記錄時不顯示；true、null、conflict 都顯示對應狀態，確定必伴隨 (true) 時以紅色標示。
 function curseParts(data, holder) {
   if (!("requiresCurse" in holder) || holder.requiresCurse === false) return [];
-  const label = ruleLabel(data, "requiresCurse", holder.requiresCurse);
-  return [holder.requiresCurse === true ? el("span", { class: "tone-debuff" }, label) : label];
+  if (holder.requiresCurse === true) return [el("span", { class: "tone-debuff" }, ruleLabel(data, "requiresCurse", true))];
+  return [ruleNode(data, "requiresCurse", holder.requiresCurse)];
 }
 
 // 以分隔字串串接文字或節點，例如 [a, b] → [a, "；", b]。
@@ -152,19 +158,19 @@ function ruleSub(data, effect) {
   return nodes.length ? [el("span", { class: "sub" }, ...nodes)] : [];
 }
 
-// 文字色調：負面效果大類的詞條為紅色；增益依自身可否疊加，可疊加為藍色、不可疊加為綠色；未核實或來源分歧不上色。
 function isDemerit(data, effect) {
   return lookup(data.subcategories, effect.subcategory, "子分類").category === "demerit";
 }
 
+// 文字色調：負面效果大類的詞條為紅色；增益依自身可否疊加，可疊加為藍色、不可疊加為綠色；未核實或來源分歧為粗體。
 function toneClass(data, effect, stacks) {
   if (isDemerit(data, effect)) return "tone-debuff";
   if (stacks === true) return "tone-stack";
   if (stacks === false) return "tone-solo";
-  return null;
+  return "tone-unverified";
 }
 
-// 詞條整體的可否疊加：規則記在詞條上時直接取用；記在各級時，各級相同才採用，否則視為不一致 (不上色)。
+// 詞條整體的可否疊加：規則記在詞條上時直接取用；記在各級時，各級相同才採用，否則視為不一致 (粗體)。
 function effectStacks(effect) {
   if (effect.stacking) return effect.stacking.stacks;
   const [first, ...rest] = effect.tiers.map((tier) => tier.stacking.stacks);
@@ -188,7 +194,7 @@ function toned(data, effect, stacks, text, penalties = []) {
       if (at >= 0 && (!hit || at < hit.at || (at === hit.at && phrase.length > hit.phrase.length))) hit = { at, phrase };
     }
     const plain = hit ? rest.slice(0, hit.at) : rest;
-    if (plain) nodes.push(tone ? el("span", { class: tone }, plain) : plain);
+    if (plain) nodes.push(el("span", { class: tone }, plain));
     if (!hit) break;
     nodes.push(el("span", { class: "tone-debuff" }, hit.phrase));
     rest = rest.slice(hit.at + hit.phrase.length);
@@ -266,7 +272,7 @@ function tierEntries(data, effect, hasDetail) {
       "span",
       { class: "entry" },
       toned(data, effect, stacks, line(picked)),
-      el("span", { class: "sub" }, `${data.labels.conflict}：`, ...sourceLinks(data, sources))
+      el("span", { class: "sub" }, el("span", { class: "tone-unverified" }, `${data.labels.conflict}：`), ...sourceLinks(data, sources))
     );
   });
   return rules.length ? [...entries, el("span", { class: "entry" }, ...rules)] : entries;
@@ -363,17 +369,19 @@ function kindEntries(data, effect) {
   if (effect.relics) return effect.relics.map((relic) => el("span", { class: "entry" }, iconNode(data, relic.icon, "24"), relic.zh));
   const tiered = !("availability" in effect) && effect.tiers;
   const holders = tiered ? effect.tiers : [effect];
+  // 以文字分組 (狀態標籤是節點)，同一種類或狀態的等級合併成一行。
   const lines = new Map();
   for (const holder of holders) {
     const kinds = KINDS[holder.availability];
-    const names = kinds ? kinds.map((kind) => lookup(data.labels.kinds, kind, "種類")) : [ruleLabel(data, "availability", holder.availability)];
+    const names = kinds ? kinds.map((kind) => lookup(data.labels.kinds, kind, "種類")) : [ruleNode(data, "availability", holder.availability)];
     for (const name of names) {
-      if (!lines.has(name)) lines.set(name, []);
-      if (tiered) lines.get(name).push(tierLabel(data, holder.tier));
+      const key = textOf(name);
+      if (!lines.has(key)) lines.set(key, { name, tiers: [] });
+      if (tiered) lines.get(key).tiers.push(tierLabel(data, holder.tier));
     }
   }
-  return [...lines].map(([name, tiers]) =>
-    el("span", { class: "entry" }, tiered && tiers.length < holders.length ? `${name}：${tiers.join("、")}` : name)
+  return [...lines.values()].map(({ name, tiers }) =>
+    el("span", { class: "entry" }, name, ...(tiered && tiers.length < holders.length ? [`：${tiers.join("、")}`] : []))
   );
 }
 
@@ -397,6 +405,12 @@ function relicRows(data, subcategoryId) {
 
 function render(data) {
   // 角色專屬子分類以渡夜者命名，名稱前附角色圖示。
+  // <aside data-legend>：遺物頁底部的顏色圖例，依 common.json 的 legend 產生；說明在滑鼠移上或聚焦時顯示。
+  for (const node of document.querySelectorAll("[data-legend]")) {
+    node.replaceChildren(
+      ...data.legend.map(({ tone, label, tip }) => el("span", { class: `tone-${tone}`, tabindex: "0", "data-tip": tip }, label))
+    );
+  }
   for (const node of document.querySelectorAll("[data-subcategory-name]")) {
     const sub = lookup(data.subcategories, node.dataset.subcategoryName, "子分類");
     const icon = sub.character ? [iconNode(data, lookup(data.characters, sub.character, "角色").icon, "24")] : [];
@@ -414,8 +428,7 @@ function render(data) {
     const [id, tier] = node.dataset.tierText.split(":");
     const effect = lookup(data.effects, id, "效果");
     node.textContent = tierText(data, effect, Number(tier));
-    const tone = toneClass(data, effect, tierStacks(effect, effect.tiers.find((t) => t.tier === Number(tier))));
-    if (tone) node.classList.add(tone);
+    node.classList.add(toneClass(data, effect, tierStacks(effect, effect.tiers.find((t) => t.tier === Number(tier)))));
   }
   for (const node of document.querySelectorAll("[data-example]")) {
     const effect = lookup(data.effects, node.dataset.effect, "效果");
@@ -423,8 +436,7 @@ function render(data) {
       node.dataset.example === "tier-sum"
         ? tierSumExample(data, effect, node.dataset.tierList.split(",").map(Number))
         : stackExample(data, effect, Number(node.dataset.count));
-    const tone = toneClass(data, effect, effectStacks(effect));
-    if (tone) node.classList.add(tone);
+    node.classList.add(toneClass(data, effect, effectStacks(effect)));
   }
   for (const node of document.querySelectorAll("[data-sources]")) {
     const ids = node.dataset.sources.split(" ").flatMap((id) => effectSources(lookup(data.effects, id, "效果")));
