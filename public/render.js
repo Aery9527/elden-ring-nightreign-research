@@ -364,12 +364,14 @@ function effectEntries(data, key, effect) {
 // 取得方式對應的種類；一般與深層遺物兩者皆列。
 const KINDS = { "standard-relic": ["standard-relic"], "deep-relic": ["deep-relic"], "both-relics": ["standard-relic", "deep-relic"] };
 
-// 種類欄：一般、深層各一行；固定遺物列出遺物圖示與名稱。分級詞條只有部分等級屬於某種類時列出等級，例如「深層：+2、+3、+4」。
+// 種類欄：一般、深層各一行；固定遺物列出遺物圖示與名稱。分級詞條出現在兩種以上的種類時，每一行都列出等級，
+// 例如「一般：+1、+2、+3」與「深層：+3」；只出現在一種時只寫種類，例如「一般」。
 // 取得方式尚未核實或來源分歧時顯示對應狀態。
 function kindEntries(data, effect) {
   if (effect.relics) return effect.relics.map((relic) => el("span", { class: "entry" }, iconNode(data, relic.icon, "24"), relic.zh));
-  const tiered = !("availability" in effect) && effect.tiers;
-  const holders = tiered ? effect.tiers : [effect];
+  // 取得方式記在詞條上時，所有等級共用；記在各級時逐級判斷。
+  const holders = "availability" in effect || !effect.tiers ? [effect] : effect.tiers;
+  const tierLabels = (holder) => (holder === effect ? effect.tiers ?? [] : [holder]).map((tier) => tierLabel(data, tier.tier));
   // 以文字分組 (狀態標籤是節點)，同一種類或狀態的等級合併成一行。
   const lines = new Map();
   for (const holder of holders) {
@@ -378,11 +380,11 @@ function kindEntries(data, effect) {
     for (const name of names) {
       const key = textOf(name);
       if (!lines.has(key)) lines.set(key, { name, tiers: [] });
-      if (tiered) lines.get(key).tiers.push(tierLabel(data, holder.tier));
+      lines.get(key).tiers.push(...tierLabels(holder));
     }
   }
   return [...lines.values()].map(({ name, tiers }) =>
-    el("span", { class: "entry" }, name, ...(tiered && tiers.length < holders.length ? [`：${tiers.join("、")}`] : []))
+    el("span", { class: "entry" }, name, ...(tiers.length && lines.size > 1 ? [`：${tiers.join("、")}`] : []))
   );
 }
 
