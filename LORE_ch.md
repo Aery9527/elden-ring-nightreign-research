@@ -13,7 +13,7 @@
   - 頁面間以相對路徑連到 `.html` 檔，不依賴 Netlify 的 pretty URL。
   - 頁面以 `fetch` 載入遊戲資料，本機預覽須透過 HTTP 伺服器 (例如 `python -m http.server -d public`)；直接開啟本機檔案 (`file://`) 無法載入資料。
   - 新增主題頁面時，同時在 [public/index.html](public/index.html) 研究索引中該主題分組的表格新增一列；新主題另立分組標題。
-  - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址，並保留原標題 id，讓舊錨點仍可使用。
+  - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址，並保留原標題 id，讓舊錨點仍可使用。已上線的章節移到其他頁面時，在 [public/nav.js](public/nav.js) 的舊錨點表 (`moved`) 把「頁名#id」導向新頁面；章節在同頁內移除或合併時，把舊 id 保留在接手內容的元素上。
   - 每個頁面載入 [public/nav.js](public/nav.js)，並使用與現有頁面相同的固定頁首 `<header class="site-header">` 標記；腳本在頁首填入階層：網站首頁、本頁 `h1` (首頁本身省略，因首頁連結已代表該頁)，以及讀者目前所在的 `h2` 與 `h3`，每層連到該層開頭。只有帶 `id` 的 `h2` 與 `h3` 會出現在階層中，因此每個章節標題必須有 `id`。
   - 全站引用的來源只在 [public/index.html](public/index.html) 研究索引的「資料來源」分組 (`#sources`) 列出一次；嚴禁在主題頁另設資料來源章，詞條表嚴禁加入來源欄。頁面開始引用新來源時，在該表新增或更新對應的列。內文中的引用連結與來源分歧候選值標示的來源名稱留在頁面上。
 

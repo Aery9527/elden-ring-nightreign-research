@@ -1,5 +1,22 @@
 // 頁首階層導覽：依捲動位置顯示「首頁 › 本頁 › 章節 › 小節」，每層都連到該層開頭。
 (() => {
+  // 已移到其他頁面的舊錨點：鍵為「頁名#id」，導向新位置，讓舊連結仍可使用。
+  // 只列跨頁目標；同頁的舊 id 直接保留在元素上，因為同頁轉址不會重新載入，會跳過下方初始化。
+  const moved = {
+    "relics-general#attribute-table": "attributes.html#attribute-table",
+    "relics-general#understanding": "attributes.html#understanding",
+    "relics-general#sources": "index.html#sources",
+    "relics-character#sources": "index.html#sources",
+    "relics-armament#sources": "index.html#sources",
+    "relics-demerit#sources": "index.html#sources",
+  };
+  const page = location.pathname.split("/").pop().replace(/\.html$/, "");
+  const target = moved[`${page}${location.hash}`];
+  if (target) {
+    location.replace(target);
+    return;
+  }
+
   const header = document.querySelector(".site-header");
   const crumbs = header?.querySelector(".crumbs");
   const h1 = document.querySelector("main h1");

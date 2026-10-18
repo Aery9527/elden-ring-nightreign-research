@@ -118,6 +118,10 @@ h1,
 h2,
 h3 {
   line-height: 1.35;
+}
+
+/* 錨點跳轉 (章節標題與 tr#effect-* 詞條列) 停在固定頁首下方 */
+main [id] {
   scroll-margin-top: calc(var(--header-h, 52px) + 16px);
 }
 
