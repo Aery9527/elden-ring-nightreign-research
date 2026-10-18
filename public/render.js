@@ -101,19 +101,27 @@ function stackingParts(data, stacking) {
   return parts;
 }
 
-// requiresCurse 為 false 或未記錄時不顯示；true、null、conflict 都顯示對應狀態。
+// requiresCurse 為 false 或未記錄時不顯示；true、null、conflict 都顯示對應狀態，確定必伴隨 (true) 時以紅色標示。
 function curseParts(data, holder) {
-  return "requiresCurse" in holder && holder.requiresCurse !== false
-    ? [ruleLabel(data, "requiresCurse", holder.requiresCurse)]
-    : [];
+  if (!("requiresCurse" in holder) || holder.requiresCurse === false) return [];
+  const label = ruleLabel(data, "requiresCurse", holder.requiresCurse);
+  return [holder.requiresCurse === true ? el("span", { class: "tone-debuff" }, label) : label];
 }
 
 function availabilityParts(data, holder) {
   return "availability" in holder ? [ruleLabel(data, "availability", holder.availability)] : [];
 }
 
+// 以分隔字串串接文字或節點，例如 [a, b] → [a, "；", b]。
+function joinParts(parts, separator) {
+  return parts.flatMap((part, index) => (index > 0 ? [separator, ...part] : part));
+}
+
+const textOf = (part) => (typeof part === "string" ? part : part.textContent);
+
 // 規則順序：等同值、取得方式、各級規則、疊加、負面效果。各級規則記在 tier 上，相同的等級合併列出，例如「+1、+2：一般遺物」。
-function ruleText(data, effect) {
+// 等同值是增益數值，依詞條色調上色；其餘規則維持小字顏色。
+function ruleNodes(data, effect) {
   const { labels } = data;
   if (!effect.stacking && !effect.tiers?.every((tier) => tier.stacking)) {
     throw new Error(`效果缺少疊加規則：${effect.name.en}`);
@@ -121,17 +129,62 @@ function ruleText(data, effect) {
   const parts = [];
   if (effect.equivalent) {
     const { stat, unit, value } = effect.equivalent;
-    parts.push(`${labels.equivalent}${statName(data, stat)} ${formatAmount(data, unit, value)}`);
+    const text = `${labels.equivalent}${statName(data, stat)} ${formatAmount(data, unit, value)}`;
+    parts.push([toned(data, effect, effectStacks(effect), text)]);
   }
-  parts.push(...availabilityParts(data, effect));
+  parts.push(...availabilityParts(data, effect).map((part) => [part]));
   const byRule = new Map();
   for (const tier of effect.tiers ?? []) {
-    const text = [...availabilityParts(data, tier), ...stackingParts(data, tier.stacking), ...curseParts(data, tier)].join("，");
-    if (text) byRule.set(text, [...(byRule.get(text) ?? []), tierLabel(data, tier.tier)]);
+    const tierParts = [...availabilityParts(data, tier), ...stackingParts(data, tier.stacking), ...curseParts(data, tier)];
+    const key = tierParts.map(textOf).join("，");
+    if (!key) continue;
+    const entry = byRule.get(key) ?? { nodes: joinParts(tierParts.map((part) => [part]), "，"), tiers: [] };
+    entry.tiers.push(tierLabel(data, tier.tier));
+    byRule.set(key, entry);
   }
-  for (const [text, tiers] of byRule) parts.push(`${tiers.join("、")}：${text}`);
-  parts.push(...stackingParts(data, effect.stacking), ...curseParts(data, effect));
-  return parts.join("；");
+  for (const { nodes, tiers } of byRule.values()) parts.push([`${tiers.join("、")}：`, ...nodes]);
+  parts.push(...stackingParts(data, effect.stacking).map((part) => [part]), ...curseParts(data, effect).map((part) => [part]));
+  return joinParts(parts, "；");
+}
+
+// 文字色調：負面效果大類的詞條為紅色；增益依自身可否疊加，可疊加為藍色、不可疊加為綠色；未核實或來源分歧不上色。
+function toneClass(data, effect, stacks) {
+  if (lookup(data.subcategories, effect.subcategory, "子分類").category === "demerit") return "tone-debuff";
+  if (stacks === true) return "tone-stack";
+  if (stacks === false) return "tone-solo";
+  return null;
+}
+
+// 詞條整體的可否疊加：規則記在詞條上時直接取用；記在各級時，各級相同才採用，否則視為不一致 (不上色)。
+function effectStacks(effect) {
+  if (effect.stacking) return effect.stacking.stacks;
+  const [first, ...rest] = effect.tiers.map((tier) => tier.stacking.stacks);
+  return !isConflict(first) && rest.every((value) => value === first) ? first : null;
+}
+
+function tierStacks(effect, tier) {
+  return (tier.stacking ?? effect.stacking).stacks;
+}
+
+// 依色調包住文字；penalties 為說明中屬於負面代價的原文片段，以紅色標示，其餘文字維持詞條色調。
+function toned(data, effect, stacks, text, penalties = []) {
+  const tone = toneClass(data, effect, stacks);
+  const nodes = [];
+  let rest = text;
+  while (rest) {
+    // 同一位置優先採用較長的片段 (例如「智力 -10」優先於「智力 -1」)。
+    let hit = null;
+    for (const phrase of penalties) {
+      const at = rest.indexOf(phrase);
+      if (at >= 0 && (!hit || at < hit.at || (at === hit.at && phrase.length > hit.phrase.length))) hit = { at, phrase };
+    }
+    const plain = hit ? rest.slice(0, hit.at) : rest;
+    if (plain) nodes.push(tone ? el("span", { class: tone }, plain) : plain);
+    if (!hit) break;
+    nodes.push(el("span", { class: "tone-debuff" }, hit.phrase));
+    rest = rest.slice(hit.at + hit.phrase.length);
+  }
+  return nodes.length === 1 ? nodes[0] : el("span", {}, ...nodes);
 }
 
 // 圖示：null 表示沒有可用的遊戲內圖片，保留同尺寸空位；size 為該編排位置的尺寸 (styles.css 同步設定)。
@@ -161,7 +214,12 @@ function namedList(data, label, items) {
 function valueEntries(data, ids) {
   return ids.map((id) => {
     const effect = lookup(data.effects, id, "效果");
-    return el("span", { class: "entry" }, effectText(data, effect), el("span", { class: "sub" }, ruleText(data, effect)));
+    return el(
+      "span",
+      { class: "entry" },
+      toned(data, effect, effectStacks(effect), effectText(data, effect)),
+      el("span", { class: "sub" }, ...ruleNodes(data, effect))
+    );
   });
 }
 
@@ -180,12 +238,13 @@ function tierEntries(data, effect) {
   const { stat, unit, values } = tierDisplay(effect);
   const line = (picked) =>
     `${statName(data, stat)} ${picked.map((value) => (value === undefined ? "？" : formatAmount(data, unit, value))).join("／")}`;
-  const rules = el("span", { class: "sub" }, ruleText(data, effect));
+  const rules = el("span", { class: "sub" }, ...ruleNodes(data, effect));
+  const stacks = effectStacks(effect);
   const sourceSets = new Map();
   for (const value of values.filter(isConflict)) {
     for (const candidate of value.conflict) sourceSets.set(candidate.sources.join(" "), candidate.sources);
   }
-  if (sourceSets.size === 0) return [el("span", { class: "entry" }, line(values), rules)];
+  if (sourceSets.size === 0) return [el("span", { class: "entry" }, toned(data, effect, stacks, line(values)), rules)];
   const entries = [...sourceSets.entries()].map(([key, sources]) => {
     const picked = values.map((value) =>
       isConflict(value) ? value.conflict.find((candidate) => candidate.sources.join(" ") === key)?.value : value
@@ -193,7 +252,7 @@ function tierEntries(data, effect) {
     return el(
       "span",
       { class: "entry" },
-      line(picked),
+      toned(data, effect, stacks, line(picked)),
       el("span", { class: "sub" }, `${data.labels.conflict}：`, ...sourceLinks(data, sources))
     );
   });
@@ -249,9 +308,11 @@ function tierLabel(data, tierNumber) {
 
 // 社群詳細說明 (detail) 依效果或各等級列出；沒有 detail 的效果不輸出。
 function detailEntries(data, effect) {
-  const entries = effect.detail ? [el("span", { class: "entry" }, effect.detail.zh)] : [];
+  const entries = effect.detail ? [el("span", { class: "entry" }, toned(data, effect, effectStacks(effect), effect.detail.zh, effect.detail.penalties))] : [];
   for (const tier of effect.tiers ?? []) {
-    if (tier.detail) entries.push(el("span", { class: "entry" }, `${tierLabel(data, tier.tier)}：${tier.detail.zh}`));
+    if (!tier.detail) continue;
+    const text = `${tierLabel(data, tier.tier)}：${tier.detail.zh}`;
+    entries.push(el("span", { class: "entry" }, toned(data, effect, tierStacks(effect, tier), text, tier.detail.penalties)));
   }
   return entries;
 }
@@ -261,7 +322,7 @@ function effectEntries(data, key, effect) {
   let values;
   if (effect.modifier && effect.tiers) values = tierEntries(data, effect);
   else if (effect.modifier) values = valueEntries(data, [key]);
-  else values = [el("span", { class: "entry" }, el("span", { class: "sub" }, ruleText(data, effect)))];
+  else values = [el("span", { class: "entry" }, el("span", { class: "sub" }, ...ruleNodes(data, effect)))];
   const extras = [];
   // 限定角色與所在子分類的角色相同時 (角色專屬詞條) 不重複列出。
   const subCharacter = data.subcategories[effect.subcategory].character;
@@ -313,7 +374,10 @@ function render(data) {
   }
   for (const node of document.querySelectorAll("[data-tier-text]")) {
     const [id, tier] = node.dataset.tierText.split(":");
-    node.textContent = tierText(data, lookup(data.effects, id, "效果"), Number(tier));
+    const effect = lookup(data.effects, id, "效果");
+    node.textContent = tierText(data, effect, Number(tier));
+    const tone = toneClass(data, effect, tierStacks(effect, effect.tiers.find((t) => t.tier === Number(tier))));
+    if (tone) node.classList.add(tone);
   }
   for (const node of document.querySelectorAll("[data-example]")) {
     const effect = lookup(data.effects, node.dataset.effect, "效果");
@@ -321,6 +385,8 @@ function render(data) {
       node.dataset.example === "tier-sum"
         ? tierSumExample(data, effect, node.dataset.tierList.split(",").map(Number))
         : stackExample(data, effect, Number(node.dataset.count));
+    const tone = toneClass(data, effect, effectStacks(effect));
+    if (tone) node.classList.add(tone);
   }
   for (const node of document.querySelectorAll("[data-sources]")) {
     const ids = node.dataset.sources.split(" ").flatMap((id) => effectSources(lookup(data.effects, id, "效果")));

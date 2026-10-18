@@ -9,6 +9,9 @@
   --accent-soft: oklch(0.95 0.03 80);
   --code-bg: oklch(0.94 0.01 80);
   --row-alt: oklch(0.97 0.006 80);
+  --tone-solo: oklch(0.5 0.13 150);
+  --tone-stack: oklch(0.5 0.14 255);
+  --tone-debuff: oklch(0.52 0.18 25);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +26,9 @@
     --accent-soft: oklch(0.28 0.04 70);
     --code-bg: oklch(0.27 0.012 60);
     --row-alt: oklch(0.2 0.012 60);
+    --tone-solo: oklch(0.8 0.15 150);
+    --tone-stack: oklch(0.78 0.12 245);
+    --tone-debuff: oklch(0.72 0.16 25);
   }
 }
 
@@ -355,6 +361,19 @@ td.value .entry {
 
 td.value .entry + .entry {
   margin-top: 8px;
+}
+
+/* 數值色調：不可疊加的增益綠色、可疊加的增益藍色、必伴隨負面效果與負面效果紅色 */
+.tone-solo {
+  color: var(--tone-solo);
+}
+
+.tone-stack {
+  color: var(--tone-stack);
+}
+
+.tone-debuff {
+  color: var(--tone-debuff);
 }
 
 .load-error {

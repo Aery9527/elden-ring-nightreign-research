@@ -282,7 +282,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：集中力 +10、生命力 -5；等級 1：集中力 +1、生命力 -1（等級 1-12 間線性成長）。",
-        "en": "+10 mind, -5 vigor at level 12-15\n+1 mind, -1 vigor at level 1\n(scales linearly from level 1-12)"
+        "en": "+10 mind, -5 vigor at level 12-15\n+1 mind, -1 vigor at level 1\n(scales linearly from level 1-12)",
+        "penalties": [
+          "生命力 -5",
+          "生命力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -306,7 +310,13 @@
       ],
       "detail": {
         "zh": "等級 12-15：智力 +15、信仰 +15、力氣 -7、靈巧 -5；等級 1：智力 +1、信仰 +1、力氣 -1、靈巧 -1。",
-        "en": "+15 intellignce, +15 faith, -7 strength, - 5 dex at level 12-15\n+1 intelligence, +1 faith, -1 strength, -1 dexterity at level 1"
+        "en": "+15 intellignce, +15 faith, -7 strength, - 5 dex at level 12-15\n+1 intelligence, +1 faith, -1 strength, -1 dexterity at level 1",
+        "penalties": [
+          "力氣 -7",
+          "靈巧 -5",
+          "力氣 -1",
+          "靈巧 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -495,7 +505,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：力氣 +9、靈巧 +19、生命力 -8；等級 1：力氣 +1、靈巧 +2、生命力 -1。",
-        "en": "+9 strength, +19 dexterity, -8 vigor at level 12-15\n+1 strength, +2 dexterity, -1 vigor at level 1"
+        "en": "+9 strength, +19 dexterity, -8 vigor at level 12-15\n+1 strength, +2 dexterity, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -8",
+          "生命力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -519,7 +533,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：集中力 +8、信仰 +17、生命力 -6；等級 1：集中力 +1、信仰 +2、生命力 -1。",
-        "en": "+8 mind, +17 faith, -6 vigor at level 12-15\n+1 mind, +2 faith, -1 vigor at level 1"
+        "en": "+8 mind, +17 faith, -6 vigor at level 12-15\n+1 mind, +2 faith, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -6",
+          "生命力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -666,7 +684,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：生命力 +5、力氣 +20、靈巧 -13；等級 1：生命力 +1、力氣 +2、靈巧 -2。",
-        "en": "+5 vigor, +20 strength, -13 dexterity at level 12-15\n+1 vigor, +2 strength, -2 dexterity at level 1"
+        "en": "+5 vigor, +20 strength, -13 dexterity at level 12-15\n+1 vigor, +2 strength, -2 dexterity at level 1",
+        "penalties": [
+          "靈巧 -13",
+          "靈巧 -2"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -690,7 +712,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：感應 +15、靈巧 -9；等級 1：感應 +2、靈巧 -1。",
-        "en": "+15 arcane, -9 dexterity at level 12-15\n+2 arcane, -1 dexterity at level 1"
+        "en": "+15 arcane, -9 dexterity at level 12-15\n+2 arcane, -1 dexterity at level 1",
+        "penalties": [
+          "靈巧 -9",
+          "靈巧 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -834,7 +860,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：生命力 +3、力氣 +24、集中力 -14；等級 1：生命力 +1、力氣 +2、集中力 -2。",
-        "en": "+3 vigor, +24 strength, -14 mind at level 12-15\n+1 vigor, +2 strength, -2 mind at level 1"
+        "en": "+3 vigor, +24 strength, -14 mind at level 12-15\n+1 vigor, +2 strength, -2 mind at level 1",
+        "penalties": [
+          "集中力 -14",
+          "集中力 -2"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -858,7 +888,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：集中力 +3、信仰 +13、智力 -5；等級 1：集中力 +1、信仰 +2、智力 -1。",
-        "en": "+3 mind, +13 faith, -5 intelligence at level 12-15\n+1 mind, +2 faith, -1 intelligence at level 1"
+        "en": "+3 mind, +13 faith, -5 intelligence at level 12-15\n+1 mind, +2 faith, -1 intelligence at level 1",
+        "penalties": [
+          "智力 -5",
+          "智力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1002,7 +1036,13 @@
       ],
       "detail": {
         "zh": "等級 12-15：集中力 +9、智力 +35、生命力 -8、耐力 -4；等級 1：集中力 +1、智力 +2、生命力 -1、耐力 -1。",
-        "en": "+9 mind, +35 intelligence, -8 vigor, -4 endurance at level 12-15\n+1 mind, +2 intelligence, -1 vigor, -1 endurance at level 1"
+        "en": "+9 mind, +35 intelligence, -8 vigor, -4 endurance at level 12-15\n+1 mind, +2 intelligence, -1 vigor, -1 endurance at level 1",
+        "penalties": [
+          "生命力 -8",
+          "耐力 -4",
+          "生命力 -1",
+          "耐力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1026,7 +1066,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：感應 +17、生命力 -4；等級 1：感應 +2、生命力 -1。",
-        "en": "+17 arcane, -4 vigor at level 12-15\n+2 arcane, -1 vigor at level 1"
+        "en": "+17 arcane, -4 vigor at level 12-15\n+2 arcane, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -4",
+          "生命力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1131,7 +1175,10 @@
       ],
       "detail": {
         "zh": "絕活（Immortal March）改為對自身造成 [HP 上限 ×0.5] 傷害，並為目標我方人物恢復 [HP 上限 ×1] HP。",
-        "en": "Immortal March now deals [0.5x max HP] damage to self and heals targeted allies for [1x max HP] HP"
+        "en": "Immortal March now deals [0.5x max HP] damage to self and heals targeted allies for [1x max HP] HP",
+        "penalties": [
+          "對自身造成 [HP 上限 ×0.5] 傷害"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1209,6 +1256,10 @@
         "en": "+5 vigor, +5 endurance, -11 mind at level 12-15\n+1 vigor, +1 endurance, -1 mind at level 1",
         "sources": [
           "game-params"
+        ],
+        "penalties": [
+          "集中力 -11",
+          "集中力 -1"
         ]
       },
       "availability": "deep-relic",
@@ -1233,7 +1284,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：力氣 +25、信仰 -6；等級 1：力氣 +2、信仰 -1。",
-        "en": "+25 strength, -6 faith at level 12-15\n+2 strength, -1 fath at level 1"
+        "en": "+25 strength, -6 faith at level 12-15\n+2 strength, -1 fath at level 1",
+        "penalties": [
+          "信仰 -6",
+          "信仰 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1291,6 +1346,9 @@
         "en": "Upon Art activation, apply 9999 blood loss buildup to self, dealing [0.2x max HP] damage, then 1.16x all sources of damage for 30 seconds",
         "sources": [
           "game-params"
+        ],
+        "penalties": [
+          "對自己施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害"
         ]
       },
       "availability": "specific-relic",
@@ -1321,7 +1379,10 @@
       ],
       "detail": {
         "zh": "絕活（Soulblood Song）對自身施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害，並使自身所有來源的傷害 ×1.16，持續 30 秒。",
-        "en": "Soulblood Song applies 9999 blood loss to self, dealing [0.2x max HP] damage, and buffs self with 1.16x damage of all sources for 30 seconds"
+        "en": "Soulblood Song applies 9999 blood loss to self, dealing [0.2x max HP] damage, and buffs self with 1.16x damage of all sources for 30 seconds",
+        "penalties": [
+          "對自身施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1393,7 +1454,13 @@
       ],
       "detail": {
         "zh": "等級 12-15：生命力 +4、耐力 +5、靈巧 +20、智力 -10、信仰 -10；等級 1：生命力 +1、耐力 +1、靈巧 +2、智力 -1、信仰 -1。",
-        "en": "+4 vigor, +5 endurance, +20 dexterity, -10 intelligence, -10 faith at level 12-15\n+1 vigor, +1 endurance, +2 dexterity, -1 intelligence, -1 faith at level 1"
+        "en": "+4 vigor, +5 endurance, +20 dexterity, -10 intelligence, -10 faith at level 12-15\n+1 vigor, +1 endurance, +2 dexterity, -1 intelligence, -1 faith at level 1",
+        "penalties": [
+          "智力 -10",
+          "信仰 -10",
+          "智力 -1",
+          "信仰 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1417,7 +1484,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：智力 +12、信仰 +12、集中力 -13；等級 1：智力 +2、信仰 +2、集中力 -2。",
-        "en": "+12 intelligence, +12 faith, -13 mind at level 12-15\n+2 intelligence, +2 faith, -2 mind at level 1"
+        "en": "+12 intelligence, +12 faith, -13 mind at level 12-15\n+2 intelligence, +2 faith, -2 mind at level 1",
+        "penalties": [
+          "集中力 -13",
+          "集中力 -2"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1468,6 +1539,9 @@
         "en": "While Suncatcher is equipped, buff self with 1.35x damage of all sources for 6 seconds, and landing attacks with Suncatcher buffs self with 1.4x damage taken from all sources for 5 seconds",
         "sources": [
           "game-params"
+        ],
+        "penalties": [
+          "自身受到的所有來源傷害 ×1.4，持續 5 秒"
         ]
       },
       "availability": "standard-relic",
@@ -1543,7 +1617,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：生命力 +5、耐力 +6、感應 -13；等級 1：生命力 +1、耐力 +1、感應 -2。",
-        "en": "+5 vigor, +6 endurance, -13 arcane at level 12-15\n+1 vigor, +1 endurance, -2 arcane at level 1"
+        "en": "+5 vigor, +6 endurance, -13 arcane at level 12-15\n+1 vigor, +1 endurance, -2 arcane at level 1",
+        "penalties": [
+          "感應 -13",
+          "感應 -2"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1567,7 +1645,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：靈巧 +12、感應 +9、生命力 -7；等級 1：靈巧 +1、感應 +1、生命力 -1。",
-        "en": "+12 dexterity, +9 arcane, -7 vigor at level 12-15\n+1 dexterity, +1 arcane, -1 vigor at level 1"
+        "en": "+12 dexterity, +9 arcane, -7 vigor at level 12-15\n+1 dexterity, +1 arcane, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -7",
+          "生命力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1746,7 +1828,11 @@
       ],
       "detail": {
         "zh": "等級 12-15：集中力 +9、生命力 -3；等級 1：集中力 +1、生命力 -1。",
-        "en": "+9 mind, -3 vigor at level 12-15\n+1 mind, -1 vigor at level 1"
+        "en": "+9 mind, -3 vigor at level 12-15\n+1 mind, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -3",
+          "生命力 -1"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1770,7 +1856,13 @@
       ],
       "detail": {
         "zh": "等級 12-15：耐力 +6、靈巧 +40、智力 -4、感應 -20；等級 1：耐力 +1、靈巧 +6、智力 -1、感應 -5。",
-        "en": "+6 endurance, +40 dexterity, -4 intelligence, -20 arcane at level 12-15\n+1 endurance, +6 dexterity, -1 intelligence, -5 arcane at level 1"
+        "en": "+6 endurance, +40 dexterity, -4 intelligence, -20 arcane at level 12-15\n+1 endurance, +6 dexterity, -1 intelligence, -5 arcane at level 1",
+        "penalties": [
+          "智力 -4",
+          "感應 -20",
+          "智力 -1",
+          "感應 -5"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1923,7 +2015,13 @@
       ],
       "detail": {
         "zh": "等級 12-15：靈巧 +19、生命力 -5、信仰 -13；等級 1：靈巧 +2、生命力 -1、信仰 -2。",
-        "en": "+19 dexterity, -5 vigor, -13 faith at level 12-15\n+2 dexterity, -1 vigor, -2 faith at level 1"
+        "en": "+19 dexterity, -5 vigor, -13 faith at level 12-15\n+2 dexterity, -1 vigor, -2 faith at level 1",
+        "penalties": [
+          "生命力 -5",
+          "信仰 -13",
+          "生命力 -1",
+          "信仰 -2"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1950,6 +2048,10 @@
         "en": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 mind, +1 faith, -2 strength at level 1",
         "sources": [
           "game-params"
+        ],
+        "penalties": [
+          "力氣 -15",
+          "力氣 -2"
         ]
       },
       "availability": "deep-relic",

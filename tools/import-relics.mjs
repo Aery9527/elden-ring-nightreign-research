@@ -6,6 +6,7 @@
 //   tools/relic-details-zh.json 社群詳細說明的繁中翻譯 (以 gameId 對應，保留英文原文供比對)
 //   tools/relic-stacking.json   資料集未載明 (SelfStacking 未知) 而社群來源明確寫出的自身可否疊加 (以 gameId 對應)
 //   tools/relic-details-params.json 與遊戲參數不符的社群說明改依參數撰寫的中英文 (以 gameId 對應，保留社群原文與參數證據)
+//   tools/relic-penalties.json  增益詞條說明中屬於負面代價的繁中原文片段 (以 gameId 對應)，網站以紅色標示
 // 來源檔下載到 tools/.cache/，不提交版本庫。
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -29,6 +30,8 @@ const corrections = readKeyedJson(join(TOOLS, "relic-details-params.json"));
 const usedDetails = new Set();
 const usedCorrections = new Set();
 const stackingFills = readKeyedJson(join(TOOLS, "relic-stacking.json"));
+const penalties = readKeyedJson(join(TOOLS, "relic-penalties.json"));
+const usedPenalties = new Set();
 const common = readJson(join(ROOT, "public/data/common.json"));
 
 const problems = [];
@@ -271,6 +274,29 @@ function translate(gameId, en) {
   return { zh: entry.zh, en };
 }
 
+// 說明中的負面代價片段：每個片段必須出現在繁中說明裡；以數字結尾的片段不得緊接數字 (避免「智力 -1」只標到「智力 -10」的前半)。
+function markPenalties(gameId, detail) {
+  const phrases = penalties[gameId];
+  if (!phrases || typeof detail !== "object" || detail === null) return detail;
+  if (!Array.isArray(phrases) || phrases.length === 0 || phrases.some((p) => typeof p !== "string" || !p.trim())) {
+    return fail(`代價片段 ${gameId} 必須是非空字串的非空陣列`);
+  }
+  for (const phrase of phrases) {
+    const at = [];
+    for (let i = detail.zh.indexOf(phrase); i >= 0; i = detail.zh.indexOf(phrase, i + 1)) at.push(i);
+    if (at.length === 0) return fail(`代價片段 ${gameId} 不在說明中：${phrase}`);
+    // 同一位置已由較長的片段 (例如「智力 -10」) 完整涵蓋時不算部分對應。
+    const partial = (i) =>
+      /\d/.test(detail.zh[i + phrase.length] ?? "") &&
+      !phrases.some((other) => other.length > phrase.length && detail.zh.startsWith(other, i));
+    if (/\d$/.test(phrase) && at.some(partial)) {
+      return fail(`代價片段 ${gameId} 只對到較長數字的一部分：${phrase}`);
+    }
+  }
+  usedPenalties.add(gameId);
+  return { ...detail, penalties: phrases };
+}
+
 // 各級相同的欄位提到效果層級，不同的留在各級。
 function hoist(effect, tiers, field) {
   const values = tiers.map((tier) => JSON.stringify(tier[field]));
@@ -299,13 +325,13 @@ function toEffect(members) {
       availability: row.availability,
       requiresCurse: row.requiresCurse,
       stacking: stackingOf(row.stacks),
-      detail: translate(row.gameId, row.detailEn),
+      detail: markPenalties(row.gameId, translate(row.gameId, row.detailEn)),
     }));
     for (const field of ["availability", "requiresCurse", "stacking"]) hoist(effect, tiers, field);
     for (const tier of tiers) if (tier.detail === undefined) delete tier.detail;
     effect.tiers = tiers;
   } else {
-    const detail = translate(first.gameId, first.detailEn);
+    const detail = markPenalties(first.gameId, translate(first.gameId, first.detailEn));
     if (detail) effect.detail = detail;
     effect.availability = first.availability;
     effect.requiresCurse = first.requiresCurse;
@@ -409,6 +435,7 @@ for (const effect of effects) {
 for (const key of curatedByIds.values()) fail(`人工整理的效果 ${key} 沒有對應的遊戲效果`);
 for (const gameId of Object.keys(details)) if (!usedDetails.has(gameId)) fail(`翻譯 ${gameId} 沒有對應的效果`);
 for (const gameId of Object.keys(corrections)) if (!usedCorrections.has(gameId)) fail(`參數修正 ${gameId} 沒有對應的效果`);
+for (const gameId of Object.keys(penalties)) if (!usedPenalties.has(gameId)) fail(`代價片段 ${gameId} 沒有對應的說明`);
 // 效果內所有來源引用：sources、sourcesFor 各欄位、conflict 候選的 sources。
 function sourceRefs(value) {
   if (Array.isArray(value)) return value.flatMap(sourceRefs);
