@@ -1091,24 +1091,21 @@
         "en": "Defeating enemies fills more of the Art gauge"
       },
       "icon": "ultimate-art",
+      "stacking": {
+        "stacks": false
+      },
       "tiers": [
         {
           "tier": 0,
           "gameId": "7090000",
           "availability": "both-relics",
-          "requiresCurse": false,
-          "stacking": {
-            "stacks": null
-          }
+          "requiresCurse": false
         },
         {
           "tier": 1,
           "gameId": "6090000",
           "availability": "deep-relic",
           "requiresCurse": true,
-          "stacking": {
-            "stacks": false
-          },
           "detail": {
             "zh": "敵人死亡時，獲得 6.5 絕活量表累積量。",
             "en": "Upon the death of an enemy, gain 6.5 ultmate charge"
@@ -1117,7 +1114,14 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects",
+          "reliquary-json"
+        ]
+      }
     },
     "critical-hits-fill-more-of-the-art-gauge": {
       "subcategory": "skills-arts",
@@ -1289,7 +1293,8 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "tiers": [
         {
@@ -1299,7 +1304,13 @@
       ],
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-affinity-attack-power": {
       "subcategory": "attack-power",
@@ -1637,11 +1648,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "improved-skill-attack-power": {
       "subcategory": "attack-power",
@@ -1666,11 +1683,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "improved-initial-standard-attack": {
       "subcategory": "attack-power",
@@ -1762,7 +1785,7 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "tiers": [
         {
@@ -1772,7 +1795,13 @@
       ],
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-sorceries": {
       "subcategory": "attack-power",
@@ -1875,11 +1904,18 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-stance-breaking-when-two-handing": {
       "subcategory": "attack-power",
@@ -1892,11 +1928,18 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-stance-breaking-when-two-handing-7006001": {
       "subcategory": "attack-power",
@@ -1916,11 +1959,18 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-stance-breaking-when-wielding-two-armaments": {
       "subcategory": "attack-power",
@@ -1933,11 +1983,18 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-stance-breaking-when-wielding-two-armaments-7006101": {
       "subcategory": "attack-power",
@@ -1957,11 +2014,18 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "switching-weapons-boosts-attack-power": {
       "subcategory": "attack-power",
@@ -1981,11 +2045,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "switching-weapons-boosts-attack-power-7035900": {
       "subcategory": "attack-power",
@@ -2005,11 +2075,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "boosts-attack-power-of-added-affinity-attacks": {
       "subcategory": "attack-power",
@@ -2039,11 +2115,18 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "taking-attacks-improves-attack-power": {
       "subcategory": "attack-power",
@@ -2063,11 +2146,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "taking-attacks-improves-attack-power-100000": {
       "subcategory": "attack-power",
@@ -2087,11 +2176,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "taking-attacks-improves-attack-power-7032200": {
       "subcategory": "attack-power",
@@ -2417,23 +2512,20 @@
       },
       "icon": "item-up",
       "requiresCurse": false,
+      "stacking": {
+        "stacks": true,
+        "combine": null
+      },
       "tiers": [
         {
           "tier": 0,
           "gameId": "7043100",
-          "availability": "both-relics",
-          "stacking": {
-            "stacks": null
-          }
+          "availability": "both-relics"
         },
         {
           "tier": 1,
           "gameId": "6043100",
           "availability": "deep-relic",
-          "stacking": {
-            "stacks": true,
-            "combine": null
-          },
           "detail": {
             "zh": "調香術傷害 ×1.3。",
             "en": "1.3x damage of perfuming arts"
@@ -2442,7 +2534,14 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects",
+          "reliquary-json"
+        ]
+      }
     },
     "improved-physical-damage-negation": {
       "subcategory": "damage-negation",
@@ -2497,11 +2596,18 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-affinity-damage-negation": {
       "subcategory": "damage-negation",
@@ -2833,11 +2939,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "improved-poison-resistance": {
       "subcategory": "ailment-resistances",
@@ -3114,11 +3226,32 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": {
+          "conflict": [
+            {
+              "value": true,
+              "sources": [
+                "community-sheet"
+              ]
+            },
+            {
+              "value": false,
+              "sources": [
+                "fextralife-relic-effects"
+              ]
+            }
+          ]
+        }
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "slowly-restore-hp-for-self-and-nearby-allies-when-hp-is-low": {
       "subcategory": "restoration",
@@ -3152,11 +3285,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "hp-restoration-upon-thrusting-counterattack": {
       "subcategory": "restoration",
@@ -3165,24 +3304,21 @@
         "en": "HP Restoration upon Thrusting Counterattack"
       },
       "icon": "hp-up-blue",
+      "stacking": {
+        "stacks": false
+      },
       "tiers": [
         {
           "tier": 0,
           "gameId": "7160000",
           "availability": "both-relics",
-          "requiresCurse": false,
-          "stacking": {
-            "stacks": null
-          }
+          "requiresCurse": false
         },
         {
           "tier": 1,
           "gameId": "6160000",
           "availability": "deep-relic",
           "requiresCurse": true,
-          "stacking": {
-            "stacks": false
-          },
           "detail": {
             "zh": "使出突刺反擊（於敵人攻擊判定生效期間造成的傷害）時，恢復 [HP 上限 ×0.033] HP。",
             "en": "Upon performing a thrusting counterattack (damage dealt when an enemy has an active hitbox out), restore [0.033x max HP] HP"
@@ -3191,7 +3327,14 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects",
+          "reliquary-json"
+        ]
+      }
     },
     "partial-hp-restoration-upon-post-damage-attacks": {
       "subcategory": "restoration",
@@ -3367,11 +3510,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "fp-restoration-upon-successive-attacks": {
       "subcategory": "restoration",
@@ -3391,11 +3540,18 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "fp-restoration-upon-successive-attacks-7036000": {
       "subcategory": "restoration",
@@ -3415,11 +3571,18 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "madness-continually-recovers-fp": {
       "subcategory": "restoration",
@@ -3439,11 +3602,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "madness-continually-recovers-fp-7035510": {
       "subcategory": "restoration",
@@ -3463,11 +3631,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "stamina-recovery-upon-landing-attacks": {
       "subcategory": "restoration",
@@ -3480,11 +3653,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "stamina-recovery-upon-landing-attacks-7100110": {
       "subcategory": "restoration",
@@ -3508,7 +3687,7 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "tiers": [
         {
@@ -3518,7 +3697,13 @@
       ],
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "critical-hit-boosts-stamina-recovery-speed": {
       "subcategory": "restoration",
@@ -3594,11 +3779,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "attacks-inflict-rot-when-damage-is-taken": {
       "subcategory": "actions",
@@ -3666,11 +3857,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "gesture-crossed-legs-builds-up-madness-7035410": {
       "subcategory": "actions",
@@ -3690,11 +3886,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "occasionally-nullify-attacks-when-damage-negation-is-lowered": {
       "subcategory": "actions",
@@ -3714,11 +3915,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "attack-power-up-when-facing-poison-afflicted-enemy": {
       "subcategory": "actions",
@@ -3727,32 +3933,44 @@
         "en": "Attack power up when facing poison-afflicted enemy"
       },
       "icon": "attack-up",
-      "stacking": {
-        "stacks": null
-      },
       "tiers": [
         {
           "tier": 0,
           "gameId": "7260000",
           "availability": "both-relics",
-          "requiresCurse": false
+          "requiresCurse": false,
+          "stacking": {
+            "stacks": false
+          }
         },
         {
           "tier": 1,
           "gameId": "6260000",
           "availability": "deep-relic",
-          "requiresCurse": true
+          "requiresCurse": true,
+          "stacking": {
+            "stacks": null
+          }
         },
         {
           "tier": 2,
           "gameId": "6260001",
           "availability": "deep-relic",
-          "requiresCurse": true
+          "requiresCurse": true,
+          "stacking": {
+            "stacks": null
+          }
         }
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "attack-power-up-when-facing-scarlet-rot-afflicted-enemy": {
       "subcategory": "actions",
@@ -3761,32 +3979,44 @@
         "en": "Attack power up when facing scarlet rot-afflicted enemy"
       },
       "icon": "attack-up",
-      "stacking": {
-        "stacks": null
-      },
       "tiers": [
         {
           "tier": 0,
           "gameId": "7260300",
           "availability": "both-relics",
-          "requiresCurse": false
+          "requiresCurse": false,
+          "stacking": {
+            "stacks": false
+          }
         },
         {
           "tier": 1,
           "gameId": "6260300",
           "availability": "deep-relic",
-          "requiresCurse": true
+          "requiresCurse": true,
+          "stacking": {
+            "stacks": null
+          }
         },
         {
           "tier": 2,
           "gameId": "6260301",
           "availability": "deep-relic",
-          "requiresCurse": true
+          "requiresCurse": true,
+          "stacking": {
+            "stacks": null
+          }
         }
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "attack-power-up-when-facing-frostbite-afflicted-enemy": {
       "subcategory": "actions",
@@ -3852,11 +4082,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "frostbite-in-vicinity-conceals-self": {
       "subcategory": "actions",
@@ -3881,11 +4116,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "sleep-in-vicinity-improves-attack-power": {
       "subcategory": "actions",
@@ -4310,11 +4551,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-quickstep-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4337,11 +4583,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-storm-stomp-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4364,11 +4615,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-determination-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4391,11 +4647,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-glintblade-phalanx-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4415,11 +4676,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-gravitas-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4440,11 +4706,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-flaming-strike-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4466,11 +4737,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-eruption-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4487,11 +4763,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-thunderbolt-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4514,11 +4795,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-lightning-slash-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4539,11 +4825,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-sacred-blade-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4565,11 +4856,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-prayerful-strike-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4586,11 +4882,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-poisonous-mist-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4612,11 +4913,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-poison-moth-flight-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4634,11 +4940,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-blood-blade-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4656,11 +4967,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-seppuku-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4679,11 +4995,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-chilling-mist-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4705,11 +5026,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-hoarfrost-stomp-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4732,11 +5058,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-white-shadow-s-lure-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4759,11 +5090,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-rain-of-arrows-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",
@@ -4779,11 +5115,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "starting-armament-deals-magic-damage": {
       "subcategory": "starting-armament-imbue",
@@ -4807,11 +5148,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "starting-armament-deals-fire-damage": {
       "subcategory": "starting-armament-imbue",
@@ -4835,11 +5182,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "starting-armament-deals-lightning-damage": {
       "subcategory": "starting-armament-imbue",
@@ -4863,11 +5216,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "starting-armament-deals-holy-damage": {
       "subcategory": "starting-armament-imbue",
@@ -4891,11 +5250,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "starting-armament-inflicts-poison": {
       "subcategory": "starting-armament-imbue",
@@ -4919,11 +5284,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "starting-armament-inflicts-blood-loss": {
       "subcategory": "starting-armament-imbue",
@@ -4947,11 +5317,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "starting-armament-inflicts-frost": {
       "subcategory": "starting-armament-imbue",
@@ -4975,11 +5350,16 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "starlight-shards-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -4992,11 +5372,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "starlight-shards-in-possession-at-start-of-expedition-7126001": {
       "subcategory": "starting-item",
@@ -5016,11 +5402,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "starlight-shards-in-possession-at-start-of-expedition-7126002": {
       "subcategory": "starting-item",
@@ -5040,11 +5432,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "fire-pots-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5057,11 +5455,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "magic-pots-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5074,11 +5478,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "lightning-pots-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5091,11 +5501,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "holy-water-pots-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5108,11 +5524,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "poisonbone-darts-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5125,11 +5547,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "crystal-darts-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5142,11 +5570,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "throwing-daggers-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5159,11 +5593,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "glintstone-scraps-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5176,11 +5616,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "gravity-stone-chunks-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5193,11 +5639,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "bewitching-branches-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5210,11 +5662,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "spark-aromatic-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5227,11 +5685,17 @@
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "poison-spraymist-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5244,11 +5708,17 @@
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "ironjar-aromatic-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5261,11 +5731,17 @@
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "uplifting-aromatic-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5278,11 +5754,17 @@
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "acid-spraymist-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5295,11 +5777,17 @@
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "bloodboil-aromatic-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5312,11 +5800,17 @@
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "wraith-calling-bell-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5346,11 +5840,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "magic-grease-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5363,11 +5863,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "lightning-grease-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5380,11 +5886,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "holy-grease-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5397,11 +5909,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "shield-grease-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5414,11 +5932,17 @@
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "small-pouch-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5431,11 +5955,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "small-pouch-in-possession-at-start-of-expedition-7121001": {
       "subcategory": "starting-item",
@@ -5455,11 +5985,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "stonesword-key-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item",
@@ -5472,11 +6008,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "crimson-crystal-tear-in-possession-at-start-of-expedition": {
       "subcategory": "starting-item-tear",
@@ -5998,11 +6540,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "rune-discount-for-shop-purchases-while-on-expedition": {
       "subcategory": "environment",
@@ -6015,11 +6563,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "huge-rune-discount-for-shop-purchases-while-on-expedition": {
       "subcategory": "environment",
@@ -6039,11 +6593,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "increased-rune-acquisition-for-self-and-allies": {
       "subcategory": "team-members",
@@ -6056,11 +6615,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": true,
+        "combine": null
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "raised-stamina-recovery-for-nearby-allies-but-not-for-self": {
       "subcategory": "team-members",
@@ -6115,11 +6680,16 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "items-confer-effect-to-all-nearby-allies": {
       "subcategory": "team-members",

@@ -4,6 +4,7 @@
 //   tools/relics-config.json   來源 commit、分類樹、角色與圖示對應
 //   tools/relics-curated.json  人工整理的效果 (以 gameId 對應)，欄位覆寫產生值，差異會列出
 //   tools/relic-details-zh.json 社群詳細說明的繁中翻譯 (以 gameId 對應，保留英文原文供比對)
+//   tools/relic-stacking.json   資料集未載明 (SelfStacking 未知) 而社群來源明確寫出的自身可否疊加 (以 gameId 對應)
 //   tools/relic-details-params.json 與遊戲參數不符的社群說明改依參數撰寫的中英文 (以 gameId 對應，保留社群原文與參數證據)
 // 來源檔下載到 tools/.cache/，不提交版本庫。
 
@@ -27,6 +28,7 @@ const details = readKeyedJson(join(TOOLS, "relic-details-zh.json"));
 const corrections = readKeyedJson(join(TOOLS, "relic-details-params.json"));
 const usedDetails = new Set();
 const usedCorrections = new Set();
+const stackingFills = readKeyedJson(join(TOOLS, "relic-stacking.json"));
 const common = readJson(join(ROOT, "public/data/common.json"));
 
 const problems = [];
@@ -307,6 +309,11 @@ function toEffect(members) {
     effect.stacking = stackingOf(first.stacks);
   }
   effect.sources = first.sources;
+  // 有等級的疊加值來自社群補值時，該欄位來源列出社群來源，以及其餘等級原本給值的來源。
+  if (members.some((row) => row.stackSources)) {
+    const stackSources = members.flatMap((row) => row.stackSources ?? (row.stacks === null ? [] : row.sources));
+    effect.sourcesFor = { "stacking.stacks": [...new Set(stackSources)] };
+  }
   return effect;
 }
 
@@ -339,6 +346,37 @@ function merge(generated, manual, path, diffs) {
 // ---------- 主程式 ----------
 
 const rows = await buildEffects();
+// 社群補值只填資料集未知 (null) 的自身可否疊加；資料集已有值時停止，不以社群覆寫。
+// 來源限明確寫出疊加規則的社群來源；每個來源附一句引用原文。
+const STACKING_SOURCES = new Set(["community-sheet", "fextralife-relic-effects"]);
+function stackingFillProblem(fill) {
+  const { stacks, sources, quotes } = fill;
+  if (!Array.isArray(sources) || sources.length === 0) return "缺少 sources";
+  if (sources.some((id) => !STACKING_SOURCES.has(id))) return `來源只能是 ${[...STACKING_SOURCES].join("、")}`;
+  if (!Array.isArray(quotes) || quotes.length !== sources.length || quotes.some((q) => typeof q !== "string" || !q.trim())) {
+    return "quotes 必須為每個來源各一句引用原文";
+  }
+  if (typeof stacks === "boolean") return null;
+  const candidates = stacks?.conflict;
+  if (!Array.isArray(candidates) || candidates.length < 2) return "stacks 必須是布林值或至少兩個候選的 conflict";
+  for (const c of candidates) {
+    if (typeof c.value !== "boolean") return "conflict 候選值必須是布林值";
+    if (!Array.isArray(c.sources) || c.sources.length === 0 || c.sources.some((id) => !sources.includes(id))) return "conflict 候選的 sources 必須列在 sources 中";
+  }
+  if (new Set(candidates.map((c) => c.value)).size < 2) return "conflict 候選值必須不同";
+  return null;
+}
+for (const [gameId, fill] of Object.entries(stackingFills)) {
+  const row = rows.find((r) => r.gameId === gameId);
+  const problem = stackingFillProblem(fill);
+  if (!row) fail(`疊加補值 ${gameId} 沒有對應的效果`);
+  else if (row.stacks !== null) fail(`疊加補值 ${gameId} 的資料集已有值 ${row.stacks}`);
+  else if (problem) fail(`疊加補值 ${gameId} ${problem}`);
+  else {
+    row.stacks = fill.stacks;
+    row.stackSources = fill.sources;
+  }
+}
 const effects = groupTiers(rows).map(toEffect);
 
 const curatedByIds = new Map();

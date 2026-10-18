@@ -2974,11 +2974,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "dormant-power-helps-discover-small-shields": {
       "subcategory": "armament-small-shield",
@@ -3012,11 +3018,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "dormant-power-helps-discover-medium-shields": {
       "subcategory": "armament-medium-shield",
@@ -3050,11 +3062,17 @@
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "dormant-power-helps-discover-greatshields": {
       "subcategory": "armament-greatshield",

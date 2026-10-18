@@ -1,0 +1,1096 @@
+{
+  "10000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "FP Restoration upon Successive Attacks: Yes",
+      "FP Restoration upon Successive Attacks: Yes"
+    ]
+  },
+  "10001": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Taking attacks improves attack power: No",
+      "Taking Attacks Improves Attack Power: No"
+    ]
+  },
+  "10002": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Switching Weapons Boosts Attack Power: No",
+      "Switching Weapons Boosts Attack Power: No"
+    ]
+  },
+  "11000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "[Wylder] +1 additional character skill use: No",
+      "[Wylder] +1 Additional Character Skill Use: Does not stack."
+    ]
+  },
+  "11002": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "[Wylder] Art gauge is greatly filled when ability is activated: No",
+      "[Wylder] Art Gauge Greatly Filled when Ability is Activated: Does not stack."
+    ]
+  },
+  "12002": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "[Guardian] Slowly restores nearby allies HP while Art is active: No",
+      "[Guardian] Slowly Restores Nearby Allies' HP while Art is Active: Does not stack."
+    ]
+  },
+  "16002": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "[Revenant] Expend own HP to fully heal nearby allies when activating Art: No",
+      "[Revenant] Expend own HP to Fully Heal Nearby Allies: Does not stack."
+    ]
+  },
+  "17002": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "[Recluse] Suffer blood loss and increase attack power upon Art activation: No",
+      "[Recluse] Suffer Blood Loss and Increase Attack Power: Does not stack."
+    ]
+  },
+  "19001": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Scholar] Allies targeted by Character Skill gain boosted attack: No"
+    ]
+  },
+  "100000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Taking attacks improves attack power: No",
+      "Taking Attacks Improves Attack Power: No"
+    ]
+  },
+  "6624000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "6624100": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "6624200": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "6624300": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "6624400": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "6624500": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7001100": {
+    "stacks": {
+      "conflict": [
+        {
+          "value": true,
+          "sources": [
+            "community-sheet"
+          ]
+        },
+        {
+          "value": false,
+          "sources": [
+            "fextralife-relic-effects"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Continuous HP recovery: Yes",
+      "Continuous HP Recovery: No"
+    ]
+  },
+  "7001409": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Physical Attack Up +0/1/2: Yes",
+      "Physical Attack Up / Physical Attack Up +1 / Physical Attack Up +2 / Physical Attack Up +4: Yes"
+    ],
+    "note": "Grand Tranquil Scene variant of +2 (1.06x); matched to the +2 tier rows"
+  },
+  "7006000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved stance breaking when two handing: Yes",
+      "Improved Stance-Breaking when Two-Handing: Yes"
+    ]
+  },
+  "7006001": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved stance breaking when two handing: Yes",
+      "Improved Stance-Breaking when Two-Handing: Yes"
+    ],
+    "note": "Grand Tranquil Scene variant; same 1.05x effect as the base row (not the +1/+2 depth rows)"
+  },
+  "7006100": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved stance breaking while wielding two armaments: Yes",
+      "Improved Stance-Breaking when Wielding Two Armaments: Yes"
+    ]
+  },
+  "7006101": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved stance breaking while wielding two armaments: Yes",
+      "Improved Stance-Breaking when Wielding Two Armaments: Yes"
+    ],
+    "note": "Grand Burning Scene variant; same 1.05x effect as the base row (not the +1/+2 depth rows)"
+  },
+  "7006200": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved Physical Damage Negation: Yes",
+      "Improved Physical Damage Negation: Yes"
+    ]
+  },
+  "7006500": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Continuous FP Recovery: Yes"
+    ]
+  },
+  "7006600": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Improved Melee Attack Power: Yes"
+    ]
+  },
+  "7006700": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Improved Skill Attack Power: Yes"
+    ]
+  },
+  "7035400": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Gesture \"Crossed Legs\" Builds Up Madness: No"
+    ]
+  },
+  "7035410": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Gesture \"Crossed Legs\" Builds Up Madness: No"
+    ]
+  },
+  "7035500": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Madness Continually Recovers FP: No"
+    ]
+  },
+  "7035510": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Madness Continually Recovers FP: No"
+    ]
+  },
+  "7035700": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Switching Weapons Adds an Affinity Attack: No",
+      "Switching Weapons Adds an Affinity Attack: No"
+    ]
+  },
+  "7035800": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Boosts Attack Power of Added Affinity Attacks: Yes",
+      "Boosts Attack Power of Added Affinity Attacks: Yes"
+    ]
+  },
+  "7035900": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Switching Weapons Boosts Attack Power: No",
+      "Switching Weapons Boosts Attack Power: No"
+    ]
+  },
+  "7036000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "FP Restoration upon Successive Attacks: Yes",
+      "FP Restoration upon Successive Attacks: Yes"
+    ]
+  },
+  "7036100": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "HP Recovery From Successful Guarding: No",
+      "HP Recovery From Successful Guarding: No"
+    ]
+  },
+  "7037800": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Occasionally Nullify Attacks When Damage Negation is Lowered: No"
+    ]
+  },
+  "7040201": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved Critical Hits +0/1: See Notes (+1 can not stack with itself)",
+      "Improved Critical Hits +1: No"
+    ],
+    "note": "+1 does not stack with itself; +1 stacks with +0 (sheet note)"
+  },
+  "7043000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improves Roar and Breath attacks: Yes",
+      "Improved Roar & Breath Attacks: Yes"
+    ]
+  },
+  "7043100": {
+    "stacks": true,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved Throwing Pot/Knife/Stone/Perfuming Arts Damage: Yes",
+      "Improved Perfuming Arts / Improved Throwing Knife Damage / Improved Throwing Pot Damage / Improved Throwing Stone Damage: Yes"
+    ]
+  },
+  "7070000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Treasure marked upon map: No",
+      "Treasure Marked upon Map: Does not stack."
+    ]
+  },
+  "7082700": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Max HP Up with 3+ Small/Medium/Greatshields Equipped: No",
+      "Max HP Up with 3+ Greatshields/Medium Shields/Small Shields Equipped: Does not stack."
+    ]
+  },
+  "7082800": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Max HP Up with 3+ Small/Medium/Greatshields Equipped: No",
+      "Max HP Up with 3+ Greatshields/Medium Shields/Small Shields Equipped: Does not stack."
+    ]
+  },
+  "7082900": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Max HP Up with 3+ Small/Medium/Greatshields Equipped: No",
+      "Max HP Up with 3+ Greatshields/Medium Shields/Small Shields Equipped: Does not stack."
+    ]
+  },
+  "7090000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Defeating enemies fills more of the Art gauge: No",
+      "Defeating Enemies Fills More of the Art gauge: No"
+    ]
+  },
+  "7090100": {
+    "stacks": false,
+    "sources": [
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Defeating Enemies Restores HP for Allies but not for Self: No"
+    ]
+  },
+  "7100100": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Stamina Recovery upon Landing Attacks +0/+1: No",
+      "Stamina Recovers with Each Successful Attack: Does not stack with other copies of itself"
+    ],
+    "note": "Same version does not stack; +0 stacks with +1 (sheet note)"
+  },
+  "7100110": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Stamina Recovery upon Landing Attacks +0/+1: No",
+      "Stamina Recovers with Each Successful Attack +1: Does not stack with other copies of itself"
+    ],
+    "note": "Same version does not stack; +1 stacks with +0 (sheet note)"
+  },
+  "7110000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Increase rune acquisition for self and allies: Yes"
+    ]
+  },
+  "7120000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Starting Weapon deals [element] Damage: No",
+      "Starting Armament deals Magic Damage: No"
+    ],
+    "note": "sheet row covers all affinities; Fextralife row is per affinity"
+  },
+  "7120100": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Starting Weapon deals [element] Damage: No",
+      "Starting Armament deals Fire Damage: No"
+    ],
+    "note": "sheet row covers all affinities; Fextralife row is per affinity"
+  },
+  "7120200": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Starting Weapon deals [element] Damage: No",
+      "Starting Armament deals Lightning Damage: No"
+    ],
+    "note": "sheet row covers all affinities; Fextralife row is per affinity"
+  },
+  "7120300": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Starting Weapon deals [element] Damage: No",
+      "Starting Armament deals Holy Damage: No"
+    ],
+    "note": "sheet row covers all affinities; Fextralife row is per affinity"
+  },
+  "7120400": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Stating armament inflicts \"x\" status: No"
+    ],
+    "note": "family row covers poison/blood loss/frost"
+  },
+  "7120500": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Stating armament inflicts \"x\" status: No"
+    ],
+    "note": "family row covers poison/blood loss/frost"
+  },
+  "7120600": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Stating armament inflicts \"x\" status: No"
+    ],
+    "note": "family row covers poison/blood loss/frost"
+  },
+  "7120900": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Stonesword in possession at start of expedition: No",
+      "Stonesword Key in Possession at Start of Expedition: Does not stack."
+    ]
+  },
+  "7121000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Small pouch in possession at start of expedition: Yes"
+    ]
+  },
+  "7121001": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Small pouch in possession at start of expedition: Yes"
+    ]
+  },
+  "7121100": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121200": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121300": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121400": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121500": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121600": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121700": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121800": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7121900": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7122000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7122200": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7122300": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7122400": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7122500": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7122600": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7122700": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7122800": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7122900": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123100": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123200": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123300": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123400": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123500": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123600": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123700": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123800": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7123900": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7124000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7124100": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7124300": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7124400": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7124500": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7124600": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7124700": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Change compatible armament skill to [xxx] at start of expedition: No"
+    ],
+    "note": "family row covers all armament-skill changes"
+  },
+  "7126000": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7126001": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7126002": {
+    "stacks": true,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "[Consumable] in possession at start of expedition: Yes"
+    ],
+    "note": "generic [Consumable] family row applied by meaning"
+  },
+  "7160000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "HP Restoration upon Thrusting Counterattack: No",
+      "HP Restoration upon Thrusting Counterattack: No"
+    ]
+  },
+  "7230000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "(Huge) Rune discount for shop purchases while on expedition: No",
+      "Rune Discount for Shop Purchases: Does not stack with other copies of itself."
+    ],
+    "note": "Same version does not stack with itself; normal and Huge versions stack together (sheet note)"
+  },
+  "7230001": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "(Huge) Rune discount for shop purchases while on expedition: No"
+    ],
+    "note": "Same version does not stack with itself; normal and Huge versions stack together (sheet note)"
+  },
+  "7240000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Improved Poise & Damage Negation When Knocked Back by Damage: No",
+      "Improved Poise and Damage Negation when Knocked Back by Damage: No"
+    ]
+  },
+  "7260000": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Attack power up when facing frostbite/poison/rot afflicted enemy: No",
+      "Attack Power Up when Facing Poison-afflicted Enemy: No"
+    ]
+  },
+  "7260300": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Attack power up when facing frostbite/poison/rot afflicted enemy: No",
+      "Attack Power Up when Facing Scarlet Rot-afflicted Enemy: No"
+    ]
+  },
+  "7260700": {
+    "stacks": false,
+    "sources": [
+      "community-sheet",
+      "fextralife-relic-effects"
+    ],
+    "quotes": [
+      "Frostbite in Vicinity Conceals Self: No",
+      "Nearby Frostbite Conceals Self: No"
+    ]
+  },
+  "7260800": {
+    "stacks": false,
+    "sources": [
+      "community-sheet"
+    ],
+    "quotes": [
+      "Poison & Rot in Vicinity Increases Attack Power: No"
+    ]
+  }
+}

@@ -121,11 +121,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "wylder-art-gauge-greatly-filled-when-ability-is-activated-7032400": {
       "subcategory": "character-wylder",
@@ -196,11 +202,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "wylder-1-additional-character-skill-use-7033200": {
       "subcategory": "character-wylder",
@@ -399,11 +411,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "guardian-slowly-restores-nearby-allies-hp-while-art-is-active-7012000": {
       "subcategory": "character-guardian",
@@ -1081,11 +1099,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "revenant-expend-own-hp-to-fully-heal-nearby-allies-when-activating-art-7010900": {
       "subcategory": "character-revenant",
@@ -1258,11 +1282,17 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
     },
     "recluse-suffer-blood-loss-and-increase-attack-power-upon-art-activation-7032900": {
       "subcategory": "character-recluse",
@@ -1606,11 +1636,16 @@
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
-        "stacks": null
+        "stacks": false
       },
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
     },
     "scholar-allies-targeted-by-character-skill-gain-boosted-attack-7036300": {
       "subcategory": "character-scholar",
