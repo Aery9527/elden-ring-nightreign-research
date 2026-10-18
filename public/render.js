@@ -285,8 +285,7 @@ function relicRows(data, subcategoryId) {
         "tr",
         { id: `effect-${key}` },
         el("td", { class: "item" }, itemName(data, "effect", key)),
-        el("td", { class: "value" }, ...effectEntries(data, key, effect)),
-        el("td", { class: "source" }, ...sourceLinks(data, effectSources(effect)))
+        el("td", { class: "value" }, ...effectEntries(data, key, effect))
       )
     );
   if (rows.length === 0) throw new Error(`子分類沒有效果：${subcategoryId}`);
@@ -326,10 +325,10 @@ function render(data) {
   for (const node of document.querySelectorAll("[data-character]")) {
     node.textContent = characterValue(data, node.dataset.character);
   }
-  // 圖片來源：列出本頁已顯示圖示的 wiki 檔案頁，須在所有圖示產生之後執行。
+  // 圖片來源：列出全站圖示的 wiki 檔案頁，同一檔案頁只列一次。
   for (const node of document.querySelectorAll("[data-icon-sources]")) {
-    const used = new Set([...document.querySelectorAll("main img.icon")].map((img) => img.getAttribute("src")));
-    const icons = Object.values(data.icons).filter((icon) => used.has(icon.src) && icon.page);
+    const pages = new Set();
+    const icons = Object.values(data.icons).filter((icon) => icon.page && !pages.has(icon.page) && pages.add(icon.page));
     const links = icons.map((icon) => el("a", { href: icon.page, target: "_blank", rel: "noopener noreferrer" }, icon.alt));
     node.replaceChildren(...links.flatMap((link, index) => (index > 0 ? ["、", link] : [link])));
   }

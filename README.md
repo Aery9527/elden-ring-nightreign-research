@@ -8,7 +8,7 @@
 
 | 檔案 | 內容 |
 | --- | --- |
-| [public/index.html](public/index.html) | 研究索引，依主題分組。 |
+| [public/index.html](public/index.html) | 研究索引，依主題分組，並集中列出全站資料來源。 |
 | [public/attributes.html](public/attributes.html) | 遊戲屬性：能力值與 HP、FP、精力上限的主要用途及查證限制。 |
 | [public/relics-general.html](public/relics-general.html) | 遺物詞條：遊戲內篩選「一般」大類。 |
 | [public/relics-character.html](public/relics-character.html) | 遺物詞條：遊戲內篩選「角色專屬」大類。 |

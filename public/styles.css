@@ -322,11 +322,6 @@ td.value {
   white-space: normal;
 }
 
-td.source {
-  min-width: 8em;
-  font-size: 0.85rem;
-}
-
 /* 沒有可用遊戲內圖片時保留與圖片相同的空位 */
 .icon-missing {
   display: inline-block;

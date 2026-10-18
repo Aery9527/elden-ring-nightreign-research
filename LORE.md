@@ -15,6 +15,7 @@
   - When adding a topic page, also add a row to its topic group's table in the research index of [public/index.html](public/index.html); a new topic gets its own group heading.
   - When a page is renamed or merged into another page, add a 301 redirect from the old path in [netlify.toml](netlify.toml) and keep the old heading ids so old anchors still work.
   - Every page loads [public/nav.js](public/nav.js) and uses the same sticky `<header class="site-header">` markup as the existing pages; the script fills the header breadcrumb with the site home, the page `h1` (omitted on the home page, where the home link already names the page), and the `h2` and `h3` the reader is currently in, each linking to the top of that level. Only `h2` and `h3` headings with an `id` appear in the breadcrumb, so every section heading MUST have an `id`.
+  - Every source the site cites is listed once in the "資料來源" group (`#sources`) of the research index in [public/index.html](public/index.html); topic pages MUST NOT have their own sources section, and relic tables MUST NOT have a source column. When a page starts citing a new source, add or update its row in that table. Inline citation links in body text and the source names shown for conflicting candidates stay on the pages.
 
 ## Game Data Rules
 
@@ -36,7 +37,7 @@
 - Relic effects follow the in-game relic filter tree: every effect has a `subcategory`, and each category and subcategory keeps its in-game param `gameId`. A category Chinese name not taken from game text is a site translation, and pages MUST say so.
 - Every effect has `name` (`zh` and `en`) and `icon`. `icon: null` means no in-game image that meets the image rules exists; it MUST NOT be replaced with a different image.
 - Effect rows of a relic table are rendered from data with `<tbody data-relic-table="<subcategory>">`; effect rows MUST NOT be hand-written in HTML.
-- `detail` holds the community detail text of an effect or tier: `en` is the source text verbatim and `zh` its translation. A detail whose number, item, or location contradicts the pinned game params is instead rewritten from the params in both languages and carries its own `sources`, which the source column lists. An effect the dataset gives no detail gets one written from the params only when an explicit reference chain from its AttachEffectParam row gives the numbers and the detail tells the reader more than the name; otherwise it has no detail.
+- `detail` holds the community detail text of an effect or tier: `en` is the source text verbatim and `zh` its translation. A detail whose number, item, or location contradicts the pinned game params is instead rewritten from the params in both languages and carries its own `sources`. An effect the dataset gives no detail gets one written from the params only when an explicit reference chain from its AttachEffectParam row gives the numbers and the detail tells the reader more than the name; otherwise it has no detail.
 
 ## Relic Data Generation
 
@@ -59,8 +60,8 @@
 - Follow responsive web design (RWD) principles and support phones, tablets, desktops, and other devices.
 - When mentioning an in-game item, agents MUST find the corresponding in-game image. The image source is [Eldenpedia](https://eldenring.wiki.gg/).
   - Use only images whose file page marks the license as a game asset (`{{License|game}}`); community edits (for example, filenames containing `Custom`) do not count as in-game images.
-  - Download images to `public/images/`, and list the wiki file pages in the page's sources. An image larger than 96px may be downscaled to 96px; no other edits are allowed.
-  - Each icon in [public/data/common.json](public/data/common.json) records its wiki file page in `page`; a page lists the file pages of the icons it shows with `<span data-icon-sources>`.
+  - Download images to `public/images/`; the home page sources list their wiki file pages. An image larger than 96px may be downscaled to 96px; no other edits are allowed.
+  - Each icon in [public/data/common.json](public/data/common.json) records its wiki file page in `page`; the home page lists the file pages of every icon on the site with `<span data-icon-sources>`.
   - Images in the same layout position MUST keep the same size. Every image uses the `.icon` class, and its size is set only in `public/styles.css` by position, never adjusted on an individual image:
     - Inside a table: 48px (`td .icon`).
     - In a name list inside a table entry: 24px (`td .entry .icon`).

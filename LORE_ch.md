@@ -15,6 +15,7 @@
   - 新增主題頁面時，同時在 [public/index.html](public/index.html) 研究索引中該主題分組的表格新增一列；新主題另立分組標題。
   - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址，並保留原標題 id，讓舊錨點仍可使用。
   - 每個頁面載入 [public/nav.js](public/nav.js)，並使用與現有頁面相同的固定頁首 `<header class="site-header">` 標記；腳本在頁首填入階層：網站首頁、本頁 `h1` (首頁本身省略，因首頁連結已代表該頁)，以及讀者目前所在的 `h2` 與 `h3`，每層連到該層開頭。只有帶 `id` 的 `h2` 與 `h3` 會出現在階層中，因此每個章節標題必須有 `id`。
+  - 全站引用的來源只在 [public/index.html](public/index.html) 研究索引的「資料來源」分組 (`#sources`) 列出一次；嚴禁在主題頁另設資料來源章，詞條表嚴禁加入來源欄。頁面開始引用新來源時，在該表新增或更新對應的列。內文中的引用連結與來源分歧候選值標示的來源名稱留在頁面上。
 
 ## 遊戲資料守則
 
@@ -36,7 +37,7 @@
 - 遺物效果依遊戲內遺物篩選的分類樹歸類：每個效果都有 `subcategory`，每個大類與子分類保留遊戲參數 `gameId`。不是取自遊戲文字的分類中文名稱為本站暫譯，頁面必須註明。
 - 每個效果都有 `name` (`zh` 與 `en`) 與 `icon`。`icon: null` 表示沒有符合圖片守則的遊戲內圖片，嚴禁改用其他圖片替代。
 - 遺物詞條表的效果列以 `<tbody data-relic-table="<subcategory>">` 由資料產生；嚴禁在 HTML 手寫效果列。
-- `detail` 記錄效果或等級的社群詳細說明：`en` 是來源原文，`zh` 是譯文。數字、物品或地點與鎖定版本遊戲參數矛盾的說明，改依參數撰寫中英文，並帶有自己的 `sources`，由來源欄列出。資料集沒有說明的效果，只有在 AttachEffectParam 列能以明確的引用關係給出數值，且說明提供名稱以外的資訊時，才依參數撰寫說明；否則不寫說明。
+- `detail` 記錄效果或等級的社群詳細說明：`en` 是來源原文，`zh` 是譯文。數字、物品或地點與鎖定版本遊戲參數矛盾的說明，改依參數撰寫中英文，並帶有自己的 `sources`。資料集沒有說明的效果，只有在 AttachEffectParam 列能以明確的引用關係給出數值，且說明提供名稱以外的資訊時，才依參數撰寫說明；否則不寫說明。
 
 ## 遺物資料產生
 
@@ -59,8 +60,8 @@
 - RWD 原則，支援手機、平板、桌機等多種裝置
 - 提及遊戲內項目時，必須找到該遊戲內對應的圖片，圖片來源為 [Eldenpedia](https://eldenring.wiki.gg/)
   - 只採用檔案頁授權標示為遊戲素材 (`{{License|game}}`) 的圖片；社群編修圖 (例如檔名含 `Custom`) 不算遊戲內圖片。
-  - 圖片下載至 `public/images/`，並在頁面的資料來源列出 wiki 檔案頁。大於 96px 的圖片可縮小為 96px，嚴禁其他修改。
-  - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；頁面以 `<span data-icon-sources>` 列出本頁顯示圖示的檔案頁。
+  - 圖片下載至 `public/images/`，由首頁的資料來源列出 wiki 檔案頁。大於 96px 的圖片可縮小為 96px，嚴禁其他修改。
+  - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；首頁以 `<span data-icon-sources>` 列出全站圖示的檔案頁。
   - 同一種編排位置的圖片維持相同大小；圖片一律使用 `.icon` class，尺寸只在 `public/styles.css` 依位置設定，不在個別圖片上另外調整：
     - 表格內：48px (`td .icon`)。
     - 表格內效果說明的名稱清單：24px (`td .entry .icon`)。
