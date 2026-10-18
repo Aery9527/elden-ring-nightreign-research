@@ -234,7 +234,8 @@ function tierDisplay(effect) {
 }
 
 // 有來源分歧時，依候選值的來源組合各列一行，不預設採用任何一組；某級沒有該組來源的候選值時顯示「？」。
-function tierEntries(data, effect) {
+// hasDetail 為真時，沒有分歧就只列規則，數值由說明呈現。
+function tierEntries(data, effect, hasDetail) {
   const { stat, unit, values } = tierDisplay(effect);
   const line = (picked) =>
     `${statName(data, stat)} ${picked.map((value) => (value === undefined ? "？" : formatAmount(data, unit, value))).join("／")}`;
@@ -244,7 +245,9 @@ function tierEntries(data, effect) {
   for (const value of values.filter(isConflict)) {
     for (const candidate of value.conflict) sourceSets.set(candidate.sources.join(" "), candidate.sources);
   }
-  if (sourceSets.size === 0) return [el("span", { class: "entry" }, toned(data, effect, stacks, line(values)), rules)];
+  if (sourceSets.size === 0) {
+    return [el("span", { class: "entry" }, ...(hasDetail ? [] : [toned(data, effect, stacks, line(values))]), rules)];
+  }
   const entries = [...sourceSets.entries()].map(([key, sources]) => {
     const picked = values.map((value) =>
       isConflict(value) ? value.conflict.find((candidate) => candidate.sources.join(" ") === key)?.value : value
@@ -317,11 +320,14 @@ function detailEntries(data, effect) {
   return entries;
 }
 
-// 詞條表的效果欄：有結構化數值 (modifier) 時列出數值與規則，否則只列規則；社群詳細說明放在最前面。
+// 詞條表的效果欄：社群詳細說明放在最前面，接著列規則。結構化數值 (modifier) 只在沒有說明時列出，
+// 因為說明已含相同數字；來源分歧的候選值仍列出，說明不含這些資訊。
 function effectEntries(data, key, effect) {
+  const details = detailEntries(data, effect);
+  const hasDetail = details.length > 0;
   let values;
-  if (effect.modifier && effect.tiers) values = tierEntries(data, effect);
-  else if (effect.modifier) values = valueEntries(data, [key]);
+  if (effect.modifier && effect.tiers) values = tierEntries(data, effect, hasDetail);
+  else if (effect.modifier && !hasDetail) values = valueEntries(data, [key]);
   else values = [el("span", { class: "entry" }, el("span", { class: "sub" }, ...ruleNodes(data, effect)))];
   const extras = [];
   // 限定角色與所在子分類的角色相同時 (角色專屬詞條) 不重複列出。
@@ -330,7 +336,7 @@ function effectEntries(data, key, effect) {
     const characters = effect.characters.map((id) => lookup(data.characters, id, "角色"));
     extras.push(namedList(data, data.labels.characters, characters.map((c) => ({ icon: c.icon, name: c.name.zh }))));
   }
-  return [...detailEntries(data, effect), ...values, ...extras];
+  return [...details, ...values, ...extras];
 }
 
 // 固定遺物欄：每個固定遺物一行，附遺物圖示；隨機詞條顯示「—」。
