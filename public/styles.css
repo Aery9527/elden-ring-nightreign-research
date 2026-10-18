@@ -376,6 +376,28 @@ td.value .entry + .entry {
   color: var(--tone-debuff);
 }
 
+/* 遺物頁的顏色圖例固定在視窗底部；main 加大底部留白，避免最後一行被遮住 */
+.tone-legend {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  z-index: 10;
+  display: flex;
+  gap: 16px;
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.15);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+body:has(.tone-legend) main {
+  padding-bottom: 112px;
+}
+
 .load-error {
   padding: 12px 16px;
   border: 1px solid var(--accent);
