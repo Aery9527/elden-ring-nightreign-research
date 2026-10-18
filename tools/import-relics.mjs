@@ -4,6 +4,7 @@
 //   tools/relics-config.json   來源 commit、分類樹、角色與圖示對應
 //   tools/relics-curated.json  人工整理的效果 (以 gameId 對應)，欄位覆寫產生值，差異會列出
 //   tools/relic-details-zh.json 社群詳細說明的繁中翻譯 (以 gameId 對應，保留英文原文供比對)
+//   tools/relic-details-params.json 與遊戲參數不符的社群說明改依參數撰寫的中英文 (以 gameId 對應，保留社群原文與參數證據)
 // 來源檔下載到 tools/.cache/，不提交版本庫。
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -15,7 +16,17 @@ const TOOLS = join(ROOT, "tools");
 const readJson = (path) => JSON.parse(readFileSync(path, "utf8"));
 const config = readJson(join(TOOLS, "relics-config.json"));
 const curated = readJson(join(TOOLS, "relics-curated.json")).effects;
-const details = readJson(join(TOOLS, "relic-details-zh.json"));
+// 以 gameId 為鍵的輸入檔：JSON.parse 會讓重複鍵靜默覆蓋，因此要求檔案等於標準格式 (2 空格縮排) 的輸出；有重複鍵時兩者必不相同。
+function readKeyedJson(path) {
+  const text = readFileSync(path, "utf8").replace(/\r\n/g, "\n");
+  const data = JSON.parse(text);
+  if (text !== `${JSON.stringify(data, null, 2)}\n`) throw new Error(`${path} 有重複的鍵或不是標準格式 (JSON.stringify 2 空格縮排)`);
+  return data;
+}
+const details = readKeyedJson(join(TOOLS, "relic-details-zh.json"));
+const corrections = readKeyedJson(join(TOOLS, "relic-details-params.json"));
+const usedDetails = new Set();
+const usedCorrections = new Set();
 const common = readJson(join(ROOT, "public/data/common.json"));
 
 const problems = [];
@@ -235,12 +246,23 @@ function groupTiers(rows) {
   return result;
 }
 
+// 社群說明 → 網站說明：與遊戲參數不符者改用依參數撰寫的文字並標示來源，其餘用翻譯。
 function translate(gameId, en) {
   if (en === null) return undefined;
+  const correction = corrections[gameId];
+  if (correction) {
+    if (details[gameId]) return fail(`效果 ${gameId} 同時有翻譯與參數修正，只能保留一種`);
+    if (correction.source !== en) return fail(`效果 ${gameId} 的社群原文已變動，需重新核對參數修正`);
+    for (const field of ["en", "zh", "params"]) {
+      if (typeof correction[field] !== "string" || !correction[field].trim()) return fail(`參數修正 ${gameId} 缺少 ${field}`);
+    }
+    usedCorrections.add(gameId);
+    return { zh: correction.zh, en: correction.en, sources: correction.sources ?? ["game-params"] };
+  }
   const entry = details[gameId];
   if (!entry) return fail(`效果 ${gameId} 缺少繁中翻譯`);
   if (entry.en !== en) return fail(`效果 ${gameId} 的英文原文已變動，需重新翻譯`);
-  entry.used = true;
+  usedDetails.add(gameId);
   return { zh: entry.zh, en };
 }
 
@@ -344,7 +366,8 @@ for (const effect of effects) {
   keyed.push([key, result]);
 }
 for (const key of curatedByIds.values()) fail(`人工整理的效果 ${key} 沒有對應的遊戲效果`);
-for (const [gameId, entry] of Object.entries(details)) if (!entry.used) fail(`翻譯 ${gameId} 沒有對應的效果`);
+for (const gameId of Object.keys(details)) if (!usedDetails.has(gameId)) fail(`翻譯 ${gameId} 沒有對應的效果`);
+for (const gameId of Object.keys(corrections)) if (!usedCorrections.has(gameId)) fail(`參數修正 ${gameId} 沒有對應的社群說明`);
 // 效果內所有來源引用：sources、sourcesFor 各欄位、conflict 候選的 sources。
 function sourceRefs(value) {
   if (Array.isArray(value)) return value.flatMap(sourceRefs);

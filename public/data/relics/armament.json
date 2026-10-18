@@ -2713,8 +2713,11 @@
       },
       "icon": "attack-up",
       "detail": {
-        "zh": "弓的傷害 ×1.09（原文註記：1.03 版本疑似已加強，與更新說明不符？）",
-        "en": "1.09x damage of bows\n(buffed in 1.03 despite patch notes?)"
+        "zh": "弓的傷害 ×1.06。",
+        "en": "1.06x damage of bows",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "both-relics",
       "requiresCurse": false,
@@ -2777,8 +2780,11 @@
       },
       "icon": "attack-up",
       "detail": {
-        "zh": "裝備 3 把以上弓時，所有傷害來源 ×1.2（原文註記：1.03 版本疑似已加強，與更新說明不符？）",
-        "en": "When 3 or more bows are equipped, 1.2x all sources of damage\n(buffed in 1.03 despite patch notes?)"
+        "zh": "裝備 3 把以上弓時，所有來源的傷害 ×1.1。",
+        "en": "When 3 or more bows are equipped, 1.1x all sources of damage",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "both-relics",
       "requiresCurse": false,

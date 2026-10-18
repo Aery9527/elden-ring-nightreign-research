@@ -35,7 +35,7 @@
 - Relic effects follow the in-game relic filter tree: every effect has a `subcategory`, and each category and subcategory keeps its in-game param `gameId`. A category Chinese name not taken from game text is a site translation, and pages MUST say so.
 - Every effect has `name` (`zh` and `en`) and `icon`. `icon: null` means no in-game image that meets the image rules exists; it MUST NOT be replaced with a different image.
 - Effect rows of a relic table are rendered from data with `<tbody data-relic-table="<subcategory>">`; effect rows MUST NOT be hand-written in HTML.
-- `detail` holds the community detail text of an effect or tier: `en` is the source text verbatim and `zh` its translation.
+- `detail` holds the community detail text of an effect or tier: `en` is the source text verbatim and `zh` its translation. A detail whose number, item, or location contradicts the pinned game params is instead rewritten from the params in both languages and carries its own `sources`, which the source column lists.
 
 ## Relic Data Generation
 
@@ -43,12 +43,13 @@
   - [tools/relics-config.json](tools/relics-config.json): the pinned commit of each source, the category tree, the nightfarer columns, the status icon ID → icon key map (`null` = no matching licensed image), and the relic icon ID → icon key map.
   - [tools/relics-curated.json](tools/relics-curated.json): hand-curated effects matched to generated effects by `gameId`; their fields override generated values, and the script prints every overridden difference.
   - [tools/relic-details-zh.json](tools/relic-details-zh.json): the Traditional Chinese translation of each community detail, keyed by `gameId` and stored with its English original.
-- The script stops without writing when a curated effect, translation, effect or relic icon, character, or source reference (`sources`, `sourcesFor`, conflict candidates) has no match; when two curated effects map to the same `gameId`s; when a source field has an unknown enum value; or when the English original of a translation differs from the source. Fix the input instead of bypassing the check.
-- To update a source, change its commit in the config, rerun the script, and review the printed differences and the changed translations before committing.
+  - [tools/relic-details-params.json](tools/relic-details-params.json): details rewritten from the game params, keyed by `gameId`; each entry stores the community `source` text, the rewrite in `en` and `zh`, the param evidence in `params`, and optional `sources` (default `game-params`). A `gameId` MUST NOT appear in both detail files.
+- The script stops without writing when a curated effect, translation, effect or relic icon, character, or source reference (`sources`, `sourcesFor`, conflict candidates) has no match; when two curated effects map to the same `gameId`s; when a source field has an unknown enum value; when the English original of a translation or the `source` of a param rewrite differs from the source; when a `gameId` has both a translation and a param rewrite; when a param rewrite lacks `en`, `zh`, or `params` or has no matching detail; or when either detail file repeats a key or differs from its canonical `JSON.stringify` output with 2-space indentation. Fix the input instead of bypassing the check.
+- To update a source, change its commit in the config, rerun the script, and review the printed differences and the changed translations before committing. After a game param update, check every param rewrite against the new params.
 - Translating a detail:
   - Every number keeps identical digits; never compute, round, or convert units.
   - Use the effect's official Chinese name and game terms; a term with no official Chinese name stays in English.
-  - Translate source notes such as `TODO` as `（原文註記：……）`; where the source contradicts the effect name, translate literally and add `（原文如此）`. MUST NOT correct the source.
+  - Translate source notes such as `TODO` as `（原文註記：……）`; where the source contradicts the effect name, translate literally and add `（原文如此）`. MUST NOT correct the source in a translation; a contradiction with the game params goes to the param rewrite file instead.
 
 ## Game Writing Rules
 

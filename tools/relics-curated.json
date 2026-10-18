@@ -613,67 +613,19 @@
           "tier": 1,
           "gameId": "7001000",
           "availability": "standard-relic",
-          "value": {
-            "conflict": [
-              {
-                "value": -5,
-                "sources": [
-                  "reliquary-json",
-                  "relics-pro"
-                ]
-              },
-              {
-                "value": -10,
-                "sources": [
-                  "eldenpedia-relic-effects"
-                ]
-              }
-            ]
-          }
+          "value": -5
         },
         {
           "tier": 2,
           "gameId": "7001001",
           "availability": "standard-relic",
-          "value": {
-            "conflict": [
-              {
-                "value": -10,
-                "sources": [
-                  "reliquary-json",
-                  "relics-pro"
-                ]
-              },
-              {
-                "value": -15,
-                "sources": [
-                  "eldenpedia-relic-effects"
-                ]
-              }
-            ]
-          }
+          "value": -10
         },
         {
           "tier": 3,
           "gameId": "7001002",
           "availability": "both-relics",
-          "value": {
-            "conflict": [
-              {
-                "value": -15,
-                "sources": [
-                  "reliquary-json",
-                  "relics-pro"
-                ]
-              },
-              {
-                "value": -20,
-                "sources": [
-                  "eldenpedia-relic-effects"
-                ]
-              }
-            ]
-          }
+          "value": -15
         }
       ],
       "stacking": {
@@ -688,6 +640,9 @@
         "stacking.acrossTiers": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
+        ],
+        "tiers.value": [
+          "game-params"
         ]
       }
     }

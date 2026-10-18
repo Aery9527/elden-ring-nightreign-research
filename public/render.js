@@ -59,9 +59,16 @@ function sourceLinks(data, ids) {
   return nodes;
 }
 
-// 效果引用的全部來源：效果層級 sources 加上 sourcesFor 各欄位的來源，去除重複。
+// 效果引用的全部來源：效果層級 sources、sourcesFor 各欄位，以及依參數修正的說明 (detail.sources) 的來源，去除重複。
 function effectSources(effect) {
-  return [...new Set([...effect.sources, ...Object.values(effect.sourcesFor ?? {}).flat()])];
+  const details = [effect.detail, ...(effect.tiers ?? []).map((tier) => tier.detail)];
+  return [
+    ...new Set([
+      ...effect.sources,
+      ...Object.values(effect.sourcesFor ?? {}).flat(),
+      ...details.flatMap((detail) => detail?.sources ?? []),
+    ]),
+  ];
 }
 
 function statName(data, statId) {

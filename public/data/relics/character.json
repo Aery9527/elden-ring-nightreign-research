@@ -334,8 +334,11 @@
         "guardian"
       ],
       "detail": {
-        "zh": "能力（Steel Guard）發動期間防禦時，發出近距離衝擊波，造成 60 物理傷害（每次發動冷卻：3 秒）。",
-        "en": "Upon guarding while Steel Guard is active, fire a close range shockwave, dealing 60 physical damage (cooldown per activation: 3 seconds)"
+        "zh": "能力（Steel Guard）發動期間防禦時，發出近距離衝擊波，造成 100 基礎物理傷害（每次發動冷卻：3 秒）。",
+        "en": "Upon guarding while Steel Guard is active, fire a close range shockwave, dealing 100 base physical damage (cooldown per activation: 3 seconds)",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -414,8 +417,12 @@
         "guardian"
       ],
       "detail": {
-        "zh": "絕活（Wings of Salvation）維持防禦架勢期間，施加增益，每 1 秒為自身與隊友恢復 [HP 上限 ×0.15] HP。",
-        "en": "While Wings of Salvation is being held in its defensive stance, apply a buff that heals self and allies by [0.15x max HP] HP every 1 second"
+        "zh": "絕活（Wings of Salvation）維持防禦架勢期間，持續為自身與周圍我方人物恢復 [HP 上限 ×0.1 + 12] HP。",
+        "en": "While Wings of Salvation is being held in its defensive stance, repeatedly heal self and nearby allies by [0.1x max HP + 12] HP",
+        "sources": [
+          "game-params",
+          "community-sheet"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -510,7 +517,7 @@
         "guardian"
       ],
       "detail": {
-        "zh": "技藝（Whirlwind）使周圍隊友受到的所有來源傷害 ×0.82，持續 30 秒。",
+        "zh": "技藝（Whirlwind）使周圍我方人物受到的所有來源傷害 ×0.82，持續 30 秒。",
         "en": "Whirlwind buffs nearby allies with 0.82x damage taken from all sources for 30 seconds"
       },
       "availability": "deep-relic",
@@ -606,8 +613,11 @@
         "ironeye"
       ],
       "detail": {
-        "zh": "技藝（Marking）造成的弱點顯露時間從 17.5 秒延長至 22.5 秒。（原文註記：待以遊戲內實測核實）",
-        "en": "Increases the duration of the weak point from Marking from 17.5 seconds to 22.5 seconds\n(TODO: verify with in-game testing)"
+        "zh": "技藝（Marking）造成的弱點顯露時間延長至 22 秒。",
+        "en": "Increases the duration of the weak point from Marking to 22 seconds",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -750,7 +760,7 @@
         "duchess"
       ],
       "detail": {
-        "zh": "以短劍命中輕攻擊連擊或雙持攻擊連擊的最後一擊時，觸發技藝（Restage），重現過去 3 秒內造成的直接傷害、削韌與異常狀態累積值 ×0.4（會覆蓋最近使用的技藝效果；觸發後若再使用技藝，此效果會被覆蓋）。",
+        "zh": "以短劍命中輕攻擊連擊或雙手各持攻擊連擊的最後一擊時，觸發技藝（Restage），重現過去 3 秒內造成的直接傷害、削韌與異常狀態累積值 ×0.4（會覆蓋最近使用的技藝效果；觸發後若再使用技藝，此效果會被覆蓋）。",
         "en": "Landing the final attack of a light attack chain or powerstanced attack chain with daggers triggers Restage, repeating 0.4x of direct damage, stance damage, and status buildup dealt over the past 3 seconds (overriding a recently used Restage skill and being overrided if Restage skill is used after it's triggered)"
       },
       "availability": "standard-relic",
@@ -870,8 +880,11 @@
         "raider"
       ],
       "detail": {
-        "zh": "使用技藝（Retaliate）期間受到攻擊時，自身所有來源的傷害 ×1.1、精力上限 ×1.2，持續 2 秒。",
-        "en": "Getting hit while using Retaliate buffs self with 1.1x damage of all sources and 1.2x maximum stamina for 2 seconds"
+        "zh": "使用技藝（Retaliate）期間受到攻擊時，自身所有來源的傷害 ×1.1、精力上限 ×1.2，持續 20 秒。",
+        "en": "Getting hit while using Retaliate buffs self with 1.1x damage of all sources and 1.2x maximum stamina for 20 seconds",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -894,7 +907,7 @@
         "raider"
       ],
       "detail": {
-        "zh": "絕活「圖騰碑石」及其施加的遺物增益持續時間從 20 秒延長至 30 秒，並將對所有非法術來源的傷害 ×1.15 增益從 30 秒延長至 45 秒。（原文註記：待核實圖騰碑石持續時間與攻擊力增益持續時間的差異）",
+        "zh": "絕活「圖騰碑石」及其施加的遺物增益持續時間從 20 秒延長至 30 秒，並將對所有非魔法、禱告來源的傷害 ×1.15 增益從 30 秒延長至 45 秒。（原文註記：待核實圖騰碑石持續時間與攻擊力增益持續時間的差異）",
         "en": "Increases the duration of Totem Stela and relic buffs applied by it from 20 seconds to 30 seconds, and extends the 1.15x damage buff to all non-spell sources from 30 seconds to 45 seconds\n(TODO: verify discrepancy between Totem Stela duration and attack buff duration)"
       },
       "availability": "standard-relic",
@@ -915,7 +928,7 @@
       },
       "icon": "ultimate-art",
       "detail": {
-        "zh": "使用圖騰碑石時，自身與周圍隊友獲得增益：在絕活持續期間打倒敵人時，恢復 [HP 上限 ×0.2] HP。（原文註記：待進一步測試與隊友的互動）",
+        "zh": "使用圖騰碑石時，自身與周圍我方人物獲得增益：在絕活持續期間打倒敵人時，恢復 [HP 上限 ×0.2] HP。（原文註記：待進一步測試與我方人物的互動）",
         "en": "When Totem Stela is used, self and nearby allies are buffed, healing [0.2x max HP] HP when an enemy is killed during the duration of the ultimate\n(TODO: test more interactions with allies)"
       },
       "availability": "standard-relic",
@@ -936,8 +949,11 @@
       },
       "icon": "ultimate-art",
       "detail": {
-        "zh": "使用圖騰碑石時，自身與周圍隊友在絕活持續期間受到的削韌 ×0.5。（原文註記：待進一步測試與隊友的互動）",
-        "en": "When Totem Stela is used, self and nearby allies are buffed with 0.5x poise damage taken for the duration of the ultimate\n(TODO: test more interactions with allies)"
+        "zh": "使用圖騰碑石時，自身與周圍我方人物在絕活持續期間受到的削韌 ×0.1。",
+        "en": "When Totem Stela is used, self and nearby allies are buffed with 0.1x poise damage taken for the duration of the ultimate",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1083,7 +1099,7 @@
         "revenant"
       ],
       "detail": {
-        "zh": "絕活（Immortal March）改為對自身造成 [HP 上限 ×0.5] 傷害，並為目標隊友恢復 [HP 上限 ×1] HP。",
+        "zh": "絕活（Immortal March）改為對自身造成 [HP 上限 ×0.5] 傷害，並為目標我方人物恢復 [HP 上限 ×1] HP。",
         "en": "Immortal March now deals [0.5x max HP] damage to self and heals targeted allies for [1x max HP] HP"
       },
       "availability": "standard-relic",
@@ -1107,7 +1123,7 @@
         "revenant"
       ],
       "detail": {
-        "zh": "絕活（Immortal March）同時使受影響的隊友所有來源的傷害 ×1.25，持續 30 秒。",
+        "zh": "絕活（Immortal March）同時使受影響的我方人物所有來源的傷害 ×1.25，持續 30 秒。",
         "en": "Immortal March also buffs allies affected with 1.25x damage of all sources for 30 seconds"
       },
       "availability": "standard-relic",
@@ -1131,8 +1147,11 @@
         "revenant"
       ],
       "detail": {
-        "zh": "技藝（Summon Spirit）依當前出現的靈魂給予自身不同的獨特增益：Helen 使自身每 1 秒恢復 [HP 上限 ×0.01] HP；Fredrick 使自身所有來源的傷害 ×1.1；Sebastian 使自身受到的所有來源傷害 ×0.8。",
-        "en": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with [0.01x max HP] HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x damage taken from all sources"
+        "zh": "技藝（Summon Spirit）依當前出現的靈魂給予自身不同的獨特增益：Helen 使自身每 1 秒恢復 1 HP；Fredrick 使自身所有來源的傷害 ×1.1；Sebastian 使自身受到的魔力、火、雷、聖屬性傷害 ×0.8。",
+        "en": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with 1 HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x magic, fire, lightning, and holy damage taken",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1155,8 +1174,11 @@
         "revenant"
       ],
       "detail": {
-        "zh": "等級 12-15：生命力 +5、集中力 -11；等級 1：生命力 +1、集中力 -1。",
-        "en": "+5 vigor, -11 mind at level 12-15\n+1 vigor, -1 mind at level 1"
+        "zh": "等級 12-15：生命力 +5、耐力 +5、集中力 -11；等級 1：生命力 +1、耐力 +1、集中力 -1。",
+        "en": "+5 vigor, +5 endurance, -11 mind at level 12-15\n+1 vigor, +1 endurance, -1 mind at level 1",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1398,8 +1420,11 @@
         "executor"
       ],
       "detail": {
-        "zh": "裝備技藝（Suncatcher）時，自身技藝傷害 ×1.08；以該技藝命中攻擊時，對自身造成 10 傷害（原文如此）。",
-        "en": "When Suncatcher is equipped, buff self with 1.08x character skill damage, and landing attacks with Suncatcher deals 10 damage to self"
+        "zh": "裝備技藝（Suncatcher）期間，自身所有來源的傷害 ×1.35，持續 6 秒；以該技藝命中攻擊時，自身受到的所有來源傷害 ×1.4，持續 5 秒。",
+        "en": "While Suncatcher is equipped, buff self with 1.35x damage of all sources for 6 seconds, and landing attacks with Suncatcher buffs self with 1.4x damage taken from all sources for 5 seconds",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1422,8 +1447,11 @@
         "executor"
       ],
       "detail": {
-        "zh": "為妖刀（Suncatcher）的強化技能蓄力時，恢復 100 HP。",
-        "en": "Upon charging the empowered skill of Suncatcher, restore 100 HP"
+        "zh": "技藝（Suncatcher）發動期間，妖刀進入解放狀態時，恢復 [HP 上限 ×0.05 + 100] HP。",
+        "en": "While Suncatcher is active, unlocking the cursed sword restores [0.05x max HP + 100] HP",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1446,7 +1474,7 @@
         "executor"
       ],
       "detail": {
-        "zh": "絕活（Aspects of the Crucible: Beast）發動期間咆哮時，為自身與被咆哮命中的隊友恢復 [HP 上限 ×0.15] HP。",
+        "zh": "絕活（Aspects of the Crucible: Beast）發動期間咆哮時，為自身與被咆哮命中的我方人物恢復 [HP 上限 ×0.15] HP。",
         "en": "Roaring while Aspects of the Crucible: Beast is active heals self and allies hit by the roar by [0.15x max HP] HP"
       },
       "availability": "standard-relic",
@@ -1518,8 +1546,11 @@
         "executor"
       ],
       "detail": {
-        "zh": "能力（Tenacity）觸發時（被動能力：陷入異常狀態後獲得增益），每 1 秒恢復 [3 + HP 上限 ×0.0027] HP，持續 25 秒。",
-        "en": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 25 seconds"
+        "zh": "能力（Tenacity）觸發時（被動能力：陷入異常狀態後獲得增益），每 1 秒恢復 [3 + HP 上限 ×0.0027] HP，持續 60 秒（參數為 1.5 + 58.5 秒）。",
+        "en": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 60 seconds (1.5 + 58.5 seconds in params)",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1593,7 +1624,7 @@
         "scholar"
       ],
       "detail": {
-        "zh": "技藝（Analyze）可指定範圍內的隊友；使用時，使其所有來源的物理傷害 ×1.2、屬性傷害 ×1.15，持續 30 秒。",
+        "zh": "技藝（Analyze）可指定範圍內的我方人物；使用時，使其所有來源的物理傷害 ×1.2、屬性傷害 ×1.15，持續 30 秒。",
         "en": "Analyze can now target allies in its radius, and when used, buffs them with 1.2x physical damage and 1.15x affinity damage of all sources for 30 seconds"
       },
       "availability": "standard-relic",
@@ -1713,7 +1744,7 @@
         "scholar"
       ],
       "detail": {
-        "zh": "對自身使用技藝（Analyze）時，自身的戰技、法術與道具 FP 消耗 ×0.85。",
+        "zh": "對自身使用技藝（Analyze）時，自身的戰技、魔法、禱告與道具 FP 消耗 ×0.85。",
         "en": "When Analyze is used on self, buff self with 0.85x FP consumption for skills, spells, and items"
       },
       "availability": "deep-relic",
@@ -1737,8 +1768,11 @@
         "undertaker"
       ],
       "detail": {
-        "zh": "使用絕活（Loathesome Hex）時，自身所有來源的傷害 ×1.14，持續 40 秒。",
-        "en": "Loathesome Hex buffs self with 1.14x damage of all sources for 40 seconds when used"
+        "zh": "使用絕活（Loathesome Hex）時，自身所有來源的傷害 ×1.18，持續 40 秒。",
+        "en": "Loathesome Hex buffs self with 1.18x damage of all sources for 40 seconds when used",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1761,7 +1795,7 @@
         "undertaker"
       ],
       "detail": {
-        "zh": "絕活（Loathesome Hex）命中隊友時，為其恢復 [HP 上限 ×0.3 + 100] HP。",
+        "zh": "絕活（Loathesome Hex）命中我方人物時，為其恢復 [HP 上限 ×0.3 + 100] HP。",
         "en": "Landing Loathesome Hex on allies heals them for [0.3x max HP + 100] HP"
       },
       "availability": "standard-relic",
@@ -1785,8 +1819,11 @@
         "undertaker"
       ],
       "detail": {
-        "zh": "命中輕攻擊連擊或雙持攻擊連擊的最後一擊時，自身所有來源的傷害 ×1.12，持續 20 秒。",
-        "en": "Upon landing the last hit of a light attack chain or powerstanced attack chain, buff self with 1.12x damage of all sources for 20 seconds"
+        "zh": "命中輕攻擊連擊或雙手各持攻擊連擊的最後一擊時，自身所有來源的傷害 ×1.16，持續 20 秒。",
+        "en": "Upon landing the last hit of a light attack chain or powerstanced attack chain, buff self with 1.16x damage of all sources for 20 seconds",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1809,8 +1846,11 @@
         "undertaker"
       ],
       "detail": {
-        "zh": "使用對自身施加增益的禱告時，自身所有來源的物理傷害 ×1.15，持續 60 秒。",
-        "en": "Upon using an incantation that applies a buff to self, buff self with 1.15x physical damage of all sources for 60 seconds"
+        "zh": "使用對自身施加增益的禱告時，自身所有來源的物理傷害 ×1.19，持續 60 秒。",
+        "en": "Upon using an incantation that applies a buff to self, buff self with 1.19x physical damage of all sources for 60 seconds",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -1857,8 +1897,11 @@
         "undertaker"
       ],
       "detail": {
-        "zh": "等級 12-15：集中力 +9、信仰 +12、力氣 -15；等級 1：生命力（原文如此）+1、信仰 +1、力氣 -2。",
-        "en": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 vigor, +1 faith, -2 strength at level 1"
+        "zh": "等級 12-15：集中力 +9、信仰 +12、力氣 -15；等級 1：集中力 +1、信仰 +1、力氣 -2。",
+        "en": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 mind, +1 faith, -2 strength at level 1",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,

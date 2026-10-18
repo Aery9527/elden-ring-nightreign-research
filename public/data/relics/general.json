@@ -844,23 +844,7 @@
             "zh": "受到的削韌 ×0.95。",
             "en": "0.95x poise damage recieved"
           },
-          "value": {
-            "conflict": [
-              {
-                "value": -5,
-                "sources": [
-                  "reliquary-json",
-                  "relics-pro"
-                ]
-              },
-              {
-                "value": -10,
-                "sources": [
-                  "eldenpedia-relic-effects"
-                ]
-              }
-            ]
-          }
+          "value": -5
         },
         {
           "tier": 2,
@@ -870,23 +854,7 @@
             "zh": "受到的削韌 ×0.9。",
             "en": "0.9x poise damage recieved"
           },
-          "value": {
-            "conflict": [
-              {
-                "value": -10,
-                "sources": [
-                  "reliquary-json",
-                  "relics-pro"
-                ]
-              },
-              {
-                "value": -15,
-                "sources": [
-                  "eldenpedia-relic-effects"
-                ]
-              }
-            ]
-          }
+          "value": -10
         },
         {
           "tier": 3,
@@ -896,23 +864,7 @@
             "zh": "受到的削韌 ×0.85。",
             "en": "0.85x poise damage recieved"
           },
-          "value": {
-            "conflict": [
-              {
-                "value": -15,
-                "sources": [
-                  "reliquary-json",
-                  "relics-pro"
-                ]
-              },
-              {
-                "value": -20,
-                "sources": [
-                  "eldenpedia-relic-effects"
-                ]
-              }
-            ]
-          }
+          "value": -15
         }
       ],
       "sources": [
@@ -926,6 +878,9 @@
         "stacking.acrossTiers": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
+        ],
+        "tiers.value": [
+          "game-params"
         ]
       }
     },
@@ -959,8 +914,11 @@
       },
       "icon": "item-up",
       "detail": {
-        "zh": "擊敗小型要塞的強敵後，從敵人獲得的盧恩 ×1.065，觀察力 +16（每次擊敗皆可疊加）。",
-        "en": "Upon clearing the boss of a fort, 1.065x rune gain from enemies and +16 item discovery (stacking for each clear)"
+        "zh": "擊敗小型要塞的強敵後，從敵人獲得的盧恩 ×1.055，觀察力 +16（每次擊敗皆可疊加）。",
+        "en": "Upon clearing the boss of a fort, 1.055x rune gain from enemies and +16 item discovery (stacking for each clear)",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1001,8 +959,11 @@
       },
       "icon": "stamina-up",
       "detail": {
-        "zh": "擊敗大教堂（原文如此）的強敵後，精力上限 ×1.075（每次擊敗皆可疊加）。",
-        "en": "Upon clearing the boss of a great church, 1.075x maximum stamina (stacking for each clear)"
+        "zh": "擊敗大型營地的強敵後，精力上限 ×1.075（每次擊敗皆可疊加）。",
+        "en": "Upon clearing the boss of a great encampment, 1.075x maximum stamina (stacking for each clear)",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1022,8 +983,11 @@
       },
       "icon": "attack-up",
       "detail": {
-        "zh": "擊敗大教堂（原文如此）的強敵後，感應 +4（每次擊敗皆可疊加）。",
-        "en": "Upon clearing the boss of a great church, +4 arcane (stacking for each clear)"
+        "zh": "擊敗遺跡的強敵後，感應 +4（每次擊敗皆可疊加）。",
+        "en": "Upon clearing the boss of a ruin, +4 arcane (stacking for each clear)",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,
@@ -1296,8 +1260,11 @@
             "combine": null
           },
           "detail": {
-            "zh": "所有來源的物理傷害 ×1.105。",
-            "en": "1.105x all sources of physical damage"
+            "zh": "所有來源的物理傷害 ×1.12。",
+            "en": "1.12x all sources of physical damage",
+            "sources": [
+              "game-params"
+            ]
           }
         }
       ],
@@ -1714,7 +1681,7 @@
       },
       "icon": "attack-up",
       "detail": {
-        "zh": "輕攻擊連段或雙持攻擊連段的第一擊傷害 ×1.15。",
+        "zh": "輕攻擊連段或雙手各持攻擊連段的第一擊傷害 ×1.15。",
         "en": "1.15x damage for the first attack in a light attack chain or powerstance attack chain"
       },
       "availability": "both-relics",
@@ -2201,8 +2168,11 @@
       },
       "icon": "attack-up",
       "detail": {
-        "zh": "擊殺黑夜入侵者後，所有來源的傷害 ×1.05（每擊殺一名入侵者，以乘算疊加）。",
-        "en": "Upon killing a night invader, 1.05x all sources of damage (stacking multiplicatively for each invader killed)"
+        "zh": "擊殺黑夜入侵者後，所有來源的傷害 ×1.07（每擊殺一名入侵者，以乘算疊加）。",
+        "en": "Upon killing a night invader, 1.07x all sources of damage (stacking multiplicatively for each invader killed)",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "standard-relic",
       "requiresCurse": false,
@@ -2269,8 +2239,12 @@
       },
       "icon": "attack-up",
       "detail": {
-        "zh": "觸發 Sixth Sense（原文如此）時，獲得 18 絕活量表累積量。",
-        "en": "Upon triggering Sixth Sense, gain 18 ultimate charge"
+        "zh": "防禦反擊依自身目前 HP 追加傷害（currentHealthAttackRate 5；社群試算表：目前 HP / 20）。",
+        "en": "Guard counters deal bonus damage based on current HP (currentHealthAttackRate 5; community sheet: current HP / 20)",
+        "sources": [
+          "game-params",
+          "community-sheet"
+        ]
       },
       "availability": "both-relics",
       "requiresCurse": false,
@@ -2928,7 +2902,7 @@
           "gameId": "6003400",
           "availability": "deep-relic",
           "detail": {
-            "zh": "腐敗抵抗力 +110。",
+            "zh": "猩紅腐敗抵抗力 +110。",
             "en": "+110 rot resistance"
           }
         }
@@ -3155,7 +3129,7 @@
       },
       "icon": "hp-up",
       "detail": {
-        "zh": "HP 低於 [HP 上限 ×0.4] 時，對自己與隊友施加增益效果，每秒恢復 [1 + HP 上限 ×0.005] HP，持續 50 秒。",
+        "zh": "HP 低於 [HP 上限 ×0.4] 時，對自己與我方人物施加增益效果，每秒恢復 [1 + HP 上限 ×0.005] HP，持續 50 秒。",
         "en": "When below [0.4x max HP] HP, apply a buff to self and allies that restores [1 + 0.005x max HP] HP per second for 50 seconds"
       },
       "availability": "both-relics",
@@ -3236,7 +3210,7 @@
           "availability": "both-relics",
           "requiresCurse": false,
           "detail": {
-            "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與法術造成傷害來恢復。此效果不與同類效果疊加。",
+            "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與魔法、禱告造成傷害來恢復。此效果不與同類效果疊加。",
             "en": "Damage taken over the past 4 seconds can be healed by dealing damage with melee attacks, ranged attacks, and spells. This does not stack with similar effects"
           }
         },
@@ -3246,7 +3220,7 @@
           "availability": "deep-relic",
           "requiresCurse": true,
           "detail": {
-            "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與法術造成傷害來恢復。此效果的恢復量 ×1.25，且不與同類效果疊加，+2 版本除外。",
+            "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與魔法、禱告造成傷害來恢復。此效果的恢復量 ×1.25，且不與同類效果疊加，+2 版本除外。",
             "en": "Damage taken over the past 4 seconds can be healed by dealing damage with melee attacks, ranged attacks, and spells. Healing from this effect is increased by 1.25x, and this does not stack with similar effects except for the +2 variant"
           }
         },
@@ -3256,7 +3230,7 @@
           "availability": "deep-relic",
           "requiresCurse": true,
           "detail": {
-            "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與法術造成傷害來恢復。此效果的恢復量 ×1.35，且不與同類效果疊加，+1 版本除外。",
+            "zh": "過去 4 秒內受到的傷害，可透過近戰攻擊、遠程攻擊與魔法、禱告造成傷害來恢復。此效果的恢復量 ×1.35，且不與同類效果疊加，+1 版本除外。",
             "en": "Damage taken over the past 4 seconds can be healed by dealing damage with melee attacks, ranged attacks, and spells. Healing from this effect is increased by 1.35x, and this does not stack with similar effects except for the +1 variant"
           }
         }
@@ -3282,8 +3256,11 @@
             "stacks": false
           },
           "detail": {
-            "zh": "食用可食用道具時，為使用者恢復 80 HP。（原文註記：待核實此效果是否僅適用於苔藥。）",
-            "en": "Consuming an edible item restores 80 HP to the user\n(TODO: verify this only applies to boluses)"
+            "zh": "使用苔藥等道具時，為使用者恢復 50 HP。",
+            "en": "Using medicinal boluses or similar items restores 50 HP to the user",
+            "sources": [
+              "game-params"
+            ]
           }
         },
         {
@@ -3359,7 +3336,7 @@
       },
       "icon": "fp-up",
       "detail": {
-        "zh": "戰技、法術與道具的 FP 消耗 ×0.92。",
+        "zh": "戰技、魔法、禱告與道具的 FP 消耗 ×0.92。",
         "en": "0.92x FP consumption for skills, spells, and items"
       },
       "availability": "deep-relic",
@@ -3656,8 +3633,11 @@
       },
       "icon": "enemy-attention-diamond",
       "detail": {
-        "zh": "防禦住攻擊時，獲得 300 目標優先度，持續 2 秒。",
-        "en": "Upon guarding an attack, gan 300 target priority for 2 seconds"
+        "zh": "防禦住攻擊時，獲得 450 目標優先度，持續 4 秒。",
+        "en": "Upon guarding an attack, gain 450 target priority for 4 seconds",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "both-relics",
       "requiresCurse": false,
@@ -5595,7 +5575,7 @@
       },
       "icon": "item-up",
       "detail": {
-        "zh": "出擊時持有 1 個「湧綠結晶露滴」；學者則持有 2 個。",
+        "zh": "出擊時持有 1 個「漫綠結晶露滴」；學者則持有 2 個。",
         "en": "Start with 1 Greenspill Crystal Tear, or 2 as Scholar"
       },
       "availability": "deep-relic",
@@ -5925,8 +5905,11 @@
       },
       "icon": "item-up",
       "detail": {
-        "zh": "出擊時持有 1 個「漫紅結晶露滴」（原文如此）；學者則持有 2 個。",
-        "en": "Start with 1 Crimsonspill Crystal Tear, or 2 as Scholar"
+        "zh": "出擊時持有 1 個「紅漩泡狀露滴」；學者則持有 2 個。",
+        "en": "Start with 1 Crimsonwhorl Bubbletear, or 2 as Scholar",
+        "sources": [
+          "game-params"
+        ]
       },
       "availability": "deep-relic",
       "requiresCurse": false,

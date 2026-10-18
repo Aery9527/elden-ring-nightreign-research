@@ -1,0 +1,160 @@
+{
+  "6001401": {
+    "source": "1.105x all sources of physical damage",
+    "en": "1.12x all sources of physical damage",
+    "zh": "所有來源的物理傷害 ×1.12。",
+    "params": "AttachEffectParam 6001401 → SpEffectParam 7001404 physicsAttackRate=1.12（1.105 為 +3 的值）"
+  },
+  "6060400": {
+    "source": "Upon clearing the boss of a fort, 1.065x rune gain from enemies and +16 item discovery (stacking for each clear)",
+    "en": "Upon clearing the boss of a fort, 1.055x rune gain from enemies and +16 item discovery (stacking for each clear)",
+    "zh": "擊敗小型要塞的強敵後，從敵人獲得的盧恩 ×1.055，觀察力 +16（每次擊敗皆可疊加）。",
+    "params": "SpEffectParam 7069301 soulRate=1.055（7069302=1.114、7069303=1.175）"
+  },
+  "6060500": {
+    "source": "Upon clearing the boss of a great church, +4 arcane (stacking for each clear)",
+    "en": "Upon clearing the boss of a ruin, +4 arcane (stacking for each clear)",
+    "zh": "擊敗遺跡的強敵後，感應 +4（每次擊敗皆可疊加）。",
+    "params": "原文地點寫成 great church；效果名稱為 Ruin。SpEffectParam 7060501 addLuckStatus=4"
+  },
+  "6060600": {
+    "source": "Upon clearing the boss of a great church, 1.075x maximum stamina (stacking for each clear)",
+    "en": "Upon clearing the boss of a great encampment, 1.075x maximum stamina (stacking for each clear)",
+    "zh": "擊敗大型營地的強敵後，精力上限 ×1.075（每次擊敗皆可疊加）。",
+    "params": "原文地點寫成 great church；效果名稱為 Great Encampment。SpEffectParam 7060601 maxStaminaRate=1.075"
+  },
+  "6500700": {
+    "source": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 25 seconds",
+    "en": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 60 seconds (1.5 + 58.5 seconds in params)",
+    "zh": "能力（Tenacity）觸發時（被動能力：陷入異常狀態後獲得增益），每 1 秒恢復 [3 + HP 上限 ×0.0027] HP，持續 60 秒（參數為 1.5 + 58.5 秒）。",
+    "params": "SpEffectParam 7500701 effectEndurance=1.5、replaceSpEffectId → 7500702 effectEndurance=58.5；兩者 changeHpRate=-0.27、changeHpPoint=-3、motionInterval=1"
+  },
+  "6622500": {
+    "source": "Start with 1 Crimsonspill Crystal Tear, or 2 as Scholar",
+    "en": "Start with 1 Crimsonwhorl Bubbletear, or 2 as Scholar",
+    "zh": "出擊時持有 1 個「紅漩泡狀露滴」；學者則持有 2 個。",
+    "params": "SpEffectParam 7622500 startGoodsId=11020（紅漩泡狀露滴）；原文的 Crimsonspill Crystal Tear 是 11000"
+  },
+  "6645000": {
+    "source": "+5 vigor, -11 mind at level 12-15\n+1 vigor, -1 mind at level 1",
+    "en": "+5 vigor, +5 endurance, -11 mind at level 12-15\n+1 vigor, +1 endurance, -1 mind at level 1",
+    "zh": "等級 12-15：生命力 +5、耐力 +5、集中力 -11；等級 1：生命力 +1、耐力 +1、集中力 -1。",
+    "params": "HeroStatusParam 305001（等級 12）生命力 +5、耐力 +5、集中力 -11；305000（等級 1）+1、+1、-1"
+  },
+  "6647500": {
+    "source": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 vigor, +1 faith, -2 strength at level 1",
+    "en": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 mind, +1 faith, -2 strength at level 1",
+    "zh": "等級 12-15：集中力 +9、信仰 +12、力氣 -15；等級 1：集中力 +1、信仰 +1、力氣 -2。",
+    "params": "HeroStatusParam 309100（等級 1）集中力 +1、生命力 0、信仰 +1、力氣 -2"
+  },
+  "7012000": {
+    "source": "While Wings of Salvation is being held in its defensive stance, apply a buff that heals self and allies by [0.15x max HP] HP every 1 second",
+    "en": "While Wings of Salvation is being held in its defensive stance, repeatedly heal self and nearby allies by [0.1x max HP + 12] HP",
+    "zh": "絕活（Wings of Salvation）維持防禦架勢期間，持續為自身與周圍我方人物恢復 [HP 上限 ×0.1 + 12] HP。",
+    "params": "BehaviorParam_PC 700000808 → Bullet 30901188（半徑 15）spEffectId0 → SpEffectParam 7012002 changeHpRate=-10、changeHpPoint=-12；遺物 stateInfo 2046 與該行為的連結不在參數中，數值與社群試算表一致；恢復間隔不在參數中",
+    "sources": [
+      "game-params",
+      "community-sheet"
+    ]
+  },
+  "7030000": {
+    "source": "When Totem Stela is used, self and nearby allies are buffed with 0.5x poise damage taken for the duration of the ultimate\n(TODO: test more interactions with allies)",
+    "en": "When Totem Stela is used, self and nearby allies are buffed with 0.1x poise damage taken for the duration of the ultimate",
+    "zh": "使用圖騰碑石時，自身與周圍我方人物在絕活持續期間受到的削韌 ×0.1。",
+    "params": "SpEffectParam 7030002／7030003（條件 2008 = 7030000 的 stateInfo）toughnessDamageCutRate=0.1"
+  },
+  "7030200": {
+    "source": "Consuming an edible item restores 80 HP to the user\n(TODO: verify this only applies to boluses)",
+    "en": "Using medicinal boluses or similar items restores 50 HP to the user",
+    "zh": "使用苔藥等道具時，為使用者恢復 50 HP。",
+    "params": "SpEffectParam 7030201 replaceSpEffectId → 7030202 changeHpPoint=-50（80 為 +1 的值，7030212）"
+  },
+  "7030700": {
+    "source": "Upon guarding an attack, gan 300 target priority for 2 seconds",
+    "en": "Upon guarding an attack, gain 450 target priority for 4 seconds",
+    "zh": "防禦住攻擊時，獲得 450 目標優先度，持續 4 秒。",
+    "params": "SpEffectParam 7030702 targetPriority=450、effectEndurance=4"
+  },
+  "7031300": {
+    "source": "Getting hit while using Retaliate buffs self with 1.1x damage of all sources and 1.2x maximum stamina for 2 seconds",
+    "en": "Getting hit while using Retaliate buffs self with 1.1x damage of all sources and 1.2x maximum stamina for 20 seconds",
+    "zh": "使用技藝（Retaliate）期間受到攻擊時，自身所有來源的傷害 ×1.1、精力上限 ×1.2，持續 20 秒。",
+    "params": "SpEffectParam 7031302 各屬性 AttackRate=1.1、maxStaminaRate=1.2、effectEndurance=20"
+  },
+  "7033400": {
+    "source": "Upon guarding while Steel Guard is active, fire a close range shockwave, dealing 60 physical damage (cooldown per activation: 3 seconds)",
+    "en": "Upon guarding while Steel Guard is active, fire a close range shockwave, dealing 100 base physical damage (cooldown per activation: 3 seconds)",
+    "zh": "能力（Steel Guard）發動期間防禦時，發出近距離衝擊波，造成 100 基礎物理傷害（每次發動冷卻：3 秒）。",
+    "params": "SpEffectParam 7033404 behaviorId=990503070 → Bullet 900503070 → AtkParam_Pc 900334000 atkPhys=100；effectEndurance=3"
+  },
+  "7034400": {
+    "source": "When Suncatcher is equipped, buff self with 1.08x character skill damage, and landing attacks with Suncatcher deals 10 damage to self",
+    "en": "While Suncatcher is equipped, buff self with 1.35x damage of all sources for 6 seconds, and landing attacks with Suncatcher buffs self with 1.4x damage taken from all sources for 5 seconds",
+    "zh": "裝備技藝（Suncatcher）期間，自身所有來源的傷害 ×1.35，持續 6 秒；以該技藝命中攻擊時，自身受到的所有來源傷害 ×1.4，持續 5 秒。",
+    "params": "SpEffectParam 7034401 cycleOccurrenceSpEffectId → 7034402 各屬性 AttackRate=1.35、effectEndurance=6；atkOccurrenceSpEffectId → 7034403 各類 DamageCutRate=1.4、effectEndurance=5"
+  },
+  "7034500": {
+    "source": "Upon charging the empowered skill of Suncatcher, restore 100 HP",
+    "en": "While Suncatcher is active, unlocking the cursed sword restores [0.05x max HP + 100] HP",
+    "zh": "技藝（Suncatcher）發動期間，妖刀進入解放狀態時，恢復 [HP 上限 ×0.05 + 100] HP。",
+    "params": "SpEffectParam 7034502（條件 2019）changeHpRate=-5、changeHpPoint=-100"
+  },
+  "7036800": {
+    "source": "Loathesome Hex buffs self with 1.14x damage of all sources for 40 seconds when used",
+    "en": "Loathesome Hex buffs self with 1.18x damage of all sources for 40 seconds when used",
+    "zh": "使用絕活（Loathesome Hex）時，自身所有來源的傷害 ×1.18，持續 40 秒。",
+    "params": "SpEffectParam 7036801（條件 2063）各屬性 AttackRate=1.18、effectEndurance=40"
+  },
+  "7036900": {
+    "source": "Upon landing the last hit of a light attack chain or powerstanced attack chain, buff self with 1.12x damage of all sources for 20 seconds",
+    "en": "Upon landing the last hit of a light attack chain or powerstanced attack chain, buff self with 1.16x damage of all sources for 20 seconds",
+    "zh": "命中輕攻擊連擊或雙手各持攻擊連擊的最後一擊時，自身所有來源的傷害 ×1.16，持續 20 秒。",
+    "params": "SpEffectParam 7036900 atkOccurrenceSpEffectId → 7036901 各屬性 AttackRate=1.16、effectEndurance=20"
+  },
+  "7037000": {
+    "source": "Upon using an incantation that applies a buff to self, buff self with 1.15x physical damage of all sources for 60 seconds",
+    "en": "Upon using an incantation that applies a buff to self, buff self with 1.19x physical damage of all sources for 60 seconds",
+    "zh": "使用對自身施加增益的禱告時，自身所有來源的物理傷害 ×1.19，持續 60 秒。",
+    "params": "SpEffectParam 7037001（條件 2065）physicsAttackRate=1.19、effectEndurance=60"
+  },
+  "7060200": {
+    "source": "Upon killing a night invader, 1.05x all sources of damage (stacking multiplicatively for each invader killed)",
+    "en": "Upon killing a night invader, 1.07x all sources of damage (stacking multiplicatively for each invader killed)",
+    "zh": "擊殺黑夜入侵者後，所有來源的傷害 ×1.07（每擊殺一名入侵者，以乘算疊加）。",
+    "params": "SpEffectParam 7060200 replaceSpEffectId → 7069201 各屬性 AttackRate=1.07（7069202=1.1449、7069203=1.2251）"
+  },
+  "7082400": {
+    "source": "When 3 or more bows are equipped, 1.2x all sources of damage\n(buffed in 1.03 despite patch notes?)",
+    "en": "When 3 or more bows are equipped, 1.1x all sources of damage",
+    "zh": "裝備 3 把以上弓時，所有來源的傷害 ×1.1。",
+    "params": "SpEffectParam 7082400 各屬性 AttackRate=1.1、wepTypeTriggerCount=3"
+  },
+  "7150000": {
+    "source": "Upon triggering Sixth Sense, gain 18 ultimate charge",
+    "en": "Guard counters deal bonus damage based on current HP (currentHealthAttackRate 5; community sheet: current HP / 20)",
+    "zh": "防禦反擊依自身目前 HP 追加傷害（currentHealthAttackRate 5；社群試算表：目前 HP / 20）。",
+    "params": "原文描述的是其他效果。SpEffectParam 7150000 currentHealthAttackRate=5、magicSubCategoryChange1=103（防禦反擊）",
+    "sources": [
+      "game-params",
+      "community-sheet"
+    ]
+  },
+  "7220000": {
+    "source": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with [0.01x max HP] HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x damage taken from all sources",
+    "en": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with 1 HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x magic, fire, lightning, and holy damage taken",
+    "zh": "技藝（Summon Spirit）依當前出現的靈魂給予自身不同的獨特增益：Helen 使自身每 1 秒恢復 1 HP；Fredrick 使自身所有來源的傷害 ×1.1；Sebastian 使自身受到的魔力、火、雷、聖屬性傷害 ×0.8。",
+    "params": "SpEffectParam 7220000 changeHpPoint=-1、changeHpRate=0；7220001 各屬性 AttackRate=1.1；7220002 magic/fire/thunder/darkDamageCutRate=0.8，物理類為 1"
+  },
+  "7280000": {
+    "source": "Increases the duration of the weak point from Marking from 17.5 seconds to 22.5 seconds\n(TODO: verify with in-game testing)",
+    "en": "Increases the duration of the weak point from Marking to 22 seconds",
+    "zh": "技藝（Marking）造成的弱點顯露時間延長至 22 秒。",
+    "params": "SpEffectParam 7280000 weakPointValue=22"
+  },
+  "7332400": {
+    "source": "1.09x damage of bows\n(buffed in 1.03 despite patch notes?)",
+    "en": "1.06x damage of bows",
+    "zh": "弓的傷害 ×1.06。",
+    "params": "SpEffectParam 8162400 各屬性 AttackRate=1.06、triggerOnWepType=51"
+  }
+}
