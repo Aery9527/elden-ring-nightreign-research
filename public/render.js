@@ -308,15 +308,6 @@ function render(data) {
     const [kind, id] = node.dataset.item.split(":");
     node.replaceChildren(itemName(data, kind, id));
   }
-  for (const node of document.querySelectorAll("[data-values]")) {
-    node.replaceChildren(...valueEntries(data, node.dataset.values.split(" ")));
-  }
-  for (const node of document.querySelectorAll("[data-tiers]")) {
-    node.replaceChildren(...tierEntries(data, lookup(data.effects, node.dataset.tiers, "效果")));
-  }
-  for (const node of document.querySelectorAll("[data-effect-text]")) {
-    node.textContent = effectText(data, lookup(data.effects, node.dataset.effectText, "效果"));
-  }
   for (const node of document.querySelectorAll("[data-tier-text]")) {
     const [id, tier] = node.dataset.tierText.split(":");
     node.textContent = tierText(data, lookup(data.effects, id, "效果"), Number(tier));

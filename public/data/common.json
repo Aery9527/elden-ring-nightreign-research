@@ -333,19 +333,22 @@
       "name": {
         "zh": "HP 上限",
         "en": "Maximum HP"
-      }
+      },
+      "icon": "hp-up"
     },
     "maxFp": {
       "name": {
         "zh": "FP 上限",
         "en": "Maximum FP"
-      }
+      },
+      "icon": "fp-up"
     },
     "maxStamina": {
       "name": {
         "zh": "精力上限",
         "en": "Maximum Stamina"
-      }
+      },
+      "icon": "stamina-up"
     },
     "vigor": {
       "name": {
