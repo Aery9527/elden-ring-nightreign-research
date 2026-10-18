@@ -274,7 +274,7 @@ figure svg {
   vertical-align: -6px;
 }
 
-/* 圖片尺寸只依位置設定：正文 24px，表格內 48px，表格內的名稱清單 (效果說明、固定遺物欄) 24px */
+/* 圖片尺寸只依位置設定：正文 24px，表格內 48px，表格內的名稱清單 (效果說明、種類欄) 24px */
 td .icon {
   width: 48px;
   height: 48px;
@@ -332,16 +332,16 @@ td.value {
   white-space: normal;
 }
 
-/* 固定遺物欄：每個遺物一行，遺物名稱可換行 */
-td.relics {
-  min-width: 9em;
+/* 種類欄：每個種類或固定遺物一行，不換行 (最長的內容約 10 字，例如「一般：基本、+1、+2」) */
+td.kind {
+  white-space: nowrap;
 }
 
-td.relics .entry {
+td.kind .entry {
   display: block;
 }
 
-td.relics .entry + .entry {
+td.kind .entry + .entry {
   margin-top: 8px;
 }
 

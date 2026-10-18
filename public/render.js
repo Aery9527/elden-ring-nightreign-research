@@ -93,9 +93,11 @@ function tierText(data, effect, tierNumber) {
   return `${statName(data, effect.modifier.stat)} ${formatAmount(data, effect.modifier.unit, tier.value)}`;
 }
 
-function stackingParts(data, stacking) {
+// 增益的可否疊加由文字色調表示 (見圖例)，只有來源分歧時列出各來源的說法；
+// 負面效果一律為紅色，色調無法表示可否疊加，因此 showStacks 為真時一律列出。
+function stackingParts(data, stacking, showStacks) {
   if (!stacking) return [];
-  const parts = [ruleLabel(data, "stacks", stacking.stacks)];
+  const parts = showStacks || isConflict(stacking.stacks) ? [ruleLabel(data, "stacks", stacking.stacks)] : [];
   if ("acrossTiers" in stacking) parts.push(ruleLabel(data, "acrossTiers", stacking.acrossTiers));
   if (stacking.stacks === true) parts.push(ruleLabel(data, "combine", stacking.combine));
   return parts;
@@ -108,10 +110,6 @@ function curseParts(data, holder) {
   return [holder.requiresCurse === true ? el("span", { class: "tone-debuff" }, label) : label];
 }
 
-function availabilityParts(data, holder) {
-  return "availability" in holder ? [ruleLabel(data, "availability", holder.availability)] : [];
-}
-
 // 以分隔字串串接文字或節點，例如 [a, b] → [a, "；", b]。
 function joinParts(parts, separator) {
   return parts.flatMap((part, index) => (index > 0 ? [separator, ...part] : part));
@@ -119,23 +117,24 @@ function joinParts(parts, separator) {
 
 const textOf = (part) => (typeof part === "string" ? part : part.textContent);
 
-// 規則順序：等同值、取得方式、各級規則、疊加、負面效果。各級規則記在 tier 上，相同的等級合併列出，例如「+1、+2：一般遺物」。
+// 規則順序：等同值、各級規則、疊加、負面效果。各級規則記在 tier 上，相同的等級合併列出，例如「+3、+4：必伴隨負面效果」。
+// 取得方式改由種類欄呈現。
 // 等同值是增益數值，依詞條色調上色；其餘規則維持小字顏色。
 function ruleNodes(data, effect) {
   const { labels } = data;
   if (!effect.stacking && !effect.tiers?.every((tier) => tier.stacking)) {
     throw new Error(`效果缺少疊加規則：${effect.name.en}`);
   }
+  const showStacks = isDemerit(data, effect);
   const parts = [];
   if (effect.equivalent) {
     const { stat, unit, value } = effect.equivalent;
     const text = `${labels.equivalent}${statName(data, stat)} ${formatAmount(data, unit, value)}`;
     parts.push([toned(data, effect, effectStacks(effect), text)]);
   }
-  parts.push(...availabilityParts(data, effect).map((part) => [part]));
   const byRule = new Map();
   for (const tier of effect.tiers ?? []) {
-    const tierParts = [...availabilityParts(data, tier), ...stackingParts(data, tier.stacking), ...curseParts(data, tier)];
+    const tierParts = [...stackingParts(data, tier.stacking, showStacks), ...curseParts(data, tier)];
     const key = tierParts.map(textOf).join("，");
     if (!key) continue;
     const entry = byRule.get(key) ?? { nodes: joinParts(tierParts.map((part) => [part]), "，"), tiers: [] };
@@ -143,13 +142,23 @@ function ruleNodes(data, effect) {
     byRule.set(key, entry);
   }
   for (const { nodes, tiers } of byRule.values()) parts.push([`${tiers.join("、")}：`, ...nodes]);
-  parts.push(...stackingParts(data, effect.stacking).map((part) => [part]), ...curseParts(data, effect).map((part) => [part]));
+  parts.push(...stackingParts(data, effect.stacking, showStacks).map((part) => [part]), ...curseParts(data, effect).map((part) => [part]));
   return joinParts(parts, "；");
 }
 
+// 規則小字；沒有任何規則時不輸出，避免留下空行。
+function ruleSub(data, effect) {
+  const nodes = ruleNodes(data, effect);
+  return nodes.length ? [el("span", { class: "sub" }, ...nodes)] : [];
+}
+
 // 文字色調：負面效果大類的詞條為紅色；增益依自身可否疊加，可疊加為藍色、不可疊加為綠色；未核實或來源分歧不上色。
+function isDemerit(data, effect) {
+  return lookup(data.subcategories, effect.subcategory, "子分類").category === "demerit";
+}
+
 function toneClass(data, effect, stacks) {
-  if (lookup(data.subcategories, effect.subcategory, "子分類").category === "demerit") return "tone-debuff";
+  if (isDemerit(data, effect)) return "tone-debuff";
   if (stacks === true) return "tone-stack";
   if (stacks === false) return "tone-solo";
   return null;
@@ -218,7 +227,7 @@ function valueEntries(data, ids) {
       "span",
       { class: "entry" },
       toned(data, effect, effectStacks(effect), effectText(data, effect)),
-      el("span", { class: "sub" }, ...ruleNodes(data, effect))
+      ...ruleSub(data, effect)
     );
   });
 }
@@ -239,14 +248,15 @@ function tierEntries(data, effect, hasDetail) {
   const { stat, unit, values } = tierDisplay(effect);
   const line = (picked) =>
     `${statName(data, stat)} ${picked.map((value) => (value === undefined ? "？" : formatAmount(data, unit, value))).join("／")}`;
-  const rules = el("span", { class: "sub" }, ...ruleNodes(data, effect));
+  const rules = ruleSub(data, effect);
   const stacks = effectStacks(effect);
   const sourceSets = new Map();
   for (const value of values.filter(isConflict)) {
     for (const candidate of value.conflict) sourceSets.set(candidate.sources.join(" "), candidate.sources);
   }
   if (sourceSets.size === 0) {
-    return [el("span", { class: "entry" }, ...(hasDetail ? [] : [toned(data, effect, stacks, line(values))]), rules)];
+    const nodes = [...(hasDetail ? [] : [toned(data, effect, stacks, line(values))]), ...rules];
+    return nodes.length ? [el("span", { class: "entry" }, ...nodes)] : [];
   }
   const entries = [...sourceSets.entries()].map(([key, sources]) => {
     const picked = values.map((value) =>
@@ -259,7 +269,7 @@ function tierEntries(data, effect, hasDetail) {
       el("span", { class: "sub" }, `${data.labels.conflict}：`, ...sourceLinks(data, sources))
     );
   });
-  return [...entries, el("span", { class: "entry" }, rules)];
+  return rules.length ? [...entries, el("span", { class: "entry" }, ...rules)] : entries;
 }
 
 // 例：生命力 +1 與生命力 +3 合計生命力 +4，HP 上限 +80。疊加規則未知或數值未定時，不輸出計算結果。
@@ -328,7 +338,12 @@ function effectEntries(data, key, effect) {
   let values;
   if (effect.modifier && effect.tiers) values = tierEntries(data, effect, hasDetail);
   else if (effect.modifier && !hasDetail) values = valueEntries(data, [key]);
-  else values = [el("span", { class: "entry" }, el("span", { class: "sub" }, ...ruleNodes(data, effect)))];
+  else {
+    // 沒有說明也沒有結構化數值時標示「未載明數值」，並依色調上色，讓可否疊加仍可辨識。
+    const placeholder = hasDetail || effect.modifier ? [] : [toned(data, effect, effectStacks(effect), data.labels.noValue)];
+    const nodes = [...placeholder, ...ruleSub(data, effect)];
+    values = nodes.length ? [el("span", { class: "entry" }, ...nodes)] : [];
+  }
   const extras = [];
   // 限定角色與所在子分類的角色相同時 (角色專屬詞條) 不重複列出。
   const subCharacter = data.subcategories[effect.subcategory].character;
@@ -339,10 +354,27 @@ function effectEntries(data, key, effect) {
   return [...details, ...values, ...extras];
 }
 
-// 固定遺物欄：每個固定遺物一行，附遺物圖示；隨機詞條顯示「—」。
-function relicEntries(data, effect) {
-  if (!effect.relics) return ["—"];
-  return effect.relics.map((relic) => el("span", { class: "entry" }, iconNode(data, relic.icon, "24"), relic.zh));
+// 取得方式對應的種類；一般與深層遺物兩者皆列。
+const KINDS = { "standard-relic": ["standard-relic"], "deep-relic": ["deep-relic"], "both-relics": ["standard-relic", "deep-relic"] };
+
+// 種類欄：一般、深層各一行；固定遺物列出遺物圖示與名稱。分級詞條只有部分等級屬於某種類時列出等級，例如「深層：+2、+3、+4」。
+// 取得方式尚未核實或來源分歧時顯示對應狀態。
+function kindEntries(data, effect) {
+  if (effect.relics) return effect.relics.map((relic) => el("span", { class: "entry" }, iconNode(data, relic.icon, "24"), relic.zh));
+  const tiered = !("availability" in effect) && effect.tiers;
+  const holders = tiered ? effect.tiers : [effect];
+  const lines = new Map();
+  for (const holder of holders) {
+    const kinds = KINDS[holder.availability];
+    const names = kinds ? kinds.map((kind) => lookup(data.labels.kinds, kind, "種類")) : [ruleLabel(data, "availability", holder.availability)];
+    for (const name of names) {
+      if (!lines.has(name)) lines.set(name, []);
+      if (tiered) lines.get(name).push(tierLabel(data, holder.tier));
+    }
+  }
+  return [...lines].map(([name, tiers]) =>
+    el("span", { class: "entry" }, tiered && tiers.length < holders.length ? `${name}：${tiers.join("、")}` : name)
+  );
 }
 
 // <tbody data-relic-table="子分類鍵">：依資料檔順序列出該子分類的全部效果。
@@ -356,7 +388,7 @@ function relicRows(data, subcategoryId) {
         { id: `effect-${key}` },
         el("td", { class: "item" }, itemName(data, "effect", key)),
         el("td", { class: "value" }, ...effectEntries(data, key, effect)),
-        el("td", { class: "relics" }, ...relicEntries(data, effect))
+        el("td", { class: "kind" }, ...kindEntries(data, effect))
       )
     );
   if (rows.length === 0) throw new Error(`子分類沒有效果：${subcategoryId}`);

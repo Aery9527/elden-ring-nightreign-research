@@ -557,6 +557,11 @@
       "null": "是否必伴隨負面效果尚未核實",
       "conflict": "是否必伴隨負面效果來源分歧"
     },
+    "kinds": {
+      "standard-relic": "一般",
+      "deep-relic": "深層"
+    },
+    "noValue": "未載明數值",
     "equivalent": "等同",
     "conflict": "來源分歧",
     "unverified": "尚未核實",
