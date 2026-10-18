@@ -264,7 +264,7 @@ figure svg {
   vertical-align: -6px;
 }
 
-/* 圖片尺寸只依位置設定：正文 24px，表格內 48px，表格內效果說明的名稱清單 24px */
+/* 圖片尺寸只依位置設定：正文 24px，表格內 48px，表格內的名稱清單 (效果說明、固定遺物欄) 24px */
 td .icon {
   width: 48px;
   height: 48px;
@@ -320,6 +320,19 @@ td.value {
 /* 社群詳細說明可能很長，詞條一覽的效果欄允許換行 */
 [data-relic-table] td.value .entry {
   white-space: normal;
+}
+
+/* 固定遺物欄：每個遺物一行，遺物名稱可換行 */
+td.relics {
+  min-width: 9em;
+}
+
+td.relics .entry {
+  display: block;
+}
+
+td.relics .entry + .entry {
+  margin-top: 8px;
 }
 
 /* 沒有可用遊戲內圖片時保留與圖片相同的空位 */

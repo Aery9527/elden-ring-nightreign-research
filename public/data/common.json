@@ -562,8 +562,7 @@
     "unverified": "尚未核實",
     "tierBase": "基本",
     "iconMissing": "沒有可用的遊戲內圖示",
-    "characters": "限定角色",
-    "relics": "固定遺物"
+    "characters": "限定角色"
   },
   "sources": {
     "reliquary-json": {

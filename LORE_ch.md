@@ -64,7 +64,7 @@
   - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；首頁以 `<span data-icon-sources>` 列出全站圖示的檔案頁。
   - 同一種編排位置的圖片維持相同大小；圖片一律使用 `.icon` class，尺寸只在 `public/styles.css` 依位置設定，不在個別圖片上另外調整：
     - 表格內：48px (`td .icon`)。
-    - 表格內效果說明的名稱清單：24px (`td .entry .icon`)。
+    - 表格內的名稱清單 (效果說明、固定遺物欄)：24px (`td .entry .icon`)。
     - 正文內：24px (`.icon`)。
     - 出現新的編排方式時，先在 `public/styles.css` 新增該位置的尺寸規則。
     - `<img>` 的 `width`/`height` 屬性與該位置的尺寸一致。

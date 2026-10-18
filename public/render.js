@@ -269,10 +269,13 @@ function effectEntries(data, key, effect) {
     const characters = effect.characters.map((id) => lookup(data.characters, id, "角色"));
     extras.push(namedList(data, data.labels.characters, characters.map((c) => ({ icon: c.icon, name: c.name.zh }))));
   }
-  if (effect.relics) {
-    extras.push(namedList(data, data.labels.relics, effect.relics.map((r) => ({ icon: r.icon, name: r.zh }))));
-  }
   return [...detailEntries(data, effect), ...values, ...extras];
+}
+
+// 固定遺物欄：每個固定遺物一行，附遺物圖示；隨機詞條顯示「—」。
+function relicEntries(data, effect) {
+  if (!effect.relics) return ["—"];
+  return effect.relics.map((relic) => el("span", { class: "entry" }, iconNode(data, relic.icon, "24"), relic.zh));
 }
 
 // <tbody data-relic-table="子分類鍵">：依資料檔順序列出該子分類的全部效果。
@@ -285,7 +288,8 @@ function relicRows(data, subcategoryId) {
         "tr",
         { id: `effect-${key}` },
         el("td", { class: "item" }, itemName(data, "effect", key)),
-        el("td", { class: "value" }, ...effectEntries(data, key, effect))
+        el("td", { class: "value" }, ...effectEntries(data, key, effect)),
+        el("td", { class: "relics" }, ...relicEntries(data, effect))
       )
     );
   if (rows.length === 0) throw new Error(`子分類沒有效果：${subcategoryId}`);

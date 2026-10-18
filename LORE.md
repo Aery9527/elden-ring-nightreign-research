@@ -64,7 +64,7 @@
   - Each icon in [public/data/common.json](public/data/common.json) records its wiki file page in `page`; the home page lists the file pages of every icon on the site with `<span data-icon-sources>`.
   - Images in the same layout position MUST keep the same size. Every image uses the `.icon` class, and its size is set only in `public/styles.css` by position, never adjusted on an individual image:
     - Inside a table: 48px (`td .icon`).
-    - In a name list inside a table entry: 24px (`td .entry .icon`).
+    - In a name list inside a table entry, including the fixed-relic column: 24px (`td .entry .icon`).
     - In body text: 24px (`.icon`).
     - When a new layout appears, first add a size rule for that position in `public/styles.css`.
     - The `width`/`height` attributes of `<img>` match the size for its position.
