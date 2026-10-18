@@ -248,9 +248,8 @@ function groupTiers(rows) {
   return result;
 }
 
-// 社群說明 → 網站說明：與遊戲參數不符者改用依參數撰寫的文字並標示來源，其餘用翻譯。
+// 社群說明 → 網站說明：與遊戲參數不符或資料集沒有說明 (source 為 null) 者改用依參數撰寫的文字並標示來源，其餘用翻譯。
 function translate(gameId, en) {
-  if (en === null) return undefined;
   const correction = corrections[gameId];
   if (correction) {
     if (details[gameId]) return fail(`效果 ${gameId} 同時有翻譯與參數修正，只能保留一種`);
@@ -261,6 +260,7 @@ function translate(gameId, en) {
     usedCorrections.add(gameId);
     return { zh: correction.zh, en: correction.en, sources: correction.sources ?? ["game-params"] };
   }
+  if (en === null) return undefined;
   const entry = details[gameId];
   if (!entry) return fail(`效果 ${gameId} 缺少繁中翻譯`);
   if (entry.en !== en) return fail(`效果 ${gameId} 的英文原文已變動，需重新翻譯`);
@@ -405,7 +405,7 @@ for (const effect of effects) {
 }
 for (const key of curatedByIds.values()) fail(`人工整理的效果 ${key} 沒有對應的遊戲效果`);
 for (const gameId of Object.keys(details)) if (!usedDetails.has(gameId)) fail(`翻譯 ${gameId} 沒有對應的效果`);
-for (const gameId of Object.keys(corrections)) if (!usedCorrections.has(gameId)) fail(`參數修正 ${gameId} 沒有對應的社群說明`);
+for (const gameId of Object.keys(corrections)) if (!usedCorrections.has(gameId)) fail(`參數修正 ${gameId} 沒有對應的效果`);
 // 效果內所有來源引用：sources、sourcesFor 各欄位、conflict 候選的 sources。
 function sourceRefs(value) {
   if (Array.isArray(value)) return value.flatMap(sourceRefs);

@@ -118,6 +118,13 @@
           "icon": "relic-silver-tear"
         }
       ],
+      "detail": {
+        "zh": "發動能力時，獲得 18 絕活量表累積量。",
+        "en": "Upon activating the ability, gain 18 ultimate charge",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -1279,6 +1286,13 @@
           "icon": "relic-bone-like-stone"
         }
       ],
+      "detail": {
+        "zh": "發動絕活時，對自己施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害，之後所有來源的傷害 ×1.16，持續 30 秒。",
+        "en": "Upon Art activation, apply 9999 blood loss buildup to self, dealing [0.2x max HP] damage, then 1.16x all sources of damage for 30 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {

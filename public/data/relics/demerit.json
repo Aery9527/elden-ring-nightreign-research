@@ -174,6 +174,13 @@
         "en": "Continuous HP Loss"
       },
       "icon": "hp-down",
+      "detail": {
+        "zh": "每 1 秒減少 2 HP。",
+        "en": "Lose 2 HP every 1 second",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -191,6 +198,13 @@
         "en": "All Resistances Down"
       },
       "icon": "defense-down",
+      "detail": {
+        "zh": "中毒、猩紅腐敗、出血、凍傷、催眠、發狂、驟死抵抗力 -80。",
+        "en": "-80 resistance to poison, scarlet rot, blood loss, frost, sleep, madness and death blight",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -208,6 +222,13 @@
         "en": "Reduced Damage Negation for Flask Usages"
       },
       "icon": "defense-down-plain",
+      "detail": {
+        "zh": "使用聖杯瓶時，受到的所有來源傷害 ×1.45。",
+        "en": "When using a flask, 1.45x damage taken from all sources",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -225,6 +246,13 @@
         "en": "Reduced Damage Negation After Evading"
       },
       "icon": "defense-down-plain",
+      "detail": {
+        "zh": "閃避後的當下，受到的所有來源傷害 ×1.45。",
+        "en": "Right after evading, 1.45x damage taken from all sources",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -242,6 +270,13 @@
         "en": "Repeated Evasions Lower Damage Negation"
       },
       "icon": "defense-down-plain",
+      "detail": {
+        "zh": "連續閃避時，受到的所有來源傷害 ×1.35，持續 15 秒。",
+        "en": "Upon repeated evasions, 1.35x damage taken from all sources for 15 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -457,6 +492,13 @@
         "en": "Lower Attack When Below Max HP"
       },
       "icon": "attack-down-plain",
+      "detail": {
+        "zh": "HP 低於 [HP 上限 ×0.8499] 時，所有來源的傷害 ×0.915。",
+        "en": "When below [0.8499x max HP] HP, 0.915x all sources of damage",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -474,6 +516,13 @@
         "en": "Poison Buildup When Below Max HP"
       },
       "icon": null,
+      "detail": {
+        "zh": "HP 低於 [HP 上限 ×0.8499] 時，每 0.22 秒中毒量表累積 2。",
+        "en": "When below [0.8499x max HP] HP, receive 2 poison buildup every 0.22 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -491,6 +540,13 @@
         "en": "Rot Buildup When Below Max HP"
       },
       "icon": null,
+      "detail": {
+        "zh": "HP 低於 [HP 上限 ×0.8499] 時，每 0.24 秒猩紅腐敗量表累積 2。",
+        "en": "When below [0.8499x max HP] HP, receive 2 scarlet rot buildup every 0.24 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -508,6 +564,13 @@
         "en": "Near Death Reduces Max HP"
       },
       "icon": "hp-down-plain",
+      "detail": {
+        "zh": "瀕死時，HP 上限 ×0.75，持續 60 秒。",
+        "en": "When near death, 0.75x maximum HP for 60 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {

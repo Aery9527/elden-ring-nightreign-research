@@ -1252,6 +1252,13 @@
           "requiresCurse": true,
           "stacking": {
             "stacks": null
+          },
+          "detail": {
+            "zh": "所有來源的物理傷害 ×1.105。",
+            "en": "1.105x all sources of physical damage",
+            "sources": [
+              "game-params"
+            ]
           }
         },
         {
@@ -1299,7 +1306,14 @@
       "tiers": [
         {
           "tier": 2,
-          "gameId": "7001409"
+          "gameId": "7001409",
+          "detail": {
+            "zh": "所有來源的物理傷害 ×1.06。",
+            "en": "1.06x all sources of physical damage",
+            "sources": [
+              "game-params"
+            ]
+          }
         }
       ],
       "sources": [
@@ -1645,6 +1659,13 @@
           "icon": "relic-the-will-of-the-balancers"
         }
       ],
+      "detail": {
+        "zh": "近戰攻擊傷害 ×1.06。",
+        "en": "1.06x melee attack damage",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -1680,6 +1701,13 @@
           "icon": "relic-the-will-of-the-balancers"
         }
       ],
+      "detail": {
+        "zh": "戰技傷害 ×1.15。",
+        "en": "1.15x skill damage",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -1732,6 +1760,13 @@
           "icon": "relic-glass-necklace"
         }
       ],
+      "detail": {
+        "zh": "連續攻擊時，所有來源的傷害分 3 段提升（×1.05、×1.065、×1.09），每段持續 1.5 秒。",
+        "en": "Successive attacks boost all sources of damage in 3 steps (1.05x, 1.065x, 1.09x); each step lasts 1.5 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -1790,7 +1825,14 @@
       "tiers": [
         {
           "tier": 1,
-          "gameId": "7040201"
+          "gameId": "7040201",
+          "detail": {
+            "zh": "致命一擊傷害 ×1.23。",
+            "en": "1.23x critical hit damage",
+            "sources": [
+              "game-params"
+            ]
+          }
         }
       ],
       "sources": [
@@ -1901,6 +1943,13 @@
         "en": "Improved Roar & Breath Attacks"
       },
       "icon": "attack-up",
+      "detail": {
+        "zh": "咆哮與吐息傷害 ×1.15。",
+        "en": "1.15x roar and breath attack damage",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -1925,6 +1974,13 @@
         "en": "Improved Stance-Breaking when Two-Handing"
       },
       "icon": "attack-up",
+      "detail": {
+        "zh": "雙手共持時，造成的削韌 ×1.05。",
+        "en": "1.05x stance damage dealt when two-handing",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -1956,6 +2012,13 @@
           "icon": "relic-grand-tranquil-scene-2"
         }
       ],
+      "detail": {
+        "zh": "雙手共持時，造成的削韌 ×1.05。",
+        "en": "1.05x stance damage dealt when two-handing",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -1980,6 +2043,13 @@
         "en": "Improved Stance-Breaking when Wielding Two Armaments"
       },
       "icon": "attack-up",
+      "detail": {
+        "zh": "雙手各持時，造成的削韌 ×1.05。",
+        "en": "1.05x stance damage dealt when wielding two armaments",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2011,6 +2081,13 @@
           "icon": "relic-grand-burning-scene-1"
         }
       ],
+      "detail": {
+        "zh": "雙手各持時，造成的削韌 ×1.05。",
+        "en": "1.05x stance damage dealt when wielding two armaments",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2042,6 +2119,13 @@
           "icon": "relic-fell-omen-fetish"
         }
       ],
+      "detail": {
+        "zh": "切換武器時，物理傷害 ×1.1，持續 10 秒。",
+        "en": "Upon switching weapons, 1.1x physical damage for 10 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2072,6 +2156,13 @@
           "icon": "relic-night-of-the-lord"
         }
       ],
+      "detail": {
+        "zh": "切換武器時，物理傷害 ×1.1，持續 10 秒。",
+        "en": "Upon switching weapons, 1.1x physical damage for 10 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2112,6 +2203,13 @@
           "icon": "relic-golden-dew"
         }
       ],
+      "detail": {
+        "zh": "附加屬性攻擊力時，魔力、火、雷、聖屬性傷害 ×1.1。",
+        "en": "When an affinity attack is added, 1.1x magic, fire, lightning, and holy damage",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2143,6 +2241,13 @@
           "icon": "relic-besmirched-frame"
         }
       ],
+      "detail": {
+        "zh": "受到攻擊時，所有來源的傷害 ×1.15，持續 10 秒。",
+        "en": "Upon taking damage, 1.15x all sources of damage for 10 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2173,6 +2278,13 @@
           "icon": "relic-night-of-the-beast"
         }
       ],
+      "detail": {
+        "zh": "受到攻擊時，所有來源的傷害 ×1.15，持續 10 秒。",
+        "en": "Upon taking damage, 1.15x all sources of damage for 10 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2224,6 +2336,13 @@
           "icon": "relic-the-night-of-dregs"
         }
       ],
+      "detail": {
+        "zh": "出現異常狀態量表時，所有來源的傷害提升；參數列出 10 個倍率：×1.035、×1.07、×1.11、×1.155、×1.2、×1.25、×1.3、×1.35、×1.4、×1.45。",
+        "en": "While a status ailment gauge appears, all sources of damage increase; the params list 10 rates: 1.035x, 1.07x, 1.11x, 1.155x, 1.2x, 1.25x, 1.3x, 1.35x, 1.4x, 1.45x",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2520,7 +2639,14 @@
         {
           "tier": 0,
           "gameId": "7043100",
-          "availability": "both-relics"
+          "availability": "both-relics",
+          "detail": {
+            "zh": "調香術傷害 ×1.15。",
+            "en": "1.15x damage of perfuming arts",
+            "sources": [
+              "game-params"
+            ]
+          }
         },
         {
           "tier": 1,
@@ -2593,6 +2719,13 @@
           "icon": "relic-night-of-the-miasma"
         }
       ],
+      "detail": {
+        "zh": "受到的物理傷害 ×0.9。",
+        "en": "0.9x physical damage received",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2669,6 +2802,13 @@
           "icon": "relic-cleansing-tear"
         }
       ],
+      "detail": {
+        "zh": "受到的屬性傷害 ×0.94。",
+        "en": "0.94x affinity damage received",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -2936,6 +3076,13 @@
         "en": "Improved Poise & Damage Negation When Knocked Back by Damage"
       },
       "icon": "defense-up",
+      "detail": {
+        "zh": "受到損傷並被彈飛時，受到的傷害 ×0.8、受到的削韌 ×0.8，持續 20 秒。",
+        "en": "Upon being knocked back by damage, 0.8x damage received and 0.8x poise damage received for 20 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -3223,6 +3370,13 @@
           "icon": "relic-blessed-iron-coin"
         }
       ],
+      "detail": {
+        "zh": "每秒恢復 2 HP。",
+        "en": "Restore 2 HP every second",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3282,6 +3436,13 @@
         "en": "HP Recovery From Successful Guarding"
       },
       "icon": "hp-up-blue",
+      "detail": {
+        "zh": "防禦成功時，恢復 15 HP。",
+        "en": "Upon guarding an attack, restore 15 HP",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -3312,7 +3473,14 @@
           "tier": 0,
           "gameId": "7160000",
           "availability": "both-relics",
-          "requiresCurse": false
+          "requiresCurse": false,
+          "detail": {
+            "zh": "突刺反擊成功時，恢復 [HP 上限 ×0.025] HP。",
+            "en": "Upon performing a thrusting counterattack, restore [0.025x max HP] HP",
+            "sources": [
+              "game-params"
+            ]
+          }
         },
         {
           "tier": 1,
@@ -3439,6 +3607,13 @@
           "icon": "relic-the-night-of-dregs"
         }
       ],
+      "detail": {
+        "zh": "周圍陷入腐敗時，每 1.3 秒恢復 [HP 上限 ×0.0015 + 15] HP，持續 15 秒。",
+        "en": "When rot occurs in the vicinity, restore [0.0015x max HP + 15] HP every 1.3 seconds for 15 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3507,6 +3682,13 @@
           "icon": "relic-the-will-of-the-balancers"
         }
       ],
+      "detail": {
+        "zh": "每 5 秒恢復 1 FP。",
+        "en": "Restore 1 FP every 5 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3537,6 +3719,13 @@
           "icon": "relic-old-pocketwatch"
         }
       ],
+      "detail": {
+        "zh": "連續攻擊時，恢復 [FP 上限 ×0.05] FP。",
+        "en": "Upon successive attacks, restore [0.05x max FP] FP",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3568,6 +3757,13 @@
           "icon": "relic-night-of-the-wise"
         }
       ],
+      "detail": {
+        "zh": "連續攻擊時，恢復 [FP 上限 ×0.05] FP。",
+        "en": "Upon successive attacks, restore [0.05x max FP] FP",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3599,6 +3795,13 @@
           "icon": "relic-night-of-the-demon"
         }
       ],
+      "detail": {
+        "zh": "引發異常狀態發狂後，每 0.5 秒恢復 1 FP，持續 25 秒。",
+        "en": "After madness is triggered, restore 1 FP every 0.5 seconds for 25 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3628,6 +3831,13 @@
           "icon": "relic-night-of-the-demon"
         }
       ],
+      "detail": {
+        "zh": "引發異常狀態發狂後，每 0.5 秒恢復 1 FP，持續 25 秒。",
+        "en": "After madness is triggered, restore 1 FP every 0.5 seconds for 25 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3650,6 +3860,13 @@
         "en": "Stamina Recovery upon Landing Attacks"
       },
       "icon": "stamina-up",
+      "detail": {
+        "zh": "攻擊命中時，恢復 2 精力。",
+        "en": "Upon landing an attack, restore 2 stamina",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -3692,7 +3909,14 @@
       "tiers": [
         {
           "tier": 1,
-          "gameId": "7100110"
+          "gameId": "7100110",
+          "detail": {
+            "zh": "攻擊命中時，恢復 3 精力。",
+            "en": "Upon landing an attack, restore 3 stamina",
+            "sources": [
+              "game-params"
+            ]
+          }
         }
       ],
       "sources": [
@@ -3806,6 +4030,13 @@
           "icon": "relic-the-night-of-dregs"
         }
       ],
+      "detail": {
+        "zh": "受到損傷時，武器攻擊附加 25 腐敗累積值，持續 12 秒。",
+        "en": "Upon taking damage, armament attacks build up 25 rot for 12 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -3941,6 +4172,13 @@
           "requiresCurse": false,
           "stacking": {
             "stacks": false
+          },
+          "detail": {
+            "zh": "對陷入中毒的目標，所有來源的傷害 ×1.1。",
+            "en": "1.1x damage of all sources to targets afflicted with poison",
+            "sources": [
+              "game-params"
+            ]
           }
         },
         {
@@ -3950,6 +4188,13 @@
           "requiresCurse": true,
           "stacking": {
             "stacks": null
+          },
+          "detail": {
+            "zh": "對陷入中毒的目標，所有來源的傷害 ×1.16。",
+            "en": "1.16x damage of all sources to targets afflicted with poison",
+            "sources": [
+              "game-params"
+            ]
           }
         },
         {
@@ -3959,6 +4204,13 @@
           "requiresCurse": true,
           "stacking": {
             "stacks": null
+          },
+          "detail": {
+            "zh": "對陷入中毒的目標，所有來源的傷害 ×1.2。",
+            "en": "1.2x damage of all sources to targets afflicted with poison",
+            "sources": [
+              "game-params"
+            ]
           }
         }
       ],
@@ -3987,6 +4239,13 @@
           "requiresCurse": false,
           "stacking": {
             "stacks": false
+          },
+          "detail": {
+            "zh": "對陷入猩紅腐敗的目標，所有來源的傷害 ×1.1。",
+            "en": "1.1x damage of all sources to targets afflicted with scarlet rot",
+            "sources": [
+              "game-params"
+            ]
           }
         },
         {
@@ -3996,6 +4255,13 @@
           "requiresCurse": true,
           "stacking": {
             "stacks": null
+          },
+          "detail": {
+            "zh": "對陷入猩紅腐敗的目標，所有來源的傷害 ×1.16。",
+            "en": "1.16x damage of all sources to targets afflicted with scarlet rot",
+            "sources": [
+              "game-params"
+            ]
           }
         },
         {
@@ -4005,6 +4271,13 @@
           "requiresCurse": true,
           "stacking": {
             "stacks": null
+          },
+          "detail": {
+            "zh": "對陷入猩紅腐敗的目標，所有來源的傷害 ×1.2。",
+            "en": "1.2x damage of all sources to targets afflicted with scarlet rot",
+            "sources": [
+              "game-params"
+            ]
           }
         }
       ],
@@ -4079,6 +4352,13 @@
           "icon": "relic-night-of-the-wise"
         }
       ],
+      "detail": {
+        "zh": "周圍人物陷入中毒、腐敗時，所有來源的傷害 ×1.12，持續 20 秒。",
+        "en": "When poison or rot occurs in the vicinity, 1.12x all sources of damage for 20 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -4113,6 +4393,13 @@
           "icon": "relic-night-of-the-miasma"
         }
       ],
+      "detail": {
+        "zh": "周圍人物陷入凍傷時，隱藏自己的身影，持續 5 秒。",
+        "en": "When frostbite occurs in the vicinity, conceal self for 5 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -4213,6 +4500,13 @@
           "icon": "relic-leather-monocle-case"
         }
       ],
+      "detail": {
+        "zh": "魔法、禱告的有效時間 ×1.5。",
+        "en": "1.5x spell duration",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5369,6 +5663,13 @@
         "en": "Starlight Shards in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「星光碎片」；學者則持有 4 個。",
+        "en": "Start with 2 Starlight Shards, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5399,6 +5700,13 @@
           "icon": "relic-grand-drizzly-scene-2"
         }
       ],
+      "detail": {
+        "zh": "出擊時持有 2 個「星光碎片」；學者則持有 4 個。",
+        "en": "Start with 2 Starlight Shards, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5429,6 +5737,13 @@
           "icon": "relic-grand-drizzly-scene-2"
         }
       ],
+      "detail": {
+        "zh": "出擊時持有 2 個「星光碎片」；學者則持有 4 個。",
+        "en": "Start with 2 Starlight Shards, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5452,6 +5767,13 @@
         "en": "Fire Pots in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「火焰壺」；學者則持有 4 個。",
+        "en": "Start with 2 Fire Pots, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5475,6 +5797,13 @@
         "en": "Magic Pots in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「魔力壺」；學者則持有 4 個。",
+        "en": "Start with 2 Magic Pots, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5498,6 +5827,13 @@
         "en": "Lightning Pots in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「雷電壺」；學者則持有 4 個。",
+        "en": "Start with 2 Lightning Pots, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5521,6 +5857,13 @@
         "en": "Holy Water Pots in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「聖水壺」；學者則持有 4 個。",
+        "en": "Start with 2 Holy Water Pots, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5544,6 +5887,13 @@
         "en": "Poisonbone Darts in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 8 個「獸骨毒飛刀」；學者則持有 12 個。",
+        "en": "Start with 8 Poisonbone Darts, or 12 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5567,6 +5917,13 @@
         "en": "Crystal Darts in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 8 個「結晶飛刀」；學者則持有 12 個。",
+        "en": "Start with 8 Crystal Darts, or 12 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5590,6 +5947,13 @@
         "en": "Throwing Daggers in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 8 個「投擲匕首」；學者則持有 12 個。",
+        "en": "Start with 8 Throwing Daggers, or 12 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5613,6 +5977,13 @@
         "en": "Glintstone Scraps in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 3 個「崩裂輝石」；學者則持有 6 個。",
+        "en": "Start with 3 Glintstone Scraps, or 6 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5636,6 +6007,13 @@
         "en": "Gravity Stone Chunks in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「塊狀重力石」；學者則持有 4 個。",
+        "en": "Start with 2 Gravity Stone Chunks, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5659,6 +6037,13 @@
         "en": "Bewitching Branches in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「魅惑樹枝」；學者則持有 4 個。",
+        "en": "Start with 2 Bewitching Branches, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5682,6 +6067,13 @@
         "en": "Spark Aromatic in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「火花香」；學者則持有 4 個。",
+        "en": "Start with 2 Spark Aromatic, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5705,6 +6097,13 @@
         "en": "Poison Spraymist in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「毒發噴霧」；學者則持有 4 個。",
+        "en": "Start with 2 Poison Spraymist, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5728,6 +6127,13 @@
         "en": "Ironjar Aromatic in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「鐵壺香藥」；學者則持有 4 個。",
+        "en": "Start with 2 Ironjar Aromatic, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5751,6 +6157,13 @@
         "en": "Uplifting Aromatic in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「振奮香」；學者則持有 4 個。",
+        "en": "Start with 2 Uplifting Aromatic, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5774,6 +6187,13 @@
         "en": "Acid Spraymist in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「酸蝕噴霧」；學者則持有 4 個。",
+        "en": "Start with 2 Acid Spraymist, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5797,6 +6217,13 @@
         "en": "Bloodboil Aromatic in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「狂熱香藥」；學者則持有 4 個。",
+        "en": "Start with 2 Bloodboil Aromatic, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "deep-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5820,6 +6247,13 @@
         "en": "Wraith Calling Bell in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 1 個「召咒魂鈴」。",
+        "en": "Start with 1 Wraith Calling Bell",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5837,6 +6271,13 @@
         "en": "Fire Grease in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「火油脂」；學者則持有 4 個。",
+        "en": "Start with 2 Fire Grease, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5860,6 +6301,13 @@
         "en": "Magic Grease in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「魔力油脂」；學者則持有 4 個。",
+        "en": "Start with 2 Magic Grease, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5883,6 +6331,13 @@
         "en": "Lightning Grease in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「雷油脂」；學者則持有 4 個。",
+        "en": "Start with 2 Lightning Grease, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5906,6 +6361,13 @@
         "en": "Holy Grease in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 2 個「聖油脂」；學者則持有 4 個。",
+        "en": "Start with 2 Holy Grease, or 4 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -5929,6 +6391,13 @@
         "en": "Shield Grease in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 3 個「堅盾油脂」；學者則持有 6 個。",
+        "en": "Start with 3 Shield Grease, or 6 as Scholar",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "standard-relic",
       "requiresCurse": false,
       "stacking": {
@@ -6005,6 +6474,13 @@
         "en": "Stonesword Key in possession at start of expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "出擊時持有 1 個「石劍鑰匙」。",
+        "en": "Start with 1 Stonesword Key",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -6560,6 +7036,14 @@
         "en": "Rune discount for shop purchases while on expedition"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "於商店購物時所需的盧恩減少 10%。",
+        "en": "10% rune discount for shop purchases",
+        "sources": [
+          "game-params",
+          "community-sheet"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -6590,6 +7074,14 @@
           "icon": "relic-night-of-the-demon"
         }
       ],
+      "detail": {
+        "zh": "於商店購物時所需的盧恩減少 20%。",
+        "en": "20% rune discount for shop purchases",
+        "sources": [
+          "game-params",
+          "community-sheet"
+        ]
+      },
       "availability": "specific-relic",
       "requiresCurse": false,
       "stacking": {
@@ -6612,6 +7104,13 @@
         "en": "Increased rune acquisition for self and allies"
       },
       "icon": "item-up",
+      "detail": {
+        "zh": "自己與我方人物從敵人獲得的盧恩 ×1.035。",
+        "en": "1.035x rune gain from enemies for self and allies",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -6677,6 +7176,13 @@
         "en": "Defeating enemies restores HP for allies but not for self"
       },
       "icon": "hp-up-blue",
+      "detail": {
+        "zh": "打倒敵人時，為周圍我方人物恢復 20 HP（判定半徑 15）。",
+        "en": "Upon defeating an enemy, restore 20 HP to nearby allies (radius 15)",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {

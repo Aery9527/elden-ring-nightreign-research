@@ -1,4 +1,46 @@
 {
+  "10000": {
+    "source": null,
+    "en": "Upon successive attacks, restore [0.05x max FP] FP",
+    "zh": "連續攻擊時，恢復 [FP 上限 ×0.05] FP。",
+    "params": "SpEffectParam 7036000 accumuOverVal=32、accumuOverFireId=7036001 → 7036001 changeMpRate=-5（即 FP 上限 ×0.05），effectEndurance=1 < motionInterval=4，只恢復 1 次。"
+  },
+  "10001": {
+    "source": null,
+    "en": "Upon taking damage, 1.15x all sources of damage for 10 seconds",
+    "zh": "受到攻擊時，所有來源的傷害 ×1.15，持續 10 秒。",
+    "params": "SpEffectParam 7032200 stateInfo=2374、cycleOccurrenceSpEffectId=7032201 → 7032201（invocationConditionsStateChange1=2374、deleteCriteriaDamage=1）replaceSpEffectId=7032202 → 7032202 physics/magic/fire/thunder/darkAttackRate=1.15、effectEndurance=10。（另有 passive 9762，effectTargetSelfTarget=1，本說明未納入。）"
+  },
+  "10002": {
+    "source": null,
+    "en": "Upon switching weapons, 1.1x physical damage for 10 seconds",
+    "zh": "切換武器時，物理傷害 ×1.1，持續 10 秒。",
+    "params": "SpEffectParam 7035900 stateInfo=2276 → 7035901（invocationConditionsStateChange1=2276）replaceSpEffectId=7035902 → 7035902 physicsAttackRate=1.1、effectEndurance=10。"
+  },
+  "11002": {
+    "source": null,
+    "en": "Upon activating the ability, gain 18 ultimate charge",
+    "zh": "發動能力時，獲得 18 絕活量表累積量。",
+    "params": "AttachEffectParam 11002 passiveSpEffectId_1=7032400、passiveSpEffectId_2=9760（9760 無數值）；SpEffectParam 7032400 stateInfo=2048 → SpEffectParam 7032401 invocationConditionsStateChange1=2048、cycleOccurrenceSpEffectId=7032402 → SpEffectParam 7032402 invocationConditionsStateChange1=2048、ultimateArtGauge=18。"
+  },
+  "17002": {
+    "source": null,
+    "en": "Upon Art activation, apply 9999 blood loss buildup to self, dealing [0.2x max HP] damage, then 1.16x all sources of damage for 30 seconds",
+    "zh": "發動絕活時，對自己施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害，之後所有來源的傷害 ×1.16，持續 30 秒。",
+    "params": "AttachEffectParam 17002 passiveSpEffectId_1=7032900；SpEffectParam 7032900 stateInfo=2206 → SpEffectParam 7032901 invocationConditionsStateChange1=2206、cycleOccurrenceSpEffectId=7032902 → SpEffectParam 7032902 bloodAttackPower=9999、changeHpRate=20、effectEndurance=0.1、replaceSpEffectId=7032903 → SpEffectParam 7032903 physics/magic/fire/thunder/darkAttackRate=1.16、effectEndurance=30。"
+  },
+  "100000": {
+    "source": null,
+    "en": "Upon taking damage, 1.15x all sources of damage for 10 seconds",
+    "zh": "受到攻擊時，所有來源的傷害 ×1.15，持續 10 秒。",
+    "params": "SpEffectParam 7032200 stateInfo=2374、cycleOccurrenceSpEffectId=7032201 → 7032201（invocationConditionsStateChange1=2374、deleteCriteriaDamage=1）replaceSpEffectId=7032202 → 7032202 physics/magic/fire/thunder/darkAttackRate=1.15、effectEndurance=10。"
+  },
+  "6001400": {
+    "source": null,
+    "en": "1.105x all sources of physical damage",
+    "zh": "所有來源的物理傷害 ×1.105。",
+    "params": "AttachEffectParam 6001400 passiveSpEffectId_1=7001403 → SpEffectParam 7001403 physicsAttackRate=1.105。"
+  },
   "6001401": {
     "source": "1.105x all sources of physical damage",
     "en": "1.12x all sources of physical damage",
@@ -23,6 +65,30 @@
     "zh": "擊敗大型營地的強敵後，精力上限 ×1.075（每次擊敗皆可疊加）。",
     "params": "原文地點寫成 great church；效果名稱為 Great Encampment。SpEffectParam 7060601 maxStaminaRate=1.075"
   },
+  "6260000": {
+    "source": null,
+    "en": "1.16x damage of all sources to targets afflicted with poison",
+    "zh": "對陷入中毒的目標，所有來源的傷害 ×1.16。",
+    "params": "AttachEffectParam 6260000 passiveSpEffectId_1=7260001 → SpEffectParam 7260001 physics/magic/fire/thunder/darkAttackRate=1.16，enemyStateInfoTrigger=2。"
+  },
+  "6260001": {
+    "source": null,
+    "en": "1.2x damage of all sources to targets afflicted with poison",
+    "zh": "對陷入中毒的目標，所有來源的傷害 ×1.2。",
+    "params": "AttachEffectParam 6260001 passiveSpEffectId_1=7260002 → SpEffectParam 7260002 physics/magic/fire/thunder/darkAttackRate=1.2，enemyStateInfoTrigger=2。"
+  },
+  "6260300": {
+    "source": null,
+    "en": "1.16x damage of all sources to targets afflicted with scarlet rot",
+    "zh": "對陷入猩紅腐敗的目標，所有來源的傷害 ×1.16。",
+    "params": "AttachEffectParam 6260300 passiveSpEffectId_1=7260301 → SpEffectParam 7260301 physics/magic/fire/thunder/darkAttackRate=1.16，enemyStateInfoTrigger=5。"
+  },
+  "6260301": {
+    "source": null,
+    "en": "1.2x damage of all sources to targets afflicted with scarlet rot",
+    "zh": "對陷入猩紅腐敗的目標，所有來源的傷害 ×1.2。",
+    "params": "AttachEffectParam 6260301 passiveSpEffectId_1=7260302 → SpEffectParam 7260302 physics/magic/fire/thunder/darkAttackRate=1.2，enemyStateInfoTrigger=5。"
+  },
   "6500700": {
     "source": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 25 seconds",
     "en": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 60 seconds (1.5 + 58.5 seconds in params)",
@@ -35,6 +101,42 @@
     "zh": "出擊時持有 1 個「紅漩泡狀露滴」；學者則持有 2 個。",
     "params": "SpEffectParam 7622500 startGoodsId=11020（紅漩泡狀露滴）；原文的 Crimsonspill Crystal Tear 是 11000"
   },
+  "6624000": {
+    "source": null,
+    "en": "Start with 2 Uplifting Aromatic, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「振奮香」；學者則持有 4 個。",
+    "params": "AttachEffectParam 6624000 passiveSpEffectId_1=7624000、passiveSpEffectId_2=7624001；SpEffectParam 7624000 startGoodsId=3500、startingItemAmount=2；SpEffectParam 7624001 startGoodsId=3500、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3500 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "6624100": {
+    "source": null,
+    "en": "Start with 2 Spark Aromatic, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「火花香」；學者則持有 4 個。",
+    "params": "AttachEffectParam 6624100 passiveSpEffectId_1=7624100、passiveSpEffectId_2=7624101；SpEffectParam 7624100 startGoodsId=3510、startingItemAmount=2；SpEffectParam 7624101 startGoodsId=3510、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3510 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "6624200": {
+    "source": null,
+    "en": "Start with 2 Ironjar Aromatic, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「鐵壺香藥」；學者則持有 4 個。",
+    "params": "AttachEffectParam 6624200 passiveSpEffectId_1=7624200、passiveSpEffectId_2=7624201；SpEffectParam 7624200 startGoodsId=3520、startingItemAmount=2；SpEffectParam 7624201 startGoodsId=3520、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3520 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "6624300": {
+    "source": null,
+    "en": "Start with 2 Bloodboil Aromatic, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「狂熱香藥」；學者則持有 4 個。",
+    "params": "AttachEffectParam 6624300 passiveSpEffectId_1=7624300、passiveSpEffectId_2=7624301；SpEffectParam 7624300 startGoodsId=3550、startingItemAmount=2；SpEffectParam 7624301 startGoodsId=3550、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3550 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "6624400": {
+    "source": null,
+    "en": "Start with 2 Poison Spraymist, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「毒發噴霧」；學者則持有 4 個。",
+    "params": "AttachEffectParam 6624400 passiveSpEffectId_1=7624400、passiveSpEffectId_2=7624401；SpEffectParam 7624400 startGoodsId=3580、startingItemAmount=2；SpEffectParam 7624401 startGoodsId=3580、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3580 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "6624500": {
+    "source": null,
+    "en": "Start with 2 Acid Spraymist, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「酸蝕噴霧」；學者則持有 4 個。",
+    "params": "AttachEffectParam 6624500 passiveSpEffectId_1=7624500、passiveSpEffectId_2=7624501；SpEffectParam 7624500 startGoodsId=3610、startingItemAmount=2；SpEffectParam 7624501 startGoodsId=3610、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3610 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
   "6645000": {
     "source": "+5 vigor, -11 mind at level 12-15\n+1 vigor, -1 mind at level 1",
     "en": "+5 vigor, +5 endurance, -11 mind at level 12-15\n+1 vigor, +1 endurance, -1 mind at level 1",
@@ -46,6 +148,132 @@
     "en": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 mind, +1 faith, -2 strength at level 1",
     "zh": "等級 12-15：集中力 +9、信仰 +12、力氣 -15；等級 1：集中力 +1、信仰 +1、力氣 -2。",
     "params": "HeroStatusParam 309100（等級 1）集中力 +1、生命力 0、信仰 +1、力氣 -2"
+  },
+  "6850200": {
+    "source": null,
+    "en": "-80 resistance to poison, scarlet rot, blood loss, frost, sleep, madness and death blight",
+    "zh": "中毒、猩紅腐敗、出血、凍傷、催眠、發狂、驟死抵抗力 -80。",
+    "params": "AttachEffectParam 6850200 passiveSpEffectId_1=6850200；SpEffectParam 6850200 changePoison/Disease/Blood/Curse/Freeze/Sleep/MadnessResistPoint=-80（Disease = 猩紅腐敗、Curse = 驟死、Freeze = 凍傷）。"
+  },
+  "6850500": {
+    "source": null,
+    "en": "Lose 2 HP every 1 second",
+    "zh": "每 1 秒減少 2 HP。",
+    "params": "AttachEffectParam 6850500 passiveSpEffectId_1=6850500；SpEffectParam 6850500 changeHpPoint=2（正值 = 減少）、motionInterval=1。"
+  },
+  "6850700": {
+    "source": null,
+    "en": "Right after evading, 1.45x damage taken from all sources",
+    "zh": "閃避後的當下，受到的所有來源傷害 ×1.45。",
+    "params": "AttachEffectParam 6850700 passiveSpEffectId_1=6850700；SpEffectParam 6850700 slash/blow/thrust/neutral/magic/fire/thunder/darkDamageCutRate=1.45、invocationConditionsStateChange1=2212（持續時間由狀態決定，參數中沒有）。"
+  },
+  "6850800": {
+    "source": null,
+    "en": "Upon repeated evasions, 1.35x damage taken from all sources for 15 seconds",
+    "zh": "連續閃避時，受到的所有來源傷害 ×1.35，持續 15 秒。",
+    "params": "AttachEffectParam 6850800 passiveSpEffectId_1=6850800、_2=8800201、_3=8800230；SpEffectParam 8800201 accumuOverFireId=8800205 → 8800205 replaceSpEffectId=8800204 → 8800204 stateInfo=2215；SpEffectParam 6850800 invocationConditionsStateChange1=2215、cycleOccurrenceSpEffectId=6850821 → SpEffectParam 6850821 全 8 種 DamageCutRate=1.35、effectEndurance=15（閃避次數門檻在累積器 accumuOverVal=7000000，無法換算，不寫）。"
+  },
+  "6850900": {
+    "source": null,
+    "en": "When using a flask, 1.45x damage taken from all sources",
+    "zh": "使用聖杯瓶時，受到的所有來源傷害 ×1.45。",
+    "params": "AttachEffectParam 6850900 passiveSpEffectId_1=6850900；SpEffectParam 6850900 slash/blow/thrust/neutral/magic/fire/thunder/darkDamageCutRate=1.45、invocationConditionsStateChange1=2352（持續時間由狀態決定，參數中沒有）。"
+  },
+  "6851200": {
+    "source": null,
+    "en": "When below [0.8499x max HP] HP, 0.915x all sources of damage",
+    "zh": "HP 低於 [HP 上限 ×0.8499] 時，所有來源的傷害 ×0.915。",
+    "params": "AttachEffectParam 6851200 passiveSpEffectId_1=6851200；SpEffectParam 6851200 conditionHp=84.99、physics/magic/fire/thunder/darkAttackRate=0.915、magParamChange/miracleParamChange/shamanParamChange=1。"
+  },
+  "6851300": {
+    "source": null,
+    "en": "When below [0.8499x max HP] HP, receive 2 poison buildup every 0.22 seconds",
+    "zh": "HP 低於 [HP 上限 ×0.8499] 時，每 0.22 秒中毒量表累積 2。",
+    "params": "AttachEffectParam 6851300 passiveSpEffectId_1=6851300；SpEffectParam 6851300 conditionHp=84.99、motionInterval=0.22、cycleOccurrenceSpEffectId=6851301 → SpEffectParam 6851301 poizonAttackPower=2。"
+  },
+  "6851400": {
+    "source": null,
+    "en": "When below [0.8499x max HP] HP, receive 2 scarlet rot buildup every 0.24 seconds",
+    "zh": "HP 低於 [HP 上限 ×0.8499] 時，每 0.24 秒猩紅腐敗量表累積 2。",
+    "params": "AttachEffectParam 6851400 passiveSpEffectId_1=6851400；SpEffectParam 6851400 conditionHp=84.99、motionInterval=0.24、cycleOccurrenceSpEffectId=6851401 → SpEffectParam 6851401 diseaseAttackPower=2。"
+  },
+  "6851700": {
+    "source": null,
+    "en": "When near death, 0.75x maximum HP for 60 seconds",
+    "zh": "瀕死時，HP 上限 ×0.75，持續 60 秒。",
+    "params": "AttachEffectParam 6851700 passiveSpEffectId_1=6851700；SpEffectParam 6851700 invocationConditionsStateChange1=2219、cycleOccurrenceSpEffectId=6851703 → SpEffectParam 6851703 maxHpRate=0.75、effectEndurance=60。"
+  },
+  "7001100": {
+    "source": null,
+    "en": "Restore 2 HP every second",
+    "zh": "每秒恢復 2 HP。",
+    "params": "SpEffectParam 7001100 changeHpPoint=-2、motionInterval=1。"
+  },
+  "7001409": {
+    "source": null,
+    "en": "1.06x all sources of physical damage",
+    "zh": "所有來源的物理傷害 ×1.06。",
+    "params": "AttachEffectParam 7001409 passiveSpEffectId_1=7001402 → SpEffectParam 7001402 physicsAttackRate=1.06。"
+  },
+  "7006000": {
+    "source": null,
+    "en": "1.05x stance damage dealt when two-handing",
+    "zh": "雙手共持時，造成的削韌 ×1.05。",
+    "params": "AttachEffectParam passiveSpEffectId_1=8300100 → SpEffectParam 8300100 saAttackPowerRate=1.05，magicSubCategoryChange1=124。"
+  },
+  "7006001": {
+    "source": null,
+    "en": "1.05x stance damage dealt when two-handing",
+    "zh": "雙手共持時，造成的削韌 ×1.05。",
+    "params": "AttachEffectParam passiveSpEffectId_1=8300100 → SpEffectParam 8300100 saAttackPowerRate=1.05，magicSubCategoryChange1=124。"
+  },
+  "7006100": {
+    "source": null,
+    "en": "1.05x stance damage dealt when wielding two armaments",
+    "zh": "雙手各持時，造成的削韌 ×1.05。",
+    "params": "AttachEffectParam passiveSpEffectId_1=8310100 → SpEffectParam 8310100 saAttackPowerRate=1.05，magicSubCategoryChange1=125。"
+  },
+  "7006101": {
+    "source": null,
+    "en": "1.05x stance damage dealt when wielding two armaments",
+    "zh": "雙手各持時，造成的削韌 ×1.05。",
+    "params": "AttachEffectParam passiveSpEffectId_1=8310100 → SpEffectParam 8310100 saAttackPowerRate=1.05，magicSubCategoryChange1=125。"
+  },
+  "7006200": {
+    "source": null,
+    "en": "0.9x physical damage received",
+    "zh": "受到的物理傷害 ×0.9。",
+    "params": "SpEffectParam 7006200 slashDamageCutRate、blowDamageCutRate、thrustDamageCutRate、neutralDamageCutRate=0.9。"
+  },
+  "7006300": {
+    "source": null,
+    "en": "0.94x affinity damage received",
+    "zh": "受到的屬性傷害 ×0.94。",
+    "params": "SpEffectParam 7006300 magicDamageCutRate、fireDamageCutRate、thunderDamageCutRate、darkDamageCutRate=0.94。"
+  },
+  "7006400": {
+    "source": null,
+    "en": "1.5x spell duration",
+    "zh": "魔法、禱告的有效時間 ×1.5。",
+    "params": "SpEffectParam 7006400 extendLifeRate=1.5。"
+  },
+  "7006500": {
+    "source": null,
+    "en": "Restore 1 FP every 5 seconds",
+    "zh": "每 5 秒恢復 1 FP。",
+    "params": "SpEffectParam 7006500 changeMpPoint=-1、motionInterval=5。"
+  },
+  "7006600": {
+    "source": null,
+    "en": "1.06x melee attack damage",
+    "zh": "近戰攻擊傷害 ×1.06。",
+    "params": "SpEffectParam 7006600 physicsAttackRate、magicAttackRate、fireAttackRate、thunderAttackRate、darkAttackRate=1.06，magicSubCategoryChange1=130。"
+  },
+  "7006700": {
+    "source": null,
+    "en": "1.15x skill damage",
+    "zh": "戰技傷害 ×1.15。",
+    "params": "SpEffectParam 7006700 physicsAttackRate、magicAttackRate、fireAttackRate、thunderAttackRate、darkAttackRate=1.15，magicSubCategoryChange1=112、magicSubCategoryChange2=111。"
   },
   "7012000": {
     "source": "While Wings of Salvation is being held in its defensive stance, apply a buff that heals self and allies by [0.15x max HP] HP every 1 second",
@@ -99,6 +327,42 @@
     "zh": "技藝（Suncatcher）發動期間，妖刀進入解放狀態時，恢復 [HP 上限 ×0.05 + 100] HP。",
     "params": "SpEffectParam 7034502（條件 2019）changeHpRate=-5、changeHpPoint=-100"
   },
+  "7035500": {
+    "source": null,
+    "en": "After madness is triggered, restore 1 FP every 0.5 seconds for 25 seconds",
+    "zh": "引發異常狀態發狂後，每 0.5 秒恢復 1 FP，持續 25 秒。",
+    "params": "SpEffectParam 7035500 stateInfo=2279 → 7035501（invocationConditionsStateChange1=2279）cycleOccurrenceSpEffectId=7035502 → 7035502 changeMpPoint=-1、motionInterval=0.5、effectEndurance=25。"
+  },
+  "7035510": {
+    "source": null,
+    "en": "After madness is triggered, restore 1 FP every 0.5 seconds for 25 seconds",
+    "zh": "引發異常狀態發狂後，每 0.5 秒恢復 1 FP，持續 25 秒。",
+    "params": "SpEffectParam 7035510 stateInfo=2376 → 7035511（invocationConditionsStateChange1=2376）cycleOccurrenceSpEffectId=7035512 → 7035512 changeMpPoint=-1、motionInterval=0.5、effectEndurance=25。"
+  },
+  "7035800": {
+    "source": null,
+    "en": "When an affinity attack is added, 1.1x magic, fire, lightning, and holy damage",
+    "zh": "附加屬性攻擊力時，魔力、火、雷、聖屬性傷害 ×1.1。",
+    "params": "SpEffectParam 7035800 magicAttackRate、fireAttackRate、thunderAttackRate、darkAttackRate=1.1，physicsAttackRate=1；限定「附加屬性攻擊力時」的條件取自官方名稱，參數中沒有對應欄位。"
+  },
+  "7035900": {
+    "source": null,
+    "en": "Upon switching weapons, 1.1x physical damage for 10 seconds",
+    "zh": "切換武器時，物理傷害 ×1.1，持續 10 秒。",
+    "params": "SpEffectParam 7035900 stateInfo=2276 → 7035901（invocationConditionsStateChange1=2276）replaceSpEffectId=7035902 → 7035902 physicsAttackRate=1.1、effectEndurance=10。"
+  },
+  "7036000": {
+    "source": null,
+    "en": "Upon successive attacks, restore [0.05x max FP] FP",
+    "zh": "連續攻擊時，恢復 [FP 上限 ×0.05] FP。",
+    "params": "SpEffectParam 7036000 accumuOverVal=32、accumuOverFireId=7036001 → 7036001 changeMpRate=-5（即 FP 上限 ×0.05），effectEndurance=1 < motionInterval=4，只恢復 1 次。"
+  },
+  "7036100": {
+    "source": null,
+    "en": "Upon guarding an attack, restore 15 HP",
+    "zh": "防禦成功時，恢復 15 HP。",
+    "params": "SpEffectParam 7036100 stateInfo=2308 → 7036101（invocationConditionsStateChange1=2308）replaceSpEffectId=7036102 → 7036102 changeHpPoint=-15（effectEndurance=1 < motionInterval=1.1，只恢復 1 次）。"
+  },
   "7036800": {
     "source": "Loathesome Hex buffs self with 1.14x damage of all sources for 40 seconds when used",
     "en": "Loathesome Hex buffs self with 1.18x damage of all sources for 40 seconds when used",
@@ -117,6 +381,36 @@
     "zh": "使用對自身施加增益的禱告時，自身所有來源的物理傷害 ×1.19，持續 60 秒。",
     "params": "SpEffectParam 7037001（條件 2065）physicsAttackRate=1.19、effectEndurance=60"
   },
+  "7037600": {
+    "source": null,
+    "en": "Successive attacks boost all sources of damage in 3 steps (1.05x, 1.065x, 1.09x); each step lasts 1.5 seconds",
+    "zh": "連續攻擊時，所有來源的傷害分 3 段提升（×1.05、×1.065、×1.09），每段持續 1.5 秒。",
+    "params": "SpEffectParam 7037600 accumuOverVal=17、accumuOverFireId=7037604；7037601 accumuOverVal=30、accumuOverFireId=7037605；7037602 accumuOverVal=45、accumuOverFireId=7037606。7037604／7037605／7037606 physics/magic/fire/thunder/darkAttackRate=1.05／1.065／1.09，effectEndurance=1.5（共 3 段）。（7037602 cycleOccurrenceSpEffectId=7037603 → accumuOverFireId=7037607 無數值。）"
+  },
+  "7037700": {
+    "source": null,
+    "en": "While a status ailment gauge appears, all sources of damage increase; the params list 10 rates: 1.035x, 1.07x, 1.11x, 1.155x, 1.2x, 1.25x, 1.3x, 1.35x, 1.4x, 1.45x",
+    "zh": "出現異常狀態量表時，所有來源的傷害提升；參數列出 10 個倍率：×1.035、×1.07、×1.11、×1.155、×1.2、×1.25、×1.3、×1.35、×1.4、×1.45。",
+    "params": "AttachEffectParam 7037700 passiveSpEffectId_2=7037702 → SpEffectParam 7037702 stateInfo=2209（全表唯一）；7039900～7039909 invocationConditionsStateChange1=2209，physics/magic/fire/thunder/darkAttackRate=1.035、1.07、1.11、1.155、1.2、1.25、1.3、1.35、1.4、1.45（共 10 列，spCategory=206）。選擇哪一級的邏輯不在參數中。"
+  },
+  "7040201": {
+    "source": null,
+    "en": "1.23x critical hit damage",
+    "zh": "致命一擊傷害 ×1.23。",
+    "params": "SpEffectParam 7040201 physicsAttackRate、magicAttackRate、fireAttackRate、thunderAttackRate、darkAttackRate=1.23，throwAttackParamChange=1。"
+  },
+  "7043000": {
+    "source": null,
+    "en": "1.15x roar and breath attack damage",
+    "zh": "咆哮與吐息傷害 ×1.15。",
+    "params": "AttachEffectParam 7043000 passiveSpEffectId_1=8380000 → SpEffectParam 8380000 physicsAttackRate、magicAttackRate、fireAttackRate、thunderAttackRate、darkAttackRate=1.15，magicSubCategoryChange1=106、2=116、3=107。"
+  },
+  "7043100": {
+    "source": null,
+    "en": "1.15x damage of perfuming arts",
+    "zh": "調香術傷害 ×1.15。",
+    "params": "AttachEffectParam 7043100 passiveSpEffectId_1=8400000 → SpEffectParam 8400000 physics/magic/fire/thunder/darkAttackRate=1.15，magicSubCategoryChange1=109。"
+  },
   "7060200": {
     "source": "Upon killing a night invader, 1.05x all sources of damage (stacking multiplicatively for each invader killed)",
     "en": "Upon killing a night invader, 1.07x all sources of damage (stacking multiplicatively for each invader killed)",
@@ -129,6 +423,168 @@
     "zh": "裝備 3 把以上弓時，所有來源的傷害 ×1.1。",
     "params": "SpEffectParam 7082400 各屬性 AttackRate=1.1、wepTypeTriggerCount=3"
   },
+  "7082700": {
+    "source": null,
+    "en": "When 3 or more small shields are equipped, +10 vigor",
+    "zh": "裝備 3 把以上小盾時，生命力 +10。",
+    "params": "AttachEffectParam 7082700 passiveSpEffectId_1=7082700；SpEffectParam 7082700 wepTypeTrigger=65、wepTypeTriggerCount=3、addLifeForceStatus=10。"
+  },
+  "7082800": {
+    "source": null,
+    "en": "When 3 or more medium shields are equipped, +10 vigor",
+    "zh": "裝備 3 把以上中盾時，生命力 +10。",
+    "params": "AttachEffectParam 7082800 passiveSpEffectId_1=7082800；SpEffectParam 7082800 wepTypeTrigger=67、wepTypeTriggerCount=3、addLifeForceStatus=10。"
+  },
+  "7082900": {
+    "source": null,
+    "en": "When 3 or more greatshields are equipped, +10 vigor",
+    "zh": "裝備 3 把以上大盾時，生命力 +10。",
+    "params": "AttachEffectParam 7082900 passiveSpEffectId_1=7082900；SpEffectParam 7082900 wepTypeTrigger=69、wepTypeTriggerCount=3、addLifeForceStatus=10。"
+  },
+  "7090100": {
+    "source": null,
+    "en": "Upon defeating an enemy, restore 20 HP to nearby allies (radius 15)",
+    "zh": "打倒敵人時，為周圍我方人物恢復 20 HP（判定半徑 15）。",
+    "params": "AttachEffectParam 7090100 passiveSpEffectId_1=7090100；SpEffectParam 7090100 applyIdOnKillSp=7090103、applyIdOnGetSoul=7090101 → SpEffectParam 7090103／7090101 behaviorId=990901000、effectTargetFriendlyTarget=1 → BehaviorParam_PC 990901000 refType=1、refId=900901000 → Bullet 900901000 hitRadius=15、spEffectId0=7090102 → SpEffectParam 7090102 changeHpPoint=-20（負值 = 恢復）、effectTargetFriendlyTarget=1。"
+  },
+  "7100100": {
+    "source": null,
+    "en": "Upon landing an attack, restore 2 stamina",
+    "zh": "攻擊命中時，恢復 2 精力。",
+    "params": "SpEffectParam 7100100 atkOccurrenceSpEffectId=7100101 → 7100101 changeStaminaPoint=-2（effectEndurance=0.3 < motionInterval=0.4，每次命中 1 次）。"
+  },
+  "7100110": {
+    "source": null,
+    "en": "Upon landing an attack, restore 3 stamina",
+    "zh": "攻擊命中時，恢復 3 精力。",
+    "params": "SpEffectParam 7100110 atkOccurrenceSpEffectId=7100111 → 7100111 changeStaminaPoint=-3（effectEndurance=0.3 < motionInterval=0.4，每次命中 1 次）。"
+  },
+  "7110000": {
+    "source": null,
+    "en": "1.035x rune gain from enemies for self and allies",
+    "zh": "自己與我方人物從敵人獲得的盧恩 ×1.035。",
+    "params": "AttachEffectParam 7110000 passiveSpEffectId_1=7110000；SpEffectParam 7110000 soulRate=1.035。"
+  },
+  "7120900": {
+    "source": null,
+    "en": "Start with 1 Stonesword Key",
+    "zh": "出擊時持有 1 個「石劍鑰匙」。",
+    "params": "AttachEffectParam 7120900 passiveSpEffectId_1=7120900（無第二個被動效果）；SpEffectParam 7120900 startGoodsId=8000、startingItemAmount=1；EquipParamGoods 8000 maxNum=2。"
+  },
+  "7121100": {
+    "source": null,
+    "en": "Start with 2 Fire Pots, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「火焰壺」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7121100 passiveSpEffectId_1=7121100、passiveSpEffectId_2=7121101；SpEffectParam 7121100 startGoodsId=300、startingItemAmount=2；SpEffectParam 7121101 startGoodsId=300、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 300 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7121200": {
+    "source": null,
+    "en": "Start with 2 Magic Pots, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「魔力壺」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7121200 passiveSpEffectId_1=7121200、passiveSpEffectId_2=7121201；SpEffectParam 7121200 startGoodsId=660、startingItemAmount=2；SpEffectParam 7121201 startGoodsId=660、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 660 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7121300": {
+    "source": null,
+    "en": "Start with 2 Lightning Pots, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「雷電壺」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7121300 passiveSpEffectId_1=7121300、passiveSpEffectId_2=7121301；SpEffectParam 7121300 startGoodsId=320、startingItemAmount=2；SpEffectParam 7121301 startGoodsId=320、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 320 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7121400": {
+    "source": null,
+    "en": "Start with 2 Holy Water Pots, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「聖水壺」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7121400 passiveSpEffectId_1=7121400、passiveSpEffectId_2=7121401；SpEffectParam 7121400 startGoodsId=350、startingItemAmount=2；SpEffectParam 7121401 startGoodsId=350、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 350 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7121500": {
+    "source": null,
+    "en": "Start with 8 Poisonbone Darts, or 12 as Scholar",
+    "zh": "出擊時持有 8 個「獸骨毒飛刀」；學者則持有 12 個。",
+    "params": "AttachEffectParam 7121500 passiveSpEffectId_1=7121500、passiveSpEffectId_2=7121501；SpEffectParam 7121500 startGoodsId=1720、startingItemAmount=8；SpEffectParam 7121501 startGoodsId=1720、startingItemAmount=4、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1720 maxNum=8、bagcraftMaxNum=12（= 8+4）。"
+  },
+  "7121600": {
+    "source": null,
+    "en": "Start with 8 Crystal Darts, or 12 as Scholar",
+    "zh": "出擊時持有 8 個「結晶飛刀」；學者則持有 12 個。",
+    "params": "AttachEffectParam 7121600 passiveSpEffectId_1=7121600、passiveSpEffectId_2=7121601；SpEffectParam 7121600 startGoodsId=1740、startingItemAmount=8；SpEffectParam 7121601 startGoodsId=1740、startingItemAmount=4、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1740 maxNum=8、bagcraftMaxNum=12（= 8+4）。"
+  },
+  "7121700": {
+    "source": null,
+    "en": "Start with 8 Throwing Daggers, or 12 as Scholar",
+    "zh": "出擊時持有 8 個「投擲匕首」；學者則持有 12 個。",
+    "params": "AttachEffectParam 7121700 passiveSpEffectId_1=7121700、passiveSpEffectId_2=7121701；SpEffectParam 7121700 startGoodsId=1700、startingItemAmount=8；SpEffectParam 7121701 startGoodsId=1700、startingItemAmount=4、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1700 maxNum=8、bagcraftMaxNum=12（= 8+4）。"
+  },
+  "7121800": {
+    "source": null,
+    "en": "Start with 3 Glintstone Scraps, or 6 as Scholar",
+    "zh": "出擊時持有 3 個「崩裂輝石」；學者則持有 6 個。",
+    "params": "AttachEffectParam 7121800 passiveSpEffectId_1=7121800、passiveSpEffectId_2=7121801；SpEffectParam 7121800 startGoodsId=3050、startingItemAmount=3；SpEffectParam 7121801 startGoodsId=3050、startingItemAmount=3、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3050 maxNum=3、bagcraftMaxNum=6（= 3+3）。"
+  },
+  "7121900": {
+    "source": null,
+    "en": "Start with 2 Gravity Stone Chunks, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「塊狀重力石」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7121900 passiveSpEffectId_1=7121900、passiveSpEffectId_2=7121901；SpEffectParam 7121900 startGoodsId=3070、startingItemAmount=2；SpEffectParam 7121901 startGoodsId=3070、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3070 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7122000": {
+    "source": null,
+    "en": "Start with 2 Bewitching Branches, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「魅惑樹枝」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7122000 passiveSpEffectId_1=7122000、passiveSpEffectId_2=7122001；SpEffectParam 7122000 startGoodsId=3350、startingItemAmount=2；SpEffectParam 7122001 startGoodsId=3350、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 3350 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7122100": {
+    "source": null,
+    "en": "Start with 1 Wraith Calling Bell",
+    "zh": "出擊時持有 1 個「召咒魂鈴」。",
+    "params": "AttachEffectParam 7122100 passiveSpEffectId_1=7122100（無第二個被動效果）；SpEffectParam 7122100 startGoodsId=3080、startingItemAmount=1；EquipParamGoods 3080 maxNum=1。"
+  },
+  "7122200": {
+    "source": null,
+    "en": "Start with 2 Fire Grease, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「火油脂」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7122200 passiveSpEffectId_1=7122200、passiveSpEffectId_2=7122201；SpEffectParam 7122200 startGoodsId=1400、startingItemAmount=2；SpEffectParam 7122201 startGoodsId=1400、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1400 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7122300": {
+    "source": null,
+    "en": "Start with 2 Magic Grease, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「魔力油脂」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7122300 passiveSpEffectId_1=7122300、passiveSpEffectId_2=7122301；SpEffectParam 7122300 startGoodsId=1420、startingItemAmount=2；SpEffectParam 7122301 startGoodsId=1420、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1420 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7122400": {
+    "source": null,
+    "en": "Start with 2 Lightning Grease, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「雷油脂」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7122400 passiveSpEffectId_1=7122400、passiveSpEffectId_2=7122401；SpEffectParam 7122400 startGoodsId=1410、startingItemAmount=2；SpEffectParam 7122401 startGoodsId=1410、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1410 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7122500": {
+    "source": null,
+    "en": "Start with 2 Holy Grease, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「聖油脂」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7122500 passiveSpEffectId_1=7122500、passiveSpEffectId_2=7122501；SpEffectParam 7122500 startGoodsId=1430、startingItemAmount=2；SpEffectParam 7122501 startGoodsId=1430、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1430 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7122600": {
+    "source": null,
+    "en": "Start with 3 Shield Grease, or 6 as Scholar",
+    "zh": "出擊時持有 3 個「堅盾油脂」；學者則持有 6 個。",
+    "params": "AttachEffectParam 7122600 passiveSpEffectId_1=7122600、passiveSpEffectId_2=7122601；SpEffectParam 7122600 startGoodsId=1690、startingItemAmount=3；SpEffectParam 7122601 startGoodsId=1690、startingItemAmount=3、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1690 maxNum=3、bagcraftMaxNum=6（= 3+3）。"
+  },
+  "7126000": {
+    "source": null,
+    "en": "Start with 2 Starlight Shards, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「星光碎片」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7126000 passiveSpEffectId_1=7126000、passiveSpEffectId_2=7126001；SpEffectParam 7126000 startGoodsId=1290、startingItemAmount=2；SpEffectParam 7126001 startGoodsId=1290、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1290 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7126001": {
+    "source": null,
+    "en": "Start with 2 Starlight Shards, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「星光碎片」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7126001 passiveSpEffectId_1=7126000、passiveSpEffectId_2=7126001；SpEffectParam 7126000 startGoodsId=1290、startingItemAmount=2；SpEffectParam 7126001 startGoodsId=1290、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1290 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
+  "7126002": {
+    "source": null,
+    "en": "Start with 2 Starlight Shards, or 4 as Scholar",
+    "zh": "出擊時持有 2 個「星光碎片」；學者則持有 4 個。",
+    "params": "AttachEffectParam 7126002 passiveSpEffectId_1=7126000、passiveSpEffectId_2=7126001；SpEffectParam 7126000 startGoodsId=1290、startingItemAmount=2；SpEffectParam 7126001 startGoodsId=1290、startingItemAmount=2、invocationConditionsStateChange1=2226（2226 = 學者：同一條件見僅限學者的 AttachEffectParam 6647200 → SpEffectParam 7647200）；佐證：EquipParamGoods 1290 maxNum=2、bagcraftMaxNum=4（= 2+2）。"
+  },
   "7150000": {
     "source": "Upon triggering Sixth Sense, gain 18 ultimate charge",
     "en": "Guard counters deal bonus damage based on current HP (currentHealthAttackRate 5; community sheet: current HP / 20)",
@@ -139,11 +595,79 @@
       "community-sheet"
     ]
   },
+  "7160000": {
+    "source": null,
+    "en": "Upon performing a thrusting counterattack, restore [0.025x max HP] HP",
+    "zh": "突刺反擊成功時，恢復 [HP 上限 ×0.025] HP。",
+    "params": "SpEffectParam 7160000 changeHpRate=-2.5（即 HP 上限 ×0.025），invocationConditionsStateChange1=2106；+1 版 7160001 changeHpRate=-3.3 對應現有說明 0.033x。"
+  },
+  "7170100": {
+    "source": null,
+    "en": "Upon taking damage, armament attacks build up 25 rot for 12 seconds",
+    "zh": "受到損傷時，武器攻擊附加 25 腐敗累積值，持續 12 秒。",
+    "params": "SpEffectParam 7170100 stateInfo=2060、cycleOccurrenceSpEffectId=7170101 → 7170101（invocationConditionsStateChange1=2060、deleteCriteriaDamage=1）replaceSpEffectId=7170104 → cycleOccurrenceSpEffectId=7170102 → 7170102 effectEndurance=12、atkOccurrenceSpEffectId=7170103 → 7170103 diseaseAttackPower=25（左手：7170105 → 7170106 → 7170109 → 7170107 effectEndurance=12 → 7170108 diseaseAttackPower=25）。"
+  },
   "7220000": {
     "source": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with [0.01x max HP] HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x damage taken from all sources",
     "en": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with 1 HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x magic, fire, lightning, and holy damage taken",
     "zh": "技藝（Summon Spirit）依當前出現的靈魂給予自身不同的獨特增益：Helen 使自身每 1 秒恢復 1 HP；Fredrick 使自身所有來源的傷害 ×1.1；Sebastian 使自身受到的魔力、火、雷、聖屬性傷害 ×0.8。",
     "params": "SpEffectParam 7220000 changeHpPoint=-1、changeHpRate=0；7220001 各屬性 AttackRate=1.1；7220002 magic/fire/thunder/darkDamageCutRate=0.8，物理類為 1"
+  },
+  "7230000": {
+    "source": null,
+    "en": "10% rune discount for shop purchases",
+    "zh": "於商店購物時所需的盧恩減少 10%。",
+    "params": "AttachEffectParam 7230000 passiveSpEffectId_1=7230000；SpEffectParam 7230000 runeDiscountValue=10（單位 % 為解讀，與社群表「10/20% discount」一致）。",
+    "sources": [
+      "game-params",
+      "community-sheet"
+    ]
+  },
+  "7230001": {
+    "source": null,
+    "en": "20% rune discount for shop purchases",
+    "zh": "於商店購物時所需的盧恩減少 20%。",
+    "params": "AttachEffectParam 7230001 passiveSpEffectId_1=7230001；SpEffectParam 7230001 runeDiscountValue=20（單位 % 為解讀，與社群表「10/20% discount」一致）。",
+    "sources": [
+      "game-params",
+      "community-sheet"
+    ]
+  },
+  "7240000": {
+    "source": null,
+    "en": "Upon being knocked back by damage, 0.8x damage received and 0.8x poise damage received for 20 seconds",
+    "zh": "受到損傷並被彈飛時，受到的傷害 ×0.8、受到的削韌 ×0.8，持續 20 秒。",
+    "params": "AttachEffectParam 7240000 passive 7240000／7240003／7240006；7240000 → 7240001（triggerEffectOnKnockback_unk=4）、7240003 → 7240004（7）、7240006 → 7240007 → 7240008 → 7240009（effectEndurance 各 0.05，cycleOccurrenceSpEffectId → 7240010（9）、7240011（10）、7240012（11））；以上觸發列 replaceSpEffectId=7240013 → 7240013 effectEndurance=20，slash/blow/thrust/neutral/magic/fire/thunder/darkDamageCutRate=0.8，toughnessDamageCutRate=0.8。"
+  },
+  "7260000": {
+    "source": null,
+    "en": "1.1x damage of all sources to targets afflicted with poison",
+    "zh": "對陷入中毒的目標，所有來源的傷害 ×1.1。",
+    "params": "SpEffectParam 7260000 physics/magic/fire/thunder/darkAttackRate=1.1，enemyStateInfoTrigger=2。"
+  },
+  "7260300": {
+    "source": null,
+    "en": "1.1x damage of all sources to targets afflicted with scarlet rot",
+    "zh": "對陷入猩紅腐敗的目標，所有來源的傷害 ×1.1。",
+    "params": "SpEffectParam 7260300 physics/magic/fire/thunder/darkAttackRate=1.1，enemyStateInfoTrigger=5。"
+  },
+  "7260700": {
+    "source": null,
+    "en": "When frostbite occurs in the vicinity, conceal self for 5 seconds",
+    "zh": "周圍人物陷入凍傷時，隱藏自己的身影，持續 5 秒。",
+    "params": "AttachEffectParam 7260700 passiveSpEffectId_1=7260702 → SpEffectParam 7260702（invocationConditionsStateChange1=2280）cycleOccurrenceSpEffectId=7260703 → 7260703 effectEndurance=5、stateInfo=600。"
+  },
+  "7260800": {
+    "source": null,
+    "en": "When poison or rot occurs in the vicinity, 1.12x all sources of damage for 20 seconds",
+    "zh": "周圍人物陷入中毒、腐敗時，所有來源的傷害 ×1.12，持續 20 秒。",
+    "params": "AttachEffectParam 7260800 passiveSpEffectId_1=7260802 → SpEffectParam 7260802（invocationConditionsStateChange1=380、invocationConditionsStateChange2=2064）cycleOccurrenceSpEffectId=7260803 → 7260803 physics/magic/fire/thunder/darkAttackRate=1.12、effectEndurance=20。"
+  },
+  "7260900": {
+    "source": null,
+    "en": "When rot occurs in the vicinity, restore [0.0015x max HP + 15] HP every 1.3 seconds for 15 seconds",
+    "zh": "周圍陷入腐敗時，每 1.3 秒恢復 [HP 上限 ×0.0015 + 15] HP，持續 15 秒。",
+    "params": "SpEffectParam 7260900（invocationConditionsStateChange1=2064）cycleOccurrenceSpEffectId=7260901 → 7260901 changeHpRate=-0.15（即 HP 上限 ×0.0015）、changeHpPoint=-15、motionInterval=1.3、effectEndurance=15。"
   },
   "7280000": {
     "source": "Increases the duration of the weak point from Marking from 17.5 seconds to 22.5 seconds\n(TODO: verify with in-game testing)",

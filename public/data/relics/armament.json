@@ -2971,6 +2971,13 @@
         "en": "Max HP Up with 3+ Small Shields Equipped"
       },
       "icon": "hp-up",
+      "detail": {
+        "zh": "裝備 3 把以上小盾時，生命力 +10。",
+        "en": "When 3 or more small shields are equipped, +10 vigor",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -3015,6 +3022,13 @@
         "en": "Max HP Up with 3+ Medium Shields Equipped"
       },
       "icon": "hp-up",
+      "detail": {
+        "zh": "裝備 3 把以上中盾時，生命力 +10。",
+        "en": "When 3 or more medium shields are equipped, +10 vigor",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
@@ -3059,6 +3073,13 @@
         "en": "Max HP Up with 3+ Greatshields Equipped"
       },
       "icon": "hp-up",
+      "detail": {
+        "zh": "裝備 3 把以上大盾時，生命力 +10。",
+        "en": "When 3 or more greatshields are equipped, +10 vigor",
+        "sources": [
+          "game-params"
+        ]
+      },
       "availability": "both-relics",
       "requiresCurse": false,
       "stacking": {
