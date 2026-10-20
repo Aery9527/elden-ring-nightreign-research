@@ -148,18 +148,24 @@
         "stacks": true,
         "combine": "multiply"
       },
+      "stats": [
+        "maxHp"
+      ],
       "sources": [
         "reliquary-json"
       ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
+        "stacking.combine": [
+          "reddit-hp-stacking"
+        ]
+      },
       "modifier": {
         "stat": "maxHp",
         "unit": "percent",
         "value": 10
-      },
-      "sourcesFor": {
-        "stacking.combine": [
-          "reddit-hp-stacking"
-        ]
       }
     },
     "max-hp-flat": {
@@ -187,9 +193,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor"
+      ],
       "sources": [
         "eldenpedia-relic-effects"
       ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      },
       "modifier": {
         "stat": "maxHp",
         "unit": "flat",
@@ -219,9 +233,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "maxFp"
+      ],
       "sources": [
         "reliquary-json"
       ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      },
       "modifier": {
         "stat": "maxFp",
         "unit": "percent",
@@ -253,9 +275,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "mind"
+      ],
       "sources": [
         "eldenpedia-relic-effects"
       ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      },
       "modifier": {
         "stat": "maxFp",
         "unit": "flat",
@@ -285,9 +315,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "maxStamina"
+      ],
       "sources": [
         "reliquary-json"
       ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      },
       "modifier": {
         "stat": "maxStamina",
         "unit": "percent",
@@ -319,9 +357,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "endurance"
+      ],
       "sources": [
         "eldenpedia-relic-effects"
       ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      },
       "modifier": {
         "stat": "maxStamina",
         "unit": "flat",
@@ -347,6 +393,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "vigor"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -394,11 +443,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "vigor",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -407,6 +455,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "vigor",
+        "unit": "point"
       }
     },
     "mind-up": {
@@ -423,6 +475,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "mind"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -470,11 +525,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "mind",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -483,6 +537,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "mind",
+        "unit": "point"
       }
     },
     "endurance-up": {
@@ -499,6 +557,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "endurance"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -562,11 +623,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "endurance",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -575,6 +635,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "endurance",
+        "unit": "point"
       }
     },
     "strength-up": {
@@ -591,6 +655,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "strength"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -611,11 +678,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "strength",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -624,6 +690,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "strength",
+        "unit": "point"
       }
     },
     "dexterity-up": {
@@ -640,6 +710,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "dexterity"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -660,11 +733,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "dexterity",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -673,6 +745,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "dexterity",
+        "unit": "point"
       }
     },
     "intelligence-up": {
@@ -689,6 +765,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "intelligence"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -709,11 +788,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "intelligence",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -722,6 +800,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "intelligence",
+        "unit": "point"
       }
     },
     "faith-up": {
@@ -738,6 +820,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "faith"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -758,11 +843,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "faith",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -771,6 +855,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "faith",
+        "unit": "point"
       }
     },
     "arcane-up": {
@@ -787,6 +875,9 @@
         "combine": "add",
         "acrossTiers": true
       },
+      "stats": [
+        "arcane"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -807,11 +898,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "arcane",
-        "unit": "point"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.combine": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -820,6 +910,10 @@
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
         ]
+      },
+      "modifier": {
+        "stat": "arcane",
+        "unit": "point"
       }
     },
     "poise-up": {
@@ -835,6 +929,9 @@
         "combine": null,
         "acrossTiers": true
       },
+      "stats": [
+        "poise"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -870,11 +967,10 @@
       "sources": [
         "reliquary-json"
       ],
-      "modifier": {
-        "stat": "poiseDamageTaken",
-        "unit": "percent"
-      },
       "sourcesFor": {
+        "stats": [
+          "game-params"
+        ],
         "stacking.acrossTiers": [
           "eldenpedia-relic-effects",
           "eldenpedia-relics"
@@ -882,6 +978,10 @@
         "tiers.value": [
           "game-params"
         ]
+      },
+      "modifier": {
+        "stat": "poiseDamageTaken",
+        "unit": "percent"
       }
     },
     "max-fp-increased-for-each-sorcerer-s-rise-unlocked": {
@@ -901,9 +1001,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "maxFp"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "runes-and-item-discovery-increased-for-each-great-enemy-defeated-at-a-fort": {
       "subcategory": "attributes",
@@ -946,9 +1054,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "maxHp"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "max-stamina-increased-for-each-great-enemy-defeated-at-a-great-encampment": {
       "subcategory": "attributes",
@@ -970,9 +1086,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "maxStamina"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "arcane-increased-for-each-great-enemy-defeated-at-a-ruin": {
       "subcategory": "attributes",
@@ -994,9 +1118,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "arcane"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "character-skill-cooldown-reduction": {
       "subcategory": "skills-arts",
@@ -3108,6 +3240,9 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "poise"
+      ],
       "sources": [
         "reliquary-json"
       ],
@@ -3115,6 +3250,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },

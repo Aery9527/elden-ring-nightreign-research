@@ -293,9 +293,18 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "mind"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "wylder-improved-intelligence-and-faith-reduced-strength-and-dexterity": {
       "subcategory": "character-wylder",
@@ -323,9 +332,20 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "strength",
+        "dexterity",
+        "intelligence",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "wylder-character-skill-inflicts-blood-loss": {
       "subcategory": "character-wylder",
@@ -516,9 +536,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "strength",
+        "dexterity"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "guardian-improved-mind-and-faith-reduced-vigor": {
       "subcategory": "character-guardian",
@@ -544,9 +574,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "mind",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "guardian-character-skill-boosts-damage-negation-of-nearby-allies": {
       "subcategory": "character-guardian",
@@ -695,9 +735,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "strength",
+        "dexterity"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "ironeye-improved-arcane-reduced-dexterity": {
       "subcategory": "character-ironeye",
@@ -723,9 +773,18 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "dexterity",
+        "arcane"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "ironeye-character-skill-inflicts-heavy-poison-damage-on-poisoned-enemies": {
       "subcategory": "character-ironeye",
@@ -871,9 +930,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "mind",
+        "strength"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "duchess-improved-mind-and-faith-reduced-intelligence": {
       "subcategory": "character-duchess",
@@ -899,9 +968,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "mind",
+        "intelligence",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "duchess-use-character-skill-for-brief-invulnerability": {
       "subcategory": "character-duchess",
@@ -1049,9 +1128,20 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "mind",
+        "endurance",
+        "intelligence"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "raider-improved-arcane-reduced-vigor": {
       "subcategory": "character-raider",
@@ -1077,9 +1167,18 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "arcane"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "raider-hit-with-character-skill-to-reduce-enemy-attack-power": {
       "subcategory": "character-raider",
@@ -1267,9 +1366,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "mind",
+        "endurance"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "revenant-improved-strength-reduced-faith": {
       "subcategory": "character-revenant",
@@ -1295,9 +1404,18 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "strength",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "revenant-increased-max-fp-upon-ability-activation": {
       "subcategory": "character-revenant",
@@ -1319,9 +1437,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "maxFp"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "recluse-suffer-blood-loss-and-increase-attack-power-upon-art-activation": {
       "subcategory": "character-recluse",
@@ -1467,9 +1593,21 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "endurance",
+        "dexterity",
+        "intelligence",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "recluse-improved-intelligence-and-faith-reduced-mind": {
       "subcategory": "character-recluse",
@@ -1495,9 +1633,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "mind",
+        "intelligence",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "recluse-collect-affinity-residues-to-negate-affinity": {
       "subcategory": "character-recluse",
@@ -1628,9 +1776,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "endurance",
+        "arcane"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "executor-improved-dexterity-and-arcane-reduced-vigor": {
       "subcategory": "character-executor",
@@ -1656,9 +1814,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "dexterity",
+        "arcane"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "executor-slowly-restore-hp-upon-ability-activation": {
       "subcategory": "character-executor",
@@ -1839,9 +2007,18 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "mind"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "scholar-improved-endurance-and-dexterity-reduced-intelligence-and-arcane": {
       "subcategory": "character-scholar",
@@ -1869,9 +2046,20 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "endurance",
+        "dexterity",
+        "intelligence",
+        "arcane"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "scholar-reduced-fp-consumption-when-using-character-skill-on-self": {
       "subcategory": "character-scholar",
@@ -2039,9 +2227,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "vigor",
+        "dexterity",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "undertaker-improved-mind-and-faith-reduced-strength": {
       "subcategory": "character-undertaker",
@@ -2070,9 +2268,19 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "mind",
+        "strength",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "undertaker-executing-art-readies-character-skill": {
       "subcategory": "character-undertaker",

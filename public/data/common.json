@@ -334,21 +334,27 @@
         "zh": "HP 上限",
         "en": "Maximum HP"
       },
-      "icon": "hp-up"
+      "icon": "hp-up",
+      "param": { "SpEffectParam": "maxHpRate" },
+      "base": "vigor"
     },
     "maxFp": {
       "name": {
         "zh": "FP 上限",
         "en": "Maximum FP"
       },
-      "icon": "fp-up"
+      "icon": "fp-up",
+      "param": { "SpEffectParam": "maxMpRate" },
+      "base": "mind"
     },
     "maxStamina": {
       "name": {
         "zh": "精力上限",
         "en": "Maximum Stamina"
       },
-      "icon": "stamina-up"
+      "icon": "stamina-up",
+      "param": { "SpEffectParam": "maxStaminaRate" },
+      "base": "endurance"
     },
     "vigor": {
       "name": {
@@ -356,7 +362,8 @@
         "en": "Vigor"
       },
       "abbr": "VIG",
-      "icon": "hp-up"
+      "icon": "hp-up",
+      "param": { "SpEffectParam": "addLifeForceStatus", "HeroStatusParam": "statVigor" }
     },
     "mind": {
       "name": {
@@ -364,7 +371,8 @@
         "en": "Mind"
       },
       "abbr": "MND",
-      "icon": "fp-up"
+      "icon": "fp-up",
+      "param": { "SpEffectParam": "addWillpowerStatus", "HeroStatusParam": "statMind" }
     },
     "endurance": {
       "name": {
@@ -372,7 +380,8 @@
         "en": "Endurance"
       },
       "abbr": "END",
-      "icon": "stamina-up"
+      "icon": "stamina-up",
+      "param": { "SpEffectParam": "addEndureStatus", "HeroStatusParam": "statEndurance" }
     },
     "strength": {
       "name": {
@@ -380,7 +389,8 @@
         "en": "Strength"
       },
       "abbr": "STR",
-      "icon": "attack-up"
+      "icon": "attack-up",
+      "param": { "SpEffectParam": "addStrengthStatus", "HeroStatusParam": "statStrength" }
     },
     "dexterity": {
       "name": {
@@ -388,7 +398,8 @@
         "en": "Dexterity"
       },
       "abbr": "DEX",
-      "icon": "attack-up"
+      "icon": "attack-up",
+      "param": { "SpEffectParam": "addDexterityStatus", "HeroStatusParam": "statDexterity" }
     },
     "intelligence": {
       "name": {
@@ -396,7 +407,8 @@
         "en": "Intelligence"
       },
       "abbr": "INT",
-      "icon": "spell-up"
+      "icon": "spell-up",
+      "param": { "SpEffectParam": "addMagicStatus", "HeroStatusParam": "statIntelligence" }
     },
     "faith": {
       "name": {
@@ -404,7 +416,8 @@
         "en": "Faith"
       },
       "abbr": "FAI",
-      "icon": "spell-up"
+      "icon": "spell-up",
+      "param": { "SpEffectParam": "addFaithStatus", "HeroStatusParam": "statFaith" }
     },
     "arcane": {
       "name": {
@@ -412,14 +425,16 @@
         "en": "Arcane"
       },
       "abbr": "ARC",
-      "icon": "attack-up"
+      "icon": "attack-up",
+      "param": { "SpEffectParam": "addLuckStatus", "HeroStatusParam": "statArcane" }
     },
     "poise": {
       "name": {
         "zh": "強韌度",
         "en": "Poise"
       },
-      "icon": "defense-up"
+      "icon": "defense-up",
+      "param": { "SpEffectParam": "toughnessDamageCutRate" }
     },
     "poiseDamageTaken": {
       "name": {
@@ -587,6 +602,9 @@
     }
   },
   "labels": {
+    "attributes": {
+      "viaBase": "經由"
+    },
     "armaments": {
       "noTargets": "本次建模範圍內無符合詞條",
       "unverifiedTargets": "條件尚未核實的詞條",

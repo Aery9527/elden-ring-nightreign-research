@@ -4131,11 +4131,17 @@
           "glintstone-staff"
         ]
       },
+      "stats": [
+        "mind"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4193,11 +4199,17 @@
           "sacred-seal"
         ]
       },
+      "stats": [
+        "mind"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4258,6 +4270,9 @@
           "small-shield"
         ]
       },
+      "stats": [
+        "vigor"
+      ],
       "sources": [
         "reliquary-json"
       ],
@@ -4267,6 +4282,9 @@
           "fextralife-relic-effects"
         ],
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4327,6 +4345,9 @@
           "medium-shield"
         ]
       },
+      "stats": [
+        "vigor"
+      ],
       "sources": [
         "reliquary-json"
       ],
@@ -4336,6 +4357,9 @@
           "fextralife-relic-effects"
         ],
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4396,6 +4420,9 @@
           "greatshield"
         ]
       },
+      "stats": [
+        "vigor"
+      ],
       "sources": [
         "reliquary-json"
       ],
@@ -4405,6 +4432,9 @@
           "fextralife-relic-effects"
         ],
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }

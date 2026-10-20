@@ -52,9 +52,18 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "vigor",
+        "arcane"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "reduced-strength-and-intelligence": {
       "subcategory": "demerit-attributes",
@@ -74,9 +83,18 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "strength",
+        "intelligence"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "reduced-dexterity-and-faith": {
       "subcategory": "demerit-attributes",
@@ -96,9 +114,18 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "dexterity",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "reduced-intelligence-and-dexterity": {
       "subcategory": "demerit-attributes",
@@ -118,9 +145,18 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "dexterity",
+        "intelligence"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "reduced-faith-and-strength": {
       "subcategory": "demerit-attributes",
@@ -140,9 +176,18 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "strength",
+        "faith"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "reduced-rune-acquisition": {
       "subcategory": "demerit-attributes",
@@ -576,9 +621,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "maxHp"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     }
   }
 }

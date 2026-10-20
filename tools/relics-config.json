@@ -11,7 +11,8 @@
         "EquipParamAntique": "params/EquipParamAntique.csv",
         "SpEffectParam": "params/SpEffectParam.csv",
         "EquipParamWeapon": "params/EquipParamWeapon.csv",
-        "Magic": "params/Magic.csv"
+        "Magic": "params/Magic.csv",
+        "HeroStatusParam": "params/HeroStatusParam.csv"
       }
     },
     "text": {

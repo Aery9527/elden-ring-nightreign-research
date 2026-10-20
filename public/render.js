@@ -478,6 +478,31 @@ function targetEntries(data, tags) {
   return nodes.length ? nodes : [el("span", { class: "entry sub" }, data.labels.armaments.noTargets)];
 }
 
+// ---------- 能力值 ----------
+
+// 相關能力值 (stats) 含該能力值的遺物效果。目前只顯示記在效果層的 stats；記在各級的 stats 尚無資料，出現時報錯。
+function statEffects(data, statId) {
+  const found = [];
+  for (const [key, effect] of Object.entries(data.effects)) {
+    if ((effect.tiers ?? []).some((tier) => "stats" in tier)) throw new Error(`尚未支援各級不同的相關能力值：${key}`);
+    if (effect.stats?.includes(statId)) found.push({ key, effect });
+  }
+  return found;
+}
+
+// <td data-stat-effects="<stat>">：相關遺物詞條。上限 (有 base) 先列直接改變上限的詞條，再列「經由<基礎能力值>」的詞條。
+function statEntries(data, statId) {
+  const links = (found) => found.map(({ key, effect }) => el("span", { class: "entry" }, effectLink(data, key, effect)));
+  const direct = statEffects(data, statId);
+  const base = lookup(data.stats, statId, "能力值").base;
+  const nodes = links(direct);
+  if (base) {
+    const via = statEffects(data, base).filter(({ key }) => !direct.some((item) => item.key === key));
+    if (via.length) nodes.push(el("span", { class: "entry sub" }, `${data.labels.attributes.viaBase}${statName(data, base)}`), ...links(via));
+  }
+  return nodes.length ? nodes : [el("span", { class: "entry sub" }, data.labels.armaments.noTargets)];
+}
+
 // 武器、法術的圖示記在項目資料 ({ src, page })，不在 common.json。
 function itemIcon(data, item, size) {
   if (!item.icon) return el("span", { class: "icon icon-missing", role: "img", "aria-label": data.labels.iconMissing });
@@ -570,6 +595,7 @@ function render(data) {
   }
   for (const node of document.querySelectorAll("[data-weapon-table]")) node.replaceChildren(...weaponRows(data));
   for (const node of document.querySelectorAll("[data-spell-table]")) node.replaceChildren(...spellRows(data, node.dataset.spellTable));
+  for (const node of document.querySelectorAll("[data-stat-effects]")) node.replaceChildren(...statEntries(data, node.dataset.statEffects));
   for (const node of document.querySelectorAll("[data-game-version]")) node.textContent = data.gameVersion;
   for (const node of document.querySelectorAll("[data-item]")) {
     const [kind, id] = node.dataset.item.split(":");
@@ -661,7 +687,7 @@ function mergeData([common, ...files]) {
 }
 
 // 標籤與引用檢查：物品標籤、遺物相關對象的鍵都要有定義；targets.spell 是法術 ID，有載入法術檔時檢查其存在，
-// 武器搭載的法術亦同。
+// 武器搭載的法術亦同。遺物的相關能力值 (stats) 與上限的基礎能力值 (base) 都要在 stats 定義。
 function checkTags(data, spellsLoaded) {
   // isTargets：只有遺物的 targets 可用 spell (法術 ID)；物品標籤的維度一律要在 tags 定義。
   const check = (tags, owner, isTargets) => {
@@ -676,8 +702,15 @@ function checkTags(data, spellsLoaded) {
     }
   };
   for (const [key, effect] of Object.entries(data.effects)) {
-    for (const holder of [effect, ...(effect.tiers ?? [])]) if (holder.targets) check(holder.targets, `效果 ${key}`, true);
+    for (const holder of [effect, ...(effect.tiers ?? [])]) {
+      if (holder.targets) check(holder.targets, `效果 ${key}`, true);
+      if (!("stats" in holder)) continue;
+      // stats 只由遊戲參數產生，沒有未核實或來源分歧的狀態；出現時報錯，不當成沒有關聯。
+      if (!Array.isArray(holder.stats)) throw new Error(`相關能力值必須是清單（效果 ${key}）`);
+      for (const stat of holder.stats) lookup(data.stats, stat, `能力值（效果 ${key}）`);
+    }
   }
+  for (const [id, stat] of Object.entries(data.stats)) if (stat.base) lookup(data.stats, stat.base, `基礎能力值（${id}）`);
   for (const kind of ["weapons", "spells"]) for (const [id, item] of Object.entries(data[kind])) check(item.tags, `${kind} ${id}`, false);
   if (!spellsLoaded) return;
   for (const [id, weapon] of Object.entries(data.weapons)) {

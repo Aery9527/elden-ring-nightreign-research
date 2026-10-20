@@ -81,7 +81,7 @@ const stackingOf = (stacks) => (stacks === true ? { stacks, combine: null } : { 
 
 async function buildEffects() {
   const params = {};
-  const PARAM_TABLES = ["AttachEffectParam", "AttachEffectTableParam", "AttachEffectFilterParam", "AttachEffectFilterSubCategoryParam", "EquipParamAntique", "SpEffectParam", "EquipParamWeapon"];
+  const PARAM_TABLES = ["AttachEffectParam", "AttachEffectTableParam", "AttachEffectFilterParam", "AttachEffectFilterSubCategoryParam", "EquipParamAntique", "SpEffectParam", "EquipParamWeapon", "HeroStatusParam"];
   for (const key of PARAM_TABLES) {
     const rows = parseCsv(await source("params", key));
     params[key] = key === "AttachEffectTableParam" ? groupById(rows) : byId(rows, key);
@@ -146,6 +146,37 @@ async function buildEffects() {
     return [...found.values()][0] ?? null;
   }
 
+  // 相關能力值 (stats)：遊戲參數直接改變的能力值或上限，欄位對應記在 common.json stats 的 param。
+  // 從三個 passive SpEffect 與 permanentSpEffectId 出發，沿 replace、cycleOccurrence、accumuOver/UnderFire 與分析子效果的引用往下找；
+  // SpEffectParam 欄位中 *Rate 不是 1、其餘不是 0 即算改變。heroStatusModifier 為 X 時，HeroStatusParam 的 X、X+1… 連號列
+  // (各等級節點) 中任一列不是 0 即算改變。結果依 common.json stats 的順序排列。
+  const statFields = (table) => Object.entries(common.stats).filter(([, stat]) => stat.param?.[table]).map(([key, stat]) => [key, stat.param[table]]);
+  const spStats = statFields("SpEffectParam");
+  const heroStats = statFields("HeroStatusParam");
+  const ATTACH_REFS = ["passiveSpEffectId_1", "passiveSpEffectId_2", "passiveSpEffectId_3", "permanentSpEffectId"];
+  const SP_REFS = ["replaceSpEffectId", "cycleOccurrenceSpEffectId", "accumuOverFireId", "accumuUnderFireId", ...ANALYZE];
+  const changed = (field, value) => Number(value) !== (field.endsWith("Rate") ? 1 : 0);
+  function statsOf(param) {
+    const found = new Set();
+    const seen = new Set();
+    const queue = ATTACH_REFS.map((column) => param[column]);
+    while (queue.length) {
+      const id = queue.shift();
+      const sp = params.SpEffectParam.get(id);
+      if (!sp || seen.has(id)) continue;
+      seen.add(id);
+      for (const [key, field] of spStats) if (changed(field, sp[field])) found.add(key);
+      if (Number(sp.heroStatusModifier) > 0) {
+        for (let row = Number(sp.heroStatusModifier); params.HeroStatusParam.has(String(row)); row++) {
+          for (const [key, field] of heroStats) if (Number(params.HeroStatusParam.get(String(row))[field]) !== 0) found.add(key);
+        }
+      }
+      queue.push(...SP_REFS.map((column) => sp[column]));
+    }
+    const keys = Object.keys(common.stats).filter((key) => found.has(key));
+    return keys.length ? keys : null;
+  }
+
   function base(gameId) {
     const param = params.AttachEffectParam.get(gameId);
     if (!param) throw new Error(`遊戲參數沒有效果 ${gameId}`);
@@ -165,6 +196,7 @@ async function buildEffects() {
       icon,
       characters: allowed.length === Object.keys(config.characters).length ? null : allowed,
       targets: targetsOf(param),
+      stats: statsOf(param),
     };
   }
 
@@ -318,11 +350,12 @@ function toEffect(members) {
       requiresCurse: row.requiresCurse,
       stacking: stackingOf(row.stacks),
       targets: row.targets ?? undefined,
+      stats: row.stats ?? undefined,
       detail: markPenalties(row.gameId, translate(row.gameId, row.detailEn)),
     }));
-    for (const field of ["availability", "requiresCurse", "stacking", "targets"]) hoist(effect, tiers, field);
-    if (effect.targets === undefined) delete effect.targets;
-    for (const tier of tiers) for (const field of ["targets", "detail"]) if (tier[field] === undefined) delete tier[field];
+    for (const field of ["availability", "requiresCurse", "stacking", "targets", "stats"]) hoist(effect, tiers, field);
+    for (const field of ["targets", "stats"]) if (effect[field] === undefined) delete effect[field];
+    for (const tier of tiers) for (const field of ["targets", "stats", "detail"]) if (tier[field] === undefined) delete tier[field];
     effect.tiers = tiers;
   } else {
     const detail = markPenalties(first.gameId, translate(first.gameId, first.detailEn));
@@ -331,6 +364,7 @@ function toEffect(members) {
     effect.requiresCurse = first.requiresCurse;
     effect.stacking = stackingOf(first.stacks);
     if (first.targets) effect.targets = first.targets;
+    if (first.stats) effect.stats = first.stats;
   }
   effect.sources = first.sources;
   // 有等級的疊加值來自社群補值時，該欄位來源列出社群來源，以及其餘等級原本給值的來源。
@@ -338,8 +372,10 @@ function toEffect(members) {
     const stackSources = members.flatMap((row) => row.stackSources ?? (row.stacks === null ? [] : row.sources));
     effect.sourcesFor = { "stacking.stacks": [...new Set(stackSources)] };
   }
-  // 加成對象由遊戲參數產生，與效果本身的來源 (例如資料集) 分開記錄。
-  if (members.some((row) => row.targets)) effect.sourcesFor = { ...effect.sourcesFor, targets: ["game-params"] };
+  // 相關對象與相關能力值由遊戲參數產生，與效果本身的來源 (例如資料集) 分開記錄。
+  for (const field of ["targets", "stats"]) {
+    if (members.some((row) => row[field])) effect.sourcesFor = { ...effect.sourcesFor, [field]: ["game-params"] };
+  }
   return effect;
 }
 
@@ -450,7 +486,7 @@ for (const [key, effect] of keyed) {
   for (const id of effect.characters ?? []) if (!common.characters[id]) fail(`效果 ${key} 的角色 ${id} 不在 common.json`);
   for (const id of sourceRefs(effect)) if (!common.sources[id]) fail(`效果 ${key} 的來源 ${id} 不在 common.json`);
   // 規則欄位只能記在效果層或各等級其中一處；人工值與分級產生值同時存在時，頁面會出現互相矛盾的規則。
-  for (const field of ["availability", "requiresCurse", "stacking", "targets"]) {
+  for (const field of ["availability", "requiresCurse", "stacking", "targets", "stats"]) {
     if (field in effect && (effect.tiers ?? []).some((tier) => field in tier)) {
       fail(`效果 ${key} 的 ${field} 同時記在效果層與等級，只能保留一處`);
     }
