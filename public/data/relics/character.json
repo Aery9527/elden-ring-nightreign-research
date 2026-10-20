@@ -1893,9 +1893,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "spellType": [
+          "sorcery",
+          "incantation"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "undertaker-activating-ultimate-art-increases-attack-power": {
       "subcategory": "character-undertaker",

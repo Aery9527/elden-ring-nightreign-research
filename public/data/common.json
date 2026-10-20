@@ -589,6 +589,8 @@
   "labels": {
     "armaments": {
       "noTargets": "本次建模範圍內無符合詞條",
+      "unverifiedTargets": "條件尚未核實的詞條",
+      "conflictTargets": "條件來源分歧的詞條",
       "noSchool": "無已定義系別",
       "unnamed": "未具名",
       "unnamedVariants": "未具名變體"

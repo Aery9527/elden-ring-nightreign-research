@@ -3683,9 +3683,20 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery",
+          "incantation"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "continuous-fp-recovery": {
       "subcategory": "restoration",
@@ -7436,9 +7447,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "4390"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-sorcery-to-carian-greatsword-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7456,9 +7477,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "4430"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-sorcery-to-night-shard-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7476,9 +7507,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "4610"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-sorcery-to-magma-shot-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7496,9 +7537,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "4800"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-sorcery-to-briars-of-punishment-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7516,9 +7567,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "4910"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-incantation-to-wrath-of-gold-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7536,9 +7597,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "6410"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-incantation-to-lightning-spear-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7556,9 +7627,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "6900"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-incantation-to-o-flame-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7576,9 +7657,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "6001"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-incantation-to-beast-claw-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7596,9 +7687,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "6820"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-incantation-to-dragonfire-at-start-of-expedition": {
       "subcategory": "starting-armament-spell",
@@ -7616,9 +7717,19 @@
       "stacking": {
         "stacks": null
       },
+      "targets": {
+        "spell": [
+          "7000"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     }
   }
 }

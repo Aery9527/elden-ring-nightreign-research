@@ -429,7 +429,7 @@ function relicRows(data, subcategoryId) {
 
 // ---------- 武器與法術 ----------
 
-// 物品標籤與遺物效果加成對象 (targets) 的比對：targets 列出的每個維度，物品至少要有一個相同的鍵 (維度間 AND、維度內 OR)。
+// 物品標籤與遺物效果相關對象 (targets) 的比對：targets 列出的每個維度，物品至少要有一個相同的鍵 (維度間 AND、維度內 OR)。
 // 任一維度確定不符 → false；否則有來源分歧 → "conflict"、有未核實 → null；全部符合 → true。
 function matchTargets(tags, targets) {
   let state = true;
@@ -443,7 +443,7 @@ function matchTargets(tags, targets) {
   return state;
 }
 
-// 加成對象與物品標籤相符 (或未核實、來源分歧) 的遺物效果。
+// 相關對象與物品標籤相符 (或未核實、來源分歧) 的遺物效果。
 // 目前只顯示記在效果層的 targets；記在各級的 targets 尚無資料，出現時報錯，不以合併結果帶過。
 function targetEffects(data, tags) {
   const found = [];
@@ -462,17 +462,20 @@ function effectLink(data, key, effect) {
   return el("a", { href: `relics-${category}.html#effect-${key}` }, effect.name.zh);
 }
 
+// 相關遺物詞條：相符者逐條連結；條件尚未核實或來源分歧者只列數量 (粗體)，避免同一狀態的詞條逐列重複。
 function targetEntries(data, tags) {
   const found = targetEffects(data, tags);
-  if (found.length === 0) return [el("span", { class: "entry sub" }, data.labels.armaments.noTargets)];
-  return found.map(({ key, effect, state }) =>
-    el(
-      "span",
-      { class: "entry" },
-      effectLink(data, key, effect),
-      ...(state === true ? [] : ["：", el("span", { class: "tone-unverified" }, state === null ? data.labels.unverified : data.labels.conflict)])
-    )
-  );
+  const matched = found.filter(({ state }) => state === true);
+  const pending = (state, label) => {
+    const count = found.filter((item) => item.state === state).length;
+    return count ? [el("span", { class: "entry" }, el("span", { class: "tone-unverified" }, `${label} ×${count}`))] : [];
+  };
+  const nodes = [
+    ...matched.map(({ key, effect }) => el("span", { class: "entry" }, effectLink(data, key, effect))),
+    ...pending(null, data.labels.armaments.unverifiedTargets),
+    ...pending("conflict", data.labels.armaments.conflictTargets),
+  ];
+  return nodes.length ? nodes : [el("span", { class: "entry sub" }, data.labels.armaments.noTargets)];
 }
 
 // 武器、法術的圖示記在項目資料 ({ src, page })，不在 common.json。
@@ -504,7 +507,7 @@ function carrierEntries(data, spellId) {
   ];
 }
 
-// <tbody data-weapon-table>：每列一個武器種類，列出該種類的具名武器與攻擊力加成詞條。
+// <tbody data-weapon-table>：每列一個武器種類，列出該種類的具名武器與相關遺物詞條。
 function weaponRows(data) {
   return Object.entries(data.tags.weaponType).map(([type, tag]) => {
     const weapons = Object.values(data.weapons)
@@ -539,11 +542,13 @@ function spellRows(data, table) {
       : el("span", {}, `${data.labels.armaments.unnamed}（ID ${id}）`);
     const school = el("td", { class: "school" }, ...tagEntries(data, "spellSchool", spell.tags.spellSchool, data.labels.armaments.noSchool));
     const carriers = el("td", { class: "names" }, ...carrierEntries(data, id));
+    // 法術以自身 ID 比對指定法術的詞條 (targets.spell)
+    const targets = el("td", { class: "targets" }, ...targetEntries(data, { ...spell.tags, spell: [id] }));
     if (table === "unlisted") {
       const type = el("td", { class: "school" }, ...tagEntries(data, "spellType", spell.tags.spellType, ""));
-      return el("tr", { id: `spell-${id}` }, el("td", { class: "item" }, name), type, school, carriers);
+      return el("tr", { id: `spell-${id}` }, el("td", { class: "item" }, name), type, school, carriers, targets);
     }
-    return el("tr", { id: `spell-${id}` }, el("td", { class: "item" }, name), school, carriers, el("td", { class: "targets" }, ...targetEntries(data, spell.tags)));
+    return el("tr", { id: `spell-${id}` }, el("td", { class: "item" }, name), school, carriers, targets);
   });
 }
 
@@ -655,19 +660,25 @@ function mergeData([common, ...files]) {
   return data;
 }
 
-// 標籤與引用檢查：物品標籤、遺物加成對象的鍵都要有定義；有載入法術檔時，武器搭載的法術必須存在。
+// 標籤與引用檢查：物品標籤、遺物相關對象的鍵都要有定義；targets.spell 是法術 ID，有載入法術檔時檢查其存在，
+// 武器搭載的法術亦同。
 function checkTags(data, spellsLoaded) {
-  const check = (tags, owner) => {
+  // isTargets：只有遺物的 targets 可用 spell (法術 ID)；物品標籤的維度一律要在 tags 定義。
+  const check = (tags, owner, isTargets) => {
     for (const [dimension, value] of Object.entries(tags)) {
+      if (isTargets && dimension === "spell") {
+        if (spellsLoaded) for (const id of value) lookup(data.spells, id, `法術（${owner}）`);
+        continue;
+      }
       const defined = lookup(data.tags, dimension, `標籤維度（${owner}）`);
       const keys = Array.isArray(value) ? value : isConflict(value) ? value.conflict.flatMap((c) => c.value) : [];
       for (const key of keys) lookup(defined, key, `標籤（${owner}）`);
     }
   };
   for (const [key, effect] of Object.entries(data.effects)) {
-    for (const holder of [effect, ...(effect.tiers ?? [])]) if (holder.targets) check(holder.targets, `效果 ${key}`);
+    for (const holder of [effect, ...(effect.tiers ?? [])]) if (holder.targets) check(holder.targets, `效果 ${key}`, true);
   }
-  for (const kind of ["weapons", "spells"]) for (const [id, item] of Object.entries(data[kind])) check(item.tags, `${kind} ${id}`);
+  for (const kind of ["weapons", "spells"]) for (const [id, item] of Object.entries(data[kind])) check(item.tags, `${kind} ${id}`, false);
   if (!spellsLoaded) return;
   for (const [id, weapon] of Object.entries(data.weapons)) {
     for (const spell of Object.values(weapon.spells ?? {})) lookup(data.spells, spell, `法術（武器 ${id} 搭載）`);

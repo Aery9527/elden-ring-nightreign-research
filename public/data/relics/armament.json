@@ -315,9 +315,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "dagger"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-dagger-attacks": {
       "subcategory": "armament-dagger",
@@ -336,9 +346,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "dagger"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-daggers-equipped": {
       "subcategory": "armament-dagger",
@@ -357,9 +377,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "dagger"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-daggers": {
       "subcategory": "armament-dagger",
@@ -378,9 +408,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "dagger"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-straight-sword-attack-power": {
       "subcategory": "armament-straight-sword",
@@ -431,9 +471,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "straight-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-straight-sword-attacks": {
       "subcategory": "armament-straight-sword",
@@ -452,9 +502,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "straight-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-straight-swords-equipped": {
       "subcategory": "armament-straight-sword",
@@ -473,9 +533,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "straight-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-straight-swords": {
       "subcategory": "armament-straight-sword",
@@ -494,9 +564,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "straight-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-greatsword-attack-power": {
       "subcategory": "armament-greatsword",
@@ -547,9 +627,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-greatsword-attacks": {
       "subcategory": "armament-greatsword",
@@ -568,9 +658,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-greatswords-equipped": {
       "subcategory": "armament-greatsword",
@@ -589,9 +689,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-greatswords": {
       "subcategory": "armament-greatsword",
@@ -610,9 +720,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-colossal-sword-attack-power": {
       "subcategory": "armament-colossal-sword",
@@ -663,9 +783,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-colossal-sword-attacks": {
       "subcategory": "armament-colossal-sword",
@@ -684,9 +814,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-colossal-swords-equipped": {
       "subcategory": "armament-colossal-sword",
@@ -705,9 +845,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-colossal-swords": {
       "subcategory": "armament-colossal-sword",
@@ -726,9 +876,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-curved-sword-attack-power": {
       "subcategory": "armament-curved-sword",
@@ -779,9 +939,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-curved-sword-attacks": {
       "subcategory": "armament-curved-sword",
@@ -800,9 +970,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-curved-swords-equipped": {
       "subcategory": "armament-curved-sword",
@@ -821,9 +1001,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-curved-swords": {
       "subcategory": "armament-curved-sword",
@@ -842,9 +1032,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-curved-greatsword-attack-power": {
       "subcategory": "armament-curved-greatsword",
@@ -895,9 +1095,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-curved-greatsword-attacks": {
       "subcategory": "armament-curved-greatsword",
@@ -916,9 +1126,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-curved-greatswords-equipped": {
       "subcategory": "armament-curved-greatsword",
@@ -937,9 +1157,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-curved-greatswords": {
       "subcategory": "armament-curved-greatsword",
@@ -958,9 +1188,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "curved-greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-katana-attack-power": {
       "subcategory": "armament-katana",
@@ -1011,9 +1251,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "katana"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-katana-attacks": {
       "subcategory": "armament-katana",
@@ -1032,9 +1282,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "katana"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-katana-equipped": {
       "subcategory": "armament-katana",
@@ -1053,9 +1313,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "katana"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-katana": {
       "subcategory": "armament-katana",
@@ -1074,9 +1344,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "katana"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-twinblade-attack-power": {
       "subcategory": "armament-twinblade",
@@ -1127,9 +1407,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "twinblade"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-twinblade-attacks": {
       "subcategory": "armament-twinblade",
@@ -1148,9 +1438,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "twinblade"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-twinblades-equipped": {
       "subcategory": "armament-twinblade",
@@ -1169,9 +1469,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "twinblade"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-twinblades": {
       "subcategory": "armament-twinblade",
@@ -1190,9 +1500,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "twinblade"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-thrusting-sword-attack-power": {
       "subcategory": "armament-thrusting-sword",
@@ -1243,9 +1563,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-thrusting-sword-attacks": {
       "subcategory": "armament-thrusting-sword",
@@ -1264,9 +1594,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-thrusting-swords-equipped": {
       "subcategory": "armament-thrusting-sword",
@@ -1285,9 +1625,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-thrusting-swords": {
       "subcategory": "armament-thrusting-sword",
@@ -1306,9 +1656,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-heavy-thrusting-sword-attack-power": {
       "subcategory": "armament-heavy-thrusting-sword",
@@ -1359,9 +1719,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "heavy-thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-heavy-thrusting-sword-attacks": {
       "subcategory": "armament-heavy-thrusting-sword",
@@ -1380,9 +1750,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "heavy-thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-heavy-thrusting-swords-equipped": {
       "subcategory": "armament-heavy-thrusting-sword",
@@ -1401,9 +1781,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "heavy-thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-heavy-thrusting-swords": {
       "subcategory": "armament-heavy-thrusting-sword",
@@ -1422,9 +1812,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "heavy-thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-axe-attack-power": {
       "subcategory": "armament-axe",
@@ -1475,9 +1875,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "axe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-axe-attacks": {
       "subcategory": "armament-axe",
@@ -1496,9 +1906,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "axe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-axes-equipped": {
       "subcategory": "armament-axe",
@@ -1517,9 +1937,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "axe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-axes": {
       "subcategory": "armament-axe",
@@ -1538,9 +1968,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "axe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-greataxe-attack-power": {
       "subcategory": "armament-greataxe",
@@ -1591,9 +2031,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greataxe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-greataxe-attacks": {
       "subcategory": "armament-greataxe",
@@ -1612,9 +2062,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greataxe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-greataxes-equipped": {
       "subcategory": "armament-greataxe",
@@ -1633,9 +2093,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greataxe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-greataxes": {
       "subcategory": "armament-greataxe",
@@ -1654,9 +2124,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greataxe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-hammer-attack-power": {
       "subcategory": "armament-hammer",
@@ -1707,9 +2187,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-hammer-attacks": {
       "subcategory": "armament-hammer",
@@ -1728,9 +2218,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-hammers-equipped": {
       "subcategory": "armament-hammer",
@@ -1749,9 +2249,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-hammers": {
       "subcategory": "armament-hammer",
@@ -1770,9 +2280,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-great-hammer-attack-power": {
       "subcategory": "armament-great-hammer",
@@ -1823,9 +2343,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-great-hammer-attacks": {
       "subcategory": "armament-great-hammer",
@@ -1844,9 +2374,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-great-hammers-equipped": {
       "subcategory": "armament-great-hammer",
@@ -1865,9 +2405,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-great-hammers": {
       "subcategory": "armament-great-hammer",
@@ -1886,9 +2436,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-flail-attack-power": {
       "subcategory": "armament-flail",
@@ -1939,9 +2499,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "flail"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-flail-attacks": {
       "subcategory": "armament-flail",
@@ -1960,9 +2530,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "flail"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-flails-equipped": {
       "subcategory": "armament-flail",
@@ -1981,9 +2561,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "flail"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-flails": {
       "subcategory": "armament-flail",
@@ -2002,9 +2592,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "flail"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-spear-attack-power": {
       "subcategory": "armament-spear",
@@ -2055,9 +2655,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-spear-attacks": {
       "subcategory": "armament-spear",
@@ -2076,9 +2686,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-spears-equipped": {
       "subcategory": "armament-spear",
@@ -2097,9 +2717,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-spears": {
       "subcategory": "armament-spear",
@@ -2118,9 +2748,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-great-spear-attack-power": {
       "subcategory": "armament-great-spear",
@@ -2171,9 +2811,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-great-spear-attacks": {
       "subcategory": "armament-great-spear",
@@ -2192,9 +2842,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-great-spears-equipped": {
       "subcategory": "armament-great-spear",
@@ -2213,9 +2873,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-great-spears": {
       "subcategory": "armament-great-spear",
@@ -2234,9 +2904,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "great-spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-halberd-attack-power": {
       "subcategory": "armament-halberd",
@@ -2287,9 +2967,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "halberd"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-halberd-attacks": {
       "subcategory": "armament-halberd",
@@ -2308,9 +2998,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "halberd"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-halberds-equipped": {
       "subcategory": "armament-halberd",
@@ -2329,9 +3029,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "halberd"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-halberds": {
       "subcategory": "armament-halberd",
@@ -2350,9 +3060,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "halberd"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-reaper-attack-power": {
       "subcategory": "armament-reaper",
@@ -2403,9 +3123,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "reaper"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-reaper-attacks": {
       "subcategory": "armament-reaper",
@@ -2424,9 +3154,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "reaper"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-reapers-equipped": {
       "subcategory": "armament-reaper",
@@ -2445,9 +3185,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "reaper"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-reapers": {
       "subcategory": "armament-reaper",
@@ -2466,9 +3216,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "reaper"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-fist-attack-power": {
       "subcategory": "armament-fist",
@@ -2519,9 +3279,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "fist"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-fist-attacks": {
       "subcategory": "armament-fist",
@@ -2540,9 +3310,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "fist"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-fists-equipped": {
       "subcategory": "armament-fist",
@@ -2561,9 +3341,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "fist"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-fists": {
       "subcategory": "armament-fist",
@@ -2582,9 +3372,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "fist"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-claw-attack-power": {
       "subcategory": "armament-claw",
@@ -2635,9 +3435,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "claw"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-claw-attacks": {
       "subcategory": "armament-claw",
@@ -2656,9 +3466,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "claw"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-claws-equipped": {
       "subcategory": "armament-claw",
@@ -2677,9 +3497,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "claw"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-claws": {
       "subcategory": "armament-claw",
@@ -2698,9 +3528,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "claw"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-whip-attack-power": {
       "subcategory": "armament-whip",
@@ -2751,9 +3591,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "whip"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-whip-attacks": {
       "subcategory": "armament-whip",
@@ -2772,9 +3622,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "whip"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-whips-equipped": {
       "subcategory": "armament-whip",
@@ -2793,9 +3653,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "whip"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-whips": {
       "subcategory": "armament-whip",
@@ -2814,9 +3684,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "whip"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-colossal-weapon-attack-power": {
       "subcategory": "armament-colossal-weapon",
@@ -2867,9 +3747,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-weapon"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-colossal-weapon-attacks": {
       "subcategory": "armament-colossal-weapon",
@@ -2888,9 +3778,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-weapon"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-colossal-weapons-equipped": {
       "subcategory": "armament-colossal-weapon",
@@ -2909,9 +3809,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-weapon"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-colossal-weapons": {
       "subcategory": "armament-colossal-weapon",
@@ -2930,9 +3840,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "colossal-weapon"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-bow-attack-power": {
       "subcategory": "armament-bow",
@@ -2986,9 +3906,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "bow"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "fp-restoration-upon-bow-attacks": {
       "subcategory": "armament-bow",
@@ -3007,9 +3937,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "bow"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-attack-power-with-3-bows-equipped": {
       "subcategory": "armament-bow",
@@ -3031,9 +3971,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "bow"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-bows": {
       "subcategory": "armament-bow",
@@ -3052,9 +4002,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "bow"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-greatbows": {
       "subcategory": "armament-greatbow",
@@ -3073,9 +4033,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greatbow"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-crossbows": {
       "subcategory": "armament-crossbow",
@@ -3094,9 +4064,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "crossbow"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-ballistas": {
       "subcategory": "armament-ballista",
@@ -3115,9 +4095,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "ballista"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "max-fp-up-with-3-staves-equipped": {
       "subcategory": "armament-glintstone-staff",
@@ -3136,9 +4126,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "glintstone-staff"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-staves": {
       "subcategory": "armament-glintstone-staff",
@@ -3157,9 +4157,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "glintstone-staff"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "max-fp-up-with-3-sacred-seals-equipped": {
       "subcategory": "armament-sacred-seal",
@@ -3178,9 +4188,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "sacred-seal"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "dormant-power-helps-discover-sacred-seals": {
       "subcategory": "armament-sacred-seal",
@@ -3199,9 +4219,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "sacred-seal"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "max-hp-up-with-3-small-shields-equipped": {
       "subcategory": "armament-small-shield",
@@ -3223,6 +4253,11 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "small-shield"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
@@ -3230,6 +4265,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -3250,9 +4288,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "small-shield"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "max-hp-up-with-3-medium-shields-equipped": {
       "subcategory": "armament-medium-shield",
@@ -3274,6 +4322,11 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "medium-shield"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
@@ -3281,6 +4334,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -3301,9 +4357,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "medium-shield"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "max-hp-up-with-3-greatshields-equipped": {
       "subcategory": "armament-greatshield",
@@ -3325,6 +4391,11 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greatshield"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
@@ -3332,6 +4403,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -3352,9 +4426,19 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "weaponType": [
+          "greatshield"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     }
   }
 }

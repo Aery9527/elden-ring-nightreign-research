@@ -81,7 +81,7 @@ const stackingOf = (stacks) => (stacks === true ? { stacks, combine: null } : { 
 
 async function buildEffects() {
   const params = {};
-  const PARAM_TABLES = ["AttachEffectParam", "AttachEffectTableParam", "AttachEffectFilterParam", "AttachEffectFilterSubCategoryParam", "EquipParamAntique", "SpEffectParam"];
+  const PARAM_TABLES = ["AttachEffectParam", "AttachEffectTableParam", "AttachEffectFilterParam", "AttachEffectFilterSubCategoryParam", "EquipParamAntique", "SpEffectParam", "EquipParamWeapon"];
   for (const key of PARAM_TABLES) {
     const rows = parseCsv(await source("params", key));
     params[key] = key === "AttachEffectTableParam" ? groupById(rows) : byId(rows, key);
@@ -106,33 +106,44 @@ async function buildEffects() {
     return sub;
   }
 
-  // 加成對象 (targets)：只為已核實參數模式的直接攻擊力強化 (SpEffect 攻擊力倍率大於 1) 產生，其他效果不產生。
-  // - 武器種類：triggerOnWepType 對應武器 wepType。
-  // - 法術系別：magicSubCategoryChange1 對應 Magic.subCategory，且只標記魔法 (magParamChange) 或只標記禱告 (miracleParamChange)。
-  // - 魔法／禱告整體：只標記其中一種，且無系別、無武器種類。
-  // 參數值只對應 common.json 已定義的標籤；未定義的值不產生。
+  // 相關對象 (targets)：遊戲參數欄位明確指向的物品類別或物品。檢查三個 passive SpEffect 及其分析子效果 (analyzeSelfLevel1–3)。
+  // - 武器種類：triggerOnWepType；wepTypeTriggerCount > 0 時的 wepTypeTrigger (裝備數量條件)；weaponTypeDiscovery。
+  // - 法術系別：magicSubCategoryChange1 為已定義系別，且只標記魔法 (magParamChange) 或只標記禱告 (miracleParamChange)。
+  // - 魔法／禱告整體：只標記其中一種，三個 magicSubCategoryChange 皆為 0，且沒有武器種類條件。
+  // - FP 消耗：magicConsumptionRate (魔法)、miracleConsumptionRate (禱告) 不是 1。
+  // - 指定法術：startMagicId (出擊時改為該法術)，必須是武器引用的法術。
+  // 參數值只對應 common.json 已定義的標籤；相同條件重複出現時去重，不同條件組時停止。
   const tagByParam = (dimension) => new Map(Object.entries(common.tags[dimension]).map(([key, tag]) => [String(tag.param), key]));
   const weaponTypes = tagByParam("weaponType");
   const spellSchools = tagByParam("spellSchool");
+  const carriedSpells = new Set(
+    [...params.EquipParamWeapon.values()].flatMap((row) => [row.equippedSpell_R1, row.equippedSpell_R2]).filter((id) => id !== "0" && id !== "-1"),
+  );
+  const ANALYZE = ["analyzeSelfLevel1_effectId", "analyzeSelfLevel2_effectId", "analyzeSelfLevel3_effectId"];
   function targetsOf(param) {
-    const found = [];
-    for (const column of ["passiveSpEffectId_1", "passiveSpEffectId_2", "passiveSpEffectId_3"]) {
-      const sp = params.SpEffectParam.get(param[column]);
-      if (!sp || !(Number(sp.physicsAttackRate) > 1)) continue;
+    const found = new Map();
+    const add = (targets) => found.set(JSON.stringify(targets), targets);
+    const passives = ["passiveSpEffectId_1", "passiveSpEffectId_2", "passiveSpEffectId_3"].map((column) => params.SpEffectParam.get(param[column]));
+    const effects = passives.filter(Boolean).flatMap((sp) => [sp, ...ANALYZE.map((column) => params.SpEffectParam.get(sp[column])).filter(Boolean)]);
+    for (const sp of effects) {
+      const typeValues = [sp.triggerOnWepType, Number(sp.wepTypeTriggerCount) > 0 ? sp.wepTypeTrigger : null, sp.weaponTypeDiscovery];
+      const types = typeValues.map((value) => weaponTypes.get(value)).filter(Boolean);
+      for (const type of types) add({ weaponType: [type] });
       const sorcery = sp.magParamChange === "1";
       const spellType = sorcery === (sp.miracleParamChange === "1") ? null : sorcery ? "sorcery" : "incantation";
-      if (sp.triggerOnWepType !== "0" && sp.triggerOnWepType !== "-1") {
-        const type = weaponTypes.get(sp.triggerOnWepType);
-        if (type) found.push({ weaponType: [type] });
-      } else if (sp.magicSubCategoryChange1 !== "0") {
-        const school = spellSchools.get(sp.magicSubCategoryChange1);
-        if (school && spellType) found.push({ spellType: [spellType], spellSchool: [school] });
-      } else if (spellType) {
-        found.push({ spellType: [spellType] });
+      const school = spellSchools.get(sp.magicSubCategoryChange1);
+      const noCategory = ["magicSubCategoryChange1", "magicSubCategoryChange2", "magicSubCategoryChange3"].every((column) => sp[column] === "0");
+      if (spellType && school) add({ spellType: [spellType], spellSchool: [school] });
+      else if (spellType && noCategory && types.length === 0) add({ spellType: [spellType] });
+      const costs = [Number(sp.magicConsumptionRate) !== 1 && "sorcery", Number(sp.miracleConsumptionRate) !== 1 && "incantation"].filter(Boolean);
+      if (costs.length) add({ spellType: costs });
+      if (sp.startMagicId !== "-1") {
+        if (!carriedSpells.has(sp.startMagicId)) fail(`效果 ${param.ID} 的 startMagicId ${sp.startMagicId} 不是武器引用的法術`);
+        add({ spell: [sp.startMagicId] });
       }
     }
-    if (found.length > 1) fail(`效果 ${param.ID} 符合多個加成對象模式`);
-    return found[0] ?? null;
+    if (found.size > 1) fail(`效果 ${param.ID} 有多組不同的相關對象：${[...found.keys()].join("、")}`);
+    return [...found.values()][0] ?? null;
   }
 
   function base(gameId) {
