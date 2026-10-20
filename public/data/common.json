@@ -680,6 +680,10 @@
     "community-sheet": {
       "title": "社群遺物數值試算表",
       "url": "https://docs.google.com/spreadsheets/d/1meXOw4jR1hh7YXVMeijWwSDIXnCw6Tk4hTZPq2qvyK4/edit?gid=754182815#gid=754182815"
+    },
+    "er-base-text": {
+      "title": "ERTools《艾爾登法環》本篇遊戲文字",
+      "url": "https://github.com/soarqin/ERTools/tree/887f8236f4c03e140d063613e224c434f3bcf464/data"
     }
   }
 }

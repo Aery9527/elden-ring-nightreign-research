@@ -25,6 +25,7 @@
 - 網站只從 `public/data/` 讀取遊戲數值 (數字與規則標籤)、佔位元素產生的效果、能力值及分類名稱，以及它們的來源；產生其中部分檔案的維護輸入放在 `tools/` (見遺物資料產生)：
   - [public/data/common.json](public/data/common.json)：所有頁面共用的遊戲版本、能力值、圖示、角色、標籤 (`tags`)、介面文字 (`labels`) 與來源。
   - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)，記錄該大類、其子分類及效果。
+  - `public/data/armaments/weapons.json` 與 `public/data/armaments/spells.json`：以遊戲內 ID (`EquipParamWeapon` 的列，或武器槽位引用的法術 ID) 為鍵的武器與法術，各有 `name` (`zh` 與 `en`，沒有來源提供名稱時為 `null`)、`icon`、`tags` 與來源。武器另保留 `sortId`；搭載法術的武器以 `spells` 記錄各槽位 (`R1`、`R2`) 的法術 ID。每一列武器都是獨立的項目，即使與其他列的 `sortId` 相同也不合併；嚴禁把其他列的名稱套到未具名的列。
   - 其他遊戲主題的資料放在 `public/data/` 下以主題命名的檔案或目錄，並依遊戲本身的分組拆分，如同 `relics/` 依遊戲內遺物篩選拆分；多個主題共用的定義留在 `common.json`。
   - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 遇到重複的效果鍵、效果或等級的 `gameId`，或子分類鍵時以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
 - HTML 放 `data-*` 佔位元素，由 [public/render.js](public/render.js) 填入；禁止在 HTML 寫死遊戲數值，內文例子中的數值也一樣。內文敘述 (例如角色名稱) 與 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
@@ -65,6 +66,15 @@
   - 使用該效果的官方中文名稱與遊戲用語；沒有官方中文名稱的用語保留英文。
   - 原文的 `TODO` 等註記譯為「（原文註記：……）」；原文與效果名稱矛盾時照譯並加「（原文如此）」。譯文中嚴禁修正原文；與遊戲參數的矛盾改記在參數重寫檔。
 
+## 武器與法術資料產生
+
+- `public/data/armaments/*.json` 由 [tools/import-armaments.mjs](tools/import-armaments.mjs) 產生 (`node tools/import-armaments.mjs`，在專案根目錄執行)；嚴禁手動編輯。兩支匯入腳本都透過 [tools/sources.mjs](tools/sources.mjs) 讀取 [tools/relics-config.json](tools/relics-config.json) 鎖定的來源，遺物、武器與法術一律來自同一份遊戲參數。
+  - 武器：`EquipParamWeapon` 中 ID 為 10000 的倍數、`wepType` 有 `weaponType` 標籤、有名稱且 `sortId` 不是 9999999 的每一列；以及每一列搭載法術 (`equippedSpell_R1`/`equippedSpell_R2`) 的武器，不論是否具名。
+  - 法術：武器法術槽位引用的每個 ID。`spellType` 取自 `Magic.ezStateBehaviorType`，`spellSchool` 取自 `Magic.subCategory1`/`subCategory2`，只保留有定義標籤的值 (沒有時為 `[]`)。被引用但沒有 `Magic` 列的 ID 兩者皆為 `null`，嚴禁依名稱、搭載的武器或所在的本篇清單推定分類。
+  - 名稱：遊戲參數沒有名稱，也沒有可用的黑夜君臨武器、法術文字，因此名稱取自鎖定為 `erText` 的《艾爾登法環》本篇文字 (soarqin/ERTools)：武器依武器 ID 取 `WeaponName`；法術只依 ID 取本篇的魔法與禱告清單，嚴禁取自 `GoodsName`，因為其 ID 會與鑰匙等道具重疊。空白、`%null%` 與 `[ERROR]` 開頭的文字不算名稱。兩種語言都沒有名稱的項目 `name` 為 `null`。名稱記錄 `sourcesFor.name: ["er-base-text"]`，頁面必須註明這些是本篇參考名稱，尚未確認與黑夜君臨一致。
+  - 圖示：腳本在 Eldenpedia 尋找 `File:ER SB Icon <weapon|shield|Spell> <去除冒號的英文名稱>.png` (三種盾牌用 `shield`)，只有檔案存在且檔案頁標示 `{{License|game}}` 時才設定 `icon: { "src", "page" }`，否則為 `icon: null`。查詢結果快取在 `tools/.cache/eldenpedia/files.json`。之後執行 `python tools/fetch-icons.py`，下載資料引用但 `public/images/` 尚未有的圖示，並縮為 96px。
+- 名稱只有單一語言、搭載的法術未收錄、搭載法術的武器 `wepType` 沒有標籤、法術的 `ezStateBehaviorType` 沒有標籤、兩個圖示檔名相同，或引用的來源不在 common.json 時，腳本停止且不寫出資料檔。
+
 ## 遊戲撰寫守則
 
 - 引導外部資源時使用開新視窗，禁止本頁跳轉
@@ -72,7 +82,7 @@
 - 提及遊戲內項目時，必須找到該遊戲內對應的圖片，圖片來源為 [Eldenpedia](https://eldenring.wiki.gg/)
   - 只採用檔案頁授權標示為遊戲素材 (`{{License|game}}`) 的圖片；社群編修圖 (例如檔名含 `Custom`) 不算遊戲內圖片。
   - 圖片下載至 `public/images/`，由首頁的資料來源列出 wiki 檔案頁。大於 96px 的圖片可縮小為 96px，嚴禁其他修改。
-  - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；首頁以 `<span data-icon-sources>` 列出全站圖示的檔案頁。
+  - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；武器與法術的圖示改記在 `public/data/armaments/` 各項目的 `icon` (見武器與法術資料產生)。首頁以 `<span data-icon-sources>` 列出 common.json 中每個圖示的檔案頁，並說明一次武器與法術圖示取自 Eldenpedia 的 ER SB Icon 系列，各檔案頁記錄在項目資料中。
   - 同一種編排位置的圖片維持相同大小；圖片一律使用 `.icon` class，尺寸只在 `public/styles.css` 依位置設定，不在個別圖片上另外調整：
     - 表格內：48px (`td .icon`)。
     - 表格內的名稱清單 (效果說明、種類欄)：24px (`td .entry .icon`)。

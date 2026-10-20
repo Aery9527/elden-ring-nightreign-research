@@ -9,14 +9,10 @@
 //   tools/relic-penalties.json  增益詞條說明中屬於負面代價的繁中原文片段 (以 gameId 對應)，網站以紅色標示
 // 來源檔下載到 tools/.cache/，不提交版本庫。
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { ROOT, TOOLS, byId, config, groupById, parseCsv, readJson, slug, source } from "./sources.mjs";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const TOOLS = join(ROOT, "tools");
-const readJson = (path) => JSON.parse(readFileSync(path, "utf8"));
-const config = readJson(join(TOOLS, "relics-config.json"));
 const curated = readJson(join(TOOLS, "relics-curated.json")).effects;
 // 以 gameId 為鍵的輸入檔：JSON.parse 會讓重複鍵靜默覆蓋，因此要求檔案等於標準格式 (2 空格縮排) 的輸出；有重複鍵時兩者必不相同。
 function readKeyedJson(path) {
@@ -38,45 +34,6 @@ const problems = [];
 const fail = (message) => problems.push(message);
 
 // ---------- 來源 ----------
-
-async function source(sourceKey, fileKey) {
-  const { repo, commit, files } = config.sources[sourceKey];
-  const cachePath = join(TOOLS, ".cache", commit, files[fileKey]);
-  if (!existsSync(cachePath)) {
-    const url = `https://raw.githubusercontent.com/${repo}/${commit}/${files[fileKey]}`;
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`${url}：HTTP ${response.status}`);
-    mkdirSync(dirname(cachePath), { recursive: true });
-    writeFileSync(cachePath, Buffer.from(await response.arrayBuffer()));
-  }
-  return readFileSync(cachePath, "utf8").replace(/^﻿/, "");
-}
-
-// 參數 CSV 沒有含逗號的欄位 (陣列欄位以 | 分隔)，逐行切割即可。
-function parseCsv(text) {
-  const [header, ...lines] = text.split(/\r?\n/).filter(Boolean);
-  const keys = header.split(",");
-  return lines.map((line) => {
-    const cells = line.split(",");
-    return Object.fromEntries(keys.map((key, i) => [key, cells[i]]));
-  });
-}
-
-// 以 ID 建索引；ID 重複時丟出錯誤 (同 ID 多列的參數表，例如 AttachEffectTableParam，須改用 groupById)。
-function byId(rows, name) {
-  const map = new Map();
-  for (const row of rows) {
-    if (map.has(row.ID)) throw new Error(`${name} 的 ID 重複：${row.ID}`);
-    map.set(row.ID, row);
-  }
-  return map;
-}
-
-function groupById(rows) {
-  const map = new Map();
-  for (const row of rows) map.set(row.ID, [...(map.get(row.ID) ?? []), row]);
-  return map;
-}
 
 function parseFmg(...texts) {
   const entities = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'" };
@@ -108,13 +65,6 @@ const splitTier = (name) => {
   const match = name.match(/^(.*?)\s*\+(\d)$/);
   return match ? { base: match[1], tier: Number(match[2]) } : { base: name, tier: 0 };
 };
-const slug = (text) =>
-  text
-    .toLowerCase()
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-
 // ---------- 建立效果 ----------
 
 const RELIC_TYPE = { Standard: "standard-relic", "Depth Of Night": "deep-relic", Both: "both-relics" };
@@ -131,7 +81,8 @@ const stackingOf = (stacks) => (stacks === true ? { stacks, combine: null } : { 
 
 async function buildEffects() {
   const params = {};
-  for (const key of Object.keys(config.sources.params.files)) {
+  const PARAM_TABLES = ["AttachEffectParam", "AttachEffectTableParam", "AttachEffectFilterParam", "AttachEffectFilterSubCategoryParam", "EquipParamAntique", "SpEffectParam"];
+  for (const key of PARAM_TABLES) {
     const rows = parseCsv(await source("params", key));
     params[key] = key === "AttachEffectTableParam" ? groupById(rows) : byId(rows, key);
   }

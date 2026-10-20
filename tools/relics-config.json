@@ -9,7 +9,9 @@
         "AttachEffectFilterParam": "params/AttachEffectFilterParam.csv",
         "AttachEffectFilterSubCategoryParam": "params/AttachEffectFilterSubCategoryParam.csv",
         "EquipParamAntique": "params/EquipParamAntique.csv",
-        "SpEffectParam": "params/SpEffectParam.csv"
+        "SpEffectParam": "params/SpEffectParam.csv",
+        "EquipParamWeapon": "params/EquipParamWeapon.csv",
+        "Magic": "params/Magic.csv"
       }
     },
     "text": {
@@ -31,6 +33,24 @@
       "commit": "dafcb2de9837b58cef64960b672d21e3841b0abe",
       "files": {
         "reliquary": "Data/reliquary.json"
+      }
+    },
+    "erText": {
+      "repo": "soarqin/ERTools",
+      "commit": "887f8236f4c03e140d063613e224c434f3bcf464",
+      "files": {
+        "weaponZh": "data/gen/text/zhotw/WeaponName.txt",
+        "weaponZhDlc": "data/gen/text/zhotw/WeaponName_dlc01.txt",
+        "weaponEn": "data/gen/text/engus/WeaponName.txt",
+        "weaponEnDlc": "data/gen/text/engus/WeaponName_dlc01.txt",
+        "sorceryZh": "data/zhotw/sorceries.json",
+        "sorceryZhDlc": "data/zhotw/sorceries_dlc1.json",
+        "sorceryEn": "data/engus/sorceries.json",
+        "sorceryEnDlc": "data/engus/sorceries_dlc1.json",
+        "incantationZh": "data/zhotw/incantations.json",
+        "incantationZhDlc": "data/zhotw/incantations_dlc1.json",
+        "incantationEn": "data/engus/incantations.json",
+        "incantationEnDlc": "data/engus/incantations_dlc1.json"
       }
     }
   },

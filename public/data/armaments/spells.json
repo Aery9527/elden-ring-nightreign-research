@@ -1,0 +1,4420 @@
+{
+  "spells": {
+    "4000": {
+      "name": {
+        "zh": "輝石魔礫",
+        "en": "Glintstone Pebble"
+      },
+      "icon": {
+        "src": "images/spell-glintstone-pebble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Glintstone_Pebble.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4001": {
+      "name": {
+        "zh": "輝石大魔礫",
+        "en": "Great Glintstone Shard"
+      },
+      "icon": {
+        "src": "images/spell-great-glintstone-shard.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Great_Glintstone_Shard.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4010": {
+      "name": {
+        "zh": "輝石迅魔礫",
+        "en": "Swift Glintstone Shard"
+      },
+      "icon": {
+        "src": "images/spell-swift-glintstone-shard.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Swift_Glintstone_Shard.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4020": {
+      "name": {
+        "zh": "輝石彗星",
+        "en": "Glintstone Cometshard"
+      },
+      "icon": {
+        "src": "images/spell-glintstone-cometshard.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Glintstone_Cometshard.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4021": {
+      "name": {
+        "zh": "帚星",
+        "en": "Comet"
+      },
+      "icon": {
+        "src": "images/spell-comet.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Comet.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4030": {
+      "name": {
+        "zh": "旋飛魔礫",
+        "en": "Shard Spiral"
+      },
+      "icon": {
+        "src": "images/spell-shard-spiral.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Shard_Spiral.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4040": {
+      "name": {
+        "zh": "輝石流星",
+        "en": "Glintstone Stars"
+      },
+      "icon": {
+        "src": "images/spell-glintstone-stars.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Glintstone_Stars.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4050": {
+      "name": {
+        "zh": "流星雨",
+        "en": "Star Shower"
+      },
+      "icon": {
+        "src": "images/spell-star-shower.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Star_Shower.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4060": {
+      "name": {
+        "zh": "結晶連彈",
+        "en": "Crystal Barrage"
+      },
+      "icon": {
+        "src": "images/spell-crystal-barrage.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Crystal_Barrage.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4070": {
+      "name": {
+        "zh": "輝石彎弧",
+        "en": "Glintstone Arc"
+      },
+      "icon": {
+        "src": "images/spell-glintstone-arc.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Glintstone_Arc.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4080": {
+      "name": {
+        "zh": "海摩砲彈",
+        "en": "Cannon of Haima"
+      },
+      "icon": {
+        "src": "images/spell-cannon-of-haima.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Cannon_of_Haima.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4090": {
+      "name": {
+        "zh": "結晶散射",
+        "en": "Crystal Burst"
+      },
+      "icon": {
+        "src": "images/spell-crystal-burst.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Crystal_Burst.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4100": {
+      "name": {
+        "zh": "爆碎岩盤",
+        "en": "Shatter Earth"
+      },
+      "icon": {
+        "src": "images/spell-shatter-earth.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Shatter_Earth.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "stonedigger"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4110": {
+      "name": {
+        "zh": "爆破岩盤",
+        "en": "Rock Blaster"
+      },
+      "icon": {
+        "src": "images/spell-rock-blaster.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Rock_Blaster.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "stonedigger"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4120": {
+      "name": {
+        "zh": "海摩大槌",
+        "en": "Gavel of Haima"
+      },
+      "icon": {
+        "src": "images/spell-gavel-of-haima.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Gavel_of_Haima.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4130": {
+      "name": {
+        "zh": "魔法之境",
+        "en": "Terra Magica"
+      },
+      "icon": {
+        "src": "images/spell-terra-magica.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Terra_Magica.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4140": {
+      "name": {
+        "zh": "星光",
+        "en": "Starlight"
+      },
+      "icon": {
+        "src": "images/spell-starlight.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Starlight.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4200": {
+      "name": {
+        "zh": "彗星亞茲勒",
+        "en": "Comet Azur"
+      },
+      "icon": {
+        "src": "images/spell-comet-azur.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Comet_Azur.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4210": {
+      "name": {
+        "zh": "創星雨",
+        "en": "Founding Rain of Stars"
+      },
+      "icon": {
+        "src": "images/spell-founding-rain-of-stars.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Founding_Rain_of_Stars.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4220": {
+      "name": {
+        "zh": "毀滅流星",
+        "en": "Stars of Ruin"
+      },
+      "icon": {
+        "src": "images/spell-stars-of-ruin.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Stars_of_Ruin.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4300": {
+      "name": {
+        "zh": "輝劍圓陣",
+        "en": "Glintblade Phalanx"
+      },
+      "icon": {
+        "src": "images/spell-glintblade-phalanx.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Glintblade_Phalanx.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "glintblade"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4301": {
+      "name": {
+        "zh": "卡利亞圓陣",
+        "en": "Carian Phalanx"
+      },
+      "icon": {
+        "src": "images/spell-carian-phalanx.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Carian_Phalanx.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "glintblade"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4302": {
+      "name": {
+        "zh": "巨劍陣",
+        "en": "Greatblade Phalanx"
+      },
+      "icon": {
+        "src": "images/spell-greatblade-phalanx.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Greatblade_Phalanx.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "glintblade"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4360": {
+      "name": {
+        "zh": "蕾娜菈的滿月",
+        "en": "Rennala's Full Moon"
+      },
+      "icon": {
+        "src": "images/spell-rennala-s-full-moon.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Rennala's_Full_Moon.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4361": {
+      "name": {
+        "zh": "菈妮的暗月",
+        "en": "Ranni's Dark Moon"
+      },
+      "icon": {
+        "src": "images/spell-ranni-s-dark-moon.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Ranni's_Dark_Moon.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4370": {
+      "name": {
+        "zh": "天降魔力",
+        "en": "Magic Downpour"
+      },
+      "icon": {
+        "src": "images/spell-magic-downpour.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Magic_Downpour.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4380": {
+      "name": {
+        "zh": "羅蕾塔的大弓",
+        "en": "Loretta's Greatbow"
+      },
+      "icon": {
+        "src": "images/spell-loretta-s-greatbow.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Loretta's_Greatbow.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4381": {
+      "name": {
+        "zh": "羅蕾塔的絕招",
+        "en": "Loretta's Mastery"
+      },
+      "icon": {
+        "src": "images/spell-loretta-s-mastery.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Loretta's_Mastery.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4390": {
+      "name": {
+        "zh": "魔法輝劍",
+        "en": "Magic Glintblade"
+      },
+      "icon": {
+        "src": "images/spell-magic-glintblade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Magic_Glintblade.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "glintblade"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4400": {
+      "name": {
+        "zh": "輝石冰塊",
+        "en": "Glintstone Icecrag"
+      },
+      "icon": {
+        "src": "images/spell-glintstone-icecrag.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Glintstone_Icecrag.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4410": {
+      "name": {
+        "zh": "薩米爾冰風暴",
+        "en": "Zamor Ice Storm"
+      },
+      "icon": {
+        "src": "images/spell-zamor-ice-storm.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Zamor_Ice_Storm.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4420": {
+      "name": {
+        "zh": "冰霧",
+        "en": "Freezing Mist"
+      },
+      "icon": {
+        "src": "images/spell-freezing-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Freezing_Mist.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4430": {
+      "name": {
+        "zh": "卡利亞大劍",
+        "en": "Carian Greatsword"
+      },
+      "icon": {
+        "src": "images/spell-carian-greatsword.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Carian_Greatsword.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "carian-sword"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4431": {
+      "name": {
+        "zh": "亞杜拉的月光劍",
+        "en": "Adula's Moonblade"
+      },
+      "icon": {
+        "src": "images/spell-adula-s-moonblade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Adula's_Moonblade.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "carian-sword"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4440": {
+      "name": {
+        "zh": "卡利亞迅劍",
+        "en": "Carian Slicer"
+      },
+      "icon": {
+        "src": "images/spell-carian-slicer.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Carian_Slicer.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "carian-sword"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4450": {
+      "name": {
+        "zh": "卡利亞貫刺",
+        "en": "Carian Piercer"
+      },
+      "icon": {
+        "src": "images/spell-carian-piercer.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Carian_Piercer.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "carian-sword"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4460": {
+      "name": {
+        "zh": "魔力武器",
+        "en": "Scholar's Armament"
+      },
+      "icon": {
+        "src": "images/spell-scholar-s-armament.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Scholar's_Armament.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4470": {
+      "name": {
+        "zh": "魔力盾牌",
+        "en": "Scholar's Shield"
+      },
+      "icon": {
+        "src": "images/spell-scholar-s-shield.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Scholar's_Shield.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4480": {
+      "name": {
+        "zh": "鎮定",
+        "en": "Lucidity"
+      },
+      "icon": {
+        "src": "images/spell-lucidity.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lucidity.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4490": {
+      "name": {
+        "zh": "結冰武器",
+        "en": "Frozen Armament"
+      },
+      "icon": {
+        "src": "images/spell-frozen-armament.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Frozen_Armament.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4500": {
+      "name": {
+        "zh": "爆散結晶",
+        "en": "Shattering Crystal"
+      },
+      "icon": {
+        "src": "images/spell-shattering-crystal.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Shattering_Crystal.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "crystalian"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4510": {
+      "name": {
+        "zh": "飛散結晶",
+        "en": "Crystal Release"
+      },
+      "icon": {
+        "src": "images/spell-crystal-release.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Crystal_Release.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "crystalian"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4520": {
+      "name": {
+        "zh": "奔放結晶",
+        "en": "Crystal Torrent"
+      },
+      "icon": {
+        "src": "images/spell-crystal-torrent.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Crystal_Torrent.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "crystalian"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4600": {
+      "name": {
+        "zh": "奇襲魔礫",
+        "en": "Ambush Shard"
+      },
+      "icon": {
+        "src": "images/spell-ambush-shard.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Ambush_Shard.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4610": {
+      "name": {
+        "zh": "黑夜魔礫",
+        "en": "Night Shard"
+      },
+      "icon": {
+        "src": "images/spell-night-shard.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Night_Shard.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "invisibility"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4620": {
+      "name": {
+        "zh": "黑夜彗星",
+        "en": "Night Comet"
+      },
+      "icon": {
+        "src": "images/spell-night-comet.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Night_Comet.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "invisibility"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4630": {
+      "name": {
+        "zh": "托普斯的力場",
+        "en": "Thops's Barrier"
+      },
+      "icon": {
+        "src": "images/spell-thops-s-barrier.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Thops's_Barrier.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4640": {
+      "name": {
+        "zh": "卡利亞式奉還",
+        "en": "Carian Retaliation"
+      },
+      "icon": {
+        "src": "images/spell-carian-retaliation.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Carian_Retaliation.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "glintblade"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4650": {
+      "name": {
+        "zh": "亙古黑暗",
+        "en": "Eternal Darkness"
+      },
+      "icon": {
+        "src": "images/spell-eternal-darkness.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Eternal_Darkness.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4660": {
+      "name": {
+        "zh": "無形刀刃",
+        "en": "Unseen Blade"
+      },
+      "icon": {
+        "src": "images/spell-unseen-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Unseen_Blade.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4670": {
+      "name": {
+        "zh": "化為無形",
+        "en": "Unseen Form"
+      },
+      "icon": {
+        "src": "images/spell-unseen-form.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Unseen_Form.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4700": {
+      "name": {
+        "zh": "隕石",
+        "en": "Meteorite"
+      },
+      "icon": {
+        "src": "images/spell-meteorite.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Meteorite.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "gravity"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4701": {
+      "name": {
+        "zh": "艾絲緹隕石",
+        "en": "Meteorite of Astel"
+      },
+      "icon": {
+        "src": "images/spell-meteorite-of-astel.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Meteorite_of_Astel.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "gravity"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4710": {
+      "name": {
+        "zh": "岩石球",
+        "en": "Rock Sling"
+      },
+      "icon": {
+        "src": "images/spell-rock-sling.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Rock_Sling.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "gravity"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4720": {
+      "name": {
+        "zh": "重力球",
+        "en": "Gravity Well"
+      },
+      "icon": {
+        "src": "images/spell-gravity-well.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Gravity_Well.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "gravity"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4721": {
+      "name": {
+        "zh": "碎星",
+        "en": "Collapsing Stars"
+      },
+      "icon": {
+        "src": "images/spell-collapsing-stars.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Collapsing_Stars.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "gravity"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4800": {
+      "name": {
+        "zh": "熔岩球",
+        "en": "Magma Shot"
+      },
+      "icon": {
+        "src": "images/spell-magma-shot.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Magma_Shot.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4810": {
+      "name": {
+        "zh": "格密爾之怒",
+        "en": "Gelmir's Fury"
+      },
+      "icon": {
+        "src": "images/spell-gelmir-s-fury.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Gelmir's_Fury.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4820": {
+      "name": {
+        "zh": "滾燙熔岩",
+        "en": "Roiling Magma"
+      },
+      "icon": {
+        "src": "images/spell-roiling-magma.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Roiling_Magma.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4830": {
+      "name": {
+        "zh": "拉卡德的怨魂",
+        "en": "Rykard's Rancor"
+      },
+      "icon": {
+        "src": "images/spell-rykard-s-rancor.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Rykard's_Rancor.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4900": {
+      "name": {
+        "zh": "罪惡荊棘",
+        "en": "Briars of Sin"
+      },
+      "icon": {
+        "src": "images/spell-briars-of-sin.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Briars_of_Sin.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "thorn"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "4910": {
+      "name": {
+        "zh": "責罰荊棘",
+        "en": "Briars of Punishment"
+      },
+      "icon": {
+        "src": "images/spell-briars-of-punishment.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Briars_of_Punishment.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "thorn"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5000": {
+      "name": {
+        "zh": "召喚怨魂",
+        "en": "Rancorcall"
+      },
+      "icon": {
+        "src": "images/spell-rancorcall.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Rancorcall.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5001": {
+      "name": {
+        "zh": "古老死亡怨魂",
+        "en": "Ancient Death Rancor"
+      },
+      "icon": {
+        "src": "images/spell-ancient-death-rancor.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Ancient_Death_Rancor.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5010": {
+      "name": {
+        "zh": "迸發靈火",
+        "en": "Explosive Ghostflame"
+      },
+      "icon": {
+        "src": "images/spell-explosive-ghostflame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Explosive_Ghostflame.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5020": {
+      "name": {
+        "zh": "菲雅煙霧",
+        "en": "Fia's Mist"
+      },
+      "icon": {
+        "src": "images/spell-fia-s-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Fia's_Mist.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5030": {
+      "name": {
+        "zh": "提比亞的喚聲",
+        "en": "Tibia's Summons"
+      },
+      "icon": {
+        "src": "images/spell-tibia-s-summons.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Tibia's_Summons.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5040": {
+      "name": {
+        "zh": "死亡雷擊",
+        "en": "Death Lightning"
+      },
+      "icon": {
+        "src": "images/spell-death-lightning.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Death_Lightning.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5100": {
+      "name": {
+        "zh": "神諭泡泡",
+        "en": "Oracle Bubbles"
+      },
+      "icon": {
+        "src": "images/spell-oracle-bubbles.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Oracle_Bubbles.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "5110": {
+      "name": {
+        "zh": "神諭大泡泡",
+        "en": "Great Oracular Bubble"
+      },
+      "icon": {
+        "src": "images/spell-great-oracular-bubble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Great_Oracular_Bubble.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6000": {
+      "name": {
+        "zh": "燃火",
+        "en": "Catch Flame"
+      },
+      "icon": {
+        "src": "images/spell-catch-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Catch_Flame.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6001": {
+      "name": {
+        "zh": "火焰啊！",
+        "en": "O, Flame!"
+      },
+      "icon": {
+        "src": "images/spell-o-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_O,_Flame!.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6010": {
+      "name": {
+        "zh": "投火",
+        "en": "Flame Sling"
+      },
+      "icon": {
+        "src": "images/spell-flame-sling.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Flame_Sling.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6020": {
+      "name": {
+        "zh": "火焰啊，傾注吧",
+        "en": "Flame, Fall Upon Them"
+      },
+      "icon": {
+        "src": "images/spell-flame-fall-upon-them.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Flame,_Fall_Upon_Them.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6030": {
+      "name": {
+        "zh": "火焰啊，纏繞吧",
+        "en": "Whirl, O Flame!"
+      },
+      "icon": {
+        "src": "images/spell-whirl-o-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Whirl,_O_Flame!.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6040": {
+      "name": {
+        "zh": "火焰的療癒啊",
+        "en": "Flame, Cleanse Me"
+      },
+      "icon": {
+        "src": "images/spell-flame-cleanse-me.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Flame,_Cleanse_Me.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6050": {
+      "name": {
+        "zh": "火焰啊，賜予我力量！",
+        "en": "Flame, Grant Me Strength"
+      },
+      "icon": {
+        "src": "images/spell-flame-grant-me-strength.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Flame,_Grant_Me_Strength.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6060": {
+      "name": {
+        "zh": "火焰的庇佑啊",
+        "en": "Flame, Protect Me"
+      },
+      "icon": {
+        "src": "images/spell-flame-protect-me.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Flame,_Protect_Me.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6100": {
+      "name": {
+        "zh": "感受巨人火焰吧",
+        "en": "Giantsflame Take Thee"
+      },
+      "icon": {
+        "src": "images/spell-giantsflame-take-thee.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Giantsflame_Take_Thee.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6110": {
+      "name": {
+        "zh": "惡神火焰",
+        "en": "Flame of the Fell God"
+      },
+      "icon": {
+        "src": "images/spell-flame-of-the-fell-god.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Flame_of_the_Fell_God.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6120": {
+      "name": {
+        "zh": "火焰啊，吞噬一切！",
+        "en": "Burn, O Flame!"
+      },
+      "icon": {
+        "src": "images/spell-burn-o-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Burn,_O_Flame!.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6210": {
+      "name": {
+        "zh": "黑焰",
+        "en": "Black Flame"
+      },
+      "icon": {
+        "src": "images/spell-black-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Black_Flame.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "godslayer"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6220": {
+      "name": {
+        "zh": "火焰啊，噴發吧",
+        "en": "Surge, O Flame!"
+      },
+      "icon": {
+        "src": "images/spell-surge-o-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Surge,_O_Flame!.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6230": {
+      "name": {
+        "zh": "橫掃黑焰",
+        "en": "Scouring Black Flame"
+      },
+      "icon": {
+        "src": "images/spell-scouring-black-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Scouring_Black_Flame.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "godslayer"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6240": {
+      "name": {
+        "zh": "黑焰儀式",
+        "en": "Black Flame Ritual"
+      },
+      "icon": {
+        "src": "images/spell-black-flame-ritual.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Black_Flame_Ritual.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "godslayer"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6250": {
+      "name": {
+        "zh": "黑焰刀刃",
+        "en": "Black Flame Blade"
+      },
+      "icon": {
+        "src": "images/spell-black-flame-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Black_Flame_Blade.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "godslayer"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6260": {
+      "name": {
+        "zh": "黑焰庇佑",
+        "en": "Black Flame's Protection"
+      },
+      "icon": {
+        "src": "images/spell-black-flame-s-protection.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Black_Flame's_Protection.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "godslayer"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6270": {
+      "name": {
+        "zh": "貴族氣場",
+        "en": "Noble Presence"
+      },
+      "icon": {
+        "src": "images/spell-noble-presence.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Noble_Presence.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6300": {
+      "name": {
+        "zh": "血焰爪痕",
+        "en": "Bloodflame Talons"
+      },
+      "icon": {
+        "src": "images/spell-bloodflame-talons.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Bloodflame_Talons.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6310": {
+      "name": {
+        "zh": "授血",
+        "en": "Bloodboon"
+      },
+      "icon": {
+        "src": "images/spell-bloodboon.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Bloodboon.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6320": {
+      "name": {
+        "zh": "血焰刀刃",
+        "en": "Bloodflame Blade"
+      },
+      "icon": {
+        "src": "images/spell-bloodflame-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Bloodflame_Blade.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6330": {
+      "name": {
+        "zh": "黃金魔力防護",
+        "en": "Barrier of Gold"
+      },
+      "icon": {
+        "src": "images/spell-barrier-of-gold.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Barrier_of_Gold.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6340": {
+      "name": {
+        "zh": "黃金樹庇佑",
+        "en": "Protection of the Erdtree"
+      },
+      "icon": {
+        "src": "images/spell-protection-of-the-erdtree.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Protection_of_the_Erdtree.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6400": {
+      "name": {
+        "zh": "拒絕",
+        "en": "Rejection"
+      },
+      "icon": {
+        "src": "images/spell-rejection.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Rejection.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6410": {
+      "name": {
+        "zh": "黃金之怒",
+        "en": "Wrath of Gold"
+      },
+      "icon": {
+        "src": "images/spell-wrath-of-gold.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Wrath_of_Gold.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6420": {
+      "name": {
+        "zh": "緊急恢復",
+        "en": "Urgent Heal"
+      },
+      "icon": {
+        "src": "images/spell-urgent-heal.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Urgent_Heal.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6421": {
+      "name": {
+        "zh": "恢復",
+        "en": "Heal"
+      },
+      "icon": {
+        "src": "images/spell-heal.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Heal.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6422": {
+      "name": {
+        "zh": "大恢復",
+        "en": "Great Heal"
+      },
+      "icon": {
+        "src": "images/spell-great-heal.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Great_Heal.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6423": {
+      "name": {
+        "zh": "王之恢復",
+        "en": "Lord's Heal"
+      },
+      "icon": {
+        "src": "images/spell-lord-s-heal.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lord's_Heal.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6424": {
+      "name": {
+        "zh": "黃金樹恢復",
+        "en": "Erdtree Heal"
+      },
+      "icon": {
+        "src": "images/spell-erdtree-heal.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Erdtree_Heal.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6430": {
+      "name": {
+        "zh": "恩惠賜福",
+        "en": "Blessing's Boon"
+      },
+      "icon": {
+        "src": "images/spell-blessing-s-boon.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Blessing's_Boon.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6431": {
+      "name": {
+        "zh": "黃金樹恩惠",
+        "en": "Blessing of the Erdtree"
+      },
+      "icon": {
+        "src": "images/spell-blessing-of-the-erdtree.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Blessing_of_the_Erdtree.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6440": {
+      "name": {
+        "zh": "療癒毒性",
+        "en": "Cure Poison"
+      },
+      "icon": {
+        "src": "images/spell-cure-poison.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Cure_Poison.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6441": {
+      "name": {
+        "zh": "王之療癒",
+        "en": "Lord's Aid"
+      },
+      "icon": {
+        "src": "images/spell-lord-s-aid.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lord's_Aid.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6450": {
+      "name": {
+        "zh": "火防護",
+        "en": "Flame Fortification"
+      },
+      "icon": {
+        "src": "images/spell-flame-fortification.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Flame_Fortification.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6460": {
+      "name": {
+        "zh": "魔力防護",
+        "en": "Magic Fortification"
+      },
+      "icon": {
+        "src": "images/spell-magic-fortification.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Magic_Fortification.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6470": {
+      "name": {
+        "zh": "雷防護",
+        "en": "Lightning Fortification"
+      },
+      "icon": {
+        "src": "images/spell-lightning-fortification.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lightning_Fortification.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6480": {
+      "name": {
+        "zh": "聖防護",
+        "en": "Divine Fortification"
+      },
+      "icon": {
+        "src": "images/spell-divine-fortification.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Divine_Fortification.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6490": {
+      "name": {
+        "zh": "王之聖防護",
+        "en": "Lord's Divine Fortification"
+      },
+      "icon": {
+        "src": "images/spell-lord-s-divine-fortification.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lord's_Divine_Fortification.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6500": {
+      "name": {
+        "zh": "黑夜女巫煙霧",
+        "en": "Night Maiden's Mist"
+      },
+      "icon": {
+        "src": "images/spell-night-maiden-s-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Night_Maiden's_Mist.png"
+      },
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6510": {
+      "name": {
+        "zh": "刺客步法",
+        "en": "Assassin's Approach"
+      },
+      "icon": {
+        "src": "images/spell-assassin-s-approach.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Assassin's_Approach.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6520": {
+      "name": {
+        "zh": "誘敵幻影",
+        "en": "Shadow Bait"
+      },
+      "icon": {
+        "src": "images/spell-shadow-bait.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Shadow_Bait.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6530": {
+      "name": {
+        "zh": "黑暗",
+        "en": "Darkness"
+      },
+      "icon": {
+        "src": "images/spell-darkness.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Darkness.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6600": {
+      "name": {
+        "zh": "黃金樹立誓",
+        "en": "Golden Vow"
+      },
+      "icon": {
+        "src": "images/spell-golden-vow.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Golden_Vow.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6700": {
+      "name": {
+        "zh": "光環",
+        "en": "Discus of Light"
+      },
+      "icon": {
+        "src": "images/spell-discus-of-light.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Discus_of_Light.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6701": {
+      "name": {
+        "zh": "化三光環",
+        "en": "Triple Rings of Light"
+      },
+      "icon": {
+        "src": "images/spell-triple-rings-of-light.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Triple_Rings_of_Light.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6710": {
+      "name": {
+        "zh": "拉達岡的光環",
+        "en": "Radagon's Rings of Light"
+      },
+      "icon": {
+        "src": "images/spell-radagon-s-rings-of-light.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Radagon's_Rings_of_Light.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6720": {
+      "name": {
+        "zh": "艾爾登流星",
+        "en": "Elden Stars"
+      },
+      "icon": {
+        "src": "images/spell-elden-stars.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Elden_Stars.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6730": {
+      "name": {
+        "zh": "回歸性原理",
+        "en": "Law of Regression"
+      },
+      "icon": {
+        "src": "images/spell-law-of-regression.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Law_of_Regression.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6740": {
+      "name": {
+        "zh": "不變盾牌",
+        "en": "Immutable Shield"
+      },
+      "icon": {
+        "src": "images/spell-immutable-shield.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Immutable_Shield.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6750": {
+      "name": {
+        "zh": "糾死聖律",
+        "en": "Litany of Proper Death"
+      },
+      "icon": {
+        "src": "images/spell-litany-of-proper-death.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Litany_of_Proper_Death.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6760": {
+      "name": {
+        "zh": "因果性原理",
+        "en": "Law of Causality"
+      },
+      "icon": {
+        "src": "images/spell-law-of-causality.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Law_of_Causality.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6770": {
+      "name": {
+        "zh": "聖律劍刃",
+        "en": "Order's Blade"
+      },
+      "icon": {
+        "src": "images/spell-order-s-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Order's_Blade.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6780": {
+      "name": {
+        "zh": "聖律療癒",
+        "en": "Order Healing"
+      },
+      "icon": {
+        "src": "images/spell-order-healing.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Order_Healing.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6800": {
+      "name": {
+        "zh": "獸石",
+        "en": "Bestial Sling"
+      },
+      "icon": {
+        "src": "images/spell-bestial-sling.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Bestial_Sling.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "bestial"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6810": {
+      "name": {
+        "zh": "古蘭格的岩石",
+        "en": "Stone of Gurranq"
+      },
+      "icon": {
+        "src": "images/spell-stone-of-gurranq.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Stone_of_Gurranq.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "bestial"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6820": {
+      "name": {
+        "zh": "獸爪",
+        "en": "Beast Claw"
+      },
+      "icon": {
+        "src": "images/spell-beast-claw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Beast_Claw.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "bestial"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6830": {
+      "name": {
+        "zh": "古蘭格的獸爪",
+        "en": "Gurranq's Beast Claw"
+      },
+      "icon": {
+        "src": "images/spell-gurranq-s-beast-claw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Gurranq's_Beast_Claw.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "bestial"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6840": {
+      "name": {
+        "zh": "野獸活力",
+        "en": "Bestial Vitality"
+      },
+      "icon": {
+        "src": "images/spell-bestial-vitality.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Bestial_Vitality.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "bestial"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6850": {
+      "name": {
+        "zh": "野獸健壯",
+        "en": "Bestial Constitution"
+      },
+      "icon": {
+        "src": "images/spell-bestial-constitution.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Bestial_Constitution.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6900": {
+      "name": {
+        "zh": "雷電槍",
+        "en": "Lightning Spear"
+      },
+      "icon": {
+        "src": "images/spell-lightning-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lightning_Spear.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6910": {
+      "name": {
+        "zh": "古龍雷擊",
+        "en": "Ancient Dragons' Lightning Strike"
+      },
+      "icon": {
+        "src": "images/spell-ancient-dragons-lightning-strike.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Ancient_Dragons'_Lightning_Strike.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6920": {
+      "name": {
+        "zh": "雷擊",
+        "en": "Lightning Strike"
+      },
+      "icon": {
+        "src": "images/spell-lightning-strike.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lightning_Strike.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6921": {
+      "name": {
+        "zh": "冰雷槍",
+        "en": "Frozen Lightning Spear"
+      },
+      "icon": {
+        "src": "images/spell-frozen-lightning-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Frozen_Lightning_Spear.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6930": {
+      "name": {
+        "zh": "精準雷擊",
+        "en": "Honed Bolt"
+      },
+      "icon": {
+        "src": "images/spell-honed-bolt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Honed_Bolt.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6940": {
+      "name": {
+        "zh": "古龍雷槍",
+        "en": "Ancient Dragons' Lightning Spear"
+      },
+      "icon": {
+        "src": "images/spell-ancient-dragons-lightning-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Ancient_Dragons'_Lightning_Spear.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6941": {
+      "name": {
+        "zh": "弗爾桑克斯的雷槍",
+        "en": "Fortissax's Lightning Spear"
+      },
+      "icon": {
+        "src": "images/spell-fortissax-s-lightning-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Fortissax's_Lightning_Spear.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6950": {
+      "name": {
+        "zh": "蘭斯桑克斯的薙刀",
+        "en": "Lansseax's Glaive"
+      },
+      "icon": {
+        "src": "images/spell-lansseax-s-glaive.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Lansseax's_Glaive.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6960": {
+      "name": {
+        "zh": "雷武器",
+        "en": "Electrify Armament"
+      },
+      "icon": {
+        "src": "images/spell-electrify-armament.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Electrify_Armament.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6970": {
+      "name": {
+        "zh": "維克的龍雷",
+        "en": "Vyke's Dragonbolt"
+      },
+      "icon": {
+        "src": "images/spell-vyke-s-dragonbolt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Vyke's_Dragonbolt.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "6971": {
+      "name": {
+        "zh": "龍雷庇佑",
+        "en": "Dragonbolt Blessing"
+      },
+      "icon": {
+        "src": "images/spell-dragonbolt-blessing.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Dragonbolt_Blessing.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7000": {
+      "name": {
+        "zh": "龍焰",
+        "en": "Dragonfire"
+      },
+      "icon": {
+        "src": "images/spell-dragonfire.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Dragonfire.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7001": {
+      "name": {
+        "zh": "亞基爾的火焰",
+        "en": "Agheel's Flame"
+      },
+      "icon": {
+        "src": "images/spell-agheel-s-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Agheel's_Flame.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7010": {
+      "name": {
+        "zh": "熔岩吐息",
+        "en": "Magma Breath"
+      },
+      "icon": {
+        "src": "images/spell-magma-breath.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Magma_Breath.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7011": {
+      "name": {
+        "zh": "席歐朵利克的熔岩",
+        "en": "Theodorix's Magma"
+      },
+      "icon": {
+        "src": "images/spell-theodorix-s-magma.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Theodorix's_Magma.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7020": {
+      "name": {
+        "zh": "龍冰",
+        "en": "Dragonice"
+      },
+      "icon": {
+        "src": "images/spell-dragonice.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Dragonice.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7021": {
+      "name": {
+        "zh": "玻列琉斯的冰霧",
+        "en": "Borealis's Mist"
+      },
+      "icon": {
+        "src": "images/spell-borealis-s-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Borealis's_Mist.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7030": {
+      "name": {
+        "zh": "腐敗吐息",
+        "en": "Rotten Breath"
+      },
+      "icon": {
+        "src": "images/spell-rotten-breath.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Rotten_Breath.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7031": {
+      "name": {
+        "zh": "艾格基斯的腐敗",
+        "en": "Ekzykes's Decay"
+      },
+      "icon": {
+        "src": "images/spell-ekzykes-s-decay.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Ekzykes's_Decay.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7040": {
+      "name": {
+        "zh": "輝石吐息",
+        "en": "Glintstone Breath"
+      },
+      "icon": {
+        "src": "images/spell-glintstone-breath.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Glintstone_Breath.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7041": {
+      "name": {
+        "zh": "史瑪拉格的輝石",
+        "en": "Smarag's Glintstone Breath"
+      },
+      "icon": {
+        "src": "images/spell-smarag-s-glintstone-breath.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Smarag's_Glintstone_Breath.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7050": {
+      "name": {
+        "zh": "普拉頓桑克斯的凋亡",
+        "en": "Placidusax's Ruin"
+      },
+      "icon": {
+        "src": "images/spell-placidusax-s-ruin.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Placidusax's_Ruin.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7060": {
+      "name": {
+        "zh": "龍爪",
+        "en": "Dragonclaw"
+      },
+      "icon": {
+        "src": "images/spell-dragonclaw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Dragonclaw.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7080": {
+      "name": {
+        "zh": "龍咬",
+        "en": "Dragonmaw"
+      },
+      "icon": {
+        "src": "images/spell-dragonmaw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Dragonmaw.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7090": {
+      "name": {
+        "zh": "桂奧爾的咆哮",
+        "en": "Greyoll's Roar"
+      },
+      "icon": {
+        "src": "images/spell-greyoll-s-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Greyoll's_Roar.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7200": {
+      "name": {
+        "zh": "蟲絲",
+        "en": "Pest Threads"
+      },
+      "icon": {
+        "src": "images/spell-pest-threads.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Pest_Threads.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7210": {
+      "name": {
+        "zh": "蠅群",
+        "en": "Swarm of Flies"
+      },
+      "icon": {
+        "src": "images/spell-swarm-of-flies.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Swarm_of_Flies.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7220": {
+      "name": {
+        "zh": "毒霧",
+        "en": "Poison Mist"
+      },
+      "icon": {
+        "src": "images/spell-poison-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Poison_Mist.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7230": {
+      "name": {
+        "zh": "毒刃",
+        "en": "Poison Armament"
+      },
+      "icon": {
+        "src": "images/spell-poison-armament.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Poison_Armament.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7240": {
+      "name": {
+        "zh": "猩紅艾奧尼亞",
+        "en": "Scarlet Aeonia"
+      },
+      "icon": {
+        "src": "images/spell-scarlet-aeonia.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Scarlet_Aeonia.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7300": {
+      "name": {
+        "zh": "發狂擴散",
+        "en": "Inescapable Frenzy"
+      },
+      "icon": {
+        "src": "images/spell-inescapable-frenzy.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Inescapable_Frenzy.png"
+      },
+      "tags": {
+        "spellType": null,
+        "spellSchool": null
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7310": {
+      "name": {
+        "zh": "癲火",
+        "en": "The Flame of Frenzy"
+      },
+      "icon": {
+        "src": "images/spell-the-flame-of-frenzy.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_The_Flame_of_Frenzy.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "frenzied-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7311": {
+      "name": {
+        "zh": "難耐癲火",
+        "en": "Unendurable Frenzy"
+      },
+      "icon": {
+        "src": "images/spell-unendurable-frenzy.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Unendurable_Frenzy.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "frenzied-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7320": {
+      "name": {
+        "zh": "劃空癲火",
+        "en": "Frenzied Burst"
+      },
+      "icon": {
+        "src": "images/spell-frenzied-burst.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Frenzied_Burst.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "frenzied-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7330": {
+      "name": {
+        "zh": "夏玻利利的嘶吼",
+        "en": "Howl of Shabriri"
+      },
+      "icon": {
+        "src": "images/spell-howl-of-shabriri.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Howl_of_Shabriri.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "frenzied-flame"
+        ]
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7500": {
+      "name": {
+        "zh": "熔爐百相之尾",
+        "en": "Aspects of the Crucible: Tail"
+      },
+      "icon": {
+        "src": "images/spell-aspects-of-the-crucible-tail.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Aspects_of_the_Crucible_Tail.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7510": {
+      "name": {
+        "zh": "熔爐百相之角",
+        "en": "Aspects of the Crucible: Horns"
+      },
+      "icon": {
+        "src": "images/spell-aspects-of-the-crucible-horns.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Aspects_of_the_Crucible_Horns.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7520": {
+      "name": {
+        "zh": "熔爐百相之喉囊",
+        "en": "Aspects of the Crucible: Breath"
+      },
+      "icon": {
+        "src": "images/spell-aspects-of-the-crucible-breath.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Aspects_of_the_Crucible_Breath.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7530": {
+      "name": {
+        "zh": "黑劍",
+        "en": "Black Blade"
+      },
+      "icon": {
+        "src": "images/spell-black-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Black_Blade.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7900": {
+      "name": {
+        "zh": "火焰重罪",
+        "en": "Fire's Deadly Sin"
+      },
+      "icon": {
+        "src": "images/spell-fire-s-deadly-sin.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Fire's_Deadly_Sin.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "7903": {
+      "name": {
+        "zh": "黃金雷防護",
+        "en": "Golden Lightning Fortification"
+      },
+      "icon": {
+        "src": "images/spell-golden-lightning-fortification.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ER_SB_Icon_Spell_Golden_Lightning_Fortification.png"
+      },
+      "tags": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name": [
+          "er-base-text"
+        ]
+      }
+    },
+    "8000": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8001": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8002": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8003": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8010": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8011": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8012": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8013": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8014": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8015": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8020": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8021": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8022": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    },
+    "8023": {
+      "name": null,
+      "icon": null,
+      "tags": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": []
+      },
+      "sources": [
+        "game-params"
+      ]
+    }
+  }
+}
