@@ -530,6 +530,62 @@
     { "tone": "debuff", "label": "負面", "tip": "負面效果、增益詞條說明中的代價，以及「必伴隨負面效果」" },
     { "tone": "unverified", "label": "未核實", "tip": "尚未核實或來源說法分歧的資訊；增益數值為粗體時，表示可否疊加尚未核實" }
   ],
+  "tags": {
+    "weaponType": {
+      "dagger": { "name": { "zh": "短劍", "en": "Dagger" }, "param": 1 },
+      "straight-sword": { "name": { "zh": "直劍", "en": "Straight Sword" }, "param": 3 },
+      "greatsword": { "name": { "zh": "大劍", "en": "Greatsword" }, "param": 5 },
+      "colossal-sword": { "name": { "zh": "特大劍", "en": "Colossal Sword" }, "param": 7 },
+      "curved-sword": { "name": { "zh": "曲劍", "en": "Curved Sword" }, "param": 9 },
+      "curved-greatsword": { "name": { "zh": "大曲劍", "en": "Curved Greatsword" }, "param": 11 },
+      "katana": { "name": { "zh": "刀", "en": "Katana" }, "param": 13 },
+      "twinblade": { "name": { "zh": "雙頭劍", "en": "Twinblade" }, "param": 14 },
+      "thrusting-sword": { "name": { "zh": "刺劍", "en": "Thrusting Sword" }, "param": 15 },
+      "heavy-thrusting-sword": { "name": { "zh": "重刺劍", "en": "Heavy Thrusting Sword" }, "param": 16 },
+      "axe": { "name": { "zh": "斧", "en": "Axe" }, "param": 17 },
+      "greataxe": { "name": { "zh": "大斧", "en": "Greataxe" }, "param": 19 },
+      "hammer": { "name": { "zh": "槌", "en": "Hammer" }, "param": 21 },
+      "great-hammer": { "name": { "zh": "大槌", "en": "Great Hammer" }, "param": 23 },
+      "flail": { "name": { "zh": "連枷", "en": "Flail" }, "param": 24 },
+      "spear": { "name": { "zh": "矛", "en": "Spear" }, "param": 25 },
+      "great-spear": { "name": { "zh": "大矛", "en": "Great Spear" }, "param": 28 },
+      "halberd": { "name": { "zh": "戟", "en": "Halberd" }, "param": 29 },
+      "reaper": { "name": { "zh": "鐮刀", "en": "Reaper" }, "param": 31 },
+      "fist": { "name": { "zh": "拳頭", "en": "Fist" }, "param": 35 },
+      "claw": { "name": { "zh": "鉤爪", "en": "Claw" }, "param": 37 },
+      "whip": { "name": { "zh": "軟鞭", "en": "Whip" }, "param": 39 },
+      "colossal-weapon": { "name": { "zh": "特大武器", "en": "Colossal Weapon" }, "param": 41 },
+      "bow": { "name": { "zh": "弓", "en": "Bow" }, "param": 51 },
+      "glintstone-staff": { "name": { "zh": "手杖", "en": "Glintstone Staff" }, "param": 57 },
+      "sacred-seal": { "name": { "zh": "聖印記", "en": "Sacred Seal" }, "param": 61 },
+      "greatbow": { "name": { "zh": "大弓", "en": "Greatbow" }, "param": 53 },
+      "crossbow": { "name": { "zh": "弩", "en": "Crossbow" }, "param": 55 },
+      "ballista": { "name": { "zh": "弩砲", "en": "Ballista" }, "param": 56 },
+      "small-shield": { "name": { "zh": "小盾", "en": "Small Shield" }, "param": 65 },
+      "medium-shield": { "name": { "zh": "中盾", "en": "Medium Shield" }, "param": 67 },
+      "greatshield": { "name": { "zh": "大盾", "en": "Greatshield" }, "param": 69 }
+    },
+    "spellType": {
+      "sorcery": { "name": { "zh": "魔法", "en": "Sorcery" }, "param": 0 },
+      "incantation": { "name": { "zh": "禱告", "en": "Incantation" }, "param": 1 }
+    },
+    "spellSchool": {
+      "stonedigger": { "name": { "zh": "挖石", "en": "Stonedigger" }, "param": 4 },
+      "carian-sword": { "name": { "zh": "卡利亞劍", "en": "Carian Sword" }, "param": 2 },
+      "glintblade": { "name": { "zh": "輝劍", "en": "Glintblade" }, "param": 3 },
+      "invisibility": { "name": { "zh": "隱形", "en": "Invisibility" }, "param": 12 },
+      "crystalian": { "name": { "zh": "結晶人", "en": "Crystalian" }, "param": 5 },
+      "gravity": { "name": { "zh": "重力", "en": "Gravity" }, "param": 11 },
+      "thorn": { "name": { "zh": "荊棘", "en": "Thorn" }, "param": 9 },
+      "fundamentalist": { "name": { "zh": "黃金律法基本主義", "en": "Fundamentalist" }, "param": 24 },
+      "dragon-cult": { "name": { "zh": "王城古龍信仰", "en": "Dragon Cult" }, "param": 22 },
+      "giants-flame": { "name": { "zh": "巨人火焰", "en": "Giants' Flame" }, "param": 21 },
+      "godslayer": { "name": { "zh": "狩獵神祇", "en": "Godslayer" }, "param": 20 },
+      "bestial": { "name": { "zh": "野獸", "en": "Bestial" }, "param": 23 },
+      "frenzied-flame": { "name": { "zh": "癲火", "en": "Frenzied Flame" }, "param": 26 },
+      "dragon-communion": { "name": { "zh": "龍饗", "en": "Dragon Communion" }, "param": 25 }
+    }
+  },
   "labels": {
     "availability": {
       "specific-relic": "特定遺物",

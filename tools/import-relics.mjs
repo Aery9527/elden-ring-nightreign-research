@@ -155,6 +155,35 @@ async function buildEffects() {
     return sub;
   }
 
+  // 加成對象 (targets)：只為已核實參數模式的直接攻擊力強化 (SpEffect 攻擊力倍率大於 1) 產生，其他效果不產生。
+  // - 武器種類：triggerOnWepType 對應武器 wepType。
+  // - 法術系別：magicSubCategoryChange1 對應 Magic.subCategory，且只標記魔法 (magParamChange) 或只標記禱告 (miracleParamChange)。
+  // - 魔法／禱告整體：只標記其中一種，且無系別、無武器種類。
+  // 參數值只對應 common.json 已定義的標籤；未定義的值不產生。
+  const tagByParam = (dimension) => new Map(Object.entries(common.tags[dimension]).map(([key, tag]) => [String(tag.param), key]));
+  const weaponTypes = tagByParam("weaponType");
+  const spellSchools = tagByParam("spellSchool");
+  function targetsOf(param) {
+    const found = [];
+    for (const column of ["passiveSpEffectId_1", "passiveSpEffectId_2", "passiveSpEffectId_3"]) {
+      const sp = params.SpEffectParam.get(param[column]);
+      if (!sp || !(Number(sp.physicsAttackRate) > 1)) continue;
+      const sorcery = sp.magParamChange === "1";
+      const spellType = sorcery === (sp.miracleParamChange === "1") ? null : sorcery ? "sorcery" : "incantation";
+      if (sp.triggerOnWepType !== "0" && sp.triggerOnWepType !== "-1") {
+        const type = weaponTypes.get(sp.triggerOnWepType);
+        if (type) found.push({ weaponType: [type] });
+      } else if (sp.magicSubCategoryChange1 !== "0") {
+        const school = spellSchools.get(sp.magicSubCategoryChange1);
+        if (school && spellType) found.push({ spellType: [spellType], spellSchool: [school] });
+      } else if (spellType) {
+        found.push({ spellType: [spellType] });
+      }
+    }
+    if (found.length > 1) fail(`效果 ${param.ID} 符合多個加成對象模式`);
+    return found[0] ?? null;
+  }
+
   function base(gameId) {
     const param = params.AttachEffectParam.get(gameId);
     if (!param) throw new Error(`遊戲參數沒有效果 ${gameId}`);
@@ -173,6 +202,7 @@ async function buildEffects() {
       en: normalizeEn(en),
       icon,
       characters: allowed.length === Object.keys(config.characters).length ? null : allowed,
+      targets: targetsOf(param),
     };
   }
 
@@ -325,10 +355,12 @@ function toEffect(members) {
       availability: row.availability,
       requiresCurse: row.requiresCurse,
       stacking: stackingOf(row.stacks),
+      targets: row.targets ?? undefined,
       detail: markPenalties(row.gameId, translate(row.gameId, row.detailEn)),
     }));
-    for (const field of ["availability", "requiresCurse", "stacking"]) hoist(effect, tiers, field);
-    for (const tier of tiers) if (tier.detail === undefined) delete tier.detail;
+    for (const field of ["availability", "requiresCurse", "stacking", "targets"]) hoist(effect, tiers, field);
+    if (effect.targets === undefined) delete effect.targets;
+    for (const tier of tiers) for (const field of ["targets", "detail"]) if (tier[field] === undefined) delete tier[field];
     effect.tiers = tiers;
   } else {
     const detail = markPenalties(first.gameId, translate(first.gameId, first.detailEn));
@@ -336,6 +368,7 @@ function toEffect(members) {
     effect.availability = first.availability;
     effect.requiresCurse = first.requiresCurse;
     effect.stacking = stackingOf(first.stacks);
+    if (first.targets) effect.targets = first.targets;
   }
   effect.sources = first.sources;
   // 有等級的疊加值來自社群補值時，該欄位來源列出社群來源，以及其餘等級原本給值的來源。
@@ -343,6 +376,8 @@ function toEffect(members) {
     const stackSources = members.flatMap((row) => row.stackSources ?? (row.stacks === null ? [] : row.sources));
     effect.sourcesFor = { "stacking.stacks": [...new Set(stackSources)] };
   }
+  // 加成對象由遊戲參數產生，與效果本身的來源 (例如資料集) 分開記錄。
+  if (members.some((row) => row.targets)) effect.sourcesFor = { ...effect.sourcesFor, targets: ["game-params"] };
   return effect;
 }
 
@@ -453,7 +488,7 @@ for (const [key, effect] of keyed) {
   for (const id of effect.characters ?? []) if (!common.characters[id]) fail(`效果 ${key} 的角色 ${id} 不在 common.json`);
   for (const id of sourceRefs(effect)) if (!common.sources[id]) fail(`效果 ${key} 的來源 ${id} 不在 common.json`);
   // 規則欄位只能記在效果層或各等級其中一處；人工值與分級產生值同時存在時，頁面會出現互相矛盾的規則。
-  for (const field of ["availability", "requiresCurse", "stacking"]) {
+  for (const field of ["availability", "requiresCurse", "stacking", "targets"]) {
     if (field in effect && (effect.tiers ?? []).some((tier) => field in tier)) {
       fail(`效果 ${key} 的 ${field} 同時記在效果層與等級，只能保留一處`);
     }

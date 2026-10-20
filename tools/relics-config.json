@@ -8,7 +8,8 @@
         "AttachEffectTableParam": "params/AttachEffectTableParam.csv",
         "AttachEffectFilterParam": "params/AttachEffectFilterParam.csv",
         "AttachEffectFilterSubCategoryParam": "params/AttachEffectFilterSubCategoryParam.csv",
-        "EquipParamAntique": "params/EquipParamAntique.csv"
+        "EquipParamAntique": "params/EquipParamAntique.csv",
+        "SpEffectParam": "params/SpEffectParam.csv"
       }
     },
     "text": {

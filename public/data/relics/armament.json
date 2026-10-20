@@ -284,9 +284,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "dagger"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-dagger-attacks": {
       "subcategory": "armament-dagger",
@@ -390,9 +400,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "straight-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-straight-sword-attacks": {
       "subcategory": "armament-straight-sword",
@@ -496,9 +516,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-greatsword-attacks": {
       "subcategory": "armament-greatsword",
@@ -602,9 +632,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "colossal-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-colossal-sword-attacks": {
       "subcategory": "armament-colossal-sword",
@@ -708,9 +748,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "curved-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-curved-sword-attacks": {
       "subcategory": "armament-curved-sword",
@@ -814,9 +864,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "curved-greatsword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-curved-greatsword-attacks": {
       "subcategory": "armament-curved-greatsword",
@@ -920,9 +980,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "katana"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-katana-attacks": {
       "subcategory": "armament-katana",
@@ -1026,9 +1096,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "twinblade"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-twinblade-attacks": {
       "subcategory": "armament-twinblade",
@@ -1132,9 +1212,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-thrusting-sword-attacks": {
       "subcategory": "armament-thrusting-sword",
@@ -1238,9 +1328,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "heavy-thrusting-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-heavy-thrusting-sword-attacks": {
       "subcategory": "armament-heavy-thrusting-sword",
@@ -1344,9 +1444,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "axe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-axe-attacks": {
       "subcategory": "armament-axe",
@@ -1450,9 +1560,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "greataxe"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-greataxe-attacks": {
       "subcategory": "armament-greataxe",
@@ -1556,9 +1676,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-hammer-attacks": {
       "subcategory": "armament-hammer",
@@ -1662,9 +1792,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "great-hammer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-great-hammer-attacks": {
       "subcategory": "armament-great-hammer",
@@ -1768,9 +1908,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "flail"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-flail-attacks": {
       "subcategory": "armament-flail",
@@ -1874,9 +2024,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-spear-attacks": {
       "subcategory": "armament-spear",
@@ -1980,9 +2140,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "great-spear"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-great-spear-attacks": {
       "subcategory": "armament-great-spear",
@@ -2086,9 +2256,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "halberd"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-halberd-attacks": {
       "subcategory": "armament-halberd",
@@ -2192,9 +2372,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "reaper"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-reaper-attacks": {
       "subcategory": "armament-reaper",
@@ -2298,9 +2488,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "fist"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-fist-attacks": {
       "subcategory": "armament-fist",
@@ -2404,9 +2604,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "claw"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-claw-attacks": {
       "subcategory": "armament-claw",
@@ -2510,9 +2720,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "whip"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-whip-attacks": {
       "subcategory": "armament-whip",
@@ -2616,9 +2836,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "colossal-weapon"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-colossal-weapon-attacks": {
       "subcategory": "armament-colossal-weapon",
@@ -2725,9 +2955,19 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "weaponType": [
+          "bow"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "hp-restoration-upon-bow-attacks": {
       "subcategory": "armament-bow",

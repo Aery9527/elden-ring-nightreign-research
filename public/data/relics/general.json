@@ -1857,6 +1857,11 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ]
+      },
       "tiers": [
         {
           "tier": 0,
@@ -1888,7 +1893,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-incantations": {
       "subcategory": "attack-power",
@@ -1901,6 +1911,11 @@
       "stacking": {
         "stacks": true,
         "combine": null
+      },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ]
       },
       "tiers": [
         {
@@ -1933,7 +1948,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-roar-and-breath-attacks": {
       "subcategory": "attack-power",
@@ -4534,9 +4554,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "glintblade"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-stonedigger-sorcery": {
       "subcategory": "sorceries-incantations",
@@ -4556,9 +4589,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "stonedigger"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-carian-sword-sorcery": {
       "subcategory": "sorceries-incantations",
@@ -4578,9 +4624,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "carian-sword"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-invisibility-sorcery": {
       "subcategory": "sorceries-incantations",
@@ -4600,9 +4659,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "invisibility"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-crystalian-sorcery": {
       "subcategory": "sorceries-incantations",
@@ -4622,9 +4694,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "crystalian"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-gravity-sorcery": {
       "subcategory": "sorceries-incantations",
@@ -4644,9 +4729,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "gravity"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-thorn-sorcery": {
       "subcategory": "sorceries-incantations",
@@ -4666,9 +4764,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "sorcery"
+        ],
+        "spellSchool": [
+          "thorn"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-fundamentalist-incantations": {
       "subcategory": "sorceries-incantations",
@@ -4688,9 +4799,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "fundamentalist"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-dragon-cult-incantations": {
       "subcategory": "sorceries-incantations",
@@ -4710,9 +4834,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-cult"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-giants-flame-incantations": {
       "subcategory": "sorceries-incantations",
@@ -4732,9 +4869,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "giants-flame"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-godslayer-incantations": {
       "subcategory": "sorceries-incantations",
@@ -4754,9 +4904,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "godslayer"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-bestial-incantations": {
       "subcategory": "sorceries-incantations",
@@ -4776,9 +4939,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "bestial"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-frenzied-flame-incantations": {
       "subcategory": "sorceries-incantations",
@@ -4798,9 +4974,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "frenzied-flame"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "improved-dragon-communion-incantations": {
       "subcategory": "sorceries-incantations",
@@ -4820,9 +5009,22 @@
         "stacks": true,
         "combine": null
       },
+      "targets": {
+        "spellType": [
+          "incantation"
+        ],
+        "spellSchool": [
+          "dragon-communion"
+        ]
+      },
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
     },
     "changes-compatible-armament-s-skill-to-endure-at-start-of-expedition": {
       "subcategory": "starting-armament-skill",

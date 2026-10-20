@@ -23,7 +23,7 @@
 ## 遊戲資料守則
 
 - 網站只從 `public/data/` 讀取遊戲數值 (數字與規則標籤)、佔位元素產生的效果、能力值及分類名稱，以及它們的來源；產生其中部分檔案的維護輸入放在 `tools/` (見遺物資料產生)：
-  - [public/data/common.json](public/data/common.json)：所有頁面共用的遊戲版本、能力值、圖示、角色、標籤與來源。
+  - [public/data/common.json](public/data/common.json)：所有頁面共用的遊戲版本、能力值、圖示、角色、標籤 (`tags`)、介面文字 (`labels`) 與來源。
   - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)，記錄該大類、其子分類及效果。
   - 其他遊戲主題的資料放在 `public/data/` 下以主題命名的檔案或目錄，並依遊戲本身的分組拆分，如同 `relics/` 依遊戲內遺物篩選拆分；多個主題共用的定義留在 `common.json`。
   - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 遇到重複的效果鍵、效果或等級的 `gameId`，或子分類鍵時以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
@@ -37,6 +37,10 @@
 - 百分比以有號數字儲存 (例如 `10`、`-5`)，倍率由程式推導。
 - 有 +1／+2／+3 等級的效果是一個效果加 `tiers` 陣列；每級保留遊戲內 `gameId`。名稱沒有 `+N` 後綴的等級為 `tier: 0`。各級不同的規則欄位記在各級，不記在效果上。
 - 每個效果的資源增量依來源記載逐筆記錄，不以通用的每點換算推導。
+- 標籤 (tags) 用來分類遊戲物品，讓遺物效果可以比對適用對象。定義放在 [public/data/common.json](public/data/common.json) 的 `tags`，依維度分組 (`weaponType`、`spellType`、`spellSchool`)；每個標籤為 `{ "name": { "zh", "en" }, "param": <值> }`，`param` 是該標籤代表的遊戲參數值 (`EquipParamWeapon.wepType`、`Magic.ezStateBehaviorType`、`Magic.subCategory1`/`subCategory2`)。武器種類名稱取自遊戲內遺物篩選的子分類名稱；法術類型與系別名稱摘自遊戲內遺物詞條名稱 (例如由「強化卡利亞劍的魔法」取「卡利亞劍」)。只有被遺物效果指定為對象的法術系別才建立標籤。
+  - 物品的 `tags` 為 `{ <維度>: [...] }`：標籤鍵的清單，空清單表示已核對且沒有已定義的標籤；`null` 表示未核實；`conflict` 保留每個候選值。
+  - 遺物效果的 `targets` 使用相同的維度，例如 `{ "spellType": ["sorcery"], "spellSchool": ["carian-sword"] }`。`targets` 列出的每個維度中，物品標籤至少有一個相同的鍵時才符合 (維度之間須全部符合，同一維度內符合其一即可)；效果未列出的維度不檢查。任一列出的維度確定不符時判定為不符；否則列出的維度未核實時判定為未核實，來源分歧時顯示分歧。
+  - `targets` 只涵蓋參數模式已核實的直接攻擊力強化 (見遺物資料產生)。符合表示該效果的攻擊力倍率適用於該物品類別，不代表治療、輔助效果、異常狀態累積或其他機制也受影響。沒有 `targets` 的效果表示尚未建模，不等於沒有適用對象。
 - 遺物效果依遊戲內遺物篩選的分類樹歸類：每個效果都有 `subcategory`，每個大類與子分類保留遊戲參數 `gameId`。不是取自遊戲文字的分類中文名稱為本站暫譯，頁面必須註明。
 - 每個效果都有 `name` (`zh` 與 `en`) 與 `icon`。`icon: null` 表示沒有符合圖片守則的遊戲內圖片，嚴禁改用其他圖片替代。
 - 遺物詞條表的效果列以 `<tbody data-relic-table="<subcategory>">` 由資料產生；嚴禁在 HTML 手寫效果列。效果欄先列說明，再列規則行；由結構化數值 (`modifier`) 產生的數值行只在效果沒有說明時列出，因為說明已含相同數字。來源分歧的候選值一律連同來源列出。既沒有說明也沒有結構化數值的效果，依其色調顯示「未載明數值」。規則行不列取得方式 (由「種類」欄呈現) 與增益的自身可否疊加 (由色調呈現)；藍色也代表多份數值相加，因此增益的合成方式只在不是 `add` 時列出，不同等級是否同時生效只在不是 `true` 時列出；自身可否疊加來源分歧時仍列出各候選說法。負面效果一律為紅色，因此其規則行保留自身可否疊加的狀態。「種類」欄依 `availability` 列出「一般」及／或「深層」；固定遺物詞條 (`relics`) 列出每個遺物的圖示與名稱；分級詞條出現在兩種以上的種類時，每一行都列出該種類的等級 (例如「一般：+1、+2、+3」與「深層：+3」)，只出現在一種時只寫種類 (例如「一般」)；取得方式尚未核實或來源分歧時顯示對應狀態。
@@ -53,7 +57,8 @@
   - [tools/relic-stacking.json](tools/relic-stacking.json)：資料集未載明的等級之自身可否疊加，以 `gameId` 為鍵，只取自明確寫出的社群來源 (社群試算表或 Fextralife)；每筆保存 `stacks` (布林值，來源不同時為 `conflict`)、`sources`，以及 `quotes` 中引用的來源原文。腳本只填入未知的值，並在效果的 `sourcesFor["stacking.stacks"]` 列出這些來源，連同資料集已給值之等級的來源。
   - [tools/relic-details-params.json](tools/relic-details-params.json)：依遊戲參數撰寫的說明，以 `gameId` 為鍵；每筆保存社群原文 `source` (資料集沒有說明時為 `null`)、重寫的 `en` 與 `zh`、參數證據 `params`，以及可省略的 `sources` (預設 `game-params`)。同一 `gameId` 嚴禁同時出現在兩個說明檔。
   - [tools/relic-penalties.json](tools/relic-penalties.json)：增益詞條繁中說明中屬於負面代價的片段，以擁有該說明的 `gameId` 為鍵；值為完全相符的子字串陣列 (例如 `"生命力 -5"`)，寫入 `detail.penalties`。必須列出說明中的每個代價，包括各等級的數字。
-- 人工整理的效果、譯文、效果或遺物圖示、角色或來源引用 (`sources`、`sourcesFor`、conflict 候選) 找不到對應；兩個人工整理的效果對應相同的 `gameId`；來源欄位出現未知的列舉值；譯文保存的英文原文或參數重寫的 `source` 與來源不同；同一 `gameId` 同時有譯文與參數重寫；參數重寫缺少 `en`、`zh` 或 `params`、`sources` 為空陣列，或找不到對應的效果；效果的規則欄位 (`availability`、`requiresCurse`、`stacking`) 同時記在效果層與等級；疊加補值找不到對應的效果、指向資料集已給值的等級、引用社群試算表與 Fextralife 以外的來源、未對每個來源附一句引用原文，或 `stacks` 不合法 (conflict 需至少兩個值不同的布林候選，且各自引用已列出的來源)；代價條目不是非空字串組成的非空陣列、找不到對應的說明、列出說明中沒有的片段，或以數字結尾的片段只對到較長數字的一部分且該位置沒有較長的已列片段；或任一說明檔、疊加檔或代價檔的鍵重複或不等於 `JSON.stringify` 2 空格縮排的標準輸出時，腳本停止且不寫檔。必須修正輸入檔，嚴禁繞過檢查。
+- 人工整理的效果、譯文、效果或遺物圖示、角色或來源引用 (`sources`、`sourcesFor`、conflict 候選) 找不到對應；兩個人工整理的效果對應相同的 `gameId`；來源欄位出現未知的列舉值；譯文保存的英文原文或參數重寫的 `source` 與來源不同；同一 `gameId` 同時有譯文與參數重寫；參數重寫缺少 `en`、`zh` 或 `params`、`sources` 為空陣列，或找不到對應的效果；效果的規則欄位 (`availability`、`requiresCurse`、`stacking`、`targets`) 同時記在效果層與等級；效果符合多個 `targets` 模式；疊加補值找不到對應的效果、指向資料集已給值的等級、引用社群試算表與 Fextralife 以外的來源、未對每個來源附一句引用原文，或 `stacks` 不合法 (conflict 需至少兩個值不同的布林候選，且各自引用已列出的來源)；代價條目不是非空字串組成的非空陣列、找不到對應的說明、列出說明中沒有的片段，或以數字結尾的片段只對到較長數字的一部分且該位置沒有較長的已列片段；或任一說明檔、疊加檔或代價檔的鍵重複或不等於 `JSON.stringify` 2 空格縮排的標準輸出時，腳本停止且不寫檔。必須修正輸入檔，嚴禁繞過檢查。
+- 腳本依效果的 `passiveSpEffectId_1`–`_3` 所指、`physicsAttackRate` 大於 1 的 SpEffectParam 列產生 `targets`：`triggerOnWepType` 產生 `weaponType`；`magicSubCategoryChange1` 且 `magParamChange` (魔法) 與 `miracleParamChange` (禱告) 只有一個為 1 時，產生 `spellType` 與 `spellSchool`；只有其中一個旗標、沒有系別也沒有武器種類時，產生 `spellType`。只有在 `tags` 中有定義的參數值會產生標籤，其他效果不產生 `targets`。`targets` 屬於規則欄位：各級相同時記在效果層，否則記在各級；來源記為 `sourcesFor.targets: ["game-params"]`。效果符合多個模式時腳本停止。
 - 更新來源時，修改設定檔中的 commit，重新執行腳本，並在提交前檢查列出的差異與需要重譯的項目。遊戲參數更新後，必須以新參數重新核對每一筆參數重寫。
 - 翻譯詳細說明：
   - 每個數字保持相同的數字字元；嚴禁計算、四捨五入或換算單位。
