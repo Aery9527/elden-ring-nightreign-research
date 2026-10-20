@@ -22,7 +22,7 @@
 
 ## 資料記錄方式
 
-- 新主題在 `public/` 新增頁面，並在 `public/index.html` 研究索引的對應分組新增一列。
+- 新主題在 `public/` 新增頁面，並在 `public/index.html` 對應主題的章節新增一列。
 - 遊戲數值記錄在 `public/data/` 的資料檔，頁面不寫死數值。
 - 遺物詞條資料 `public/data/relics/*.json` 以 `node tools/import-relics.mjs` 產生 (需要 Node.js)，不手動編輯；規則見 [LORE_ch.md](LORE_ch.md)。
 - 各主題附來源、查閱日期與適用範圍；區分官方說明、社群資料及尚未解決的問題。

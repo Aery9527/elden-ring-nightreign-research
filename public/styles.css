@@ -103,6 +103,60 @@ main {
   color: var(--text);
 }
 
+/* 章節列：nav.js 依本頁 h2 產生。寬螢幕換行全部顯示；窄螢幕或矮螢幕 (橫向手機) 單行橫向捲動，保留原生捲軸讓滑鼠也能捲動 */
+.site-header .chapters {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 8px;
+}
+
+.chapters ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapters li + li {
+  margin-top: 0;
+}
+
+.chapters a {
+  display: block;
+  padding: 0 6px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.chapters a:hover {
+  text-decoration: underline;
+}
+
+/* 目前章節以底色加底線標示，不只靠顏色 */
+.chapters [aria-current] {
+  background: var(--code-bg);
+  color: var(--text);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px), (max-height: 500px) {
+  .chapters ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+}
+
+@media print {
+  .chapters ul {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}
+
 .version {
   flex: none;
   color: var(--muted);
@@ -165,22 +219,6 @@ code {
   background: var(--code-bg);
   font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: 0.9em;
-}
-
-.toc {
-  padding: 12px 20px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--surface);
-}
-
-.toc strong {
-  display: block;
-  margin-bottom: 4px;
-}
-
-.toc ul {
-  margin: 0;
 }
 
 .table-wrap {

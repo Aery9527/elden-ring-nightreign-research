@@ -1,4 +1,4 @@
-// 頁首階層導覽：依捲動位置顯示「首頁 › 本頁 › 章節 › 小節」，每層都連到該層開頭。
+// 頁首導覽：第一行階層「首頁 › 本頁 › 小節」，第二行章節列列出本頁全部章節並標示目前章節，皆依捲動位置更新。
 (() => {
   // 已移到其他頁面的舊錨點：鍵為「頁名#id」，導向新位置，讓舊連結仍可使用。
   // 只列跨頁目標；同頁的舊 id 直接保留在元素上，因為同頁轉址不會重新載入，會跳過下方初始化。
@@ -25,8 +25,33 @@
   const home = crumbs.querySelector("a");
   const onHome = home.pathname === location.pathname || location.pathname.endsWith("/");
   const headings = [...document.querySelectorAll("main h2[id], main h3[id]")];
+  const h2s = headings.filter((heading) => heading.tagName === "H2");
   const root = document.documentElement;
-  let shown = "";
+  let shown = null;
+
+  // 章節列：列出本頁全部 h2，標示目前章節。名稱由 render.js 稍後填入，空白時先隱藏該項。
+  const chapters = document.createElement("nav");
+  chapters.className = "chapters";
+  chapters.id = "toc"; // 接手原本正文目錄 (#toc) 的內容，舊連結仍可使用
+  chapters.setAttribute("aria-label", "本頁章節");
+  const list = document.createElement("ul");
+  const links = new Map(h2s.map((heading) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = `#${heading.id}`;
+    li.append(a);
+    list.append(li);
+    return [heading, a];
+  }));
+  chapters.append(list);
+  if (h2s.length) header.append(chapters);
+
+  function syncNames() {
+    for (const [heading, a] of links) {
+      if (a.textContent !== heading.textContent) a.textContent = heading.textContent;
+      a.parentElement.hidden = !heading.textContent.trim();
+    }
+  }
 
   function crumb(text, href) {
     const li = document.createElement("li");
@@ -35,6 +60,15 @@
     a.textContent = text;
     li.append(a);
     return li;
+  }
+
+  // 章節列不換行 (窄螢幕) 時，把目前章節捲到完整可見；焦點在章節列內時保留讀者的捲動位置
+  function reveal(a) {
+    if (!a || list.contains(document.activeElement)) return;
+    const box = list.getBoundingClientRect();
+    const rect = a.getBoundingClientRect();
+    if (rect.left < box.left) list.scrollLeft += rect.left - box.left;
+    else if (rect.right > box.right) list.scrollLeft += rect.right - box.right;
   }
 
   function update() {
@@ -51,12 +85,21 @@
       if (heading.tagName === "H2") { h2 = heading; h3 = null; } else { h3 = heading; }
     }
 
+    // 麵包屑只到本頁與目前小節 (h3)；目前章節 (h2) 由章節列標示
     const levels = [];
     if (!onHome) levels.push([h1.textContent, "#"]);
-    for (const heading of [h2, h3]) if (heading) levels.push([heading.textContent, `#${heading.id}`]);
-    const key = levels.map(([text, href]) => `${href}\n${text}`).join("\n");
+    if (h3) levels.push([h3.textContent, `#${h3.id}`]);
+    const current = links.get(h2) ?? null;
+    // 視窗縮放或焦點離開章節列時，目前章節可能未變但已不在可見範圍，因此每次都檢查
+    reveal(current);
+    const key = [...levels.flat(), current?.getAttribute("href")].join("\n");
     if (key === shown) return;
     shown = key;
+
+    for (const a of links.values()) {
+      if (a === current) a.setAttribute("aria-current", "location");
+      else a.removeAttribute("aria-current");
+    }
 
     // 只替換有變動的層級，保留未變節點，避免鍵盤焦點被移除
     const items = [...crumbs.children].slice(1);
@@ -69,10 +112,12 @@
     const lostFocus = items.slice(same).some((li) => li.contains(document.activeElement));
     items.slice(same).forEach((li) => li.remove());
     crumbs.append(...levels.slice(same).map(([text, href]) => crumb(text, href)));
+    const page = crumbs.children[onHome ? 0 : 1].querySelector("a");
     const last = crumbs.lastElementChild.querySelector("a");
     if (lostFocus) last.focus({ preventScroll: true });
     crumbs.querySelectorAll("[aria-current]").forEach((a) => a.removeAttribute("aria-current"));
-    last.setAttribute("aria-current", "location");
+    page.setAttribute("aria-current", "page");
+    if (last !== page) last.setAttribute("aria-current", "location");
     // 窄螢幕橫向捲動：有焦點時讓聚焦的連結可見，否則顯示最後一層
     const focused = crumbs.contains(document.activeElement) ? document.activeElement : null;
     if (focused) {
@@ -94,7 +139,10 @@
 
   addEventListener("scroll", schedule, { passive: true });
   addEventListener("resize", schedule);
-  // render.js 之後才填入資料產生的標題文字，標題變動時重新產生
-  new MutationObserver(() => { shown = ""; schedule(); }).observe(document.querySelector("main"), { childList: true, subtree: true, characterData: true });
+  list.addEventListener("focusout", schedule);
+  // render.js 之後才填入資料產生的標題文字，標題變動時同步章節名稱並重新產生。
+  // 名稱填入會改變頁首高度，需立即更新 --header-h，render.js 隨後對準網址錨點時才不會用到舊高度
+  new MutationObserver(() => { syncNames(); shown = null; update(); }).observe(document.querySelector("main"), { childList: true, subtree: true, characterData: true });
+  syncNames();
   update();
 })();
