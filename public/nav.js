@@ -62,13 +62,15 @@
     return li;
   }
 
-  // 章節列不換行 (窄螢幕) 時，把目前章節捲到完整可見；焦點在章節列內時保留讀者的捲動位置
+  // 章節列不換行 (窄螢幕) 時，把目前章節捲到完整可見；焦點在章節列內時保留讀者的捲動位置。
+  // 與邊緣保留間距，讓讀者看出兩側還有其他章節；捲到清單兩端時由瀏覽器限制在範圍內
+  const EDGE = 24;
   function reveal(a) {
     if (!a || list.contains(document.activeElement)) return;
     const box = list.getBoundingClientRect();
     const rect = a.getBoundingClientRect();
-    if (rect.left < box.left) list.scrollLeft += rect.left - box.left;
-    else if (rect.right > box.right) list.scrollLeft += rect.right - box.right;
+    if (rect.left < box.left + EDGE) list.scrollLeft += rect.left - box.left - EDGE;
+    else if (rect.right > box.right - EDGE) list.scrollLeft += rect.right - box.right + EDGE;
   }
 
   function update() {
