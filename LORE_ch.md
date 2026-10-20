@@ -27,7 +27,7 @@
   - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)，記錄該大類、其子分類及效果。
   - `public/data/armaments/weapons.json` 與 `public/data/armaments/spells.json`：以遊戲內 ID (`EquipParamWeapon` 的列，或武器槽位引用的法術 ID) 為鍵的武器與法術，各有 `name` (`zh` 與 `en`，沒有來源提供名稱時為 `null`)、`icon`、`tags` 與來源。武器另保留 `sortId`；搭載法術的武器以 `spells` 記錄各槽位 (`R1`、`R2`) 的法術 ID。每一列武器都是獨立的項目，即使與其他列的 `sortId` 相同也不合併；嚴禁把其他列的名稱套到未具名的列。
   - 其他遊戲主題的資料放在 `public/data/` 下以主題命名的檔案或目錄，並依遊戲本身的分組拆分，如同 `relics/` 依遊戲內遺物篩選拆分；多個主題共用的定義留在 `common.json`。
-  - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 遇到重複的效果鍵、效果或等級的 `gameId`，或子分類鍵時以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
+  - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 會區分遺物大類檔 (`category`)、武器檔 (`weapons`) 與法術檔 (`spells`)，其他檔案以錯誤停止；遇到重複的效果鍵、效果或等級的 `gameId`、子分類鍵、武器 ID 或法術 ID (各種類分別檢查)，物品標籤或效果 `targets` 的鍵未在 `tags` 定義，以及有載入法術檔時武器搭載的法術不存在，皆以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
 - HTML 放 `data-*` 佔位元素，由 [public/render.js](public/render.js) 填入；禁止在 HTML 寫死遊戲數值，內文例子中的數值也一樣。內文敘述 (例如角色名稱) 與 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
 - 數值狀態：
   - 一般值代表該效果 `sources` 的記載。
@@ -44,6 +44,10 @@
   - `targets` 只涵蓋參數模式已核實的直接攻擊力強化 (見遺物資料產生)。符合表示該效果的攻擊力倍率適用於該物品類別，不代表治療、輔助效果、異常狀態累積或其他機制也受影響。沒有 `targets` 的效果表示尚未建模，不等於沒有適用對象。
 - 遺物效果依遊戲內遺物篩選的分類樹歸類：每個效果都有 `subcategory`，每個大類與子分類保留遊戲參數 `gameId`。不是取自遊戲文字的分類中文名稱為本站暫譯，頁面必須註明。
 - 每個效果都有 `name` (`zh` 與 `en`) 與 `icon`。`icon: null` 表示沒有符合圖片守則的遊戲內圖片，嚴禁改用其他圖片替代。
+- 武器與法術頁的表格由資料產生；嚴禁在 HTML 手寫表格列：
+  - `<tbody data-weapon-table>`：依標籤順序，每個 `weaponType` 標籤一列，依 `sortId` 列出該種類的具名武器。
+  - `<tbody data-spell-table="sorcery">` 與 `"incantation"`：`spellType` 含該類型的每個法術，依標籤順序的系別排列，沒有已定義系別者殿後；沒有名稱的法術顯示其 ID。`<tbody data-spell-table="unlisted">`：類型無法核實的每個被引用法術；因此每個被引用的法術在頁面上恰好出現一次。
+  - 「攻擊力加成詞條」欄依上述比對規則列出 `targets` 與該列相符的遺物效果，各自連到詞條列 (`relics-<category>.html#effect-<key>`)；由頁面計算，資料不另存反向清單。沒有相符的列表示在目前建模範圍內沒有相符詞條，不代表沒有任何遺物能加成。「搭載法器」欄列出具名法器與搭載該法術的槽位 (`R1`、`R2`)，未具名的法器依槽位只列出不同武器 ID 的數量。記在各級的 `targets` 尚未支援顯示：頁面以錯誤停止，不合併各級結果。
 - 遺物詞條表的效果列以 `<tbody data-relic-table="<subcategory>">` 由資料產生；嚴禁在 HTML 手寫效果列。效果欄先列說明，再列規則行；由結構化數值 (`modifier`) 產生的數值行只在效果沒有說明時列出，因為說明已含相同數字。來源分歧的候選值一律連同來源列出。既沒有說明也沒有結構化數值的效果，依其色調顯示「未載明數值」。規則行不列取得方式 (由「種類」欄呈現) 與增益的自身可否疊加 (由色調呈現)；藍色也代表多份數值相加，因此增益的合成方式只在不是 `add` 時列出，不同等級是否同時生效只在不是 `true` 時列出；自身可否疊加來源分歧時仍列出各候選說法。負面效果一律為紅色，因此其規則行保留自身可否疊加的狀態。「種類」欄依 `availability` 列出「一般」及／或「深層」；固定遺物詞條 (`relics`) 列出每個遺物的圖示與名稱；分級詞條出現在兩種以上的種類時，每一行都列出該種類的等級 (例如「一般：+1、+2、+3」與「深層：+3」)，只出現在一種時只寫種類 (例如「一般」)；取得方式尚未核實或來源分歧時顯示對應狀態。
 - [public/render.js](public/render.js) 依色調顯示資料產生的說明、數值行與內文例子：負面效果大類的詞條為紅色 (`tone-debuff`)；其他詞條自身可疊加 (`stacks: true`) 為藍色 (`tone-stack`)，不可疊加 (`stacks: false`) 為綠色 (`tone-solo`)；可否疊加尚未核實或來源分歧時維持預設顏色並以粗體標示 (`tone-unverified`)。遺物詞條表中，狀態為尚未核實或來源分歧的規則標籤，以及分歧候選值的「來源分歧」標籤，也以粗體標示 (`tone-unverified`)。規則行中的等同值 (例如「等同生命力 +5」) 採用詞條的色調。說明中列為代價的片段在該說明的色調中以紅色標示。確定必伴隨負面效果 (`requiresCurse: true`) 的規則標籤為紅色。各遺物頁在視窗底部固定顯示顏色圖例 (`<aside class="tone-legend" data-legend>`)，依 [public/data/common.json](public/data/common.json) 的 `legend` 產生：每一項有 `tone` (class 後綴)、`label` 與滑鼠移上或聚焦時顯示的 `tip`；各項為「不可疊加」(綠)、「可疊加」(藍)、「負面」(紅) 與「未核實」(粗體)。嚴禁在 HTML 手動設定色調 class。
 - 效果的每一級說明結尾都有相同的括號附註時 (例如「（不適用於隱士、復仇者、執行者）」)，頁面從每一級移除該附註，改在各級之後以「各等級：<附註>」列一次；資料保留完整原文。

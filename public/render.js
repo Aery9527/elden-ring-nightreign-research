@@ -1,5 +1,6 @@
 // 依 <body data-load> 列出的資料檔 (例如 "common relics/general") 讀取遊戲數值，填入頁面上的 data-* 佔位元素。
-// common 放共用的能力值、圖示、角色、標籤與來源；relics/* 各放一個遺物詞條大類的分類定義與效果。
+// common 放共用的能力值、圖示、角色、標籤 (tags)、介面文字 (labels) 與來源；relics/* 各放一個遺物詞條大類的分類定義與效果；
+// armaments/weapons、armaments/spells 放武器與法術。
 // 資料慣例：一般值依該效果的 sources；null 表示尚未核實；{ conflict: [...] } 表示來源分歧，不預設採用任何候選值；
 // sourcesFor 以欄位路徑取代該欄位的 sources。
 
@@ -426,6 +427,126 @@ function relicRows(data, subcategoryId) {
   return rows;
 }
 
+// ---------- 武器與法術 ----------
+
+// 物品標籤與遺物效果加成對象 (targets) 的比對：targets 列出的每個維度，物品至少要有一個相同的鍵 (維度間 AND、維度內 OR)。
+// 任一維度確定不符 → false；否則有來源分歧 → "conflict"、有未核實 → null；全部符合 → true。
+function matchTargets(tags, targets) {
+  let state = true;
+  for (const [dimension, wanted] of Object.entries(targets)) {
+    const have = tags[dimension];
+    if (have === undefined) return false;
+    if (have === null) state = state === true ? null : state;
+    else if (isConflict(have)) state = "conflict";
+    else if (!have.some((key) => wanted.includes(key))) return false;
+  }
+  return state;
+}
+
+// 加成對象與物品標籤相符 (或未核實、來源分歧) 的遺物效果。
+// 目前只顯示記在效果層的 targets；記在各級的 targets 尚無資料，出現時報錯，不以合併結果帶過。
+function targetEffects(data, tags) {
+  const found = [];
+  for (const [key, effect] of Object.entries(data.effects)) {
+    if ((effect.tiers ?? []).some((tier) => tier.targets)) throw new Error(`尚未支援各級不同的加成對象：${key}`);
+    if (!effect.targets) continue;
+    const state = matchTargets(tags, effect.targets);
+    if (state !== false) found.push({ key, effect, state });
+  }
+  return found;
+}
+
+// 遺物詞條連結：連到所屬大類詞條頁的詞條列 (#effect-*)。
+function effectLink(data, key, effect) {
+  const category = lookup(data.subcategories, effect.subcategory, "子分類").category;
+  return el("a", { href: `relics-${category}.html#effect-${key}` }, effect.name.zh);
+}
+
+function targetEntries(data, tags) {
+  const found = targetEffects(data, tags);
+  if (found.length === 0) return [el("span", { class: "entry sub" }, data.labels.armaments.noTargets)];
+  return found.map(({ key, effect, state }) =>
+    el(
+      "span",
+      { class: "entry" },
+      effectLink(data, key, effect),
+      ...(state === true ? [] : ["：", el("span", { class: "tone-unverified" }, state === null ? data.labels.unverified : data.labels.conflict)])
+    )
+  );
+}
+
+// 武器、法術的圖示記在項目資料 ({ src, page })，不在 common.json。
+function itemIcon(data, item, size) {
+  if (!item.icon) return el("span", { class: "icon icon-missing", role: "img", "aria-label": data.labels.iconMissing });
+  return el("img", { class: "icon", src: item.icon.src, width: size, height: size, alt: `${item.name.zh}圖示`, loading: "lazy" });
+}
+
+const tagName = (data, dimension, key) => lookup(data.tags[dimension], key, "標籤").name.zh;
+
+// 標籤狀態文字：清單列出名稱 (空清單為 emptyLabel)；null 為未核實、分歧為來源分歧，皆粗體。
+function tagEntries(data, dimension, value, emptyLabel) {
+  if (value === null) return [el("span", { class: "tone-unverified" }, data.labels.unverified)];
+  if (isConflict(value)) return [el("span", { class: "tone-unverified" }, data.labels.conflict)];
+  if (value.length === 0) return [emptyLabel];
+  return [value.map((key) => tagName(data, dimension, key)).join("、")];
+}
+
+// 搭載法器：具名法器列出圖示、名稱與槽位 (R1、R2)；未具名的法器變體依槽位分組，只列數量 (依不同武器 ID 計數)。
+function carrierEntries(data, spellId) {
+  const slotsOf = (weapon) => Object.entries(weapon.spells ?? {}).filter(([, id]) => id === spellId).map(([slot]) => slot).join("、");
+  const carriers = Object.values(data.weapons).filter((weapon) => slotsOf(weapon));
+  const named = carriers.filter((weapon) => weapon.name).sort((a, b) => a.sortId - b.sortId);
+  const unnamed = new Map();
+  for (const weapon of carriers.filter((w) => !w.name)) unnamed.set(slotsOf(weapon), (unnamed.get(slotsOf(weapon)) ?? 0) + 1);
+  return [
+    ...named.map((weapon) => el("span", { class: "entry" }, itemIcon(data, weapon, "24"), `${weapon.name.zh}（${slotsOf(weapon)}）`)),
+    ...[...unnamed].sort().map(([slots, count]) => el("span", { class: "entry sub" }, `${data.labels.armaments.unnamedVariants}（${slots}）×${count}`)),
+  ];
+}
+
+// <tbody data-weapon-table>：每列一個武器種類，列出該種類的具名武器與攻擊力加成詞條。
+function weaponRows(data) {
+  return Object.entries(data.tags.weaponType).map(([type, tag]) => {
+    const weapons = Object.values(data.weapons)
+      .filter((weapon) => weapon.name && weapon.tags.weaponType?.includes(type))
+      .sort((a, b) => a.sortId - b.sortId);
+    return el(
+      "tr",
+      { id: `weapon-type-${type}` },
+      el("td", { class: "item" }, el("span", { class: "tag-name" }, tag.name.zh, el("span", { class: "en" }, tag.name.en))),
+      el("td", { class: "names" }, ...weapons.map((weapon) => el("span", { class: "entry" }, itemIcon(data, weapon, "24"), weapon.name.zh))),
+      el("td", { class: "targets" }, ...targetEntries(data, { weaponType: [type] }))
+    );
+  });
+}
+
+// <tbody data-spell-table="sorcery|incantation">：類型已核實的法術，依系別 (標籤定義順序) 排列，無系別殿後。
+// <tbody data-spell-table="unlisted">：類型無法核實的法術引用。沒有名稱的法術以 ID 顯示。
+function spellRows(data, table) {
+  const schools = Object.keys(data.tags.spellSchool);
+  const rank = (spell) => {
+    const value = spell.tags.spellSchool;
+    return Array.isArray(value) && value.length ? Math.min(...value.map((key) => schools.indexOf(key))) : schools.length;
+  };
+  const listed = (spell) => Array.isArray(spell.tags.spellType);
+  const rows = Object.entries(data.spells)
+    .filter(([, spell]) => (table === "unlisted" ? !listed(spell) : listed(spell) && spell.tags.spellType.includes(table)))
+    .sort(([idA, a], [idB, b]) => rank(a) - rank(b) || Number(idA) - Number(idB));
+  if (rows.length === 0) throw new Error(`法術表沒有項目：${table}`);
+  return rows.map(([id, spell]) => {
+    const name = spell.name
+      ? el("span", { class: "item-name" }, itemIcon(data, spell, "48"), spell.name.zh, el("span", { class: "en" }, spell.name.en))
+      : el("span", {}, `${data.labels.armaments.unnamed}（ID ${id}）`);
+    const school = el("td", { class: "school" }, ...tagEntries(data, "spellSchool", spell.tags.spellSchool, data.labels.armaments.noSchool));
+    const carriers = el("td", { class: "names" }, ...carrierEntries(data, id));
+    if (table === "unlisted") {
+      const type = el("td", { class: "school" }, ...tagEntries(data, "spellType", spell.tags.spellType, ""));
+      return el("tr", { id: `spell-${id}` }, el("td", { class: "item" }, name), type, school, carriers);
+    }
+    return el("tr", { id: `spell-${id}` }, el("td", { class: "item" }, name), school, carriers, el("td", { class: "targets" }, ...targetEntries(data, spell.tags)));
+  });
+}
+
 function render(data) {
   // 角色專屬子分類以渡夜者命名，名稱前附角色圖示。
   // <aside data-legend>：遺物頁底部的顏色圖例，依 common.json 的 legend 產生；說明在滑鼠移上或聚焦時顯示。
@@ -442,6 +563,8 @@ function render(data) {
   for (const node of document.querySelectorAll("[data-relic-table]")) {
     node.replaceChildren(...relicRows(data, node.dataset.relicTable));
   }
+  for (const node of document.querySelectorAll("[data-weapon-table]")) node.replaceChildren(...weaponRows(data));
+  for (const node of document.querySelectorAll("[data-spell-table]")) node.replaceChildren(...spellRows(data, node.dataset.spellTable));
   for (const node of document.querySelectorAll("[data-game-version]")) node.textContent = data.gameVersion;
   for (const node of document.querySelectorAll("[data-item]")) {
     const [kind, id] = node.dataset.item.split(":");
@@ -491,14 +614,30 @@ function loadJson(name) {
   });
 }
 
-// 合併 common 與各遺物大類檔：效果鍵、遊戲內 ID 與子分類鍵重複時丟出錯誤，不以後者覆蓋前者。
-function mergeData([common, ...relicFiles]) {
-  const data = { ...common, effects: {}, subcategories: {} };
+// 合併 common 與其他資料檔：遺物大類檔 (有 category)、武器檔 (weapons)、法術檔 (spells)。
+// 效果鍵、遊戲內 ID、子分類鍵、武器或法術 ID 重複時丟出錯誤，不以後者覆蓋前者；ID 唯一性依實體種類各自檢查。
+function mergeData([common, ...files]) {
+  const data = { ...common, effects: {}, subcategories: {}, weapons: {}, spells: {} };
   const gameIds = new Set();
   const claim = (id, owner) => {
     if (gameIds.has(id)) throw new Error(`遊戲內 ID 重複：${id}（${owner}）`);
     gameIds.add(id);
   };
+  const relicFiles = [];
+  let spellsLoaded = false;
+  for (const file of files) {
+    if (file.category) {
+      relicFiles.push(file);
+      continue;
+    }
+    const kinds = Object.keys(file);
+    if (kinds.length !== 1 || !["weapons", "spells"].includes(kinds[0])) throw new Error(`無法辨識的資料檔：${kinds.join("、")}`);
+    for (const [id, item] of Object.entries(file[kinds[0]])) {
+      if (data[kinds[0]][id]) throw new Error(`${kinds[0]} ID 重複：${id}`);
+      data[kinds[0]][id] = item;
+    }
+    if (kinds[0] === "spells") spellsLoaded = true;
+  }
   for (const file of relicFiles) {
     for (const sub of file.category.subcategories) {
       if (data.subcategories[sub.id]) throw new Error(`子分類重複：${sub.id}`);
@@ -512,7 +651,27 @@ function mergeData([common, ...relicFiles]) {
       data.effects[key] = effect;
     }
   }
+  checkTags(data, spellsLoaded);
   return data;
+}
+
+// 標籤與引用檢查：物品標籤、遺物加成對象的鍵都要有定義；有載入法術檔時，武器搭載的法術必須存在。
+function checkTags(data, spellsLoaded) {
+  const check = (tags, owner) => {
+    for (const [dimension, value] of Object.entries(tags)) {
+      const defined = lookup(data.tags, dimension, `標籤維度（${owner}）`);
+      const keys = Array.isArray(value) ? value : isConflict(value) ? value.conflict.flatMap((c) => c.value) : [];
+      for (const key of keys) lookup(defined, key, `標籤（${owner}）`);
+    }
+  };
+  for (const [key, effect] of Object.entries(data.effects)) {
+    for (const holder of [effect, ...(effect.tiers ?? [])]) if (holder.targets) check(holder.targets, `效果 ${key}`);
+  }
+  for (const kind of ["weapons", "spells"]) for (const [id, item] of Object.entries(data[kind])) check(item.tags, `${kind} ${id}`);
+  if (!spellsLoaded) return;
+  for (const [id, weapon] of Object.entries(data.weapons)) {
+    for (const spell of Object.values(weapon.spells ?? {})) lookup(data.spells, spell, `法術（武器 ${id} 搭載）`);
+  }
 }
 
 // 瀏覽器在資料填入前就跳到網址的錨點，填入後內容變長會讓落點偏移；渲染完成後重新對準。

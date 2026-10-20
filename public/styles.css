@@ -383,6 +383,40 @@ td.kind .entry + .entry {
   margin-top: 8px;
 }
 
+/* 武器與法術頁：種類名稱、名稱清單 (武器、搭載法器) 與攻擊力加成詞條 */
+.tag-name .en {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+td.names {
+  min-width: 16em;
+}
+
+td.school {
+  white-space: nowrap;
+}
+
+td.names .entry {
+  display: inline-block;
+  margin: 0 12px 4px 0;
+  white-space: nowrap;
+}
+
+td.targets .entry {
+  display: block;
+  white-space: nowrap;
+}
+
+td.targets .entry + .entry {
+  margin-top: 4px;
+}
+
+td .entry.sub {
+  color: var(--muted);
+}
+
 /* 沒有可用遊戲內圖片時保留與圖片相同的空位 */
 .icon-missing {
   display: inline-block;

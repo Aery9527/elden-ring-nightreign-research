@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>武器與法術</title>
+  <meta name="description" content="《艾爾登法環 黑夜君臨》的武器種類、魔法與禱告，以及以標籤比對出的遺物詞條攻擊力加成對象。">
+  <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
+  <script src="render.js" defer></script>
+</head>
+<body data-load="common relics/general relics/armament armaments/weapons armaments/spells">
+  <header class="site-header">
+    <nav aria-label="頁面階層">
+      <ol class="crumbs"><li><a href="index.html">黑夜君臨研究資料庫</a></li></ol>
+      <span class="version">遊戲版本 <span data-game-version></span></span>
+    </nav>
+  </header>
+
+  <main>
+    <h1>武器與法術</h1>
+    <ul>
+      <li>本頁依遊戲參數（版本 <span data-game-version></span>）列出武器種類、魔法與禱告，並以標籤比對遺物詞條的加成對象：武器依武器種類分類，法術依類型（魔法或禱告）與系別分類。系別名稱摘自遊戲內遺物詞條名稱，例如由「強化卡利亞劍的魔法」取「卡利亞劍」。</li>
+      <li>「攻擊力加成詞條」欄列出遊戲參數指定以該武器種類、法術類型或系別為對象的直接攻擊力強化詞條；符合表示該詞條的攻擊力倍率適用，不代表治療、輔助效果或異常狀態累積也受影響。目前只比對武器種類、魔法與禱告整體，以及法術系別的直接攻擊力強化，其他詞條不在比對範圍內。</li>
+      <li>武器與法術名稱引用《艾爾登法環》本篇的遊戲文字，尚未確認與《黑夜君臨》一致；圖示取自 Eldenpedia。</li>
+    </ul>
+
+    <section>
+      <h2 id="weapons">武器</h2>
+      <p>每列一個遊戲內遺物篩選的武器種類。「武器」欄列出遊戲參數中具名的基本武器，尚未逐項確認本作的取得方式。</p>
+      <div class="table-wrap">
+        <table class="table-wide">
+          <thead>
+            <tr><th>種類</th><th>武器</th><th>攻擊力加成詞條</th></tr>
+          </thead>
+          <tbody data-weapon-table></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="sorceries">魔法</h2>
+      <p>法術搭載在手杖或聖印記上。「搭載法器」欄列出具名的法器與搭載的槽位（R1、R2）；沒有名稱的法器變體依槽位只列出數量。</p>
+      <div class="table-wrap">
+        <table class="table-wide">
+          <thead>
+            <tr><th>法術</th><th>系別</th><th>搭載法器</th><th>攻擊力加成詞條</th></tr>
+          </thead>
+          <tbody data-spell-table="sorcery"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="incantations">禱告</h2>
+      <div class="table-wrap">
+        <table class="table-wide">
+          <thead>
+            <tr><th>法術</th><th>系別</th><th>搭載法器</th><th>攻擊力加成詞條</th></tr>
+          </thead>
+          <tbody data-spell-table="incantation"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="limitations">查證限制</h2>
+      <ul>
+        <li>遊戲參數沒有名稱，也沒有可用的《黑夜君臨》武器與法術文字，名稱一律引用《艾爾登法環》本篇文字；本篇沒有名稱的項目標示為未具名。本篇文字沒有名稱的武器不列入武器表，因此《黑夜君臨》新增、本篇沒有的武器不會出現在表中。</li>
+        <li>武器表只列出 ID 為 10000 倍數、屬於遺物篩選武器種類且具名的基本武器；屬性變體與未具名的列不列出。同一法器的不同變體搭載的法術可能不同，各自保留，不合併。</li>
+        <li>系別只建立遺物詞條指定為對象的系別；其餘參數分類不顯示，該法術的系別顯示為「無已定義系別」。</li>
+        <li>下表列出武器引用、但遊戲參數沒有該法術資料的法術：類型與系別標示為未核實，不依名稱推定，因此不比對攻擊力加成詞條。魔法、禱告表中沒有本篇名稱的法術以 ID 顯示。</li>
+      </ul>
+      <div class="table-wrap">
+        <table class="table-wide">
+          <thead>
+            <tr><th>法術</th><th>類型</th><th>系別</th><th>搭載法器</th></tr>
+          </thead>
+          <tbody data-spell-table="unlisted"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

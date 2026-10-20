@@ -587,6 +587,12 @@
     }
   },
   "labels": {
+    "armaments": {
+      "noTargets": "本次建模範圍內無符合詞條",
+      "noSchool": "無已定義系別",
+      "unnamed": "未具名",
+      "unnamedVariants": "未具名變體"
+    },
     "availability": {
       "specific-relic": "特定遺物",
       "standard-relic": "一般遺物",
