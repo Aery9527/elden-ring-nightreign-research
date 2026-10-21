@@ -603,7 +603,8 @@
   },
   "labels": {
     "attributes": {
-      "viaBase": "經由"
+      "viaBase": "經由",
+      "relatedStats": "相關能力值"
     },
     "armaments": {
       "noTargets": "本次建模範圍內無符合詞條",

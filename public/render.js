@@ -379,7 +379,20 @@ function effectEntries(data, key, effect) {
     const characters = effect.characters.map((id) => lookup(data.characters, id, "角色"));
     extras.push(namedList(data, data.labels.characters, characters.map((c) => ({ icon: c.icon, name: c.name.zh }))));
   }
-  return [...details, ...values, ...extras];
+  const stats = statLinks(data, key, effect);
+  return [...details, ...values, ...extras, ...stats];
+}
+
+// 效果欄最後一行：相關能力值 (stats) 依序連到能力值頁的該列 (attributes.html#stat-<key>)，例如「相關能力值：[圖]生命力」。
+// 沒有 stats 的效果不輸出；記在各級的 stats 尚未支援，出現時報錯。
+function statLinks(data, key, effect) {
+  if ((effect.tiers ?? []).some((tier) => "stats" in tier)) throw new Error(`尚未支援各級不同的相關能力值：${key}`);
+  if (!effect.stats?.length) return [];
+  const items = effect.stats.map((id) => {
+    const stat = lookup(data.stats, id, "能力值");
+    return { icon: stat.icon, name: el("a", { href: `attributes.html#stat-${id}` }, stat.name.zh) };
+  });
+  return [namedList(data, data.labels.attributes.relatedStats, items)];
 }
 
 // 取得方式對應的種類；一般與深層遺物兩者皆列。
