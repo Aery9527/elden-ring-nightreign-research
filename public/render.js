@@ -379,8 +379,38 @@ function effectEntries(data, key, effect) {
     const characters = effect.characters.map((id) => lookup(data.characters, id, "角色"));
     extras.push(namedList(data, data.labels.characters, characters.map((c) => ({ icon: c.icon, name: c.name.zh }))));
   }
-  const stats = statLinks(data, key, effect);
-  return [...details, ...values, ...extras, ...stats];
+  return [...details, ...values, ...extras, ...targetLinks(data, key, effect), ...statLinks(data, key, effect)];
+}
+
+// 效果欄：相關武器與法術 (targets) 連到武器與法術頁的對應列或章節，例如「相關武器與法術：短劍」。
+// targets 維度間是 AND，攤平成清單會被讀成 OR，因此只支援現有四種組合，其他組合報錯：
+// 武器種類 → #weapon-type-<type>；法術類型 → 魔法、禱告章節；類型加系別 → 只列系別 (#spell-school-<school>)，
+// 目前每個系別只屬於一種類型；指定法術 → 該法術列 (#spell-<id>，附圖示)，法術名稱取自法術檔，頁面需載入 armaments/spells。
+const SPELL_TYPE_SECTIONS = { sorcery: "sorceries", incantation: "incantations" };
+function targetLinks(data, key, effect) {
+  if ((effect.tiers ?? []).some((tier) => "targets" in tier)) throw new Error(`尚未支援各級不同的加成對象：${key}`);
+  if (!effect.targets) return [];
+  const { targets } = effect;
+  if (!Object.values(targets).every(Array.isArray)) throw new Error(`加成對象必須是清單（效果 ${key}）`);
+  const link = (anchor, ...children) => el("a", { href: `armaments.html#${anchor}` }, ...children);
+  const tagName = (dimension, id) => lookup(data.tags[dimension], id, `標籤 ${dimension}`).name.zh;
+  const dimensions = Object.keys(targets).sort().join("+");
+  let links;
+  if (dimensions === "weaponType") links = targets.weaponType.map((id) => link(`weapon-type-${id}`, tagName("weaponType", id)));
+  else if (dimensions === "spellType")
+    links = targets.spellType.map((id) => link(lookup(SPELL_TYPE_SECTIONS, id, "法術類型章節"), tagName("spellType", id)));
+  else if (dimensions === "spellSchool+spellType")
+    links = targets.spellSchool.map((id) => link(`spell-school-${id}`, tagName("spellSchool", id)));
+  else if (dimensions === "spell")
+    links = targets.spell.map((id) => {
+      const spell = lookup(data.spells, id, "法術");
+      if (!spell.name) return link(`spell-${id}`, `${data.labels.armaments.unnamed}（ID ${id}）`);
+      return link(`spell-${id}`, itemIcon(data, spell, "24"), spell.name.zh);
+    });
+  else throw new Error(`尚未支援的加成對象組合：${dimensions}（效果 ${key}）`);
+  const nodes = [`${data.labels.armaments.relatedItems}：`];
+  links.forEach((node, index) => nodes.push(...(index > 0 ? ["、", node] : [node])));
+  return [el("span", { class: "entry" }, el("span", { class: "sub" }, ...nodes))];
 }
 
 // 效果欄最後一行：相關能力值 (stats) 依序連到能力值頁的該列 (attributes.html#stat-<key>)，例如「相關能力值：[圖]生命力」。
@@ -574,11 +604,17 @@ function spellRows(data, table) {
     .filter(([, spell]) => (table === "unlisted" ? !listed(spell) : listed(spell) && spell.tags.spellType.includes(table)))
     .sort(([idA, a], [idB, b]) => rank(a) - rank(b) || Number(idA) - Number(idB));
   if (rows.length === 0) throw new Error(`法術表沒有項目：${table}`);
+  // 每個系別在表中第一列的系別欄加 id (spell-school-<school>)，供遺物頁的「相關武器與法術」連結；一列只能放一個。
+  const anchored = new Set();
   return rows.map(([id, spell]) => {
     const name = spell.name
       ? el("span", { class: "item-name" }, itemIcon(data, spell, "48"), spell.name.zh, el("span", { class: "en" }, spell.name.en))
       : el("span", {}, `${data.labels.armaments.unnamed}（ID ${id}）`);
-    const school = el("td", { class: "school" }, ...tagEntries(data, "spellSchool", spell.tags.spellSchool, data.labels.armaments.noSchool));
+    const fresh = (Array.isArray(spell.tags.spellSchool) ? spell.tags.spellSchool : []).filter((key) => !anchored.has(key));
+    if (fresh.length > 1) throw new Error(`一列只能有一個系別錨點：法術 ${id}`);
+    fresh.forEach((key) => anchored.add(key));
+    const anchor = fresh.length ? { id: `spell-school-${fresh[0]}` } : {};
+    const school = el("td", { class: "school", ...anchor }, ...tagEntries(data, "spellSchool", spell.tags.spellSchool, data.labels.armaments.noSchool));
     const carriers = el("td", { class: "names" }, ...carrierEntries(data, id));
     // 法術以自身 ID 比對指定法術的詞條 (targets.spell)
     const targets = el("td", { class: "targets" }, ...targetEntries(data, { ...spell.tags, spell: [id] }));
