@@ -382,34 +382,32 @@ function effectEntries(data, key, effect) {
   return [...details, ...values, ...extras, ...targetLinks(data, key, effect), ...statLinks(data, key, effect)];
 }
 
-// 效果欄：相關武器與法術 (targets) 連到武器與法術頁的對應列或章節，例如「相關武器與法術：短劍」。
-// targets 維度間是 AND，攤平成清單會被讀成 OR，因此只支援現有四種組合，其他組合報錯：
-// 武器種類 → #weapon-type-<type>；法術類型 → 魔法、禱告章節；類型加系別 → 只列系別 (#spell-school-<school>)，
-// 目前每個系別只屬於一種類型；指定法術 → 該法術列 (#spell-<id>，附圖示)，法術名稱取自法術檔，頁面需載入 armaments/spells。
-const SPELL_TYPE_SECTIONS = { sorcery: "sorceries", incantation: "incantations" };
+// 效果欄：相關武器與法術 (targets)。以 matchTargets 比對武器與法術的標籤，逐一列出結果為符合 (true) 的具名物品，
+// 附圖示並連到武器與法術頁的該項目 (武器 #weapon-<id>、法術 #spell-<id>)，例如「相關武器與法術：[圖]輝劍圓陣、…」。
+// 未核實、來源分歧與未具名的物品不列；沒有可列物品時不輸出。頁面需載入 armaments/weapons 與 armaments/spells。
 function targetLinks(data, key, effect) {
   if ((effect.tiers ?? []).some((tier) => "targets" in tier)) throw new Error(`尚未支援各級不同的加成對象：${key}`);
   if (!effect.targets) return [];
   const { targets } = effect;
   if (!Object.values(targets).every(Array.isArray)) throw new Error(`加成對象必須是清單（效果 ${key}）`);
-  const link = (anchor, ...children) => el("a", { href: `armaments.html#${anchor}` }, ...children);
-  const tagName = (dimension, id) => lookup(data.tags[dimension], id, `標籤 ${dimension}`).name.zh;
-  const dimensions = Object.keys(targets).sort().join("+");
-  let links;
-  if (dimensions === "weaponType") links = targets.weaponType.map((id) => link(`weapon-type-${id}`, tagName("weaponType", id)));
-  else if (dimensions === "spellType")
-    links = targets.spellType.map((id) => link(lookup(SPELL_TYPE_SECTIONS, id, "法術類型章節"), tagName("spellType", id)));
-  else if (dimensions === "spellSchool+spellType")
-    links = targets.spellSchool.map((id) => link(`spell-school-${id}`, tagName("spellSchool", id)));
-  else if (dimensions === "spell")
-    links = targets.spell.map((id) => {
-      const spell = lookup(data.spells, id, "法術");
-      if (!spell.name) return link(`spell-${id}`, `${data.labels.armaments.unnamed}（ID ${id}）`);
-      return link(`spell-${id}`, itemIcon(data, spell, "24"), spell.name.zh);
-    });
-  else throw new Error(`尚未支援的加成對象組合：${dimensions}（效果 ${key}）`);
+  // mergeData 一律建立空的 weapons、spells，沒有載入時兩者為空。
+  if (!Object.keys(data.weapons).length || !Object.keys(data.spells).length) throw new Error(`頁面需載入 armaments/weapons 與 armaments/spells（效果 ${key}）`);
+  const weapons = Object.entries(data.weapons)
+    .filter(([, weapon]) => weapon.name && matchTargets(weapon.tags, targets) === true)
+    .sort(([, a], [, b]) => a.sortId - b.sortId)
+    .map(([id, item]) => ({ anchor: `weapon-${id}`, item }));
+  // 法術以自身 ID 比對指定法術 (targets.spell)，與武器與法術頁的反向比對相同。
+  const spells = Object.entries(data.spells)
+    .filter(([id, spell]) => spell.name && matchTargets({ ...spell.tags, spell: [id] }, targets) === true)
+    .sort(([idA], [idB]) => Number(idA) - Number(idB))
+    .map(([id, item]) => ({ anchor: `spell-${id}`, item }));
+  const items = [...weapons, ...spells];
+  if (items.length === 0) return [];
   const nodes = [`${data.labels.armaments.relatedItems}：`];
-  links.forEach((node, index) => nodes.push(...(index > 0 ? ["、", node] : [node])));
+  items.forEach(({ anchor, item }, index) => {
+    if (index > 0) nodes.push("、");
+    nodes.push(el("a", { href: `armaments.html#${anchor}` }, itemIcon(data, item, "24"), item.name.zh));
+  });
   return [el("span", { class: "entry" }, el("span", { class: "sub" }, ...nodes))];
 }
 
@@ -576,16 +574,21 @@ function carrierEntries(data, spellId) {
 }
 
 // <tbody data-weapon-table>：每列一個武器種類，列出該種類的具名武器與相關遺物詞條。
+// 每把武器的 id 為 weapon-<id>，是遺物頁「相關武器與法術」連結的目標。
 function weaponRows(data) {
   return Object.entries(data.tags.weaponType).map(([type, tag]) => {
-    const weapons = Object.values(data.weapons)
-      .filter((weapon) => weapon.name && weapon.tags.weaponType?.includes(type))
-      .sort((a, b) => a.sortId - b.sortId);
+    const weapons = Object.entries(data.weapons)
+      .filter(([, weapon]) => weapon.name && weapon.tags.weaponType?.includes(type))
+      .sort(([, a], [, b]) => a.sortId - b.sortId);
     return el(
       "tr",
       { id: `weapon-type-${type}` },
       el("td", { class: "item" }, el("span", { class: "tag-name" }, tag.name.zh, el("span", { class: "en" }, tag.name.en))),
-      el("td", { class: "names" }, ...weapons.map((weapon) => el("span", { class: "entry" }, itemIcon(data, weapon, "24"), weapon.name.zh))),
+      el(
+        "td",
+        { class: "names" },
+        ...weapons.map(([id, weapon]) => el("span", { class: "entry", id: `weapon-${id}` }, itemIcon(data, weapon, "24"), weapon.name.zh))
+      ),
       el("td", { class: "targets" }, ...targetEntries(data, { weaponType: [type] }))
     );
   });
@@ -604,17 +607,11 @@ function spellRows(data, table) {
     .filter(([, spell]) => (table === "unlisted" ? !listed(spell) : listed(spell) && spell.tags.spellType.includes(table)))
     .sort(([idA, a], [idB, b]) => rank(a) - rank(b) || Number(idA) - Number(idB));
   if (rows.length === 0) throw new Error(`法術表沒有項目：${table}`);
-  // 每個系別在表中第一列的系別欄加 id (spell-school-<school>)，供遺物頁的「相關武器與法術」連結；一列只能放一個。
-  const anchored = new Set();
   return rows.map(([id, spell]) => {
     const name = spell.name
       ? el("span", { class: "item-name" }, itemIcon(data, spell, "48"), spell.name.zh, el("span", { class: "en" }, spell.name.en))
       : el("span", {}, `${data.labels.armaments.unnamed}（ID ${id}）`);
-    const fresh = (Array.isArray(spell.tags.spellSchool) ? spell.tags.spellSchool : []).filter((key) => !anchored.has(key));
-    if (fresh.length > 1) throw new Error(`一列只能有一個系別錨點：法術 ${id}`);
-    fresh.forEach((key) => anchored.add(key));
-    const anchor = fresh.length ? { id: `spell-school-${fresh[0]}` } : {};
-    const school = el("td", { class: "school", ...anchor }, ...tagEntries(data, "spellSchool", spell.tags.spellSchool, data.labels.armaments.noSchool));
+    const school = el("td", { class: "school" }, ...tagEntries(data, "spellSchool", spell.tags.spellSchool, data.labels.armaments.noSchool));
     const carriers = el("td", { class: "names" }, ...carrierEntries(data, id));
     // 法術以自身 ID 比對指定法術的詞條 (targets.spell)
     const targets = el("td", { class: "targets" }, ...targetEntries(data, { ...spell.tags, spell: [id] }));
