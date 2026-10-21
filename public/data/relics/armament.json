@@ -289,11 +289,17 @@
           "dagger"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -382,11 +388,17 @@
           "dagger"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -445,11 +457,17 @@
           "straight-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -538,11 +556,17 @@
           "straight-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -601,11 +625,17 @@
           "greatsword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -694,11 +724,17 @@
           "greatsword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -757,11 +793,17 @@
           "colossal-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -850,11 +892,17 @@
           "colossal-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -913,11 +961,17 @@
           "curved-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1006,11 +1060,17 @@
           "curved-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1069,11 +1129,17 @@
           "curved-greatsword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1162,11 +1228,17 @@
           "curved-greatsword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1225,11 +1297,17 @@
           "katana"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1318,11 +1396,17 @@
           "katana"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1381,11 +1465,17 @@
           "twinblade"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1474,11 +1564,17 @@
           "twinblade"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1537,11 +1633,17 @@
           "thrusting-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1630,11 +1732,17 @@
           "thrusting-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1693,11 +1801,17 @@
           "heavy-thrusting-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1786,11 +1900,17 @@
           "heavy-thrusting-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1849,11 +1969,17 @@
           "axe"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -1942,11 +2068,17 @@
           "axe"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2005,11 +2137,17 @@
           "greataxe"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2098,11 +2236,17 @@
           "greataxe"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2161,11 +2305,17 @@
           "hammer"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2254,11 +2404,17 @@
           "hammer"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2317,11 +2473,17 @@
           "great-hammer"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2410,11 +2572,17 @@
           "great-hammer"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2473,11 +2641,17 @@
           "flail"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2566,11 +2740,17 @@
           "flail"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2629,11 +2809,17 @@
           "spear"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2722,11 +2908,17 @@
           "spear"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2785,11 +2977,17 @@
           "great-spear"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2878,11 +3076,17 @@
           "great-spear"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -2941,11 +3145,17 @@
           "halberd"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3034,11 +3244,17 @@
           "halberd"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3097,11 +3313,17 @@
           "reaper"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3190,11 +3412,17 @@
           "reaper"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3253,11 +3481,17 @@
           "fist"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3346,11 +3580,17 @@
           "fist"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3409,11 +3649,17 @@
           "claw"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3502,11 +3748,17 @@
           "claw"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3565,11 +3817,17 @@
           "whip"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3658,11 +3916,17 @@
           "whip"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3721,11 +3985,17 @@
           "colossal-weapon"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3814,11 +4084,17 @@
           "colossal-weapon"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3880,11 +4156,17 @@
           "bow"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -3976,11 +4258,17 @@
           "bow"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }

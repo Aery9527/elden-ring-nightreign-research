@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>能力值</title>
-  <meta name="description" content="《艾爾登法環 黑夜君臨》能力值與 HP、FP、精力上限的主要用途、相關遺物詞條、提升效果的理解方式及查證限制。">
+  <meta name="description" content="《艾爾登法環 黑夜君臨》能力值、HP、FP、精力上限、攻擊力、減傷率與異常狀態抵抗力的主要用途、相關遺物詞條、提升效果的理解方式及查證限制。">
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
   <script src="render.js" defer></script>
@@ -20,8 +20,8 @@
   <main>
     <h1>能力值</h1>
     <ul>
-      <li>本頁說明能力值與 HP、FP、精力上限在遊戲中的主要用途；各遺物詞條的數值與疊加規則見<a href="relics-general.html#attributes">一般遺物詞條的能力值章</a>。</li>
-      <li>「相關遺物詞條」欄列出遊戲參數會改變該能力值或上限的詞條，包含提升、降低及條件觸發者；強韌度列出降低受到削韌的詞條。HP、FP、精力上限另列出經由生命力、集中力、耐力改變上限的詞條。符合只表示存在參數關聯；數值、條件與限制見詞條。</li>
+      <li>本頁說明能力值、HP、FP、精力上限、強韌度、攻擊力、減傷率與異常狀態抵抗力在遊戲中的主要用途；各遺物詞條的數值與疊加規則見<a href="relics-general.html#attributes">一般遺物詞條的能力值章</a>。</li>
+      <li>「相關遺物詞條」欄列出遊戲參數會改變該能力值或上限的詞條，包含提升、降低及條件觸發者；強韌度列出降低受到削韌的詞條；攻擊力、減傷率與異常狀態抵抗力各合併所有屬性或異常狀態，詞條改變其中任一種即列出。HP、FP、精力上限另列出經由生命力、集中力、耐力改變上限的詞條。符合只表示存在參數關聯；數值、條件與限制見詞條。</li>
     </ul>
 
     <section>
@@ -92,6 +92,21 @@
               <td>抵抗受擊硬直與動作中斷的能力。</td>
               <td class="targets" data-stat-effects="poise"></td>
             </tr>
+            <tr id="stat-attackPower">
+              <td class="item" data-item="stat:attackPower"></td>
+              <td>物理、魔力、火、雷、聖屬性攻擊的威力；適用攻擊與條件見各詞條。</td>
+              <td class="targets" data-stat-effects="attackPower"></td>
+            </tr>
+            <tr id="stat-damageNegation">
+              <td class="item" data-item="stat:damageNegation"></td>
+              <td>受到物理、魔力、火、雷、聖屬性攻擊時減少傷害的比例。</td>
+              <td class="targets" data-stat-effects="damageNegation"></td>
+            </tr>
+            <tr id="stat-ailmentResistance">
+              <td class="item" data-item="stat:ailmentResistance"></td>
+              <td>抵抗中毒、猩紅腐敗、出血、凍傷、催眠、發狂、驟死的能力。</td>
+              <td class="targets" data-stat-effects="ailmentResistance"></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -139,7 +154,7 @@
       <ul>
         <li>感應與發現力／稀有掉落：來源存在不同說法，現有查證不足以判定。本表不將「增加稀有掉落」列為已確認收益。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="https://www.reddit.com/r/Nightreign/comments/1l33h2x/a_question_about_arcane/" target="_blank" rel="noopener noreferrer">社群異議</a></li>
         <li>感應與升級：Game8 稱升級會提升包含感應在內的所有能力值，與 Eldenpedia 女爵等級 1 和 15 的感應（<span data-character="duchess:1:arcane"></span>、<span data-character="duchess:15:arcane"></span>）不符。本文採女爵數值作例子，尚未實測。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
-        <li>「相關遺物詞條」只依遊戲參數的能力值欄位與引用鏈比對；由程式狀態觸發、參數中沒有能力值欄位的詞條暫不列出，例如【無賴】技藝期間受擊提升精力上限、【隱士】絕活提升 HP 上限、圖騰碑石周圍提升強韌度。沒有列出不表示沒有關係。</li>
+        <li>「相關遺物詞條」只依遊戲參數的對應欄位與引用鏈比對；由程式狀態觸發、參數中沒有能力值欄位的詞條暫不列出，例如【無賴】技藝期間受擊提升精力上限、【隱士】絕活提升 HP 上限、圖騰碑石周圍提升強韌度。沒有列出不表示沒有關係。</li>
         <li>本文沒有驗證所有能力值對防禦力、異常抗性、發現力的附帶影響，也沒有驗證補正軟上限、疊加順序或強韌度門檻；這些不屬於本表的已確認結論。</li>
         <li>引用頁面的查閱日期不代表它適用當前所有補丁。需要精確配裝計算時，須核對效果、遊戲版本及相同條件下的實測。</li>
       </ul>

@@ -1334,6 +1334,9 @@
         "en": "Physical Attack Up"
       },
       "icon": "attack-up",
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -1413,7 +1416,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "physical-attack-up-7001409": {
       "subcategory": "attack-power",
@@ -1435,6 +1443,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 2,
@@ -1455,6 +1466,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -1470,6 +1484,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -1501,7 +1518,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "magic-attack-power-up": {
       "subcategory": "attack-power",
@@ -1514,6 +1536,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -1568,7 +1593,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "fire-attack-power-up": {
       "subcategory": "attack-power",
@@ -1581,6 +1611,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -1635,7 +1668,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "lightning-attack-power-up": {
       "subcategory": "attack-power",
@@ -1648,6 +1686,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -1702,7 +1743,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "holy-attack-power-up": {
       "subcategory": "attack-power",
@@ -1715,6 +1761,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -1769,7 +1818,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-melee-attack-power": {
       "subcategory": "attack-power",
@@ -1804,12 +1858,18 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -1846,12 +1906,18 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -1873,9 +1939,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "successive-attacks-boost-attack-power": {
       "subcategory": "attack-power",
@@ -1904,9 +1978,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-critical-hits": {
       "subcategory": "attack-power",
@@ -1926,9 +2008,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-critical-hits-7040201": {
       "subcategory": "attack-power",
@@ -1954,6 +2044,9 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -1974,6 +2067,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -1994,6 +2090,9 @@
           "sorcery"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2029,6 +2128,9 @@
       "sourcesFor": {
         "targets": [
           "game-params"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2049,6 +2151,9 @@
           "incantation"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2084,6 +2189,9 @@
       "sourcesFor": {
         "targets": [
           "game-params"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2108,6 +2216,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
@@ -2115,6 +2226,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2368,6 +2482,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "game-params"
       ],
@@ -2375,6 +2492,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2405,6 +2525,9 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "game-params"
       ],
@@ -2412,6 +2535,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2442,6 +2568,9 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "game-params"
       ],
@@ -2449,6 +2578,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2469,9 +2601,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "status-ailment-gauges-slowly-increase-attack-power": {
       "subcategory": "attack-power",
@@ -2521,9 +2661,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "attack-power-increased-for-each-night-invader-defeated": {
       "subcategory": "attack-power",
@@ -2545,9 +2693,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-guard-counters": {
       "subcategory": "attack-power",
@@ -2560,6 +2716,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2594,7 +2753,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "guard-counter-is-given-a-boost-based-on-current-hp": {
       "subcategory": "attack-power",
@@ -2679,6 +2843,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2701,7 +2868,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-throwing-knife-damage": {
       "subcategory": "attack-power",
@@ -2715,6 +2887,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2737,7 +2912,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-glintstone-and-gravity-stone-damage": {
       "subcategory": "attack-power",
@@ -2751,6 +2931,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2773,7 +2956,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-perfuming-arts": {
       "subcategory": "attack-power",
@@ -2787,6 +2975,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2818,6 +3009,9 @@
           "community-sheet",
           "fextralife-relic-effects",
           "reliquary-json"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2834,6 +3028,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -2854,7 +3051,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-physical-damage-negation-7006200": {
       "subcategory": "damage-negation",
@@ -2884,6 +3086,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "game-params"
       ],
@@ -2891,6 +3096,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -2906,6 +3114,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -2937,7 +3148,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-affinity-damage-negation-7006300": {
       "subcategory": "damage-negation",
@@ -2966,9 +3182,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "game-params"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-magic-damage-negation": {
       "subcategory": "damage-negation",
@@ -2983,6 +3207,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -3003,7 +3230,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "magic-damage-negation-up": {
       "subcategory": "damage-negation",
@@ -3023,9 +3255,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-fire-damage-negation": {
       "subcategory": "damage-negation",
@@ -3040,6 +3280,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -3060,7 +3303,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "fire-damage-negation-up": {
       "subcategory": "damage-negation",
@@ -3080,9 +3328,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-lightning-damage-negation": {
       "subcategory": "damage-negation",
@@ -3097,6 +3353,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -3117,7 +3376,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "lightning-damage-negation-up": {
       "subcategory": "damage-negation",
@@ -3137,9 +3401,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-holy-damage-negation": {
       "subcategory": "damage-negation",
@@ -3154,6 +3426,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "tiers": [
         {
           "tier": 1,
@@ -3174,7 +3449,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "holy-damage-negation-up": {
       "subcategory": "damage-negation",
@@ -3194,9 +3474,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-damage-negation-at-low-hp": {
       "subcategory": "damage-negation",
@@ -3216,9 +3504,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-poise-and-damage-negation-when-knocked-back-by-damage": {
       "subcategory": "damage-negation",
@@ -3241,7 +3537,8 @@
         "stacks": false
       },
       "stats": [
-        "poise"
+        "poise",
+        "damageNegation"
       ],
       "sources": [
         "reliquary-json"
@@ -3268,6 +3565,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -3290,7 +3590,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-rot-resistance": {
       "subcategory": "ailment-resistances",
@@ -3304,6 +3609,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -3326,7 +3634,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-blood-loss-resistance": {
       "subcategory": "ailment-resistances",
@@ -3340,6 +3653,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -3362,7 +3678,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-frost-resistance": {
       "subcategory": "ailment-resistances",
@@ -3376,6 +3697,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -3398,7 +3722,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-sleep-resistance": {
       "subcategory": "ailment-resistances",
@@ -3412,6 +3741,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -3434,7 +3766,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-madness-resistance": {
       "subcategory": "ailment-resistances",
@@ -3448,6 +3785,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -3470,7 +3810,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "improved-death-blight-resistance": {
       "subcategory": "ailment-resistances",
@@ -3484,6 +3829,9 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -3506,7 +3854,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "continuous-hp-recovery": {
       "subcategory": "restoration",
@@ -4333,6 +4686,9 @@
         "en": "Attack power up when facing poison-afflicted enemy"
       },
       "icon": "attack-up",
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -4390,6 +4746,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -4400,6 +4759,9 @@
         "en": "Attack power up when facing scarlet rot-afflicted enemy"
       },
       "icon": "attack-up",
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -4457,6 +4819,9 @@
         "stacking.stacks": [
           "community-sheet",
           "fextralife-relic-effects"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -4470,6 +4835,9 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -4504,7 +4872,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "poison-and-rot-in-vicinity-increases-attack-power": {
       "subcategory": "actions",
@@ -4533,12 +4906,18 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "stats": [
+          "game-params"
         ]
       }
     },
@@ -4595,6 +4974,9 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -4617,7 +4999,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "madness-in-vicinity-improves-attack-power": {
       "subcategory": "actions",
@@ -4630,6 +5017,9 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "tiers": [
         {
           "tier": 0,
@@ -4652,7 +5042,12 @@
       ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "extended-spell-duration": {
       "subcategory": "sorceries-incantations",
@@ -4711,11 +5106,17 @@
           "glintblade"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4746,11 +5147,17 @@
           "stonedigger"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4781,11 +5188,17 @@
           "carian-sword"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4816,11 +5229,17 @@
           "invisibility"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4851,11 +5270,17 @@
           "crystalian"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4886,11 +5311,17 @@
           "gravity"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4921,11 +5352,17 @@
           "thorn"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4956,11 +5393,17 @@
           "fundamentalist"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -4991,11 +5434,17 @@
           "dragon-cult"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -5026,11 +5475,17 @@
           "giants-flame"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -5061,11 +5516,17 @@
           "godslayer"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -5096,11 +5557,17 @@
           "bestial"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -5131,11 +5598,17 @@
           "frenzied-flame"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }
@@ -5166,11 +5639,17 @@
           "dragon-communion"
         ]
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "targets": [
+          "game-params"
+        ],
+        "stats": [
           "game-params"
         ]
       }

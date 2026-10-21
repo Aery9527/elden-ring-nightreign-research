@@ -146,16 +146,36 @@ async function buildEffects() {
     return [...found.values()][0] ?? null;
   }
 
-  // 相關能力值 (stats)：遊戲參數直接改變的能力值或上限，欄位對應記在 common.json stats 的 param。
-  // 從三個 passive SpEffect 與 permanentSpEffectId 出發，沿 replace、cycleOccurrence、accumuOver/UnderFire 與分析子效果的引用往下找；
-  // SpEffectParam 欄位中 *Rate 不是 1、其餘不是 0 即算改變。heroStatusModifier 為 X 時，HeroStatusParam 的 X、X+1… 連號列
+  // 相關能力值 (stats)：遊戲參數直接改變的能力值、上限或屬性，欄位清單記在 common.json stats 的 param，任一欄位改變即算相關。
+  // 從三個 passive SpEffect 與 permanentSpEffectId 出發，沿 replace、cycleOccurrence、atkOccurrence、accumuOver/UnderFire 與分析子效果的引用往下找；
+  // 已對應的 SpEffectParam 欄位中 *Rate 不是 1、其餘不是 0 即算改變。heroStatusModifier 為 X 時，HeroStatusParam 的 X、X+1… 連號列
   // (各等級節點) 中任一列不是 0 即算改變。結果依 common.json stats 的順序排列。
-  const statFields = (table) => Object.entries(common.stats).filter(([, stat]) => stat.param?.[table]).map(([key, stat]) => [key, stat.param[table]]);
+  // 欄位不在參數表、或值不是數字時報錯：否則 Number(undefined) 為 NaN，會被判為改變而全數誤配。
+  const statFields = (table) => {
+    const header = new Set(Object.keys(params[table].values().next().value));
+    return Object.entries(common.stats)
+      .filter(([, stat]) => stat.param && table in stat.param)
+      .map(([key, stat]) => {
+        const fields = stat.param[table];
+        if (!Array.isArray(fields) || fields.length === 0) fail(`能力值 ${key} 的 ${table} 欄位必須是非空清單`);
+        else for (const field of fields) if (!header.has(field)) fail(`能力值 ${key} 的欄位 ${table}.${field} 不存在`);
+        return [key, Array.isArray(fields) ? fields : []];
+      });
+  };
   const spStats = statFields("SpEffectParam");
   const heroStats = statFields("HeroStatusParam");
   const ATTACH_REFS = ["passiveSpEffectId_1", "passiveSpEffectId_2", "passiveSpEffectId_3", "permanentSpEffectId"];
-  const SP_REFS = ["replaceSpEffectId", "cycleOccurrenceSpEffectId", "accumuOverFireId", "accumuUnderFireId", ...ANALYZE];
-  const changed = (field, value) => Number(value) !== (field.endsWith("Rate") ? 1 : 0);
+  const SP_REFS = ["replaceSpEffectId", "cycleOccurrenceSpEffectId", "atkOccurrenceSpEffectId", "accumuOverFireId", "accumuUnderFireId", ...ANALYZE];
+  // 空白字串經 Number() 會變成 0，因此先拒絕。
+  const numberOf = (table, id, field, value) => {
+    const number = Number(value);
+    if (typeof value !== "string" || value.trim() === "" || !Number.isFinite(number)) fail(`${table} ${id} 的 ${field} 不是數字：${value}`);
+    return number;
+  };
+  // 逐欄驗證後再判斷 (不用 some 短路)，讓每個已對應的欄位都經過數字檢查。
+  const anyChanged = (table, id, fields, row, isChanged) =>
+    fields.map((field) => isChanged(field, numberOf(table, id, field, row[field]))).includes(true);
+  const changed = (field, value) => value !== (field.endsWith("Rate") ? 1 : 0);
   function statsOf(param) {
     const found = new Set();
     const seen = new Set();
@@ -165,10 +185,11 @@ async function buildEffects() {
       const sp = params.SpEffectParam.get(id);
       if (!sp || seen.has(id)) continue;
       seen.add(id);
-      for (const [key, field] of spStats) if (changed(field, sp[field])) found.add(key);
+      for (const [key, fields] of spStats) if (anyChanged("SpEffectParam", id, fields, sp, changed)) found.add(key);
       if (Number(sp.heroStatusModifier) > 0) {
         for (let row = Number(sp.heroStatusModifier); params.HeroStatusParam.has(String(row)); row++) {
-          for (const [key, field] of heroStats) if (Number(params.HeroStatusParam.get(String(row))[field]) !== 0) found.add(key);
+          const hero = params.HeroStatusParam.get(String(row));
+          for (const [key, fields] of heroStats) if (anyChanged("HeroStatusParam", row, fields, hero, (field, value) => value !== 0)) found.add(key);
         }
       }
       queue.push(...SP_REFS.map((column) => sp[column]));

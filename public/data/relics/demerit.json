@@ -255,9 +255,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "ailmentResistance"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "reduced-damage-negation-for-flask-usages": {
       "subcategory": "demerit-damage-negation",
@@ -279,9 +287,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "reduced-damage-negation-after-evading": {
       "subcategory": "demerit-damage-negation",
@@ -303,9 +319,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "repeated-evasions-lower-damage-negation": {
       "subcategory": "demerit-damage-negation",
@@ -327,9 +351,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "taking-damage-causes-poison-buildup": {
       "subcategory": "demerit-damage-negation",
@@ -415,9 +447,17 @@
         "stacks": true,
         "combine": null
       },
+      "stats": [
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "taking-damage-causes-sleep-buildup": {
       "subcategory": "demerit-damage-negation",
@@ -549,9 +589,17 @@
       "stacking": {
         "stacks": null
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "poison-buildup-when-below-max-hp": {
       "subcategory": "demerit-actions",

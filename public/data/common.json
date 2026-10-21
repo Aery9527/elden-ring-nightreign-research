@@ -335,7 +335,7 @@
         "en": "Maximum HP"
       },
       "icon": "hp-up",
-      "param": { "SpEffectParam": "maxHpRate" },
+      "param": { "SpEffectParam": ["maxHpRate"] },
       "base": "vigor"
     },
     "maxFp": {
@@ -344,7 +344,7 @@
         "en": "Maximum FP"
       },
       "icon": "fp-up",
-      "param": { "SpEffectParam": "maxMpRate" },
+      "param": { "SpEffectParam": ["maxMpRate"] },
       "base": "mind"
     },
     "maxStamina": {
@@ -353,7 +353,7 @@
         "en": "Maximum Stamina"
       },
       "icon": "stamina-up",
-      "param": { "SpEffectParam": "maxStaminaRate" },
+      "param": { "SpEffectParam": ["maxStaminaRate"] },
       "base": "endurance"
     },
     "vigor": {
@@ -363,7 +363,7 @@
       },
       "abbr": "VIG",
       "icon": "hp-up",
-      "param": { "SpEffectParam": "addLifeForceStatus", "HeroStatusParam": "statVigor" }
+      "param": { "SpEffectParam": ["addLifeForceStatus"], "HeroStatusParam": ["statVigor"] }
     },
     "mind": {
       "name": {
@@ -372,7 +372,7 @@
       },
       "abbr": "MND",
       "icon": "fp-up",
-      "param": { "SpEffectParam": "addWillpowerStatus", "HeroStatusParam": "statMind" }
+      "param": { "SpEffectParam": ["addWillpowerStatus"], "HeroStatusParam": ["statMind"] }
     },
     "endurance": {
       "name": {
@@ -381,7 +381,7 @@
       },
       "abbr": "END",
       "icon": "stamina-up",
-      "param": { "SpEffectParam": "addEndureStatus", "HeroStatusParam": "statEndurance" }
+      "param": { "SpEffectParam": ["addEndureStatus"], "HeroStatusParam": ["statEndurance"] }
     },
     "strength": {
       "name": {
@@ -390,7 +390,7 @@
       },
       "abbr": "STR",
       "icon": "attack-up",
-      "param": { "SpEffectParam": "addStrengthStatus", "HeroStatusParam": "statStrength" }
+      "param": { "SpEffectParam": ["addStrengthStatus"], "HeroStatusParam": ["statStrength"] }
     },
     "dexterity": {
       "name": {
@@ -399,7 +399,7 @@
       },
       "abbr": "DEX",
       "icon": "attack-up",
-      "param": { "SpEffectParam": "addDexterityStatus", "HeroStatusParam": "statDexterity" }
+      "param": { "SpEffectParam": ["addDexterityStatus"], "HeroStatusParam": ["statDexterity"] }
     },
     "intelligence": {
       "name": {
@@ -408,7 +408,7 @@
       },
       "abbr": "INT",
       "icon": "spell-up",
-      "param": { "SpEffectParam": "addMagicStatus", "HeroStatusParam": "statIntelligence" }
+      "param": { "SpEffectParam": ["addMagicStatus"], "HeroStatusParam": ["statIntelligence"] }
     },
     "faith": {
       "name": {
@@ -417,7 +417,7 @@
       },
       "abbr": "FAI",
       "icon": "spell-up",
-      "param": { "SpEffectParam": "addFaithStatus", "HeroStatusParam": "statFaith" }
+      "param": { "SpEffectParam": ["addFaithStatus"], "HeroStatusParam": ["statFaith"] }
     },
     "arcane": {
       "name": {
@@ -426,7 +426,7 @@
       },
       "abbr": "ARC",
       "icon": "attack-up",
-      "param": { "SpEffectParam": "addLuckStatus", "HeroStatusParam": "statArcane" }
+      "param": { "SpEffectParam": ["addLuckStatus"], "HeroStatusParam": ["statArcane"] }
     },
     "poise": {
       "name": {
@@ -434,7 +434,31 @@
         "en": "Poise"
       },
       "icon": "defense-up",
-      "param": { "SpEffectParam": "toughnessDamageCutRate" }
+      "param": { "SpEffectParam": ["toughnessDamageCutRate"] }
+    },
+    "attackPower": {
+      "name": {
+        "zh": "攻擊力",
+        "en": "Attack Power"
+      },
+      "icon": "attack-up",
+      "param": { "SpEffectParam": ["physicsAttackRate", "magicAttackRate", "fireAttackRate", "thunderAttackRate", "darkAttackRate"] }
+    },
+    "damageNegation": {
+      "name": {
+        "zh": "減傷率",
+        "en": "Damage Negation"
+      },
+      "icon": "defense-up",
+      "param": { "SpEffectParam": ["slashDamageCutRate", "blowDamageCutRate", "thrustDamageCutRate", "neutralDamageCutRate", "magicDamageCutRate", "fireDamageCutRate", "thunderDamageCutRate", "darkDamageCutRate"] }
+    },
+    "ailmentResistance": {
+      "name": {
+        "zh": "異常狀態抵抗力",
+        "en": "Status Ailment Resistance"
+      },
+      "icon": "defense-up",
+      "param": { "SpEffectParam": ["changePoisonResistPoint", "changeDiseaseResistPoint", "changeBloodResistPoint", "changeFreezeResistPoint", "changeSleepResistPoint", "changeMadnessResistPoint", "changeCurseResistPoint"] }
     },
     "poiseDamageTaken": {
       "name": {

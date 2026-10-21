@@ -1335,9 +1335,18 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower",
+        "damageNegation"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "revenant-improved-vigor-and-endurance-reduced-mind": {
       "subcategory": "character-revenant",
@@ -2170,9 +2179,17 @@
       "stacking": {
         "stacks": false
       },
+      "stats": [
+        "attackPower"
+      ],
       "sources": [
         "reliquary-json"
-      ]
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
     },
     "undertaker-physical-attacks-boosted-while-assist-effect-from-incantation-is-active-for-self": {
       "subcategory": "character-undertaker",
