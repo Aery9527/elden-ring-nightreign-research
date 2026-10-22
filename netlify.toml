@@ -1,2 +1,14 @@
 [build]
   publish = "public"
+
+# 武器與法術頁拆成武器、魔法、禱告三頁：舊網址轉到武器頁 (瀏覽器保留錨點)，
+# 其中的法術錨點由頁面依法術類型再轉到魔法或禱告頁 (public/render.js 的 scrollToHash)。
+[[redirects]]
+  from = "/armaments.html"
+  to = "/weapons.html"
+  status = 301
+
+[[redirects]]
+  from = "/armaments"
+  to = "/weapons.html"
+  status = 301

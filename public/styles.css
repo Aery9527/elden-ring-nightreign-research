@@ -383,7 +383,21 @@ td.kind .entry + .entry {
   margin-top: 8px;
 }
 
-/* 武器與法術頁：種類名稱、名稱清單 (武器、搭載法器) 與攻擊力加成詞條 */
+/* 武器、魔法、禱告頁：名稱清單 (搭載法器)、相關遺物詞條 */
+.chapter-effects {
+  color: var(--muted);
+}
+
+/* 法術名稱下方只針對該法術的詞條；詞條名稱可能很長，允許換行 */
+td .item-targets {
+  display: block;
+  margin-top: 6px;
+  max-width: 28em;
+  white-space: normal;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .tag-name .en {
   display: block;
   color: var(--muted);

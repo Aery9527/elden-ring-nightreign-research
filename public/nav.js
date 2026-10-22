@@ -9,6 +9,9 @@
     "relics-character#sources": "index.html#sources",
     "relics-armament#sources": "index.html#sources",
     "relics-demerit#sources": "index.html#sources",
+    // armaments.html 已轉到武器頁；原本的魔法、禱告章節移到各自的頁面
+    "weapons#sorceries": "sorceries.html#sorceries",
+    "weapons#incantations": "incantations.html#incantations",
   };
   const page = location.pathname.split("/").pop().replace(/\.html$/, "");
   const target = moved[`${page}${location.hash}`];
