@@ -5,7 +5,8 @@
 //   public/data/common.json    標籤定義 (tags)
 //   Eldenpedia API             圖示檔案頁是否存在與授權標示；查詢結果快取在 tools/.cache/eldenpedia/files.json
 // 收錄：
-//   武器：ID 為 10000 倍數、wepType 有定義武器種類標籤、本篇有名稱、sortId 不是 9999999 的基本武器，以及所有搭載法術的武器列。
+//   武器：ID 為 10000 倍數、wepType 有定義武器種類標籤、本篇有名稱、sortId 不是 9999999，且有 EquipParamCustomWeapon 列以 targetWeaponId
+//         指向的基本武器，以及所有搭載法術的武器列。本篇有、黑夜君臨沒有的武器 (例如落葉格鬥術) 沒有 EquipParamCustomWeapon 列。
 //         具名武器另收錄原始參數值：基礎攻擊、能力補正、致命補正、固定效果名稱 (黑夜君臨文字) 與命中時的異常狀態累積。
 //   法術：所有武器 equippedSpell_R1/R2 引用的 ID；名稱只取本篇法術清單，Magic 沒有該列時類型與系別為 null。
 //         有 Magic 列的法術另收錄原始消耗參數：通常施放與蓄力施放的 FP、耐力。
@@ -105,6 +106,8 @@ function iconOf(pages, kind, prefix, name) {
 
 const weaponRows = byId(parseCsv(await source("params", "EquipParamWeapon")), "EquipParamWeapon");
 const magicRows = byId(parseCsv(await source("params", "Magic")), "Magic");
+// 黑夜君臨的武器生成參數 (武器等級、附加效果表) 指向的武器 ID；同一武器可有多列。
+const generated = new Set(parseCsv(await source("params", "EquipParamCustomWeapon")).map((row) => row.targetWeaponId));
 const spRows = byId(parseCsv(await source("params", "SpEffectParam")), "SpEffectParam");
 const attachRows = byId(parseCsv(await source("params", "AttachEffectParam")), "AttachEffectParam");
 const effectZh = parseFmg(await source("text", "effectZh"), await source("text", "effectZhDlc"));
@@ -132,7 +135,7 @@ for (const row of weaponRows.values()) {
   const spells = Object.fromEntries(Object.entries(SLOTS).filter(([, column]) => isRef(row[column])).map(([slot, column]) => [slot, row[column]]));
   const type = weaponTypes.get(row.wepType);
   const name = nameOf(weaponZh, weaponEn, row.ID, "武器");
-  const listed = Number(row.ID) % 10000 === 0 && type && name && row.sortId !== "9999999";
+  const listed = Number(row.ID) % 10000 === 0 && type && name && row.sortId !== "9999999" && generated.has(row.ID);
   if (!listed && !Object.keys(spells).length) continue;
   if (!type) fail(`搭載法術的武器 ${row.ID} 的 wepType ${row.wepType} 沒有定義武器種類標籤`);
   weapons.push({ row, name, type, spells });
