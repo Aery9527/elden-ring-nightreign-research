@@ -608,8 +608,8 @@ function itemNameNode(data, id, item) {
   return el("span", { class: "item-name" }, itemIcon(data, item, "48"), item.name.zh, el("span", { class: "en" }, item.name.en));
 }
 
-// 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；致命補正；
-// 特殊效果列出固定效果名稱與命中時的異常狀態累積。沒有可列內容的欄顯示「—」。
+// 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；
+// 特殊效果列出不是 1 的致命補正 (多數武器為 1)、固定效果名稱與命中時的異常狀態累積。沒有可列內容的欄顯示「—」。
 // 數值只來自遊戲參數，沒有未核實或來源分歧的狀態：缺鍵、多鍵或不是數字時報錯，不顯示成 0 或「—」。
 const SCALING_STATS = ["strength", "dexterity", "intelligence", "faith", "arcane"];
 function weaponCells(data, id, weapon) {
@@ -627,13 +627,13 @@ function weaponCells(data, id, weapon) {
   const lines = (parts) => (parts.length ? parts.map((part) => el("span", { class: "entry" }, part)) : [labels.none]);
   const nonZero = (values, nameOf) => Object.entries(values).filter(([, value]) => value !== 0).map(([key, value]) => `${nameOf(key)} ${value}`);
   const special = [
+    ...(weapon.critical !== 1 ? [`${labels.critical} ${weapon.critical}`] : []),
     ...(weapon.passive ? [weapon.passive.zh] : []),
     ...Object.entries(weapon.buildup).map(([key, value]) => `${labels.buildup}${lookup(labels.ailments, key, "異常狀態")} ${value}`),
   ];
   return [
     el("td", { class: "stats" }, ...lines(nonZero(weapon.attack, (key) => lookup(labels.attack, key, "攻擊屬性")))),
     el("td", { class: "stats" }, ...lines(nonZero(weapon.scaling, (key) => statName(data, key)))),
-    el("td", { class: "stats" }, String(weapon.critical)),
     el("td", { class: "stats" }, ...lines(special)),
   ];
 }
