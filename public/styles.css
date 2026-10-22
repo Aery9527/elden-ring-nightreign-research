@@ -388,6 +388,12 @@ td.kind .entry + .entry {
   color: var(--muted);
 }
 
+/* 武器數值欄：每項一行，不換行 */
+td.stats .entry {
+  display: block;
+  white-space: nowrap;
+}
+
 /* 法術名稱下方只針對該法術的詞條；詞條名稱可能很長，允許換行 */
 td .item-targets {
   display: block;

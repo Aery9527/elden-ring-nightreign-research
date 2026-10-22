@@ -6,11 +6,12 @@
 //   Eldenpedia API             圖示檔案頁是否存在與授權標示；查詢結果快取在 tools/.cache/eldenpedia/files.json
 // 收錄：
 //   武器：ID 為 10000 倍數、wepType 有定義武器種類標籤、本篇有名稱、sortId 不是 9999999 的基本武器，以及所有搭載法術的武器列。
+//         具名武器另收錄原始參數值：基礎攻擊、能力補正、致命補正、固定效果名稱 (黑夜君臨文字) 與命中時的異常狀態累積。
 //   法術：所有武器 equippedSpell_R1/R2 引用的 ID；名稱只取本篇法術清單，Magic 沒有該列時類型與系別為 null。
 
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { ROOT, TOOLS, byId, parseCsv, readJson, slug, source } from "./sources.mjs";
+import { ROOT, TOOLS, byId, parseCsv, parseFmg, readJson, slug, source } from "./sources.mjs";
 
 const common = readJson(join(ROOT, "public/data/common.json"));
 const problems = [];
@@ -103,6 +104,10 @@ function iconOf(pages, kind, prefix, name) {
 
 const weaponRows = byId(parseCsv(await source("params", "EquipParamWeapon")), "EquipParamWeapon");
 const magicRows = byId(parseCsv(await source("params", "Magic")), "Magic");
+const spRows = byId(parseCsv(await source("params", "SpEffectParam")), "SpEffectParam");
+const attachRows = byId(parseCsv(await source("params", "AttachEffectParam")), "AttachEffectParam");
+const effectZh = parseFmg(await source("text", "effectZh"), await source("text", "effectZhDlc"));
+const effectEn = parseFmg(await source("text", "effectEn"), await source("text", "effectEnDlc"));
 const weaponZh = parseText(await source("erText", "weaponZh"), await source("erText", "weaponZhDlc"));
 const weaponEn = parseText(await source("erText", "weaponEn"), await source("erText", "weaponEnDlc"));
 const spellZh = parseSpellList(
@@ -159,18 +164,84 @@ function spellTags(magic, id) {
 
 const withName = (name) => (name ? { sources: ["game-params"], sourcesFor: { name: ["er-base-text"] } } : { sources: ["game-params"] });
 
+// ---------- 武器數值 ----------
+// 皆為原始參數值，不是遊戲內顯示值：黑夜君臨的攻擊力另隨等級與稀有度變化，計算方式尚未核實。
+const ATTACK = { physical: "attackBasePhysics", magic: "attackBaseMagic", fire: "attackBaseFire", lightning: "attackBaseThunder", holy: "attackBaseDark" };
+// 鍵與 common.json 的 stats 相同，頁面以能力值名稱顯示。
+const SCALING = { strength: "correctStrength", dexterity: "correctAgility", intelligence: "correctMagic", faith: "correctFaith", arcane: "correctLuck" };
+// 命中時發動的特殊效果 (spEffectBehaviorId0–2) 只取異常狀態累積值；同一列的其他欄位 (例如減傷、恢復) 不收錄。
+const BUILDUP = {
+  poison: "poizonAttackPower",
+  rot: "diseaseAttackPower",
+  blood: "bloodAttackPower",
+  frost: "freezeAttackPower",
+  sleep: "sleepAttackPower",
+  madness: "madnessAttackPower",
+  deathBlight: "curseAttackPower",
+};
+const BEHAVIORS = ["spEffectBehaviorId0", "spEffectBehaviorId1", "spEffectBehaviorId2"];
+
+// 參數值必須是數字；空白或非數字記錄錯誤，不當成 0。
+function numberOf(row, field, owner) {
+  const value = row[field];
+  const number = Number(value);
+  if (typeof value !== "string" || value.trim() === "" || !Number.isFinite(number)) fail(`${owner} 的 ${field} 不是數字：${value}`);
+  return number;
+}
+const pick = (fields, row, owner) => Object.fromEntries(Object.entries(fields).map(([key, field]) => [key, numberOf(row, field, owner)]));
+
+// 固定效果 (attachEffectId → AttachEffectParam.attachTextId) 只收名稱；效果數值與作用條件 (passive、onHit、permanent 引用鏈) 尚未收錄。
+function weaponStats(row) {
+  const owner = `武器 ${row.ID}`;
+  const buildup = {};
+  for (const column of BEHAVIORS) {
+    if (!isRef(row[column])) continue;
+    const sp = spRows.get(row[column]);
+    if (!sp) {
+      fail(`${owner} 的 ${column} 引用不存在的 SpEffectParam ${row[column]}`);
+      continue;
+    }
+    for (const [key, value] of Object.entries(pick(BUILDUP, sp, `SpEffectParam ${sp.ID}`))) {
+      if (value === 0) continue;
+      if (key in buildup) fail(`${owner} 的命中效果重複累積 ${key}`);
+      buildup[key] = value;
+    }
+  }
+  let passive = null;
+  if (isRef(row.attachEffectId)) {
+    const effect = attachRows.get(row.attachEffectId);
+    if (!effect) fail(`${owner} 的 attachEffectId ${row.attachEffectId} 不存在`);
+    else {
+      passive = nameOf(effectZh, effectEn, effect.attachTextId, "武器固定效果");
+      if (!passive) fail(`${owner} 的固定效果 ${effect.attachTextId} 沒有名稱`);
+    }
+  }
+  return { attack: pick(ATTACK, row, owner), scaling: pick(SCALING, row, owner), critical: numberOf(row, "criticalAtkRate", owner), passive, buildup };
+}
+
+// 武器來源：名稱取自本篇文字，固定效果名稱取自黑夜君臨文字，其餘取自遊戲參數。
+function weaponSources(name, stats) {
+  const sourcesFor = { ...(name ? { name: ["er-base-text"] } : {}), ...(stats?.passive ? { passive: ["game-text"] } : {}) };
+  return { sources: ["game-params"], ...(Object.keys(sourcesFor).length ? { sourcesFor } : {}) };
+}
+
 const weaponData = Object.fromEntries(
-  weapons.map(({ row, name, type, spells: slots }) => [
-    row.ID,
-    {
-      name,
-      icon: iconOf(pages, iconKind({ type }), "weapon", name),
-      tags: { weaponType: [type] },
-      sortId: Number(row.sortId),
-      ...(Object.keys(slots).length ? { spells: slots } : {}),
-      ...withName(name),
-    },
-  ]),
+  weapons.map(({ row, name, type, spells: slots }) => {
+    // 數值只收具名武器 (頁面只列具名武器)；未具名的法器變體只用於搭載法器計數。
+    const stats = name ? weaponStats(row) : null;
+    return [
+      row.ID,
+      {
+        name,
+        icon: iconOf(pages, iconKind({ type }), "weapon", name),
+        tags: { weaponType: [type] },
+        sortId: Number(row.sortId),
+        ...(Object.keys(slots).length ? { spells: slots } : {}),
+        ...(stats ?? {}),
+        ...weaponSources(name, stats),
+      },
+    ];
+  }),
 );
 const spellData = Object.fromEntries(
   spells.map(({ id, magic, name }) => [id, { name, icon: iconOf(pages, "Spell", "spell", name), tags: spellTags(magic, id), ...withName(name) }]),
@@ -182,7 +253,7 @@ for (const [id, weapon] of Object.entries(weaponData)) {
 }
 const srcs = [...Object.values(weaponData), ...Object.values(spellData)].flatMap((item) => (item.icon ? [item.icon.src] : []));
 for (const src of srcs.filter((src, i) => srcs.indexOf(src) !== i)) fail(`圖示檔名重複：${src}`);
-for (const id of ["er-base-text", "game-params"]) if (!common.sources[id]) fail(`來源 ${id} 不在 common.json`);
+for (const id of ["er-base-text", "game-params", "game-text"]) if (!common.sources[id]) fail(`來源 ${id} 不在 common.json`);
 
 if (problems.length) {
   console.error(`無法產生：\n  ${problems.join("\n  ")}`);

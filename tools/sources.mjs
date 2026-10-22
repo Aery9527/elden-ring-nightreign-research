@@ -43,6 +43,18 @@ export function byId(rows, name) {
   return map;
 }
 
+// 遊戲文字 FMG XML：每個 <text id> 一筆，%null% 為無文字；還原 XML 實體。
+export function parseFmg(...texts) {
+  const entities = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'" };
+  const map = new Map();
+  for (const text of texts) {
+    for (const [, id, value] of text.matchAll(/<text id="(\d+)">([\s\S]*?)<\/text>/g)) {
+      if (value !== "%null%") map.set(id, value.replace(/&\w+;/g, (e) => entities[e] ?? e));
+    }
+  }
+  return map;
+}
+
 export function groupById(rows) {
   const map = new Map();
   for (const row of rows) map.set(row.ID, [...(map.get(row.ID) ?? []), row]);

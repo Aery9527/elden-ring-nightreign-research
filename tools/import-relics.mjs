@@ -11,7 +11,7 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { ROOT, TOOLS, byId, config, groupById, parseCsv, readJson, slug, source } from "./sources.mjs";
+import { ROOT, TOOLS, byId, config, groupById, parseCsv, parseFmg, readJson, slug, source } from "./sources.mjs";
 
 const curated = readJson(join(TOOLS, "relics-curated.json")).effects;
 // 以 gameId 為鍵的輸入檔：JSON.parse 會讓重複鍵靜默覆蓋，因此要求檔案等於標準格式 (2 空格縮排) 的輸出；有重複鍵時兩者必不相同。
@@ -34,17 +34,6 @@ const problems = [];
 const fail = (message) => problems.push(message);
 
 // ---------- 來源 ----------
-
-function parseFmg(...texts) {
-  const entities = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'" };
-  const map = new Map();
-  for (const text of texts) {
-    for (const [, id, value] of text.matchAll(/<text id="(\d+)">([\s\S]*?)<\/text>/g)) {
-      if (value !== "%null%") map.set(id, value.replace(/&\w+;/g, (e) => entities[e] ?? e));
-    }
-  }
-  return map;
-}
 
 // ---------- 文字正規化 ----------
 

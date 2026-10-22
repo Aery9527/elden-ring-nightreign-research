@@ -15,6 +15,23 @@
         ]
       },
       "sortId": 1000001,
+      "attack": {
+        "physical": 58,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.3,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -39,6 +56,23 @@
         ]
       },
       "sortId": 1015000,
+      "attack": {
+        "physical": 46,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 46
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -63,6 +97,23 @@
         ]
       },
       "sortId": 1001000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -87,6 +138,23 @@
         ]
       },
       "sortId": 1003000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.4,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -111,6 +179,25 @@
         ]
       },
       "sortId": 1013000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 39
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {
+        "blood": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -135,6 +222,23 @@
         ]
       },
       "sortId": 1009000,
+      "attack": {
+        "physical": 44,
+        "magic": 30,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 26,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -159,6 +263,23 @@
         ]
       },
       "sortId": 1007000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -183,6 +304,23 @@
         ]
       },
       "sortId": 1012000,
+      "attack": {
+        "physical": 40,
+        "magic": 48,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 26,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -207,6 +345,25 @@
         ]
       },
       "sortId": 1010000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {
+        "rot": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -231,6 +388,25 @@
         ]
       },
       "sortId": 1002000,
+      "attack": {
+        "physical": 56,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -255,6 +431,25 @@
         ]
       },
       "sortId": 1006000,
+      "attack": {
+        "physical": 67,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -279,6 +474,23 @@
         ]
       },
       "sortId": 1011000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -303,6 +515,23 @@
         ]
       },
       "sortId": 1008000,
+      "attack": {
+        "physical": 37,
+        "magic": 37,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 26,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -327,6 +556,25 @@
         ]
       },
       "sortId": 1004000,
+      "attack": {
+        "physical": 66,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -351,6 +599,23 @@
         ]
       },
       "sortId": 1005000,
+      "attack": {
+        "physical": 75,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -375,6 +640,23 @@
         ]
       },
       "sortId": 1014000,
+      "attack": {
+        "physical": 57,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 35
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -399,6 +681,23 @@
         ]
       },
       "sortId": 1101000,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -423,6 +722,23 @@
         ]
       },
       "sortId": 1100000,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -447,6 +763,23 @@
         ]
       },
       "sortId": 1102000,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -471,6 +804,23 @@
         ]
       },
       "sortId": 1105000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -495,6 +845,23 @@
         ]
       },
       "sortId": 1103000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -519,6 +886,23 @@
         ]
       },
       "sortId": 1113000,
+      "attack": {
+        "physical": 105,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -543,6 +927,23 @@
         ]
       },
       "sortId": 1114000,
+      "attack": {
+        "physical": 53,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 53
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -567,6 +968,23 @@
         ]
       },
       "sortId": 1612000,
+      "attack": {
+        "physical": 108,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -591,6 +1009,23 @@
         ]
       },
       "sortId": 1208000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 37
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -615,6 +1050,23 @@
         ]
       },
       "sortId": 1117000,
+      "attack": {
+        "physical": 0,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 108
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 80,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -639,12 +1091,35 @@
         ]
       },
       "sortId": 1118000,
+      "attack": {
+        "physical": 36,
+        "magic": 42,
+        "fire": 42,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 38,
+        "intelligence": 30,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "夜與火的庇佑",
+        "en": "Power of Night and Flame"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -663,6 +1138,23 @@
         ]
       },
       "sortId": 1110000,
+      "attack": {
+        "physical": 38,
+        "magic": 49,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -687,6 +1179,23 @@
         ]
       },
       "sortId": 1109000,
+      "attack": {
+        "physical": 60,
+        "magic": 30,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -711,6 +1220,25 @@
         ]
       },
       "sortId": 1115000,
+      "attack": {
+        "physical": 58,
+        "magic": 29,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "sleep": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -735,6 +1263,23 @@
         ]
       },
       "sortId": 1112000,
+      "attack": {
+        "physical": 49,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 62
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -759,6 +1304,23 @@
         ]
       },
       "sortId": 1106000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -783,6 +1345,23 @@
         ]
       },
       "sortId": 1116000,
+      "attack": {
+        "physical": 73,
+        "magic": 38,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 45
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -807,6 +1386,23 @@
         ]
       },
       "sortId": 1104000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -831,6 +1427,23 @@
         ]
       },
       "sortId": 1107000,
+      "attack": {
+        "physical": 90,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -855,6 +1468,23 @@
         ]
       },
       "sortId": 1108000,
+      "attack": {
+        "physical": 36,
+        "magic": 53,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -879,6 +1509,25 @@
         ]
       },
       "sortId": 1111000,
+      "attack": {
+        "physical": 36,
+        "magic": 46,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "rot": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -903,6 +1552,23 @@
         ]
       },
       "sortId": 1200001,
+      "attack": {
+        "physical": 85,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -927,6 +1593,25 @@
         ]
       },
       "sortId": 1206000,
+      "attack": {
+        "physical": 95,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -951,6 +1636,23 @@
         ]
       },
       "sortId": 1201000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -975,6 +1677,23 @@
         ]
       },
       "sortId": 1202000,
+      "attack": {
+        "physical": 85,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -999,6 +1718,23 @@
         ]
       },
       "sortId": 1204000,
+      "attack": {
+        "physical": 107,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1023,6 +1759,25 @@
         ]
       },
       "sortId": 1207000,
+      "attack": {
+        "physical": 95,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -1047,6 +1802,23 @@
         ]
       },
       "sortId": 1212000,
+      "attack": {
+        "physical": 67,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 67
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1071,6 +1843,23 @@
         ]
       },
       "sortId": 1213000,
+      "attack": {
+        "physical": 66,
+        "magic": 66,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1095,6 +1884,23 @@
         ]
       },
       "sortId": 1205000,
+      "attack": {
+        "physical": 107,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1119,12 +1925,37 @@
         ]
       },
       "sortId": 1219000,
+      "attack": {
+        "physical": 53,
+        "magic": 79,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "暗月的庇佑",
+        "en": "Power of Dark Moon"
+      },
+      "buildup": {
+        "frost": 38
+      },
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1143,12 +1974,35 @@
         ]
       },
       "sortId": 1220000,
+      "attack": {
+        "physical": 97,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 48
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": {
+        "zh": "無上庇佑",
+        "en": "Power of the Greater Will"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1167,6 +2021,23 @@
         ]
       },
       "sortId": 1215000,
+      "attack": {
+        "physical": 67,
+        "magic": 67,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1191,12 +2062,35 @@
         ]
       },
       "sortId": 1217000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 73,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "褻瀆的庇佑",
+        "en": "Power of the Blasphemous"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1215,12 +2109,35 @@
         ]
       },
       "sortId": 1216000,
+      "attack": {
+        "physical": 87,
+        "magic": 58,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 45
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "瑪雷家的庇佑",
+        "en": "Power of House Marais"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1239,6 +2156,25 @@
         ]
       },
       "sortId": 1211000,
+      "attack": {
+        "physical": 115,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -1263,12 +2199,35 @@
         ]
       },
       "sortId": 1218000,
+      "attack": {
+        "physical": 44,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 102
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "黃金律法的庇佑",
+        "en": "Power of the Golden Order"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1287,6 +2246,23 @@
         ]
       },
       "sortId": 1203000,
+      "attack": {
+        "physical": 107,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1311,6 +2287,23 @@
         ]
       },
       "sortId": 1209000,
+      "attack": {
+        "physical": 109,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1335,6 +2328,25 @@
         ]
       },
       "sortId": 1214000,
+      "attack": {
+        "physical": 78,
+        "magic": 40,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "frost": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -1359,6 +2371,23 @@
         ]
       },
       "sortId": 1210000,
+      "attack": {
+        "physical": 51,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 77
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1383,6 +2412,23 @@
         ]
       },
       "sortId": 1301000,
+      "attack": {
+        "physical": 109,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 61,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1407,6 +2453,23 @@
         ]
       },
       "sortId": 1302000,
+      "attack": {
+        "physical": 128,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 61,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1431,12 +2494,35 @@
         ]
       },
       "sortId": 1310000,
+      "attack": {
+        "physical": 119,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 59
+      },
+      "scaling": {
+        "strength": 52,
+        "dexterity": 29,
+        "intelligence": 0,
+        "faith": 29,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "命定之死的庇佑",
+        "en": "Power of Destined Death"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1455,6 +2541,23 @@
         ]
       },
       "sortId": 1303000,
+      "attack": {
+        "physical": 131,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 61,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1479,6 +2582,23 @@
         ]
       },
       "sortId": 1300000,
+      "attack": {
+        "physical": 104,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 61,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1503,12 +2623,35 @@
         ]
       },
       "sortId": 1309000,
+      "attack": {
+        "physical": 117,
+        "magic": 61,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 52,
+        "dexterity": 29,
+        "intelligence": 29,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "碎星的庇佑",
+        "en": "Power of the Starscourge"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1527,6 +2670,23 @@
         ]
       },
       "sortId": 1305000,
+      "attack": {
+        "physical": 64,
+        "magic": 96,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 52,
+        "dexterity": 29,
+        "intelligence": 29,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1551,6 +2711,23 @@
         ]
       },
       "sortId": 1306000,
+      "attack": {
+        "physical": 108,
+        "magic": 0,
+        "fire": 56,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 52,
+        "dexterity": 29,
+        "intelligence": 0,
+        "faith": 29,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1575,12 +2752,35 @@
         ]
       },
       "sortId": 1308000,
+      "attack": {
+        "physical": 142,
+        "magic": 36,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 52,
+        "dexterity": 29,
+        "intelligence": 29,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "毀滅的庇佑",
+        "en": "Power of Destruction"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1599,12 +2799,35 @@
         ]
       },
       "sortId": 1307000,
+      "attack": {
+        "physical": 177,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 61,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "復仇的庇佑",
+        "en": "Power of Vengeance"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1623,6 +2846,23 @@
         ]
       },
       "sortId": 1304000,
+      "attack": {
+        "physical": 88,
+        "magic": 46,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 52,
+        "dexterity": 29,
+        "intelligence": 29,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1647,6 +2887,23 @@
         ]
       },
       "sortId": 1402000,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1671,6 +2928,23 @@
         ]
       },
       "sortId": 1404000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1695,6 +2969,23 @@
         ]
       },
       "sortId": 1401000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.3,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1719,6 +3010,23 @@
         ]
       },
       "sortId": 1405000,
+      "attack": {
+        "physical": 90,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1743,6 +3051,25 @@
         ]
       },
       "sortId": 1406000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "rot": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -1767,6 +3094,25 @@
         ]
       },
       "sortId": 1407000,
+      "attack": {
+        "physical": 84,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "frost": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -1791,6 +3137,23 @@
         ]
       },
       "sortId": 1403000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1815,6 +3178,25 @@
         ]
       },
       "sortId": 1502000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 33,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 44
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 56
+      },
       "sources": [
         "game-params"
       ],
@@ -1839,6 +3221,23 @@
         ]
       },
       "sortId": 1501000,
+      "attack": {
+        "physical": 105,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 58,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1863,6 +3262,23 @@
         ]
       },
       "sortId": 1500000,
+      "attack": {
+        "physical": 82,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 58,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1887,12 +3303,35 @@
         ]
       },
       "sortId": 1503000,
+      "attack": {
+        "physical": 84,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 56,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 58,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "龍王的庇佑",
+        "en": "Power of the Dragonlord"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -1911,6 +3350,23 @@
         ]
       },
       "sortId": 1601000,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1935,6 +3391,23 @@
         ]
       },
       "sortId": 1608000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1959,6 +3432,23 @@
         ]
       },
       "sortId": 1603000,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -1983,6 +3473,23 @@
         ]
       },
       "sortId": 1604000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2007,6 +3514,23 @@
         ]
       },
       "sortId": 1602000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2031,6 +3555,23 @@
         ]
       },
       "sortId": 1611000,
+      "attack": {
+        "physical": 66,
+        "magic": 0,
+        "fire": 42,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 24,
+        "dexterity": 55,
+        "intelligence": 0,
+        "faith": 28,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2055,6 +3596,23 @@
         ]
       },
       "sortId": 1610000,
+      "attack": {
+        "physical": 105,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2079,6 +3637,23 @@
         ]
       },
       "sortId": 1613000,
+      "attack": {
+        "physical": 44,
+        "magic": 66,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 24,
+        "dexterity": 55,
+        "intelligence": 28,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2103,6 +3678,25 @@
         ]
       },
       "sortId": 1606000,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -2127,12 +3721,35 @@
         ]
       },
       "sortId": 1614000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 60
+      },
+      "scaling": {
+        "strength": 24,
+        "dexterity": 55,
+        "intelligence": 0,
+        "faith": 28,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "絕望的庇佑",
+        "en": "Power of Despair"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -2151,6 +3768,23 @@
         ]
       },
       "sortId": 1609000,
+      "attack": {
+        "physical": 90,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2175,6 +3809,23 @@
         ]
       },
       "sortId": 1607000,
+      "attack": {
+        "physical": 90,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2199,6 +3850,23 @@
         ]
       },
       "sortId": 1600000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2223,6 +3891,23 @@
         ]
       },
       "sortId": 1605000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2247,6 +3932,23 @@
         ]
       },
       "sortId": 1705000,
+      "attack": {
+        "physical": 88,
+        "magic": 47,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2271,6 +3973,23 @@
         ]
       },
       "sortId": 1700000,
+      "attack": {
+        "physical": 86,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2295,6 +4014,25 @@
         ]
       },
       "sortId": 1704000,
+      "attack": {
+        "physical": 100,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -2319,6 +4057,23 @@
         ]
       },
       "sortId": 1707000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 45,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2343,6 +4098,25 @@
         ]
       },
       "sortId": 1706000,
+      "attack": {
+        "physical": 104,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "frost": 56
+      },
       "sources": [
         "game-params"
       ],
@@ -2367,6 +4141,23 @@
         ]
       },
       "sortId": 1701000,
+      "attack": {
+        "physical": 108,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2391,6 +4182,23 @@
         ]
       },
       "sortId": 1702000,
+      "attack": {
+        "physical": 106,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2415,6 +4223,23 @@
         ]
       },
       "sortId": 1703000,
+      "attack": {
+        "physical": 108,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2439,12 +4264,37 @@
         ]
       },
       "sortId": 1708000,
+      "attack": {
+        "physical": 132,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 43,
+        "dexterity": 43,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 45
+      },
+      "critical": 1.1,
+      "passive": {
+        "zh": "惡兆王的庇佑",
+        "en": "Power of the Omen King"
+      },
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -2463,6 +4313,25 @@
         ]
       },
       "sortId": 1800001,
+      "attack": {
+        "physical": 66,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -2487,6 +4356,25 @@
         ]
       },
       "sortId": 1801000,
+      "attack": {
+        "physical": 83,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -2511,12 +4399,37 @@
         ]
       },
       "sortId": 1807000,
+      "attack": {
+        "physical": 112,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "戰無不勝的庇佑",
+        "en": "Power of the Undefeated"
+      },
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -2535,6 +4448,25 @@
         ]
       },
       "sortId": 1803000,
+      "attack": {
+        "physical": 52,
+        "magic": 33,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 26,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -2559,6 +4491,25 @@
         ]
       },
       "sortId": 1805000,
+      "attack": {
+        "physical": 46,
+        "magic": 0,
+        "fire": 46,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 39
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -2583,6 +4534,25 @@
         ]
       },
       "sortId": 1804000,
+      "attack": {
+        "physical": 60,
+        "magic": 42,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 12,
+        "dexterity": 63,
+        "intelligence": 26,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -2607,6 +4577,23 @@
         ]
       },
       "sortId": 1806000,
+      "attack": {
+        "physical": 110,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2631,6 +4618,25 @@
         ]
       },
       "sortId": 1802000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "poison": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -2655,6 +4661,23 @@
         ]
       },
       "sortId": 1900000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2679,6 +4702,23 @@
         ]
       },
       "sortId": 1902000,
+      "attack": {
+        "physical": 93,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2703,6 +4743,23 @@
         ]
       },
       "sortId": 1901000,
+      "attack": {
+        "physical": 89,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2727,6 +4784,25 @@
         ]
       },
       "sortId": 1905000,
+      "attack": {
+        "physical": 45,
+        "magic": 0,
+        "fire": 45,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 45
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -2751,6 +4827,23 @@
         ]
       },
       "sortId": 1903000,
+      "attack": {
+        "physical": 91,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2775,6 +4868,23 @@
         ]
       },
       "sortId": 1904000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 37
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2799,6 +4909,23 @@
         ]
       },
       "sortId": 2204000,
+      "attack": {
+        "physical": 74,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2823,6 +4950,23 @@
         ]
       },
       "sortId": 2201000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2847,6 +4991,23 @@
         ]
       },
       "sortId": 2202000,
+      "attack": {
+        "physical": 74,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2871,6 +5032,23 @@
         ]
       },
       "sortId": 2207000,
+      "attack": {
+        "physical": 89,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2895,6 +5073,25 @@
         ]
       },
       "sortId": 2206000,
+      "attack": {
+        "physical": 83,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -2919,6 +5116,25 @@
         ]
       },
       "sortId": 2210000,
+      "attack": {
+        "physical": 74,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 55,
+        "dexterity": 24,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 42
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -2943,6 +5159,25 @@
         ]
       },
       "sortId": 2205000,
+      "attack": {
+        "physical": 82,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -2967,6 +5202,23 @@
         ]
       },
       "sortId": 2208000,
+      "attack": {
+        "physical": 89,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -2991,6 +5243,23 @@
         ]
       },
       "sortId": 2209000,
+      "attack": {
+        "physical": 91,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3015,6 +5284,23 @@
         ]
       },
       "sortId": 2211000,
+      "attack": {
+        "physical": 64,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 45
+      },
+      "scaling": {
+        "strength": 55,
+        "dexterity": 24,
+        "intelligence": 0,
+        "faith": 28,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3039,6 +5325,23 @@
         ]
       },
       "sortId": 2214000,
+      "attack": {
+        "physical": 66,
+        "magic": 48,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 55,
+        "dexterity": 24,
+        "intelligence": 28,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3063,6 +5366,23 @@
         ]
       },
       "sortId": 2212000,
+      "attack": {
+        "physical": 108,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3087,6 +5407,23 @@
         ]
       },
       "sortId": 2213000,
+      "attack": {
+        "physical": 111,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3111,6 +5448,23 @@
         ]
       },
       "sortId": 2203000,
+      "attack": {
+        "physical": 75,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3135,12 +5489,35 @@
         ]
       },
       "sortId": 2215000,
+      "attack": {
+        "physical": 74,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 49
+      },
+      "scaling": {
+        "strength": 55,
+        "dexterity": 24,
+        "intelligence": 0,
+        "faith": 28,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "女王的庇佑",
+        "en": "Power of the Queen"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -3159,6 +5536,23 @@
         ]
       },
       "sortId": 2400000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3183,6 +5577,23 @@
         ]
       },
       "sortId": 2409000,
+      "attack": {
+        "physical": 111,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3207,6 +5618,23 @@
         ]
       },
       "sortId": 2405000,
+      "attack": {
+        "physical": 109,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3231,6 +5659,23 @@
         ]
       },
       "sortId": 2402000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3255,6 +5700,23 @@
         ]
       },
       "sortId": 2401000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3279,6 +5741,23 @@
         ]
       },
       "sortId": 2407000,
+      "attack": {
+        "physical": 111,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3303,6 +5782,23 @@
         ]
       },
       "sortId": 2403000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3327,6 +5823,23 @@
         ]
       },
       "sortId": 2412000,
+      "attack": {
+        "physical": 83,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 55
+      },
+      "scaling": {
+        "strength": 65,
+        "dexterity": 7,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3351,6 +5864,23 @@
         ]
       },
       "sortId": 2410000,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 53
+      },
+      "scaling": {
+        "strength": 65,
+        "dexterity": 7,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3375,6 +5905,23 @@
         ]
       },
       "sortId": 2411000,
+      "attack": {
+        "physical": 68,
+        "magic": 0,
+        "fire": 68,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 65,
+        "dexterity": 7,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3399,6 +5946,25 @@
         ]
       },
       "sortId": 2408000,
+      "attack": {
+        "physical": 102,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -3423,6 +5989,23 @@
         ]
       },
       "sortId": 2404000,
+      "attack": {
+        "physical": 109,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3447,12 +6030,35 @@
         ]
       },
       "sortId": 2413000,
+      "attack": {
+        "physical": 93,
+        "magic": 0,
+        "fire": 57,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 65,
+        "dexterity": 7,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "褻瀆的庇佑",
+        "en": "Power of the Blasphemous"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -3471,6 +6077,25 @@
         ]
       },
       "sortId": 2406000,
+      "attack": {
+        "physical": 102,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 76,
+        "dexterity": 8,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "rot": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -3495,6 +6120,25 @@
         ]
       },
       "sortId": 2301000,
+      "attack": {
+        "physical": 82,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 58,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -3519,6 +6163,25 @@
         ]
       },
       "sortId": 2300000,
+      "attack": {
+        "physical": 67,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 58,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -3543,6 +6206,23 @@
         ]
       },
       "sortId": 2303000,
+      "attack": {
+        "physical": 68,
+        "magic": 46,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 33,
+        "dexterity": 50,
+        "intelligence": 29,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3567,12 +6247,35 @@
         ]
       },
       "sortId": 2304000,
+      "attack": {
+        "physical": 58,
+        "magic": 68,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 33,
+        "dexterity": 50,
+        "intelligence": 29,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "黑暗的庇佑",
+        "en": "Power of the Lightless Void"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -3591,6 +6294,25 @@
         ]
       },
       "sortId": 2302000,
+      "attack": {
+        "physical": 86,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -3615,6 +6337,23 @@
         ]
       },
       "sortId": 2002000,
+      "attack": {
+        "physical": 77,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3639,6 +6378,25 @@
         ]
       },
       "sortId": 2001000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -3663,6 +6421,23 @@
         ]
       },
       "sortId": 2000000,
+      "attack": {
+        "physical": 77,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3687,6 +6462,23 @@
         ]
       },
       "sortId": 2003000,
+      "attack": {
+        "physical": 79,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3711,6 +6503,23 @@
         ]
       },
       "sortId": 2005000,
+      "attack": {
+        "physical": 95,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3735,6 +6544,23 @@
         ]
       },
       "sortId": 2008000,
+      "attack": {
+        "physical": 124,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 80
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3759,6 +6585,23 @@
         ]
       },
       "sortId": 2007000,
+      "attack": {
+        "physical": 97,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3783,6 +6626,25 @@
         ]
       },
       "sortId": 2009000,
+      "attack": {
+        "physical": 95,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "frost": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -3807,6 +6669,23 @@
         ]
       },
       "sortId": 2006000,
+      "attack": {
+        "physical": 95,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3831,6 +6710,23 @@
         ]
       },
       "sortId": 2010000,
+      "attack": {
+        "physical": 116,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3855,6 +6751,23 @@
         ]
       },
       "sortId": 2012000,
+      "attack": {
+        "physical": 68,
+        "magic": 51,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 33,
+        "dexterity": 50,
+        "intelligence": 29,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3879,6 +6792,23 @@
         ]
       },
       "sortId": 2011000,
+      "attack": {
+        "physical": 121,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3903,6 +6833,23 @@
         ]
       },
       "sortId": 2100000,
+      "attack": {
+        "physical": 91,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3927,6 +6874,23 @@
         ]
       },
       "sortId": 2004000,
+      "attack": {
+        "physical": 99,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3951,6 +6915,25 @@
         ]
       },
       "sortId": 2105000,
+      "attack": {
+        "physical": 105,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -3975,6 +6958,23 @@
         ]
       },
       "sortId": 2101000,
+      "attack": {
+        "physical": 91,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -3999,12 +6999,35 @@
         ]
       },
       "sortId": 2110000,
+      "attack": {
+        "physical": 155,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "黃金一族的庇佑",
+        "en": "Power of the Golden Lineage"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -4023,6 +7046,23 @@
         ]
       },
       "sortId": 2102000,
+      "attack": {
+        "physical": 91,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4047,6 +7087,23 @@
         ]
       },
       "sortId": 2106000,
+      "attack": {
+        "physical": 115,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4071,6 +7128,23 @@
         ]
       },
       "sortId": 2103000,
+      "attack": {
+        "physical": 112,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.15,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4095,12 +7169,35 @@
         ]
       },
       "sortId": 2109000,
+      "attack": {
+        "physical": 155,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "祖靈的庇佑",
+        "en": "Power of the Ancestral Spirit"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -4119,6 +7216,23 @@
         ]
       },
       "sortId": 2108500,
+      "attack": {
+        "physical": 137,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4143,6 +7257,23 @@
         ]
       },
       "sortId": 2106000,
+      "attack": {
+        "physical": 117,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 73,
+        "dexterity": 13,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4167,6 +7298,23 @@
         ]
       },
       "sortId": 2107000,
+      "attack": {
+        "physical": 64,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 79
+      },
+      "scaling": {
+        "strength": 63,
+        "dexterity": 12,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4191,6 +7339,23 @@
         ]
       },
       "sortId": 2600000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4215,6 +7380,23 @@
         ]
       },
       "sortId": 2602000,
+      "attack": {
+        "physical": 74,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4239,6 +7421,23 @@
         ]
       },
       "sortId": 2610000,
+      "attack": {
+        "physical": 69,
+        "magic": 22,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4263,6 +7462,23 @@
         ]
       },
       "sortId": 2607000,
+      "attack": {
+        "physical": 54,
+        "magic": 36,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4287,6 +7503,23 @@
         ]
       },
       "sortId": 2613000,
+      "attack": {
+        "physical": 65,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 44
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4311,6 +7544,23 @@
         ]
       },
       "sortId": 2603000,
+      "attack": {
+        "physical": 89,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4335,6 +7585,23 @@
         ]
       },
       "sortId": 2608000,
+      "attack": {
+        "physical": 89,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4359,6 +7626,23 @@
         ]
       },
       "sortId": 2604000,
+      "attack": {
+        "physical": 93,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4383,6 +7667,23 @@
         ]
       },
       "sortId": 2609000,
+      "attack": {
+        "physical": 58,
+        "magic": 0,
+        "fire": 35,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4407,12 +7708,35 @@
         ]
       },
       "sortId": 2615000,
+      "attack": {
+        "physical": 74,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 49,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "大古龍的庇佑",
+        "en": "Power of the Great Ancient Dragon"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -4431,6 +7755,25 @@
         ]
       },
       "sortId": 2606000,
+      "attack": {
+        "physical": 83,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -4455,6 +7798,23 @@
         ]
       },
       "sortId": 2614000,
+      "attack": {
+        "physical": 68,
+        "magic": 45,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4479,6 +7839,25 @@
         ]
       },
       "sortId": 2612000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 40,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -4503,6 +7882,25 @@
         ]
       },
       "sortId": 2605000,
+      "attack": {
+        "physical": 82,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -4527,6 +7925,23 @@
         ]
       },
       "sortId": 2601000,
+      "attack": {
+        "physical": 75,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 44,
+        "dexterity": 54,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4551,6 +7966,25 @@
         ]
       },
       "sortId": 2611000,
+      "attack": {
+        "physical": 64,
+        "magic": 20,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 38,
+        "dexterity": 46,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "rot": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -4575,12 +8009,37 @@
         ]
       },
       "sortId": 2705000,
+      "attack": {
+        "physical": 79,
+        "magic": 0,
+        "fire": 51,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 44
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "鮮血君王的庇佑",
+        "en": "Power of the Blood Lord"
+      },
+      "buildup": {
+        "blood": 56
+      },
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -4599,6 +8058,23 @@
         ]
       },
       "sortId": 2703000,
+      "attack": {
+        "physical": 75,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 75
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 29,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4623,6 +8099,23 @@
         ]
       },
       "sortId": 2702000,
+      "attack": {
+        "physical": 122,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4647,6 +8140,25 @@
         ]
       },
       "sortId": 2704000,
+      "attack": {
+        "physical": 86,
+        "magic": 0,
+        "fire": 57,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 29,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "madness": 56
+      },
       "sources": [
         "game-params"
       ],
@@ -4671,6 +8183,23 @@
         ]
       },
       "sortId": 2700000,
+      "attack": {
+        "physical": 95,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4695,6 +8224,23 @@
         ]
       },
       "sortId": 2701000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 47
+      },
+      "scaling": {
+        "strength": 33,
+        "dexterity": 50,
+        "intelligence": 0,
+        "faith": 29,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4719,6 +8265,23 @@
         ]
       },
       "sortId": 2800001,
+      "attack": {
+        "physical": 82,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4743,6 +8306,23 @@
         ]
       },
       "sortId": 2808000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4767,6 +8347,23 @@
         ]
       },
       "sortId": 2802000,
+      "attack": {
+        "physical": 82,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4791,6 +8388,23 @@
         ]
       },
       "sortId": 2801000,
+      "attack": {
+        "physical": 86,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4815,6 +8429,23 @@
         ]
       },
       "sortId": 2815000,
+      "attack": {
+        "physical": 128,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4839,6 +8470,23 @@
         ]
       },
       "sortId": 2807000,
+      "attack": {
+        "physical": 103,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4863,6 +8511,23 @@
         ]
       },
       "sortId": 2809000,
+      "attack": {
+        "physical": 132,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 80
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4887,6 +8552,25 @@
         ]
       },
       "sortId": 2805000,
+      "attack": {
+        "physical": 79,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -4911,6 +8595,23 @@
         ]
       },
       "sortId": 2812000,
+      "attack": {
+        "physical": 76,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 51
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4935,6 +8636,23 @@
         ]
       },
       "sortId": 2803000,
+      "attack": {
+        "physical": 86,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4959,6 +8677,23 @@
         ]
       },
       "sortId": 2814000,
+      "attack": {
+        "physical": 76,
+        "magic": 51,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 30,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -4983,6 +8718,23 @@
         ]
       },
       "sortId": 2806000,
+      "attack": {
+        "physical": 103,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 13,
+        "dexterity": 73,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5007,6 +8759,23 @@
         ]
       },
       "sortId": 2804000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5031,6 +8800,23 @@
         ]
       },
       "sortId": 2813000,
+      "attack": {
+        "physical": 123,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5055,6 +8841,23 @@
         ]
       },
       "sortId": 2810000,
+      "attack": {
+        "physical": 105,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5079,6 +8882,23 @@
         ]
       },
       "sortId": 2811000,
+      "attack": {
+        "physical": 56,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 68
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5103,6 +8923,25 @@
         ]
       },
       "sortId": 2900000,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 22,
+        "dexterity": 68,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -5127,6 +8966,25 @@
         ]
       },
       "sortId": 2901000,
+      "attack": {
+        "physical": 87,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 22,
+        "dexterity": 68,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 38
+      },
       "sources": [
         "game-params"
       ],
@@ -5151,6 +9009,25 @@
         ]
       },
       "sortId": 2902000,
+      "attack": {
+        "physical": 65,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 44
+      },
+      "scaling": {
+        "strength": 19,
+        "dexterity": 58,
+        "intelligence": 0,
+        "faith": 27,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5175,6 +9052,25 @@
         ]
       },
       "sortId": 2903000,
+      "attack": {
+        "physical": 47,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 58
+      },
+      "scaling": {
+        "strength": 19,
+        "dexterity": 58,
+        "intelligence": 0,
+        "faith": 27,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5199,6 +9095,23 @@
         ]
       },
       "sortId": 3000000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 18,
+        "dexterity": 70,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5223,6 +9136,25 @@
         ]
       },
       "sortId": 3001000,
+      "attack": {
+        "physical": 82,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 18,
+        "dexterity": 70,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5247,6 +9179,23 @@
         ]
       },
       "sortId": 3004000,
+      "attack": {
+        "physical": 56,
+        "magic": 0,
+        "fire": 56,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 16,
+        "dexterity": 60,
+        "intelligence": 0,
+        "faith": 27,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5271,6 +9220,25 @@
         ]
       },
       "sortId": 3003000,
+      "attack": {
+        "physical": 102,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 18,
+        "dexterity": 70,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5295,12 +9263,35 @@
         ]
       },
       "sortId": 3005000,
+      "attack": {
+        "physical": 74,
+        "magic": 0,
+        "fire": 49,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 16,
+        "dexterity": 60,
+        "intelligence": 0,
+        "faith": 27,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "巨人的庇佑",
+        "en": "Power of the Giant"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -5319,6 +9310,23 @@
         ]
       },
       "sortId": 3002000,
+      "attack": {
+        "physical": 93,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 18,
+        "dexterity": 70,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5343,6 +9351,23 @@
         ]
       },
       "sortId": 3101000,
+      "attack": {
+        "physical": 61,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5367,6 +9392,25 @@
         ]
       },
       "sortId": 3102000,
+      "attack": {
+        "physical": 68,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5391,12 +9435,35 @@
         ]
       },
       "sortId": 3108000,
+      "attack": {
+        "physical": 63,
+        "magic": 0,
+        "fire": 42,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "飛龍的庇佑",
+        "en": "Power of the Flying Dragon"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -5415,6 +9482,23 @@
         ]
       },
       "sortId": 3103000,
+      "attack": {
+        "physical": 77,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5439,6 +9523,25 @@
         ]
       },
       "sortId": 3104000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5463,6 +9566,23 @@
         ]
       },
       "sortId": 3100001,
+      "attack": {
+        "physical": 64,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5487,6 +9607,23 @@
         ]
       },
       "sortId": 3105000,
+      "attack": {
+        "physical": 71,
+        "magic": 23,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 46,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 45
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5511,6 +9648,23 @@
         ]
       },
       "sortId": 3106000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 37,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 54,
+        "dexterity": 44,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5535,6 +9689,23 @@
         ]
       },
       "sortId": 3107000,
+      "attack": {
+        "physical": 0,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 92
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 80,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5559,6 +9730,25 @@
         ]
       },
       "sortId": 3200000,
+      "attack": {
+        "physical": 56,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5583,6 +9773,25 @@
         ]
       },
       "sortId": 3202000,
+      "attack": {
+        "physical": 63,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "poison": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -5607,6 +9816,25 @@
         ]
       },
       "sortId": 3201000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5631,6 +9859,25 @@
         ]
       },
       "sortId": 3203000,
+      "attack": {
+        "physical": 86,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 28,
+        "dexterity": 64,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1.1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -5655,6 +9902,23 @@
         ]
       },
       "sortId": 2506500,
+      "attack": {
+        "physical": 163,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5679,6 +9943,23 @@
         ]
       },
       "sortId": 2508000,
+      "attack": {
+        "physical": 159,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5703,6 +9984,23 @@
         ]
       },
       "sortId": 2504000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 30
+      },
+      "scaling": {
+        "strength": 68,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 24,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5727,6 +10025,23 @@
         ]
       },
       "sortId": 2511000,
+      "attack": {
+        "physical": 96,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 64
+      },
+      "scaling": {
+        "strength": 68,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 24,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5751,6 +10066,23 @@
         ]
       },
       "sortId": 2500001,
+      "attack": {
+        "physical": 106,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5775,12 +10107,35 @@
         ]
       },
       "sortId": 2514000,
+      "attack": {
+        "physical": 181,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "初始之王的庇佑",
+        "en": "Power of the First Lord"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -5799,6 +10154,23 @@
         ]
       },
       "sortId": 2507000,
+      "attack": {
+        "physical": 98,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 65,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5823,6 +10195,23 @@
         ]
       },
       "sortId": 2509000,
+      "attack": {
+        "physical": 96,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 64
+      },
+      "scaling": {
+        "strength": 68,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 24,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5847,6 +10236,23 @@
         ]
       },
       "sortId": 2513000,
+      "attack": {
+        "physical": 100,
+        "magic": 67,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 68,
+        "dexterity": 0,
+        "intelligence": 24,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5871,6 +10277,25 @@
         ]
       },
       "sortId": 2512000,
+      "attack": {
+        "physical": 149,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -5895,6 +10320,23 @@
         ]
       },
       "sortId": 2503000,
+      "attack": {
+        "physical": 136,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5919,6 +10361,23 @@
         ]
       },
       "sortId": 2502000,
+      "attack": {
+        "physical": 133,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5943,6 +10402,23 @@
         ]
       },
       "sortId": 2505000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 30,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 68,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 24,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -5967,6 +10443,25 @@
         ]
       },
       "sortId": 2510000,
+      "attack": {
+        "physical": 149,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "rot": 68
+      },
       "sources": [
         "game-params"
       ],
@@ -5991,6 +10486,25 @@
         ]
       },
       "sortId": 2501000,
+      "attack": {
+        "physical": 123,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 80,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "rot": 68
+      },
       "sources": [
         "game-params"
       ],
@@ -6015,6 +10529,23 @@
         ]
       },
       "sortId": 7106000,
+      "attack": {
+        "physical": 49,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6039,6 +10570,23 @@
         ]
       },
       "sortId": 7112000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6063,6 +10611,23 @@
         ]
       },
       "sortId": 7109000,
+      "attack": {
+        "physical": 61,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6087,6 +10652,23 @@
         ]
       },
       "sortId": 7100001,
+      "attack": {
+        "physical": 47,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6111,6 +10693,23 @@
         ]
       },
       "sortId": 7105000,
+      "attack": {
+        "physical": 48,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6135,6 +10734,23 @@
         ]
       },
       "sortId": 7223000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6159,6 +10775,23 @@
         ]
       },
       "sortId": 7104000,
+      "attack": {
+        "physical": 48,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6183,6 +10816,23 @@
         ]
       },
       "sortId": 7103000,
+      "attack": {
+        "physical": 48,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6207,6 +10857,23 @@
         ]
       },
       "sortId": 7101000,
+      "attack": {
+        "physical": 48,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6231,6 +10898,23 @@
         ]
       },
       "sortId": 7102000,
+      "attack": {
+        "physical": 48,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6255,6 +10939,23 @@
         ]
       },
       "sortId": 7111000,
+      "attack": {
+        "physical": 58,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6279,6 +10980,23 @@
         ]
       },
       "sortId": 7107000,
+      "attack": {
+        "physical": 58,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6303,6 +11021,23 @@
         ]
       },
       "sortId": 7108000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6327,6 +11062,23 @@
         ]
       },
       "sortId": 7110000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6351,6 +11103,23 @@
         ]
       },
       "sortId": 7115000,
+      "attack": {
+        "physical": 42,
+        "magic": 0,
+        "fire": 32,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 50,
+        "dexterity": 33,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6375,6 +11144,25 @@
         ]
       },
       "sortId": 7114000,
+      "attack": {
+        "physical": 65,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -6399,6 +11187,25 @@
         ]
       },
       "sortId": 7116000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "poison": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -6423,6 +11230,23 @@
         ]
       },
       "sortId": 7216000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6447,6 +11271,25 @@
         ]
       },
       "sortId": 7206000,
+      "attack": {
+        "physical": 52,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -6471,6 +11314,25 @@
         ]
       },
       "sortId": 7204000,
+      "attack": {
+        "physical": 52,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -6495,6 +11357,23 @@
         ]
       },
       "sortId": 7221000,
+      "attack": {
+        "physical": 89,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6519,6 +11398,23 @@
         ]
       },
       "sortId": 7222000,
+      "attack": {
+        "physical": 86,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6543,6 +11439,23 @@
         ]
       },
       "sortId": 7213000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6567,6 +11480,23 @@
         ]
       },
       "sortId": 7225000,
+      "attack": {
+        "physical": 63,
+        "magic": 24,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 55,
+        "dexterity": 24,
+        "intelligence": 28,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6591,6 +11521,23 @@
         ]
       },
       "sortId": 7205000,
+      "attack": {
+        "physical": 57,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6615,6 +11562,23 @@
         ]
       },
       "sortId": 7218000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6639,6 +11603,23 @@
         ]
       },
       "sortId": 7219000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6663,6 +11644,23 @@
         ]
       },
       "sortId": 7217000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6687,6 +11685,23 @@
         ]
       },
       "sortId": 7220000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6711,6 +11726,23 @@
         ]
       },
       "sortId": 7226000,
+      "attack": {
+        "physical": 88,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6735,6 +11767,25 @@
         ]
       },
       "sortId": 7113000,
+      "attack": {
+        "physical": 79,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -6759,6 +11810,23 @@
         ]
       },
       "sortId": 7224000,
+      "attack": {
+        "physical": 73,
+        "magic": 17,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 55,
+        "dexterity": 24,
+        "intelligence": 28,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6783,6 +11851,23 @@
         ]
       },
       "sortId": 7214000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6807,6 +11892,23 @@
         ]
       },
       "sortId": 7201000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6831,6 +11933,23 @@
         ]
       },
       "sortId": 7202000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6855,6 +11974,23 @@
         ]
       },
       "sortId": 7203000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6879,6 +12015,23 @@
         ]
       },
       "sortId": 7200000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6903,6 +12056,23 @@
         ]
       },
       "sortId": 7210000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6927,6 +12097,23 @@
         ]
       },
       "sortId": 7209000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6951,6 +12138,23 @@
         ]
       },
       "sortId": 7208000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6975,6 +12179,23 @@
         ]
       },
       "sortId": 7212000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -6999,6 +12220,23 @@
         ]
       },
       "sortId": 7211000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7023,6 +12261,23 @@
         ]
       },
       "sortId": 7207000,
+      "attack": {
+        "physical": 60,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7047,6 +12302,23 @@
         ]
       },
       "sortId": 7215000,
+      "attack": {
+        "physical": 71,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 64,
+        "dexterity": 28,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7071,6 +12343,23 @@
         ]
       },
       "sortId": 7305000,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7095,6 +12384,23 @@
         ]
       },
       "sortId": 7310000,
+      "attack": {
+        "physical": 99,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7119,6 +12425,23 @@
         ]
       },
       "sortId": 7317000,
+      "attack": {
+        "physical": 120,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7143,6 +12466,23 @@
         ]
       },
       "sortId": 7318000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 23,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7167,6 +12507,25 @@
         ]
       },
       "sortId": 7306000,
+      "attack": {
+        "physical": 93,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -7191,6 +12550,23 @@
         ]
       },
       "sortId": 7321000,
+      "attack": {
+        "physical": 102,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 24
+      },
+      "scaling": {
+        "strength": 60,
+        "dexterity": 16,
+        "intelligence": 0,
+        "faith": 27,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7215,6 +12591,23 @@
         ]
       },
       "sortId": 7309000,
+      "attack": {
+        "physical": 103,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7239,6 +12632,23 @@
         ]
       },
       "sortId": 7322000,
+      "attack": {
+        "physical": 123,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7263,6 +12673,25 @@
         ]
       },
       "sortId": 7319000,
+      "attack": {
+        "physical": 120,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "madness": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -7287,6 +12716,23 @@
         ]
       },
       "sortId": 7308000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7311,6 +12757,23 @@
         ]
       },
       "sortId": 7324000,
+      "attack": {
+        "physical": 125,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7335,6 +12798,23 @@
         ]
       },
       "sortId": 7323000,
+      "attack": {
+        "physical": 120,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7359,6 +12839,25 @@
         ]
       },
       "sortId": 7307000,
+      "attack": {
+        "physical": 93,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 45
+      },
       "sources": [
         "game-params"
       ],
@@ -7383,6 +12882,23 @@
         ]
       },
       "sortId": 7302000,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7407,6 +12923,23 @@
         ]
       },
       "sortId": 7303000,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7431,6 +12964,23 @@
         ]
       },
       "sortId": 7304000,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7455,6 +13005,25 @@
         ]
       },
       "sortId": 7320000,
+      "attack": {
+        "physical": 113,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "poison": 68
+      },
       "sources": [
         "game-params"
       ],
@@ -7479,6 +13048,23 @@
         ]
       },
       "sortId": 7313000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7503,6 +13089,23 @@
         ]
       },
       "sortId": 7316000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7527,6 +13130,23 @@
         ]
       },
       "sortId": 7312000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7551,6 +13171,23 @@
         ]
       },
       "sortId": 7314000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7575,6 +13212,23 @@
         ]
       },
       "sortId": 7311000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7599,6 +13253,23 @@
         ]
       },
       "sortId": 7315000,
+      "attack": {
+        "physical": 101,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7623,6 +13294,23 @@
         ]
       },
       "sortId": 7300001,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7647,6 +13335,23 @@
         ]
       },
       "sortId": 7301000,
+      "attack": {
+        "physical": 80,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 70,
+        "dexterity": 18,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7675,6 +13380,23 @@
         "R1": "4000",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7703,6 +13425,23 @@
         "R1": "4500",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 31,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7731,6 +13470,23 @@
         "R1": "4800",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 29,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7759,6 +13515,23 @@
         "R1": "4000",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 31,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7787,12 +13560,35 @@
         "R1": "4360",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 23,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "滿月的庇佑",
+        "en": "Power of Full Moon"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -7815,6 +13611,23 @@
         "R1": "4100",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 38,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7843,6 +13656,23 @@
         "R1": "4000",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7871,6 +13701,23 @@
         "R1": "4390",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 22,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7899,6 +13746,23 @@
         "R1": "5000",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7927,6 +13791,23 @@
         "R1": "4000",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 17,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7955,6 +13836,23 @@
         "R1": "4000",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -7983,6 +13881,23 @@
         "R1": "4440",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8011,6 +13926,23 @@
         "R1": "4200",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 24,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8039,6 +13971,23 @@
         "R1": "4220",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 24,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8067,6 +14016,23 @@
         "R1": "4720",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 39,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8094,6 +14060,25 @@
       "spells": {
         "R1": "4910",
         "R2": "4070"
+      },
+      "attack": {
+        "physical": 38,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "blood": 30
       },
       "sources": [
         "game-params"
@@ -8123,6 +14108,25 @@
         "R1": "4510",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 42,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "rot": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -8151,6 +14155,23 @@
         "R1": "4620",
         "R2": "4070"
       },
+      "attack": {
+        "physical": 22,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 100,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8332,6 +14353,23 @@
         "R1": "6400",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8360,6 +14398,23 @@
         "R1": "6210",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8388,6 +14443,23 @@
         "R1": "6100",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8416,6 +14488,23 @@
         "R1": "6900",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8444,6 +14533,23 @@
         "R1": "6800",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 31,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8472,6 +14578,23 @@
         "R1": "6700",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 24,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8500,6 +14623,23 @@
         "R1": "6410",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 15
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8528,6 +14668,23 @@
         "R1": "7000",
         "R2": "6000"
       },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -8555,6 +14712,25 @@
       "spells": {
         "R1": "7310",
         "R2": "6000"
+      },
+      "attack": {
+        "physical": 25,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 100,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "madness": 55
       },
       "sources": [
         "game-params"
@@ -9107,6 +15283,23 @@
         ]
       },
       "sortId": 5000001,
+      "attack": {
+        "physical": 46,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9131,6 +15324,23 @@
         ]
       },
       "sortId": 5001000,
+      "attack": {
+        "physical": 50,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9155,6 +15365,23 @@
         ]
       },
       "sortId": 5004000,
+      "attack": {
+        "physical": 57,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9179,6 +15406,23 @@
         ]
       },
       "sortId": 5005000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9203,6 +15447,23 @@
         ]
       },
       "sortId": 5003000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9227,6 +15488,23 @@
         ]
       },
       "sortId": 5002000,
+      "attack": {
+        "physical": 48,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9251,6 +15529,23 @@
         ]
       },
       "sortId": 5106000,
+      "attack": {
+        "physical": 61,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9275,6 +15570,23 @@
         ]
       },
       "sortId": 5107000,
+      "attack": {
+        "physical": 41,
+        "magic": 22,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 7,
+        "dexterity": 65,
+        "intelligence": 26,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9299,6 +15611,23 @@
         ]
       },
       "sortId": 5111000,
+      "attack": {
+        "physical": 46,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 26
+      },
+      "scaling": {
+        "strength": 7,
+        "dexterity": 65,
+        "intelligence": 0,
+        "faith": 26,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9323,6 +15652,25 @@
         ]
       },
       "sortId": 5110000,
+      "attack": {
+        "physical": 59,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 7,
+        "dexterity": 65,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 38
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {
+        "poison": 30
+      },
       "sources": [
         "game-params"
       ],
@@ -9347,6 +15695,23 @@
         ]
       },
       "sortId": 5109000,
+      "attack": {
+        "physical": 72,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9371,6 +15736,23 @@
         ]
       },
       "sortId": 5108000,
+      "attack": {
+        "physical": 73,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 8,
+        "dexterity": 76,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9395,12 +15777,35 @@
         ]
       },
       "sortId": 5203000,
+      "attack": {
+        "physical": 182,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": {
+        "zh": "將軍的庇佑",
+        "en": "Power of the General"
+      },
+      "buildup": {},
       "sources": [
         "game-params"
       ],
       "sourcesFor": {
         "name": [
           "er-base-text"
+        ],
+        "passive": [
+          "game-text"
         ]
       }
     },
@@ -9419,6 +15824,23 @@
         ]
       },
       "sortId": 5201000,
+      "attack": {
+        "physical": 146,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9443,6 +15865,23 @@
         ]
       },
       "sortId": 5202000,
+      "attack": {
+        "physical": 95,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 84
+      },
+      "scaling": {
+        "strength": 40,
+        "dexterity": 30,
+        "intelligence": 0,
+        "faith": 30,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9467,6 +15906,23 @@
         ]
       },
       "sortId": 5200000,
+      "attack": {
+        "physical": 116,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 58,
+        "dexterity": 38,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9491,6 +15947,23 @@
         ]
       },
       "sortId": 5300000,
+      "attack": {
+        "physical": 148,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9515,6 +15988,23 @@
         ]
       },
       "sortId": 5301000,
+      "attack": {
+        "physical": 149,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9539,6 +16029,23 @@
         ]
       },
       "sortId": 5302000,
+      "attack": {
+        "physical": 151,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9563,6 +16070,23 @@
         ]
       },
       "sortId": 5306000,
+      "attack": {
+        "physical": 106,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9587,6 +16111,23 @@
         ]
       },
       "sortId": 5305000,
+      "attack": {
+        "physical": 93,
+        "magic": 93,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9611,6 +16152,23 @@
         ]
       },
       "sortId": 5303000,
+      "attack": {
+        "physical": 154,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9635,6 +16193,23 @@
         ]
       },
       "sortId": 5304000,
+      "attack": {
+        "physical": 186,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9659,6 +16234,23 @@
         ]
       },
       "sortId": 5400000,
+      "attack": {
+        "physical": 431,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9683,6 +16275,23 @@
         ]
       },
       "sortId": 5401000,
+      "attack": {
+        "physical": 584,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9707,6 +16316,23 @@
         ]
       },
       "sortId": -1,
+      "attack": {
+        "physical": 0,
+        "magic": 40,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],
@@ -9731,6 +16357,23 @@
         ]
       },
       "sortId": -1,
+      "attack": {
+        "physical": 70,
+        "magic": 0,
+        "fire": 0,
+        "lightning": 0,
+        "holy": 0
+      },
+      "scaling": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "faith": 0,
+        "arcane": 0
+      },
+      "critical": 1,
+      "passive": null,
+      "buildup": {},
       "sources": [
         "game-params"
       ],

@@ -15,8 +15,9 @@ function isConflict(value) {
   return value !== null && typeof value === "object" && Array.isArray(value.conflict);
 }
 
+// 只接受表格自身的鍵：繼承屬性 (例如 toString、__proto__) 不算有定義。
 function lookup(table, key, kind) {
-  const item = table[key];
+  const item = Object.hasOwn(table, key) ? table[key] : undefined;
   if (!item) throw new Error(`找不到${kind}：${key}`);
   return item;
 }
@@ -607,8 +608,38 @@ function itemNameNode(data, id, item) {
   return el("span", { class: "item-name" }, itemIcon(data, item, "48"), item.name.zh, el("span", { class: "en" }, item.name.en));
 }
 
+// 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；致命補正；
+// 特殊效果列出固定效果名稱與命中時的異常狀態累積。沒有可列內容的欄顯示「—」。
+// 數值只來自遊戲參數，沒有未核實或來源分歧的狀態：缺鍵、多鍵或不是數字時報錯，不顯示成 0 或「—」。
+const SCALING_STATS = ["strength", "dexterity", "intelligence", "faith", "arcane"];
+function weaponCells(data, id, weapon) {
+  const labels = data.labels.armaments;
+  const check = (values, keys, what) => {
+    const ok = values && typeof values === "object" && Object.keys(values).length === keys.length && keys.every((key) => Number.isFinite(values[key]));
+    if (!ok) throw new Error(`武器${what}必須是 ${keys.join("、")} 的數字（武器 ${id}）`);
+  };
+  check(weapon.attack, Object.keys(labels.attack), "基礎攻擊");
+  check(weapon.scaling, SCALING_STATS, "能力補正");
+  check({ critical: weapon.critical }, ["critical"], "致命補正");
+  check(weapon.buildup, Object.keys(weapon.buildup ?? {}), "命中累積");
+  for (const key of Object.keys(weapon.buildup)) lookup(labels.ailments, key, "異常狀態");
+  if (weapon.passive !== null && typeof weapon.passive?.zh !== "string") throw new Error(`武器固定效果必須是名稱或 null（武器 ${id}）`);
+  const lines = (parts) => (parts.length ? parts.map((part) => el("span", { class: "entry" }, part)) : [labels.none]);
+  const nonZero = (values, nameOf) => Object.entries(values).filter(([, value]) => value !== 0).map(([key, value]) => `${nameOf(key)} ${value}`);
+  const special = [
+    ...(weapon.passive ? [weapon.passive.zh] : []),
+    ...Object.entries(weapon.buildup).map(([key, value]) => `${labels.buildup}${lookup(labels.ailments, key, "異常狀態")} ${value}`),
+  ];
+  return [
+    el("td", { class: "stats" }, ...lines(nonZero(weapon.attack, (key) => lookup(labels.attack, key, "攻擊屬性")))),
+    el("td", { class: "stats" }, ...lines(nonZero(weapon.scaling, (key) => statName(data, key)))),
+    el("td", { class: "stats" }, String(weapon.critical)),
+    el("td", { class: "stats" }, ...lines(special)),
+  ];
+}
+
 // <section data-weapon-type="<type>">：武器種類章節。h2 填種類名稱，章首列出相關遺物詞條，
-// [data-chapter-rows] 依 sortId 列出該種類的具名武器；列 id 為 weapon-<id>，是遺物頁「相關武器與法術」連結的目標。
+// [data-chapter-rows] 依 sortId 列出該種類的具名武器與數值；列 id 為 weapon-<id>，是遺物頁「相關武器與法術」連結的目標。
 function weaponChapter(data, section) {
   const type = section.dataset.weaponType;
   section.querySelector("h2").textContent = lookup(data.tags.weaponType, type, "武器種類").name.zh;
@@ -619,7 +650,11 @@ function weaponChapter(data, section) {
   if (weapons.length === 0) throw new Error(`武器種類沒有具名武器：${type}`);
   section
     .querySelector("[data-chapter-rows]")
-    .replaceChildren(...weapons.map(([id, weapon]) => el("tr", { id: `weapon-${id}` }, el("td", { class: "item" }, itemNameNode(data, id, weapon)))));
+    .replaceChildren(
+      ...weapons.map(([id, weapon]) =>
+        el("tr", { id: `weapon-${id}` }, el("td", { class: "item" }, itemNameNode(data, id, weapon)), ...weaponCells(data, id, weapon))
+      )
+    );
 }
 
 // <section data-spell-type="<type>">：類型章節，只列以該類型為條件的詞條。
