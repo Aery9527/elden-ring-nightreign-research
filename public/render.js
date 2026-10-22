@@ -657,6 +657,22 @@ function weaponChapter(data, section) {
     );
 }
 
+// 法術消耗欄 (遊戲參數原始值，尚未套用減少消耗的效果)：FP、耐力各一欄，第一行為通常施放，有蓄力消耗參數時第二行為「蓄力參數 <值>」。
+// 蓄力參數只照原值列出：不判定法術是否支援蓄力，0 不代表實際不消耗。
+// 數值只來自遊戲參數：cost 缺少或不是數字、chargeCost 不是 null 也不是數字時報錯。
+function spellCostCells(data, id, spell) {
+  const valid = (value) => value && Object.keys(value).length === 2 && Number.isFinite(value.fp) && Number.isFinite(value.stamina);
+  if (!valid(spell.cost) || !(spell.chargeCost === null || valid(spell.chargeCost))) throw new Error(`法術消耗必須是 FP 與耐力的數字（法術 ${id}）`);
+  const cell = (key) =>
+    el(
+      "td",
+      { class: "stats" },
+      el("span", { class: "entry" }, String(spell.cost[key])),
+      ...(spell.chargeCost ? [el("span", { class: "entry sub" }, `${data.labels.armaments.charge} ${spell.chargeCost[key]}`)] : [])
+    );
+  return [cell("fp"), cell("stamina")];
+}
+
 // <section data-spell-type="<type>">：類型章節，只列以該類型為條件的詞條。
 // 再加 data-spell-school="<school>" (空字串為無已定義系別)：系別章節。章首列出類型章節未列的詞條，[data-chapter-rows] 依 ID 列出
 // 系別恰為該系別的法術 (列 id 為 spell-<id>)；只針對個別法術的詞條 (targets.spell) 列在法術名稱下方。回傳本章列出的法術 ID。
@@ -680,7 +696,7 @@ function spellChapter(data, section) {
   const rows = spells.map(([id, spell]) => {
     const own = inlineTargets(data, { ...spell.tags, spell: [id] }, tags);
     const name = el("td", { class: "item" }, itemNameNode(data, id, spell), ...(own.length ? [el("span", { class: "item-targets" }, ...own)] : []));
-    return el("tr", { id: `spell-${id}` }, name, el("td", { class: "names" }, ...carrierEntries(data, id)));
+    return el("tr", { id: `spell-${id}` }, name, ...spellCostCells(data, id, spell), el("td", { class: "names" }, ...carrierEntries(data, id)));
   });
   section.querySelector("[data-chapter-rows]").replaceChildren(...rows);
   return spells.map(([id]) => id);

@@ -8,6 +8,7 @@
 //   武器：ID 為 10000 倍數、wepType 有定義武器種類標籤、本篇有名稱、sortId 不是 9999999 的基本武器，以及所有搭載法術的武器列。
 //         具名武器另收錄原始參數值：基礎攻擊、能力補正、致命補正、固定效果名稱 (黑夜君臨文字) 與命中時的異常狀態累積。
 //   法術：所有武器 equippedSpell_R1/R2 引用的 ID；名稱只取本篇法術清單，Magic 沒有該列時類型與系別為 null。
+//         有 Magic 列的法術另收錄原始消耗參數：通常施放與蓄力施放的 FP、耐力。
 
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -219,6 +220,15 @@ function weaponStats(row) {
   return { attack: pick(ATTACK, row, owner), scaling: pick(SCALING, row, owner), critical: numberOf(row, "criticalAtkRate", owner), passive, buildup };
 }
 
+// 法術消耗 (Magic)：通常施放 mp、stamina；蓄力施放 mp_charge、stamina_charge，兩者皆為 0 時為 null。
+// 皆為原始參數值，尚未套用減少消耗的效果；持續施放的消耗 (consumeLoopMP_forMenu) 不收錄。
+function spellCosts(magic) {
+  const owner = `法術 ${magic.ID}`;
+  const cost = { fp: numberOf(magic, "mp", owner), stamina: numberOf(magic, "stamina", owner) };
+  const charge = { fp: numberOf(magic, "mp_charge", owner), stamina: numberOf(magic, "stamina_charge", owner) };
+  return { cost, chargeCost: charge.fp === 0 && charge.stamina === 0 ? null : charge };
+}
+
 // 武器來源：名稱取自本篇文字，固定效果名稱取自黑夜君臨文字，其餘取自遊戲參數。
 function weaponSources(name, stats) {
   const sourcesFor = { ...(name ? { name: ["er-base-text"] } : {}), ...(stats?.passive ? { passive: ["game-text"] } : {}) };
@@ -244,7 +254,10 @@ const weaponData = Object.fromEntries(
   }),
 );
 const spellData = Object.fromEntries(
-  spells.map(({ id, magic, name }) => [id, { name, icon: iconOf(pages, "Spell", "spell", name), tags: spellTags(magic, id), ...withName(name) }]),
+  spells.map(({ id, magic, name }) => [
+    id,
+    { name, icon: iconOf(pages, "Spell", "spell", name), tags: spellTags(magic, id), ...(magic ? spellCosts(magic) : {}), ...withName(name) },
+  ]),
 );
 
 // 引用檢查：搭載的法術都要收錄；圖示檔名不重複

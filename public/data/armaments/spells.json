@@ -15,6 +15,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 7,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -39,6 +44,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 12,
+        "stamina": 26
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -63,6 +73,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 5,
+        "stamina": 9
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -86,6 +101,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 17,
+        "stamina": 30
+      },
+      "chargeCost": {
+        "fp": 17,
+        "stamina": 39
       },
       "sources": [
         "game-params"
@@ -111,6 +134,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 24,
+        "stamina": 35
+      },
+      "chargeCost": {
+        "fp": 24,
+        "stamina": 46
+      },
       "sources": [
         "game-params"
       ],
@@ -134,6 +165,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 14,
+        "stamina": 28
+      },
+      "chargeCost": {
+        "fp": 14,
+        "stamina": 36
       },
       "sources": [
         "game-params"
@@ -159,6 +198,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 12,
+        "stamina": 21
+      },
+      "chargeCost": {
+        "fp": 12,
+        "stamina": 27
+      },
       "sources": [
         "game-params"
       ],
@@ -182,6 +229,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 23,
+        "stamina": 26
+      },
+      "chargeCost": {
+        "fp": 23,
+        "stamina": 34
       },
       "sources": [
         "game-params"
@@ -207,6 +262,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 14,
+        "stamina": 26
+      },
+      "chargeCost": {
+        "fp": 2,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -231,6 +294,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 9,
+        "stamina": 18
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -255,6 +323,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 38,
+        "stamina": 42
+      },
+      "chargeCost": {
+        "fp": 38,
+        "stamina": 55
+      },
       "sources": [
         "game-params"
       ],
@@ -278,6 +354,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 14,
+        "stamina": 9
+      },
+      "chargeCost": {
+        "fp": 14,
+        "stamina": 12
       },
       "sources": [
         "game-params"
@@ -305,6 +389,11 @@
           "stonedigger"
         ]
       },
+      "cost": {
+        "fp": 10,
+        "stamina": 22
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -331,6 +420,14 @@
           "stonedigger"
         ]
       },
+      "cost": {
+        "fp": 22,
+        "stamina": 35
+      },
+      "chargeCost": {
+        "fp": 5,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -355,6 +452,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 22,
+        "stamina": 46
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -379,6 +481,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 12
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -425,6 +532,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 40,
+        "stamina": 34
+      },
+      "chargeCost": {
+        "fp": 10,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -449,6 +564,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 27,
+        "stamina": 37
+      },
+      "chargeCost": {
+        "fp": 32,
+        "stamina": 48
+      },
       "sources": [
         "game-params"
       ],
@@ -472,6 +595,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 32,
+        "stamina": 33
+      },
+      "chargeCost": {
+        "fp": 32,
+        "stamina": 43
       },
       "sources": [
         "game-params"
@@ -499,6 +630,11 @@
           "glintblade"
         ]
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 12
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -525,6 +661,11 @@
           "glintblade"
         ]
       },
+      "cost": {
+        "fp": 24,
+        "stamina": 16
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -551,6 +692,11 @@
           "glintblade"
         ]
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -575,6 +721,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 47,
+        "stamina": 32
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -599,6 +750,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 57,
+        "stamina": 32
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -622,6 +778,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 18,
+        "stamina": 17
+      },
+      "chargeCost": {
+        "fp": 18,
+        "stamina": 22
       },
       "sources": [
         "game-params"
@@ -647,6 +811,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 24,
+        "stamina": 30
+      },
+      "chargeCost": {
+        "fp": 24,
+        "stamina": 39
+      },
       "sources": [
         "game-params"
       ],
@@ -670,6 +842,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 39,
+        "stamina": 33
+      },
+      "chargeCost": {
+        "fp": 39,
+        "stamina": 43
       },
       "sources": [
         "game-params"
@@ -697,6 +877,14 @@
           "glintblade"
         ]
       },
+      "cost": {
+        "fp": 12,
+        "stamina": 22
+      },
+      "chargeCost": {
+        "fp": 12,
+        "stamina": 29
+      },
       "sources": [
         "game-params"
       ],
@@ -721,6 +909,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 12,
+        "stamina": 26
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -745,6 +938,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 17,
+        "stamina": 27
+      },
+      "chargeCost": {
+        "fp": 17,
+        "stamina": 35
+      },
       "sources": [
         "game-params"
       ],
@@ -768,6 +969,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 20,
+        "stamina": 13
+      },
+      "chargeCost": {
+        "fp": 20,
+        "stamina": 17
       },
       "sources": [
         "game-params"
@@ -795,6 +1004,11 @@
           "carian-sword"
         ]
       },
+      "cost": {
+        "fp": 12,
+        "stamina": 22
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -821,6 +1035,11 @@
           "carian-sword"
         ]
       },
+      "cost": {
+        "fp": 22,
+        "stamina": 22
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -847,6 +1066,11 @@
           "carian-sword"
         ]
       },
+      "cost": {
+        "fp": 4,
+        "stamina": 12
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -873,6 +1097,14 @@
           "carian-sword"
         ]
       },
+      "cost": {
+        "fp": 17,
+        "stamina": 25
+      },
+      "chargeCost": {
+        "fp": 17,
+        "stamina": 33
+      },
       "sources": [
         "game-params"
       ],
@@ -897,6 +1129,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 25,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -921,6 +1158,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -967,6 +1209,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -992,6 +1239,14 @@
         "spellSchool": [
           "crystalian"
         ]
+      },
+      "cost": {
+        "fp": 27,
+        "stamina": 35
+      },
+      "chargeCost": {
+        "fp": 38,
+        "stamina": 46
       },
       "sources": [
         "game-params"
@@ -1019,6 +1274,11 @@
           "crystalian"
         ]
       },
+      "cost": {
+        "fp": 34,
+        "stamina": 26
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1045,6 +1305,14 @@
           "crystalian"
         ]
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 30
+      },
+      "chargeCost": {
+        "fp": 5,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -1069,6 +1337,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 13,
+        "stamina": 15
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1095,6 +1368,11 @@
           "invisibility"
         ]
       },
+      "cost": {
+        "fp": 7,
+        "stamina": 9
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1121,6 +1399,14 @@
           "invisibility"
         ]
       },
+      "cost": {
+        "fp": 21,
+        "stamina": 30
+      },
+      "chargeCost": {
+        "fp": 21,
+        "stamina": 39
+      },
       "sources": [
         "game-params"
       ],
@@ -1145,6 +1431,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 7,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1171,6 +1462,11 @@
           "glintblade"
         ]
       },
+      "cost": {
+        "fp": 8,
+        "stamina": 15
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1195,6 +1491,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 25,
+        "stamina": 15
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1265,6 +1566,14 @@
           "gravity"
         ]
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 35
+      },
+      "chargeCost": {
+        "fp": 10,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -1290,6 +1599,14 @@
         "spellSchool": [
           "gravity"
         ]
+      },
+      "cost": {
+        "fp": 60,
+        "stamina": 40
+      },
+      "chargeCost": {
+        "fp": 12,
+        "stamina": 0
       },
       "sources": [
         "game-params"
@@ -1317,6 +1634,11 @@
           "gravity"
         ]
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 29
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1342,6 +1664,14 @@
         "spellSchool": [
           "gravity"
         ]
+      },
+      "cost": {
+        "fp": 12,
+        "stamina": 20
+      },
+      "chargeCost": {
+        "fp": 12,
+        "stamina": 26
       },
       "sources": [
         "game-params"
@@ -1369,6 +1699,14 @@
           "gravity"
         ]
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 27
+      },
+      "chargeCost": {
+        "fp": 18,
+        "stamina": 35
+      },
       "sources": [
         "game-params"
       ],
@@ -1392,6 +1730,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 16,
+        "stamina": 21
+      },
+      "chargeCost": {
+        "fp": 16,
+        "stamina": 27
       },
       "sources": [
         "game-params"
@@ -1417,6 +1763,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 16,
+        "stamina": 38
+      },
+      "chargeCost": {
+        "fp": 3,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -1440,6 +1794,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 28,
+        "stamina": 27
+      },
+      "chargeCost": {
+        "fp": 28,
+        "stamina": 35
       },
       "sources": [
         "game-params"
@@ -1465,6 +1827,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 23,
+        "stamina": 36
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1491,6 +1858,11 @@
           "thorn"
         ]
       },
+      "cost": {
+        "fp": 6,
+        "stamina": 26
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1517,6 +1889,11 @@
           "thorn"
         ]
       },
+      "cost": {
+        "fp": 9,
+        "stamina": 22
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1540,6 +1917,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 12,
+        "stamina": 21
+      },
+      "chargeCost": {
+        "fp": 12,
+        "stamina": 27
       },
       "sources": [
         "game-params"
@@ -1565,6 +1950,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 21,
+        "stamina": 27
+      },
+      "chargeCost": {
+        "fp": 24,
+        "stamina": 35
+      },
       "sources": [
         "game-params"
       ],
@@ -1589,6 +1982,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 29,
+        "stamina": 45
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1635,6 +2033,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 17,
+        "stamina": 27
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1661,6 +2064,14 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 28,
+        "stamina": 32
+      },
+      "chargeCost": {
+        "fp": 28,
+        "stamina": 42
+      },
       "sources": [
         "game-params"
       ],
@@ -1684,6 +2095,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 12,
+        "stamina": 18
+      },
+      "chargeCost": {
+        "fp": 12,
+        "stamina": 23
       },
       "sources": [
         "game-params"
@@ -1709,6 +2128,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 16,
+        "stamina": 27
+      },
+      "chargeCost": {
+        "fp": 16,
+        "stamina": 35
+      },
       "sources": [
         "game-params"
       ],
@@ -1733,6 +2160,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 10,
+        "stamina": 17
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1759,6 +2191,14 @@
           "giants-flame"
         ]
       },
+      "cost": {
+        "fp": 16,
+        "stamina": 24
+      },
+      "chargeCost": {
+        "fp": 16,
+        "stamina": 31
+      },
       "sources": [
         "game-params"
       ],
@@ -1782,6 +2222,14 @@
           "incantation"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 11,
+        "stamina": 22
+      },
+      "chargeCost": {
+        "fp": 11,
+        "stamina": 29
       },
       "sources": [
         "game-params"
@@ -1809,6 +2257,14 @@
           "giants-flame"
         ]
       },
+      "cost": {
+        "fp": 16,
+        "stamina": 10
+      },
+      "chargeCost": {
+        "fp": 16,
+        "stamina": 13
+      },
       "sources": [
         "game-params"
       ],
@@ -1834,6 +2290,14 @@
         "spellSchool": [
           "giants-flame"
         ]
+      },
+      "cost": {
+        "fp": 19,
+        "stamina": 26
+      },
+      "chargeCost": {
+        "fp": 19,
+        "stamina": 34
       },
       "sources": [
         "game-params"
@@ -1883,6 +2347,11 @@
           "giants-flame"
         ]
       },
+      "cost": {
+        "fp": 28,
+        "stamina": 16
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1909,6 +2378,11 @@
           "giants-flame"
         ]
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1934,6 +2408,14 @@
         "spellSchool": [
           "giants-flame"
         ]
+      },
+      "cost": {
+        "fp": 30,
+        "stamina": 34
+      },
+      "chargeCost": {
+        "fp": 30,
+        "stamina": 44
       },
       "sources": [
         "game-params"
@@ -1961,6 +2443,11 @@
           "giants-flame"
         ]
       },
+      "cost": {
+        "fp": 34,
+        "stamina": 42
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -1986,6 +2473,14 @@
         "spellSchool": [
           "giants-flame"
         ]
+      },
+      "cost": {
+        "fp": 26,
+        "stamina": 36
+      },
+      "chargeCost": {
+        "fp": 30,
+        "stamina": 47
       },
       "sources": [
         "game-params"
@@ -2013,6 +2508,14 @@
           "godslayer"
         ]
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 25
+      },
+      "chargeCost": {
+        "fp": 18,
+        "stamina": 33
+      },
       "sources": [
         "game-params"
       ],
@@ -2039,6 +2542,11 @@
           "giants-flame"
         ]
       },
+      "cost": {
+        "fp": 1,
+        "stamina": 2
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2064,6 +2572,14 @@
         "spellSchool": [
           "godslayer"
         ]
+      },
+      "cost": {
+        "fp": 21,
+        "stamina": 29
+      },
+      "chargeCost": {
+        "fp": 21,
+        "stamina": 38
       },
       "sources": [
         "game-params"
@@ -2091,6 +2607,14 @@
           "godslayer"
         ]
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 39
+      },
+      "chargeCost": {
+        "fp": 30,
+        "stamina": 51
+      },
       "sources": [
         "game-params"
       ],
@@ -2117,6 +2641,11 @@
           "godslayer"
         ]
       },
+      "cost": {
+        "fp": 15,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2143,6 +2672,11 @@
           "godslayer"
         ]
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 13
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2166,6 +2700,14 @@
           "incantation"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 20,
+        "stamina": 35
+      },
+      "chargeCost": {
+        "fp": 20,
+        "stamina": 46
       },
       "sources": [
         "game-params"
@@ -2191,6 +2733,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 12,
+        "stamina": 21
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2215,6 +2762,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 13,
+        "stamina": 34
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2239,6 +2791,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2263,6 +2820,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 13
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2287,6 +2849,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 50
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2310,6 +2877,14 @@
           "incantation"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 9,
+        "stamina": 24
+      },
+      "chargeCost": {
+        "fp": 9,
+        "stamina": 31
       },
       "sources": [
         "game-params"
@@ -2335,6 +2910,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 32,
+        "stamina": 44
+      },
+      "chargeCost": {
+        "fp": 32,
+        "stamina": 57
+      },
       "sources": [
         "game-params"
       ],
@@ -2359,6 +2942,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 16,
+        "stamina": 30
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2383,6 +2971,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 32,
+        "stamina": 35
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2407,6 +3000,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 45,
+        "stamina": 40
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2431,6 +3029,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 55,
+        "stamina": 45
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2455,6 +3058,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 65,
+        "stamina": 50
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2479,6 +3087,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 30
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2503,6 +3116,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 60,
+        "stamina": 50
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2571,6 +3189,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 13
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2595,6 +3218,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 13
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2619,6 +3247,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 13
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2643,6 +3276,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 13
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2667,6 +3305,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2690,6 +3333,14 @@
           "sorcery"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 20,
+        "stamina": 20
+      },
+      "chargeCost": {
+        "fp": 20,
+        "stamina": 26
       },
       "sources": [
         "game-params"
@@ -2737,6 +3388,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 15,
+        "stamina": 14
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2761,6 +3417,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 24,
+        "stamina": 24
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2785,6 +3446,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 47,
+        "stamina": 50
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2811,6 +3477,11 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 3,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2837,6 +3508,11 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 23,
+        "stamina": 28
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2863,6 +3539,14 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 21,
+        "stamina": 37
+      },
+      "chargeCost": {
+        "fp": 21,
+        "stamina": 48
+      },
       "sources": [
         "game-params"
       ],
@@ -2887,6 +3571,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 41,
+        "stamina": 48
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2913,6 +3602,11 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 55,
+        "stamina": 50
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2939,6 +3633,11 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 15,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2965,6 +3664,11 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 17,
+        "stamina": 28
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -2991,6 +3695,11 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 22,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3017,6 +3726,11 @@
           "fundamentalist"
         ]
       },
+      "cost": {
+        "fp": 22,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3065,6 +3779,11 @@
           "bestial"
         ]
       },
+      "cost": {
+        "fp": 7,
+        "stamina": 19
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3091,6 +3810,11 @@
           "bestial"
         ]
       },
+      "cost": {
+        "fp": 15,
+        "stamina": 37
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3116,6 +3840,14 @@
         "spellSchool": [
           "bestial"
         ]
+      },
+      "cost": {
+        "fp": 13,
+        "stamina": 27
+      },
+      "chargeCost": {
+        "fp": 13,
+        "stamina": 35
       },
       "sources": [
         "game-params"
@@ -3143,6 +3875,11 @@
           "bestial"
         ]
       },
+      "cost": {
+        "fp": 21,
+        "stamina": 42
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3169,6 +3906,11 @@
           "bestial"
         ]
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3217,6 +3959,14 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 28
+      },
+      "chargeCost": {
+        "fp": 18,
+        "stamina": 36
+      },
       "sources": [
         "game-params"
       ],
@@ -3242,6 +3992,14 @@
         "spellSchool": [
           "dragon-cult"
         ]
+      },
+      "cost": {
+        "fp": 36,
+        "stamina": 31
+      },
+      "chargeCost": {
+        "fp": 36,
+        "stamina": 40
       },
       "sources": [
         "game-params"
@@ -3269,6 +4027,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 19,
+        "stamina": 32
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3295,6 +4058,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 29,
+        "stamina": 39
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3321,6 +4089,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 12,
+        "stamina": 29
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3347,6 +4120,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 25,
+        "stamina": 29
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3373,6 +4151,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 35,
+        "stamina": 42
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3399,6 +4182,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 22,
+        "stamina": 45
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3425,6 +4213,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 27,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3473,6 +4266,11 @@
           "dragon-cult"
         ]
       },
+      "cost": {
+        "fp": 20,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3498,6 +4296,14 @@
         "spellSchool": [
           "dragon-communion"
         ]
+      },
+      "cost": {
+        "fp": 28,
+        "stamina": 40
+      },
+      "chargeCost": {
+        "fp": 4,
+        "stamina": 0
       },
       "sources": [
         "game-params"
@@ -3525,6 +4331,14 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 36,
+        "stamina": 60
+      },
+      "chargeCost": {
+        "fp": 6,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -3551,6 +4365,11 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 40
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3577,6 +4396,11 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 45,
+        "stamina": 60
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3602,6 +4426,14 @@
         "spellSchool": [
           "dragon-communion"
         ]
+      },
+      "cost": {
+        "fp": 36,
+        "stamina": 48
+      },
+      "chargeCost": {
+        "fp": 4,
+        "stamina": 0
       },
       "sources": [
         "game-params"
@@ -3629,6 +4461,14 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 48,
+        "stamina": 60
+      },
+      "chargeCost": {
+        "fp": 6,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -3654,6 +4494,14 @@
         "spellSchool": [
           "dragon-communion"
         ]
+      },
+      "cost": {
+        "fp": 36,
+        "stamina": 48
+      },
+      "chargeCost": {
+        "fp": 4,
+        "stamina": 0
       },
       "sources": [
         "game-params"
@@ -3681,6 +4529,14 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 48,
+        "stamina": 60
+      },
+      "chargeCost": {
+        "fp": 6,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -3706,6 +4562,14 @@
         "spellSchool": [
           "dragon-communion"
         ]
+      },
+      "cost": {
+        "fp": 28,
+        "stamina": 40
+      },
+      "chargeCost": {
+        "fp": 4,
+        "stamina": 0
       },
       "sources": [
         "game-params"
@@ -3733,6 +4597,14 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 36,
+        "stamina": 60
+      },
+      "chargeCost": {
+        "fp": 6,
+        "stamina": 0
+      },
       "sources": [
         "game-params"
       ],
@@ -3757,6 +4629,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 62,
+        "stamina": 75
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3783,6 +4660,11 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 24,
+        "stamina": 35
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3809,6 +4691,11 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 34,
+        "stamina": 50
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3835,6 +4722,11 @@
           "dragon-communion"
         ]
       },
+      "cost": {
+        "fp": 50,
+        "stamina": 72
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3859,6 +4751,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 19,
+        "stamina": 29
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3883,6 +4780,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 14,
+        "stamina": 24
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3907,6 +4809,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3931,6 +4838,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 15,
+        "stamina": 10
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -3955,6 +4867,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 48,
+        "stamina": 66
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -4003,6 +4920,14 @@
           "frenzied-flame"
         ]
       },
+      "cost": {
+        "fp": 16,
+        "stamina": 30
+      },
+      "chargeCost": {
+        "fp": 16,
+        "stamina": 39
+      },
       "sources": [
         "game-params"
       ],
@@ -4028,6 +4953,14 @@
         "spellSchool": [
           "frenzied-flame"
         ]
+      },
+      "cost": {
+        "fp": 22,
+        "stamina": 40
+      },
+      "chargeCost": {
+        "fp": 6,
+        "stamina": 0
       },
       "sources": [
         "game-params"
@@ -4055,6 +4988,14 @@
           "frenzied-flame"
         ]
       },
+      "cost": {
+        "fp": 24,
+        "stamina": 33
+      },
+      "chargeCost": {
+        "fp": 24,
+        "stamina": 43
+      },
       "sources": [
         "game-params"
       ],
@@ -4081,6 +5022,11 @@
           "frenzied-flame"
         ]
       },
+      "cost": {
+        "fp": 21,
+        "stamina": 38
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -4104,6 +5050,14 @@
           "incantation"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 20,
+        "stamina": 32
+      },
+      "chargeCost": {
+        "fp": 20,
+        "stamina": 42
       },
       "sources": [
         "game-params"
@@ -4129,6 +5083,14 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 18,
+        "stamina": 38
+      },
+      "chargeCost": {
+        "fp": 18,
+        "stamina": 49
+      },
       "sources": [
         "game-params"
       ],
@@ -4152,6 +5114,14 @@
           "incantation"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 28,
+        "stamina": 40
+      },
+      "chargeCost": {
+        "fp": 4,
+        "stamina": 0
       },
       "sources": [
         "game-params"
@@ -4177,6 +5147,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 26,
+        "stamina": 51
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -4200,6 +5175,14 @@
           "incantation"
         ],
         "spellSchool": []
+      },
+      "cost": {
+        "fp": 26,
+        "stamina": 28
+      },
+      "chargeCost": {
+        "fp": 26,
+        "stamina": 36
       },
       "sources": [
         "game-params"
@@ -4225,6 +5208,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 30,
+        "stamina": 20
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ],
@@ -4243,6 +5231,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 15
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4256,6 +5249,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 15
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4269,6 +5267,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 15
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4282,6 +5285,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 15
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4295,6 +5303,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 25
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4308,6 +5321,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 25
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4321,6 +5339,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 25
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4334,6 +5357,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 25
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4347,6 +5375,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 25
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4360,6 +5393,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 25
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4373,6 +5411,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 35
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4386,6 +5429,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 35
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4399,6 +5447,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 35
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
@@ -4412,6 +5465,11 @@
         ],
         "spellSchool": []
       },
+      "cost": {
+        "fp": 0,
+        "stamina": 35
+      },
+      "chargeCost": null,
       "sources": [
         "game-params"
       ]
