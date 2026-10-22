@@ -404,12 +404,6 @@ td .item-targets {
   font-size: 0.85rem;
 }
 
-.tag-name .en {
-  display: block;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
 td.names {
   min-width: 16em;
 }
