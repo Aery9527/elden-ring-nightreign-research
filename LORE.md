@@ -88,7 +88,7 @@
 ## Game Writing Rules
 
 - When linking to an external resource, open it in a new window; navigating away from the current page is forbidden.
-- Follow responsive web design (RWD) principles and support phones, tablets, desktops, and other devices. No page, including its header, needs horizontal scrolling at any screen width.
+- Follow responsive web design (RWD) principles and support phones, tablets, desktops, and other devices. No page, including its header, needs horizontal scrolling at any screen width of 280px or more, the width of the narrowest phones in use (the outer screen of a folding phone).
   - Tables: at a screen width of 900px or less, every table is shown row by row so that no table needs horizontal scrolling. Each row is a block whose first cell is its title; every other cell follows on its own line, with its column name in small text beside it. Wider screens and print keep the table. After the page is rendered, [public/render.js](public/render.js) copies each column header into the `data-label` of the cells in that column, except the first column, and sets the `table`, `rowgroup`, `row`, `columnheader`, and `cell` roles so the table keeps its semantics; the header row is hidden only visually. Every table MUST have one header row in `thead`, and every row MUST have as many cells as that header row; otherwise the page stops with an error.
   - Diagrams: build them from HTML boxes and text that wrap with the screen, not from fixed-width images, so that they need no horizontal scrolling and their text does not shrink to fit the screen.
 - When mentioning an in-game item, agents MUST find the corresponding in-game image. The image source is [Eldenpedia](https://eldenring.wiki.gg/).

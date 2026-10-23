@@ -49,13 +49,15 @@ body {
   font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.75;
+  /* 長英文字 (例如參數名) 放不下時才斷開，極窄螢幕也不需橫向捲動 */
+  overflow-wrap: break-word;
 }
 
-/* 頁首固定在上方；--header-h 由 nav.js 依實際高度設定 */
+/* 頁首固定在上方；--header-h 由 nav.js 依實際高度設定。疊在遺物頁底部圖例 (z-index 10) 之上，展開的章節選單才不會被圖例蓋住 */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   border-bottom: 1px solid var(--border);
   background: var(--surface);
 }
@@ -314,7 +316,7 @@ figure {
   background: var(--surface);
 }
 
-/* 關係圖：以 HTML 方塊由上往下排，箭頭與關係名稱在方塊之間；所有寬度共用同一版面，不需橫向捲動，文字也不隨螢幕縮小。
+/* 關係圖：以 HTML 方塊由上往下排，箭頭與關係名稱在方塊之間；所有寬度共用同一版面，寬度 280px 以上不需橫向捲動 (LORE 的下限)，文字也不隨螢幕縮小。
    上方並排的來源各自指向下方同一個方塊。 */
 .flow {
   display: flex;
@@ -539,14 +541,21 @@ td.value .entry + .entry {
   font-weight: 700;
 }
 
-/* 遺物頁的顏色圖例固定在視窗底部；main 加大底部留白，避免最後一行被遮住 */
+/* 遺物頁的顏色圖例固定在視窗底部；main 加大底部留白，避免最後一行被遮住。
+   以左右 0 加 auto 邊界置中，可用寬度為整個視窗；比視窗窄 32px，放不下時換行，避免極窄螢幕橫向溢出 */
 .tone-legend {
   position: fixed;
+  right: 0;
   bottom: 16px;
-  left: 50%;
+  left: 0;
   z-index: 10;
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
   padding: 6px 16px;
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -554,7 +563,6 @@ td.value .entry + .entry {
   box-shadow: 0 2px 8px oklch(0 0 0 / 0.15);
   font-size: 0.9rem;
   white-space: nowrap;
-  transform: translateX(-50%);
 }
 
 /* 圖例說明：滑鼠移上或點選 (聚焦) 時顯示；以整個圖例置中，避免窄螢幕溢出 */
@@ -624,8 +632,9 @@ body:has(.tone-legend) main {
     border-bottom: 0;
   }
 
-  /* 取消桌面版的不換行與最小欄寬；長英文名稱必要時斷字。.entry 另列，權重才高於 td.names .entry 等規則 */
+  /* 取消桌面版的不換行與最小欄寬；長英文名稱必要時斷字。.item、.entry 另列，權重才高於 [data-relic-table] td.item、td.names .entry 等規則 */
   .table-wrap td,
+  .table-wrap td.item,
   .table-wrap td *,
   .table-wrap td .entry {
     min-width: 0;
