@@ -383,16 +383,19 @@ function effectEntries(data, key, effect) {
   return [...details, ...values, ...extras, ...targetLinks(data, key, effect), ...statLinks(data, key, effect)];
 }
 
-// 效果欄：相關武器與法術 (targets)。以 matchTargets 比對武器與法術的標籤，逐一列出結果為符合 (true) 的具名物品，
-// 附圖示並連到該項目 (武器 weapons.html#weapon-<id>、法術依類型在魔法或禱告頁的 #spell-<id>)，例如「相關武器與法術：[圖]輝劍圓陣、…」。
-// 未核實、來源分歧與未具名的物品不列；沒有可列物品時不輸出。頁面需載入 armaments/weapons 與 armaments/spells。
+// 效果欄：相關武器、法術與戰技 (targets)。以 matchTargets 比對武器與法術的標籤，逐一列出結果為符合 (true) 的具名物品，
+// 附圖示並連到該項目 (武器 weapons.html#weapon-<id>、法術依類型在魔法或禱告頁的 #spell-<id>、戰技 skills.html#skill-<id>)，
+// 例如「相關武器、法術與戰技：[圖]輝劍圓陣、…」。未核實、來源分歧與未具名的物品不列；沒有可列物品時不輸出。
+// 頁面需載入 armaments/weapons、armaments/spells 與 armaments/skills。
 function targetLinks(data, key, effect) {
   if ((effect.tiers ?? []).some((tier) => "targets" in tier)) throw new Error(`尚未支援各級不同的加成對象：${key}`);
   if (!effect.targets) return [];
   const { targets } = effect;
   if (!Object.values(targets).every(Array.isArray)) throw new Error(`加成對象必須是清單（效果 ${key}）`);
-  // mergeData 一律建立空的 weapons、spells，沒有載入時兩者為空。
-  if (!Object.keys(data.weapons).length || !Object.keys(data.spells).length) throw new Error(`頁面需載入 armaments/weapons 與 armaments/spells（效果 ${key}）`);
+  // mergeData 一律建立空的 weapons、spells、skills，沒有載入時皆為空。
+  if (!Object.keys(data.weapons).length || !Object.keys(data.spells).length || !Object.keys(data.skills).length) {
+    throw new Error(`頁面需載入 armaments/weapons、armaments/spells 與 armaments/skills（效果 ${key}）`);
+  }
   const weapons = Object.entries(data.weapons)
     .filter(([, weapon]) => weapon.name && matchTargets(weapon.tags, targets) === true)
     .sort(([, a], [, b]) => a.sortId - b.sortId)
@@ -402,12 +405,17 @@ function targetLinks(data, key, effect) {
     .filter(([id, spell]) => spell.name && matchTargets({ ...spell.tags, spell: [id] }, targets) === true)
     .sort(([idA], [idB]) => Number(idA) - Number(idB))
     .map(([id, item]) => ({ href: `${spellPage(id, item)}#spell-${id}`, item }));
-  const items = [...weapons, ...spells];
+  // 戰技同樣以自身 ID 比對指定戰技 (targets.skill)，依 ID 排序
+  const skills = Object.entries(data.skills)
+    .filter(([id]) => matchTargets({ skill: [id] }, targets) === true)
+    .sort(([idA], [idB]) => Number(idA) - Number(idB))
+    .map(([id, item]) => ({ href: `skills.html#skill-${id}`, item }));
+  const items = [...weapons, ...spells, ...skills];
   if (items.length === 0) return [];
   const nodes = [`${data.labels.armaments.relatedItems}：`];
   items.forEach(({ href, item }, index) => {
     if (index > 0) nodes.push("、");
-    nodes.push(el("a", { href }, itemIcon(data, item, "24"), item.name.zh));
+    nodes.push(el("a", { href }, itemIcon(data, item, "24"), displayName(item)));
   });
   return [el("span", { class: "entry" }, el("span", { class: "sub" }, ...nodes))];
 }
@@ -667,17 +675,20 @@ function skillWeaponEntries(data, id) {
   return [...list(labels.paramDefault, byDefault), ...list(labels.poolCandidates, byPool)];
 }
 
-// <tbody data-skill-rows>：依 ID 列出全部戰技；列 id 為 skill-<id>，是武器頁戰技欄連結的目標。
+// <tbody data-skill-rows>：依 ID 列出全部戰技；列 id 為 skill-<id>，是武器頁戰技欄與遺物頁相關戰技連結的目標。
+// 名稱下方列出指定此戰技的遺物詞條 (targets.skill，以戰技自身 ID 比對)，沒有時不輸出。
 // 說明是《艾爾登法環》本篇的英文原文，保留原文換行。
 function skillRows(data) {
   const skills = Object.entries(data.skills).sort(([a], [b]) => Number(a) - Number(b));
   if (skills.length === 0 || !Object.keys(data.weapons).length) throw new Error("頁面需載入 armaments/weapons 與 armaments/skills");
+  if (!Object.keys(data.effects).length) throw new Error("頁面需載入遺物大類檔");
   return skills.map(([id, skill]) => {
     if (typeof skill.caption?.en !== "string") throw new Error(`戰技說明必須是文字（戰技 ${id}）`);
+    const own = inlineTargets(data, { skill: [id] });
     return el(
       "tr",
       { id: `skill-${id}` },
-      el("td", { class: "item" }, itemNameNode(data, id, skill)),
+      el("td", { class: "item" }, itemNameNode(data, id, skill), ...(own.length ? [el("span", { class: "item-targets" }, ...own)] : [])),
       skillFpCell(data, id, skill),
       el("td", { class: "caption" }, el("span", { class: "caption-text", lang: "en" }, skill.caption.en)),
       el("td", { class: "names skill-weapons" }, ...skillWeaponEntries(data, id))
@@ -717,7 +728,7 @@ function weaponCells(data, id, weapon) {
 }
 
 // <section data-weapon-type="<type>">：武器種類章節。h2 填種類名稱，章首列出相關遺物詞條，
-// [data-chapter-rows] 依 sortId 列出該種類的具名武器與數值；列 id 為 weapon-<id>，是遺物頁「相關武器與法術」連結的目標。
+// [data-chapter-rows] 依 sortId 列出該種類的具名武器與數值；列 id 為 weapon-<id>，是遺物頁「相關武器、法術與戰技」連結的目標。
 function weaponChapter(data, section) {
   const type = section.dataset.weaponType;
   section.querySelector("h2").textContent = lookup(data.tags.weaponType, type, "武器種類").name.zh;
@@ -949,7 +960,7 @@ function mergeData([common, ...files]) {
       data.effects[key] = effect;
     }
   }
-  checkTags(data, spellsLoaded);
+  checkTags(data, spellsLoaded, loaded.has("skills"));
   if (loaded.has("skills")) checkSkills(data);
   return data;
 }
@@ -964,14 +975,18 @@ function checkSkills(data) {
   }
 }
 
-// 標籤與引用檢查：物品標籤、遺物相關對象的鍵都要有定義；targets.spell 是法術 ID，有載入法術檔時檢查其存在，
-// 武器搭載的法術亦同。遺物的相關能力值 (stats) 與上限的基礎能力值 (base) 都要在 stats 定義。
-function checkTags(data, spellsLoaded) {
-  // isTargets：只有遺物的 targets 可用 spell (法術 ID)；物品標籤的維度一律要在 tags 定義。
+// 標籤與引用檢查：物品標籤、遺物相關對象的鍵都要有定義；targets.spell 是法術 ID、targets.skill 是戰技 ID，有載入法術檔、
+// 戰技檔時分別檢查其存在，武器搭載的法術亦同。遺物的相關能力值 (stats) 與上限的基礎能力值 (base) 都要在 stats 定義。
+function checkTags(data, spellsLoaded, skillsLoaded) {
+  // isTargets：只有遺物的 targets 可用 spell (法術 ID) 與 skill (戰技 ID)；物品標籤的維度一律要在 tags 定義。
   const check = (tags, owner, isTargets) => {
     for (const [dimension, value] of Object.entries(tags)) {
       if (isTargets && dimension === "spell") {
         if (spellsLoaded) for (const id of value) lookup(data.spells, id, `法術（${owner}）`);
+        continue;
+      }
+      if (isTargets && dimension === "skill") {
+        if (skillsLoaded) for (const id of value) lookup(data.skills, id, `戰技（${owner}）`);
         continue;
       }
       const defined = lookup(data.tags, dimension, `標籤維度（${owner}）`);

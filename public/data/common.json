@@ -637,7 +637,7 @@
       "noSchool": "無已定義系別",
       "unnamed": "未具名",
       "unnamedVariants": "未具名變體",
-      "relatedItems": "相關武器與法術",
+      "relatedItems": "相關武器、法術與戰技",
       "relatedEffects": "相關遺物詞條（依參數關聯）",
       "attack": { "physical": "物理", "magic": "魔力", "fire": "火", "lightning": "雷", "holy": "聖" },
       "critical": "致命補正",

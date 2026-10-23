@@ -5677,12 +5677,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "700"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5709,12 +5717,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "800"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5741,12 +5757,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "502"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5773,12 +5797,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "600"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5802,12 +5834,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "200"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5832,12 +5872,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "209"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5863,12 +5911,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "214"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5889,12 +5945,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "207"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5921,12 +5985,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "216"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5951,12 +6023,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "217"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -5982,12 +6062,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "201"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6008,12 +6096,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "208"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6039,12 +6135,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "228"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6066,12 +6170,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "119"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6093,12 +6205,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "224"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6121,12 +6241,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "606"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6152,12 +6280,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "227"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6184,12 +6320,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "501"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6216,12 +6360,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "850"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },
@@ -6241,12 +6393,20 @@
       "stacking": {
         "stacks": false
       },
+      "targets": {
+        "skill": [
+          "406"
+        ]
+      },
       "sources": [
         "reliquary-json"
       ],
       "sourcesFor": {
         "stacking.stacks": [
           "community-sheet"
+        ],
+        "targets": [
+          "game-params"
         ]
       }
     },

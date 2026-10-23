@@ -7,6 +7,7 @@
 //   tools/relic-stacking.json   資料集未載明 (SelfStacking 未知) 而社群來源明確寫出的自身可否疊加 (以 gameId 對應)
 //   tools/relic-details-params.json 與遊戲參數不符的社群說明改依參數撰寫的中英文 (以 gameId 對應，保留社群原文與參數證據)
 //   tools/relic-penalties.json  增益詞條說明中屬於負面代價的繁中原文片段 (以 gameId 對應)，網站以紅色標示
+//   public/data/armaments/skills.json  收錄的戰技 (由 import-armaments.mjs 產生)，用於檢查 startSwordArtsId
 // 來源檔下載到 tools/.cache/，不提交版本庫。
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -101,6 +102,9 @@ async function buildEffects() {
   // - 魔法／禱告整體：只標記其中一種，三個 magicSubCategoryChange 皆為 0，且沒有武器種類條件。
   // - FP 消耗：magicConsumptionRate (魔法)、miracleConsumptionRate (禱告) 不是 1。
   // - 指定法術：startMagicId (出擊時改為該法術)，必須是武器引用的法術。
+  // - 指定戰技：startSwordArtsId (出擊時改為該戰技；略過 -1 與 0，0 的 SwordArtsParam 列沒有名稱與說明)，必須是
+  //   public/data/armaments/skills.json 收錄的戰技，
+  //   因此先執行 import-armaments.mjs。
   // 參數值只對應 common.json 已定義的標籤；相同條件重複出現時去重，不同條件組時停止。
   const tagByParam = (dimension) => new Map(Object.entries(common.tags[dimension]).map(([key, tag]) => [String(tag.param), key]));
   const weaponTypes = tagByParam("weaponType");
@@ -108,6 +112,7 @@ async function buildEffects() {
   const carriedSpells = new Set(
     [...params.EquipParamWeapon.values()].flatMap((row) => [row.equippedSpell_R1, row.equippedSpell_R2]).filter((id) => id !== "0" && id !== "-1"),
   );
+  const listedSkills = new Set(Object.keys(readJson(join(ROOT, "public/data/armaments/skills.json")).skills));
   const ANALYZE = ["analyzeSelfLevel1_effectId", "analyzeSelfLevel2_effectId", "analyzeSelfLevel3_effectId"];
   function targetsOf(param) {
     const found = new Map();
@@ -129,6 +134,10 @@ async function buildEffects() {
       if (sp.startMagicId !== "-1") {
         if (!carriedSpells.has(sp.startMagicId)) fail(`效果 ${param.ID} 的 startMagicId ${sp.startMagicId} 不是武器引用的法術`);
         add({ spell: [sp.startMagicId] });
+      }
+      if (sp.startSwordArtsId !== "-1" && sp.startSwordArtsId !== "0") {
+        if (!listedSkills.has(sp.startSwordArtsId)) fail(`效果 ${param.ID} 的 startSwordArtsId ${sp.startSwordArtsId} 不是收錄的戰技`);
+        add({ skill: [sp.startSwordArtsId] });
       }
     }
     if (found.size > 1) fail(`效果 ${param.ID} 有多組不同的相關對象：${[...found.keys()].join("、")}`);
