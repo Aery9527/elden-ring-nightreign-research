@@ -3,6 +3,7 @@
 // 輸入：
 //   tools/relics-config.json   來源 commit (與遺物共用同一份遊戲參數)
 //   public/data/common.json    標籤定義 (tags)
+//   tools/skill-text-zh.json   戰技名稱與說明的繁中轉寫 (以 textId 為鍵，保存官方簡中原文 cn 與本站轉寫 zh)
 //   Eldenpedia API             圖示檔案頁是否存在與授權標示；查詢結果快取在 tools/.cache/eldenpedia/files.json
 // 收錄：
 //   武器：ID 為 10000 倍數、wepType 有定義武器種類標籤、本篇有名稱、sortId 不是 9999999，且有 EquipParamCustomWeapon 列以 targetWeaponId
@@ -12,9 +13,10 @@
 //         有 Magic 列的法術另收錄原始消耗參數：通常施放與蓄力施放的 FP、耐力。
 //   戰技：具名武器的參數預設戰技 (swordArtsParamId)，以及其 EquipParamCustomWeapon 列的戰技池 (swordArtsTableId → SwordArtsTableParam)
 //         中權重大於 0 的戰技。武器另記 skill: { default, pool }；pool 是各生成列戰技池的聯集，不加入 -1 (未指定戰技池) 推定的戰技。
-//         名稱與說明取自本篇英文 ArtsName／ArtsCaption (依 textId)；繁中名稱取自英文名稱唯一相同的本篇戰灰，沒有時為 null。
+//         英文名稱與說明取自本篇 ArtsName／ArtsCaption (依 textId)。繁中名稱取自英文名稱唯一相同的本篇戰灰；沒有時用本站依本篇官方
+//         簡中轉寫的名稱。繁中說明一律是本站轉寫。
 
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { ROOT, TOOLS, byId, groupById, parseCsv, parseFmg, readJson, slug, source } from "./sources.mjs";
 
@@ -121,6 +123,15 @@ const artsRows = byId(parseCsv(await source("params", "SwordArtsParam")), "Sword
 const artsTables = groupById(parseCsv(await source("params", "SwordArtsTableParam")));
 const artsNameEn = parseFmg(await source("erArts", "nameEn"));
 const artsCaptionEn = parseFmg(await source("erArts", "captionEn"));
+// 本篇官方簡中戰技文字：[{ id, eng, chn }]，以 FMG ID 為鍵
+const cnList = (text) => new Map(JSON.parse(text).map((item) => [String(item.id), item]));
+const artsNameCn = cnList(await source("erArtsCn", "name"));
+const artsCaptionCn = cnList(await source("erArtsCn", "caption"));
+// 繁中轉寫輸入檔：必須是 JSON.stringify 2 空格縮排的標準輸出 (避免重複的鍵被 JSON.parse 靜默覆蓋)
+const SKILL_TEXT_ZH = join(TOOLS, "skill-text-zh.json");
+const skillTextZhRaw = readFileSync(SKILL_TEXT_ZH, "utf8").replace(/\r\n/g, "\n");
+const skillTextZh = JSON.parse(skillTextZhRaw);
+if (skillTextZhRaw !== `${JSON.stringify(skillTextZh, null, 2)}\n`) fail(`${SKILL_TEXT_ZH} 有重複的鍵或不是標準格式 (JSON.stringify 2 空格縮排)`);
 const spRows = byId(parseCsv(await source("params", "SpEffectParam")), "SpEffectParam");
 const attachRows = byId(parseCsv(await source("params", "AttachEffectParam")), "AttachEffectParam");
 const effectZh = parseFmg(await source("text", "effectZh"), await source("text", "effectZhDlc"));
@@ -208,20 +219,47 @@ for (const [id, en] of ashEn) {
   ashByEn.set(name, [...(ashByEn.get(name) ?? []), id]);
 }
 
-// 戰技名稱：英文取自本篇 ArtsName；繁中取自英文名稱相同的本篇戰灰，沒有對應的戰灰 (例如武器專屬戰技) 時為 null。
+// 繁中轉寫 (tools/skill-text-zh.json)：收錄戰技的每個 textId 恰有一筆 { cn: { name, caption }, zh: { name, caption } }，皆為非空文字。
+// cn 與官方簡中來源不同，或兩份來源的本篇英文不一致時停止，須重新核對轉寫。
+const sameKeys = (value, keys) =>
+  value !== null && typeof value === "object" && !Array.isArray(value) && Object.keys(value).length === keys.length && keys.every((key) => Object.hasOwn(value, key));
+function skillText(textId) {
+  const entry = skillTextZh[textId];
+  const valid =
+    sameKeys(entry, ["cn", "zh"]) &&
+    ["cn", "zh"].every((side) => sameKeys(entry[side], ["name", "caption"]) && Object.values(entry[side]).every((text) => typeof text === "string" && text.trim() !== ""));
+  if (!valid) {
+    fail(`${SKILL_TEXT_ZH} 的 ${textId} 必須恰有 cn 與 zh，各有非空的 name 與 caption`);
+    return null;
+  }
+  for (const [field, cn, en] of [["name", artsNameCn, artsNameEn], ["caption", artsCaptionCn, artsCaptionEn]]) {
+    const item = cn.get(textId);
+    if (item?.chn !== entry.cn[field]) fail(`戰技文字 ${textId} 的 cn.${field} 與官方簡中來源不同，須重新核對轉寫`);
+    if (item?.eng !== en.get(textId)) fail(`戰技文字 ${textId} 的英文 ${field} 在兩份來源不同`);
+  }
+  return entry.zh;
+}
+const skillTexts = new Map(skillRows.map((row) => [row.textId, skillText(row.textId)]));
+for (const textId of Object.keys(skillTextZh)) if (!skillTexts.has(textId)) fail(`${SKILL_TEXT_ZH} 的 ${textId} 不是收錄戰技的 textId`);
+
+// 戰技名稱：英文取自本篇 ArtsName。繁中取自英文名稱相同的本篇戰灰，此時轉寫名稱必須與之相同 (驗證轉寫)；沒有對應的戰灰
+// (例如武器專屬戰技) 時用轉寫名稱。zhSource 記錄繁中名稱的來源。
 function skillName(row) {
   const en = artsNameEn.get(row.textId)?.trim();
   if (!validName(en)) {
     fail(`戰技 ${row.ID} 的 textId ${row.textId} 沒有英文名稱`);
     return null;
   }
+  const converted = skillTexts.get(row.textId)?.name;
   const ashes = ashByEn.get(en) ?? [];
   if (ashes.length > 1) fail(`戰技 ${row.ID} 的英文名稱對到多個戰灰：${ashes.join("、")}`);
-  if (ashes.length !== 1) return { zh: null, en };
+  if (ashes.length !== 1) return { zh: converted ?? null, en, zhSource: "er-arts-cn-text" };
   // 不以 ID 推算：本篇戰灰 ID 多為戰技 ID 的 100 倍，但有例外 (戰灰 30900 → 戰技 10、31000 → 309)
-  const zh = ashZh.get(ashes[0]);
-  if (!zh?.startsWith(ASH_PREFIX.zh)) fail(`戰灰 ${ashes[0]} 的繁中名稱缺少或沒有前綴：${zh}`);
-  return { zh: zh?.slice(ASH_PREFIX.zh.length) ?? null, en };
+  const ash = ashZh.get(ashes[0]);
+  if (!ash?.startsWith(ASH_PREFIX.zh)) fail(`戰灰 ${ashes[0]} 的繁中名稱缺少或沒有前綴：${ash}`);
+  const zh = ash?.slice(ASH_PREFIX.zh.length) ?? null;
+  if (converted !== undefined && converted !== zh) fail(`戰技 ${row.ID} 的轉寫名稱「${converted}」與官方戰灰名稱「${zh}」不同`);
+  return { zh, en, zhSource: "er-base-text" };
 }
 const skillNames = new Map(skillRows.map((row) => [row.ID, skillName(row)]));
 
@@ -365,11 +403,11 @@ const spellData = Object.fromEntries(
 const SKILL_FP = { L1: "useMagicPoint_L1", L2: "useMagicPoint_L2", R1: "useMagicPoint_R1", R2: "useMagicPoint_R2" };
 const skillData = Object.fromEntries(
   skillRows.map((row) => {
-    const name = skillNames.get(row.ID);
+    const { zhSource, ...name } = skillNames.get(row.ID) ?? {};
     const caption = artsCaptionEn.get(row.textId)?.trim();
     if (!validName(caption)) fail(`戰技 ${row.ID} 的 textId ${row.textId} 沒有英文說明`);
-    // 名稱英文與說明取自本篇戰技文字，繁中名稱取自本篇戰灰名稱，其餘取自遊戲參數
-    const sourcesFor = { "name.en": ["er-arts-text"], ...(name?.zh ? { "name.zh": ["er-base-text"] } : {}), caption: ["er-arts-text"] };
+    // 英文名稱與說明取自本篇戰技文字；繁中名稱取自本篇戰灰名稱或本站轉寫，繁中說明為本站轉寫 (依本篇官方簡中)；其餘取自遊戲參數
+    const sourcesFor = { "name.en": ["er-arts-text"], "name.zh": [zhSource], "caption.en": ["er-arts-text"], "caption.zh": ["er-arts-cn-text"] };
     return [
       row.ID,
       {
@@ -377,7 +415,7 @@ const skillData = Object.fromEntries(
         textId: row.textId,
         icon: iconOf(pages, skillIconTitles.get(row.ID), "skill", name),
         fp: pick(SKILL_FP, row, `戰技 ${row.ID}`),
-        caption: { en: caption },
+        caption: { zh: skillTexts.get(row.textId)?.caption ?? null, en: caption },
         sources: ["game-params"],
         sourcesFor,
       },
@@ -392,7 +430,7 @@ for (const [id, weapon] of Object.entries(weaponData)) {
 }
 const srcs = [weaponData, spellData, skillData].flatMap((data) => Object.values(data)).flatMap((item) => (item.icon ? [item.icon.src] : []));
 for (const src of srcs.filter((src, i) => srcs.indexOf(src) !== i)) fail(`圖示檔名重複：${src}`);
-for (const id of ["er-base-text", "er-arts-text", "game-params", "game-text"]) if (!common.sources[id]) fail(`來源 ${id} 不在 common.json`);
+for (const id of ["er-base-text", "er-arts-text", "er-arts-cn-text", "game-params", "game-text"]) if (!common.sources[id]) fail(`來源 ${id} 不在 common.json`);
 
 if (problems.length) {
   console.error(`無法產生：\n  ${problems.join("\n  ")}`);

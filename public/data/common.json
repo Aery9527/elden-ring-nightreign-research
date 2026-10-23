@@ -748,6 +748,10 @@
     "er-arts-text": {
       "title": "EldenRingTextExplorer《艾爾登法環》本篇戰技文字",
       "url": "https://github.com/EldenRingExplorer/EldenRingTextExplorer/tree/1c24ca2d149d72f8d93c34d710ad8c4a5624fafe/text_dump_en"
+    },
+    "er-arts-cn-text": {
+      "title": "EldenRingMapTranslate《艾爾登法環》本篇官方簡體中文戰技文字（社群保存）",
+      "url": "https://github.com/heroboy/EldenRingMapTranslate/tree/92dcd5860e2cfb0b6a14b37a30b53db676e5e0b2/mix_translations"
     }
   }
 }

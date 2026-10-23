@@ -415,7 +415,7 @@ function targetLinks(data, key, effect) {
   const nodes = [`${data.labels.armaments.relatedItems}：`];
   items.forEach(({ href, item }, index) => {
     if (index > 0) nodes.push("、");
-    nodes.push(el("a", { href }, itemIcon(data, item, "24"), displayName(item)));
+    nodes.push(el("a", { href }, itemIcon(data, item, "24"), item.name.zh));
   });
   return [el("span", { class: "entry" }, el("span", { class: "sub" }, ...nodes))];
 }
@@ -575,11 +575,8 @@ function statEntries(data, statId) {
 // 武器、法術、戰技的圖示記在項目資料 ({ src, page })，不在 common.json。
 function itemIcon(data, item, size) {
   if (!item.icon) return el("span", { class: "icon icon-missing", role: "img", "aria-label": data.labels.iconMissing });
-  return el("img", { class: "icon", src: item.icon.src, width: size, height: size, alt: `${displayName(item)}圖示`, loading: "lazy" });
+  return el("img", { class: "icon", src: item.icon.src, width: size, height: size, alt: `${item.name.zh}圖示`, loading: "lazy" });
 }
-
-// 顯示名稱：沒有繁中名稱的戰技 (name.zh 為 null) 顯示英文名稱
-const displayName = (item) => item.name.zh ?? item.name.en;
 
 const tagName = (data, dimension, key) => lookup(data.tags[dimension], key, "標籤").name.zh;
 
@@ -613,17 +610,16 @@ function spellPage(id, spell) {
   return lookup(SPELL_PAGES, type[0], "法術類型頁");
 }
 
-// 表格的武器、法術、戰技名稱：圖示、中文與英文名稱；沒有名稱者以 ID 顯示，沒有繁中名稱者只顯示英文名稱一次。
+// 表格的武器、法術、戰技名稱：圖示、中文與英文名稱；沒有名稱者以 ID 顯示。
 function itemNameNode(data, id, item) {
   if (!item.name) return el("span", {}, `${data.labels.armaments.unnamed}（ID ${id}）`);
-  if (item.name.zh === null) return el("span", { class: "item-name" }, itemIcon(data, item, "48"), item.name.en);
   return el("span", { class: "item-name" }, itemIcon(data, item, "48"), item.name.zh, el("span", { class: "en" }, item.name.en));
 }
 
 // ---------- 戰技 ----------
 
 // 名稱清單的一項：圖示與名稱，連到該項目的列，例如戰技連到 skills.html#skill-<id>。
-const linkEntry = (data, href, item) => el("span", { class: "entry" }, el("a", { href }, itemIcon(data, item, "24"), displayName(item)));
+const linkEntry = (data, href, item) => el("span", { class: "entry" }, el("a", { href }, itemIcon(data, item, "24"), item.name.zh));
 const skillEntry = (data, id) => linkEntry(data, `skills.html#skill-${id}`, lookup(data.skills, id, "戰技"));
 const weaponEntry = (data, id) => linkEntry(data, `weapons.html#weapon-${id}`, lookup(data.weapons, id, "武器"));
 
@@ -677,20 +673,20 @@ function skillWeaponEntries(data, id) {
 
 // <tbody data-skill-rows>：依 ID 列出全部戰技；列 id 為 skill-<id>，是武器頁戰技欄與遺物頁相關戰技連結的目標。
 // 名稱下方列出指定此戰技的遺物詞條 (targets.skill，以戰技自身 ID 比對)，沒有時不輸出。
-// 說明是《艾爾登法環》本篇的英文原文，保留原文換行。
+// 說明是本站依《艾爾登法環》本篇官方簡體中文轉寫的繁體中文，保留原文換行。
 function skillRows(data) {
   const skills = Object.entries(data.skills).sort(([a], [b]) => Number(a) - Number(b));
   if (skills.length === 0 || !Object.keys(data.weapons).length) throw new Error("頁面需載入 armaments/weapons 與 armaments/skills");
   if (!Object.keys(data.effects).length) throw new Error("頁面需載入遺物大類檔");
   return skills.map(([id, skill]) => {
-    if (typeof skill.caption?.en !== "string") throw new Error(`戰技說明必須是文字（戰技 ${id}）`);
+    if (typeof skill.caption?.zh !== "string") throw new Error(`戰技說明必須是文字（戰技 ${id}）`);
     const own = inlineTargets(data, { skill: [id] });
     return el(
       "tr",
       { id: `skill-${id}` },
       el("td", { class: "item" }, itemNameNode(data, id, skill), ...(own.length ? [el("span", { class: "item-targets" }, ...own)] : [])),
       skillFpCell(data, id, skill),
-      el("td", { class: "caption" }, el("span", { class: "caption-text", lang: "en" }, skill.caption.en)),
+      el("td", { class: "caption" }, el("span", { class: "caption-text" }, skill.caption.zh)),
       el("td", { class: "names skill-weapons" }, ...skillWeaponEntries(data, id))
     );
   });

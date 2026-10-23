@@ -68,6 +68,14 @@
         "nameEn": "text_dump_en/ArtsName.fmg.xml",
         "captionEn": "text_dump_en/ArtsCaption.fmg.xml"
       }
+    },
+    "erArtsCn": {
+      "repo": "heroboy/EldenRingMapTranslate",
+      "commit": "92dcd5860e2cfb0b6a14b37a30b53db676e5e0b2",
+      "files": {
+        "name": "mix_translations/item_ArtsName.json",
+        "caption": "mix_translations/item_ArtsCaption.json"
+      }
     }
   },
   "categories": [
