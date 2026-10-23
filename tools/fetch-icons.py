@@ -1,6 +1,6 @@
-"""下載 public/data/armaments/*.json 引用、但 public/images/ 還沒有的圖示。
+"""下載 public/data/armaments/*.json 與 public/data/characters/*.json 引用、但 public/images/ 還沒有的圖示。
 
-用法：python tools/fetch-icons.py (在 node tools/import-armaments.mjs 之後執行)
+用法：python tools/fetch-icons.py (在 node tools/import-armaments.mjs 或 import-characters.mjs 之後執行)
 資料檔的 icon.page 是 Eldenpedia 檔案頁；匯入程式已確認其授權為 {{License|game}}。
 本程式只依檔案頁取得原圖網址並下載，大於 96px 時等比例縮為 96px，不做其他修改。
 """
@@ -52,15 +52,24 @@ def image_urls(titles):
     return urls
 
 
+def icons(value):
+    """資料中所有的 icon 物件 ({ src, page })，不限層級 (角色的圖示在 passive、skill、art 之下)。"""
+    if isinstance(value, dict):
+        icon = value.get("icon")
+        if isinstance(icon, dict):
+            yield icon
+        for child in value.values():
+            yield from icons(child)
+
+
 def main():
     wanted = {}
-    for path in sorted((PUBLIC / "data" / "armaments").glob("*.json")):
-        for items in json.loads(path.read_text(encoding="utf-8")).values():
-            for item in items.values():
-                icon = item.get("icon")
-                if icon and not (PUBLIC / icon["src"]).exists():
-                    title = urllib.parse.unquote(icon["page"].split("/wiki/", 1)[1])
-                    wanted[title] = PUBLIC / icon["src"]
+    paths = [*sorted((PUBLIC / "data" / "armaments").glob("*.json")), *sorted((PUBLIC / "data" / "characters").glob("*.json"))]
+    for path in paths:
+        for icon in icons(json.loads(path.read_text(encoding="utf-8"))):
+            if not (PUBLIC / icon["src"]).exists():
+                title = urllib.parse.unquote(icon["page"].split("/wiki/", 1)[1])
+                wanted[title] = PUBLIC / icon["src"]
     urls = image_urls(list(wanted))
     for title, target in wanted.items():
         image = Image.open(io.BytesIO(get(urls[title])))

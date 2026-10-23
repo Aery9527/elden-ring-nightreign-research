@@ -15,7 +15,10 @@
         "Magic": "params/Magic.csv",
         "HeroStatusParam": "params/HeroStatusParam.csv",
         "SwordArtsParam": "params/SwordArtsParam.csv",
-        "SwordArtsTableParam": "params/SwordArtsTableParam.csv"
+        "SwordArtsTableParam": "params/SwordArtsTableParam.csv",
+        "HeroParam": "params/HeroParam.csv",
+        "HeroMenuParam": "params/HeroMenuParam.csv",
+        "CalcCorrectGraph": "params/CalcCorrectGraph.csv"
       }
     },
     "text": {
@@ -75,6 +78,13 @@
       "files": {
         "name": "mix_translations/item_ArtsName.json",
         "caption": "mix_translations/item_ArtsCaption.json"
+      }
+    },
+    "bwikiMenu": {
+      "api": "https://wiki.biligame.com/nightreign/api.php",
+      "revisions": {
+        "menu": 1131,
+        "menuDlc": 1132
       }
     }
   },
@@ -690,5 +700,47 @@
     "19181": "relic-glass-necklace",
     "19182": "relic-cleansing-tear",
     "19183": "relic-note-my-dear-successor"
+  },
+  "heroes": {
+    "wylder": {
+      "heroParam": "1",
+      "heroMenuParam": "1000"
+    },
+    "guardian": {
+      "heroParam": "2",
+      "heroMenuParam": "1001"
+    },
+    "ironeye": {
+      "heroParam": "3",
+      "heroMenuParam": "1002"
+    },
+    "duchess": {
+      "heroParam": "4",
+      "heroMenuParam": "1003"
+    },
+    "raider": {
+      "heroParam": "5",
+      "heroMenuParam": "1004"
+    },
+    "revenant": {
+      "heroParam": "6",
+      "heroMenuParam": "1005"
+    },
+    "recluse": {
+      "heroParam": "7",
+      "heroMenuParam": "1006"
+    },
+    "executor": {
+      "heroParam": "8",
+      "heroMenuParam": "1007"
+    },
+    "scholar": {
+      "heroParam": "9",
+      "heroMenuParam": "2008"
+    },
+    "undertaker": {
+      "heroParam": "10",
+      "heroMenuParam": "2009"
+    }
   }
 }

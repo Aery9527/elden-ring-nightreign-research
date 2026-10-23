@@ -1,0 +1,2844 @@
+{
+  "nightfarers": {
+    "wylder": {
+      "heroId": 1,
+      "grades": {
+        "maxHp": "A",
+        "maxFp": "C",
+        "maxStamina": "B",
+        "strength": "A",
+        "dexterity": "B",
+        "intelligence": "C",
+        "faith": "C",
+        "arcane": "C"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 8,
+          "mind": 4,
+          "endurance": 3,
+          "strength": 5,
+          "dexterity": 4,
+          "intelligence": 2,
+          "faith": 2,
+          "arcane": 10,
+          "maxHp": 240,
+          "maxFp": 65,
+          "maxStamina": 54
+        },
+        "2": {
+          "vigor": 16,
+          "mind": 6,
+          "endurance": 6,
+          "strength": 18,
+          "dexterity": 15,
+          "intelligence": 4,
+          "faith": 4,
+          "arcane": 10,
+          "maxHp": 400,
+          "maxFp": 75,
+          "maxStamina": 60
+        },
+        "3": {
+          "vigor": 19,
+          "mind": 7,
+          "endurance": 7,
+          "strength": 20,
+          "dexterity": 17,
+          "intelligence": 4,
+          "faith": 4,
+          "arcane": 10,
+          "maxHp": 460,
+          "maxFp": 80,
+          "maxStamina": 62
+        },
+        "4": {
+          "vigor": 22,
+          "mind": 8,
+          "endurance": 9,
+          "strength": 23,
+          "dexterity": 19,
+          "intelligence": 5,
+          "faith": 5,
+          "arcane": 10,
+          "maxHp": 520,
+          "maxFp": 85,
+          "maxStamina": 66
+        },
+        "5": {
+          "vigor": 25,
+          "mind": 9,
+          "endurance": 11,
+          "strength": 25,
+          "dexterity": 21,
+          "intelligence": 6,
+          "faith": 6,
+          "arcane": 10,
+          "maxHp": 580,
+          "maxFp": 90,
+          "maxStamina": 70
+        },
+        "6": {
+          "vigor": 28,
+          "mind": 10,
+          "endurance": 13,
+          "strength": 28,
+          "dexterity": 23,
+          "intelligence": 7,
+          "faith": 7,
+          "arcane": 10,
+          "maxHp": 640,
+          "maxFp": 95,
+          "maxStamina": 74
+        },
+        "7": {
+          "vigor": 31,
+          "mind": 11,
+          "endurance": 15,
+          "strength": 31,
+          "dexterity": 25,
+          "intelligence": 8,
+          "faith": 8,
+          "arcane": 10,
+          "maxHp": 700,
+          "maxFp": 100,
+          "maxStamina": 78
+        },
+        "8": {
+          "vigor": 34,
+          "mind": 12,
+          "endurance": 16,
+          "strength": 33,
+          "dexterity": 27,
+          "intelligence": 8,
+          "faith": 8,
+          "arcane": 10,
+          "maxHp": 760,
+          "maxFp": 105,
+          "maxStamina": 80
+        },
+        "9": {
+          "vigor": 37,
+          "mind": 13,
+          "endurance": 18,
+          "strength": 36,
+          "dexterity": 29,
+          "intelligence": 9,
+          "faith": 9,
+          "arcane": 10,
+          "maxHp": 820,
+          "maxFp": 110,
+          "maxStamina": 84
+        },
+        "10": {
+          "vigor": 40,
+          "mind": 14,
+          "endurance": 20,
+          "strength": 38,
+          "dexterity": 31,
+          "intelligence": 10,
+          "faith": 10,
+          "arcane": 10,
+          "maxHp": 880,
+          "maxFp": 115,
+          "maxStamina": 88
+        },
+        "11": {
+          "vigor": 43,
+          "mind": 15,
+          "endurance": 22,
+          "strength": 41,
+          "dexterity": 33,
+          "intelligence": 11,
+          "faith": 11,
+          "arcane": 10,
+          "maxHp": 940,
+          "maxFp": 120,
+          "maxStamina": 92
+        },
+        "12": {
+          "vigor": 46,
+          "mind": 16,
+          "endurance": 24,
+          "strength": 44,
+          "dexterity": 35,
+          "intelligence": 12,
+          "faith": 12,
+          "arcane": 10,
+          "maxHp": 1000,
+          "maxFp": 125,
+          "maxStamina": 96
+        },
+        "13": {
+          "vigor": 48,
+          "mind": 17,
+          "endurance": 25,
+          "strength": 46,
+          "dexterity": 36,
+          "intelligence": 13,
+          "faith": 13,
+          "arcane": 10,
+          "maxHp": 1040,
+          "maxFp": 130,
+          "maxStamina": 98
+        },
+        "14": {
+          "vigor": 50,
+          "mind": 18,
+          "endurance": 26,
+          "strength": 48,
+          "dexterity": 38,
+          "intelligence": 14,
+          "faith": 14,
+          "arcane": 10,
+          "maxHp": 1080,
+          "maxFp": 135,
+          "maxStamina": 100
+        },
+        "15": {
+          "vigor": 52,
+          "mind": 19,
+          "endurance": 27,
+          "strength": 50,
+          "dexterity": 40,
+          "intelligence": 15,
+          "faith": 15,
+          "arcane": 10,
+          "maxHp": 1120,
+          "maxFp": 140,
+          "maxStamina": 102
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "第六感",
+          "en": "Sixth Sense"
+        },
+        "summary": {
+          "zh": "僅限一次，\n在生死關頭時能迴避危機。",
+          "en": "Cheat death a single time."
+        },
+        "description": {
+          "zh": "此能力只能使用一次。\n在死亡後復活，或是觸碰賜福之後，\n就能夠再次使用。",
+          "en": "This ability can only be used once\nuntil restored through revival from death\nor passing through a Site of Grace."
+        },
+        "icon": {
+          "src": "images/passive-wylder.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Wylder.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "鉤爪射擊",
+          "en": "Claw Shot"
+        },
+        "summary": {
+          "zh": "能射出鉤爪拉近敵人，\n或是讓自己快速移動。",
+          "en": "Launch grappling claw to rope foes in\nor move swiftly by retracting."
+        },
+        "description": {
+          "zh": "將依據目標的體格，決定是否拉得動對方。\n此外，此技藝有利於破壞敵人的防禦，\n長按時能進行瞄準。",
+          "en": "Whether targets can be roped in or not depends\non enemy physique. Effective at breaking guard.\nHold to aim."
+        },
+        "icon": {
+          "src": "images/character-skill-wylder.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Wylder.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "襲擊樁柱",
+          "en": "Onslaught Stake"
+        },
+        "summary": {
+          "zh": "能伴隨爆炸打出鐵柱，\n使出強力一擊。",
+          "en": "Powerful single attack that launches\nan iron stake with a great explosion."
+        },
+        "description": {
+          "zh": "身體會因為反作用力而後退，並殘留些許絕活量表。\n長按時能加強衝擊力道，並停留在原地。",
+          "en": "Recoil causes one to reel back, but\npreserves a portion of Ultimate Art gauge.\nHold to boost impact and remain standing."
+        },
+        "icon": {
+          "src": "images/ultimate-art-wylder.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Wylder.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "guardian": {
+      "heroId": 2,
+      "grades": {
+        "maxHp": "S",
+        "maxFp": "C",
+        "maxStamina": "A",
+        "strength": "B",
+        "dexterity": "C",
+        "intelligence": "D",
+        "faith": "C",
+        "arcane": "C"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 10,
+          "mind": 2,
+          "endurance": 6,
+          "strength": 4,
+          "dexterity": 3,
+          "intelligence": 2,
+          "faith": 3,
+          "arcane": 10,
+          "maxHp": 280,
+          "maxFp": 55,
+          "maxStamina": 60
+        },
+        "2": {
+          "vigor": 19,
+          "mind": 3,
+          "endurance": 12,
+          "strength": 11,
+          "dexterity": 9,
+          "intelligence": 3,
+          "faith": 5,
+          "arcane": 10,
+          "maxHp": 460,
+          "maxFp": 60,
+          "maxStamina": 72
+        },
+        "3": {
+          "vigor": 22,
+          "mind": 3,
+          "endurance": 14,
+          "strength": 13,
+          "dexterity": 10,
+          "intelligence": 3,
+          "faith": 6,
+          "arcane": 10,
+          "maxHp": 520,
+          "maxFp": 60,
+          "maxStamina": 76
+        },
+        "4": {
+          "vigor": 26,
+          "mind": 4,
+          "endurance": 16,
+          "strength": 16,
+          "dexterity": 12,
+          "intelligence": 4,
+          "faith": 7,
+          "arcane": 10,
+          "maxHp": 600,
+          "maxFp": 65,
+          "maxStamina": 80
+        },
+        "5": {
+          "vigor": 29,
+          "mind": 5,
+          "endurance": 18,
+          "strength": 18,
+          "dexterity": 14,
+          "intelligence": 4,
+          "faith": 8,
+          "arcane": 10,
+          "maxHp": 660,
+          "maxFp": 70,
+          "maxStamina": 84
+        },
+        "6": {
+          "vigor": 33,
+          "mind": 6,
+          "endurance": 20,
+          "strength": 21,
+          "dexterity": 15,
+          "intelligence": 5,
+          "faith": 10,
+          "arcane": 10,
+          "maxHp": 740,
+          "maxFp": 75,
+          "maxStamina": 88
+        },
+        "7": {
+          "vigor": 36,
+          "mind": 7,
+          "endurance": 22,
+          "strength": 23,
+          "dexterity": 17,
+          "intelligence": 5,
+          "faith": 11,
+          "arcane": 10,
+          "maxHp": 800,
+          "maxFp": 80,
+          "maxStamina": 92
+        },
+        "8": {
+          "vigor": 40,
+          "mind": 7,
+          "endurance": 24,
+          "strength": 26,
+          "dexterity": 19,
+          "intelligence": 6,
+          "faith": 12,
+          "arcane": 10,
+          "maxHp": 880,
+          "maxFp": 80,
+          "maxStamina": 96
+        },
+        "9": {
+          "vigor": 43,
+          "mind": 8,
+          "endurance": 26,
+          "strength": 28,
+          "dexterity": 20,
+          "intelligence": 6,
+          "faith": 14,
+          "arcane": 10,
+          "maxHp": 940,
+          "maxFp": 85,
+          "maxStamina": 100
+        },
+        "10": {
+          "vigor": 47,
+          "mind": 9,
+          "endurance": 28,
+          "strength": 31,
+          "dexterity": 22,
+          "intelligence": 7,
+          "faith": 15,
+          "arcane": 10,
+          "maxHp": 1020,
+          "maxFp": 90,
+          "maxStamina": 104
+        },
+        "11": {
+          "vigor": 50,
+          "mind": 10,
+          "endurance": 30,
+          "strength": 33,
+          "dexterity": 24,
+          "intelligence": 7,
+          "faith": 16,
+          "arcane": 10,
+          "maxHp": 1080,
+          "maxFp": 95,
+          "maxStamina": 108
+        },
+        "12": {
+          "vigor": 54,
+          "mind": 11,
+          "endurance": 33,
+          "strength": 36,
+          "dexterity": 26,
+          "intelligence": 8,
+          "faith": 18,
+          "arcane": 10,
+          "maxHp": 1160,
+          "maxFp": 100,
+          "maxStamina": 114
+        },
+        "13": {
+          "vigor": 56,
+          "mind": 12,
+          "endurance": 34,
+          "strength": 37,
+          "dexterity": 27,
+          "intelligence": 8,
+          "faith": 19,
+          "arcane": 10,
+          "maxHp": 1200,
+          "maxFp": 105,
+          "maxStamina": 116
+        },
+        "14": {
+          "vigor": 58,
+          "mind": 13,
+          "endurance": 36,
+          "strength": 39,
+          "dexterity": 29,
+          "intelligence": 9,
+          "faith": 20,
+          "arcane": 10,
+          "maxHp": 1240,
+          "maxFp": 110,
+          "maxStamina": 120
+        },
+        "15": {
+          "vigor": 60,
+          "mind": 14,
+          "endurance": 38,
+          "strength": 41,
+          "dexterity": 31,
+          "intelligence": 10,
+          "faith": 21,
+          "arcane": 10,
+          "maxHp": 1280,
+          "maxFp": 115,
+          "maxStamina": 124
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "強力防禦",
+          "en": "Steel Guard"
+        },
+        "summary": {
+          "zh": "踏地之後架穩盾牌，\n進行更穩固的防禦。",
+          "en": "Plant feet and brace with\nshield for a more powerful guard."
+        },
+        "description": {
+          "zh": "防禦強度能獲得飛躍性提升，\n但是在持盾防禦的期間，會無法衝刺。",
+          "en": "Greatly improves guard boost, but prevents\nrunning while holding up shield."
+        },
+        "icon": {
+          "src": "images/passive-guardian.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Guardian.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "旋風",
+          "en": "Whirlwind"
+        },
+        "summary": {
+          "zh": "能拍動背上的翅膀引發氣流，\n颳起向上吹的風。",
+          "en": "Beat wing to whip up a\nwind-churning cyclone."
+        },
+        "description": {
+          "zh": "被捲進氣流的敵人會被吸進中心。\n此外，也能藉此撥開輕型的遠攻道具。\n長按時能擴大有效範圍。",
+          "en": "Enemies caught in cyclone are drawn toward\ncenter. Sweeps away lightweight projectiles.\nHold to enlarge range."
+        },
+        "icon": {
+          "src": "images/character-skill-guardian.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Guardian.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "救世展翼",
+          "en": "Wings of Salvation"
+        },
+        "summary": {
+          "zh": "能跳至空中，急速俯衝之後，\n朝周圍張開防禦陣。",
+          "en": "Leap up and dive back down to\nraise protective area."
+        },
+        "description": {
+          "zh": "停留空中的短暫時間內，能在空中移動。\n急速俯衝使出的攻擊，有利於救援我方。\n長按時，能在落地後持續保護周圍我方人物。",
+          "en": "Can move briefly while in air, and\ndiving attack is perfect for rescues.\nHold to shield nearby allies from damage."
+        },
+        "icon": {
+          "src": "images/ultimate-art-guardian.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Guardian.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "ironeye": {
+      "heroId": 3,
+      "grades": {
+        "maxHp": "C",
+        "maxFp": "C",
+        "maxStamina": "B",
+        "strength": "C",
+        "dexterity": "A",
+        "intelligence": "D",
+        "faith": "D",
+        "arcane": "B"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 6,
+          "mind": 2,
+          "endurance": 4,
+          "strength": 4,
+          "dexterity": 8,
+          "intelligence": 2,
+          "faith": 2,
+          "arcane": 13,
+          "maxHp": 200,
+          "maxFp": 55,
+          "maxStamina": 56
+        },
+        "2": {
+          "vigor": 12,
+          "mind": 3,
+          "endurance": 7,
+          "strength": 7,
+          "dexterity": 20,
+          "intelligence": 3,
+          "faith": 3,
+          "arcane": 13,
+          "maxHp": 320,
+          "maxFp": 60,
+          "maxStamina": 62
+        },
+        "3": {
+          "vigor": 14,
+          "mind": 3,
+          "endurance": 8,
+          "strength": 8,
+          "dexterity": 23,
+          "intelligence": 3,
+          "faith": 3,
+          "arcane": 13,
+          "maxHp": 360,
+          "maxFp": 60,
+          "maxStamina": 64
+        },
+        "4": {
+          "vigor": 16,
+          "mind": 4,
+          "endurance": 10,
+          "strength": 9,
+          "dexterity": 26,
+          "intelligence": 3,
+          "faith": 4,
+          "arcane": 13,
+          "maxHp": 400,
+          "maxFp": 65,
+          "maxStamina": 68
+        },
+        "5": {
+          "vigor": 18,
+          "mind": 5,
+          "endurance": 12,
+          "strength": 10,
+          "dexterity": 29,
+          "intelligence": 3,
+          "faith": 5,
+          "arcane": 13,
+          "maxHp": 440,
+          "maxFp": 70,
+          "maxStamina": 72
+        },
+        "6": {
+          "vigor": 20,
+          "mind": 6,
+          "endurance": 14,
+          "strength": 11,
+          "dexterity": 32,
+          "intelligence": 4,
+          "faith": 5,
+          "arcane": 13,
+          "maxHp": 480,
+          "maxFp": 75,
+          "maxStamina": 76
+        },
+        "7": {
+          "vigor": 23,
+          "mind": 7,
+          "endurance": 16,
+          "strength": 12,
+          "dexterity": 35,
+          "intelligence": 4,
+          "faith": 6,
+          "arcane": 13,
+          "maxHp": 540,
+          "maxFp": 80,
+          "maxStamina": 80
+        },
+        "8": {
+          "vigor": 25,
+          "mind": 7,
+          "endurance": 17,
+          "strength": 13,
+          "dexterity": 38,
+          "intelligence": 4,
+          "faith": 7,
+          "arcane": 13,
+          "maxHp": 580,
+          "maxFp": 80,
+          "maxStamina": 82
+        },
+        "9": {
+          "vigor": 27,
+          "mind": 8,
+          "endurance": 19,
+          "strength": 14,
+          "dexterity": 41,
+          "intelligence": 5,
+          "faith": 7,
+          "arcane": 13,
+          "maxHp": 620,
+          "maxFp": 85,
+          "maxStamina": 86
+        },
+        "10": {
+          "vigor": 29,
+          "mind": 9,
+          "endurance": 21,
+          "strength": 15,
+          "dexterity": 44,
+          "intelligence": 5,
+          "faith": 8,
+          "arcane": 13,
+          "maxHp": 660,
+          "maxFp": 90,
+          "maxStamina": 90
+        },
+        "11": {
+          "vigor": 31,
+          "mind": 10,
+          "endurance": 23,
+          "strength": 16,
+          "dexterity": 47,
+          "intelligence": 5,
+          "faith": 9,
+          "arcane": 13,
+          "maxHp": 700,
+          "maxFp": 95,
+          "maxStamina": 94
+        },
+        "12": {
+          "vigor": 34,
+          "mind": 11,
+          "endurance": 25,
+          "strength": 17,
+          "dexterity": 51,
+          "intelligence": 6,
+          "faith": 10,
+          "arcane": 13,
+          "maxHp": 760,
+          "maxFp": 100,
+          "maxStamina": 98
+        },
+        "13": {
+          "vigor": 35,
+          "mind": 12,
+          "endurance": 26,
+          "strength": 17,
+          "dexterity": 53,
+          "intelligence": 6,
+          "faith": 11,
+          "arcane": 13,
+          "maxHp": 780,
+          "maxFp": 105,
+          "maxStamina": 100
+        },
+        "14": {
+          "vigor": 36,
+          "mind": 13,
+          "endurance": 27,
+          "strength": 18,
+          "dexterity": 55,
+          "intelligence": 6,
+          "faith": 12,
+          "arcane": 13,
+          "maxHp": 800,
+          "maxFp": 110,
+          "maxStamina": 102
+        },
+        "15": {
+          "vigor": 37,
+          "mind": 14,
+          "endurance": 28,
+          "strength": 19,
+          "dexterity": 57,
+          "intelligence": 7,
+          "faith": 13,
+          "arcane": 13,
+          "maxHp": 820,
+          "maxFp": 115,
+          "maxStamina": 104
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "觀察入微",
+          "en": "Eagle Eye"
+        },
+        "summary": {
+          "zh": "透過優秀的洞察力，\n增加從敵人身上找到的道具。",
+          "en": "A keenly observant eye discovers\nmore items to obtain from foes."
+        },
+        "description": {
+          "zh": "此能力的效果也能擴及我方人物。",
+          "en": "The effect of this ability also applies\nto allies."
+        },
+        "icon": {
+          "src": "images/passive-ironeye.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Ironeye.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "標記",
+          "en": "Marking"
+        },
+        "summary": {
+          "zh": "能用特殊的匕首傷害敵人，\n製造出弱點。",
+          "en": "Cut foe with dagger, creating\ntemporary weak point."
+        },
+        "description": {
+          "zh": "弱點在短時間內會持續顯露，累積傷害能進行破壞。\n受到破壞的敵人會失去平衡。\n再次製造弱點，就能延長弱點顯露的時間。",
+          "en": "Inflict damage on temporary weak point to\ndestroy it and stagger foes. Damaging weak\npoint extends its duration."
+        },
+        "icon": {
+          "src": "images/character-skill-ironeye.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Ironeye.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "穿楊一箭",
+          "en": "Single Shot"
+        },
+        "summary": {
+          "zh": "能射出超越音速、\n無從抵禦的強力一箭。",
+          "en": "Fire powerful arrow that surpasses sound\nand ignores any defense."
+        },
+        "description": {
+          "zh": "射出的箭能射穿各種敵人、地形與建築物。\n長按時能維持拉弓，瞄準目標。",
+          "en": "Arrow pierces all types of enemies, terrains,\nand structures. Hold to draw bow and aim\nbefore firing."
+        },
+        "icon": {
+          "src": "images/ultimate-art-ironeye.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Ironeye.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "duchess": {
+      "heroId": 4,
+      "grades": {
+        "maxHp": "C",
+        "maxFp": "B",
+        "maxStamina": "D",
+        "strength": "D",
+        "dexterity": "B",
+        "intelligence": "A",
+        "faith": "B",
+        "arcane": "C"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 7,
+          "mind": 6,
+          "endurance": 3,
+          "strength": 2,
+          "dexterity": 5,
+          "intelligence": 4,
+          "faith": 3,
+          "arcane": 11,
+          "maxHp": 220,
+          "maxFp": 75,
+          "maxStamina": 54
+        },
+        "2": {
+          "vigor": 13,
+          "mind": 9,
+          "endurance": 4,
+          "strength": 4,
+          "dexterity": 13,
+          "intelligence": 8,
+          "faith": 6,
+          "arcane": 11,
+          "maxHp": 340,
+          "maxFp": 90,
+          "maxStamina": 56
+        },
+        "3": {
+          "vigor": 15,
+          "mind": 10,
+          "endurance": 5,
+          "strength": 4,
+          "dexterity": 15,
+          "intelligence": 10,
+          "faith": 7,
+          "arcane": 11,
+          "maxHp": 380,
+          "maxFp": 95,
+          "maxStamina": 58
+        },
+        "4": {
+          "vigor": 17,
+          "mind": 12,
+          "endurance": 6,
+          "strength": 5,
+          "dexterity": 18,
+          "intelligence": 13,
+          "faith": 9,
+          "arcane": 11,
+          "maxHp": 420,
+          "maxFp": 105,
+          "maxStamina": 60
+        },
+        "5": {
+          "vigor": 19,
+          "mind": 13,
+          "endurance": 7,
+          "strength": 5,
+          "dexterity": 20,
+          "intelligence": 16,
+          "faith": 11,
+          "arcane": 11,
+          "maxHp": 460,
+          "maxFp": 110,
+          "maxStamina": 62
+        },
+        "6": {
+          "vigor": 21,
+          "mind": 15,
+          "endurance": 8,
+          "strength": 6,
+          "dexterity": 23,
+          "intelligence": 19,
+          "faith": 13,
+          "arcane": 11,
+          "maxHp": 500,
+          "maxFp": 120,
+          "maxStamina": 64
+        },
+        "7": {
+          "vigor": 24,
+          "mind": 16,
+          "endurance": 9,
+          "strength": 6,
+          "dexterity": 25,
+          "intelligence": 22,
+          "faith": 15,
+          "arcane": 11,
+          "maxHp": 560,
+          "maxFp": 125,
+          "maxStamina": 66
+        },
+        "8": {
+          "vigor": 26,
+          "mind": 18,
+          "endurance": 10,
+          "strength": 7,
+          "dexterity": 28,
+          "intelligence": 24,
+          "faith": 16,
+          "arcane": 11,
+          "maxHp": 600,
+          "maxFp": 135,
+          "maxStamina": 68
+        },
+        "9": {
+          "vigor": 28,
+          "mind": 19,
+          "endurance": 11,
+          "strength": 7,
+          "dexterity": 30,
+          "intelligence": 27,
+          "faith": 18,
+          "arcane": 11,
+          "maxHp": 640,
+          "maxFp": 140,
+          "maxStamina": 70
+        },
+        "10": {
+          "vigor": 30,
+          "mind": 21,
+          "endurance": 12,
+          "strength": 8,
+          "dexterity": 33,
+          "intelligence": 30,
+          "faith": 20,
+          "arcane": 11,
+          "maxHp": 680,
+          "maxFp": 150,
+          "maxStamina": 72
+        },
+        "11": {
+          "vigor": 32,
+          "mind": 22,
+          "endurance": 13,
+          "strength": 8,
+          "dexterity": 35,
+          "intelligence": 33,
+          "faith": 22,
+          "arcane": 11,
+          "maxHp": 720,
+          "maxFp": 155,
+          "maxStamina": 74
+        },
+        "12": {
+          "vigor": 35,
+          "mind": 24,
+          "endurance": 14,
+          "strength": 9,
+          "dexterity": 38,
+          "intelligence": 36,
+          "faith": 24,
+          "arcane": 11,
+          "maxHp": 780,
+          "maxFp": 165,
+          "maxStamina": 76
+        },
+        "13": {
+          "vigor": 36,
+          "mind": 25,
+          "endurance": 15,
+          "strength": 9,
+          "dexterity": 40,
+          "intelligence": 38,
+          "faith": 25,
+          "arcane": 11,
+          "maxHp": 800,
+          "maxFp": 170,
+          "maxStamina": 78
+        },
+        "14": {
+          "vigor": 37,
+          "mind": 26,
+          "endurance": 16,
+          "strength": 10,
+          "dexterity": 42,
+          "intelligence": 40,
+          "faith": 26,
+          "arcane": 11,
+          "maxHp": 820,
+          "maxFp": 175,
+          "maxStamina": 80
+        },
+        "15": {
+          "vigor": 39,
+          "mind": 27,
+          "endurance": 18,
+          "strength": 11,
+          "dexterity": 45,
+          "intelligence": 42,
+          "faith": 27,
+          "arcane": 11,
+          "maxHp": 860,
+          "maxFp": 180,
+          "maxStamina": 84
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "優雅身段",
+          "en": "Magnificent Poise"
+        },
+        "summary": {
+          "zh": "攻擊與閃避動作變得更有效率，\n能夠連續做出閃避動作。",
+          "en": "Attack and dodge optimally,\ndodging repeatedly when necessary."
+        },
+        "description": {
+          "zh": "能夠抑制攻擊、閃避動作的精力消耗，\n藉此能連續閃避最多兩次。",
+          "en": "Reduces stamina reduction from attacks\nand evasive actions. Allows up to two\nconsecutive evasive actions."
+        },
+        "icon": {
+          "src": "images/passive-duchess.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Duchess.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "重演",
+          "en": "Restage"
+        },
+        "summary": {
+          "zh": "能對著周圍的敵人，\n再次上演最近做過的行動。",
+          "en": "Stage reprisal of recent occurrences\nto damage nearby foes."
+        },
+        "description": {
+          "zh": "幻影承受的傷害，會轉為幻覺痛侵襲本尊。\n在各種動作下都能使用此技藝。",
+          "en": "Damage to phantoms affects original.\nThis skill can be used at any time."
+        },
+        "icon": {
+          "src": "images/character-skill-duchess.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Duchess.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "落幕之章",
+          "en": "Finale"
+        },
+        "summary": {
+          "zh": "和周圍我方人物一同隱藏身影，\n騙過敵人的眼睛。",
+          "en": "Obscure self and surrounding\nallies to hide from foes."
+        },
+        "description": {
+          "zh": "敵人看不見自己後，\n會開始隨意移動，變得毫無防備。",
+          "en": "Enemies lose track of the caster,\nwandering aimlessly or becoming prone to\nleaving themselves vulnerable."
+        },
+        "icon": {
+          "src": "images/ultimate-art-duchess.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Duchess.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "raider": {
+      "heroId": 5,
+      "grades": {
+        "maxHp": "A",
+        "maxFp": "D",
+        "maxStamina": "A",
+        "strength": "S",
+        "dexterity": "C",
+        "intelligence": "D",
+        "faith": "D",
+        "arcane": "C"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 9,
+          "mind": 2,
+          "endurance": 6,
+          "strength": 9,
+          "dexterity": 4,
+          "intelligence": 1,
+          "faith": 2,
+          "arcane": 10,
+          "maxHp": 260,
+          "maxFp": 55,
+          "maxStamina": 60
+        },
+        "2": {
+          "vigor": 18,
+          "mind": 3,
+          "endurance": 12,
+          "strength": 25,
+          "dexterity": 6,
+          "intelligence": 2,
+          "faith": 4,
+          "arcane": 10,
+          "maxHp": 440,
+          "maxFp": 60,
+          "maxStamina": 72
+        },
+        "3": {
+          "vigor": 21,
+          "mind": 3,
+          "endurance": 13,
+          "strength": 28,
+          "dexterity": 7,
+          "intelligence": 2,
+          "faith": 4,
+          "arcane": 10,
+          "maxHp": 500,
+          "maxFp": 60,
+          "maxStamina": 74
+        },
+        "4": {
+          "vigor": 24,
+          "mind": 4,
+          "endurance": 15,
+          "strength": 32,
+          "dexterity": 8,
+          "intelligence": 2,
+          "faith": 5,
+          "arcane": 10,
+          "maxHp": 560,
+          "maxFp": 65,
+          "maxStamina": 78
+        },
+        "5": {
+          "vigor": 27,
+          "mind": 4,
+          "endurance": 17,
+          "strength": 35,
+          "dexterity": 9,
+          "intelligence": 2,
+          "faith": 5,
+          "arcane": 10,
+          "maxHp": 620,
+          "maxFp": 65,
+          "maxStamina": 82
+        },
+        "6": {
+          "vigor": 30,
+          "mind": 5,
+          "endurance": 19,
+          "strength": 39,
+          "dexterity": 10,
+          "intelligence": 2,
+          "faith": 6,
+          "arcane": 10,
+          "maxHp": 680,
+          "maxFp": 70,
+          "maxStamina": 86
+        },
+        "7": {
+          "vigor": 34,
+          "mind": 5,
+          "endurance": 21,
+          "strength": 42,
+          "dexterity": 11,
+          "intelligence": 2,
+          "faith": 7,
+          "arcane": 10,
+          "maxHp": 760,
+          "maxFp": 70,
+          "maxStamina": 90
+        },
+        "8": {
+          "vigor": 37,
+          "mind": 6,
+          "endurance": 23,
+          "strength": 46,
+          "dexterity": 12,
+          "intelligence": 2,
+          "faith": 7,
+          "arcane": 10,
+          "maxHp": 820,
+          "maxFp": 75,
+          "maxStamina": 94
+        },
+        "9": {
+          "vigor": 40,
+          "mind": 6,
+          "endurance": 25,
+          "strength": 49,
+          "dexterity": 13,
+          "intelligence": 2,
+          "faith": 8,
+          "arcane": 10,
+          "maxHp": 880,
+          "maxFp": 75,
+          "maxStamina": 98
+        },
+        "10": {
+          "vigor": 43,
+          "mind": 7,
+          "endurance": 27,
+          "strength": 53,
+          "dexterity": 14,
+          "intelligence": 2,
+          "faith": 8,
+          "arcane": 10,
+          "maxHp": 940,
+          "maxFp": 80,
+          "maxStamina": 102
+        },
+        "11": {
+          "vigor": 46,
+          "mind": 7,
+          "endurance": 29,
+          "strength": 56,
+          "dexterity": 15,
+          "intelligence": 2,
+          "faith": 9,
+          "arcane": 10,
+          "maxHp": 1000,
+          "maxFp": 80,
+          "maxStamina": 106
+        },
+        "12": {
+          "vigor": 50,
+          "mind": 8,
+          "endurance": 31,
+          "strength": 60,
+          "dexterity": 16,
+          "intelligence": 2,
+          "faith": 10,
+          "arcane": 10,
+          "maxHp": 1080,
+          "maxFp": 85,
+          "maxStamina": 110
+        },
+        "13": {
+          "vigor": 52,
+          "mind": 8,
+          "endurance": 33,
+          "strength": 62,
+          "dexterity": 17,
+          "intelligence": 2,
+          "faith": 10,
+          "arcane": 10,
+          "maxHp": 1120,
+          "maxFp": 85,
+          "maxStamina": 114
+        },
+        "14": {
+          "vigor": 54,
+          "mind": 9,
+          "endurance": 35,
+          "strength": 65,
+          "dexterity": 18,
+          "intelligence": 2,
+          "faith": 11,
+          "arcane": 10,
+          "maxHp": 1160,
+          "maxFp": 90,
+          "maxStamina": 118
+        },
+        "15": {
+          "vigor": 56,
+          "mind": 10,
+          "endurance": 37,
+          "strength": 68,
+          "dexterity": 19,
+          "intelligence": 3,
+          "faith": 12,
+          "arcane": 10,
+          "maxHp": 1200,
+          "maxFp": 95,
+          "maxStamina": 122
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "好勝心",
+          "en": "Fighter's Resolve"
+        },
+        "summary": {
+          "zh": "如果受到損傷，會強化技藝。\n在技藝發動期間，受到攻擊也絕對不會倒下。",
+          "en": "Taking damage boosts Retaliate potency,\ncannot be knocked down while using it."
+        },
+        "description": {
+          "zh": "即使受到損傷，也會以微量ＨＰ撐住。",
+          "en": "Remain standing with a sliver of HP even\nafter taking heavy damage."
+        },
+        "icon": {
+          "src": "images/passive-raider.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Raider.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "反擊",
+          "en": "Retaliate"
+        },
+        "summary": {
+          "zh": "擺出架式之後，再痛快地毆打。",
+          "en": "Assume attack stance\nand pummel vigorously."
+        },
+        "description": {
+          "zh": "穩定重心擺出的架式，能免去部分損傷。\n強化後的技藝，連體型偏大的敵人也會陷入僵直。",
+          "en": "A defensive posture which reduces incoming\ndamage. An enhanced skill which causes\neven larger enemies to recoil."
+        },
+        "icon": {
+          "src": "images/character-skill-raider.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Raider.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "圖騰碑石",
+          "en": "Totem Stela"
+        },
+        "summary": {
+          "zh": "能將守墓者鑿刀插入地面，\n喚出巨大墓碑。",
+          "en": "Drive gravekeeper's wedge into earth\nto summon a giant tombstone."
+        },
+        "description": {
+          "zh": "墓碑會釋放庇佑力量，強化周圍我方人物。\n此外，能利用墓碑抵擋箭矢、砲彈攻擊，\n也能爬上墓碑前往高處。",
+          "en": "Tombstone radiates protective aura, boosting\nstrength of nearby allies and blocking arrows.\nCan also be climbed."
+        },
+        "icon": {
+          "src": "images/ultimate-art-raider.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Raider.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "revenant": {
+      "heroId": 6,
+      "grades": {
+        "maxHp": "D",
+        "maxFp": "A",
+        "maxStamina": "D",
+        "strength": "C",
+        "dexterity": "C",
+        "intelligence": "B",
+        "faith": "S",
+        "arcane": "B"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 6,
+          "mind": 7,
+          "endurance": 3,
+          "strength": 2,
+          "dexterity": 2,
+          "intelligence": 4,
+          "faith": 5,
+          "arcane": 12,
+          "maxHp": 200,
+          "maxFp": 80,
+          "maxStamina": 54
+        },
+        "2": {
+          "vigor": 11,
+          "mind": 11,
+          "endurance": 4,
+          "strength": 6,
+          "dexterity": 6,
+          "intelligence": 7,
+          "faith": 15,
+          "arcane": 12,
+          "maxHp": 300,
+          "maxFp": 100,
+          "maxStamina": 56
+        },
+        "3": {
+          "vigor": 13,
+          "mind": 12,
+          "endurance": 5,
+          "strength": 7,
+          "dexterity": 7,
+          "intelligence": 9,
+          "faith": 18,
+          "arcane": 12,
+          "maxHp": 340,
+          "maxFp": 105,
+          "maxStamina": 58
+        },
+        "4": {
+          "vigor": 15,
+          "mind": 14,
+          "endurance": 6,
+          "strength": 8,
+          "dexterity": 8,
+          "intelligence": 11,
+          "faith": 21,
+          "arcane": 12,
+          "maxHp": 380,
+          "maxFp": 115,
+          "maxStamina": 60
+        },
+        "5": {
+          "vigor": 17,
+          "mind": 16,
+          "endurance": 8,
+          "strength": 9,
+          "dexterity": 9,
+          "intelligence": 13,
+          "faith": 24,
+          "arcane": 12,
+          "maxHp": 420,
+          "maxFp": 125,
+          "maxStamina": 64
+        },
+        "6": {
+          "vigor": 19,
+          "mind": 17,
+          "endurance": 9,
+          "strength": 10,
+          "dexterity": 10,
+          "intelligence": 15,
+          "faith": 27,
+          "arcane": 12,
+          "maxHp": 460,
+          "maxFp": 130,
+          "maxStamina": 66
+        },
+        "7": {
+          "vigor": 21,
+          "mind": 19,
+          "endurance": 11,
+          "strength": 12,
+          "dexterity": 12,
+          "intelligence": 17,
+          "faith": 30,
+          "arcane": 12,
+          "maxHp": 500,
+          "maxFp": 140,
+          "maxStamina": 70
+        },
+        "8": {
+          "vigor": 23,
+          "mind": 21,
+          "endurance": 12,
+          "strength": 13,
+          "dexterity": 13,
+          "intelligence": 19,
+          "faith": 33,
+          "arcane": 12,
+          "maxHp": 540,
+          "maxFp": 150,
+          "maxStamina": 72
+        },
+        "9": {
+          "vigor": 25,
+          "mind": 22,
+          "endurance": 13,
+          "strength": 14,
+          "dexterity": 14,
+          "intelligence": 21,
+          "faith": 36,
+          "arcane": 12,
+          "maxHp": 580,
+          "maxFp": 155,
+          "maxStamina": 74
+        },
+        "10": {
+          "vigor": 27,
+          "mind": 24,
+          "endurance": 15,
+          "strength": 15,
+          "dexterity": 15,
+          "intelligence": 23,
+          "faith": 39,
+          "arcane": 12,
+          "maxHp": 620,
+          "maxFp": 165,
+          "maxStamina": 78
+        },
+        "11": {
+          "vigor": 29,
+          "mind": 26,
+          "endurance": 16,
+          "strength": 16,
+          "dexterity": 16,
+          "intelligence": 25,
+          "faith": 42,
+          "arcane": 12,
+          "maxHp": 660,
+          "maxFp": 175,
+          "maxStamina": 80
+        },
+        "12": {
+          "vigor": 32,
+          "mind": 28,
+          "endurance": 18,
+          "strength": 18,
+          "dexterity": 18,
+          "intelligence": 27,
+          "faith": 45,
+          "arcane": 12,
+          "maxHp": 720,
+          "maxFp": 185,
+          "maxStamina": 84
+        },
+        "13": {
+          "vigor": 33,
+          "mind": 29,
+          "endurance": 19,
+          "strength": 19,
+          "dexterity": 19,
+          "intelligence": 28,
+          "faith": 47,
+          "arcane": 12,
+          "maxHp": 740,
+          "maxFp": 190,
+          "maxStamina": 86
+        },
+        "14": {
+          "vigor": 34,
+          "mind": 30,
+          "endurance": 20,
+          "strength": 20,
+          "dexterity": 20,
+          "intelligence": 29,
+          "faith": 49,
+          "arcane": 12,
+          "maxHp": 760,
+          "maxFp": 195,
+          "maxStamina": 88
+        },
+        "15": {
+          "vigor": 35,
+          "mind": 31,
+          "endurance": 21,
+          "strength": 21,
+          "dexterity": 21,
+          "intelligence": 30,
+          "faith": 51,
+          "arcane": 12,
+          "maxHp": 780,
+          "maxFp": 200,
+          "maxStamina": 90
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "死靈術",
+          "en": "Necromancy"
+        },
+        "summary": {
+          "zh": "能將打敗的敵人化作死靈，\n召喚出來成為我方人物。",
+          "en": "Raise enemy ghosts to fight as allies."
+        },
+        "description": {
+          "zh": "召喚出來的死靈會自行活動，\n然而死靈活動時會逐漸崩壞，最後會消失無蹤。",
+          "en": "Ghosts are summoned to fight, but are\nfleeting and dissipate after some time."
+        },
+        "icon": {
+          "src": "images/passive-revenant.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Revenant.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "召喚靈魂",
+          "en": "Summon Spirit"
+        },
+        "summary": {
+          "zh": "能演奏里拉琴，\n喚出家人一起戰鬥。",
+          "en": "Play lyre to summon fallen\nfamily to rally in battle."
+        },
+        "description": {
+          "zh": "海倫是行動敏捷的隨從；\n弗雷德利克是充滿力氣的廚師；\n而塞巴斯蒂安是滿心慈愛的管家。",
+          "en": "Choose to summon Helen the agile page, Frederick\nthe burly cook, or Sebastian the doting butler."
+        },
+        "icon": {
+          "src": "images/character-skill-revenant.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Revenant.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "不死行軍",
+          "en": "Immortal March"
+        },
+        "summary": {
+          "zh": "能釋放復仇的哀嘆，\n連同周圍的我方人物變為不死狀態。",
+          "en": "Release vengeful ire to make self\nand nearby allies immortal."
+        },
+        "description": {
+          "zh": "能讓陷入瀕死狀態的我方人物脫離險境，\n召喚出的家人也會變為不死狀態。",
+          "en": "Revives near-death allies, and transforms\nfamily into immortal warriors."
+        },
+        "icon": {
+          "src": "images/ultimate-art-revenant.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Revenant.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "recluse": {
+      "heroId": 7,
+      "grades": {
+        "maxHp": "D",
+        "maxFp": "A",
+        "maxStamina": "C",
+        "strength": "D",
+        "dexterity": "C",
+        "intelligence": "S",
+        "faith": "S",
+        "arcane": "C"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 6,
+          "mind": 7,
+          "endurance": 3,
+          "strength": 1,
+          "dexterity": 2,
+          "intelligence": 5,
+          "faith": 5,
+          "arcane": 10,
+          "maxHp": 200,
+          "maxFp": 80,
+          "maxStamina": 54
+        },
+        "2": {
+          "vigor": 10,
+          "mind": 11,
+          "endurance": 5,
+          "strength": 2,
+          "dexterity": 4,
+          "intelligence": 15,
+          "faith": 15,
+          "arcane": 10,
+          "maxHp": 280,
+          "maxFp": 100,
+          "maxStamina": 58
+        },
+        "3": {
+          "vigor": 12,
+          "mind": 12,
+          "endurance": 6,
+          "strength": 2,
+          "dexterity": 5,
+          "intelligence": 18,
+          "faith": 18,
+          "arcane": 10,
+          "maxHp": 320,
+          "maxFp": 105,
+          "maxStamina": 60
+        },
+        "4": {
+          "vigor": 14,
+          "mind": 14,
+          "endurance": 8,
+          "strength": 3,
+          "dexterity": 6,
+          "intelligence": 21,
+          "faith": 21,
+          "arcane": 10,
+          "maxHp": 360,
+          "maxFp": 115,
+          "maxStamina": 64
+        },
+        "5": {
+          "vigor": 16,
+          "mind": 15,
+          "endurance": 9,
+          "strength": 4,
+          "dexterity": 7,
+          "intelligence": 24,
+          "faith": 24,
+          "arcane": 10,
+          "maxHp": 400,
+          "maxFp": 120,
+          "maxStamina": 66
+        },
+        "6": {
+          "vigor": 18,
+          "mind": 17,
+          "endurance": 11,
+          "strength": 4,
+          "dexterity": 8,
+          "intelligence": 27,
+          "faith": 27,
+          "arcane": 10,
+          "maxHp": 440,
+          "maxFp": 130,
+          "maxStamina": 70
+        },
+        "7": {
+          "vigor": 20,
+          "mind": 19,
+          "endurance": 12,
+          "strength": 5,
+          "dexterity": 10,
+          "intelligence": 30,
+          "faith": 30,
+          "arcane": 10,
+          "maxHp": 480,
+          "maxFp": 140,
+          "maxStamina": 72
+        },
+        "8": {
+          "vigor": 22,
+          "mind": 20,
+          "endurance": 14,
+          "strength": 6,
+          "dexterity": 11,
+          "intelligence": 33,
+          "faith": 33,
+          "arcane": 10,
+          "maxHp": 520,
+          "maxFp": 145,
+          "maxStamina": 76
+        },
+        "9": {
+          "vigor": 24,
+          "mind": 22,
+          "endurance": 15,
+          "strength": 6,
+          "dexterity": 12,
+          "intelligence": 36,
+          "faith": 36,
+          "arcane": 10,
+          "maxHp": 560,
+          "maxFp": 155,
+          "maxStamina": 78
+        },
+        "10": {
+          "vigor": 26,
+          "mind": 23,
+          "endurance": 17,
+          "strength": 7,
+          "dexterity": 13,
+          "intelligence": 39,
+          "faith": 39,
+          "arcane": 10,
+          "maxHp": 600,
+          "maxFp": 160,
+          "maxStamina": 82
+        },
+        "11": {
+          "vigor": 28,
+          "mind": 25,
+          "endurance": 18,
+          "strength": 8,
+          "dexterity": 14,
+          "intelligence": 42,
+          "faith": 42,
+          "arcane": 10,
+          "maxHp": 640,
+          "maxFp": 170,
+          "maxStamina": 84
+        },
+        "12": {
+          "vigor": 30,
+          "mind": 27,
+          "endurance": 20,
+          "strength": 9,
+          "dexterity": 16,
+          "intelligence": 45,
+          "faith": 45,
+          "arcane": 10,
+          "maxHp": 680,
+          "maxFp": 180,
+          "maxStamina": 88
+        },
+        "13": {
+          "vigor": 31,
+          "mind": 28,
+          "endurance": 21,
+          "strength": 10,
+          "dexterity": 17,
+          "intelligence": 47,
+          "faith": 47,
+          "arcane": 10,
+          "maxHp": 700,
+          "maxFp": 185,
+          "maxStamina": 90
+        },
+        "14": {
+          "vigor": 32,
+          "mind": 29,
+          "endurance": 22,
+          "strength": 11,
+          "dexterity": 18,
+          "intelligence": 49,
+          "faith": 49,
+          "arcane": 10,
+          "maxHp": 720,
+          "maxFp": 190,
+          "maxStamina": 92
+        },
+        "15": {
+          "vigor": 33,
+          "mind": 30,
+          "endurance": 23,
+          "strength": 12,
+          "dexterity": 19,
+          "intelligence": 51,
+          "faith": 51,
+          "arcane": 10,
+          "maxHp": 740,
+          "maxFp": 195,
+          "maxStamina": 94
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "駕馭元素",
+          "en": "Elemental Defense"
+        },
+        "summary": {
+          "zh": "能看見屬性痕，\n收集屬性痕後能恢復ＦＰ。",
+          "en": "Discover affinity residues that can\nbe collected to replenish FP."
+        },
+        "description": {
+          "zh": "以屬性攻擊給予傷害時，會出現屬性痕。\n我方人物身上也會出現屬性痕，\n也能從他們身上收集。",
+          "en": "Affinity attacks create affinity residues.\nResidues appear for allies, as well, which\ncan also be collected."
+        },
+        "icon": {
+          "src": "images/passive-recluse.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Recluse.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "混合魔法",
+          "en": "Magic Cocktail"
+        },
+        "summary": {
+          "zh": "能收集目標的屬性痕，\n再釋放依屬性而變化的混合魔法。",
+          "en": "Collect the affinity residues of targets\nto fire an affinity-exploiting magic cocktail."
+        },
+        "description": {
+          "zh": "屬性痕會個別儲存，收集到三個之後，\n就會形成能施展的魔法。\n屬性痕的組合越複雜，魔法的威力越強大。",
+          "en": "Affinity residues accumulate. Collect three\nto wield a magic spell. Complex affinity\ncombinations create more powerful spells."
+        },
+        "icon": {
+          "src": "images/character-skill-recluse.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Recluse.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "血魂歌",
+          "en": "Soulblood Song"
+        },
+        "summary": {
+          "zh": "能釋放秘藏的鮮血箴言，\n讓周圍的敵人印上鮮血烙印。",
+          "en": "Unleash forbidden blood chant\nto brand nearby foes with blood sigils."
+        },
+        "description": {
+          "zh": "鮮血烙印會維持短暫時間，增加受到的傷害。\n此外，也具有恢復攻擊者的ＨＰ、ＦＰ的效果。",
+          "en": "Brands foes with short-lived Blood Sigils\nthat increase damage taken and restore\nthe HP and FP of caster."
+        },
+        "icon": {
+          "src": "images/ultimate-art-recluse.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Recluse.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "executor": {
+      "heroId": 8,
+      "grades": {
+        "maxHp": "B",
+        "maxFp": "D",
+        "maxStamina": "B",
+        "strength": "C",
+        "dexterity": "S",
+        "intelligence": "D",
+        "faith": "D",
+        "arcane": "S"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 7,
+          "mind": 2,
+          "endurance": 3,
+          "strength": 5,
+          "dexterity": 8,
+          "intelligence": 2,
+          "faith": 2,
+          "arcane": 28,
+          "maxHp": 220,
+          "maxFp": 55,
+          "maxStamina": 54
+        },
+        "2": {
+          "vigor": 14,
+          "mind": 3,
+          "endurance": 5,
+          "strength": 9,
+          "dexterity": 20,
+          "intelligence": 3,
+          "faith": 3,
+          "arcane": 28,
+          "maxHp": 360,
+          "maxFp": 60,
+          "maxStamina": 58
+        },
+        "3": {
+          "vigor": 16,
+          "mind": 3,
+          "endurance": 6,
+          "strength": 10,
+          "dexterity": 24,
+          "intelligence": 3,
+          "faith": 3,
+          "arcane": 28,
+          "maxHp": 400,
+          "maxFp": 60,
+          "maxStamina": 60
+        },
+        "4": {
+          "vigor": 19,
+          "mind": 4,
+          "endurance": 8,
+          "strength": 11,
+          "dexterity": 28,
+          "intelligence": 3,
+          "faith": 3,
+          "arcane": 28,
+          "maxHp": 460,
+          "maxFp": 65,
+          "maxStamina": 64
+        },
+        "5": {
+          "vigor": 21,
+          "mind": 4,
+          "endurance": 10,
+          "strength": 12,
+          "dexterity": 32,
+          "intelligence": 4,
+          "faith": 3,
+          "arcane": 28,
+          "maxHp": 500,
+          "maxFp": 65,
+          "maxStamina": 68
+        },
+        "6": {
+          "vigor": 24,
+          "mind": 5,
+          "endurance": 12,
+          "strength": 14,
+          "dexterity": 36,
+          "intelligence": 4,
+          "faith": 3,
+          "arcane": 28,
+          "maxHp": 560,
+          "maxFp": 70,
+          "maxStamina": 72
+        },
+        "7": {
+          "vigor": 27,
+          "mind": 6,
+          "endurance": 14,
+          "strength": 15,
+          "dexterity": 40,
+          "intelligence": 5,
+          "faith": 4,
+          "arcane": 28,
+          "maxHp": 620,
+          "maxFp": 75,
+          "maxStamina": 76
+        },
+        "8": {
+          "vigor": 29,
+          "mind": 6,
+          "endurance": 16,
+          "strength": 16,
+          "dexterity": 44,
+          "intelligence": 5,
+          "faith": 4,
+          "arcane": 28,
+          "maxHp": 660,
+          "maxFp": 75,
+          "maxStamina": 80
+        },
+        "9": {
+          "vigor": 32,
+          "mind": 7,
+          "endurance": 18,
+          "strength": 18,
+          "dexterity": 48,
+          "intelligence": 5,
+          "faith": 4,
+          "arcane": 28,
+          "maxHp": 720,
+          "maxFp": 80,
+          "maxStamina": 84
+        },
+        "10": {
+          "vigor": 34,
+          "mind": 7,
+          "endurance": 20,
+          "strength": 19,
+          "dexterity": 52,
+          "intelligence": 6,
+          "faith": 4,
+          "arcane": 28,
+          "maxHp": 760,
+          "maxFp": 80,
+          "maxStamina": 88
+        },
+        "11": {
+          "vigor": 37,
+          "mind": 8,
+          "endurance": 22,
+          "strength": 20,
+          "dexterity": 56,
+          "intelligence": 6,
+          "faith": 4,
+          "arcane": 28,
+          "maxHp": 820,
+          "maxFp": 85,
+          "maxStamina": 92
+        },
+        "12": {
+          "vigor": 40,
+          "mind": 9,
+          "endurance": 24,
+          "strength": 22,
+          "dexterity": 60,
+          "intelligence": 7,
+          "faith": 5,
+          "arcane": 28,
+          "maxHp": 880,
+          "maxFp": 90,
+          "maxStamina": 96
+        },
+        "13": {
+          "vigor": 42,
+          "mind": 9,
+          "endurance": 25,
+          "strength": 23,
+          "dexterity": 61,
+          "intelligence": 7,
+          "faith": 5,
+          "arcane": 28,
+          "maxHp": 920,
+          "maxFp": 90,
+          "maxStamina": 98
+        },
+        "14": {
+          "vigor": 44,
+          "mind": 10,
+          "endurance": 26,
+          "strength": 24,
+          "dexterity": 62,
+          "intelligence": 7,
+          "faith": 5,
+          "arcane": 28,
+          "maxHp": 960,
+          "maxFp": 95,
+          "maxStamina": 100
+        },
+        "15": {
+          "vigor": 46,
+          "mind": 11,
+          "endurance": 27,
+          "strength": 25,
+          "dexterity": 63,
+          "intelligence": 8,
+          "faith": 6,
+          "arcane": 28,
+          "maxHp": 1000,
+          "maxFp": 100,
+          "maxStamina": 102
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "不屈",
+          "en": "Tenacity"
+        },
+        "summary": {
+          "zh": "從異常狀態恢復時，\n能獲得活性效果。",
+          "en": "Receive boost after recovering\nfrom status ailments."
+        },
+        "description": {
+          "zh": "活性效果能夠提升攻擊力與精力恢復速度。",
+          "en": "Effect boosts attack and stamina recovery speed."
+        },
+        "icon": {
+          "src": "images/passive-executor.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Executor.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "妖刀",
+          "en": "Cursed Sword"
+        },
+        "summary": {
+          "zh": "能拔出妖刀，利用「撥開攻擊」，\n讓敵人的攻擊失效。",
+          "en": "Draw a cursed sword that\ncan deflect enemy attacks."
+        },
+        "description": {
+          "zh": "重複進行「撥開攻擊」就能解放刀身，\n以活生生的刀進行強力攻擊。\n但是在拔出妖刀的期間，無法衝刺。",
+          "en": "Repeated deflections reveal blade, enabling\npowerful attacks with the living sword.\nCannot run while at ready with enchanted blade."
+        },
+        "icon": {
+          "src": "images/character-skill-executor.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Executor.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "熔爐百相之獸",
+          "en": "Aspects of the Crucible: Beast"
+        },
+        "summary": {
+          "zh": "能變成初始野獸的模樣。",
+          "en": "Assume the form of\nthe primordial beast."
+        },
+        "description": {
+          "zh": "化為野獸模樣的期間，只能使用固定的攻擊手段，\n也會持續消耗絕活量表。\n再次發動能夠中止變身，恢復原本的模樣。",
+          "en": "Use unique attacks in beast form that\ndrain the Ultimate Art gauge. Activate again\nto quickly undo transformation."
+        },
+        "icon": {
+          "src": "images/ultimate-art-executor.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Executor.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text"
+        ],
+        "skill": [
+          "bwiki-menu-text"
+        ],
+        "art": [
+          "bwiki-menu-text"
+        ]
+      }
+    },
+    "scholar": {
+      "heroId": 9,
+      "grades": {
+        "maxHp": "B",
+        "maxFp": "B",
+        "maxStamina": "B",
+        "strength": "D",
+        "dexterity": "C",
+        "intelligence": "C",
+        "faith": "C",
+        "arcane": "S"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 7,
+          "mind": 4,
+          "endurance": 3,
+          "strength": 1,
+          "dexterity": 2,
+          "intelligence": 4,
+          "faith": 2,
+          "arcane": 50,
+          "maxHp": 220,
+          "maxFp": 65,
+          "maxStamina": 54
+        },
+        "2": {
+          "vigor": 14,
+          "mind": 6,
+          "endurance": 5,
+          "strength": 2,
+          "dexterity": 4,
+          "intelligence": 7,
+          "faith": 4,
+          "arcane": 50,
+          "maxHp": 360,
+          "maxFp": 75,
+          "maxStamina": 58
+        },
+        "3": {
+          "vigor": 16,
+          "mind": 7,
+          "endurance": 6,
+          "strength": 3,
+          "dexterity": 5,
+          "intelligence": 8,
+          "faith": 4,
+          "arcane": 50,
+          "maxHp": 400,
+          "maxFp": 80,
+          "maxStamina": 60
+        },
+        "4": {
+          "vigor": 18,
+          "mind": 8,
+          "endurance": 8,
+          "strength": 4,
+          "dexterity": 6,
+          "intelligence": 10,
+          "faith": 5,
+          "arcane": 50,
+          "maxHp": 440,
+          "maxFp": 85,
+          "maxStamina": 64
+        },
+        "5": {
+          "vigor": 20,
+          "mind": 9,
+          "endurance": 10,
+          "strength": 5,
+          "dexterity": 7,
+          "intelligence": 12,
+          "faith": 6,
+          "arcane": 50,
+          "maxHp": 480,
+          "maxFp": 90,
+          "maxStamina": 68
+        },
+        "6": {
+          "vigor": 22,
+          "mind": 10,
+          "endurance": 11,
+          "strength": 6,
+          "dexterity": 8,
+          "intelligence": 14,
+          "faith": 7,
+          "arcane": 50,
+          "maxHp": 520,
+          "maxFp": 95,
+          "maxStamina": 70
+        },
+        "7": {
+          "vigor": 25,
+          "mind": 11,
+          "endurance": 13,
+          "strength": 7,
+          "dexterity": 9,
+          "intelligence": 16,
+          "faith": 8,
+          "arcane": 50,
+          "maxHp": 580,
+          "maxFp": 100,
+          "maxStamina": 74
+        },
+        "8": {
+          "vigor": 27,
+          "mind": 12,
+          "endurance": 15,
+          "strength": 8,
+          "dexterity": 10,
+          "intelligence": 17,
+          "faith": 8,
+          "arcane": 50,
+          "maxHp": 620,
+          "maxFp": 105,
+          "maxStamina": 78
+        },
+        "9": {
+          "vigor": 29,
+          "mind": 13,
+          "endurance": 16,
+          "strength": 9,
+          "dexterity": 11,
+          "intelligence": 19,
+          "faith": 9,
+          "arcane": 50,
+          "maxHp": 660,
+          "maxFp": 110,
+          "maxStamina": 80
+        },
+        "10": {
+          "vigor": 31,
+          "mind": 14,
+          "endurance": 18,
+          "strength": 10,
+          "dexterity": 12,
+          "intelligence": 21,
+          "faith": 10,
+          "arcane": 50,
+          "maxHp": 700,
+          "maxFp": 115,
+          "maxStamina": 84
+        },
+        "11": {
+          "vigor": 33,
+          "mind": 15,
+          "endurance": 20,
+          "strength": 11,
+          "dexterity": 13,
+          "intelligence": 23,
+          "faith": 11,
+          "arcane": 50,
+          "maxHp": 740,
+          "maxFp": 120,
+          "maxStamina": 88
+        },
+        "12": {
+          "vigor": 36,
+          "mind": 17,
+          "endurance": 22,
+          "strength": 12,
+          "dexterity": 15,
+          "intelligence": 25,
+          "faith": 12,
+          "arcane": 50,
+          "maxHp": 800,
+          "maxFp": 130,
+          "maxStamina": 92
+        },
+        "13": {
+          "vigor": 37,
+          "mind": 18,
+          "endurance": 23,
+          "strength": 12,
+          "dexterity": 16,
+          "intelligence": 26,
+          "faith": 13,
+          "arcane": 50,
+          "maxHp": 820,
+          "maxFp": 135,
+          "maxStamina": 94
+        },
+        "14": {
+          "vigor": 39,
+          "mind": 19,
+          "endurance": 24,
+          "strength": 13,
+          "dexterity": 17,
+          "intelligence": 27,
+          "faith": 14,
+          "arcane": 50,
+          "maxHp": 860,
+          "maxFp": 140,
+          "maxStamina": 96
+        },
+        "15": {
+          "vigor": 41,
+          "mind": 20,
+          "endurance": 25,
+          "strength": 14,
+          "dexterity": 18,
+          "intelligence": 28,
+          "faith": 15,
+          "arcane": 50,
+          "maxHp": 900,
+          "maxFp": 145,
+          "maxStamina": 98
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "攜物知識",
+          "en": "Bagcraft"
+        },
+        "summary": {
+          "zh": "能增加使用道具的攜帶數，\n並且會根據使用次數多寡，階段性強化效果。",
+          "en": "Carry more items, and level-up items by using them"
+        },
+        "description": {
+          "zh": "道具會根據類別劃分等級。\n等級２能強化效果；\n等級３會發動更出眾的效果。",
+          "en": "Each item category is leveled up independently.\nLevel 2: Effect strengthened.\nLevel 3: Bonus effect added."
+        },
+        "icon": {
+          "src": "images/passive-scholar.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Scholar.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "探索",
+          "en": "Analyse"
+        },
+        "summary": {
+          "zh": "使用單眼鏡觀察目標，記錄特性。\n分析結果會化為靈符號，帶來各種效果。",
+          "en": "See target with monocle and note findings which linger as spirit symbols to various effect."
+        },
+        "description": {
+          "zh": "持續觀察能提升探索的進行率。\n已探索的敵人樣本數、發現特別記載事項，\n以及是否包含我方人物等等會改變進行率。",
+          "en": "Continue observing to advance Analysis. Improve rate of progress by using Analyse on more enemy specimens, discovering special notes, and including allies in analysis."
+        },
+        "icon": {
+          "src": "images/character-skill-scholar.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Scholar.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "共感術",
+          "en": "Communion"
+        },
+        "summary": {
+          "zh": "拋撒禁書的紙頁，讓紙頁連結周遭，\n將傷害轉換、散播出去。",
+          "en": "Scatter pages of taboo tome to thread enemies and damage simultaneously."
+        },
+        "description": {
+          "zh": "對已連結的敵人造成的傷害，會散播至其他敵人。\n另外，能夠恢復已連結的我方人物的ＨＰ。\n而已連結的敵人對自己造成的傷害，會傳回給對手。",
+          "en": "Damage inflicted on threaded enemy affects other enemies. Also, can heal HP of threaded allies. Attacks received from threaded enemy also damage attacker."
+        },
+        "icon": {
+          "src": "images/ultimate-art-scholar.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Scholar.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text-dlc"
+        ],
+        "skill": [
+          "bwiki-menu-text-dlc"
+        ],
+        "art": [
+          "bwiki-menu-text-dlc"
+        ]
+      }
+    },
+    "undertaker": {
+      "heroId": 10,
+      "grades": {
+        "maxHp": "B",
+        "maxFp": "C",
+        "maxStamina": "C",
+        "strength": "A",
+        "dexterity": "D",
+        "intelligence": "D",
+        "faith": "A",
+        "arcane": "C"
+      },
+      "anchorLevels": [
+        1,
+        2,
+        12,
+        15
+      ],
+      "levels": {
+        "1": {
+          "vigor": 7,
+          "mind": 4,
+          "endurance": 3,
+          "strength": 5,
+          "dexterity": 2,
+          "intelligence": 2,
+          "faith": 5,
+          "arcane": 10,
+          "maxHp": 220,
+          "maxFp": 65,
+          "maxStamina": 54
+        },
+        "2": {
+          "vigor": 14,
+          "mind": 6,
+          "endurance": 5,
+          "strength": 18,
+          "dexterity": 4,
+          "intelligence": 2,
+          "faith": 17,
+          "arcane": 10,
+          "maxHp": 360,
+          "maxFp": 75,
+          "maxStamina": 58
+        },
+        "3": {
+          "vigor": 16,
+          "mind": 6,
+          "endurance": 6,
+          "strength": 20,
+          "dexterity": 4,
+          "intelligence": 2,
+          "faith": 19,
+          "arcane": 10,
+          "maxHp": 400,
+          "maxFp": 75,
+          "maxStamina": 60
+        },
+        "4": {
+          "vigor": 19,
+          "mind": 7,
+          "endurance": 7,
+          "strength": 23,
+          "dexterity": 5,
+          "intelligence": 2,
+          "faith": 21,
+          "arcane": 10,
+          "maxHp": 460,
+          "maxFp": 80,
+          "maxStamina": 62
+        },
+        "5": {
+          "vigor": 22,
+          "mind": 7,
+          "endurance": 9,
+          "strength": 25,
+          "dexterity": 6,
+          "intelligence": 2,
+          "faith": 23,
+          "arcane": 10,
+          "maxHp": 520,
+          "maxFp": 80,
+          "maxStamina": 66
+        },
+        "6": {
+          "vigor": 25,
+          "mind": 8,
+          "endurance": 10,
+          "strength": 28,
+          "dexterity": 6,
+          "intelligence": 2,
+          "faith": 25,
+          "arcane": 10,
+          "maxHp": 580,
+          "maxFp": 85,
+          "maxStamina": 68
+        },
+        "7": {
+          "vigor": 28,
+          "mind": 9,
+          "endurance": 12,
+          "strength": 31,
+          "dexterity": 7,
+          "intelligence": 3,
+          "faith": 27,
+          "arcane": 10,
+          "maxHp": 640,
+          "maxFp": 90,
+          "maxStamina": 72
+        },
+        "8": {
+          "vigor": 30,
+          "mind": 9,
+          "endurance": 13,
+          "strength": 33,
+          "dexterity": 8,
+          "intelligence": 3,
+          "faith": 29,
+          "arcane": 10,
+          "maxHp": 680,
+          "maxFp": 90,
+          "maxStamina": 74
+        },
+        "9": {
+          "vigor": 33,
+          "mind": 10,
+          "endurance": 14,
+          "strength": 36,
+          "dexterity": 8,
+          "intelligence": 3,
+          "faith": 31,
+          "arcane": 10,
+          "maxHp": 740,
+          "maxFp": 95,
+          "maxStamina": 76
+        },
+        "10": {
+          "vigor": 36,
+          "mind": 10,
+          "endurance": 16,
+          "strength": 38,
+          "dexterity": 9,
+          "intelligence": 3,
+          "faith": 33,
+          "arcane": 10,
+          "maxHp": 800,
+          "maxFp": 95,
+          "maxStamina": 80
+        },
+        "11": {
+          "vigor": 39,
+          "mind": 11,
+          "endurance": 17,
+          "strength": 41,
+          "dexterity": 10,
+          "intelligence": 3,
+          "faith": 35,
+          "arcane": 10,
+          "maxHp": 860,
+          "maxFp": 100,
+          "maxStamina": 82
+        },
+        "12": {
+          "vigor": 42,
+          "mind": 12,
+          "endurance": 19,
+          "strength": 44,
+          "dexterity": 11,
+          "intelligence": 4,
+          "faith": 37,
+          "arcane": 10,
+          "maxHp": 920,
+          "maxFp": 105,
+          "maxStamina": 86
+        },
+        "13": {
+          "vigor": 44,
+          "mind": 12,
+          "endurance": 20,
+          "strength": 46,
+          "dexterity": 11,
+          "intelligence": 4,
+          "faith": 38,
+          "arcane": 10,
+          "maxHp": 960,
+          "maxFp": 105,
+          "maxStamina": 88
+        },
+        "14": {
+          "vigor": 46,
+          "mind": 13,
+          "endurance": 21,
+          "strength": 48,
+          "dexterity": 12,
+          "intelligence": 4,
+          "faith": 39,
+          "arcane": 10,
+          "maxHp": 1000,
+          "maxFp": 110,
+          "maxStamina": 90
+        },
+        "15": {
+          "vigor": 48,
+          "mind": 14,
+          "endurance": 22,
+          "strength": 50,
+          "dexterity": 13,
+          "intelligence": 5,
+          "faith": 41,
+          "arcane": 10,
+          "maxHp": 1040,
+          "maxFp": 115,
+          "maxStamina": 92
+        }
+      },
+      "passive": {
+        "name": {
+          "zh": "感知力量",
+          "en": "Confluence"
+        },
+        "summary": {
+          "zh": "其他人發動絕活時，自己可以發動絕活。\n不需要絕活量表。",
+          "en": "Ally's execution of art enables additional art activation regardless of gauge."
+        },
+        "description": {
+          "zh": "奪取部分敵人使出纏繞黑暗的攻擊時，\n也可以發動絕活。",
+          "en": "Absorbing power of darkness-imbued attacks executed by certain enemies allows activation of art."
+        },
+        "icon": {
+          "src": "images/passive-undertaker.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Undertaker.png"
+        }
+      },
+      "skill": {
+        "name": {
+          "zh": "恍惚",
+          "en": "Trance"
+        },
+        "summary": {
+          "zh": "對自己放血，喚起不祥的力量。",
+          "en": "Bloodletting triggers the power of the loathsome hex"
+        },
+        "description": {
+          "zh": "能提升身體能力，不斷攻擊會提高攻擊力。\n只要消耗所有絕活量表，\n就能喚起更加不祥的力量。",
+          "en": "Agility is increased, and repeated attacks boost attack power. Exhausting Ultimate Art gauge activates an additional loathsome hex."
+        },
+        "icon": {
+          "src": "images/character-skill-undertaker.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Undertaker.png"
+        }
+      },
+      "art": {
+        "name": {
+          "zh": "不祥一擊",
+          "en": "Loathsome Hex"
+        },
+        "summary": {
+          "zh": "從身體取出異形骨頭，\n骨頭會迅速移動至目標，貫穿其身體。",
+          "en": "Pull out uncanny bone from body, speed toward target, and strike."
+        },
+        "description": {
+          "zh": "攻擊動作快速，也能在空中移動。",
+          "en": "Attack quickly and allows for airborne movement"
+        },
+        "icon": {
+          "src": "images/ultimate-art-undertaker.png",
+          "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Undertaker.png"
+        }
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "passive": [
+          "bwiki-menu-text-dlc"
+        ],
+        "skill": [
+          "bwiki-menu-text-dlc"
+        ],
+        "art": [
+          "bwiki-menu-text-dlc"
+        ]
+      }
+    }
+  }
+}

@@ -16,9 +16,9 @@
 //         英文名稱與說明取自本篇 ArtsName／ArtsCaption (依 textId)。繁中名稱取自英文名稱唯一相同的本篇戰灰；沒有時用本站依本篇官方
 //         簡中轉寫的名稱。繁中說明一律是本站轉寫。
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { ROOT, TOOLS, byId, groupById, parseCsv, parseFmg, readJson, slug, source } from "./sources.mjs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { ROOT, TOOLS, byId, groupById, iconOf, iconPages, parseCsv, parseFmg, readJson, slug, source } from "./sources.mjs";
 
 const common = readJson(join(ROOT, "public/data/common.json"));
 const problems = [];
@@ -59,54 +59,12 @@ function nameOf(zh, en, id, kind) {
 
 // ---------- 圖示 ----------
 
-const ICON_CACHE = join(TOOLS, ".cache", "eldenpedia", "files.json");
-const LICENSE = "{{License|game}}";
-
-// 查詢 Eldenpedia 檔案頁：是否存在、授權是否為遊戲素材。結果快取，避免每次重新查詢。
-async function iconPages(titles) {
-  const cache = existsSync(ICON_CACHE) ? readJson(ICON_CACHE) : {};
-  const missing = titles.filter((title) => !(title in cache));
-  for (let i = 0; i < missing.length; i += 50) {
-    const batch = missing.slice(i, i + 50);
-    const url = `https://eldenring.wiki.gg/api.php?${new URLSearchParams({
-      action: "query",
-      titles: batch.join("|"),
-      prop: "revisions",
-      rvprop: "content",
-      rvslots: "main",
-      format: "json",
-      formatversion: "2",
-    })}`;
-    const response = await fetch(url, { headers: { "User-Agent": "elden-ring-nightreign-research importer" } });
-    if (!response.ok) throw new Error(`${url}：HTTP ${response.status}`);
-    const { query } = await response.json();
-    const normalized = new Map((query.normalized ?? []).map(({ from, to }) => [to, from]));
-    for (const page of query.pages) {
-      const title = normalized.get(page.title) ?? page.title;
-      const content = page.revisions?.[0]?.slots?.main?.content ?? "";
-      cache[title] = { exists: !page.missing, licensed: content.includes(LICENSE) };
-    }
-    for (const title of batch) if (!(title in cache)) throw new Error(`Eldenpedia 沒有回傳 ${title}`);
-  }
-  mkdirSync(dirname(ICON_CACHE), { recursive: true });
-  writeFileSync(ICON_CACHE, `${JSON.stringify(cache, null, 2)}\n`);
-  return cache;
-}
-
 // Eldenpedia 檔名：英文名稱去冒號、空白保留 (API 標題格式)。武器與法術為 ER SB Icon 系列，戰技為黑夜君臨的 ERN Icon skill 系列。
 const iconTitle = (kind, en) => `File:ER SB Icon ${kind} ${en.replace(/:/g, "")}.png`;
 const skillIconTitle = (en) => `File:ERN Icon skill ${en.replace(/:/g, "")}.png`;
 
 // title 為 null 表示沒有可查的檔名 (例如沒有名稱)
-function iconOf(pages, title, prefix, name) {
-  if (!title) return null;
-  const page = pages[title];
-  if (!page.exists || !page.licensed) return null;
-  return {
-    src: `images/${prefix}-${slug(name.en)}.png`,
-    page: `https://eldenring.wiki.gg/wiki/${encodeURI(title.replace(/ /g, "_"))}`,
-  };
-}
+const itemIcon = (pages, title, prefix, name) => iconOf(pages, title, title && `images/${prefix}-${slug(name.en)}.png`);
 
 // ---------- 主程式 ----------
 
@@ -375,7 +333,7 @@ const weaponData = Object.fromEntries(
       row.ID,
       {
         name,
-        icon: iconOf(pages, name && iconTitle(iconKind({ type }), name.en), "weapon", name),
+        icon: itemIcon(pages, name && iconTitle(iconKind({ type }), name.en), "weapon", name),
         tags: { weaponType: [type] },
         sortId: Number(row.sortId),
         ...(Object.keys(slots).length ? { spells: slots } : {}),
@@ -391,7 +349,7 @@ const spellData = Object.fromEntries(
     id,
     {
       name,
-      icon: iconOf(pages, name && iconTitle("Spell", name.en), "spell", name),
+      icon: itemIcon(pages, name && iconTitle("Spell", name.en), "spell", name),
       tags: spellTags(magic, id),
       ...(magic ? spellCosts(magic) : {}),
       ...withName(name),
@@ -424,7 +382,7 @@ const skillData = Object.fromEntries(
       {
         name,
         textId: row.textId,
-        icon: iconOf(pages, skillIconTitles.get(row.ID), "skill", name),
+        icon: itemIcon(pages, skillIconTitles.get(row.ID), "skill", name),
         group: skillGroup(row),
         fp: pick(SKILL_FP, row, `戰技 ${row.ID}`),
         caption: { zh: skillTexts.get(row.textId)?.caption ?? null, en: caption },

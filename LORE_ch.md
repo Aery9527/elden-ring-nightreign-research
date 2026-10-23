@@ -27,6 +27,7 @@
   - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)，記錄該大類、其子分類及效果。
   - `public/data/armaments/weapons.json` 與 `public/data/armaments/spells.json`：以遊戲內 ID (`EquipParamWeapon` 的列，或武器槽位引用的法術 ID) 為鍵的武器與法術，各有 `name` (`zh` 與 `en`，沒有來源提供名稱時為 `null`)、`icon`、`tags` 與來源。武器另保留 `sortId`；搭載法術的武器以 `spells` 記錄各槽位 (`R1`、`R2`) 的法術 ID。具名武器另保留原始參數值 (見武器與法術資料產生)：`attack` (`physical`、`magic`、`fire`、`lightning`、`holy`)、`scaling` (鍵為 `stats` 的 `strength`、`dexterity`、`intelligence`、`faith`、`arcane`)、`critical`、`passive` (`zh` 與 `en`，或 `null`)、`buildup` (異常狀態鍵對應累積值，沒有時為 `{}`) 與 `skill`：`default` (參數預設戰技 ID) 與 `pool` (生成池候選戰技 ID，沒有時為 `[]`)。有 `Magic` 列的法術另保留原始消耗參數：`cost` (`fp`、`stamina`) 與 `chargeCost` (`fp`、`stamina`，或 `null`)。每一列武器都是獨立的項目，即使與其他列的 `sortId` 相同也不合併；嚴禁把其他列的名稱套到未具名的列。
   - `public/data/armaments/skills.json`：以 `SwordArtsParam` ID 為鍵的戰技，各有 `name` (`zh` 與 `en`)、`textId`、`icon`、`group` (`skillGroups` 的鍵)、`fp` (`L1`、`L2`、`R1`、`R2`)、`caption` (`zh` 與 `en`) 與來源。共用同一 `textId` 的戰技仍是各自獨立的項目，保留各自的 `fp` 與 `icon`。
+  - `public/data/characters/nightfarers.json`：以 common.json 的 `characters` 鍵為鍵的夜渡者，各有 `heroId` (`HeroParam` ID)、`grades` (鍵為 `stats` 的 `maxHp`、`maxFp`、`maxStamina`、`strength`、`dexterity`、`intelligence`、`faith`、`arcane`，值為 `S` 到 `D`)、`anchorLevels` (有 `HeroStatusParam` 列的等級)、`levels` (`1` 到 `15`，各有八項基本能力值與 `maxHp`、`maxFp`、`maxStamina`)、`passive`、`skill` 與 `art` (各有 `zh` 與 `en` 的 `name`、`summary`、`description`，以及 `icon`) 與來源 (見角色資料產生)。角色名稱與圖示留在 common.json 的 `characters`。
   - 其他遊戲主題的資料放在 `public/data/` 下以主題命名的檔案或目錄，並依遊戲本身的分組拆分，如同 `relics/` 依遊戲內遺物篩選拆分；多個主題共用的定義留在 `common.json`。
   - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 會區分遺物大類檔 (`category`)、武器檔 (`weapons`)、法術檔 (`spells`) 與戰技檔 (`skills`)，其他檔案以錯誤停止；遇到重複的效果鍵、效果或等級的 `gameId`、子分類鍵、武器 ID、法術 ID 或戰技 ID (各種類分別檢查)，物品標籤或效果 `targets` 的鍵未在 `tags` 定義 (`targets` 的 ID 清單 `spell` 與 `skill` 除外)，效果 `stats` 的鍵或能力值的 `base` 未在 `stats` 定義，有載入法術檔時武器搭載的法術或 `targets.spell` 的 ID 不存在，以及有載入戰技檔時具名武器沒有 `skill.default` 與 `skill.pool`，或武器或 `targets.skill` 引用的戰技 ID 不存在，皆以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
 - HTML 放 `data-*` 佔位元素，由 [public/render.js](public/render.js) 填入；禁止在 HTML 寫死遊戲數值，內文例子中的數值也一樣。內文敘述 (例如角色名稱) 與 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
@@ -89,6 +90,18 @@
   - 圖示：腳本在 Eldenpedia 尋找 `File:ER SB Icon <weapon|shield|Spell> <去除冒號的英文名稱>.png` (三種盾牌用 `shield`)，只有檔案存在且檔案頁標示 `{{License|game}}` 時才設定 `icon: { "src", "page" }`，否則為 `icon: null`。戰技使用《黑夜君臨》圖示 `File:ERN Icon skill <去除冒號的英文名稱>.png`，授權檢查相同。在完整的 `SwordArtsParam` 中多列共用同一 `textId`，或在完整的 `ArtsName` 中同一英文名稱屬於多個 `textId` 時，不論這些列是否收錄 (例如 302 與 304 都是 Parry)，無法依名稱判斷圖示屬於哪一列，這些戰技為 `icon: null`。查詢結果快取在 `tools/.cache/eldenpedia/files.json`。之後執行 `python tools/fetch-icons.py`，下載資料引用但 `public/images/` 尚未有的圖示，並縮為 96px。
 - 武器或法術名稱只有單一語言、搭載的法術未收錄、具名武器沒有預設戰技、生成列引用不存在的戰技池、戰技池中權重大於 0 的列沒有戰技、引用的戰技不在 `SwordArtsParam` 或沒有英文名稱或說明、戰技英文名稱對到多個戰灰、戰灰名稱缺少前綴、戰技不符合任何戰技分組或符合多個、`tools/skill-text-zh.json` 不是 `JSON.stringify` 2 空格縮排的標準輸出、缺少收錄的 `textId`、有不是收錄 `textId` 的鍵，或有項目不是恰好 `cn` 與 `zh` 且各有非空的 `name` 與 `caption`、`cn` 的文字與 `erArtsCn` 來源不同、兩份來源的英文不同、轉寫名稱與戰灰名稱不同、搭載法術的武器 `wepType` 沒有標籤、法術的 `ezStateBehaviorType` 沒有標籤、武器數值或法術消耗不是數字、武器引用不存在的 `SpEffectParam` 或 `AttachEffectParam` 列、固定效果沒有兩種語言的名稱、同一武器的兩個命中效果累積同一種異常狀態、兩個圖示檔名相同，或引用的來源不在 common.json 時，腳本停止且不寫出資料檔。
 
+## 角色資料產生
+
+- `public/data/characters/nightfarers.json` 由 [tools/import-characters.mjs](tools/import-characters.mjs) 產生 (在專案根目錄執行 `node tools/import-characters.mjs`)，嚴禁手動編輯。腳本透過 [tools/sources.mjs](tools/sources.mjs) 讀取 [tools/relics-config.json](tools/relics-config.json) 鎖定版本的來源，因此角色與遺物、武器來自同一份遊戲參數。之後執行 `python tools/fetch-icons.py`，它也會下載角色圖示。
+  - 角色：設定檔的 `heroes` 把 common.json 的每個 `characters` 鍵對應到其 `HeroParam` ID 與 `HeroMenuParam` ID，兩邊的鍵集合必須相同。`HeroMenuParam` 沒有角色欄位，因此依 ID 順序對應；已逐一比對每項評級與 Eldenpedia 來核對此對應。
+  - 等級：錨點是從角色的 `heroStatusParamId` 開始、ID 連續的 `HeroStatusParam` 列，各列的等級為其 `totalLevel`；錨點等級必須從 1 遞增到 15。沒有列的等級取前後最近錨點的線性插值並向下取整。參數沒有載明這條規則；它已與 Eldenpedia Nightreign:Attributes 頁的等級表核對，少數不同的格子包含錨點列，此時以參數為準；頁面必須說明錨點之間的等級是本站計算值。
+  - 上限：`maxHp`、`maxFp` 與 `maxStamina` 由 `vigor`、`mind` 與 `endurance` 代入 `CalcCorrectGraph` 的 100、101 與 104 列，在五個節點 `stageMaxVal` → `stageMaxGrowVal` 之間線性計算。參數沒有載明遊戲用哪一列；這三列已與同一份 Eldenpedia 表中的 HP、FP 與精力核對，頁面必須說明上限是本站計算值。腳本不做取整：曲線不是直線段 (`adjPt_maxGrowVal` 不是 1)、能力值超出該列範圍，或結果不是整數時停止。
+  - 評級：`HeroMenuParam` 的 `hpGrade`、`fpGrade`、`staminaGrade`、`strengthGrade`、`dexterityGrade`、`intelligenceGrade`、`faithGrade` 與 `arcaneGrade`。值 0 到 4 為 S 到 D，已逐角色與 Eldenpedia 核對；其他值使腳本停止。
+  - 文字：沒有帶文字 ID 的來源收錄《黑夜君臨》的角色文字，因此 [tools/character-text-zh.json](tools/character-text-zh.json) (以角色為鍵，其下為 `passive`、`skill` 與 `art`，各有 `cn` 與 `zh`，內含 `name`、`summary` 與 `description`) 的 `cn` 逐字保存 BWIKI 三語選單文字頁上的官方簡中選單文字；該頁以 revision 鎖定為 `bwikiMenu` (遊戲文字的社群保存，本篇與 DLC 各一頁)。每筆 `cn` 文字必須出現在某頁的簡中段落；出現在多行時，這些行必須在同一頁且英文相同。`en` 取英文段落同一行號的文字，英文段落的行數與簡中相同。頁面沒有文字 ID，因此由人工整理的 `cn` 文字把文字對應到角色；選單文字依 ID 排列，角色的文字 ID 隨 `HeroParam` ID 遞增，因此腳本檢查每個欄位中，同一頁角色的行號隨 `HeroParam` ID 遞增。`zh` 是本站依戰技轉寫規則 (見武器與法術資料產生) 的繁中轉寫，另加入官方《黑夜君臨》用語 绝招 → 絕活，頁面因此稱之為本站轉寫。選單文字另有執行者技藝更名後的攫陽 (攫阳，Suncatcher) 及其簡介與說明；只收錄基本名稱與文字。每項能力依文字所在頁面記錄 `sourcesFor` `["bwiki-menu-text"]` 或 `["bwiki-menu-text-dlc"]`。
+  - 圖示：Eldenpedia 的 `File:ERN Passive Ability Icon <name>.png`、`File:ERN Character Skill Icon <name>.png` 與 `File:ERN Ultimate Art Icon <name>.png`，`<name>` 為角色英文名稱，授權檢查與武器圖示相同。
+  - `HeroParam` 另有技藝冷卻時間與使用次數欄位，但部分數值與社群記載的冷卻時間不同 (追蹤者 8 對 10 秒)，因此不收錄。
+- `heroes` 與 `characters` 不同、參數表 ID 重複、引用的參數列不存在、參數值不是數字、選單文字頁缺少簡中或英文段落或兩者行數不同、錨點等級不合法、評級不是 0 到 4、`CalcCorrectGraph` 的列不是直線段或算出超出範圍或非整數的值、文字檔不等於 `JSON.stringify` 2 空格縮排的標準輸出、有項目不是恰有 `cn` 與 `zh` 且各有非空的 `name`、`summary` 與 `description`，或有不是角色的鍵、`cn` 文字不在頁面中或出現在多頁或英文不同、行號順序檢查不通過、同一項能力的文字來自不同頁面，或引用的來源不在 common.json 時，腳本停止且不寫出資料檔。
+
 ## 遊戲撰寫守則
 
 - 引導外部資源時使用開新視窗，禁止本頁跳轉
@@ -98,7 +111,7 @@
 - 提及遊戲內項目時，必須找到該遊戲內對應的圖片，圖片來源為 [Eldenpedia](https://eldenring.wiki.gg/)
   - 只採用檔案頁授權標示為遊戲素材 (`{{License|game}}`) 的圖片；社群編修圖 (例如檔名含 `Custom`) 不算遊戲內圖片。
   - 圖片下載至 `public/images/`，由首頁的資料來源列出 wiki 檔案頁。大於 96px 的圖片可縮小為 96px，嚴禁其他修改。
-  - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；武器、法術與戰技的圖示改記在 `public/data/armaments/` 各項目的 `icon` (見武器與法術資料產生)。首頁以 `<span data-icon-sources>` 列出 common.json 中每個圖示的檔案頁，並說明一次武器與法術圖示取自 Eldenpedia 的 ER SB Icon 系列、戰技圖示取自《黑夜君臨》的 ERN Icon skill 系列，各檔案頁記錄在項目資料中。
+  - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；武器、法術與戰技的圖示改記在 `public/data/armaments/` 各項目的 `icon` (見武器與法術資料產生)，角色的能力、技藝與絕活圖示改記在 `public/data/characters/` (見角色資料產生)。首頁以 `<span data-icon-sources>` 列出 common.json 中每個圖示的檔案頁，並說明一次武器與法術圖示取自 Eldenpedia 的 ER SB Icon 系列、戰技圖示取自《黑夜君臨》的 ERN Icon skill 系列，各檔案頁記錄在項目資料中。
   - 同一種編排位置的圖片維持相同大小；圖片一律使用 `.icon` class，尺寸只在 `public/styles.css` 依位置設定，不在個別圖片上另外調整：
     - 表格內：48px (`td .icon`)。
     - 表格內的名稱清單 (效果說明、種類欄)：24px (`td .entry .icon`)。

@@ -764,6 +764,14 @@
     "er-arts-cn-text": {
       "title": "EldenRingMapTranslate《艾爾登法環》本篇官方簡體中文戰技文字（社群保存）",
       "url": "https://github.com/heroboy/EldenRingMapTranslate/tree/92dcd5860e2cfb0b6a14b37a30b53db676e5e0b2/mix_translations"
+    },
+    "bwiki-menu-text": {
+      "title": "BWIKI 黑夜君臨資料站《黑夜君臨》官方簡體中文與英文選單文字（社群保存）",
+      "url": "https://wiki.biligame.com/nightreign/index.php?oldid=1131"
+    },
+    "bwiki-menu-text-dlc": {
+      "title": "BWIKI 黑夜君臨資料站《黑夜君臨》DLC 官方簡體中文與英文選單文字（社群保存）",
+      "url": "https://wiki.biligame.com/nightreign/index.php?oldid=1132"
     }
   }
 }
