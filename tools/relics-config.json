@@ -13,7 +13,9 @@
         "EquipParamWeapon": "params/EquipParamWeapon.csv",
         "EquipParamCustomWeapon": "params/EquipParamCustomWeapon.csv",
         "Magic": "params/Magic.csv",
-        "HeroStatusParam": "params/HeroStatusParam.csv"
+        "HeroStatusParam": "params/HeroStatusParam.csv",
+        "SwordArtsParam": "params/SwordArtsParam.csv",
+        "SwordArtsTableParam": "params/SwordArtsTableParam.csv"
       }
     },
     "text": {
@@ -52,7 +54,19 @@
         "incantationZh": "data/zhotw/incantations.json",
         "incantationZhDlc": "data/zhotw/incantations_dlc1.json",
         "incantationEn": "data/engus/incantations.json",
-        "incantationEnDlc": "data/engus/incantations_dlc1.json"
+        "incantationEnDlc": "data/engus/incantations_dlc1.json",
+        "ashesZh": "data/zhotw/ashesofwar.json",
+        "ashesZhDlc": "data/zhotw/ashesofwar_dlc1.json",
+        "ashesEn": "data/engus/ashesofwar.json",
+        "ashesEnDlc": "data/engus/ashesofwar_dlc1.json"
+      }
+    },
+    "erArts": {
+      "repo": "EldenRingExplorer/EldenRingTextExplorer",
+      "commit": "1c24ca2d149d72f8d93c34d710ad8c4a5624fafe",
+      "files": {
+        "nameEn": "text_dump_en/ArtsName.fmg.xml",
+        "captionEn": "text_dump_en/ArtsCaption.fmg.xml"
       }
     }
   },

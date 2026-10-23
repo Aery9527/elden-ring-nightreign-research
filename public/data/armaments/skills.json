@@ -1,0 +1,5812 @@
+{
+  "skills": {
+    "10": {
+      "name": {
+        "zh": "無戰技",
+        "en": "No Skill"
+      },
+      "textId": "10",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": -1,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "No skill.\n\nThis armament has no skill.\nIf the armament in the other hand has a skill, that skill will be used instead."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "100": {
+      "name": {
+        "zh": "獅子斬",
+        "en": "Lion's Claw"
+      },
+      "textId": "100",
+      "icon": {
+        "src": "images/skill-lion-s-claw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lion's_Claw.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Lion's Claw\n\nSkill of the Redmanes, who fought alongside General Radahn.\nSomersault forwards, striking foes with armament."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "101": {
+      "name": {
+        "zh": "貫穿",
+        "en": "Impaling Thrust"
+      },
+      "textId": "101",
+      "icon": {
+        "src": "images/skill-impaling-thrust.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Impaling_Thrust.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Impaling Thrust\n\nSkill that lets piercing armaments overcome enemy shields. Build power, then lunge forward for a strong thrust that pierces an enemy's guard."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "102": {
+      "name": {
+        "zh": "突刺",
+        "en": "Piercing Fang"
+      },
+      "textId": "102",
+      "icon": {
+        "src": "images/skill-piercing-fang.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Piercing_Fang.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Piercing Fang\n\nSkill used by Yura, the Bloody Finger Hunter.\nStarting with the blade held horizontally, make a powerful thrust that cannot be blocked."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "103": {
+      "name": {
+        "zh": "迴旋斬",
+        "en": "Spinning Slash"
+      },
+      "textId": "103",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "en": "Skill: Spinning Slash\n\nSkill favored by dexterous warriors.\nSlash foes as your body spins. Additional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "105": {
+      "name": {
+        "zh": "突擊",
+        "en": "Charge Forth"
+      },
+      "textId": "105",
+      "icon": {
+        "src": "images/skill-charge-forth.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Charge_Forth.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Charge Forth\n\nQuickly charge forward with the armament at the hip, carrying the momentum into a thrust.\nHold to cover a greater distance."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "106": {
+      "name": {
+        "zh": "箭步（上砍）",
+        "en": "Stamp (Upward Cut)"
+      },
+      "textId": "106",
+      "icon": {
+        "src": "images/skill-stamp-upward-cut.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stamp_(Upward_Cut).png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 8
+      },
+      "caption": {
+        "en": "Skill: Stamp (Upward Cut)\n\nBrace armament and step into a low stance that prevents recoil from most enemy attacks.\nFollow up with a strong attack for an upward strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "107": {
+      "name": {
+        "zh": "箭步（迴旋斬）",
+        "en": "Stamp (Sweep)"
+      },
+      "textId": "107",
+      "icon": {
+        "src": "images/skill-stamp-sweep.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stamp_(Sweep).png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 8
+      },
+      "caption": {
+        "en": "Skill: Stamp (Sweep)\n\nBrace armament and step into a low stance that prevents recoil from most enemy attacks.\nFollow up with a strong attack for a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "108": {
+      "name": {
+        "zh": "鮮血徵收",
+        "en": "Blood Tax"
+      },
+      "textId": "108",
+      "icon": {
+        "src": "images/skill-blood-tax.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blood_Tax.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Blood Tax\n\nBlood Oath skill granted by the Lord of Blood.\nTwist to build power, then unleash a flurry of thrusts that rob the target of both their blood and their HP."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "109": {
+      "name": {
+        "zh": "連擊",
+        "en": "Repeating Thrust"
+      },
+      "textId": "109",
+      "icon": {
+        "src": "images/skill-repeating-thrust.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Repeating_Thrust.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 7,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Repeating Thrust\n\nTwist to build power, then unleash a flurry of thrusts."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "110": {
+      "name": {
+        "zh": "盲擊",
+        "en": "Wild Strikes"
+      },
+      "textId": "110",
+      "icon": {
+        "src": "images/skill-wild-strikes.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wild_Strikes.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 2,
+        "R1": 10,
+        "R2": 15
+      },
+      "caption": {
+        "en": "Skill: Wild Strikes\n\nSwing armament with wild abandon.\nHold to continue swinging. Can be followed up with a normal or strong attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "111": {
+      "name": {
+        "zh": "迴旋擊",
+        "en": "Spinning Strikes"
+      },
+      "textId": "111",
+      "icon": {
+        "src": "images/skill-spinning-strikes.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Strikes.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 2,
+        "R1": 10,
+        "R2": 15
+      },
+      "caption": {
+        "en": "Skill: Spinning Strikes\n\nPolearm skill that performs continuous spinning attacks. Hold to continue the attack. Can be followed up with a normal or strong attack. Nullifies projectiles such as arrows while spinning."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "112": {
+      "name": {
+        "zh": "二連斬",
+        "en": "Double Slash"
+      },
+      "textId": "112",
+      "icon": {
+        "src": "images/skill-double-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Double_Slash.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 3
+      },
+      "caption": {
+        "en": "Skill: Double Slash\n\nSkill of superior swordsmen.\nPerform a crossing slash attack from a low stance.\nRepeated inputs allow for up to two follow-up attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "113": {
+      "name": {
+        "zh": "主教衝鋒",
+        "en": "Prelate's Charge"
+      },
+      "textId": "113",
+      "icon": {
+        "src": "images/skill-prelate-s-charge.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Prelate's_Charge.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 7,
+        "R1": -1,
+        "R2": 7
+      },
+      "caption": {
+        "en": "Skill: Prelate's Charge\n\nSlam armament into the ground to create a surge of flames, then charge in.\nHold to continue the charge."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "114": {
+      "name": {
+        "zh": "居合",
+        "en": "Unsheathe"
+      },
+      "textId": "114",
+      "icon": {
+        "src": "images/skill-unsheathe.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Unsheathe.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 10,
+        "R2": 15
+      },
+      "caption": {
+        "en": "Skill: Unsheathe\n\nSkill of swordsmen from the Land of Reeds.\nSheathe blade, holding it at the hip in a composed stance.\nFollow up with a normal or strong attack to perform a swift slash attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "115": {
+      "name": {
+        "zh": "準備架式",
+        "en": "Square Off"
+      },
+      "textId": "115",
+      "icon": {
+        "src": "images/skill-square-off.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Square_Off.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 6,
+        "R2": 8
+      },
+      "caption": {
+        "en": "Skill: Square Off\n\nThis skill starts with the sword held level.\nFollow up with a normal attack to slash upwards through enemy's guard, or a strong attack to perform a running thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "116": {
+      "name": {
+        "zh": "狩獵巨人",
+        "en": "Giant Hunt"
+      },
+      "textId": "116",
+      "icon": {
+        "src": "images/skill-giant-hunt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Giant_Hunt.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Giant Hunt\n\nSkill developed for confronting gigantic foes.\nStep forward from a low stance, carrying the momentum into a sudden upward thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "118": {
+      "name": {
+        "zh": "羅蕾塔的斬擊",
+        "en": "Loretta's Slash"
+      },
+      "textId": "118",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Loretta's Slash\n\nSkill of Loretta the Royal Knight.\nLeap forward, imbuing the blade with glintstone, then descend, accelerating into a sweeping slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "119": {
+      "name": {
+        "zh": "雙吻毒蛾",
+        "en": "Poison Moth Flight"
+      },
+      "textId": "119",
+      "icon": {
+        "src": "images/skill-poison-moth-flight.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Poison_Moth_Flight.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 7,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Poison Moth Flight\n\nSlash with a poison-infused blade.\nIf the follow-up strike lands on a poisoned foe, it will deal significant damage."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "120": {
+      "name": {
+        "zh": "轉啊轉",
+        "en": "Spinning Weapon"
+      },
+      "textId": "120",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Spinning Weapon\n\nDefensive skill employed by Carian princesses.\nLifts armament into mid-air, then makes it spin violently. Those it touches will suffer successive attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "122": {
+      "name": {
+        "zh": "風暴襲擊",
+        "en": "Storm Assault"
+      },
+      "textId": "122",
+      "icon": {
+        "src": "images/skill-storm-assault.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Assault.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 22,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Storm Assault\n\nOne of the skills that channel the tempests of Stormveil.\nLeap forward through surrounding storm winds and thrust armament downward. The attack will produce more storm winds at the point of impact."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "123": {
+      "name": {
+        "zh": "喚起風暴",
+        "en": "Stormcaller"
+      },
+      "textId": "123",
+      "icon": {
+        "src": "images/skill-stormcaller.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stormcaller.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": 11
+      },
+      "caption": {
+        "en": "Skill: Stormcaller\n\nOne of the skills that channel the tempests of Stormveil. Spin armament to create surrounding storm winds. Repeated inputs allow for up to two follow-up attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "124": {
+      "name": {
+        "zh": "劍舞",
+        "en": "Sword Dance"
+      },
+      "textId": "124",
+      "icon": {
+        "src": "images/skill-sword-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sword_Dance.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Skill: Sword Dance\n\nQuickly close in to perform a series of spinning upward slashes.\nFollow up with an additional input to finish with a downward slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "125": {
+      "name": {
+        "zh": null,
+        "en": "Spinning Chain"
+      },
+      "textId": "125",
+      "icon": {
+        "src": "images/skill-spinning-chain.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Chain.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": 8,
+        "R2": 10
+      },
+      "caption": {
+        "en": "Skill: Spinning Chain\n\nSpins the striking part of a flail at high speed to attack.\nFollow up with a normal or strong attack to link the momentum of this skill into a successive attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "200": {
+      "name": {
+        "zh": "輝劍圓陣",
+        "en": "Glintblade Phalanx"
+      },
+      "textId": "200",
+      "icon": {
+        "src": "images/skill-glintblade-phalanx.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintblade_Phalanx.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 4
+      },
+      "caption": {
+        "en": "Skill: Glintblade Phalanx\n\nSkill used by the enchanted knights who served the Carian royal family. Form an arch of magic glintblades overhead, which will attack foes automatically. Follow up with a strong attack to chain this skill into a lunging thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "201": {
+      "name": {
+        "zh": "神聖刀刃",
+        "en": "Sacred Blade"
+      },
+      "textId": "201",
+      "icon": {
+        "src": "images/skill-sacred-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Blade.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 19,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Sacred Blade\n\nGrants armament's attacks holy essence and fires off a golden blade projectile.\nThe armament retains its holy essence for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "202": {
+      "name": {
+        "zh": "冰槍",
+        "en": "Ice Spear"
+      },
+      "textId": "202",
+      "icon": {
+        "src": "images/skill-ice-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ice_Spear.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Ice Spear\n\nSkill of the warriors who served Lunar Princess Ranni.\nSpin armament to release cold magic, then channel it into a piercing spear of ice."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "203": {
+      "name": {
+        "zh": "輝石魔礫",
+        "en": "Glintstone Pebble"
+      },
+      "textId": "203",
+      "icon": {
+        "src": "images/skill-glintstone-pebble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintstone_Pebble.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": 4
+      },
+      "caption": {
+        "en": "Skill: Glintstone Pebble\n\nSkill that employs the glintstone sorcery of the same name.\nFollow up with a strong attack to chain this skill into a lunging thrust, performed while the armament is still imbued with glintstone."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "204": {
+      "name": {
+        "zh": "鮮血斬擊",
+        "en": "Bloody Slash"
+      },
+      "textId": "204",
+      "icon": {
+        "src": "images/skill-bloody-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloody_Slash.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Bloody Slash\n\nBlood Oath skill granted by the Lord of Blood.\nFrom a low stance, coat the blade in your own blood to unleash a rending blood slash in a wide arc."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "205": {
+      "name": {
+        "zh": "奪命拳",
+        "en": "Lifesteal Fist"
+      },
+      "textId": "205",
+      "icon": {
+        "src": "images/skill-lifesteal-fist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lifesteal_Fist.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Lifesteal Fist\n\nSkill that demonstrates mastery of the art of controlling vital energies.\nA slow, controlled punch with an energy-infused fist that renders foes unconscious and steals their HP. Only effective against foes of human build."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "207": {
+      "name": {
+        "zh": "熔岩火漿",
+        "en": "Eruption"
+      },
+      "textId": "207",
+      "icon": {
+        "src": "images/skill-eruption.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Eruption.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Eruption\n\nSkill of the knights who serve at Volcano Manor.\nSlam armament into the ground, spawning roiling lava which spouts up upon release."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "208": {
+      "name": {
+        "zh": "祈禱一擊",
+        "en": "Prayerful Strike"
+      },
+      "textId": "208",
+      "icon": {
+        "src": "images/skill-prayerful-strike.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Prayerful_Strike.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Prayerful Strike\n\nRaise armament aloft in prayer, then slam it into the ground.\nThis inspired blow restores HP to the self and nearby allies if it successfully hits."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "209": {
+      "name": {
+        "zh": "重力",
+        "en": "Gravitas"
+      },
+      "textId": "209",
+      "icon": {
+        "src": "images/skill-gravitas.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gravitas.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 13,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Gravitas\n\nSkill originating from the Alabaster Lords, who had skin of stone.\nThrust the armament into the ground to create a gravity well.\nIn addition to dealing damage, this attack pulls enemies in."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "210": {
+      "name": {
+        "zh": "風暴刃",
+        "en": "Storm Blade"
+      },
+      "textId": "210",
+      "icon": {
+        "src": "images/skill-storm-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Blade.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Skill: Storm Blade\n\nLost skill of Stormveil.\nSurround armament with shearing storm winds that can be fired forward.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "212": {
+      "name": {
+        "zh": "撼地",
+        "en": "Earthshaker"
+      },
+      "textId": "212",
+      "icon": {
+        "src": "images/skill-earthshaker.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Earthshaker.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "en": "Skill: Earthshaker\n\nThrust armament into the ground, then gather strength to unleash an earth-shaking shockwave.\nFollow up with a strong attack to swing the armament in a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "213": {
+      "name": {
+        "zh": "黃金大地",
+        "en": "Golden Land"
+      },
+      "textId": "213",
+      "icon": {
+        "src": "images/skill-golden-land.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Land.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "en": "Skill: Golden Land\n\nThrust armament into the ground, then gather strength to unleash a blast of sacred energy that coalesces into golden darts. Follow up with a strong attack to swing the armament in a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "214": {
+      "name": {
+        "zh": "炎擊",
+        "en": "Flaming Strike"
+      },
+      "textId": "214",
+      "icon": {
+        "src": "images/skill-flaming-strike.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flaming_Strike.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": 10
+      },
+      "caption": {
+        "en": "Skill: Flaming Strike\n\nSkill that emits flame in a wide frontward arc.\nFollow up with a strong attack to perform a lunging, sweeping strike.\nThis will also coat the armament in fire."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "216": {
+      "name": {
+        "zh": "落雷",
+        "en": "Thunderbolt"
+      },
+      "textId": "216",
+      "icon": {
+        "src": "images/skill-thunderbolt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thunderbolt.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 10
+      },
+      "caption": {
+        "en": "Skill: Thunderbolt\n\nSkill used by the capital's ancient dragon cult.\nRaise armament aloft to call down a bolt of lightning.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "217": {
+      "name": {
+        "zh": "雷擊斬",
+        "en": "Lightning Slash"
+      },
+      "textId": "217",
+      "icon": {
+        "src": "images/skill-lightning-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lightning_Slash.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Lightning Slash\n\nCall down a bolt of lightning into armament, then swing it down to create an explosive shock.\nThe armament retains the lightning enchantment for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "218": {
+      "name": {
+        "zh": "偉哉卡利亞",
+        "en": "Carian Grandeur"
+      },
+      "textId": "218",
+      "icon": {
+        "src": "images/skill-carian-grandeur.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Grandeur.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 26,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Carian Grandeur\n\nCarian royal prestige embodied in a skill.\nTransform blade into a magical greatsword and swing it down.\nCan be charged to increase its power by up to two levels."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "219": {
+      "name": {
+        "zh": "卡利亞大劍",
+        "en": "Carian Greatsword"
+      },
+      "textId": "219",
+      "icon": {
+        "src": "images/skill-carian-greatsword.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Greatsword.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Carian Greatsword\n\nCarian royal prestige embodied in a skill.\nTransform blade into a magical greatsword and swing it down.\nCan be charged to increase its power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "220": {
+      "name": {
+        "zh": "真空斬",
+        "en": "Vacuum Slice"
+      },
+      "textId": "220",
+      "icon": {
+        "src": "images/skill-vacuum-slice.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Vacuum_Slice.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Vacuum Slice\n\nLost skill of ancient heroes.\nHold the armament aloft to surround it with a shearing vacuum, then launch it forwards as a blade-like projectile."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "221": {
+      "name": {
+        "zh": "黑焰漩渦",
+        "en": "Black Flame Tornado"
+      },
+      "textId": "221",
+      "icon": {
+        "src": "images/skill-black-flame-tornado.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Black_Flame_Tornado.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Black Flame Tornado\n\nSpin armament overhead and then plunge it into the ground to summon a raging vortex of black flames.\nHold to create an initial flame tornado while spinning the armament."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "222": {
+      "name": {
+        "zh": "神聖光環",
+        "en": "Sacred Ring of Light"
+      },
+      "textId": "222",
+      "icon": {
+        "src": "images/skill-sacred-ring-of-light.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Ring_of_Light.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": 9
+      },
+      "caption": {
+        "en": "Skill: Sacred Ring of Light\n\nSkill used by the commanders of the Cleanrot Knights. Gather a sacred ring of light in the armament, then fire it forwards.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "224": {
+      "name": {
+        "zh": "血刃",
+        "en": "Blood Blade"
+      },
+      "textId": "224",
+      "icon": {
+        "src": "images/skill-blood-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blood_Blade.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": 3
+      },
+      "caption": {
+        "en": "Skill: Blood Blade\n\nWound self to coat the armament with blood, then unleash an airborne blood blade that causes hemorrhaging.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "225": {
+      "name": {
+        "zh": "幻影共擊",
+        "en": "Phantom Slash"
+      },
+      "textId": "225",
+      "icon": {
+        "src": "images/skill-phantom-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Phantom_Slash.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": 8
+      },
+      "caption": {
+        "en": "Skill: Phantom Slash\n\nSkill inspired by the fond remembrances of the Night's Cavalry. Creates an apparition of the knights' former instructor who guides a joint lunging upward swing. Additional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "226": {
+      "name": {
+        "zh": "幻影槍",
+        "en": "Spectral Lance"
+      },
+      "textId": "226",
+      "icon": {
+        "src": "images/skill-spectral-lance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spectral_Lance.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Spectral Lance\n\nSkill of the headless Mausoleum Knights.\nHurl a phantasmic spear at foes."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "227": {
+      "name": {
+        "zh": "寒氣凍霧",
+        "en": "Chilling Mist"
+      },
+      "textId": "227",
+      "icon": {
+        "src": "images/skill-chilling-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Chilling_Mist.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Chilling Mist\n\nCoat armament in frost, and then slash, spreading frigid mist forwards.\nThe armament retains its frost for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "228": {
+      "name": {
+        "zh": "毒霧",
+        "en": "Poisonous Mist"
+      },
+      "textId": "228",
+      "icon": {
+        "src": "images/skill-poisonous-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Poisonous_Mist.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Poisonous Mist\n\nBathe armament in poison, and then slash, spreading toxic mist forwards.\nThe armament retains its poison for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "300": {
+      "name": {
+        "zh": "盾牌衝擊",
+        "en": "Shield Bash"
+      },
+      "textId": "300",
+      "icon": {
+        "src": "images/skill-shield-bash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shield_Bash.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Shield Bash\n\nBrace behind shield before using bodyweight to ram foes while maintaining guarding stance.\nWeaker enemies will be shoved backwards, and can even be staggered."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "301": {
+      "name": {
+        "zh": "鐵壁盾防",
+        "en": "Barricade Shield"
+      },
+      "textId": "301",
+      "icon": {
+        "src": "images/skill-barricade-shield.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barricade_Shield.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Barricade Shield\n\nSkill made famous by Sir Neidhardt.\nFocus your energy into the shield, temporarily hardening it to deflect greater blows."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "302": {
+      "name": {
+        "zh": "格擋",
+        "en": "Parry"
+      },
+      "textId": "302",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Parry\n\nUse this skill in time with a foe's melee attack to deflect it and break that foe's stance.\nThis provides an opening to perform a critical hit."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "303": {
+      "name": {
+        "zh": null,
+        "en": "Buckler Parry"
+      },
+      "textId": "303",
+      "icon": {
+        "src": "images/skill-buckler-parry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Buckler_Parry.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Buckler Parry\n\nUse this skill in time with a foe's melee attack to deflect it and break that foe's stance.\nThis is faster than a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "305": {
+      "name": {
+        "zh": "卡利亞式奉還",
+        "en": "Carian Retaliation"
+      },
+      "textId": "305",
+      "icon": {
+        "src": "images/skill-carian-retaliation.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Retaliation.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Carian Retaliation\n\nSwing the shield to dispel incoming sorceries and incantations, transforming the magic into retaliatory glintblades.\nCan also be used in the same way as a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "306": {
+      "name": {
+        "zh": "風暴障壁",
+        "en": "Storm Wall"
+      },
+      "textId": "306",
+      "icon": {
+        "src": "images/skill-storm-wall.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Wall.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Storm Wall\n\nSwing the shield to create a wall of storm winds in front of you, deflecting arrows and other such physical projectiles.\nCan also be used in the same way as a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "307": {
+      "name": {
+        "zh": "黃金格擋",
+        "en": "Golden Parry"
+      },
+      "textId": "307",
+      "icon": {
+        "src": "images/skill-golden-parry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Parry.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Golden Parry\n\nPerform an Erdtree incantation and swing the shield to deflect enemy attacks and break their stance.\nEffective even at a slight distance."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "308": {
+      "name": {
+        "zh": "突進衝擊",
+        "en": "Shield Crash"
+      },
+      "textId": "308",
+      "icon": {
+        "src": "images/skill-shield-crash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shield_Crash.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Shield Crash\n\nTwo-hand the shield and charge forwards while maintaining guard. Weaker enemies will be shoved backwards and can even be staggered.\nHold to extend the duration of the charge forwards."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "309": {
+      "name": {
+        "zh": "托普斯的力場",
+        "en": "Thops's Barrier"
+      },
+      "textId": "309",
+      "icon": {
+        "src": "images/skill-thops-s-barrier.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thops's_Barrier.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Thops's Barrier\n\nErect a magical forcefield while swinging the shield to deflect sorceries and incantations.\nCan also be used in the same way as a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "400": {
+      "name": {
+        "zh": "貫穿射擊",
+        "en": "Through and Through"
+      },
+      "textId": "400",
+      "icon": {
+        "src": "images/skill-through-and-through.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Through_and_Through.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 9,
+        "R2": 9
+      },
+      "caption": {
+        "en": "Skill: Through and Through\n\nPowerful archery skill using a greatbow held in an oblique stance.\nReady the greatbow, then twist the bowstring to fire a mighty greatarrow that can penetrate through enemies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "401": {
+      "name": {
+        "zh": "連續射擊",
+        "en": "Barrage"
+      },
+      "textId": "401",
+      "icon": {
+        "src": "images/skill-barrage.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barrage.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 2,
+        "R2": 2
+      },
+      "caption": {
+        "en": "Skill: Barrage\n\nArchery skill using a bow held horizontally.\nReady the bow, then fire off a rapid succession of shots faster than the eye can see."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "402": {
+      "name": {
+        "zh": "拉滿弓",
+        "en": "Mighty Shot"
+      },
+      "textId": "402",
+      "icon": {
+        "src": "images/skill-mighty-shot.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Mighty_Shot.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 6,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Skill: Mighty Shot\n\nArchery skill performed from an oblique stance.\nReady the bow, then pull the bowstring to its limit to enhance the power of the shot, penetrating the enemy's guard."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "404": {
+      "name": {
+        "zh": "宿靈射擊",
+        "en": "Enchanted Shot"
+      },
+      "textId": "404",
+      "icon": {
+        "src": "images/skill-enchanted-shot.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Enchanted_Shot.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 8,
+        "R2": 8
+      },
+      "caption": {
+        "en": "Skill: Enchanted Shot\n\nArchery skill that enlivens the arrow with spiritual essence.\nThe resulting shot will fly faster than regular shots and change its trajectory to follow the target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "405": {
+      "name": {
+        "zh": "對空射擊",
+        "en": "Sky Shot"
+      },
+      "textId": "405",
+      "icon": {
+        "src": "images/skill-sky-shot.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sky_Shot.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 3,
+        "R2": 3
+      },
+      "caption": {
+        "en": "Skill: Sky Shot\n\nArchery skill performed from a low stance.\nReady the bow, then fire an arrow high up into the air, arcing so as to strike the enemy from above when it comes down."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "406": {
+      "name": {
+        "zh": "箭雨",
+        "en": "Rain of Arrows"
+      },
+      "textId": "406",
+      "icon": {
+        "src": "images/skill-rain-of-arrows.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rain_of_Arrows.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 20,
+        "R2": 20
+      },
+      "caption": {
+        "en": "Skill: Rain of Arrows\n\nArchery skill performed from a low stance.\nReady the bow, then fire a burst of arrows into the sky to shower the enemy with projectiles."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "501": {
+      "name": {
+        "zh": "凍霜踏地",
+        "en": "Hoarfrost Stomp"
+      },
+      "textId": "501",
+      "icon": {
+        "src": "images/skill-hoarfrost-stomp.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Hoarfrost_Stomp.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Hoarfrost Stomp\n\nStomp hard to spread a trail of freezing mist on the ground.\nThe mist applies the frost status effect."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "502": {
+      "name": {
+        "zh": "風暴足",
+        "en": "Storm Stomp"
+      },
+      "textId": "502",
+      "icon": {
+        "src": "images/skill-storm-stomp.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Stomp.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Storm Stomp\n\nOne of the skills that channel the tempests of Stormveil.\nStomp hard on the ground to kick up a momentary storm."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "503": {
+      "name": {
+        "zh": "踢擊",
+        "en": "Kick"
+      },
+      "textId": "503",
+      "icon": {
+        "src": "images/skill-kick.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Kick.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Kick\n\nPush an enemy back with a high kick.\nEffective against enemies who are guarding, and can break a foe's stance.\nSometimes a simple tool is the most effective."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "504": {
+      "name": {
+        "zh": "雷電羊球",
+        "en": "Lightning Ram"
+      },
+      "textId": "504",
+      "icon": {
+        "src": "images/skill-lightning-ram.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lightning_Ram.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "en": "Skill: Lightning Ram\n\nSkill inspired by tumbling rams.\nLet out a bleat, then tumble forwards, clad in lightning.\nTumbles can be repeated in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "505": {
+      "name": {
+        "zh": "紅獅子火焰",
+        "en": "Flame of the Redmanes"
+      },
+      "textId": "505",
+      "icon": {
+        "src": "images/skill-flame-of-the-redmanes.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_of_the_Redmanes.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Flame of the Redmanes\n\nSkill of the Redmanes, who fought alongside General Radahn.\nProduce a powerful burst of flames in a wide frontward arc."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "506": {
+      "name": {
+        "zh": "墜落震擊",
+        "en": "Ground Slam"
+      },
+      "textId": "506",
+      "icon": {
+        "src": "images/skill-ground-slam.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ground_Slam.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Ground Slam\n\nJump up high into the air and crash down on the ground ahead.\nThe resulting pratfall sends a powerful shockwave in all directions."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "507": {
+      "name": {
+        "zh": "黃金墜落震擊",
+        "en": "Golden Slam"
+      },
+      "textId": "507",
+      "icon": {
+        "src": "images/skill-golden-slam.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Slam.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 22,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Golden Slam\n\nSkill of the avatars who protect Minor Erdtrees.\nJump up high into the air and crash down on the ground ahead.\nThe resulting pratfall sends golden shockwaves in all directions."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "508": {
+      "name": {
+        "zh": "黑暗波動",
+        "en": "Waves of Darkness"
+      },
+      "textId": "508",
+      "icon": {
+        "src": "images/skill-waves-of-darkness.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Waves_of_Darkness.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "en": "Skill: Waves of Darkness\n\nPlunge armament into the ground to release three waves of darkness.\nFollow up with a strong attack to swing the armament in a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "509": {
+      "name": {
+        "zh": "荷萊‧露的撼地",
+        "en": "Hoarah Loux's Earthshaker"
+      },
+      "textId": "509",
+      "icon": {
+        "src": "images/skill-hoarah-loux-s-earthshaker.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Hoarah_Loux's_Earthshaker.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 16
+      },
+      "caption": {
+        "en": "Skill: Hoarah Loux's Earthshaker\n\nSlam both hands onto the ground to violently shake the earth and unleash a shockwave.\nFollow up with an additional input to slam the ground again."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "600": {
+      "name": {
+        "zh": "決心",
+        "en": "Determination"
+      },
+      "textId": "600",
+      "icon": {
+        "src": "images/skill-determination.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Determination.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Determination\n\nA knightly skill.\nHold the flat of the armament to your face and pledge your resolve, powering up your next attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "601": {
+      "name": {
+        "zh": "侍王騎士的決心",
+        "en": "Royal Knight's Resolve"
+      },
+      "textId": "601",
+      "icon": {
+        "src": "images/skill-royal-knight-s-resolve.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Royal_Knight's_Resolve.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Royal Knight's Resolve\n\nSkill of the knights who once served the Elden Lord.\nHold the flat of the armament to your face and pledge your resolve, greatly powering up your next attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "602": {
+      "name": {
+        "zh": "暗殺辦法",
+        "en": "Assassin's Gambit"
+      },
+      "textId": "602",
+      "icon": {
+        "src": "images/skill-assassin-s-gambit.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Assassin's_Gambit.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Assassin's Gambit\n\nSkill that masks the user's presence at the cost of a self-inflicted wound.\nGrants near-invisibility and silences footsteps."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "603": {
+      "name": {
+        "zh": "黃金樹立誓",
+        "en": "Golden Vow"
+      },
+      "textId": "603",
+      "icon": {
+        "src": "images/skill-golden-vow.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Vow.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 40,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Golden Vow\n\nSkill passed down from antiquity among the knights of the capital. Raise armament aloft and pledge to honor the Erdtree in battle, granting self and nearby allies increased attack power and defense."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "604": {
+      "name": {
+        "zh": "聖律",
+        "en": "Sacred Order"
+      },
+      "textId": "604",
+      "icon": {
+        "src": "images/skill-sacred-order.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Order.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 18,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Sacred Order\n\nSkill of the Golden Order fundamentalist knights.\nPerform a salute and grant the armament holy essence.\nHighly effective against Those Who Live in Death."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "605": {
+      "name": {
+        "zh": "共享聖律",
+        "en": "Shared Order"
+      },
+      "textId": "605",
+      "icon": {
+        "src": "images/skill-shared-order.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shared_Order.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Shared Order\n\nSkill of the Golden Order fundamentalist knights.\nGrant the armament and those of nearby allies holy essence.\nHighly effective against Those Who Live in Death."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "606": {
+      "name": {
+        "zh": "切腹",
+        "en": "Seppuku"
+      },
+      "textId": "606",
+      "icon": {
+        "src": "images/skill-seppuku.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Seppuku.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Seppuku\n\nA forbidden technique used by swordsmen from the Land of Reeds. Plunge the blade into your stomach to stain it with blood. Increases attack power and improves ability to inflict blood loss."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "607": {
+      "name": {
+        "zh": "岩石劍",
+        "en": "Cragblade"
+      },
+      "textId": "607",
+      "icon": {
+        "src": "images/skill-cragblade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Cragblade.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Cragblade\n\nSkill that manipulates gravity.\nBury the armament in the ground, pulling rocks from the earth to reinforce it. Increases attack power and makes it easier to break enemy stance."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "650": {
+      "name": {
+        "zh": "野蠻咆哮",
+        "en": "Barbaric Roar"
+      },
+      "textId": "650",
+      "icon": {
+        "src": "images/skill-barbaric-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barbaric_Roar.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Barbaric Roar\n\nLet loose a bestial roar to rally the spirit and increase attack power.\nWhile active, strong attacks change to savage combo attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "651": {
+      "name": {
+        "zh": "戰吼",
+        "en": "War Cry"
+      },
+      "textId": "651",
+      "icon": {
+        "src": "images/skill-war-cry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_War_Cry.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: War Cry\n\nGive a war cry to rally the spirit and increase attack power.\nWhile active, strong attacks change to charging attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "652": {
+      "name": {
+        "zh": "野獸咆哮",
+        "en": "Beast's Roar"
+      },
+      "textId": "652",
+      "icon": {
+        "src": "images/skill-beast-s-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Beast's_Roar.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Beast's Roar\n\nUnleash a beastly roar, rending the air as a forward-travelling projectile."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "653": {
+      "name": {
+        "zh": "山妖咆哮",
+        "en": "Troll's Roar"
+      },
+      "textId": "653",
+      "icon": {
+        "src": "images/skill-troll-s-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Troll's_Roar.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Skill: Troll's Roar\n\nLook into the distance and let out an intense roar, generating a powerful shockwave that blows back surrounding foes.\nFollow up with a strong attack to slam the armament down."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "654": {
+      "name": {
+        "zh": "誇耀咆哮",
+        "en": "Braggart's Roar"
+      },
+      "textId": "654",
+      "icon": {
+        "src": "images/skill-braggart-s-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Braggart's_Roar.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Braggart's Roar\n\nDeclare your presence with a boastful roar.\nRaises attack power, defense, and stamina recovery speed."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "700": {
+      "name": {
+        "zh": "忍耐",
+        "en": "Endure"
+      },
+      "textId": "700",
+      "icon": {
+        "src": "images/skill-endure.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Endure.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Endure\n\nAssume an anchored stance to brace for incoming attacks, briefly boosting poise.\nDamage taken while using this skill is reduced."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "701": {
+      "name": {
+        "zh": "無敵",
+        "en": "Vow of the Indomitable"
+      },
+      "textId": "701",
+      "icon": {
+        "src": "images/skill-vow-of-the-indomitable.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Vow_of_the_Indomitable.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Vow of the Indomitable\n\nSkill of the ancient warriors of the Erdtree.\nHold shield aloft to imbue yourself with golden power, granting momentary invincibility."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "702": {
+      "name": {
+        "zh": "聖域",
+        "en": "Holy Ground"
+      },
+      "textId": "702",
+      "icon": {
+        "src": "images/skill-holy-ground.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Holy_Ground.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Holy Ground\n\nRaise shield to create an Erdtree-consecrated area that continuously restores HP and boosts defense for self and allies inside it."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "800": {
+      "name": {
+        "zh": "碎步",
+        "en": "Quickstep"
+      },
+      "textId": "800",
+      "icon": {
+        "src": "images/skill-quickstep.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Quickstep.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Quickstep\n\nSkill prized by the crafty and fleet of foot.\nPerform a quickstep maneuver that allows for circling around lock-on targets."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "801": {
+      "name": {
+        "zh": "獵犬步法",
+        "en": "Bloodhound's Step"
+      },
+      "textId": "801",
+      "icon": {
+        "src": "images/skill-bloodhound-s-step.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodhound's_Step.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Bloodhound's Step\n\nSkill that allows the user to become temporarily invisible while dodging at high speed. Moves faster and travels farther than a regular quickstep.\nThis skill can be used to circle around lock-on targets."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "802": {
+      "name": {
+        "zh": "潛霧猛禽",
+        "en": "Raptor of the Mists"
+      },
+      "textId": "802",
+      "icon": {
+        "src": "images/skill-raptor-of-the-mists.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Raptor_of_the_Mists.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Raptor of the Mists\n\nDuck into a low stance, momentarily vanishing.\nIf an enemy attack connects, avian wings will allow for a quick escape into the air."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "850": {
+      "name": {
+        "zh": "白影誘惑",
+        "en": "White Shadow's Lure"
+      },
+      "textId": "850",
+      "icon": {
+        "src": "images/skill-white-shadow-s-lure.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_White_Shadow's_Lure.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: White Shadow's Lure\n\nHold armament in a brief, silent prayer to create a white shadow.\nThe apparition lures in foes of human build who are not in combat, drawing their aggression. Effective on demi-humans even if they are already in a combat state."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1000": {
+      "name": {
+        "zh": null,
+        "en": "Surge of Faith"
+      },
+      "textId": "1000",
+      "icon": {
+        "src": "images/skill-surge-of-faith.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Surge_of_Faith.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": 15
+      },
+      "caption": {
+        "en": "Unique Skill: Surge of Faith\n\nSet the flames of Birac's faith ablaze in the cranial vessel, then raise it aloft to rain down fireballs in all directions.\nRepeated inputs will continue to raise the armament aloft, continuing the attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1001": {
+      "name": {
+        "zh": null,
+        "en": "Flame Spit"
+      },
+      "textId": "1001",
+      "icon": {
+        "src": "images/skill-flame-spit.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_Spit.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 28,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Flame Spit\n\nReady the shield, then launch a fireball from the barrel.\nThe fireball explodes on impact."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1002": {
+      "name": {
+        "zh": null,
+        "en": "Tongues of Fire"
+      },
+      "textId": "1002",
+      "icon": {
+        "src": "images/skill-tongues-of-fire.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Tongues_of_Fire.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Tongues of Fire\n\nReady the shield, then spray violent jets of fire from the tongues protruding from its maw.\nHold to continue spraying fire. This skill can be used while walking."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1003": {
+      "name": {
+        "zh": null,
+        "en": "Oracular Bubble"
+      },
+      "textId": "1003",
+      "icon": {
+        "src": "images/skill-oracular-bubble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Oracular_Bubble.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Unique Skill: Oracular Bubble\n\nBlow on the horn to release a magic bubble.\nThe bubble floats gently through the air towards its target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1004": {
+      "name": {
+        "zh": null,
+        "en": "Bubble Shower"
+      },
+      "textId": "1004",
+      "icon": {
+        "src": "images/skill-bubble-shower.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bubble_Shower.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Bubble Shower\n\nBlow on the horn to release a spume of magic bubbles.\nThe bubbles float gently before raining down on the target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1005": {
+      "name": {
+        "zh": null,
+        "en": "Great Oracular Bubble"
+      },
+      "textId": "1005",
+      "icon": {
+        "src": "images/skill-great-oracular-bubble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Great_Oracular_Bubble.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Great Oracular Bubble\n\nBlow on the horn to release a massive magic bubble.\nThe bubble floats gently through the air towards its target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1006": {
+      "name": {
+        "zh": null,
+        "en": "Sea of Magma"
+      },
+      "textId": "1006",
+      "icon": {
+        "src": "images/skill-sea-of-magma.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sea_of_Magma.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "en": "Unique Skill: Sea of Magma\n\nSwing a molten whip overhead to temporarily cover the surrounding area in a sea of magma.\nHold to continue swinging the lava whip."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1007": {
+      "name": {
+        "zh": null,
+        "en": "Viper Bite"
+      },
+      "textId": "1007",
+      "icon": {
+        "src": "images/skill-viper-bite.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Viper_Bite.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Viper Bite\n\nGive the shield a quick shake to temporarily bring the bronze viper to life, inciting it to lash out and bite foes."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1008": {
+      "name": {
+        "zh": null,
+        "en": "Moonlight Greatsword"
+      },
+      "textId": "1008",
+      "icon": {
+        "src": "images/skill-moonlight-greatsword.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Moonlight_Greatsword.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 32,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Moonlight Greatsword\n\nRaise the sword aloft, bathing it in the light of the dark moon.\nTemporarily increases magic attack power and imbues blade with frost.\nCharged attacks release blasts of moonlight."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1009": {
+      "name": {
+        "zh": null,
+        "en": "Siluria's Woe"
+      },
+      "textId": "1009",
+      "icon": {
+        "src": "images/skill-siluria-s-woe.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Siluria's_Woe.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Siluria's Woe\n\nThrust the treespear in a spiraling motion, surrounding it in a vortex of wind.\nCharged attacks have the power to blow away enemies and can fire the tornado forwards."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1010": {
+      "name": {
+        "zh": null,
+        "en": "Rallying Standard"
+      },
+      "textId": "1010",
+      "icon": {
+        "src": "images/skill-rallying-standard.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rallying_Standard.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Rallying Standard\n\nHoist the war banner aloft and give a rallying command.\nRaises attack power and defense for self and nearby allies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1011": {
+      "name": {
+        "zh": null,
+        "en": "Bear Witness!"
+      },
+      "textId": "1011",
+      "icon": {
+        "src": "images/skill-bear-witness.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bear_Witness!.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Bear Witness!\n\nGrant the small dragon a fleeting glimpse of life and thrust it skyward, spewing flames over a wide frontward area."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1012": {
+      "name": {
+        "zh": null,
+        "en": "Eochaid's Dancing Blade"
+      },
+      "textId": "1012",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Eochaid's Dancing Blade\n\nInfuse the sword with energy, then fling it forwards in a corkscrew attack. The sword continuously deals damage while violently spinning.\nCharge the attack to increase reach and duration of the spin."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1013": {
+      "name": {
+        "zh": null,
+        "en": "Soul Stifler"
+      },
+      "textId": "1013",
+      "icon": {
+        "src": "images/skill-soul-stifler.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Soul_Stifler.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Soul Stifler\n\nRaise the greathorn's wings to summon a soul-sapping miasma.\nEnemies in the affected area will temporarily suffer from reduced defense."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1014": {
+      "name": {
+        "zh": null,
+        "en": "Taker's Flames"
+      },
+      "textId": "1014",
+      "icon": {
+        "src": "images/skill-taker-s-flames.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Taker's_Flames.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Taker's Flames\n\nRaise the sacred sword aloft to set it ablaze with blasphemous flames, then bring it down to fire off a forward blast.\nThe flames steal HP from those they touch."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1015": {
+      "name": {
+        "zh": null,
+        "en": "Shriek of Milos"
+      },
+      "textId": "1015",
+      "icon": {
+        "src": "images/skill-shriek-of-milos.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shriek_of_Milos.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Shriek of Milos\n\nLets out a horrific cursed scream that reduces all damage negation and status resistances for nearby foes.\nWhile active, strong attacks will change to a combo attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1016": {
+      "name": {
+        "zh": null,
+        "en": "Reduvia Blood Blade"
+      },
+      "textId": "1016",
+      "icon": {
+        "src": "images/skill-reduvia-blood-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Reduvia_Blood_Blade.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Unique Skill: Reduvia Blood Blade\n\nSlash with the wicked dagger, transforming its never-drying bloodstains into airborne blood blades that cause hemorrhaging.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1017": {
+      "name": {
+        "zh": null,
+        "en": "Glintstone Dart"
+      },
+      "textId": "1017",
+      "icon": {
+        "src": "images/skill-glintstone-dart.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintstone_Dart.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 4
+      },
+      "caption": {
+        "en": "Unique Skill: Glintstone Dart\n\nSkill that builds from the Glintstone Pebble sorcery.\nCharge the skill to upgrade it to Glintstone Dart.\nFollow up with a strong attack to chain this skill into a lunging thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1018": {
+      "name": {
+        "zh": null,
+        "en": "Flowing Form"
+      },
+      "textId": "1018",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Flowing Form\n\nTemporarily transforms armament into its liquid form.\nSwing the armament like a whip to perform a sweeping slice over a wide area."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1019": {
+      "name": {
+        "zh": null,
+        "en": "Night-and-Flame Stance"
+      },
+      "textId": "1019",
+      "icon": {
+        "src": "images/skill-night-and-flame-stance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Night-and-Flame_Stance.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 26,
+        "R2": 32
+      },
+      "caption": {
+        "en": "Unique Skill: Night-and-Flame Stance\n\nHold the sword level and prepare to cast a sorcery.\nFollow up with a normal attack to cast the Night Comet sorcery, or a strong attack to sweep forward with a burst of flames."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1020": {
+      "name": {
+        "zh": null,
+        "en": "Wave of Gold"
+      },
+      "textId": "1020",
+      "icon": {
+        "src": "images/skill-wave-of-gold.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wave_of_Gold.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 42,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Wave of Gold\n\nImbue the sword with bygone golden glory, then fire it at foes.\nA wide, golden wave fans out forwards, sweeping through all enemies caught in its path."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1021": {
+      "name": {
+        "zh": null,
+        "en": "Ruinous Ghostflame"
+      },
+      "textId": "1021",
+      "icon": {
+        "src": "images/skill-ruinous-ghostflame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ruinous_Ghostflame.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Ruinous Ghostflame\n\nSwing the sword to bathe its blade in ghostflame.\nThe ghostflame adds magic damage to attacks, and also has a bitterly cold bite."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1022": {
+      "name": {
+        "zh": null,
+        "en": "Establish Order"
+      },
+      "textId": "1022",
+      "icon": {
+        "src": "images/skill-establish-order.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Establish_Order.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "en": "Unique Skill: Establish Order\n\nRaise the armament in a salute, releasing a golden explosion.\nRepeated inputs send out waves of golden light."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1023": {
+      "name": {
+        "zh": null,
+        "en": "Mists of Slumber"
+      },
+      "textId": "1023",
+      "icon": {
+        "src": "images/skill-mists-of-slumber.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Mists_of_Slumber.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Mists of Slumber\n\nReleases a faint purple mist that spreads across a wide frontwards area.\nThis mist inflicts the sleep ailment upon foes."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1024": {
+      "name": {
+        "zh": null,
+        "en": "Spearcall Ritual"
+      },
+      "textId": "1024",
+      "icon": {
+        "src": "images/skill-spearcall-ritual.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spearcall_Ritual.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Spearcall Ritual\n\nThrust the spear high, bearing prayers into the sky to summon a downpour of spectral spears."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1025": {
+      "name": {
+        "zh": null,
+        "en": "Wolf's Assault"
+      },
+      "textId": "1025",
+      "icon": {
+        "src": "images/skill-wolf-s-assault.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wolf's_Assault.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Wolf's Assault\n\nInfuse the greatsword with frost, then perform a forward somersault to plunge it into the ground. Then, pull it out to release a cold blast."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1026": {
+      "name": {
+        "zh": null,
+        "en": "Thundercloud Form"
+      },
+      "textId": "1026",
+      "icon": {
+        "src": "images/skill-thundercloud-form.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thundercloud_Form.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 28,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Thundercloud Form\n\nTemporarily transform into a red thundercloud and fly through the air, then plunge down with a lightning-infused blade.\nHold to increase the reach of the thundercloud form."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1027": {
+      "name": {
+        "zh": null,
+        "en": "Cursed-Blood Slice"
+      },
+      "textId": "1027",
+      "icon": {
+        "src": "images/skill-cursed-blood-slice.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Cursed-Blood_Slice.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "en": "Unique Skill: Cursed-Blood Slice\n\nBrace, then charge forward to deliver a downward diagonal slice.\nThe bloody trail of the blade is followed by a burst of flame.\nAdditional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1028": {
+      "name": {
+        "zh": null,
+        "en": "Waterfowl Dance"
+      },
+      "textId": "1028",
+      "icon": {
+        "src": "images/skill-waterfowl-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Waterfowl_Dance.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": 9
+      },
+      "caption": {
+        "en": "Unique Skill: Waterfowl Dance\n\nPerform a series of one-footed leaps in the manner of a waterfowl to unleash a swift yet graceful slashing combo.\nRepeated inputs allow for up to two follow-up attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1029": {
+      "name": {
+        "zh": null,
+        "en": "Gold Breaker"
+      },
+      "textId": "1029",
+      "icon": {
+        "src": "images/skill-gold-breaker.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gold_Breaker.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 26,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Gold Breaker\n\nLeap up high and, while suspended in midair, imbue the rune shard with light before smashing it down hard onto the ground.\nThe heroic Radagon's signature attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1030": {
+      "name": {
+        "zh": null,
+        "en": "I Command Thee, Kneel!"
+      },
+      "textId": "1030",
+      "icon": {
+        "src": "images/skill-i-command-thee-kneel.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_I_Command_Thee,_Kneel!.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": 15
+      },
+      "caption": {
+        "en": "Unique Skill: I Command Thee, Kneel!\n\nRepeatedly smash the Axe of Godrick into the ground, unleashing two earth-shaking shockwaves.\nFollow up with an additional input to produce a third shockwave."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1031": {
+      "name": {
+        "zh": null,
+        "en": "Regal Roar"
+      },
+      "textId": "1031",
+      "icon": {
+        "src": "images/skill-regal-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Regal_Roar.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Regal Roar\n\nLet loose a mighty war cry, raising attack power, while sending out a shockwave that cannot be guarded against by stomping the ground. While active, strong attack becomes a lunging slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1032": {
+      "name": {
+        "zh": null,
+        "en": "Starcaller Cry"
+      },
+      "textId": "1032",
+      "icon": {
+        "src": "images/skill-starcaller-cry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Starcaller_Cry.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "en": "Unique Skill: Starcaller Cry\n\nBring the two swords together and roar into the skies, pulling in enemies with a gravitational wave.\nFollow up with an additional input to slam down with gravity-infused swords."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1033": {
+      "name": {
+        "zh": null,
+        "en": "Wave of Destruction"
+      },
+      "textId": "1033",
+      "icon": {
+        "src": "images/skill-wave-of-destruction.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wave_of_Destruction.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Wave of Destruction\n\nRaise the sword up high, then strike it against the ground to fire off a wave of gravitational force."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1034": {
+      "name": {
+        "zh": null,
+        "en": "Bloodboon Ritual"
+      },
+      "textId": "1034",
+      "icon": {
+        "src": "images/skill-bloodboon-ritual.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodboon_Ritual.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "en": "Unique Skill: Bloodboon Ritual\n\nRaise the sacred spear and pierce the body of the Formless Mother. Stab up to three times, creating explosions of blood with each thrust.\nThis skill will coat the armament with bloodflame for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1035": {
+      "name": {
+        "zh": null,
+        "en": "Flowing Form"
+      },
+      "textId": "1035",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Flowing Form\n\nTemporarily transforms armament into its liquid form. Swing the armament like a whip to strike surroundings before slamming its teardrop-shaped head down."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1036": {
+      "name": {
+        "zh": null,
+        "en": "Blade of Death"
+      },
+      "textId": "1036",
+      "icon": {
+        "src": "images/skill-blade-of-death.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blade_of_Death.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Blade of Death\n\nUnleash the power of the Rune of Death to fire off a blade-like projectile.\nIn addition to dealing immediate damage, the blade reduces the enemy's maximum HP and continues to wear down HP for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1037": {
+      "name": {
+        "zh": null,
+        "en": "Blade of Gold"
+      },
+      "textId": "1037",
+      "icon": {
+        "src": "images/skill-blade-of-gold.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blade_of_Gold.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Blade of Gold\n\nLeap into the air, charging the armament with golden flames that are then shot at the enemy as a single, blade-like projectile.\nInflicts holy damage."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1038": {
+      "name": {
+        "zh": null,
+        "en": "Destined Death"
+      },
+      "textId": "1038",
+      "icon": {
+        "src": "images/skill-destined-death.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Destined_Death.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 40,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Destined Death\n\nSet free the remnants of Destined Death, plunging the greatsword into the ground to summon a myriad of blades. In addition to dealing immediate damage, this attack reduces the enemy's maximum HP and continues to wear down HP for a short time."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1039": {
+      "name": {
+        "zh": null,
+        "en": "Spinning Wheel"
+      },
+      "textId": "1039",
+      "icon": {
+        "src": "images/skill-spinning-wheel.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Wheel.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Spinning Wheel\n\nStrike the wheel against the ground to set it spinning at top speed. Hold to keep the wheel spinning. Can be used while walking to push the armament into enemies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1040": {
+      "name": {
+        "zh": null,
+        "en": "Alabaster Lords' Pull"
+      },
+      "textId": "1040",
+      "icon": {
+        "src": "images/skill-alabaster-lords-pull.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Alabaster_Lords'_Pull.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Alabaster Lord's Pull\n\nThrust the armament into the ground to create a gravity well. In addition to dealing damage, this attack pulls enemies in.\nHas a greater area of effect than Gravitas."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1041": {
+      "name": {
+        "zh": null,
+        "en": "Onyx Lords' Repulsion"
+      },
+      "textId": "1041",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 27,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Onyx Lord's Repulsion\n\nThrust the armament into the ground to create a gravity well. In addition to dealing damage, this attack sends enemies flying away."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1042": {
+      "name": {
+        "zh": null,
+        "en": "Oath of Vengeance"
+      },
+      "textId": "1042",
+      "icon": {
+        "src": "images/skill-oath-of-vengeance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Oath_of_Vengeance.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Oath of Vengeance\n\nSwear an oath upon the greatsword to avenge the clan, temporarily raising all attributes for a certain duration. While the oath's effects are active, poise will also be increased."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1043": {
+      "name": {
+        "zh": null,
+        "en": "Ice Lightning Sword"
+      },
+      "textId": "1043",
+      "icon": {
+        "src": "images/skill-ice-lightning-sword.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ice_Lightning_Sword.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Ice Lightning Sword\n\nCall down a bolt of ice lightning into the blade and bring it down upon a foe.\nThe ice lightning effect will persist for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1044": {
+      "name": {
+        "zh": null,
+        "en": "Regal Beastclaw"
+      },
+      "textId": "1044",
+      "icon": {
+        "src": "images/skill-regal-beastclaw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Regal_Beastclaw.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Regal Beastclaw\n\nSlam the hammer into the ground, rending the land asunder with the armament's five bestial claws."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1045": {
+      "name": {
+        "zh": null,
+        "en": "Flame Dance"
+      },
+      "textId": "1045",
+      "icon": {
+        "src": "images/skill-flame-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_Dance.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Flame Dance\n\nImbue the red braid with the Giants' Flame and lash out in a wide range with a series of agile swings."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1046": {
+      "name": {
+        "zh": null,
+        "en": "Claw Flick"
+      },
+      "textId": "1046",
+      "icon": {
+        "src": "images/skill-claw-flick.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Claw_Flick.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Claw Flick\n\nCause the finger to swell, then flex to build up strength before giving enemies an almighty flick."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1047": {
+      "name": {
+        "zh": null,
+        "en": "Nebula"
+      },
+      "textId": "1047",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Nebula\n\nImbue the Naturalborn's stars with magic to perform a sweeping strike.\nThis attack leaves a dark cloud of stars in its wake that lingers briefly before exploding."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1048": {
+      "name": {
+        "zh": null,
+        "en": "Ghostflame Ignition"
+      },
+      "textId": "1048",
+      "icon": {
+        "src": "images/skill-ghostflame-ignition.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ghostflame_Ignition.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": 10,
+        "R2": 10
+      },
+      "caption": {
+        "en": "Unique Skill: Ghostflame Ignition\n\nThrust out the barbed rod and set its tip alight with ghostflame.\nFollow up with a normal attack to set the ground ablaze with ghostflame, or a strong attack to trigger a massive explosion."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1049": {
+      "name": {
+        "zh": null,
+        "en": "Ancient Lightning Spear"
+      },
+      "textId": "1049",
+      "icon": {
+        "src": "images/skill-ancient-lightning-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ancient_Lightning_Spear.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 24,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Ancient Lightning Spear\n\nImbue the armament with the ancient dragons' red lightning, then throw it as a spear.\nCan be charged to increase its power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1050": {
+      "name": {
+        "zh": null,
+        "en": "Frenzyflame Thrust"
+      },
+      "textId": "1050",
+      "icon": {
+        "src": "images/skill-frenzyflame-thrust.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Frenzyflame_Thrust.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Frenzyflame Thrust\n\nImbue the spear with the flame of frenzy and leap forwards, plunging it into the ground and setting off a maddening explosion.\nThe skill inflicts both the enemy and the user with madness."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1051": {
+      "name": {
+        "zh": null,
+        "en": "Miquella's Ring of Light"
+      },
+      "textId": "1051",
+      "icon": {
+        "src": "images/skill-miquella-s-ring-of-light.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Miquella's_Ring_of_Light.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 11,
+        "R1": -1,
+        "R2": 11
+      },
+      "caption": {
+        "en": "Unique Skill: Miquella's Ring of Light\n\nSummon Miquella's shining halo and fire it forwards.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1052": {
+      "name": {
+        "zh": null,
+        "en": "Golden Tempering"
+      },
+      "textId": "1052",
+      "icon": {
+        "src": "images/skill-golden-tempering.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Tempering.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 24,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Golden Tempering\n\nCross the two swords to grant their attacks holy essence.\nWhile in effect, strong attack performs a dual-wielding combo attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1053": {
+      "name": {
+        "zh": null,
+        "en": "Last Rites"
+      },
+      "textId": "1053",
+      "icon": {
+        "src": "images/skill-last-rites.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Last_Rites.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Last Rites\n\nRaise the epitaph to grant the effect of Sacred Order to yourself and allies in the vicinity.\nParticularly effective at laying to rest Those Who Live in Death."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1054": {
+      "name": {
+        "zh": null,
+        "en": "Unblockable Blade"
+      },
+      "textId": "1054",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 18,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Unblockable Blade\n\nImbue the cipher blade with light, extending its length, then strike with a sudden sweeping attack.\nThis attack cannot be blocked."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1055": {
+      "name": {
+        "zh": null,
+        "en": "Eochaid's Dancing Blade"
+      },
+      "textId": "1055",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Eochaid's Dancing Blade\n\nInfuse the sword with energy, then fling it forwards in a corkscrew attack. The sword continuously deals damage while violently spinning.\nCharge the attack to increase reach and duration of the spin."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1165": {
+      "name": {
+        "zh": "羅蕾塔的斬擊",
+        "en": "Loretta's Slash"
+      },
+      "textId": "118",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Skill: Loretta's Slash\n\nSkill of Loretta the Royal Knight.\nLeap forward, imbuing the blade with glintstone, then descend, accelerating into a sweeping slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1166": {
+      "name": {
+        "zh": "迴旋斬",
+        "en": "Spinning Slash"
+      },
+      "textId": "103",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": 11
+      },
+      "caption": {
+        "en": "Skill: Spinning Slash\n\nSkill favored by dexterous warriors.\nSlash foes as your body spins. Additional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1167": {
+      "name": {
+        "zh": null,
+        "en": "Corpse Wax Cutter"
+      },
+      "textId": "1167",
+      "icon": {
+        "src": "images/skill-corpse-wax-cutter.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Corpse_Wax_Cutter.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Corpse Wax Cutter\n\nLost skill of ancient heroes.\nLift the sword up high to release the power of corpse wax and launch it forwards as a blade-like projectile."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1168": {
+      "name": {
+        "zh": null,
+        "en": "Zamor Ice Storm"
+      },
+      "textId": "1168",
+      "icon": {
+        "src": "images/skill-zamor-ice-storm.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Zamor_Ice_Storm.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Zamor Ice Storm\n\nPlunge the curved sword into the ground, building power before unleashing a freezing storm that batters the surroundings."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1169": {
+      "name": {
+        "zh": null,
+        "en": "Radahn's Rain"
+      },
+      "textId": "1169",
+      "icon": {
+        "src": "images/skill-radahn-s-rain.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Radahn's_Rain.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 32,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Radahn's Rain\n\nArchery skill performed from a low stance.\nReady the bow and fire a sudden flurry of arrows up into the sky. The arrows will pour on foes like rain."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1170": {
+      "name": {
+        "zh": null,
+        "en": "The Queen's Black Flame"
+      },
+      "textId": "1170",
+      "icon": {
+        "src": "images/skill-the-queen-s-black-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_The_Queen's_Black_Flame.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": 15
+      },
+      "caption": {
+        "en": "Unique Skill: The Queen's Black Flame\n\nSet the blade ablaze with the god-slaying black flame before delivering a sweeping slash. Additional input allows for a follow-up attack. The black flames will continue to wear down HP for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1171": {
+      "name": {
+        "zh": null,
+        "en": "Dynast's Finesse"
+      },
+      "textId": "1171",
+      "icon": {
+        "src": "images/skill-dynast-s-finesse.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Dynast's_Finesse.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 7
+      },
+      "caption": {
+        "en": "Unique Skill: Dynast's Finesse\n\nNimbly avoid an attack, securing some distance from foes. Follow up with strong attack to perform a sudden lunge, and press strong attack again to perform a sweeping slice."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1172": {
+      "name": {
+        "zh": null,
+        "en": "Magma Shower"
+      },
+      "textId": "1172",
+      "icon": {
+        "src": "images/skill-magma-shower.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Magma_Shower.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "en": "Unique Skill: Magma Shower\n\nSlash at foes in a twirling motion while scattering magma all around.\nAdditional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1173": {
+      "name": {
+        "zh": null,
+        "en": "Nebula"
+      },
+      "textId": "1173",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Nebula\n\nImbue the Naturalborn's wings with magic to send forth a dark cloud of stars that lingers briefly before exploding."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1174": {
+      "name": {
+        "zh": null,
+        "en": "Death Flare"
+      },
+      "textId": "1174",
+      "icon": {
+        "src": "images/skill-death-flare.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Death_Flare.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 16
+      },
+      "caption": {
+        "en": "Unique Skill: Death Flare\n\nSet the lusterless sun ablaze with the Prince of Death's flames, inflicting the death ailment upon foes.\nFollow up with an additional input to bring down the armament, triggering an explosion."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1175": {
+      "name": {
+        "zh": null,
+        "en": "Bloodhound's Finesse"
+      },
+      "textId": "1175",
+      "icon": {
+        "src": "images/skill-bloodhound-s-finesse.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodhound's_Finesse.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "en": "Unique Skill: Bloodhound's Finesse\n\nSlash upwards with the Bloodhound's Fang, using the momentum of the strike to perform a backwards somersault and gain some distance from foes. Follow up with a strong attack to perform the Bloodhound's Step attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1176": {
+      "name": {
+        "zh": null,
+        "en": "Magma Guillotine"
+      },
+      "textId": "1176",
+      "icon": {
+        "src": "images/skill-magma-guillotine.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Magma_Guillotine.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 10
+      },
+      "caption": {
+        "en": "Unique Skill: Magma Guillotine\n\nGrab the scalesword with both hands, as a wyrm would hold it in its mouth, and leap forwards, smashing it into the ground and triggering a blast of magma. Follow up with an additional input to perform a chopping attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1177": {
+      "name": {
+        "zh": null,
+        "en": "Corpse Piler"
+      },
+      "textId": "1177",
+      "icon": {
+        "src": "images/skill-corpse-piler.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Corpse_Piler.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": 9
+      },
+      "caption": {
+        "en": "Unique Skill: Corpse Piler\n\nForms a blade of cursed blood for repeated, interweaving successive attacks. Follow up with an additional input for further successive attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1178": {
+      "name": {
+        "zh": null,
+        "en": "Transient Moonlight"
+      },
+      "textId": "1178",
+      "icon": {
+        "src": "images/skill-transient-moonlight.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Transient_Moonlight.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 15,
+        "R2": 20
+      },
+      "caption": {
+        "en": "Unique Skill: Transient Moonlight\n\nSheathe blade, holding it at the hip in a composed stance.\nFollow up with either a normal or a strong attack to draw the blade at great speed for an instant slash attack. Both attacks fire off a wave of light."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1179": {
+      "name": {
+        "zh": null,
+        "en": "Bloodblade Dance"
+      },
+      "textId": "1179",
+      "icon": {
+        "src": "images/skill-bloodblade-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodblade_Dance.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 11,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Unique Skill: Bloodblade Dance\n\nLeap at foe to perform a flurry of tornado-like attacks.\nFollow up with an additional input to perform an attack that ends in an evasive maneuver."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1182": {
+      "name": {
+        "zh": null,
+        "en": "Knowledge Above All"
+      },
+      "textId": "1182",
+      "icon": {
+        "src": "images/skill-knowledge-above-all.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Knowledge_Above_All.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 35,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Knowledge Above All\n\nRaise the scepter to manifest the realm of the All-Knowing. Enemy magic and holy damage negation will be reduced for all within the area, including the caster."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1183": {
+      "name": {
+        "zh": null,
+        "en": "Devourer of Worlds"
+      },
+      "textId": "1183",
+      "icon": {
+        "src": "images/skill-devourer-of-worlds.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Devourer_of_Worlds.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 35,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Devourer of Worlds\n\nCharge the scepter with magic and strike it against the ground to steal the HP of all nearby enemies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1184": {
+      "name": {
+        "zh": null,
+        "en": "Familal Rancor"
+      },
+      "textId": "1184",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Familial Rancor\n\nGently rattle the copper heads to summon vengeful spirits that chase down foes.\nThe anguish of a spouse and children invites accursed wrath."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1185": {
+      "name": {
+        "zh": null,
+        "en": "Rosus's Summons"
+      },
+      "textId": "1185",
+      "icon": {
+        "src": "images/skill-rosus-s-summons.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rosus's_Summons.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Rosus's Summons\n\nRaise the axe aloft to summon those lost in death.\nThree skeletons will appear at a distance and attack in tandem before vanishing."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1186": {
+      "name": {
+        "zh": null,
+        "en": "Thunderstorm"
+      },
+      "textId": "1186",
+      "icon": {
+        "src": "images/skill-thunderstorm.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thunderstorm.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 19,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "en": "Unique Skill: Thunderstorm\n\nImbue the armament's wing-blade with lightning and swing it around to create a tempestuous lightning storm. Follow up with an additional input to perform up to two spinning attacks.\nThe lightning will stay on the blade for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1187": {
+      "name": {
+        "zh": null,
+        "en": "Sacred Phalanx"
+      },
+      "textId": "1187",
+      "icon": {
+        "src": "images/skill-sacred-phalanx.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Phalanx.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Sacred Phalanx\n\nRelease the power of a hidden incantation to erect a palisade of golden spears frontwards."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1188": {
+      "name": {
+        "zh": null,
+        "en": "Great-Serpent Hunt"
+      },
+      "textId": "1188",
+      "icon": {
+        "src": "images/skill-great-serpent-hunt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Great-Serpent_Hunt.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "en": "Unique Skill: Great-Serpent Hunt\n\nPerform a powerful forward lunge and follow up with an upward thrust via additional input. When fighting a great serpent, a long blade of light will appear, revealing the armament's true power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1189": {
+      "name": {
+        "zh": null,
+        "en": "Angel's Wings"
+      },
+      "textId": "1189",
+      "icon": {
+        "src": "images/skill-angel-s-wings.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Angel's_Wings.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Angel's Wings\n\nJump and imbue the wing-blade of the armament with light, then deliver a slashing attack on the enemy.\nThe white wings impede recovery actions using a flask of tears."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1190": {
+      "name": {
+        "zh": null,
+        "en": "Storm Kick"
+      },
+      "textId": "1190",
+      "icon": {
+        "src": "images/skill-storm-kick.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Kick.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "en": "Unique Skill: Storm Kick\n\nThrust the prosthetic leg blade into the ground, creating a storm.\nFollow up with a strong attack to perform a lightning-infused jumping attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1191": {
+      "name": {
+        "zh": null,
+        "en": "Unblockable Blade"
+      },
+      "textId": "1191",
+      "icon": null,
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Unblockable Blade\n\nImbue the cipher blade with light, then lunge forward with a sudden piercing attack.\nThis attack cannot be blocked."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1192": {
+      "name": {
+        "zh": null,
+        "en": "Sorcery of the Crozier"
+      },
+      "textId": "1192",
+      "icon": {
+        "src": "images/skill-sorcery-of-the-crozier.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sorcery_of_the_Crozier.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Sorcery of the Crozier\n\nChannel magic into the glintstone to activate an ancient sorcery, producing floating magic projectiles that chase enemies automatically."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1193": {
+      "name": {
+        "zh": null,
+        "en": "Erdtree Slam"
+      },
+      "textId": "1193",
+      "icon": {
+        "src": "images/skill-erdtree-slam.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Erdtree_Slam.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 19,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Erdtree Slam\n\nJump up high into the air and crash down on the ground ahead. The resulting pratfall sends golden shockwaves in all directions.\nThis is the most powerful of all the Ground Slam skills."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1194": {
+      "name": {
+        "zh": null,
+        "en": "Gravity Bolt"
+      },
+      "textId": "1194",
+      "icon": {
+        "src": "images/skill-gravity-bolt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gravity_Bolt.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 13,
+        "R1": -1,
+        "R2": 13
+      },
+      "caption": {
+        "en": "Unique Skill: Gravity Bolt\n\nImbue the jaw of fallingstar beast with gravitational lightning, sending a bolt crashing down a short distance away.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1196": {
+      "name": {
+        "zh": null,
+        "en": "Golden Retaliation"
+      },
+      "textId": "1196",
+      "icon": {
+        "src": "images/skill-golden-retaliation.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Retaliation.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Golden Retaliation\n\nReady the shield to unleash its protective incantation.\nThis will dispel sorceries and incantations, retaliating with golden power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1197": {
+      "name": {
+        "zh": null,
+        "en": "Contagious Fury"
+      },
+      "textId": "1197",
+      "icon": {
+        "src": "images/skill-contagious-fury.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Contagious_Fury.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Contagious Fury\n\nIncite the jellyfish's wrath and allow its fury to flow through you.\nRaises attack power for a certain duration."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    },
+    "1198": {
+      "name": {
+        "zh": null,
+        "en": "Ordovis's Vortex"
+      },
+      "textId": "1198",
+      "icon": {
+        "src": "images/skill-ordovis-s-vortex.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ordovis's_Vortex.png"
+      },
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "en": "Unique Skill: Ordovis's Vortex\n\nChannel the power of the crucible to spin the entire sword in midair, building momentum before slamming the blade down onto the ground.\nThis skill can be charged to increase its power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "caption": [
+          "er-arts-text"
+        ]
+      }
+    }
+  }
+}

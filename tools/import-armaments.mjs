@@ -1,4 +1,4 @@
-// 由鎖定版本的遊戲參數與《艾爾登法環》本篇文字產生 public/data/armaments/weapons.json 與 spells.json。
+// 由鎖定版本的遊戲參數與《艾爾登法環》本篇文字產生 public/data/armaments/weapons.json、spells.json 與 skills.json。
 // 用法：node tools/import-armaments.mjs；之後執行 python tools/fetch-icons.py 下載資料引用的圖示。
 // 輸入：
 //   tools/relics-config.json   來源 commit (與遺物共用同一份遊戲參數)
@@ -10,10 +10,13 @@
 //         具名武器另收錄原始參數值：基礎攻擊、能力補正、致命補正、固定效果名稱 (黑夜君臨文字) 與命中時的異常狀態累積。
 //   法術：所有武器 equippedSpell_R1/R2 引用的 ID；名稱只取本篇法術清單，Magic 沒有該列時類型與系別為 null。
 //         有 Magic 列的法術另收錄原始消耗參數：通常施放與蓄力施放的 FP、耐力。
+//   戰技：具名武器的參數預設戰技 (swordArtsParamId)，以及其 EquipParamCustomWeapon 列的戰技池 (swordArtsTableId → SwordArtsTableParam)
+//         中權重大於 0 的戰技。武器另記 skill: { default, pool }；pool 是各生成列戰技池的聯集，不加入 -1 (未指定戰技池) 推定的戰技。
+//         名稱與說明取自本篇英文 ArtsName／ArtsCaption (依 textId)；繁中名稱取自英文名稱唯一相同的本篇戰灰，沒有時為 null。
 
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { ROOT, TOOLS, byId, parseCsv, parseFmg, readJson, slug, source } from "./sources.mjs";
+import { ROOT, TOOLS, byId, groupById, parseCsv, parseFmg, readJson, slug, source } from "./sources.mjs";
 
 const common = readJson(join(ROOT, "public/data/common.json"));
 const problems = [];
@@ -36,8 +39,8 @@ function parseText(...texts) {
   return map;
 }
 
-// 本篇法術清單：[{ id, name }]；只收法術，鑰匙等道具不在其中。
-function parseSpellList(...texts) {
+// 本篇名稱清單：[{ id, name }]，例如法術清單 (只收法術，鑰匙等道具不在其中) 與戰灰清單。
+function parseNameList(...texts) {
   const map = new Map();
   for (const text of texts) for (const { id, name } of JSON.parse(text)) if (validName(name)) map.set(String(id), name.trim());
   return map;
@@ -88,12 +91,13 @@ async function iconPages(titles) {
   return cache;
 }
 
-// Eldenpedia ER SB Icon 系列檔名：英文名稱去冒號、空白保留 (API 標題格式)。
+// Eldenpedia 檔名：英文名稱去冒號、空白保留 (API 標題格式)。武器與法術為 ER SB Icon 系列，戰技為黑夜君臨的 ERN Icon skill 系列。
 const iconTitle = (kind, en) => `File:ER SB Icon ${kind} ${en.replace(/:/g, "")}.png`;
+const skillIconTitle = (en) => `File:ERN Icon skill ${en.replace(/:/g, "")}.png`;
 
-function iconOf(pages, kind, prefix, name) {
-  if (!name) return null;
-  const title = iconTitle(kind, name.en);
+// title 為 null 表示沒有可查的檔名 (例如沒有名稱)
+function iconOf(pages, title, prefix, name) {
+  if (!title) return null;
   const page = pages[title];
   if (!page.exists || !page.licensed) return null;
   return {
@@ -106,20 +110,31 @@ function iconOf(pages, kind, prefix, name) {
 
 const weaponRows = byId(parseCsv(await source("params", "EquipParamWeapon")), "EquipParamWeapon");
 const magicRows = byId(parseCsv(await source("params", "Magic")), "Magic");
-// 黑夜君臨的武器生成參數 (武器等級、附加效果表) 指向的武器 ID；同一武器可有多列。
-const generated = new Set(parseCsv(await source("params", "EquipParamCustomWeapon")).map((row) => row.targetWeaponId));
+// 黑夜君臨的武器生成參數 (武器等級、附加效果表、戰技池)，依指向的武器 ID 分組；同一武器可有多列。
+const customByWeapon = new Map();
+for (const row of parseCsv(await source("params", "EquipParamCustomWeapon"))) {
+  customByWeapon.set(row.targetWeaponId, [...(customByWeapon.get(row.targetWeaponId) ?? []), row]);
+}
+const generated = new Set(customByWeapon.keys());
+const artsRows = byId(parseCsv(await source("params", "SwordArtsParam")), "SwordArtsParam");
+// 戰技池：同一 ID 多列，每列一個戰技與權重
+const artsTables = groupById(parseCsv(await source("params", "SwordArtsTableParam")));
+const artsNameEn = parseFmg(await source("erArts", "nameEn"));
+const artsCaptionEn = parseFmg(await source("erArts", "captionEn"));
 const spRows = byId(parseCsv(await source("params", "SpEffectParam")), "SpEffectParam");
 const attachRows = byId(parseCsv(await source("params", "AttachEffectParam")), "AttachEffectParam");
 const effectZh = parseFmg(await source("text", "effectZh"), await source("text", "effectZhDlc"));
 const effectEn = parseFmg(await source("text", "effectEn"), await source("text", "effectEnDlc"));
 const weaponZh = parseText(await source("erText", "weaponZh"), await source("erText", "weaponZhDlc"));
 const weaponEn = parseText(await source("erText", "weaponEn"), await source("erText", "weaponEnDlc"));
-const spellZh = parseSpellList(
+const spellZh = parseNameList(
   ...(await Promise.all(["sorceryZh", "sorceryZhDlc", "incantationZh", "incantationZhDlc"].map((key) => source("erText", key)))),
 );
-const spellEn = parseSpellList(
+const spellEn = parseNameList(
   ...(await Promise.all(["sorceryEn", "sorceryEnDlc", "incantationEn", "incantationEnDlc"].map((key) => source("erText", key)))),
 );
+const ashZh = parseNameList(await source("erText", "ashesZh"), await source("erText", "ashesZhDlc"));
+const ashEn = parseNameList(await source("erText", "ashesEn"), await source("erText", "ashesEnDlc"));
 
 const tagByParam = (dimension) => new Map(Object.entries(common.tags[dimension]).map(([key, tag]) => [String(tag.param), key]));
 const weaponTypes = tagByParam("weaponType");
@@ -151,10 +166,86 @@ const spells = [...spellIds].map((id) => {
 });
 spells.sort((a, b) => Number(a.magic?.sortId ?? Infinity) - Number(b.magic?.sortId ?? Infinity) || Number(a.id) - Number(b.id));
 
+// ---------- 戰技 ----------
+
+const byNumber = (a, b) => Number(a) - Number(b);
+
+// 具名武器的戰技：參數預設 (swordArtsParamId) 與生成池候選 (各生成列戰技池中權重大於 0 的戰技聯集，依 ID 排序)。
+// 生成列的 swordArtsTableId 為 -1 時沒有戰技池；參數無法說明此時實際帶哪個戰技，因此不推定為預設戰技。
+function weaponSkill(row) {
+  const owner = `武器 ${row.ID}`;
+  if (!isRef(row.swordArtsParamId)) fail(`${owner} 沒有預設戰技`);
+  const pool = new Set();
+  for (const custom of customByWeapon.get(row.ID) ?? []) {
+    if (custom.swordArtsTableId === "-1") continue;
+    const entries = artsTables.get(custom.swordArtsTableId);
+    if (!entries) {
+      fail(`${owner} 的生成列 ${custom.ID} 引用不存在的戰技池 ${custom.swordArtsTableId}`);
+      continue;
+    }
+    for (const entry of entries) {
+      if (numberOf(entry, "chanceWeight", `戰技池 ${entry.ID}`) <= 0) continue;
+      if (isRef(entry.swordArtsId)) pool.add(entry.swordArtsId);
+      else fail(`戰技池 ${entry.ID} 有權重但沒有戰技`);
+    }
+  }
+  return { default: row.swordArtsParamId, pool: [...pool].sort(byNumber) };
+}
+const weaponSkills = new Map(weapons.filter((w) => w.name).map(({ row }) => [row.ID, weaponSkill(row)]));
+const skillIds = [...new Set([...weaponSkills.values()].flatMap((skill) => [skill.default, ...skill.pool]))].sort(byNumber);
+const skillRows = skillIds.flatMap((id) => {
+  const row = artsRows.get(id);
+  if (!row) fail(`戰技 ${id} 不在 SwordArtsParam`);
+  return row ? [row] : [];
+});
+
+// 戰灰名稱「戰灰：X」／「Ash of War: X」去掉前綴後，以英文名稱對照戰技；同一英文名稱對到多個戰灰時無法判斷，停止。
+const ASH_PREFIX = { zh: "戰灰：", en: "Ash of War: " };
+const ashByEn = new Map();
+for (const [id, en] of ashEn) {
+  if (!en.startsWith(ASH_PREFIX.en)) fail(`戰灰 ${id} 的英文名稱沒有前綴：${en}`);
+  const name = en.slice(ASH_PREFIX.en.length);
+  ashByEn.set(name, [...(ashByEn.get(name) ?? []), id]);
+}
+
+// 戰技名稱：英文取自本篇 ArtsName；繁中取自英文名稱相同的本篇戰灰，沒有對應的戰灰 (例如武器專屬戰技) 時為 null。
+function skillName(row) {
+  const en = artsNameEn.get(row.textId)?.trim();
+  if (!validName(en)) {
+    fail(`戰技 ${row.ID} 的 textId ${row.textId} 沒有英文名稱`);
+    return null;
+  }
+  const ashes = ashByEn.get(en) ?? [];
+  if (ashes.length > 1) fail(`戰技 ${row.ID} 的英文名稱對到多個戰灰：${ashes.join("、")}`);
+  if (ashes.length !== 1) return { zh: null, en };
+  // 不以 ID 推算：本篇戰灰 ID 多為戰技 ID 的 100 倍，但有例外 (戰灰 30900 → 戰技 10、31000 → 309)
+  const zh = ashZh.get(ashes[0]);
+  if (!zh?.startsWith(ASH_PREFIX.zh)) fail(`戰灰 ${ashes[0]} 的繁中名稱缺少或沒有前綴：${zh}`);
+  return { zh: zh?.slice(ASH_PREFIX.zh.length) ?? null, en };
+}
+const skillNames = new Map(skillRows.map((row) => [row.ID, skillName(row)]));
+
+// 戰技圖示只依英文名稱尋找。在完整的 SwordArtsParam 中同一 textId 由多個戰技共用，或在完整的 ArtsName 中同一英文名稱
+// 出現在多個 textId 時，無法判斷圖示屬於哪一列，不採用圖示 (不限於收錄的戰技，例如 302 與 304 同名為 Parry)。
+const textOwners = new Map();
+for (const row of artsRows.values()) textOwners.set(row.textId, (textOwners.get(row.textId) ?? 0) + 1);
+const nameTexts = new Map();
+for (const [textId, text] of artsNameEn) {
+  if (validName(text)) nameTexts.set(text.trim(), (nameTexts.get(text.trim()) ?? 0) + 1);
+}
+const skillIconTitles = new Map(
+  skillRows.map((row) => {
+    const name = skillNames.get(row.ID);
+    const ambiguous = textOwners.get(row.textId) > 1 || nameTexts.get(name?.en) > 1;
+    return [row.ID, name && !ambiguous ? skillIconTitle(name.en) : null];
+  }),
+);
+
 const iconKind = (item) => (SHIELDS.has(item.type) ? "shield" : "weapon");
 const titles = [
   ...weapons.filter((w) => w.name).map((w) => iconTitle(iconKind(w), w.name.en)),
   ...spells.filter((s) => s.name).map((s) => iconTitle("Spell", s.name.en)),
+  ...[...skillIconTitles.values()].filter(Boolean),
 ];
 const pages = await iconPages([...new Set(titles)]);
 
@@ -246,11 +337,12 @@ const weaponData = Object.fromEntries(
       row.ID,
       {
         name,
-        icon: iconOf(pages, iconKind({ type }), "weapon", name),
+        icon: iconOf(pages, name && iconTitle(iconKind({ type }), name.en), "weapon", name),
         tags: { weaponType: [type] },
         sortId: Number(row.sortId),
         ...(Object.keys(slots).length ? { spells: slots } : {}),
         ...(stats ?? {}),
+        ...(name ? { skill: weaponSkills.get(row.ID) } : {}),
         ...weaponSources(name, stats),
       },
     ];
@@ -259,17 +351,48 @@ const weaponData = Object.fromEntries(
 const spellData = Object.fromEntries(
   spells.map(({ id, magic, name }) => [
     id,
-    { name, icon: iconOf(pages, "Spell", "spell", name), tags: spellTags(magic, id), ...(magic ? spellCosts(magic) : {}), ...withName(name) },
+    {
+      name,
+      icon: iconOf(pages, name && iconTitle("Spell", name.en), "spell", name),
+      tags: spellTags(magic, id),
+      ...(magic ? spellCosts(magic) : {}),
+      ...withName(name),
+    },
   ]),
 );
 
-// 引用檢查：搭載的法術都要收錄；圖示檔名不重複
+// 戰技 FP 消耗 (SwordArtsParam.useMagicPoint_*)：依輸入 L1、L2、R1、R2 各一個原始參數值，-1 照原值保留，不解讀為不消耗。
+const SKILL_FP = { L1: "useMagicPoint_L1", L2: "useMagicPoint_L2", R1: "useMagicPoint_R1", R2: "useMagicPoint_R2" };
+const skillData = Object.fromEntries(
+  skillRows.map((row) => {
+    const name = skillNames.get(row.ID);
+    const caption = artsCaptionEn.get(row.textId)?.trim();
+    if (!validName(caption)) fail(`戰技 ${row.ID} 的 textId ${row.textId} 沒有英文說明`);
+    // 名稱英文與說明取自本篇戰技文字，繁中名稱取自本篇戰灰名稱，其餘取自遊戲參數
+    const sourcesFor = { "name.en": ["er-arts-text"], ...(name?.zh ? { "name.zh": ["er-base-text"] } : {}), caption: ["er-arts-text"] };
+    return [
+      row.ID,
+      {
+        name,
+        textId: row.textId,
+        icon: iconOf(pages, skillIconTitles.get(row.ID), "skill", name),
+        fp: pick(SKILL_FP, row, `戰技 ${row.ID}`),
+        caption: { en: caption },
+        sources: ["game-params"],
+        sourcesFor,
+      },
+    ];
+  }),
+);
+
+// 引用檢查：搭載的法術、武器的戰技都要收錄；圖示檔名不重複
 for (const [id, weapon] of Object.entries(weaponData)) {
   for (const spell of Object.values(weapon.spells ?? {})) if (!spellData[spell]) fail(`武器 ${id} 搭載的法術 ${spell} 沒有收錄`);
+  for (const skill of weapon.skill ? [weapon.skill.default, ...weapon.skill.pool] : []) if (!skillData[skill]) fail(`武器 ${id} 的戰技 ${skill} 沒有收錄`);
 }
-const srcs = [...Object.values(weaponData), ...Object.values(spellData)].flatMap((item) => (item.icon ? [item.icon.src] : []));
+const srcs = [weaponData, spellData, skillData].flatMap((data) => Object.values(data)).flatMap((item) => (item.icon ? [item.icon.src] : []));
 for (const src of srcs.filter((src, i) => srcs.indexOf(src) !== i)) fail(`圖示檔名重複：${src}`);
-for (const id of ["er-base-text", "game-params", "game-text"]) if (!common.sources[id]) fail(`來源 ${id} 不在 common.json`);
+for (const id of ["er-base-text", "er-arts-text", "game-params", "game-text"]) if (!common.sources[id]) fail(`來源 ${id} 不在 common.json`);
 
 if (problems.length) {
   console.error(`無法產生：\n  ${problems.join("\n  ")}`);
@@ -277,7 +400,7 @@ if (problems.length) {
 }
 
 mkdirSync(join(ROOT, "public/data/armaments"), { recursive: true });
-for (const [file, key, data] of [["weapons", "weapons", weaponData], ["spells", "spells", spellData]]) {
+for (const [file, key, data] of [["weapons", "weapons", weaponData], ["spells", "spells", spellData], ["skills", "skills", skillData]]) {
   const path = join(ROOT, "public/data/armaments", `${file}.json`);
   writeFileSync(path, `${JSON.stringify({ [key]: data }, null, 2)}\n`);
   const items = Object.values(data);
