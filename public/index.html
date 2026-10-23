@@ -37,6 +37,10 @@
               <td>能力值、HP、FP、精力上限、攻擊力、減傷率與異常狀態抵抗力的主要用途、相關遺物詞條、提升效果的理解方式及查證限制。</td>
             </tr>
             <tr>
+              <td><a href="characters.html">角色</a></td>
+              <td>各夜渡者的能力、技藝、絕活、能力加成評級，以及各等級的能力值與 HP、FP、精力上限。</td>
+            </tr>
+            <tr>
               <td><a href="weapons.html">武器</a></td>
               <td>各武器種類的具名武器、武器的戰技，以及以標籤比對出的相關遺物詞條。</td>
             </tr>
@@ -114,7 +118,7 @@
             <tr>
               <td>遊戲資料</td>
               <td><a href="https://github.com/gajodoramas/chillreign/tree/a411bcbedc776e143d8c8a1bcff9466e3a932b49/params" target="_blank" rel="noopener noreferrer">遊戲參數 1.03.5（chillreign 原版快照）</a>、<a href="https://github.com/alfizari/Elden-Ring-Nightreign-Save-Editor/tree/0d2ad1494c372098e689c23159656df70ff2d76d/src/Resources/Text" target="_blank" rel="noopener noreferrer">遊戲文字（存檔編輯器擷取）</a></td>
-              <td>遺物篩選分類、詞條歸類、圖示編號、固定遺物專屬詞條、與原文不符時依參數重寫的說明，以及繁體中文與英文的詞條及遺物名稱。快照與擷取版本以連結中的 commit 為準。武器、魔法與禱告頁的武器種類、法術類型與系別、法器搭載的法術、武器的戰技與戰技的 FP 消耗，以及能力值頁的相關遺物詞條，也取自同一份遊戲參數。</td>
+              <td>遺物篩選分類、詞條歸類、圖示編號、固定遺物專屬詞條、與原文不符時依參數重寫的說明，以及繁體中文與英文的詞條及遺物名稱。快照與擷取版本以連結中的 commit 為準。武器、魔法與禱告頁的武器種類、法術類型與系別、法器搭載的法術、武器的戰技與戰技的 FP 消耗，能力值頁的相關遺物詞條，以及角色頁的能力加成評級、參數等級的能力值與計算上限用的成長曲線，也取自同一份遊戲參數。</td>
             </tr>
             <tr>
               <td>遊戲資料</td>
@@ -132,6 +136,11 @@
               <td>戰技頁的繁中說明，以及沒有對應戰灰的戰技名稱：由本站依此官方簡體中文轉寫為繁體中文，不是官方繁中文字。該專案是社群保存的遊戲文字，不是官方發布管道；版本以連結中的 commit 為準。</td>
             </tr>
             <tr>
+              <td>遊戲資料</td>
+              <td><a href="https://wiki.biligame.com/nightreign/index.php?oldid=1131" target="_blank" rel="noopener noreferrer">BWIKI 黑夜君臨資料站《黑夜君臨》官方簡體中文與英文選單文字</a>、<a href="https://wiki.biligame.com/nightreign/index.php?oldid=1132" target="_blank" rel="noopener noreferrer">DLC 選單文字</a>（社群保存）</td>
+              <td>角色頁的能力、技藝與絕活名稱、簡介與說明：由本站依官方簡體中文轉寫為繁體中文，不是官方繁中文字。該頁是社群保存的遊戲文字，不是官方發布管道，也沒有文字 ID；版本以連結中的頁面版本為準。</td>
+            </tr>
+            <tr>
               <td>社群資料庫</td>
               <td><a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">Eldenpedia：Duchess 的 Attributes 區塊</a></td>
               <td>八項基礎能力值的英文定義；不採用該頁角色數值作全角色結論。</td>
@@ -144,7 +153,7 @@
             <tr>
               <td>社群資料庫</td>
               <td><a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">Eldenpedia：遺物效果分頁</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes" target="_blank" rel="noopener noreferrer">能力值表</a></td>
-              <td>遺物數值、上限效果等同能力值的標示及耐力資料差異。透過搜尋索引讀取，直接頁面擷取受限。</td>
+              <td>遺物數值、上限效果等同能力值的標示及耐力資料差異。透過搜尋索引讀取，直接頁面擷取受限。能力值表另經 Eldenpedia API 讀取，用於核對角色頁的等級插值與 HP、FP、精力上限的計算。</td>
             </tr>
             <tr>
               <td>社群資料庫</td>
@@ -194,7 +203,7 @@
             <tr>
               <td>圖片</td>
               <td><span data-icon-sources></span></td>
-              <td>全站使用的遊戲內圖示，檔案頁授權標示為遊戲素材；圖片已下載至本站，大於 96px 的遺物圖縮小為 96px。效果圖示依遊戲參數的圖示編號，對照遊戲圖示外觀選用相同圖案與框線的檔案；固定遺物圖示依遊戲參數的遺物圖示編號選用。武器與法術圖示取自 Eldenpedia 的 ER SB Icon 系列，戰技圖示取自《黑夜君臨》的 ERN Icon skill 系列，各檔案頁記錄在武器、法術與戰技資料檔中。</td>
+              <td>全站使用的遊戲內圖示，檔案頁授權標示為遊戲素材；圖片已下載至本站，大於 96px 的遺物圖縮小為 96px。效果圖示依遊戲參數的圖示編號，對照遊戲圖示外觀選用相同圖案與框線的檔案；固定遺物圖示依遊戲參數的遺物圖示編號選用。武器與法術圖示取自 Eldenpedia 的 ER SB Icon 系列，戰技圖示取自《黑夜君臨》的 ERN Icon skill 系列，角色的能力、技藝與絕活圖示取自《黑夜君臨》的 ERN Passive Ability Icon、ERN Character Skill Icon 與 ERN Ultimate Art Icon 系列，各檔案頁記錄在武器、法術、戰技與角色資料檔中。</td>
             </tr>
           </tbody>
         </table>

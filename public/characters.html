@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>角色</title>
+  <meta name="description" content="《艾爾登法環 黑夜君臨》各夜渡者的能力、技藝、絕活、能力加成評級，以及各等級的能力值與 HP、FP、精力上限。">
+  <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
+  <script src="render.js" defer></script>
+</head>
+<body data-load="common characters/nightfarers">
+  <header class="site-header">
+    <nav aria-label="頁面階層">
+      <ol class="crumbs"><li><a href="index.html">黑夜君臨研究資料庫</a></li></ol>
+      <span class="version">遊戲版本 <span data-game-version></span></span>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="characters">角色</h1>
+    <ul>
+      <li>本頁依遊戲參數（版本 <span data-game-version></span>）列出每名夜渡者的能力、技藝、絕活、能力加成，以及各等級的能力值與 HP、FP、精力上限。</li>
+      <li>能力、技藝與絕活的名稱、簡介與說明取自《黑夜君臨》官方簡體中文選單文字，由本站轉寫為繁體中文：字形轉為繁體，用語依《黑夜君臨》官方繁中替換（例如「血量」為「ＨＰ」、「绝招」為「絕活」），內容、數字與換行不變。這不是官方繁中文字。</li>
+      <li>「能力加成」是遊戲參數中角色選擇畫面的評級（S、A、B、C、D）。</li>
+      <li>等級表中粗體的等級直接取自遊戲參數；其他等級由本站以前後兩個參數等級線性插值並捨去小數計算。HP、FP、精力上限由本站依生命力、集中力、耐力與遊戲參數中的成長曲線計算；參數沒有載明遊戲採用哪條曲線，插值規則與曲線都已與 <a href="https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes" target="_blank" rel="noopener noreferrer">Eldenpedia 能力值表</a>核對，少數不同處以遊戲參數為準。表中數值不含遺物等改變能力值的效果。</li>
+      <li>各章最後連到該角色的角色專屬遺物詞條。</li>
+    </ul>
+
+    <div id="character-list" data-nightfarer-list>
+      <section data-nightfarer="wylder">
+        <h2 id="character-wylder"></h2>
+      </section>
+
+      <section data-nightfarer="guardian">
+        <h2 id="character-guardian"></h2>
+      </section>
+
+      <section data-nightfarer="ironeye">
+        <h2 id="character-ironeye"></h2>
+      </section>
+
+      <section data-nightfarer="duchess">
+        <h2 id="character-duchess"></h2>
+      </section>
+
+      <section data-nightfarer="raider">
+        <h2 id="character-raider"></h2>
+      </section>
+
+      <section data-nightfarer="revenant">
+        <h2 id="character-revenant"></h2>
+      </section>
+
+      <section data-nightfarer="recluse">
+        <h2 id="character-recluse"></h2>
+      </section>
+
+      <section data-nightfarer="executor">
+        <h2 id="character-executor"></h2>
+      </section>
+
+      <section data-nightfarer="scholar">
+        <h2 id="character-scholar"></h2>
+      </section>
+
+      <section data-nightfarer="undertaker">
+        <h2 id="character-undertaker"></h2>
+      </section>
+    </div>
+
+    <section>
+      <h2 id="limitations">查證限制</h2>
+      <ul>
+        <li>選單文字沒有文字 ID，本站依角色排列順序與英文名稱對應各角色的文字；來源是社群保存的遊戲文字（BWIKI 黑夜君臨資料站），不是官方發布管道。</li>
+        <li>選單文字另有執行者技藝更名後的「攫陽」及其簡介與說明；本頁只收錄基本名稱「妖刀」的文字。</li>
+        <li>遊戲參數另有技藝冷卻時間與使用次數的欄位，但部分數值與社群記載的冷卻秒數不同，尚未核實其意義，因此不列出。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

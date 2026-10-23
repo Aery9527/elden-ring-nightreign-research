@@ -9,7 +9,7 @@
   <script src="nav.js" defer></script>
   <script src="render.js" defer></script>
 </head>
-<body data-load="common relics/general armaments/weapons armaments/spells armaments/skills">
+<body data-load="common relics/general armaments/weapons armaments/spells armaments/skills characters/nightfarers">
   <header class="site-header">
     <nav aria-label="頁面階層">
       <ol class="crumbs"><li><a href="index.html">黑夜君臨研究資料庫</a></li></ol>
@@ -208,7 +208,7 @@
     <section>
       <h2 id="limitations">查證限制</h2>
       <ul>
-        <li>耐力 +3 的精力增量：Eldenpedia 的<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果分頁</a>與<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a>數值不同，表格並列兩者；<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes" target="_blank" rel="noopener noreferrer">能力值表</a>中<img class="icon icon-char" src="images/nightfarer-wylder.png" width="24" height="24" alt="追蹤者圖示" loading="lazy">追蹤者等級 1→2 的耐力 <span data-character="wylder:1:endurance"></span>→<span data-character="wylder:2:endurance"></span>、精力上限 <span data-character="wylder:1:maxStamina"></span>→<span data-character="wylder:2:maxStamina"></span> 與遺物效果分頁一致。<a href="https://github.com/gajodoramas/chillreign/tree/a411bcbedc776e143d8c8a1bcff9466e3a932b49/params" target="_blank" rel="noopener noreferrer">遊戲參數</a>中有一條隨能力值線性成長的曲線（CalcCorrectGraph 104）也與遺物效果分頁一致，但參數沒有指明該曲線用於精力上限，因此仍不判定；尚未在本機實測該遺物。</li>
+        <li>耐力 +3 的精力增量：Eldenpedia 的<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果分頁</a>與<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a>數值不同，表格並列兩者。<a href="https://github.com/gajodoramas/chillreign/tree/a411bcbedc776e143d8c8a1bcff9466e3a932b49/params" target="_blank" rel="noopener noreferrer">遊戲參數</a>中<img class="icon icon-char" src="images/nightfarer-wylder.png" width="24" height="24" alt="追蹤者圖示" loading="lazy">追蹤者等級 1→2 的耐力為 <span data-character="wylder:1:endurance"></span>→<span data-character="wylder:2:endurance"></span>；<a href="characters.html#character-wylder">角色頁</a>依參數中隨能力值線性成長的曲線（CalcCorrectGraph 104）算出的精力上限為 <span data-character="wylder:1:maxStamina"></span>→<span data-character="wylder:2:maxStamina"></span>，與遺物效果分頁一致。該曲線已與 <a href="https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes" target="_blank" rel="noopener noreferrer">Eldenpedia 能力值表</a>核對，但參數沒有指明遺物增加的耐力也套用同一曲線，且尚未在本機實測該遺物，因此仍不判定。</li>
         <li>強韌度 +1／+2／+3 的承受削韌：Eldenpedia <a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>分頁的數值與<a href="https://github.com/gajodoramas/chillreign/tree/a411bcbedc776e143d8c8a1bcff9466e3a932b49/params" target="_blank" rel="noopener noreferrer">遊戲參數</a>不同；本表採遊戲參數（SpEffectParam 的 toughnessDamageCutRate），與<a href="https://paraphrazetutorials.github.io/nightreign-data-tools/Data/reliquary.json" target="_blank" rel="noopener noreferrer">遺物資料集</a>及 <a href="https://relics.pro/compendium/" target="_blank" rel="noopener noreferrer">Relics.pro 遺物圖鑑</a>一致。</li>
         <li>詞條的詳細說明是社群整理的英文說明譯文，不是遊戲內文字，也未逐條實測。原文的待核實註記譯為「（原文註記：……）」；原文與詞條名稱矛盾處照譯並標「（原文如此）」。原文數值、物品或地點與遊戲參數不符時（例如改版後社群資料未更新的數值），改依參數重寫該條說明，不保留原文數字。</li>
         <li>藍色表示同一詞條可在多個遺物上同時生效，且多份數值相加；多份以倍率相乘或合成方式尚未核實時，小字會另外標示。目前多數可疊加詞條的合成方式尚未核實。遺物資料集未載明自身可否疊加時，採社群遺物數值試算表或 Fextralife 明確寫出的說法，兩者不同時並列為來源分歧；兩者都沒寫明的維持尚未核實。</li>

@@ -9,7 +9,7 @@
   <script src="nav.js" defer></script>
   <script src="render.js" defer></script>
 </head>
-<body data-load="common relics/general relics/character relics/armament relics/demerit">
+<body data-load="common relics/general relics/character relics/armament relics/demerit characters/nightfarers">
   <header class="site-header">
     <nav aria-label="頁面階層">
       <ol class="crumbs"><li><a href="index.html">黑夜君臨研究資料庫</a></li></ol>
@@ -117,7 +117,7 @@
       <h2 id="understanding">如何理解提升效果</h2>
       <ul>
         <li>生命力、集中力、耐力是基礎能力值；HP、FP、精力是由它們影響的資源。選單中「提升上限」描述最終效果，不能據此判定底層一定使用獨立乘區；例如遊戲參數中，平加的「提升 HP 上限」與符合同類盾牌裝備數量條件時的「提升 HP 上限」是增加生命力，不是直接改變 HP 上限。<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects/Relic_Effects" target="_blank" rel="noopener noreferrer">遺物效果</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3AEffects" target="_blank" rel="noopener noreferrer">效果總表</a></li>
-        <li>角色升級時，能力值依角色自動成長；本作不是在升級畫面逐點自由分配能力值。這不表示每項能力值每級都會增加，例如社群資料中的<img class="icon icon-char" src="images/nightfarer-duchess.png" width="24" height="24" alt="女爵圖示" loading="lazy">女爵感應在等級 1 與 15 分別為 <span data-character="duchess:1:arcane"></span> 與 <span data-character="duchess:15:arcane"></span>。<a href="https://www.fromsoftware.jp/manual/nightreign/win/basic.html" target="_blank" rel="noopener noreferrer">官方升級說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
+        <li>角色升級時，能力值依角色自動成長；本作不是在升級畫面逐點自由分配能力值。這不表示每項能力值每級都會增加，例如遊戲參數中的<img class="icon icon-char" src="images/nightfarer-duchess.png" width="24" height="24" alt="女爵圖示" loading="lazy">女爵感應在等級 1 與 15 分別為 <span data-character="duchess:1:arcane"></span> 與 <span data-character="duchess:15:arcane"></span>，各等級數值見<a href="characters.html#character-duchess">角色頁</a>。<a href="https://www.fromsoftware.jp/manual/nightreign/win/basic.html" target="_blank" rel="noopener noreferrer">官方升級說明</a></li>
         <li>攻擊能力值的實際收益取決於武器補正與角色能力值；「<span data-tier-text="strength-up:3"></span>」這類能力值增量不能直接換算成固定的傷害百分比。<a href="https://media-center.bandainamcoent.eu/games/elden-ring-nightreign/ERN_FuturePress_StarterGuide.pdf" target="_blank" rel="noopener noreferrer">官方入門指南</a></li>
       </ul>
 
@@ -144,7 +144,7 @@
       <h2 id="limitations">查證限制</h2>
       <ul>
         <li>感應與發現力／稀有掉落：來源存在不同說法，現有查證不足以判定。本表不將「增加稀有掉落」列為已確認收益。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="https://www.reddit.com/r/Nightreign/comments/1l33h2x/a_question_about_arcane/" target="_blank" rel="noopener noreferrer">社群異議</a></li>
-        <li>感應與升級：Game8 稱升級會提升包含感應在內的所有能力值，與 Eldenpedia 女爵等級 1 和 15 的感應（<span data-character="duchess:1:arcane"></span>、<span data-character="duchess:15:arcane"></span>）不符。本文採女爵數值作例子，尚未實測。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess" target="_blank" rel="noopener noreferrer">女爵能力值資料</a></li>
+        <li>感應與升級：Game8 稱升級會提升包含感應在內的所有能力值，與遊戲參數中女爵等級 1 和 15 的感應（<span data-character="duchess:1:arcane"></span>、<span data-character="duchess:15:arcane"></span>）不符。本文採遊戲參數，尚未實測。<a href="https://game8.co/games/Elden-Ring-Nightreign/archives/526281" target="_blank" rel="noopener noreferrer">Game8 感應說明</a>、<a href="characters.html#character-duchess">角色頁</a></li>
         <li>「相關遺物詞條」只依遊戲參數的對應欄位與引用鏈比對；由程式狀態觸發、參數中沒有能力值欄位的詞條暫不列出，例如【無賴】技藝期間受擊提升精力上限、【隱士】絕活提升 HP 上限、圖騰碑石周圍提升強韌度。沒有列出不表示沒有關係。</li>
         <li>本文沒有驗證所有能力值對防禦力、異常抗性、發現力的附帶影響，也沒有驗證補正軟上限、疊加順序或強韌度門檻；這些不屬於本表的已確認結論。</li>
         <li>引用頁面的查閱日期不代表它適用當前所有補丁。需要精確配裝計算時，須核對效果、遊戲版本及相同條件下的實測。</li>

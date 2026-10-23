@@ -27,7 +27,9 @@
 
   const home = crumbs.querySelector("a");
   const onHome = home.pathname === location.pathname || location.pathname.endsWith("/");
-  const headings = [...document.querySelectorAll("main h2[id], main h3[id]")];
+  // h2 寫在 HTML；h3 可能由 render.js 產生 (例如角色頁的小節)，內容變動時重新收集
+  const findHeadings = () => [...document.querySelectorAll("main h2[id], main h3[id]")];
+  let headings = findHeadings();
   const h2s = headings.filter((heading) => heading.tagName === "H2");
   const root = document.documentElement;
   let shown = null;
@@ -159,7 +161,7 @@
   addEventListener("resize", schedule);
   // render.js 之後才填入資料產生的標題文字，標題變動時同步章節名稱並重新產生。
   // 名稱填入會改變頁首高度，需立即更新 --header-h，render.js 隨後對準網址錨點時才不會用到舊高度
-  new MutationObserver(() => { syncNames(); shown = null; update(); }).observe(document.querySelector("main"), { childList: true, subtree: true, characterData: true });
+  new MutationObserver(() => { headings = findHeadings(); syncNames(); shown = null; update(); }).observe(document.querySelector("main"), { childList: true, subtree: true, characterData: true });
   syncNames();
   update();
 })();

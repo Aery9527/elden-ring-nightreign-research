@@ -316,12 +316,13 @@ function stackExample(data, effect, count) {
   return `${head}：${ruleLabel(data, "combine", combine)}`;
 }
 
+// <span data-character="<角色>:<等級>:<能力值>">：取自角色資料檔 (characters/nightfarers) 的等級數值。
 function characterValue(data, path) {
   const [id, level, stat] = path.split(":");
-  const character = lookup(data.characters, id, "角色");
-  const value = lookup(character.levels, level, "角色等級")[stat];
-  if (value === undefined) throw new Error(`找不到角色數值：${path}`);
-  return value === null ? data.labels.unverified : isConflict(value) ? data.labels.conflict : String(value);
+  const nightfarer = lookup(data.nightfarers, id, "角色資料");
+  const value = lookup(nightfarer.levels, level, "角色等級")[stat];
+  if (typeof value !== "number") throw new Error(`找不到角色數值：${path}`);
+  return String(value);
 }
 
 function tierLabel(data, tierNumber) {
@@ -743,6 +744,72 @@ function skillChapters(data) {
   if (listed.length !== skills.length || new Set(listed).size !== listed.length) throw new Error("戰技沒有在各章恰好出現一次");
 }
 
+// ---------- 角色頁 ----------
+// <section data-nightfarer="<角色鍵>">：h2 填角色圖示與名稱，其後依角色資料產生三張表 (能力、技藝與絕活；能力加成；
+// 等級 1–15 的能力值與上限) 與該角色專屬遺物詞條章節的連結。每名角色恰好一個章節。
+// 名稱與說明是本站依官方簡體中文轉寫的繁體中文；錨點以外的等級與三項上限是匯入程式的計算值 (見 LORE)。
+const ABILITY_KINDS = ["passive", "skill", "art"];
+const GRADE_STATS = ["maxHp", "maxFp", "maxStamina", "strength", "dexterity", "intelligence", "faith", "arcane"];
+const LEVEL_STATS = ["vigor", "mind", "endurance", "strength", "dexterity", "intelligence", "faith", "arcane", "maxHp", "maxFp", "maxStamina"];
+
+function dataTable(heads, rows, tableClass) {
+  const head = el("thead", {}, el("tr", {}, ...heads.map((text) => el("th", {}, text))));
+  return el("div", { class: "table-wrap" }, el("table", tableClass ? { class: tableClass } : {}, head, el("tbody", {}, ...rows)));
+}
+
+function abilityRow(data, kind, ability) {
+  return el(
+    "tr",
+    {},
+    el("td", { class: "item" }, itemIcon(data, ability, "48"), ability.name.zh),
+    el("td", {}, data.labels.nightfarers[kind]),
+    el("td", { class: "caption" }, el("p", { class: "caption-text" }, ability.summary.zh), el("p", { class: "caption-text" }, ability.description.zh))
+  );
+}
+
+// 等級列：有參數列的等級 (錨點) 以粗體標示，其他等級是插值計算值。
+function levelRow(nightfarer, level) {
+  const values = nightfarer.levels[level];
+  const label = nightfarer.anchorLevels.includes(Number(level)) ? el("strong", {}, level) : level;
+  return el("tr", {}, el("td", {}, label), ...LEVEL_STATS.map((stat) => el("td", {}, String(values[stat]))));
+}
+
+// 角色章節放在 <div data-nightfarer-list> 內 (角色頁)；其他頁面沒有此容器，也不可有角色章節。
+function nightfarerChapters(data) {
+  const list = document.querySelector("[data-nightfarer-list]");
+  const sections = [...document.querySelectorAll("[data-nightfarer]")];
+  if (!list) {
+    if (sections.length) throw new Error("角色章節必須放在 data-nightfarer-list 內");
+    return;
+  }
+  if (sections.some((section) => !list.contains(section))) throw new Error("角色章節必須放在 data-nightfarer-list 內");
+  const keys = sections.map((section) => section.dataset.nightfarer);
+  for (const key of Object.keys(data.characters)) {
+    if (keys.filter((k) => k === key).length !== 1) throw new Error(`角色 ${key} 必須恰有一個章節`);
+  }
+  const labels = data.labels.nightfarers;
+  const statName = (stat) => lookup(data.stats, stat, "能力值").name.zh;
+  for (const section of sections) {
+    const key = section.dataset.nightfarer;
+    const character = lookup(data.characters, key, "角色");
+    const nightfarer = lookup(data.nightfarers, key, "角色資料");
+    const heading = section.querySelector("h2");
+    heading.replaceChildren(iconNode(data, character.icon, "24"), character.name.zh);
+    // 小節標題：id 為「章節 id-小節」，頁首依此顯示目前所在小節
+    const sub = (suffix, text) => el("h3", { id: `${heading.id}-${suffix}` }, text);
+    const relics = el("a", { href: `relics-character.html#character-${key}` }, character.name.zh);
+    section.append(
+      sub("abilities", labels.abilities),
+      dataTable([labels.name, labels.kind, labels.description], ABILITY_KINDS.map((kind) => abilityRow(data, kind, nightfarer[kind])), "abilities"),
+      sub("grades", labels.grade),
+      dataTable([labels.grades, ...GRADE_STATS.map(statName)], [el("tr", {}, el("td", {}, labels.gradeRow), ...GRADE_STATS.map((stat) => el("td", {}, nightfarer.grades[stat])))]),
+      sub("levels", labels.levels),
+      dataTable([labels.level, ...LEVEL_STATS.map(statName)], Object.keys(nightfarer.levels).map((level) => levelRow(nightfarer, level))),
+      el("p", {}, `${labels.relics}：`, relics)
+    );
+  }
+}
+
 // 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；
 // 特殊效果列出不是 1 的致命補正 (多數武器為 1)、固定效果名稱與命中時的異常狀態累積。沒有可列內容的欄顯示「—」。
 // 數值只來自遊戲參數，沒有未核實或來源分歧的狀態：缺鍵、多鍵或不是數字時報錯，不顯示成 0 或「—」。
@@ -898,6 +965,7 @@ function render(data) {
   renderChapters(data);
   for (const node of document.querySelectorAll("[data-unlisted-spells]")) node.replaceChildren(...unlistedSpellRows(data));
   skillChapters(data);
+  nightfarerChapters(data);
   for (const node of document.querySelectorAll("[data-stat-effects]")) node.replaceChildren(...statEntries(data, node.dataset.statEffects));
   for (const node of document.querySelectorAll("[data-game-version]")) node.textContent = data.gameVersion;
   for (const node of document.querySelectorAll("[data-item]")) {
@@ -969,10 +1037,11 @@ function loadJson(name) {
   });
 }
 
-// 合併 common 與其他資料檔：遺物大類檔 (有 category)、武器檔 (weapons)、法術檔 (spells)、戰技檔 (skills)。
-// 效果鍵、遊戲內 ID、子分類鍵、武器、法術或戰技 ID 重複時丟出錯誤，不以後者覆蓋前者；ID 唯一性依實體種類各自檢查。
+// 合併 common 與其他資料檔：遺物大類檔 (有 category)、武器檔 (weapons)、法術檔 (spells)、戰技檔 (skills)、角色檔 (nightfarers)。
+// 效果鍵、遊戲內 ID、子分類鍵、武器、法術、戰技 ID 或角色鍵重複時丟出錯誤，不以後者覆蓋前者；ID 唯一性依實體種類各自檢查。
+// 有載入角色檔時，其角色鍵必須與 common.json 的 characters 相同。
 function mergeData([common, ...files]) {
-  const data = { ...common, effects: {}, subcategories: {}, weapons: {}, spells: {}, skills: {} };
+  const data = { ...common, effects: {}, subcategories: {}, weapons: {}, spells: {}, skills: {}, nightfarers: {} };
   const gameIds = new Set();
   const claim = (id, owner) => {
     if (gameIds.has(id)) throw new Error(`遊戲內 ID 重複：${id}（${owner}）`);
@@ -986,7 +1055,7 @@ function mergeData([common, ...files]) {
       continue;
     }
     const kinds = Object.keys(file);
-    if (kinds.length !== 1 || !["weapons", "spells", "skills"].includes(kinds[0])) throw new Error(`無法辨識的資料檔：${kinds.join("、")}`);
+    if (kinds.length !== 1 || !["weapons", "spells", "skills", "nightfarers"].includes(kinds[0])) throw new Error(`無法辨識的資料檔：${kinds.join("、")}`);
     for (const [id, item] of Object.entries(file[kinds[0]])) {
       if (data[kinds[0]][id]) throw new Error(`${kinds[0]} ID 重複：${id}`);
       data[kinds[0]][id] = item;
@@ -1009,6 +1078,10 @@ function mergeData([common, ...files]) {
   }
   checkTags(data, spellsLoaded, loaded.has("skills"));
   if (loaded.has("skills")) checkSkills(data);
+  if (loaded.has("nightfarers")) {
+    const [own, defined] = [Object.keys(data.nightfarers), Object.keys(data.characters)];
+    if (own.length !== defined.length || !defined.every((key) => data.nightfarers[key])) throw new Error("角色資料的角色與 common.json 的 characters 不同");
+  }
   return data;
 }
 

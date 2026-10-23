@@ -538,6 +538,19 @@ td.caption {
   white-space: pre-line;
 }
 
+/* 角色的能力、技藝與絕活表：說明欄占大部分寬度；簡介與說明兩段之間留一行間距 */
+.abilities td.caption {
+  width: 65%;
+}
+
+td.caption p {
+  margin: 0;
+}
+
+td.caption p + p {
+  margin-top: 0.75em;
+}
+
 /* 沒有可用遊戲內圖片時保留與圖片相同的空位 */
 .icon-missing {
   display: inline-block;
@@ -680,8 +693,9 @@ body:has(.tone-legend) main {
     overflow-wrap: anywhere;
   }
 
-  /* 取消桌面版的欄寬偏好 (例如戰技說明的 35%)，每格占滿整列 */
-  .table-wrap td {
+  /* 取消桌面版的欄寬偏好 (例如戰技說明的 35%、角色能力說明的 65%)，每格占滿整列 */
+  .table-wrap td,
+  .abilities td.caption {
     width: auto;
     padding: 4px 12px;
     border-bottom: 0;

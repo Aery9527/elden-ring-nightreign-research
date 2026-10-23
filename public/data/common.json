@@ -473,20 +473,7 @@
         "zh": "追蹤者",
         "en": "Wylder"
       },
-      "icon": "nightfarer-wylder",
-      "levels": {
-        "1": {
-          "endurance": 3,
-          "maxStamina": 54
-        },
-        "2": {
-          "endurance": 6,
-          "maxStamina": 60
-        }
-      },
-      "sources": [
-        "eldenpedia-attributes"
-      ]
+      "icon": "nightfarer-wylder"
     },
     "guardian": {
       "name": {
@@ -507,18 +494,7 @@
         "zh": "女爵",
         "en": "Duchess"
       },
-      "icon": "nightfarer-duchess",
-      "levels": {
-        "1": {
-          "arcane": 11
-        },
-        "15": {
-          "arcane": 11
-        }
-      },
-      "sources": [
-        "eldenpedia-duchess"
-      ]
+      "icon": "nightfarer-duchess"
     },
     "raider": {
       "name": {
@@ -702,7 +678,22 @@
     "tierBase": "基本",
     "allTiers": "各等級",
     "iconMissing": "沒有可用的遊戲內圖示",
-    "characters": "限定角色"
+    "characters": "限定角色",
+    "nightfarers": {
+      "passive": "能力",
+      "skill": "技藝",
+      "art": "絕活",
+      "name": "名稱",
+      "kind": "類別",
+      "description": "說明",
+      "abilities": "能力、技藝與絕活",
+      "grades": "項目",
+      "grade": "能力加成",
+      "gradeRow": "評級",
+      "levels": "各等級能力值",
+      "level": "等級",
+      "relics": "角色專屬遺物詞條"
+    }
   },
   "sources": {
     "reliquary-json": {
@@ -724,14 +715,6 @@
     "eldenpedia-relics": {
       "title": "Eldenpedia 遺物說明",
       "url": "https://eldenring.wiki.gg/wiki/Nightreign%3ARelics"
-    },
-    "eldenpedia-duchess": {
-      "title": "Eldenpedia 女爵能力值資料",
-      "url": "https://eldenring.wiki.gg/wiki/Nightreign%3ADuchess"
-    },
-    "eldenpedia-attributes": {
-      "title": "Eldenpedia 能力值表",
-      "url": "https://eldenring.wiki.gg/wiki/Nightreign%3AAttributes"
     },
     "reddit-hp-stacking": {
       "title": "HP 疊加計算討論",
