@@ -625,6 +625,18 @@
       "dragon-communion": { "name": { "zh": "龍饗", "en": "Dragon Communion" }, "param": 25 }
     }
   },
+  "skillGroups": {
+    "no-affinity": { "name": { "zh": "無屬性", "en": "No Affinity" }, "sortGroupId": [10, 20, 30, 120] },
+    "magic": { "name": { "zh": "魔力", "en": "Magic" }, "sortGroupId": [40] },
+    "fire": { "name": { "zh": "火焰", "en": "Fire" }, "sortGroupId": [50], "defaultWepAttr": [5] },
+    "lightning": { "name": { "zh": "雷電", "en": "Lightning" }, "sortGroupId": [50], "defaultWepAttr": [6] },
+    "holy": { "name": { "zh": "神聖", "en": "Holy" }, "sortGroupId": [80] },
+    "ailment": { "name": { "zh": "毒、鮮血、寒冷", "en": "Poison, Blood, Cold" }, "sortGroupId": [90] },
+    "bow": { "name": { "zh": "弓", "en": "Bow" }, "sortGroupId": [130] },
+    "shield": { "name": { "zh": "盾", "en": "Shield" }, "sortGroupId": [140] },
+    "unique": { "name": { "zh": "專用戰技", "en": "Unique Skills" }, "sortGroupId": [200] },
+    "none": { "name": { "zh": "無戰技", "en": "No Skill" }, "sortGroupId": [255] }
+  },
   "labels": {
     "attributes": {
       "viaBase": "經由",

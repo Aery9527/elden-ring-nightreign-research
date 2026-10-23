@@ -21,6 +21,7 @@
     <h1 id="skills">戰技</h1>
     <ul>
       <li>本頁依遊戲參數（版本 <span data-game-version></span>）列出<a href="weapons.html">武器</a>頁具名武器引用的戰技：武器的參數預設戰技，以及武器生成參數的戰技池中權重大於 0 的戰技。這是依參數引用列出的範圍，不表示遊戲中全部可取得的戰技。</li>
+      <li>章節依遊戲參數的戰技分組（排序分組；火焰與雷電再依預設屬性區分），主要分區與 <a href="https://eldenring.wiki.gg/wiki/Nightreign:Skill" target="_blank" rel="noopener noreferrer">Eldenpedia 黑夜君臨戰技列表</a>相同；差異是該頁把無戰技列在盾，另有本站未收錄的火把戰技。分組名稱取自官方的屬性與武器種類用語，「無屬性」為本站命名。分組不表示戰技實際造成的傷害屬性或可用的武器。專用戰技再依參數預設武器的種類分成小節。</li>
       <li>「相關武器」列出兩種關係：「參數預設」是預設戰技為此戰技的武器；「生成池候選」是戰技池含此戰技的武器。兩把以上時收合，標題附數量，可展開檢視。這些是遊戲參數上的關係，不表示撿到的武器帶哪個戰技或各戰技出現的機率；武器生成時沒有指定戰技池的情況下帶哪個戰技，參數無法說明。</li>
       <li>戰技名稱下方的「相關遺物詞條」列出遊戲參數指定此戰技的詞條，目前是出擊時把武器戰技改為此戰技的詞條；改為此戰技不等於強化此戰技，能改變戰技的武器類別也尚未核實。影響全部戰技的詞條（例如戰技的 FP 消耗或傷害）尚未建立關聯，沒有列出不表示沒有關係。</li>
       <li>「FP 消耗」是遊戲參數的原始值，依參數欄位 L1、L2、R1、R2 各列一行，尚未套用遺物等減少消耗的效果。值為 -1 的欄位不列出；全部為 -1 時顯示「—」，不表示不消耗 FP。</li>
@@ -28,17 +29,385 @@
       <li>圖示取自 Eldenpedia 的《黑夜君臨》戰技圖示。名稱相同或共用同一段文字的戰技，無法只依名稱判斷圖示屬於哪一個，因此不顯示圖示。</li>
     </ul>
 
-    <section>
-      <h2 id="skill-list">戰技一覽</h2>
-      <div class="table-wrap">
-        <table class="table-wide">
-          <thead>
-            <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
-          </thead>
-          <tbody data-skill-rows></tbody>
-        </table>
-      </div>
-    </section>
+    <div id="skill-list">
+      <section data-skill-group="no-affinity">
+        <h2 id="skill-group-no-affinity"></h2>
+        <p>本站命名（Eldenpedia 稱為 No Affinity），合併《艾爾登法環》本篇厚重、鋒利、優質、神秘四組的戰技；《黑夜君臨》已移除這些質變。名稱不表示戰技不造成屬性傷害。</p>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="magic">
+        <h2 id="skill-group-magic"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="fire">
+        <h2 id="skill-group-fire"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="lightning">
+        <h2 id="skill-group-lightning"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="holy">
+        <h2 id="skill-group-holy"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="ailment">
+        <h2 id="skill-group-ailment"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="bow">
+        <h2 id="skill-group-bow"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="shield">
+        <h2 id="skill-group-shield"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section data-skill-group="unique">
+        <h2 id="skill-group-unique"></h2>
+        <p>依遊戲參數的分組歸類，少數戰技的說明開頭是「戰技：」而不是「專用戰技：」。各小節依參數預設武器的種類分節，不表示其他武器不會帶這些戰技。</p>
+        <section data-skill-weapon-type="dagger">
+          <h3 id="skill-unique-dagger"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="straight-sword">
+          <h3 id="skill-unique-straight-sword"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="greatsword">
+          <h3 id="skill-unique-greatsword"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="colossal-sword">
+          <h3 id="skill-unique-colossal-sword"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="curved-sword">
+          <h3 id="skill-unique-curved-sword"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="curved-greatsword">
+          <h3 id="skill-unique-curved-greatsword"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="katana">
+          <h3 id="skill-unique-katana"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="twinblade">
+          <h3 id="skill-unique-twinblade"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="heavy-thrusting-sword">
+          <h3 id="skill-unique-heavy-thrusting-sword"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="axe">
+          <h3 id="skill-unique-axe"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="greataxe">
+          <h3 id="skill-unique-greataxe"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="hammer">
+          <h3 id="skill-unique-hammer"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="great-hammer">
+          <h3 id="skill-unique-great-hammer"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="flail">
+          <h3 id="skill-unique-flail"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="spear">
+          <h3 id="skill-unique-spear"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="great-spear">
+          <h3 id="skill-unique-great-spear"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="halberd">
+          <h3 id="skill-unique-halberd"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="reaper">
+          <h3 id="skill-unique-reaper"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="fist">
+          <h3 id="skill-unique-fist"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="whip">
+          <h3 id="skill-unique-whip"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="colossal-weapon">
+          <h3 id="skill-unique-colossal-weapon"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="greatbow">
+          <h3 id="skill-unique-greatbow"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="small-shield">
+          <h3 id="skill-unique-small-shield"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-skill-weapon-type="greatshield">
+          <h3 id="skill-unique-greatshield"></h3>
+          <div class="table-wrap">
+            <table class="table-wide">
+              <thead>
+                <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+              </thead>
+              <tbody data-skill-rows></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section data-skill-group="none">
+        <h2 id="skill-group-none"></h2>
+        <div class="table-wrap">
+          <table class="table-wide">
+            <thead>
+              <tr><th>戰技</th><th>FP 消耗</th><th>說明</th><th>相關武器</th></tr>
+            </thead>
+            <tbody data-skill-rows></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
   </main>
 </body>
 </html>

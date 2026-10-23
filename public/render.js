@@ -671,25 +671,76 @@ function skillWeaponEntries(data, id) {
   return [...list(labels.paramDefault, byDefault), ...list(labels.poolCandidates, byPool)];
 }
 
-// <tbody data-skill-rows>：依 ID 列出全部戰技；列 id 為 skill-<id>，是武器頁戰技欄與遺物頁相關戰技連結的目標。
+// 戰技列：列 id 為 skill-<id>，是武器頁戰技欄與遺物頁相關戰技連結的目標。
 // 名稱下方列出指定此戰技的遺物詞條 (targets.skill，以戰技自身 ID 比對)，沒有時不輸出。
 // 說明是本站依《艾爾登法環》本篇官方簡體中文轉寫的繁體中文，保留原文換行。
-function skillRows(data) {
-  const skills = Object.entries(data.skills).sort(([a], [b]) => Number(a) - Number(b));
-  if (skills.length === 0 || !Object.keys(data.weapons).length) throw new Error("頁面需載入 armaments/weapons 與 armaments/skills");
+function skillRow(data, id, skill) {
+  if (typeof skill.caption?.zh !== "string") throw new Error(`戰技說明必須是文字（戰技 ${id}）`);
+  const own = inlineTargets(data, { skill: [id] });
+  return el(
+    "tr",
+    { id: `skill-${id}` },
+    el("td", { class: "item" }, itemNameNode(data, id, skill), ...(own.length ? [el("span", { class: "item-targets" }, ...own)] : [])),
+    skillFpCell(data, id, skill),
+    el("td", { class: "caption" }, el("span", { class: "caption-text" }, skill.caption.zh)),
+    el("td", { class: "names skill-weapons" }, ...skillWeaponEntries(data, id))
+  );
+}
+
+// 戰技的參數預設武器種類：預設戰技為此戰技的具名武器必須恰好屬於一種武器種類，否則報錯。
+function skillWeaponType(data, id) {
+  const lists = Object.values(data.weapons)
+    .filter((weapon) => weapon.name && weapon.skill.default === id)
+    .map((weapon) => weapon.tags.weaponType);
+  const types = new Set(lists.flatMap((list) => (Array.isArray(list) ? list : [undefined])));
+  if (!lists.length || !lists.every((list) => Array.isArray(list) && list.length === 1) || types.size !== 1) {
+    throw new Error(`戰技的參數預設武器必須恰好屬於一種武器種類（戰技 ${id}）`);
+  }
+  return [...types][0];
+}
+
+// <section data-skill-group="<group>">：戰技分組章節 (common.json 的 skillGroups)。h2 填分組名稱，[data-skill-rows] 依 ID 列出該組戰技。
+// 章內有 <section data-skill-weapon-type="<type>"> 小節時，依參數預設武器的種類分節：h3 填武器種類名稱，各節列出該種類的戰技。
+// 每個分組恰有一章、小節恰好涵蓋該組戰技的武器種類、每個戰技恰好列出一次，否則報錯。
+function skillChapters(data) {
+  if ([...document.querySelectorAll("[data-skill-rows]")].some((rows) => !rows.closest("[data-skill-group]"))) {
+    throw new Error("戰技列必須位於戰技分組章節 (data-skill-group) 內");
+  }
+  const sections = [...document.querySelectorAll("[data-skill-group]")];
+  if (!sections.length) return;
+  if (!Object.keys(data.skills).length || !Object.keys(data.weapons).length) throw new Error("頁面需載入 armaments/weapons 與 armaments/skills");
   if (!Object.keys(data.effects).length) throw new Error("頁面需載入遺物大類檔");
-  return skills.map(([id, skill]) => {
-    if (typeof skill.caption?.zh !== "string") throw new Error(`戰技說明必須是文字（戰技 ${id}）`);
-    const own = inlineTargets(data, { skill: [id] });
-    return el(
-      "tr",
-      { id: `skill-${id}` },
-      el("td", { class: "item" }, itemNameNode(data, id, skill), ...(own.length ? [el("span", { class: "item-targets" }, ...own)] : [])),
-      skillFpCell(data, id, skill),
-      el("td", { class: "caption" }, el("span", { class: "caption-text" }, skill.caption.zh)),
-      el("td", { class: "names skill-weapons" }, ...skillWeaponEntries(data, id))
-    );
-  });
+  const groups = sections.map((section) => section.dataset.skillGroup);
+  const missing = Object.keys(data.skillGroups).filter((key) => !groups.includes(key));
+  if (missing.length || new Set(groups).size !== groups.length) throw new Error(`戰技分組章節必須與分組一一對應：${missing.join("、")}`);
+  const listed = [];
+  const fill = (container, entries) => {
+    if (entries.length === 0) throw new Error(`戰技章節沒有項目：${container.dataset.skillGroup ?? container.dataset.skillWeaponType}`);
+    container.querySelector("[data-skill-rows]").replaceChildren(...entries.map(([id, skill]) => skillRow(data, id, skill)));
+    listed.push(...entries.map(([id]) => id));
+  };
+  const skills = Object.entries(data.skills).sort(([a], [b]) => Number(a) - Number(b));
+  for (const section of sections) {
+    const key = section.dataset.skillGroup;
+    section.querySelector("h2").textContent = lookup(data.skillGroups, key, "戰技分組").name.zh;
+    const members = skills.filter(([, skill]) => skill.group === key);
+    const subs = [...section.querySelectorAll("[data-skill-weapon-type]")];
+    if (!subs.length) {
+      fill(section, members);
+      continue;
+    }
+    const types = subs.map((sub) => sub.dataset.skillWeaponType);
+    const needed = new Set(members.map(([id]) => skillWeaponType(data, id)));
+    if (types.length !== needed.size || !types.every((type) => needed.has(type))) {
+      throw new Error(`戰技小節必須與該組戰技的武器種類一一對應：${key}`);
+    }
+    for (const sub of subs) {
+      const type = sub.dataset.skillWeaponType;
+      sub.querySelector("h3").textContent = tagName(data, "weaponType", type);
+      fill(sub, members.filter(([id]) => skillWeaponType(data, id) === type));
+    }
+  }
+  if (listed.length !== skills.length || new Set(listed).size !== listed.length) throw new Error("戰技沒有在各章恰好出現一次");
 }
 
 // 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；
@@ -846,7 +897,7 @@ function render(data) {
   }
   renderChapters(data);
   for (const node of document.querySelectorAll("[data-unlisted-spells]")) node.replaceChildren(...unlistedSpellRows(data));
-  for (const node of document.querySelectorAll("[data-skill-rows]")) node.replaceChildren(...skillRows(data));
+  skillChapters(data);
   for (const node of document.querySelectorAll("[data-stat-effects]")) node.replaceChildren(...statEntries(data, node.dataset.statEffects));
   for (const node of document.querySelectorAll("[data-game-version]")) node.textContent = data.gameVersion;
   for (const node of document.querySelectorAll("[data-item]")) {
@@ -961,7 +1012,7 @@ function mergeData([common, ...files]) {
   return data;
 }
 
-// 有載入戰技檔時：每把具名武器都有 skill，其 default 與 pool 的每個戰技都要存在。
+// 有載入戰技檔時：每把具名武器都有 skill，其 default 與 pool 的每個戰技都要存在；每個戰技的 group 都要在 skillGroups 定義。
 function checkSkills(data) {
   for (const [id, weapon] of Object.entries(data.weapons)) {
     if (!weapon.name) continue;
@@ -969,6 +1020,7 @@ function checkSkills(data) {
     if (typeof skill?.default !== "string" || !Array.isArray(skill.pool)) throw new Error(`武器戰技必須有 default 與 pool（武器 ${id}）`);
     for (const skillId of [skill.default, ...skill.pool]) lookup(data.skills, skillId, `戰技（武器 ${id}）`);
   }
+  for (const [id, skill] of Object.entries(data.skills)) lookup(data.skillGroups, skill.group, `戰技分組（戰技 ${id}）`);
 }
 
 // 標籤與引用檢查：物品標籤、遺物相關對象的鍵都要有定義；targets.spell 是法術 ID、targets.skill 是戰技 ID，有載入法術檔、

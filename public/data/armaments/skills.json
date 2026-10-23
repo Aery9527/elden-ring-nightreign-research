@@ -7,6 +7,7 @@
       },
       "textId": "10",
       "icon": null,
+      "group": "none",
       "fp": {
         "L1": -1,
         "L2": -1,
@@ -45,6 +46,7 @@
         "src": "images/skill-lion-s-claw.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lion's_Claw.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -83,6 +85,7 @@
         "src": "images/skill-impaling-thrust.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Impaling_Thrust.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 9,
@@ -121,6 +124,7 @@
         "src": "images/skill-piercing-fang.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Piercing_Fang.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -156,6 +160,7 @@
       },
       "textId": "103",
       "icon": null,
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -194,6 +199,7 @@
         "src": "images/skill-charge-forth.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Charge_Forth.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -232,6 +238,7 @@
         "src": "images/skill-stamp-upward-cut.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stamp_(Upward_Cut).png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -270,6 +277,7 @@
         "src": "images/skill-stamp-sweep.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stamp_(Sweep).png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -308,6 +316,7 @@
         "src": "images/skill-blood-tax.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blood_Tax.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -346,6 +355,7 @@
         "src": "images/skill-repeating-thrust.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Repeating_Thrust.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 7,
@@ -384,6 +394,7 @@
         "src": "images/skill-wild-strikes.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wild_Strikes.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 2,
@@ -422,6 +433,7 @@
         "src": "images/skill-spinning-strikes.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Strikes.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 2,
@@ -460,6 +472,7 @@
         "src": "images/skill-double-slash.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Double_Slash.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -498,6 +511,7 @@
         "src": "images/skill-prelate-s-charge.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Prelate's_Charge.png"
       },
+      "group": "fire",
       "fp": {
         "L1": -1,
         "L2": 7,
@@ -536,6 +550,7 @@
         "src": "images/skill-unsheathe.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Unsheathe.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -574,6 +589,7 @@
         "src": "images/skill-square-off.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Square_Off.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -612,6 +628,7 @@
         "src": "images/skill-giant-hunt.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Giant_Hunt.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -647,6 +664,7 @@
       },
       "textId": "118",
       "icon": null,
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -685,6 +703,7 @@
         "src": "images/skill-poison-moth-flight.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Poison_Moth_Flight.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 7,
@@ -720,6 +739,7 @@
       },
       "textId": "120",
       "icon": null,
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 12,
@@ -758,6 +778,7 @@
         "src": "images/skill-storm-assault.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Assault.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 22,
@@ -796,6 +817,7 @@
         "src": "images/skill-stormcaller.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stormcaller.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 9,
@@ -834,6 +856,7 @@
         "src": "images/skill-sword-dance.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sword_Dance.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -872,6 +895,7 @@
         "src": "images/skill-spinning-chain.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Chain.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 8,
@@ -910,6 +934,7 @@
         "src": "images/skill-glintblade-phalanx.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintblade_Phalanx.png"
       },
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -948,6 +973,7 @@
         "src": "images/skill-sacred-blade.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Blade.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 19,
@@ -986,6 +1012,7 @@
         "src": "images/skill-ice-spear.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ice_Spear.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -1024,6 +1051,7 @@
         "src": "images/skill-glintstone-pebble.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintstone_Pebble.png"
       },
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 8,
@@ -1062,6 +1090,7 @@
         "src": "images/skill-bloody-slash.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloody_Slash.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -1100,6 +1129,7 @@
         "src": "images/skill-lifesteal-fist.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lifesteal_Fist.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -1138,6 +1168,7 @@
         "src": "images/skill-eruption.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Eruption.png"
       },
+      "group": "fire",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -1176,6 +1207,7 @@
         "src": "images/skill-prayerful-strike.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Prayerful_Strike.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -1214,6 +1246,7 @@
         "src": "images/skill-gravitas.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gravitas.png"
       },
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 13,
@@ -1252,6 +1285,7 @@
         "src": "images/skill-storm-blade.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Blade.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -1290,6 +1324,7 @@
         "src": "images/skill-earthshaker.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Earthshaker.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -1328,6 +1363,7 @@
         "src": "images/skill-golden-land.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Land.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -1366,6 +1402,7 @@
         "src": "images/skill-flaming-strike.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flaming_Strike.png"
       },
+      "group": "fire",
       "fp": {
         "L1": -1,
         "L2": 4,
@@ -1404,6 +1441,7 @@
         "src": "images/skill-thunderbolt.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thunderbolt.png"
       },
+      "group": "lightning",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -1442,6 +1480,7 @@
         "src": "images/skill-lightning-slash.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lightning_Slash.png"
       },
+      "group": "lightning",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -1480,6 +1519,7 @@
         "src": "images/skill-carian-grandeur.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Grandeur.png"
       },
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 26,
@@ -1518,6 +1558,7 @@
         "src": "images/skill-carian-greatsword.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Greatsword.png"
       },
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -1556,6 +1597,7 @@
         "src": "images/skill-vacuum-slice.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Vacuum_Slice.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -1594,6 +1636,7 @@
         "src": "images/skill-black-flame-tornado.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Black_Flame_Tornado.png"
       },
+      "group": "fire",
       "fp": {
         "L1": -1,
         "L2": 30,
@@ -1632,6 +1675,7 @@
         "src": "images/skill-sacred-ring-of-light.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Ring_of_Light.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 9,
@@ -1670,6 +1714,7 @@
         "src": "images/skill-blood-blade.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blood_Blade.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 3,
@@ -1708,6 +1753,7 @@
         "src": "images/skill-phantom-slash.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Phantom_Slash.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 8,
@@ -1746,6 +1792,7 @@
         "src": "images/skill-spectral-lance.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spectral_Lance.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 9,
@@ -1784,6 +1831,7 @@
         "src": "images/skill-chilling-mist.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Chilling_Mist.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -1822,6 +1870,7 @@
         "src": "images/skill-poisonous-mist.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Poisonous_Mist.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -1860,6 +1909,7 @@
         "src": "images/skill-shield-bash.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shield_Bash.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -1898,6 +1948,7 @@
         "src": "images/skill-barricade-shield.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barricade_Shield.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 12,
@@ -1933,6 +1984,7 @@
       },
       "textId": "302",
       "icon": null,
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -1971,6 +2023,7 @@
         "src": "images/skill-buckler-parry.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Buckler_Parry.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2009,6 +2062,7 @@
         "src": "images/skill-carian-retaliation.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Retaliation.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 8,
@@ -2047,6 +2101,7 @@
         "src": "images/skill-storm-wall.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Wall.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 3,
@@ -2085,6 +2140,7 @@
         "src": "images/skill-golden-parry.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Parry.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 4,
@@ -2123,6 +2179,7 @@
         "src": "images/skill-shield-crash.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shield_Crash.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 12,
@@ -2161,6 +2218,7 @@
         "src": "images/skill-thops-s-barrier.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thops's_Barrier.png"
       },
+      "group": "shield",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2199,6 +2257,7 @@
         "src": "images/skill-through-and-through.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Through_and_Through.png"
       },
+      "group": "bow",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2237,6 +2296,7 @@
         "src": "images/skill-barrage.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barrage.png"
       },
+      "group": "bow",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2275,6 +2335,7 @@
         "src": "images/skill-mighty-shot.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Mighty_Shot.png"
       },
+      "group": "bow",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2313,6 +2374,7 @@
         "src": "images/skill-enchanted-shot.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Enchanted_Shot.png"
       },
+      "group": "bow",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2351,6 +2413,7 @@
         "src": "images/skill-sky-shot.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sky_Shot.png"
       },
+      "group": "bow",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2389,6 +2452,7 @@
         "src": "images/skill-rain-of-arrows.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rain_of_Arrows.png"
       },
+      "group": "bow",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2427,6 +2491,7 @@
         "src": "images/skill-hoarfrost-stomp.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Hoarfrost_Stomp.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -2465,6 +2530,7 @@
         "src": "images/skill-storm-stomp.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Stomp.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -2503,6 +2569,7 @@
         "src": "images/skill-kick.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Kick.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -2541,6 +2608,7 @@
         "src": "images/skill-lightning-ram.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lightning_Ram.png"
       },
+      "group": "lightning",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -2579,6 +2647,7 @@
         "src": "images/skill-flame-of-the-redmanes.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_of_the_Redmanes.png"
       },
+      "group": "fire",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -2617,6 +2686,7 @@
         "src": "images/skill-ground-slam.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ground_Slam.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -2655,6 +2725,7 @@
         "src": "images/skill-golden-slam.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Slam.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 22,
@@ -2693,6 +2764,7 @@
         "src": "images/skill-waves-of-darkness.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Waves_of_Darkness.png"
       },
+      "group": "magic",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -2731,6 +2803,7 @@
         "src": "images/skill-hoarah-loux-s-earthshaker.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Hoarah_Loux's_Earthshaker.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -2769,6 +2842,7 @@
         "src": "images/skill-determination.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Determination.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -2807,6 +2881,7 @@
         "src": "images/skill-royal-knight-s-resolve.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Royal_Knight's_Resolve.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -2845,6 +2920,7 @@
         "src": "images/skill-assassin-s-gambit.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Assassin's_Gambit.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -2883,6 +2959,7 @@
         "src": "images/skill-golden-vow.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Vow.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 40,
@@ -2921,6 +2998,7 @@
         "src": "images/skill-sacred-order.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Order.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 18,
@@ -2959,6 +3037,7 @@
         "src": "images/skill-shared-order.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shared_Order.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -2997,6 +3076,7 @@
         "src": "images/skill-seppuku.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Seppuku.png"
       },
+      "group": "ailment",
       "fp": {
         "L1": -1,
         "L2": 4,
@@ -3035,6 +3115,7 @@
         "src": "images/skill-cragblade.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Cragblade.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -3073,6 +3154,7 @@
         "src": "images/skill-barbaric-roar.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barbaric_Roar.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -3111,6 +3193,7 @@
         "src": "images/skill-war-cry.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_War_Cry.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -3149,6 +3232,7 @@
         "src": "images/skill-beast-s-roar.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Beast's_Roar.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -3187,6 +3271,7 @@
         "src": "images/skill-troll-s-roar.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Troll's_Roar.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -3225,6 +3310,7 @@
         "src": "images/skill-braggart-s-roar.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Braggart's_Roar.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -3263,6 +3349,7 @@
         "src": "images/skill-endure.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Endure.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 9,
@@ -3301,6 +3388,7 @@
         "src": "images/skill-vow-of-the-indomitable.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Vow_of_the_Indomitable.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -3339,6 +3427,7 @@
         "src": "images/skill-holy-ground.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Holy_Ground.png"
       },
+      "group": "holy",
       "fp": {
         "L1": -1,
         "L2": 30,
@@ -3377,6 +3466,7 @@
         "src": "images/skill-quickstep.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Quickstep.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 3,
@@ -3415,6 +3505,7 @@
         "src": "images/skill-bloodhound-s-step.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodhound's_Step.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -3453,6 +3544,7 @@
         "src": "images/skill-raptor-of-the-mists.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Raptor_of_the_Mists.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -3491,6 +3583,7 @@
         "src": "images/skill-white-shadow-s-lure.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_White_Shadow's_Lure.png"
       },
+      "group": "no-affinity",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -3529,6 +3622,7 @@
         "src": "images/skill-surge-of-faith.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Surge_of_Faith.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -3567,6 +3661,7 @@
         "src": "images/skill-flame-spit.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_Spit.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 28,
@@ -3605,6 +3700,7 @@
         "src": "images/skill-tongues-of-fire.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Tongues_of_Fire.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -3643,6 +3739,7 @@
         "src": "images/skill-oracular-bubble.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Oracular_Bubble.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -3681,6 +3778,7 @@
         "src": "images/skill-bubble-shower.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bubble_Shower.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -3719,6 +3817,7 @@
         "src": "images/skill-great-oracular-bubble.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Great_Oracular_Bubble.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -3757,6 +3856,7 @@
         "src": "images/skill-sea-of-magma.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sea_of_Magma.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -3795,6 +3895,7 @@
         "src": "images/skill-viper-bite.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Viper_Bite.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 8,
@@ -3833,6 +3934,7 @@
         "src": "images/skill-moonlight-greatsword.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Moonlight_Greatsword.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 32,
@@ -3871,6 +3973,7 @@
         "src": "images/skill-siluria-s-woe.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Siluria's_Woe.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -3909,6 +4012,7 @@
         "src": "images/skill-rallying-standard.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rallying_Standard.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 30,
@@ -3947,6 +4051,7 @@
         "src": "images/skill-bear-witness.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bear_Witness!.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -3982,6 +4087,7 @@
       },
       "textId": "1012",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -4020,6 +4126,7 @@
         "src": "images/skill-soul-stifler.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Soul_Stifler.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 12,
@@ -4058,6 +4165,7 @@
         "src": "images/skill-taker-s-flames.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Taker's_Flames.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 30,
@@ -4096,6 +4204,7 @@
         "src": "images/skill-shriek-of-milos.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shriek_of_Milos.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 30,
@@ -4134,6 +4243,7 @@
         "src": "images/skill-reduvia-blood-blade.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Reduvia_Blood_Blade.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 6,
@@ -4172,6 +4282,7 @@
         "src": "images/skill-glintstone-dart.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintstone_Dart.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -4207,6 +4318,7 @@
       },
       "textId": "1018",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 9,
@@ -4245,6 +4357,7 @@
         "src": "images/skill-night-and-flame-stance.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Night-and-Flame_Stance.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -4283,6 +4396,7 @@
         "src": "images/skill-wave-of-gold.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wave_of_Gold.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 42,
@@ -4321,6 +4435,7 @@
         "src": "images/skill-ruinous-ghostflame.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ruinous_Ghostflame.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4359,6 +4474,7 @@
         "src": "images/skill-establish-order.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Establish_Order.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4397,6 +4513,7 @@
         "src": "images/skill-mists-of-slumber.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Mists_of_Slumber.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4435,6 +4552,7 @@
         "src": "images/skill-spearcall-ritual.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spearcall_Ritual.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4473,6 +4591,7 @@
         "src": "images/skill-wolf-s-assault.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wolf's_Assault.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4511,6 +4630,7 @@
         "src": "images/skill-thundercloud-form.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thundercloud_Form.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 28,
@@ -4549,6 +4669,7 @@
         "src": "images/skill-cursed-blood-slice.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Cursed-Blood_Slice.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4587,6 +4708,7 @@
         "src": "images/skill-waterfowl-dance.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Waterfowl_Dance.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 12,
@@ -4625,6 +4747,7 @@
         "src": "images/skill-gold-breaker.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gold_Breaker.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 26,
@@ -4663,6 +4786,7 @@
         "src": "images/skill-i-command-thee-kneel.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_I_Command_Thee,_Kneel!.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -4701,6 +4825,7 @@
         "src": "images/skill-regal-roar.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Regal_Roar.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -4739,6 +4864,7 @@
         "src": "images/skill-starcaller-cry.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Starcaller_Cry.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4777,6 +4903,7 @@
         "src": "images/skill-wave-of-destruction.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wave_of_Destruction.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -4815,6 +4942,7 @@
         "src": "images/skill-bloodboon-ritual.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodboon_Ritual.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -4850,6 +4978,7 @@
       },
       "textId": "1035",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -4888,6 +5017,7 @@
         "src": "images/skill-blade-of-death.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blade_of_Death.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -4926,6 +5056,7 @@
         "src": "images/skill-blade-of-gold.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blade_of_Gold.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 17,
@@ -4964,6 +5095,7 @@
         "src": "images/skill-destined-death.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Destined_Death.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 40,
@@ -5002,6 +5134,7 @@
         "src": "images/skill-spinning-wheel.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Wheel.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 3,
@@ -5040,6 +5173,7 @@
         "src": "images/skill-alabaster-lords-pull.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Alabaster_Lords'_Pull.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -5075,6 +5209,7 @@
       },
       "textId": "1041",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 27,
@@ -5113,6 +5248,7 @@
         "src": "images/skill-oath-of-vengeance.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Oath_of_Vengeance.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -5151,6 +5287,7 @@
         "src": "images/skill-ice-lightning-sword.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ice_Lightning_Sword.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -5189,6 +5326,7 @@
         "src": "images/skill-regal-beastclaw.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Regal_Beastclaw.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -5227,6 +5365,7 @@
         "src": "images/skill-flame-dance.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_Dance.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -5265,6 +5404,7 @@
         "src": "images/skill-claw-flick.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Claw_Flick.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -5300,6 +5440,7 @@
       },
       "textId": "1047",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -5338,6 +5479,7 @@
         "src": "images/skill-ghostflame-ignition.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ghostflame_Ignition.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -5376,6 +5518,7 @@
         "src": "images/skill-ancient-lightning-spear.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ancient_Lightning_Spear.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 24,
@@ -5414,6 +5557,7 @@
         "src": "images/skill-frenzyflame-thrust.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Frenzyflame_Thrust.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -5452,6 +5596,7 @@
         "src": "images/skill-miquella-s-ring-of-light.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Miquella's_Ring_of_Light.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 11,
@@ -5490,6 +5635,7 @@
         "src": "images/skill-golden-tempering.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Tempering.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 24,
@@ -5528,6 +5674,7 @@
         "src": "images/skill-last-rites.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Last_Rites.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -5563,6 +5710,7 @@
       },
       "textId": "1054",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 18,
@@ -5598,6 +5746,7 @@
       },
       "textId": "1055",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -5633,6 +5782,7 @@
       },
       "textId": "118",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 14,
@@ -5668,6 +5818,7 @@
       },
       "textId": "103",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 17,
@@ -5706,6 +5857,7 @@
         "src": "images/skill-corpse-wax-cutter.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Corpse_Wax_Cutter.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -5744,6 +5896,7 @@
         "src": "images/skill-zamor-ice-storm.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Zamor_Ice_Storm.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -5782,6 +5935,7 @@
         "src": "images/skill-radahn-s-rain.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Radahn's_Rain.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -5820,6 +5974,7 @@
         "src": "images/skill-the-queen-s-black-flame.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_The_Queen's_Black_Flame.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -5858,6 +6013,7 @@
         "src": "images/skill-dynast-s-finesse.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Dynast's_Finesse.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 5,
@@ -5896,6 +6052,7 @@
         "src": "images/skill-magma-shower.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Magma_Shower.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 12,
@@ -5931,6 +6088,7 @@
       },
       "textId": "1173",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -5969,6 +6127,7 @@
         "src": "images/skill-death-flare.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Death_Flare.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 16,
@@ -6007,6 +6166,7 @@
         "src": "images/skill-bloodhound-s-finesse.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodhound's_Finesse.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 8,
@@ -6045,6 +6205,7 @@
         "src": "images/skill-magma-guillotine.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Magma_Guillotine.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 20,
@@ -6083,6 +6244,7 @@
         "src": "images/skill-corpse-piler.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Corpse_Piler.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 17,
@@ -6121,6 +6283,7 @@
         "src": "images/skill-transient-moonlight.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Transient_Moonlight.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 0,
@@ -6159,6 +6322,7 @@
         "src": "images/skill-bloodblade-dance.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodblade_Dance.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 11,
@@ -6197,6 +6361,7 @@
         "src": "images/skill-knowledge-above-all.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Knowledge_Above_All.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 35,
@@ -6235,6 +6400,7 @@
         "src": "images/skill-devourer-of-worlds.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Devourer_of_Worlds.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 35,
@@ -6270,6 +6436,7 @@
       },
       "textId": "1184",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 25,
@@ -6308,6 +6475,7 @@
         "src": "images/skill-rosus-s-summons.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rosus's_Summons.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -6346,6 +6514,7 @@
         "src": "images/skill-thunderstorm.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thunderstorm.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 19,
@@ -6384,6 +6553,7 @@
         "src": "images/skill-sacred-phalanx.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Phalanx.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 12,
@@ -6422,6 +6592,7 @@
         "src": "images/skill-great-serpent-hunt.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Great-Serpent_Hunt.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 10,
@@ -6460,6 +6631,7 @@
         "src": "images/skill-angel-s-wings.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Angel's_Wings.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 17,
@@ -6498,6 +6670,7 @@
         "src": "images/skill-storm-kick.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Kick.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 4,
@@ -6533,6 +6706,7 @@
       },
       "textId": "1191",
       "icon": null,
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 17,
@@ -6571,6 +6745,7 @@
         "src": "images/skill-sorcery-of-the-crozier.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sorcery_of_the_Crozier.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,
@@ -6609,6 +6784,7 @@
         "src": "images/skill-erdtree-slam.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Erdtree_Slam.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 19,
@@ -6647,6 +6823,7 @@
         "src": "images/skill-gravity-bolt.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gravity_Bolt.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 13,
@@ -6685,6 +6862,7 @@
         "src": "images/skill-golden-retaliation.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Retaliation.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 4,
@@ -6723,6 +6901,7 @@
         "src": "images/skill-contagious-fury.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Contagious_Fury.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 9,
@@ -6761,6 +6940,7 @@
         "src": "images/skill-ordovis-s-vortex.png",
         "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ordovis's_Vortex.png"
       },
+      "group": "unique",
       "fp": {
         "L1": -1,
         "L2": 15,

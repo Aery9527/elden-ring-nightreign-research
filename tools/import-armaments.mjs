@@ -401,6 +401,17 @@ const spellData = Object.fromEntries(
 
 // 戰技 FP 消耗 (SwordArtsParam.useMagicPoint_*)：依輸入 L1、L2、R1、R2 各一個原始參數值，-1 照原值保留，不解讀為不消耗。
 const SKILL_FP = { L1: "useMagicPoint_L1", L2: "useMagicPoint_L2", R1: "useMagicPoint_R1", R2: "useMagicPoint_R2" };
+
+// 戰技分組 (common.json 的 skillGroups)：SwordArtsParam.sortGroupId 在該組的清單中，且該組有 defaultWepAttr 清單時預設屬性也在其中。
+// 每個戰技必須恰好符合一組。
+function skillGroup(row) {
+  const matches = Object.entries(common.skillGroups).filter(
+    ([, group]) => group.sortGroupId.includes(Number(row.sortGroupId)) && (!group.defaultWepAttr || group.defaultWepAttr.includes(Number(row.defaultWepAttr))),
+  );
+  if (matches.length !== 1) fail(`戰技 ${row.ID} (sortGroupId ${row.sortGroupId}、defaultWepAttr ${row.defaultWepAttr}) 必須恰好符合一個戰技分組，目前 ${matches.length} 個`);
+  return matches[0]?.[0] ?? null;
+}
+
 const skillData = Object.fromEntries(
   skillRows.map((row) => {
     const { zhSource, ...name } = skillNames.get(row.ID) ?? {};
@@ -414,6 +425,7 @@ const skillData = Object.fromEntries(
         name,
         textId: row.textId,
         icon: iconOf(pages, skillIconTitles.get(row.ID), "skill", name),
+        group: skillGroup(row),
         fp: pick(SKILL_FP, row, `戰技 ${row.ID}`),
         caption: { zh: skillTexts.get(row.textId)?.caption ?? null, en: caption },
         sources: ["game-params"],
