@@ -795,6 +795,27 @@ function render(data) {
     const links = icons.map((icon) => el("a", { href: icon.page, target: "_blank", rel: "noopener noreferrer" }, icon.alt));
     node.replaceChildren(...links.flatMap((link, index) => (index > 0 ? ["、", link] : [link])));
   }
+  // 最後一步：表格內容都已填入
+  labelTableCells();
+}
+
+// 窄螢幕的表格逐列直排 (styles.css)，每格前面以小字顯示欄名：把表頭文字寫到同欄各格的 data-label，
+// 第一欄是名稱，不加。直排把表格元素改為 block，部分瀏覽器因此失去表格語意，所以明確補上 role。
+function labelTableCells() {
+  for (const table of document.querySelectorAll("main table")) {
+    if (table.tHead?.rows.length !== 1) throw new Error("表格必須有一列表頭");
+    const heads = [...table.tHead.rows[0].cells].map((cell) => cell.textContent.trim());
+    table.setAttribute("role", "table");
+    for (const group of [table.tHead, ...table.tBodies]) group.setAttribute("role", "rowgroup");
+    for (const row of table.rows) {
+      if (row.cells.length !== heads.length) throw new Error(`表格列的格數與表頭不符：${heads.join("｜")}`);
+      row.setAttribute("role", "row");
+      [...row.cells].forEach((cell, index) => {
+        cell.setAttribute("role", cell.tagName === "TH" ? "columnheader" : "cell");
+        if (cell.tagName === "TD" && index > 0) cell.dataset.label = heads[index];
+      });
+    }
+  }
 }
 
 function showError(error) {

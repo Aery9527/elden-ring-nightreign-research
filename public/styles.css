@@ -523,6 +523,78 @@ body:has(.tone-legend) main {
   padding-bottom: 112px;
 }
 
+/* 窄螢幕 (平板直向、手機)：表格逐列直排，不需橫向捲動。每列一塊，第一格為名稱；其他格依序往下排，
+   左側以小字顯示欄名 (render.js 由表頭寫入 data-label)。表頭只在視覺上隱藏，保留給輔助科技。
+   900px 以上的表格最寬約 815px，可完整顯示，維持表格。列印維持表格。 */
+@media screen and (max-width: 900px) {
+  .table-wrap table,
+  .table-wrap tbody,
+  .table-wrap tr,
+  .table-wrap td {
+    display: block;
+  }
+
+  .table-wide {
+    min-width: 0;
+  }
+
+  .table-wrap thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .table-wrap tr {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .table-wrap tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  /* 取消桌面版的不換行與最小欄寬；長英文名稱必要時斷字。.entry 另列，權重才高於 td.names .entry 等規則 */
+  .table-wrap td,
+  .table-wrap td *,
+  .table-wrap td .entry {
+    min-width: 0;
+    max-width: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .table-wrap td {
+    padding: 4px 12px;
+    border-bottom: 0;
+  }
+
+  /* 欄名寬 7 字 (最長的欄名「效果數值與規則」)：0.85rem × 7 = 5.95rem */
+  .table-wrap td[data-label] {
+    position: relative;
+    padding-left: calc(24px + 5.95rem);
+  }
+
+  /* 替代文字為空，避免讀屏重複唸出表頭；第一行是不支援替代文字的瀏覽器的退回宣告 */
+  .table-wrap td[data-label]::before {
+    content: attr(data-label);
+    content: attr(data-label) / "";
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    width: 7em;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.75rem;
+  }
+
+  .item-name {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+}
+
 .load-error {
   padding: 12px 16px;
   border: 1px solid var(--accent);
