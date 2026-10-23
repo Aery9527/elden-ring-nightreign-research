@@ -121,30 +121,21 @@
         <li>攻擊能力值的實際收益取決於武器補正與角色能力值；「<span data-tier-text="strength-up:3"></span>」這類能力值增量不能直接換算成固定的傷害百分比。<a href="https://media-center.bandainamcoent.eu/games/elden-ring-nightreign/ERN_FuturePress_StarterGuide.pdf" target="_blank" rel="noopener noreferrer">官方入門指南</a></li>
       </ul>
 
-      <figure>
-        <svg class="diagram" viewBox="0 0 760 200" role="img" aria-labelledby="cap-title cap-desc">
-          <title id="cap-title">能力值與資源上限</title>
-          <desc id="cap-desc">基礎能力值影響資源上限，增加上限的效果也作用於容量；兩者不能只用名稱比較數值。</desc>
-          <defs>
-            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-              <path class="arrowhead" d="M0 0 L10 5 L0 10 z"/>
-            </marker>
-          </defs>
-          <rect class="box" x="10" y="20" width="180" height="44" rx="6"/>
-          <text x="100" y="42">生命力／集中力／耐力</text>
-          <path class="edge" d="M190 42 C 270 42, 250 100, 328 100" marker-end="url(#arrow)"/>
-          <text class="label" x="225" y="28">影響</text>
-          <rect class="box" x="10" y="136" width="180" height="44" rx="6"/>
-          <text x="100" y="158">提升上限效果</text>
-          <path class="edge" d="M190 158 C 270 158, 250 100, 328 100" marker-end="url(#arrow)"/>
-          <text class="label" x="250" y="178">依具體效果計算</text>
-          <rect class="box" x="330" y="78" width="180" height="44" rx="6"/>
-          <text x="420" y="100">HP／FP／精力上限</text>
-          <path class="edge" d="M510 100 H598" marker-end="url(#arrow)"/>
-          <text class="label" x="555" y="84">限制可儲存量</text>
-          <rect class="box" x="600" y="78" width="150" height="44" rx="6"/>
-          <text x="675" y="100">目前可用資源</text>
-        </svg>
+      <figure class="flow">
+        <figcaption>能力值與資源上限：基礎能力值影響資源上限，增加上限的效果也作用於容量；兩者不能只用名稱比較數值。</figcaption>
+        <div class="flow-sources">
+          <div class="flow-node">
+            <span class="flow-box">生命力／集中力／耐力</span>
+            <span class="flow-edge">影響</span>
+          </div>
+          <div class="flow-node">
+            <span class="flow-box">提升上限效果</span>
+            <span class="flow-edge">依具體效果計算</span>
+          </div>
+        </div>
+        <span class="flow-box">HP／FP／精力上限</span>
+        <span class="flow-edge">限制可儲存量</span>
+        <span class="flow-box">目前可用資源</span>
       </figure>
 
     </section>

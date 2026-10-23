@@ -268,40 +268,62 @@ figure {
   background: var(--surface);
 }
 
-figure svg {
+/* 關係圖：以 HTML 方塊由上往下排，箭頭與關係名稱在方塊之間；所有寬度共用同一版面，不需橫向捲動，文字也不隨螢幕縮小。
+   上方並排的來源各自指向下方同一個方塊。 */
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.flow figcaption {
+  align-self: stretch;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.flow-sources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.flow-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.flow-box {
   display: block;
   width: 100%;
-  min-width: 600px;
-  height: auto;
+  max-width: 480px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent-soft);
 }
 
-.diagram .box {
-  fill: var(--accent-soft);
-  stroke: var(--accent);
-  stroke-width: 1.5;
+.flow-node .flow-box {
+  flex: 1;
 }
 
-.diagram .edge {
-  fill: none;
-  stroke: var(--muted);
-  stroke-width: 1.5;
+.flow-edge {
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
-.diagram .arrowhead {
-  fill: var(--muted);
-}
-
-.diagram text {
-  fill: var(--text);
-  font-family: inherit;
-  font-size: 15px;
-  text-anchor: middle;
-  dominant-baseline: central;
-}
-
-.diagram .label {
-  fill: var(--muted);
-  font-size: 13px;
+/* 箭頭只是圖形，替代文字為空；第一行是不支援替代文字的瀏覽器的退回宣告 */
+.flow-edge::before {
+  content: "↓ ";
+  content: "↓ " / "";
 }
 
 .icon {
