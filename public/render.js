@@ -1,6 +1,6 @@
 // 依 <body data-load> 列出的資料檔 (例如 "common relics/general") 讀取遊戲數值，填入頁面上的 data-* 佔位元素。
 // common 放共用的能力值、圖示、角色、標籤 (tags)、介面文字 (labels) 與來源；relics/* 各放一個遺物詞條大類的分類定義與效果；
-// armaments/weapons、armaments/spells 放武器與法術。
+// armaments/weapons、armaments/spells、armaments/skills 放武器、法術與戰技。
 // 資料慣例：一般值依該效果的 sources；null 表示尚未核實；{ conflict: [...] } 表示來源分歧，不預設採用任何候選值；
 // sourcesFor 以欄位路徑取代該欄位的 sources。
 
@@ -564,11 +564,14 @@ function statEntries(data, statId) {
   return nodes.length ? nodes : [el("span", { class: "entry sub" }, data.labels.armaments.noTargets)];
 }
 
-// 武器、法術的圖示記在項目資料 ({ src, page })，不在 common.json。
+// 武器、法術、戰技的圖示記在項目資料 ({ src, page })，不在 common.json。
 function itemIcon(data, item, size) {
   if (!item.icon) return el("span", { class: "icon icon-missing", role: "img", "aria-label": data.labels.iconMissing });
-  return el("img", { class: "icon", src: item.icon.src, width: size, height: size, alt: `${item.name.zh}圖示`, loading: "lazy" });
+  return el("img", { class: "icon", src: item.icon.src, width: size, height: size, alt: `${displayName(item)}圖示`, loading: "lazy" });
 }
+
+// 顯示名稱：沒有繁中名稱的戰技 (name.zh 為 null) 顯示英文名稱
+const displayName = (item) => item.name.zh ?? item.name.en;
 
 const tagName = (data, dimension, key) => lookup(data.tags[dimension], key, "標籤").name.zh;
 
@@ -602,10 +605,84 @@ function spellPage(id, spell) {
   return lookup(SPELL_PAGES, type[0], "法術類型頁");
 }
 
-// 表格的武器、法術名稱：圖示、中文與英文名稱；沒有名稱者以 ID 顯示。
+// 表格的武器、法術、戰技名稱：圖示、中文與英文名稱；沒有名稱者以 ID 顯示，沒有繁中名稱者只顯示英文名稱一次。
 function itemNameNode(data, id, item) {
   if (!item.name) return el("span", {}, `${data.labels.armaments.unnamed}（ID ${id}）`);
+  if (item.name.zh === null) return el("span", { class: "item-name" }, itemIcon(data, item, "48"), item.name.en);
   return el("span", { class: "item-name" }, itemIcon(data, item, "48"), item.name.zh, el("span", { class: "en" }, item.name.en));
+}
+
+// ---------- 戰技 ----------
+
+// 名稱清單的一項：圖示與名稱，連到該項目的列，例如戰技連到 skills.html#skill-<id>。
+const linkEntry = (data, href, item) => el("span", { class: "entry" }, el("a", { href }, itemIcon(data, item, "24"), displayName(item)));
+const skillEntry = (data, id) => linkEntry(data, `skills.html#skill-${id}`, lookup(data.skills, id, "戰技"));
+const weaponEntry = (data, id) => linkEntry(data, `weapons.html#weapon-${id}`, lookup(data.weapons, id, "武器"));
+
+// 有標題的名稱清單：只有一項時直接列出，例如「參數預設：黑刀」；兩項以上時改為可展開的清單，標題附數量，
+// 例如「生成池候選 44 種」，收合時只顯示標題，避免長清單撐高表格。
+function labeledList(label, unit, entries) {
+  if (entries.length === 1) {
+    entries[0].prepend(`${label}：`);
+    return entries[0];
+  }
+  return el("details", { class: "fold" }, el("summary", {}, `${label} ${entries.length} ${unit}`), ...entries);
+}
+
+// 武器的戰技欄：生成池只有參數預設戰技一種時只列該戰技；否則列「參數預設：<戰技>」，有生成池時另列「生成池候選」。
+// 預設戰技可能不在生成池中，因此候選數只計生成池。這些是參數關係，不表示撿到的武器帶哪個戰技。
+function weaponSkillCell(data, id, weapon) {
+  const labels = data.labels.skills;
+  const { skill } = weapon;
+  if (!Object.keys(data.skills).length) throw new Error(`頁面需載入 armaments/skills（武器 ${id}）`);
+  if (typeof skill?.default !== "string" || !Array.isArray(skill.pool)) throw new Error(`武器戰技必須有 default 與 pool（武器 ${id}）`);
+  if (skill.pool.length === 1 && skill.pool[0] === skill.default) return el("td", { class: "skills" }, skillEntry(data, skill.default));
+  const pool = skill.pool.length ? [labeledList(labels.poolCandidates, labels.skillUnit, skill.pool.map((skillId) => skillEntry(data, skillId)))] : [];
+  return el("td", { class: "skills" }, labeledList(labels.paramDefault, labels.skillUnit, [skillEntry(data, skill.default)]), ...pool);
+}
+
+// 戰技 FP 消耗 (遊戲參數原始值，尚未套用減少消耗的效果)：依參數欄位 L1、L2、R1、R2 各一行，-1 不列；全部為 -1 時顯示「—」，
+// 不表示不消耗 FP。數值只來自遊戲參數：缺鍵、多鍵或不是數字時報錯。
+const SKILL_FP = ["L1", "L2", "R1", "R2"];
+function skillFpCell(data, id, skill) {
+  const { fp } = skill;
+  if (!fp || Object.keys(fp).length !== SKILL_FP.length || !SKILL_FP.every((key) => Number.isFinite(fp[key]))) {
+    throw new Error(`戰技 FP 消耗必須是 ${SKILL_FP.join("、")} 的數字（戰技 ${id}）`);
+  }
+  const lines = SKILL_FP.filter((key) => fp[key] !== -1).map((key) => el("span", { class: "entry" }, `${key} ${fp[key]}`));
+  return el("td", { class: "stats" }, ...(lines.length ? lines : [data.labels.armaments.none]));
+}
+
+// 相關武器欄：「參數預設」列出預設戰技為此戰技的具名武器，「生成池候選」列出生成池含此戰技的具名武器，皆依 sortId。
+// 由頁面計算，資料不另存反向清單；每個戰技至少被一把武器引用，否則報錯。
+function skillWeaponEntries(data, id) {
+  const labels = data.labels.skills;
+  const named = Object.entries(data.weapons)
+    .filter(([, weapon]) => weapon.name)
+    .sort(([, a], [, b]) => a.sortId - b.sortId);
+  const byDefault = named.filter(([, weapon]) => weapon.skill.default === id);
+  const byPool = named.filter(([, weapon]) => weapon.skill.pool.includes(id));
+  if (!byDefault.length && !byPool.length) throw new Error(`戰技沒有被任何武器引用：${id}`);
+  const list = (label, weapons) => (weapons.length ? [labeledList(label, labels.weaponUnit, weapons.map(([weaponId]) => weaponEntry(data, weaponId)))] : []);
+  return [...list(labels.paramDefault, byDefault), ...list(labels.poolCandidates, byPool)];
+}
+
+// <tbody data-skill-rows>：依 ID 列出全部戰技；列 id 為 skill-<id>，是武器頁戰技欄連結的目標。
+// 說明是《艾爾登法環》本篇的英文原文，保留原文換行。
+function skillRows(data) {
+  const skills = Object.entries(data.skills).sort(([a], [b]) => Number(a) - Number(b));
+  if (skills.length === 0 || !Object.keys(data.weapons).length) throw new Error("頁面需載入 armaments/weapons 與 armaments/skills");
+  return skills.map(([id, skill]) => {
+    if (typeof skill.caption?.en !== "string") throw new Error(`戰技說明必須是文字（戰技 ${id}）`);
+    return el(
+      "tr",
+      { id: `skill-${id}` },
+      el("td", { class: "item" }, itemNameNode(data, id, skill)),
+      skillFpCell(data, id, skill),
+      el("td", { class: "caption" }, el("span", { class: "caption-text", lang: "en" }, skill.caption.en)),
+      el("td", { class: "names skill-weapons" }, ...skillWeaponEntries(data, id))
+    );
+  });
 }
 
 // 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；
@@ -635,6 +712,7 @@ function weaponCells(data, id, weapon) {
     el("td", { class: "stats" }, ...lines(nonZero(weapon.attack, (key) => lookup(labels.attack, key, "攻擊屬性")))),
     el("td", { class: "stats" }, ...lines(nonZero(weapon.scaling, (key) => statName(data, key)))),
     el("td", { class: "stats" }, ...lines(special)),
+    weaponSkillCell(data, id, weapon),
   ];
 }
 
@@ -761,6 +839,7 @@ function render(data) {
   }
   renderChapters(data);
   for (const node of document.querySelectorAll("[data-unlisted-spells]")) node.replaceChildren(...unlistedSpellRows(data));
+  for (const node of document.querySelectorAll("[data-skill-rows]")) node.replaceChildren(...skillRows(data));
   for (const node of document.querySelectorAll("[data-stat-effects]")) node.replaceChildren(...statEntries(data, node.dataset.statEffects));
   for (const node of document.querySelectorAll("[data-game-version]")) node.textContent = data.gameVersion;
   for (const node of document.querySelectorAll("[data-item]")) {
@@ -832,30 +911,31 @@ function loadJson(name) {
   });
 }
 
-// 合併 common 與其他資料檔：遺物大類檔 (有 category)、武器檔 (weapons)、法術檔 (spells)。
-// 效果鍵、遊戲內 ID、子分類鍵、武器或法術 ID 重複時丟出錯誤，不以後者覆蓋前者；ID 唯一性依實體種類各自檢查。
+// 合併 common 與其他資料檔：遺物大類檔 (有 category)、武器檔 (weapons)、法術檔 (spells)、戰技檔 (skills)。
+// 效果鍵、遊戲內 ID、子分類鍵、武器、法術或戰技 ID 重複時丟出錯誤，不以後者覆蓋前者；ID 唯一性依實體種類各自檢查。
 function mergeData([common, ...files]) {
-  const data = { ...common, effects: {}, subcategories: {}, weapons: {}, spells: {} };
+  const data = { ...common, effects: {}, subcategories: {}, weapons: {}, spells: {}, skills: {} };
   const gameIds = new Set();
   const claim = (id, owner) => {
     if (gameIds.has(id)) throw new Error(`遊戲內 ID 重複：${id}（${owner}）`);
     gameIds.add(id);
   };
   const relicFiles = [];
-  let spellsLoaded = false;
+  const loaded = new Set();
   for (const file of files) {
     if (file.category) {
       relicFiles.push(file);
       continue;
     }
     const kinds = Object.keys(file);
-    if (kinds.length !== 1 || !["weapons", "spells"].includes(kinds[0])) throw new Error(`無法辨識的資料檔：${kinds.join("、")}`);
+    if (kinds.length !== 1 || !["weapons", "spells", "skills"].includes(kinds[0])) throw new Error(`無法辨識的資料檔：${kinds.join("、")}`);
     for (const [id, item] of Object.entries(file[kinds[0]])) {
       if (data[kinds[0]][id]) throw new Error(`${kinds[0]} ID 重複：${id}`);
       data[kinds[0]][id] = item;
     }
-    if (kinds[0] === "spells") spellsLoaded = true;
+    loaded.add(kinds[0]);
   }
+  const spellsLoaded = loaded.has("spells");
   for (const file of relicFiles) {
     for (const sub of file.category.subcategories) {
       if (data.subcategories[sub.id]) throw new Error(`子分類重複：${sub.id}`);
@@ -870,7 +950,18 @@ function mergeData([common, ...files]) {
     }
   }
   checkTags(data, spellsLoaded);
+  if (loaded.has("skills")) checkSkills(data);
   return data;
+}
+
+// 有載入戰技檔時：每把具名武器都有 skill，其 default 與 pool 的每個戰技都要存在。
+function checkSkills(data) {
+  for (const [id, weapon] of Object.entries(data.weapons)) {
+    if (!weapon.name) continue;
+    const { skill } = weapon;
+    if (typeof skill?.default !== "string" || !Array.isArray(skill.pool)) throw new Error(`武器戰技必須有 default 與 pool（武器 ${id}）`);
+    for (const skillId of [skill.default, ...skill.pool]) lookup(data.skills, skillId, `戰技（武器 ${id}）`);
+  }
 }
 
 // 標籤與引用檢查：物品標籤、遺物相關對象的鍵都要有定義；targets.spell 是法術 ID，有載入法術檔時檢查其存在，

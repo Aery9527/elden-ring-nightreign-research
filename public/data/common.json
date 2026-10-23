@@ -646,6 +646,7 @@
       "none": "—",
       "charge": "蓄力參數"
     },
+    "skills": { "paramDefault": "參數預設", "poolCandidates": "生成池候選", "skillUnit": "種", "weaponUnit": "把" },
     "availability": {
       "specific-relic": "特定遺物",
       "standard-relic": "一般遺物",

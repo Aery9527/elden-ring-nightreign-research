@@ -501,6 +501,43 @@ td .entry.sub {
   color: var(--muted);
 }
 
+/* 武器頁的戰技欄：每個戰技一行，名稱過長時換行 */
+td.skills {
+  min-width: 10em;
+}
+
+td.skills .entry {
+  display: block;
+}
+
+/* 可展開的長清單 (生成池候選)：收合時只顯示標題；展開後清單接在標題下方 */
+.fold summary {
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.fold[open] summary {
+  margin-bottom: 4px;
+}
+
+/* 戰技頁的「相關武器」欄：參數預設與生成池候選各占一行，「參數預設：<武器>」過長時換行 */
+td.skill-weapons > .entry {
+  display: block;
+  white-space: normal;
+}
+
+/* 戰技說明：本篇原文，保留原文換行。寬螢幕時優先分給說明 35% 的表格寬度，避免空間被武器清單占走；
+   最小欄寬 12em，讓戰技表在寬度 901px 時也不需橫向捲動 */
+td.caption {
+  width: 35%;
+  min-width: 12em;
+}
+
+/* 權重高於窄螢幕直排的 .table-wrap td *，直排時同樣保留換行 */
+.table-wrap td .caption-text {
+  white-space: pre-line;
+}
+
 /* 沒有可用遊戲內圖片時保留與圖片相同的空位 */
 .icon-missing {
   display: inline-block;
@@ -601,7 +638,7 @@ body:has(.tone-legend) main {
 
 /* 窄螢幕 (平板直向、手機)：表格逐列直排，不需橫向捲動。每列一塊，第一格為名稱；其他格依序往下排，
    左側以小字顯示欄名 (render.js 由表頭寫入 data-label)。表頭只在視覺上隱藏，保留給輔助科技。
-   900px 以上的表格最寬約 815px，可完整顯示，維持表格。列印維持表格。 */
+   寬度 901px 以上時，各表格的儲存格換行後可完整顯示 (已量測：最寬的武器表與戰技表在 901px 都放得下)，維持表格。列印維持表格。 */
 @media screen and (max-width: 900px) {
   .table-wrap table,
   .table-wrap tbody,
@@ -643,7 +680,9 @@ body:has(.tone-legend) main {
     overflow-wrap: anywhere;
   }
 
+  /* 取消桌面版的欄寬偏好 (例如戰技說明的 35%)，每格占滿整列 */
   .table-wrap td {
+    width: auto;
     padding: 4px 12px;
     border-bottom: 0;
   }

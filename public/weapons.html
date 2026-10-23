@@ -9,7 +9,7 @@
   <script src="nav.js" defer></script>
   <script src="render.js" defer></script>
 </head>
-<body data-load="common relics/general relics/character relics/armament relics/demerit armaments/weapons armaments/spells">
+<body data-load="common relics/general relics/character relics/armament relics/demerit armaments/weapons armaments/spells armaments/skills">
   <header class="site-header">
     <nav aria-label="頁面階層">
       <ol class="crumbs"><li><a href="index.html">黑夜君臨研究資料庫</a></li></ol>
@@ -23,6 +23,7 @@
       <li>本頁依遊戲參數（版本 <span data-game-version></span>）列出武器：每個章節是一個遊戲內遺物篩選的武器種類，章首列出相關遺物詞條，下表列出該種類具名的基本武器。魔法與禱告見<a href="sorceries.html">魔法</a>與<a href="incantations.html">禱告</a>頁。</li>
       <li>「基礎攻擊」「能力補正」與特殊效果中的「致命補正」都是遊戲參數的原始值，不是遊戲內顯示的攻擊力或補正等級：《黑夜君臨》的攻擊力另隨等級與稀有度變化，計算方式尚未核實。基礎攻擊與能力補正只列非 0 的項目。「致命補正」是致命一擊（處決）的倍率參數，多數武器為 1，只列出不是 1 的武器；不保證整次致命一擊的傷害都乘以此值。</li>
       <li>「特殊效果」列出不是 1 的致命補正、傳說武器的固定效果名稱（取自《黑夜君臨》遊戲文字），以及命中時的異常狀態累積值。固定效果只列名稱，效果數值與作用條件尚未收錄；命中時的其他效果（例如減傷、恢復）與常駐效果也不列出。「—」只表示本頁收錄的欄位沒有內容，不表示武器沒有其他效果。</li>
+      <li>「戰技」欄連到<a href="skills.html">戰技</a>頁。武器生成參數的戰技池只有一種戰技、且就是參數預設戰技時，只列該戰技；否則列出「參數預設」的戰技，有戰技池時再以「生成池候選」列出戰技池中權重大於 0 的戰技。這些是遊戲參數上的關係，不表示撿到的武器帶哪個戰技或各戰技出現的機率；參數預設戰技也可能不在生成池中。</li>
       <li>「相關遺物詞條」列出已由遊戲參數建立關聯的詞條。符合只表示存在參數關聯，不表示詞條對每一項都直接生效；作用方式與限制見詞條。沒有列出不表示沒有關係。</li>
       <li>武器與法術名稱引用《艾爾登法環》本篇的遊戲文字，尚未確認與《黑夜君臨》一致；圖示取自 Eldenpedia。</li>
     </ul>
@@ -33,7 +34,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -46,7 +47,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -59,7 +60,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -72,7 +73,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -85,7 +86,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -98,7 +99,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -111,7 +112,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -124,7 +125,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -137,7 +138,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -150,7 +151,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -163,7 +164,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -176,7 +177,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -189,7 +190,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -202,7 +203,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -215,7 +216,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -228,7 +229,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -241,7 +242,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -254,7 +255,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -267,7 +268,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -280,7 +281,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -293,7 +294,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -306,7 +307,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -319,7 +320,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -332,7 +333,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -345,7 +346,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -358,7 +359,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -371,7 +372,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -384,7 +385,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -397,7 +398,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -410,7 +411,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -423,7 +424,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
@@ -436,7 +437,7 @@
       <div class="table-wrap">
         <table class="table-wide">
           <thead>
-            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th></tr>
+            <tr><th>武器</th><th>基礎攻擊</th><th>能力補正</th><th>特殊效果</th><th>戰技</th></tr>
           </thead>
           <tbody data-chapter-rows></tbody>
         </table>
