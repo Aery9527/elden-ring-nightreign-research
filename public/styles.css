@@ -69,24 +69,24 @@ main {
 
 .site-header nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 16px;
+  gap: 4px 16px;
   padding-top: 12px;
   padding-bottom: 12px;
   font-size: 0.95rem;
 }
 
-/* 階層不換行，維持頁首單行高度；窄螢幕時可橫向捲動，nav.js 會捲到最後一層 */
+/* 階層在窄螢幕換行，不需橫向捲動；版本放不下時移到下一行 */
 .crumbs {
   display: flex;
+  flex-wrap: wrap;
   min-width: 0;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
-  white-space: nowrap;
   list-style: none;
-  scrollbar-width: none;
+  overflow-wrap: anywhere;
 }
 
 .crumbs li + li {
@@ -103,7 +103,7 @@ main {
   color: var(--text);
 }
 
-/* 章節列：nav.js 依本頁 h2 產生。寬螢幕換行全部顯示；窄螢幕或矮螢幕 (橫向手機) 單行橫向捲動，保留原生捲軸讓滑鼠也能捲動 */
+/* 章節列：nav.js 依本頁 h2 產生。寬螢幕換行全部顯示；窄螢幕或矮螢幕 (橫向手機) 收成按鈕，按下後在頁首下方展開直排選單 */
 .site-header .chapters {
   display: block;
   padding-top: 0;
@@ -142,18 +142,64 @@ main {
   text-decoration: underline;
 }
 
-@media (max-width: 640px), (max-height: 500px) {
-  .chapters ul {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: thin;
-  }
+.chapters-toggle {
+  display: none;
 }
 
-@media print {
+@media screen and (max-width: 640px), screen and (max-height: 500px) {
+  .site-header .chapters {
+    position: relative;
+  }
+
+  .chapters-toggle {
+    display: block;
+    width: 100%;
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    text-align: left;
+  }
+
+  /* 展開方向提示只是圖形，替代文字為空；第一行是不支援替代文字的瀏覽器的退回宣告 */
+  .chapters-toggle::after {
+    content: " ▾";
+    content: " ▾" / "";
+  }
+
+  .chapters.open .chapters-toggle::after {
+    content: " ▴";
+    content: " ▴" / "";
+  }
+
   .chapters ul {
-    flex-wrap: wrap;
-    overflow: visible;
+    display: none;
+  }
+
+  /* 選單蓋在正文上方，不改變頁首高度；太長時在選單內上下捲動 */
+  .chapters.open ul {
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: calc(100vh - var(--header-h, 52px) - 16px);
+    max-height: calc(100dvh - var(--header-h, 52px) - 16px);
+    overflow-y: auto;
+    padding: 6px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: 0 2px 8px oklch(0 0 0 / 0.15);
+  }
+
+  .chapters.open a {
+    padding: 6px 12px;
+    white-space: normal;
   }
 }
 
