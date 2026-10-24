@@ -845,12 +845,12 @@ function levelTable(data, keys, mode, pick) {
 // 各等級能力表的圖表。單一角色：三張折線圖，第三張的 HP 上限用右側縱軸、FP 與精力上限用左側縱軸。
 // 全部角色比較：選定等級的排序橫條圖。刻度由全部角色、全部等級的資料推算，切換角色或等級時不變，才能比較高低。
 const LEVEL_CHARTS = [
-  { left: ["vigor", "mind", "endurance"], right: [] },
   { left: ["strength", "dexterity", "intelligence", "faith", "arcane"], right: [] },
+  { left: ["vigor", "mind", "endurance"], right: [] },
   { left: ["maxFp", "maxStamina"], right: ["maxHp"] },
 ];
-// 線型是顏色以外的第二種區分方式，依系列順序對應色票 --series-1 起
-const DASHES = ["", "6 4", "2 3", "8 3 2 3", "12 4"];
+// 各系列以色票 --series-1 起的顏色區分，皆為實線；只有右軸系列用虛線
+const dash = (chart, stat) => (chart.right.includes(stat) ? "6 4" : "");
 const SVG_NS = "http://www.w3.org/2000/svg";
 
 function svgEl(tag, attrs = {}, ...children) {
@@ -880,7 +880,7 @@ function chartLegend(data, chart, values) {
     { class: "chart-legend" },
     ...series.map((stat, index) => {
       const key = svgEl("svg", { width: "24", height: "10", "aria-hidden": "true" });
-      key.append(svgEl("line", { x1: "0", y1: "5", x2: "24", y2: "5", class: `series series-${index + 1}`, "stroke-dasharray": DASHES[index] }));
+      key.append(svgEl("line", { x1: "0", y1: "5", x2: "24", y2: "5", class: `series series-${index + 1}`, "stroke-dasharray": dash(chart, stat) }));
       const name = chart.right.includes(stat) ? `${statName(data, stat)}${data.labels.nightfarers.rightAxis}` : statName(data, stat);
       return el("li", {}, key, name, " ", el("strong", {}, String(values[stat])));
     })
@@ -922,7 +922,7 @@ function lineChart(data, nightfarer, chart, scales, level, width, onLevel) {
   series.forEach((stat, index) => {
     const scale = chart.right.includes(stat) ? scales.right : scales.left;
     const points = LEVELS.map((lvl) => `${x(lvl)},${y(scale, nightfarer.levels[lvl][stat])}`).join(" ");
-    svg.append(svgEl("polyline", { class: `series series-${index + 1}`, points, "stroke-dasharray": DASHES[index] }));
+    svg.append(svgEl("polyline", { class: `series series-${index + 1}`, points, "stroke-dasharray": dash(chart, stat) }));
     if (CAP_STATS.includes(stat)) return;
     for (const lvl of nightfarer.anchorLevels) {
       svg.append(svgEl("circle", { class: `dot series-${index + 1}`, cx: String(x(lvl)), cy: String(y(scale, nightfarer.levels[lvl][stat])), r: "4" }));
