@@ -757,13 +757,41 @@ function dataTable(heads, rows, tableClass) {
   return el("div", { class: "table-wrap" }, el("table", tableClass ? { class: tableClass } : {}, head, el("tbody", {}, ...rows)));
 }
 
+// 具體數值欄：技藝先列冷卻時間 (0 為無冷卻)，再逐條列出 effects。依參數撰寫的條目只有 game-params 來源，不另列來源；
+// 社群記載的機制摘要在句末附來源連結。note 是參數與社群記載不同時的註記，以次要文字接在該條之後。
+// 格式錯誤時丟出錯誤 (頁面顯示載入失敗)，不靜默顯示空白或 undefined。
+const nonBlank = (value) => typeof value === "string" && value.trim() !== "";
+const sourceList = (value) => Array.isArray(value) && value.length > 0 && value.every(nonBlank);
+function effectLine(data, text, sources, note) {
+  const labels = data.labels.nightfarers;
+  if (!nonBlank(text) || !sourceList(sources)) throw new Error("具體數值條目必須有非空的 zh 與 sources");
+  if (note !== undefined && (!nonBlank(note?.zh) || !sourceList(note?.sources))) throw new Error("具體數值的註記必須有非空的 zh 與 sources");
+  const own = sources.some((id) => id !== "game-params") ? ["（", ...sourceLinks(data, sources), "）"] : [];
+  const extra = note ? [el("span", { class: "sub" }, `${labels.note}：${note.zh}（`, ...sourceLinks(data, note.sources), "）")] : [];
+  return el("p", {}, text, ...own, ...extra);
+}
+
+function effectsCell(data, kind, ability) {
+  const labels = data.labels.nightfarers;
+  const lines = [];
+  if (!Array.isArray(ability.effects) || !ability.effects.length) throw new Error(`${ability.name.zh} 的具體數值必須是非空的陣列`);
+  if (kind === "skill") {
+    if (!Number.isFinite(ability.cooldown) || ability.cooldown < 0) throw new Error(`${ability.name.zh} 的冷卻時間必須是不小於 0 的數字`);
+    const text = ability.cooldown === 0 ? labels.noCooldown : `${labels.cooldown} ${ability.cooldown} ${labels.seconds}`;
+    lines.push(effectLine(data, text, ["game-params"], ability.cooldownNote));
+  }
+  for (const effect of ability.effects) lines.push(effectLine(data, effect.zh, effect.sources, effect.note));
+  return el("td", { class: "effects" }, ...lines);
+}
+
 function abilityRow(data, kind, ability) {
   return el(
     "tr",
     {},
     el("td", { class: "item" }, itemIcon(data, ability, "48"), ability.name.zh),
     el("td", {}, data.labels.nightfarers[kind]),
-    el("td", { class: "caption" }, el("p", { class: "caption-text" }, ability.summary.zh), el("p", { class: "caption-text" }, ability.description.zh))
+    el("td", { class: "caption" }, el("p", { class: "caption-text" }, ability.summary.zh), el("p", { class: "caption-text" }, ability.description.zh)),
+    effectsCell(data, kind, ability)
   );
 }
 
@@ -800,7 +828,7 @@ function nightfarerChapters(data) {
     const relics = el("a", { href: `relics-character.html#character-${key}` }, character.name.zh);
     section.append(
       sub("abilities", labels.abilities),
-      dataTable([labels.name, labels.kind, labels.description], ABILITY_KINDS.map((kind) => abilityRow(data, kind, nightfarer[kind])), "abilities"),
+      dataTable([labels.name, labels.kind, labels.description, labels.effects], ABILITY_KINDS.map((kind) => abilityRow(data, kind, nightfarer[kind])), "abilities"),
       sub("grades", labels.grade),
       dataTable([labels.grades, ...GRADE_STATS.map(statName)], [el("tr", {}, el("td", {}, labels.gradeRow), ...GRADE_STATS.map((stat) => el("td", {}, nightfarer.grades[stat])))]),
       sub("levels", labels.levels),
