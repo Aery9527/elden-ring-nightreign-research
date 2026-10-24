@@ -231,7 +231,15 @@
         "icon": {
           "src": "images/passive-wylder.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Wylder.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "受到致命傷害時自動跳開迴避，動作期間無敵；被我方救起或自動復活不會恢復此能力。",
+            "sources": [
+              "eldenpedia-wylder"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -249,7 +257,22 @@
         "icon": {
           "src": "images/character-skill-wylder.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Wylder.png"
-        }
+        },
+        "cooldown": 8,
+        "cooldownNote": {
+          "zh": "Eldenpedia 記載為 10 秒",
+          "sources": [
+            "eldenpedia-wylder"
+          ]
+        },
+        "effects": [
+          {
+            "zh": "拉回時的攻擊：攻擊力補正 ×0.8、精力削減補正 ×15（皆相對於射出時的攻擊）。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -267,7 +290,15 @@
         "icon": {
           "src": "images/ultimate-art-wylder.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Wylder.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "蓄力時攻擊力補正 ×1.5、削韌補正 ×2（皆相對於未蓄力），爆炸最大半徑 4.5 公尺（未蓄力 3 公尺）。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -515,7 +546,15 @@
         "icon": {
           "src": "images/passive-guardian.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Guardian.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "發動期間受到的所有傷害 ×0.75，並每 0.35 秒消耗 1 精力。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -533,7 +572,22 @@
         "icon": {
           "src": "images/character-skill-guardian.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Guardian.png"
-        }
+        },
+        "cooldown": 13.5,
+        "cooldownNote": {
+          "zh": "Eldenpedia 記載為 13 秒",
+          "sources": [
+            "eldenpedia-guardian"
+          ]
+        },
+        "effects": [
+          {
+            "zh": "蓄力時旋風最大半徑 4.5 公尺（未蓄力 3.5 公尺），攻擊力補正與未蓄力相同。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -551,7 +605,15 @@
         "icon": {
           "src": "images/ultimate-art-guardian.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Guardian.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "落地攻擊最大半徑 7 公尺。持續按住時展開半徑 15 公尺的防護區，區內我方受到的所有傷害與異常累積 ×0。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -799,7 +861,15 @@
         "icon": {
           "src": "images/passive-ironeye.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Ironeye.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "自身與我方的觀察力 +30。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -817,7 +887,16 @@
         "icon": {
           "src": "images/character-skill-ironeye.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Ironeye.png"
-        }
+        },
+        "cooldown": 10,
+        "effects": [
+          {
+            "zh": "弱點持續 17.5 秒，受到攻擊時延長；帶有弱點的敵人受到所有來源的傷害 +10%。",
+            "sources": [
+              "eldenpedia-ironeye"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -835,7 +914,15 @@
         "icon": {
           "src": "images/ultimate-art-ironeye.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Ironeye.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "氣流半徑 6 公尺；箭矢擊中地面時爆發，最大半徑 5 公尺，攻擊力補正為箭矢的 ×0.8。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -1083,7 +1170,15 @@
         "icon": {
           "src": "images/passive-duchess.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Duchess.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "閃避與後跳消耗的精力比其他角色少 75%；第 1 次閃避有 10 個無敵幀，第 2 次有 11 個。",
+            "sources": [
+              "eldenpedia-duchess"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -1101,7 +1196,22 @@
         "icon": {
           "src": "images/character-skill-duchess.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Duchess.png"
-        }
+        },
+        "cooldown": 12,
+        "effects": [
+          {
+            "zh": "作用範圍半徑 15 公尺。",
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "重現範圍內敵人過去 3 秒受到的攻擊，傷害為原本的 50%，削韌與異常累積也會重現。",
+            "sources": [
+              "eldenpedia-duchess"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -1119,7 +1229,15 @@
         "icon": {
           "src": "images/ultimate-art-duchess.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Duchess.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "自身與半徑 30 公尺內的我方隱身 15 秒。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -1367,7 +1485,15 @@
         "icon": {
           "src": "images/passive-raider.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Raider.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "HP 降到 25% 以下時，所有來源的傷害 ×1.5，持續 10 秒；HP 回到 26% 以上後可再次觸發。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -1385,7 +1511,34 @@
         "icon": {
           "src": "images/character-skill-raider.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Raider.png"
-        }
+        },
+        "cooldown": 12,
+        "effects": [
+          {
+            "zh": "架式期間受到的所有傷害 ×0.25。",
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "強化版：攻擊力補正 ×1.69、削韌補正 ×1.75（皆相對於一般版），攻擊半徑 2.4 公尺（一般版 1.45 公尺）。",
+            "note": {
+              "zh": "Eldenpedia 記載強化版傷害 +50%",
+              "sources": [
+                "eldenpedia-raider"
+              ]
+            },
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "承受 850 點傷害（減傷前）後，下一次技藝變為強化版。",
+            "sources": [
+              "eldenpedia-raider"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -1403,7 +1556,21 @@
         "icon": {
           "src": "images/ultimate-art-raider.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Raider.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "石碑存在 20 秒，半徑 12 公尺內的我方所有來源的傷害 ×1.15。",
+            "note": {
+              "zh": "Eldenpedia 記載只提升物理傷害",
+              "sources": [
+                "eldenpedia-raider"
+              ]
+            },
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -1651,7 +1818,21 @@
         "icon": {
           "src": "images/passive-revenant.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Revenant.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "召喚的亡靈每 1 秒失去 [HP 上限 ×0.02] HP。",
+            "note": {
+              "zh": "Eldenpedia 記載亡靈跟隨 1 分鐘後消失",
+              "sources": [
+                "eldenpedia-revenant"
+              ]
+            },
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -1669,7 +1850,22 @@
         "icon": {
           "src": "images/character-skill-revenant.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Revenant.png"
-        }
+        },
+        "cooldown": 0,
+        "effects": [
+          {
+            "zh": "未出戰的家人恢復 HP：海倫每 0.6 秒、弗雷德利克每 1.5 秒、塞巴斯蒂安每 2 秒恢復 [HP 上限 ×0.01] HP。",
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "深夜模式中，家人所有來源的傷害在深度 1 為 ×1.125、深度 5 為 ×1.5834；受到的所有傷害在深度 1 為 ×0.8889、深度 5 為 ×0.5598。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -1687,7 +1883,15 @@
         "icon": {
           "src": "images/ultimate-art-revenant.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Revenant.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "自身、半徑 30 公尺內的我方與家人不死 15 秒。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -1935,7 +2139,15 @@
         "icon": {
           "src": "images/passive-recluse.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Recluse.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "殘渣種類取決於目標最後受到的屬性傷害；優先吸收鎖定目標的殘渣。",
+            "sources": [
+              "eldenpedia-recluse"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -1953,7 +2165,16 @@
         "icon": {
           "src": "images/character-skill-recluse.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Recluse.png"
-        }
+        },
+        "cooldown": 0,
+        "effects": [
+          {
+            "zh": "每吸收 1 個屬性殘渣恢復 20 FP。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -1971,7 +2192,15 @@
         "icon": {
           "src": "images/ultimate-art-recluse.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Recluse.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "半徑 30 公尺內的敵人被標記 12.5 秒，期間受到的所有傷害 ×1.15、受到的異常累積 ×1.15。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -2219,7 +2448,21 @@
         "icon": {
           "src": "images/passive-executor.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Executor.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "從異常狀態恢復後，所有來源的傷害 ×1.2、精力恢復速度 +15，持續 20 秒（參數為 1.5 + 18.5 秒）。",
+            "note": {
+              "zh": "Eldenpedia 記載精力恢復為每秒 +8",
+              "sources": [
+                "eldenpedia-executor"
+              ]
+            },
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -2237,7 +2480,22 @@
         "icon": {
           "src": "images/character-skill-executor.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Executor.png"
-        }
+        },
+        "cooldown": 0,
+        "effects": [
+          {
+            "zh": "妖刀解放後的戰技：攻擊力補正 ×3.49、削韌補正 ×2.5（皆相對於未解放）。",
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "彈開攻擊時受到的所有傷害 ×0。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -2255,7 +2513,15 @@
         "icon": {
           "src": "images/ultimate-art-executor.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Executor.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "變身期間 HP 上限 ×2；所有來源的傷害隨等級提升，最高 ×3.55。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -2503,7 +2769,15 @@
         "icon": {
           "src": "images/passive-scholar.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Scholar.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "多數消耗品可攜帶的數量加倍。",
+            "sources": [
+              "eldenpedia-scholar"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -2521,7 +2795,16 @@
         "icon": {
           "src": "images/character-skill-scholar.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Scholar.png"
-        }
+        },
+        "cooldown": 12,
+        "effects": [
+          {
+            "zh": "對自身施放滿刻度效果時產生護盾；護盾破裂時發出衝擊波，最大半徑 4 公尺。",
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -2539,7 +2822,21 @@
         "icon": {
           "src": "images/ultimate-art-scholar.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Scholar.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "連結半徑 30 公尺內的敵人與我方，持續 20 秒。",
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "被連結的敵人受到傷害時，其他被連結的敵人受到該傷害的 20%。",
+            "sources": [
+              "eldenpedia-scholar"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"
@@ -2787,7 +3084,21 @@
         "icon": {
           "src": "images/passive-undertaker.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Passive_Ability_Icon_Undertaker.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "取得的額外絕活發動機會保留 4 秒。",
+            "note": {
+              "zh": "Eldenpedia 記載為 3 秒",
+              "sources": [
+                "eldenpedia-undertaker"
+              ]
+            },
+            "sources": [
+              "game-params"
+            ]
+          }
+        ]
       },
       "skill": {
         "name": {
@@ -2805,7 +3116,28 @@
         "icon": {
           "src": "images/character-skill-undertaker.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Character_Skill_Icon_Undertaker.png"
-        }
+        },
+        "cooldown": 14,
+        "effects": [
+          {
+            "zh": "發動期間受到的所有傷害與異常累積 ×0.65、受到的削韌 ×0，攻擊力 ×1.1；連續攻擊時另有攻擊力 ×1.1 的效果。發動時恢復全部精力。",
+            "note": {
+              "zh": "Eldenpedia 記載減傷為 30%",
+              "sources": [
+                "eldenpedia-undertaker"
+              ]
+            },
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "效果持續 8 秒；消耗絕活量表的強化版持續 15 秒。",
+            "sources": [
+              "eldenpedia-undertaker"
+            ]
+          }
+        ]
       },
       "art": {
         "name": {
@@ -2823,7 +3155,21 @@
         "icon": {
           "src": "images/ultimate-art-undertaker.png",
           "page": "https://eldenring.wiki.gg/wiki/File:ERN_Ultimate_Art_Icon_Undertaker.png"
-        }
+        },
+        "effects": [
+          {
+            "zh": "衝擊攻擊半徑 3 公尺。",
+            "sources": [
+              "game-params"
+            ]
+          },
+          {
+            "zh": "使用後保留 25% 絕活量表。",
+            "sources": [
+              "eldenpedia-undertaker"
+            ]
+          }
+        ]
       },
       "sources": [
         "game-params"

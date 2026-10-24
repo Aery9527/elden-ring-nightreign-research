@@ -1,0 +1,1320 @@
+{
+  "wylder": {
+    "passive": [
+      {
+        "zh": "受到致命傷害時自動跳開迴避，動作期間無敵；被我方救起或自動復活不會恢復此能力。",
+        "sources": [
+          "eldenpedia-wylder"
+        ]
+      }
+    ],
+    "skill": [
+      {
+        "zh": "拉回時的攻擊：攻擊力補正 ×0.8、精力削減補正 ×15（皆相對於射出時的攻擊）。",
+        "checks": [
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              600000005,
+              "AtkCorrection*"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              600000000,
+              "AtkCorrection*"
+            ],
+            "value": 0.8,
+            "display": "攻擊力補正 ×0.8"
+          },
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              600000005,
+              "atkStamCorrection"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              600000000,
+              "atkStamCorrection"
+            ],
+            "value": 15,
+            "display": "精力削減補正 ×15"
+          }
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "蓄力時攻擊力補正 ×1.5、削韌補正 ×2（皆相對於未蓄力），爆炸最大半徑 4.5 公尺（未蓄力 3 公尺）。",
+        "checks": [
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              700000001,
+              "AtkCorrection*"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              700000006,
+              "AtkCorrection*"
+            ],
+            "value": 1.5,
+            "display": "攻擊力補正 ×1.5"
+          },
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              700000001,
+              "atkSuperArmorCorrection"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              700000006,
+              "atkSuperArmorCorrection"
+            ],
+            "value": 2,
+            "display": "削韌補正 ×2"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30900001,
+              "hitRadiusMax"
+            ],
+            "value": 4.5,
+            "display": "4.5 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30900006,
+              "hitRadiusMax"
+            ],
+            "value": 3,
+            "display": "3 公尺"
+          }
+        ]
+      }
+    ],
+    "cooldownNote": {
+      "zh": "Eldenpedia 記載為 10 秒",
+      "sources": [
+        "eldenpedia-wylder"
+      ]
+    }
+  },
+  "guardian": {
+    "passive": [
+      {
+        "zh": "發動期間受到的所有傷害 ×0.75，並每 0.35 秒消耗 1 精力。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              701535,
+              "DamageCutRate*"
+            ],
+            "value": 0.75,
+            "display": "×0.75"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              701531,
+              "motionInterval"
+            ],
+            "value": 0.35,
+            "display": "0.35 秒"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              701531,
+              "changeStaminaPoint"
+            ],
+            "value": 1,
+            "display": "1 精力"
+          }
+        ]
+      }
+    ],
+    "skill": [
+      {
+        "zh": "蓄力時旋風最大半徑 4.5 公尺（未蓄力 3.5 公尺），攻擊力補正與未蓄力相同。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30901001,
+              "hitRadiusMax"
+            ],
+            "value": 4.5,
+            "display": "4.5 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30901006,
+              "hitRadiusMax"
+            ],
+            "value": 3.5,
+            "display": "3.5 公尺"
+          },
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              600000050,
+              "AtkCorrection*"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              600000055,
+              "AtkCorrection*"
+            ],
+            "value": 1,
+            "display": "攻擊力補正與未蓄力相同"
+          }
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "落地攻擊最大半徑 7 公尺。持續按住時展開半徑 15 公尺的防護區，區內我方受到的所有傷害與異常累積 ×0。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30901015,
+              "hitRadiusMax"
+            ],
+            "value": 7,
+            "display": "7 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30901040,
+              "hitRadius"
+            ],
+            "value": 15,
+            "display": "15 公尺"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              701510,
+              "DamageCutRate*"
+            ],
+            "value": 0,
+            "display": "×0"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              701510,
+              "AilmentDefRate*"
+            ],
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "cooldownNote": {
+      "zh": "Eldenpedia 記載為 13 秒",
+      "sources": [
+        "eldenpedia-guardian"
+      ]
+    }
+  },
+  "ironeye": {
+    "passive": [
+      {
+        "zh": "自身與我方的觀察力 +30。",
+        "checks": [
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              702000,
+              "itemDropRate"
+            ],
+            "factor": 100,
+            "value": 30,
+            "display": "+30"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              702001,
+              "itemDropRate"
+            ],
+            "factor": 100,
+            "value": 30,
+            "display": "+30"
+          }
+        ]
+      }
+    ],
+    "skill": [
+      {
+        "zh": "弱點持續 17.5 秒，受到攻擊時延長；帶有弱點的敵人受到所有來源的傷害 +10%。",
+        "sources": [
+          "eldenpedia-ironeye"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "氣流半徑 6 公尺；箭矢擊中地面時爆發，最大半徑 5 公尺，攻擊力補正為箭矢的 ×0.8。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30902016,
+              "hitRadius"
+            ],
+            "value": 6,
+            "display": "6 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30902013,
+              "hitRadiusMax"
+            ],
+            "value": 5,
+            "display": "5 公尺"
+          },
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              700000102,
+              "AtkCorrection*"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              700000100,
+              "AtkCorrection*"
+            ],
+            "value": 0.8,
+            "display": "攻擊力補正為箭矢的 ×0.8"
+          }
+        ]
+      }
+    ]
+  },
+  "duchess": {
+    "passive": [
+      {
+        "zh": "閃避與後跳消耗的精力比其他角色少 75%；第 1 次閃避有 10 個無敵幀，第 2 次有 11 個。",
+        "sources": [
+          "eldenpedia-duchess"
+        ]
+      }
+    ],
+    "skill": [
+      {
+        "zh": "作用範圍半徑 15 公尺。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30903000,
+              "hitRadius"
+            ],
+            "value": 15,
+            "display": "15 公尺"
+          }
+        ]
+      },
+      {
+        "zh": "重現範圍內敵人過去 3 秒受到的攻擊，傷害為原本的 50%，削韌與異常累積也會重現。",
+        "sources": [
+          "eldenpedia-duchess"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "自身與半徑 30 公尺內的我方隱身 15 秒。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30903010,
+              "hitRadius"
+            ],
+            "value": 30,
+            "display": "30 公尺"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              703500,
+              "effectEndurance"
+            ],
+            "value": 15,
+            "display": "15 秒"
+          }
+        ]
+      }
+    ]
+  },
+  "raider": {
+    "passive": [
+      {
+        "zh": "HP 降到 25% 以下時，所有來源的傷害 ×1.5，持續 10 秒；HP 回到 26% 以上後可再次觸發。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              704300,
+              "conditionHp"
+            ],
+            "value": 25,
+            "display": "25%"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              704300,
+              "cycleOccurrenceSpEffectId"
+            ],
+            "value": 704301
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              704301,
+              "AttackRate*"
+            ],
+            "value": 1.5,
+            "display": "×1.5"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              704301,
+              "effectEndurance"
+            ],
+            "value": 10,
+            "display": "10 秒"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              704300,
+              "replaceSpEffectId"
+            ],
+            "value": 704302
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              704302,
+              "conditionHpRate"
+            ],
+            "value": 26,
+            "display": "26%"
+          }
+        ]
+      }
+    ],
+    "skill": [
+      {
+        "zh": "架式期間受到的所有傷害 ×0.25。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              704000,
+              "DamageCutRate*"
+            ],
+            "value": 0.25,
+            "display": "×0.25"
+          }
+        ]
+      },
+      {
+        "zh": "強化版：攻擊力補正 ×1.69、削韌補正 ×1.75（皆相對於一般版），攻擊半徑 2.4 公尺（一般版 1.45 公尺）。",
+        "checks": [
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              600000210,
+              "AtkCorrection*"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              600000200,
+              "AtkCorrection*"
+            ],
+            "value": 1.69,
+            "display": "攻擊力補正 ×1.69"
+          },
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              600000210,
+              "atkSuperArmorCorrection"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              600000200,
+              "atkSuperArmorCorrection"
+            ],
+            "value": 1.75,
+            "display": "削韌補正 ×1.75"
+          },
+          {
+            "ref": [
+              "AtkParam_Pc",
+              600000210,
+              "hit0_Radius"
+            ],
+            "value": 2.4,
+            "display": "2.4 公尺"
+          },
+          {
+            "ref": [
+              "AtkParam_Pc",
+              600000200,
+              "hit0_Radius"
+            ],
+            "value": 1.45,
+            "display": "1.45 公尺"
+          }
+        ],
+        "note": {
+          "zh": "Eldenpedia 記載強化版傷害 +50%",
+          "sources": [
+            "eldenpedia-raider"
+          ]
+        }
+      },
+      {
+        "zh": "承受 850 點傷害（減傷前）後，下一次技藝變為強化版。",
+        "sources": [
+          "eldenpedia-raider"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "石碑存在 20 秒，半徑 12 公尺內的我方所有來源的傷害 ×1.15。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30904004,
+              "life"
+            ],
+            "value": 20,
+            "display": "20 秒"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30904004,
+              "hitRadius"
+            ],
+            "value": 12,
+            "display": "12 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30904004,
+              "spEffectId0"
+            ],
+            "value": 704100
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              704100,
+              "AttackRate*"
+            ],
+            "value": 1.15,
+            "display": "×1.15"
+          }
+        ],
+        "note": {
+          "zh": "Eldenpedia 記載只提升物理傷害",
+          "sources": [
+            "eldenpedia-raider"
+          ]
+        }
+      }
+    ]
+  },
+  "revenant": {
+    "passive": [
+      {
+        "zh": "召喚的亡靈每 1 秒失去 [HP 上限 ×0.02] HP。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              705200,
+              "motionInterval"
+            ],
+            "value": 1,
+            "display": "每 1 秒"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              705200,
+              "changeHpRate"
+            ],
+            "factor": 0.01,
+            "value": 0.02,
+            "display": "×0.02"
+          }
+        ],
+        "note": {
+          "zh": "Eldenpedia 記載亡靈跟隨 1 分鐘後消失",
+          "sources": [
+            "eldenpedia-revenant"
+          ]
+        }
+      }
+    ],
+    "skill": [
+      {
+        "zh": "未出戰的家人恢復 HP：海倫每 0.6 秒、弗雷德利克每 1.5 秒、塞巴斯蒂安每 2 秒恢復 [HP 上限 ×0.01] HP。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              705061,
+              "motionInterval"
+            ],
+            "value": 0.6,
+            "display": "0.6 秒"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              705071,
+              "motionInterval"
+            ],
+            "value": 1.5,
+            "display": "1.5 秒"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              705081,
+              "motionInterval"
+            ],
+            "value": 2,
+            "display": "2 秒"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              705061,
+              "changeHpRate"
+            ],
+            "factor": -0.01,
+            "value": 0.01,
+            "display": "×0.01"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              705071,
+              "changeHpRate"
+            ],
+            "factor": -0.01,
+            "value": 0.01,
+            "display": "×0.01"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              705081,
+              "changeHpRate"
+            ],
+            "factor": -0.01,
+            "value": 0.01,
+            "display": "×0.01"
+          }
+        ]
+      },
+      {
+        "zh": "深夜模式中，家人所有來源的傷害在深度 1 為 ×1.125、深度 5 為 ×1.5834；受到的所有傷害在深度 1 為 ×0.8889、深度 5 為 ×0.5598。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              296530,
+              "AttackRate*"
+            ],
+            "value": 1.125,
+            "display": "×1.125"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296540,
+              "AttackRate*"
+            ],
+            "value": 1.125,
+            "display": "×1.125"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296550,
+              "AttackRate*"
+            ],
+            "value": 1.125,
+            "display": "×1.125"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296534,
+              "AttackRate*"
+            ],
+            "value": 1.5834,
+            "display": "×1.5834"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296544,
+              "AttackRate*"
+            ],
+            "value": 1.5834,
+            "display": "×1.5834"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296554,
+              "AttackRate*"
+            ],
+            "value": 1.5834,
+            "display": "×1.5834"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296530,
+              "DamageCutRate*"
+            ],
+            "round": 4,
+            "value": 0.8889,
+            "display": "×0.8889"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296540,
+              "DamageCutRate*"
+            ],
+            "round": 4,
+            "value": 0.8889,
+            "display": "×0.8889"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296550,
+              "DamageCutRate*"
+            ],
+            "round": 4,
+            "value": 0.8889,
+            "display": "×0.8889"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296534,
+              "DamageCutRate*"
+            ],
+            "round": 4,
+            "value": 0.5598,
+            "display": "×0.5598"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296544,
+              "DamageCutRate*"
+            ],
+            "round": 4,
+            "value": 0.5598,
+            "display": "×0.5598"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              296554,
+              "DamageCutRate*"
+            ],
+            "round": 4,
+            "value": 0.5598,
+            "display": "×0.5598"
+          }
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "自身、半徑 30 公尺內的我方與家人不死 15 秒。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30905000,
+              "hitRadius"
+            ],
+            "value": 30,
+            "display": "30 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30905000,
+              "spEffectId0"
+            ],
+            "value": 705000
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              705000,
+              "effectEndurance"
+            ],
+            "value": 15,
+            "display": "15 秒"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              705010,
+              "effectEndurance"
+            ],
+            "value": 15,
+            "display": "15 秒"
+          }
+        ]
+      }
+    ]
+  },
+  "recluse": {
+    "passive": [
+      {
+        "zh": "殘渣種類取決於目標最後受到的屬性傷害；優先吸收鎖定目標的殘渣。",
+        "sources": [
+          "eldenpedia-recluse"
+        ]
+      }
+    ],
+    "skill": [
+      {
+        "zh": "每吸收 1 個屬性殘渣恢復 20 FP。",
+        "checks": [
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              706000,
+              "changeMpPoint"
+            ],
+            "factor": -1,
+            "value": 20,
+            "display": "20 FP"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              706001,
+              "changeMpPoint"
+            ],
+            "factor": -1,
+            "value": 20,
+            "display": "20 FP"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              706002,
+              "changeMpPoint"
+            ],
+            "factor": -1,
+            "value": 20,
+            "display": "20 FP"
+          },
+          {
+            "op": "scale",
+            "a": [
+              "SpEffectParam",
+              706003,
+              "changeMpPoint"
+            ],
+            "factor": -1,
+            "value": 20,
+            "display": "20 FP"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              706000,
+              "effectEndurance"
+            ],
+            "value": 0.3
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              706000,
+              "motionInterval"
+            ],
+            "value": 0.4
+          }
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "半徑 30 公尺內的敵人被標記 12.5 秒，期間受到的所有傷害 ×1.15、受到的異常累積 ×1.15。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30906000,
+              "hitRadius"
+            ],
+            "value": 30,
+            "display": "30 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30906000,
+              "spEffectId0"
+            ],
+            "value": 706100
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              706100,
+              "effectEndurance"
+            ],
+            "value": 12.5,
+            "display": "12.5 秒"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              706100,
+              "DamageCutRate*"
+            ],
+            "value": 1.15,
+            "display": "傷害 ×1.15"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              706100,
+              "AilmentDefRate*"
+            ],
+            "value": 1.15,
+            "display": "異常累積 ×1.15"
+          }
+        ]
+      }
+    ]
+  },
+  "executor": {
+    "passive": [
+      {
+        "zh": "從異常狀態恢復後，所有來源的傷害 ×1.2、精力恢復速度 +15，持續 20 秒（參數為 1.5 + 18.5 秒）。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              707070,
+              "AttackRate*"
+            ],
+            "value": 1.2,
+            "display": "×1.2"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              707071,
+              "AttackRate*"
+            ],
+            "value": 1.2,
+            "display": "×1.2"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              707070,
+              "staminaRecoverChangeSpeed"
+            ],
+            "value": 15,
+            "display": "+15"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              707071,
+              "staminaRecoverChangeSpeed"
+            ],
+            "value": 15,
+            "display": "+15"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              707070,
+              "replaceSpEffectId"
+            ],
+            "value": 707071
+          },
+          {
+            "op": "sum",
+            "terms": [
+              [
+                "SpEffectParam",
+                707070,
+                "effectEndurance"
+              ],
+              [
+                "SpEffectParam",
+                707071,
+                "effectEndurance"
+              ]
+            ],
+            "value": 20,
+            "display": "20 秒"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              707070,
+              "effectEndurance"
+            ],
+            "value": 1.5,
+            "display": "1.5"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              707071,
+              "effectEndurance"
+            ],
+            "value": 18.5,
+            "display": "18.5 秒"
+          }
+        ],
+        "note": {
+          "zh": "Eldenpedia 記載精力恢復為每秒 +8",
+          "sources": [
+            "eldenpedia-executor"
+          ]
+        }
+      }
+    ],
+    "skill": [
+      {
+        "zh": "妖刀解放後的戰技：攻擊力補正 ×3.49、削韌補正 ×2.5（皆相對於未解放）。",
+        "checks": [
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              600000350,
+              "AtkCorrection*"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              600000355,
+              "AtkCorrection*"
+            ],
+            "value": 3.49,
+            "display": "攻擊力補正 ×3.49"
+          },
+          {
+            "op": "ratio",
+            "a": [
+              "AtkParam_Pc",
+              600000350,
+              "atkSuperArmorCorrection"
+            ],
+            "b": [
+              "AtkParam_Pc",
+              600000355,
+              "atkSuperArmorCorrection"
+            ],
+            "value": 2.5,
+            "display": "削韌補正 ×2.5"
+          }
+        ]
+      },
+      {
+        "zh": "彈開攻擊時受到的所有傷害 ×0。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              707000,
+              "DamageCutRate*"
+            ],
+            "value": 0,
+            "display": "×0"
+          }
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "變身期間 HP 上限 ×2；所有來源的傷害隨等級提升，最高 ×3.55。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              707115,
+              "maxHpRate"
+            ],
+            "value": 2,
+            "display": "×2"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              707215,
+              "AttackRate*"
+            ],
+            "value": 3.55,
+            "display": "×3.55"
+          }
+        ]
+      }
+    ]
+  },
+  "scholar": {
+    "passive": [
+      {
+        "zh": "多數消耗品可攜帶的數量加倍。",
+        "sources": [
+          "eldenpedia-scholar"
+        ]
+      }
+    ],
+    "skill": [
+      {
+        "zh": "對自身施放滿刻度效果時產生護盾；護盾破裂時發出衝擊波，最大半徑 4 公尺。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30908000,
+              "atkId_Bullet"
+            ],
+            "value": 600000400
+          },
+          {
+            "ref": [
+              "Bullet",
+              30908000,
+              "hitRadiusMax"
+            ],
+            "value": 4,
+            "display": "4 公尺"
+          }
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "連結半徑 30 公尺內的敵人與我方，持續 20 秒。",
+        "checks": [
+          {
+            "ref": [
+              "Bullet",
+              30908010,
+              "hitRadius"
+            ],
+            "value": 30,
+            "display": "30 公尺"
+          },
+          {
+            "ref": [
+              "Bullet",
+              30908010,
+              "spEffectId1"
+            ],
+            "value": 708160
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              708160,
+              "replaceSpEffectId"
+            ],
+            "value": 708161
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              708161,
+              "effectEndurance"
+            ],
+            "value": 20,
+            "display": "20 秒"
+          }
+        ]
+      },
+      {
+        "zh": "被連結的敵人受到傷害時，其他被連結的敵人受到該傷害的 20%。",
+        "sources": [
+          "eldenpedia-scholar"
+        ]
+      }
+    ]
+  },
+  "undertaker": {
+    "passive": [
+      {
+        "zh": "取得的額外絕活發動機會保留 4 秒。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              709300,
+              "effectEndurance"
+            ],
+            "value": 4,
+            "display": "4 秒"
+          }
+        ],
+        "note": {
+          "zh": "Eldenpedia 記載為 3 秒",
+          "sources": [
+            "eldenpedia-undertaker"
+          ]
+        }
+      }
+    ],
+    "skill": [
+      {
+        "zh": "發動期間受到的所有傷害與異常累積 ×0.65、受到的削韌 ×0，攻擊力 ×1.1；連續攻擊時另有攻擊力 ×1.1 的效果。發動時恢復全部精力。",
+        "checks": [
+          {
+            "ref": [
+              "SpEffectParam",
+              709050,
+              "DamageCutRate*"
+            ],
+            "value": 0.65,
+            "display": "×0.65"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              709050,
+              "AilmentDefRate*"
+            ],
+            "value": 0.65
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              709050,
+              "toughnessDamageCutRate"
+            ],
+            "value": 0,
+            "display": "削韌 ×0"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              709050,
+              "AttackPowerRate*"
+            ],
+            "value": 1.1,
+            "display": "攻擊力 ×1.1"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              709051,
+              "AttackPowerRate*"
+            ],
+            "value": 1.1,
+            "display": "攻擊力 ×1.1"
+          },
+          {
+            "ref": [
+              "SpEffectParam",
+              709030,
+              "changeStaminaRate"
+            ],
+            "value": -100,
+            "display": "全部精力"
+          }
+        ],
+        "note": {
+          "zh": "Eldenpedia 記載減傷為 30%",
+          "sources": [
+            "eldenpedia-undertaker"
+          ]
+        }
+      },
+      {
+        "zh": "效果持續 8 秒；消耗絕活量表的強化版持續 15 秒。",
+        "sources": [
+          "eldenpedia-undertaker"
+        ]
+      }
+    ],
+    "art": [
+      {
+        "zh": "衝擊攻擊半徑 3 公尺。",
+        "checks": [
+          {
+            "ref": [
+              "AtkParam_Pc",
+              700000460,
+              "hit0_Radius"
+            ],
+            "value": 3,
+            "display": "3 公尺"
+          }
+        ]
+      },
+      {
+        "zh": "使用後保留 25% 絕活量表。",
+        "sources": [
+          "eldenpedia-undertaker"
+        ]
+      }
+    ]
+  }
+}

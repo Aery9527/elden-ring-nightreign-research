@@ -686,6 +686,11 @@
       "name": "名稱",
       "kind": "類別",
       "description": "說明",
+      "effects": "具體數值",
+      "cooldown": "冷卻",
+      "seconds": "秒",
+      "noCooldown": "無冷卻",
+      "note": "註",
       "abilities": "能力、技藝與絕活",
       "grades": "項目",
       "grade": "能力加成",
@@ -755,6 +760,54 @@
     "bwiki-menu-text-dlc": {
       "title": "BWIKI 黑夜君臨資料站《黑夜君臨》DLC 官方簡體中文與英文選單文字（社群保存）",
       "url": "https://wiki.biligame.com/nightreign/index.php?oldid=1132"
+    },
+    "smithbox-row-names": {
+      "title": "Smithbox《黑夜君臨》參數列名稱（社群索引）",
+      "url": "https://github.com/vawser/Smithbox/tree/c647be21cc0eb6cbeba1d7ca4f73efeaa8b321e4/src/Smithbox.Data/Assets/PARAM/NR/Param%20Row%20Names/English"
+    },
+    "smithbox-er-paramdef": {
+      "title": "Smithbox《艾爾登法環》本篇參數欄位定義（含官方日文欄位說明）",
+      "url": "https://github.com/vawser/Smithbox/tree/c647be21cc0eb6cbeba1d7ca4f73efeaa8b321e4/src/Smithbox.Data/Assets/PARAM/ER/Defs"
+    },
+    "eldenpedia-wylder": {
+      "title": "Eldenpedia 追蹤者",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=98913"
+    },
+    "eldenpedia-guardian": {
+      "title": "Eldenpedia 守護者",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=98805"
+    },
+    "eldenpedia-ironeye": {
+      "title": "Eldenpedia 鐵之眼",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=99646"
+    },
+    "eldenpedia-duchess": {
+      "title": "Eldenpedia 女爵",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=99457"
+    },
+    "eldenpedia-raider": {
+      "title": "Eldenpedia 無賴",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=100034"
+    },
+    "eldenpedia-revenant": {
+      "title": "Eldenpedia 復仇者",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=98752"
+    },
+    "eldenpedia-recluse": {
+      "title": "Eldenpedia 隱士",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=99702"
+    },
+    "eldenpedia-executor": {
+      "title": "Eldenpedia 執行者",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=98810"
+    },
+    "eldenpedia-scholar": {
+      "title": "Eldenpedia 學者",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=99787"
+    },
+    "eldenpedia-undertaker": {
+      "title": "Eldenpedia 送葬者",
+      "url": "https://eldenring.wiki.gg/index.php?oldid=99424"
     }
   }
 }

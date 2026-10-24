@@ -18,7 +18,9 @@
         "SwordArtsTableParam": "params/SwordArtsTableParam.csv",
         "HeroParam": "params/HeroParam.csv",
         "HeroMenuParam": "params/HeroMenuParam.csv",
-        "CalcCorrectGraph": "params/CalcCorrectGraph.csv"
+        "CalcCorrectGraph": "params/CalcCorrectGraph.csv",
+        "AtkParam_Pc": "params/AtkParam_Pc.csv",
+        "Bullet": "params/Bullet.csv"
       }
     },
     "text": {

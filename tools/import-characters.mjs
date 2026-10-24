@@ -10,6 +10,8 @@
 //   HP、FP、精力上限：依生命力、集中力、耐力代入 CalcCorrectGraph 100、101、104 的分段線性曲線。
 //   能力加成：HeroMenuParam 的評級參數 0–4 對應 S、A、B、C、D。
 //   能力、技藝、絕活：英文取自官方選單文字的英文版，繁中為本站依官方簡中的轉寫。
+//   具體數值：tools/character-effects.json 的條目；依參數撰寫的條目逐項核對參數值 (SpEffectParam、AtkParam_Pc、Bullet)。
+//   技藝冷卻時間：HeroParam characterAbilityCooldown。
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -215,12 +217,158 @@ const ICON_TITLES = { passive: "ERN Passive Ability Icon", skill: "ERN Character
 const ICON_FILES = { passive: "passive", skill: "character-skill", art: "ultimate-art" };
 const iconTitle = (ability, en) => `File:${ICON_TITLES[ability]} ${en}.png`;
 
+// ---------- 具體數值 ----------
+
+// tools/character-effects.json：每名角色的 passive、skill、art 各一組條目，skill 可另有 cooldownNote (冷卻時間與社群記載不同時的註記)。
+// 條目二選一：
+//   依參數撰寫：{ zh, checks, note? }，sources 固定為 game-params。checks 每項核對一個參數值，有 display 時 zh 必須含該文字。
+//   社群記載的機制摘要：{ zh, sources }，不可含參數核對。
+// note 為 { zh, sources }：參數值與社群記載不同時的註記。
+const EFFECTS = join(TOOLS, "character-effects.json");
+const effectsConfig = readJson(EFFECTS);
+const paramRows = {
+  SpEffectParam: byId(parseCsv(await source("params", "SpEffectParam")), "SpEffectParam"),
+  AtkParam_Pc: byId(parseCsv(await source("params", "AtkParam_Pc")), "AtkParam_Pc"),
+  Bullet: byId(parseCsv(await source("params", "Bullet")), "Bullet"),
+};
+// 欄位群組：同一類的所有欄位必須數值相同，才代表「所有傷害」等說法
+const FIELD_GROUPS = {
+  "DamageCutRate*": ["slash", "blow", "thrust", "neutral", "magic", "fire", "thunder", "dark"].map((t) => `${t}DamageCutRate`),
+  "AttackRate*": ["physics", "magic", "fire", "thunder", "dark"].map((t) => `${t}AttackRate`),
+  "AttackPowerRate*": ["physics", "magic", "fire", "thunder", "dark"].map((t) => `${t}AttackPowerRate`),
+  "AtkCorrection*": ["Phys", "Mag", "Fire", "Thun", "Dark"].map((t) => `atk${t}Correction`),
+  "AilmentDefRate*": ["poison", "disease", "blood", "curse", "freeze", "sleep", "madness"].map((t) => `${t}DefDamageRate`),
+};
+
+// 讀一個參數值：[參數表, ID, 欄位或欄位群組]；群組內數值不同時記錄錯誤。
+function paramValue(ref, owner) {
+  const [table, id, field] = Array.isArray(ref) ? ref : [];
+  const row = paramRows[table]?.get(String(id));
+  if (!row) {
+    fail(`${owner}：${table} ${id} 不存在`);
+    return null;
+  }
+  const fields = FIELD_GROUPS[field] ?? [field];
+  const missing = fields.filter((f) => !Object.hasOwn(row, f));
+  if (missing.length) {
+    fail(`${owner}：${table} 沒有欄位 ${missing.join("、")}`);
+    return null;
+  }
+  const values = fields.map((f) => numberOf(row, f, `${table} ${id}`));
+  if (new Set(values).size !== 1) {
+    fail(`${owner}：${table} ${id} 的 ${field} 數值不一致 (${values.join("、")})`);
+    return null;
+  }
+  return values[0];
+}
+
+// 檢查項：{ ref } 直接取值；{ op: "ratio", a, b } 為 a ÷ b 四捨五入到小數 2 位；{ op: "sum", terms } 為總和；
+// { op: "scale", a, factor } 為 a × factor。round 指定比對前四捨五入的小數位數。
+// 各運算允許的欄位 (另加共同的 value、display、round)
+const CHECK_KEYS = { ref: ["ref"], ratio: ["op", "a", "b"], sum: ["op", "terms"], scale: ["op", "a", "factor"] };
+const isRef = (ref) => Array.isArray(ref) && ref.length === 3 && typeof ref[0] === "string" && Number.isInteger(ref[1]) && typeof ref[2] === "string";
+
+function checkValue(check, owner) {
+  const op = check?.op ?? "ref";
+  const allowed = CHECK_KEYS[op];
+  if (!allowed) {
+    fail(`${owner}：未知的檢查運算 ${op}`);
+    return null;
+  }
+  const extra = Object.keys(check).filter((key) => ![...allowed, "value", "display", "round"].includes(key));
+  if (extra.length) fail(`${owner}：檢查項有不認得的欄位 ${extra.join("、")}`);
+  const refs = { ref: [check.ref], ratio: [check.a, check.b], sum: check.terms, scale: [check.a] }[op];
+  if (!Array.isArray(refs) || !refs.length || !refs.every(isRef)) {
+    fail(`${owner}：參數引用必須是 [參數表, 整數 ID, 欄位]，且至少一個`);
+    return null;
+  }
+  if (op === "scale" && !Number.isFinite(check.factor)) {
+    fail(`${owner}：scale 的 factor 必須是數字`);
+    return null;
+  }
+  const values = refs.map((ref) => paramValue(ref, owner));
+  // 任一參數值讀不到時已記錄錯誤，不再計算
+  if (values.some((v) => v === null)) return null;
+  const [a, b] = values;
+  if (op === "ratio" && b === 0) {
+    fail(`${owner}：ratio 的分母為 0`);
+    return null;
+  }
+  const result = { ref: a, ratio: Math.round((a / b) * 100) / 100, sum: values.reduce((total, v) => total + v, 0), scale: a * check.factor }[op];
+  if (!Number.isFinite(result)) {
+    fail(`${owner}：計算結果不是有限數字`);
+    return null;
+  }
+  return result;
+}
+// 來源必須是 common.json sources 的自有鍵 (排除 toString 等原型屬性)
+const hasSource = (id) => typeof id === "string" && Object.hasOwn(common.sources, id);
+const rounded = (value, digits) => (digits === undefined ? Number(value.toPrecision(12)) : Number(value.toFixed(digits)));
+
+function noteOf(note, owner) {
+  if (note === undefined) return undefined;
+  if (!sameKeys(note, ["zh", "sources"]) || typeof note.zh !== "string" || !Array.isArray(note.sources) || !note.sources.length) {
+    fail(`${owner} 的 note 必須恰有 zh 與非空的 sources`);
+    return undefined;
+  }
+  for (const id of note.sources) if (!hasSource(id)) fail(`${owner} 的 note 來源 ${id} 不在 common.json`);
+  return { zh: note.zh, sources: note.sources };
+}
+
+function effectOf(entry, owner) {
+  if (typeof entry?.zh !== "string" || entry.zh.trim() === "") {
+    fail(`${owner} 必須有非空的 zh`);
+    return null;
+  }
+  if (entry.checks === undefined) {
+    if (!sameKeys(entry, ["zh", "sources"]) || !Array.isArray(entry.sources) || !entry.sources.length) fail(`${owner} 必須恰有 zh 與非空的 sources，或改為依參數撰寫的條目`);
+    for (const id of entry.sources ?? []) if (!hasSource(id)) fail(`${owner} 的來源 ${id} 不在 common.json`);
+    return { zh: entry.zh, sources: entry.sources };
+  }
+  const extra = Object.keys(entry).filter((key) => !["zh", "checks", "note"].includes(key));
+  if (extra.length) fail(`${owner} 有不認得的欄位：${extra.join("、")}`);
+  if (!Array.isArray(entry.checks) || !entry.checks.some((check) => typeof check.display === "string")) fail(`${owner} 至少要有一個含 display 的檢查項`);
+  for (const [i, check] of (entry.checks ?? []).entries()) {
+    const at = `${owner} 的檢查項 ${i + 1}`;
+    if (check.display !== undefined && (typeof check.display !== "string" || !entry.zh.includes(check.display))) fail(`${at}：zh 不含「${check.display}」`);
+    if (typeof check.value !== "number") fail(`${at}：value 必須是數字`);
+    if (check.round !== undefined && !(Number.isInteger(check.round) && check.round >= 0 && check.round <= 10)) {
+      fail(`${at}：round 必須是 0–10 的整數`);
+      continue;
+    }
+    const actual = checkValue(check, at);
+    // null 表示已記錄錯誤
+    if (actual !== null && rounded(actual, check.round) !== check.value) fail(`${at}：參數值 ${actual} 不等於 ${check.value}`);
+  }
+  const note = noteOf(entry.note, owner);
+  return { zh: entry.zh, ...(note && { note }), sources: ["game-params"] };
+}
+
+function effectsOf(key) {
+  const owner = `${EFFECTS} 的 ${key}`;
+  const entry = effectsConfig[key];
+  const keys = entry?.cooldownNote === undefined ? ABILITIES : [...ABILITIES, "cooldownNote"];
+  if (!sameKeys(entry, keys)) {
+    fail(`${owner} 必須恰有 ${keys.join("、")}`);
+    return null;
+  }
+  const effects = Object.fromEntries(
+    ABILITIES.map((ability) => {
+      const list = entry[ability];
+      if (!Array.isArray(list) || !list.length) fail(`${owner}.${ability} 必須是非空的陣列`);
+      return [ability, (list ?? []).map((item, i) => effectOf(item, `${owner}.${ability}[${i}]`))];
+    }),
+  );
+  return { effects, cooldownNote: noteOf(entry.cooldownNote, `${owner}.cooldownNote`) };
+}
+
 // ---------- 主程式 ----------
 
 const heroKeys = Object.keys(config.heroes);
 for (const key of heroKeys) if (!common.characters[key]) fail(`config.heroes 的 ${key} 不在 common.json 的 characters`);
 for (const key of Object.keys(common.characters)) if (!config.heroes[key]) fail(`common.json 的角色 ${key} 不在 config.heroes`);
 for (const key of Object.keys(textZh)) if (!config.heroes[key]) fail(`${TEXT_ZH} 的 ${key} 不是 config.heroes 的角色`);
+for (const key of Object.keys(effectsConfig)) if (!config.heroes[key]) fail(`${EFFECTS} 的 ${key} 不是 config.heroes 的角色`);
 
 const pages = await iconPages(heroKeys.flatMap((key) => ABILITIES.map((ability) => iconTitle(ability, common.characters[key].name.en))));
 
@@ -239,11 +387,15 @@ const nightfarers = Object.fromEntries(
     if (!hero) fail(`${owner} 的 HeroParam ${heroParam} 不存在`);
     if (!menu) fail(`${owner} 的 HeroMenuParam ${config.heroes[key].heroMenuParam} 不存在`);
     if (!hero || !menu) return [key, null];
+    const { effects, cooldownNote } = effectsOf(key) ?? { effects: {} };
+    // 技藝冷卻時間 (秒)：HeroParam characterAbilityCooldown，0 表示沒有冷卻
+    const cooldown = numberOf(hero, "characterAbilityCooldown", `HeroParam ${heroParam}`);
     const abilities = Object.fromEntries(
       ABILITIES.map((ability) => {
         const fields = Object.fromEntries(FIELDS.map((field) => [field, text[ability][field] && { zh: text[ability][field].zh, en: text[ability][field].en }]));
         const title = iconTitle(ability, common.characters[key].name.en);
-        return [ability, { ...fields, icon: iconOf(pages, title, `images/${ICON_FILES[ability]}-${slug(common.characters[key].name.en)}.png`) }];
+        const extra = ability === "skill" ? { cooldown, ...(cooldownNote && { cooldownNote }) } : {};
+        return [ability, { ...fields, icon: iconOf(pages, title, `images/${ICON_FILES[ability]}-${slug(common.characters[key].name.en)}.png`), ...extra, effects: effects[ability] ?? [] }];
       }),
     );
     return [
@@ -260,7 +412,7 @@ const nightfarers = Object.fromEntries(
   }),
 );
 
-for (const id of ["game-params", ...Object.values(PAGE_SOURCES)]) if (!common.sources[id]) fail(`來源 ${id} 不在 common.json`);
+for (const id of ["game-params", ...Object.values(PAGE_SOURCES)]) if (!hasSource(id)) fail(`來源 ${id} 不在 common.json`);
 
 if (problems.length) {
   console.error(`無法產生：\n  ${problems.join("\n  ")}`);
