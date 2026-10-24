@@ -693,6 +693,10 @@
       "note": "註",
       "abilities": "能力、技藝與絕活",
       "character": "角色",
+      "stat": "能力值",
+      "levelMode": "顯示方式",
+      "levelSingle": "單一角色",
+      "levelCompare": "全部角色比較",
       "levels": "各等級能力值",
       "level": "等級",
       "relics": "角色專屬遺物詞條"

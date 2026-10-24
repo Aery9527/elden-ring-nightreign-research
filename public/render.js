@@ -745,14 +745,18 @@ function skillChapters(data) {
 }
 
 // ---------- 角色頁 ----------
-// <section data-nightfarer="<角色鍵>">：h2 填角色圖示與名稱，其後依角色資料產生兩張表 (能力、技藝與絕活；
-// 等級 1–15 的能力值與上限) 與該角色專屬遺物詞條章節的連結。每名角色恰好一個章節。
+// <section data-nightfarer="<角色鍵>">：h2 填角色圖示與名稱，其後依角色資料產生能力、技藝與絕活表，
+// 與該角色專屬遺物詞條章節的連結。每名角色恰好一個章節。
 // <div data-nightfarer-grades>：能力加成表，全部角色各一列。
+// <div data-nightfarer-levels>：各等級能力表，可切換單一角色或全部角色比較一項能力值。
 // 名稱與說明是本站依官方簡體中文轉寫的繁體中文；錨點以外的等級與三項上限是匯入程式的計算值 (見 LORE)。
 const ABILITY_KINDS = ["passive", "skill", "art"];
 const GRADE_STATS = ["maxHp", "maxFp", "maxStamina", "strength", "dexterity", "intelligence", "faith", "arcane"];
 const LEVEL_STATS = ["vigor", "mind", "endurance", "strength", "dexterity", "intelligence", "faith", "arcane", "maxHp", "maxFp", "maxStamina"];
 const GRADES = ["S", "A", "B", "C", "D"];
+// 三項上限在每個等級都是本站計算值，比較模式不以粗體標示
+const CAP_STATS = ["maxHp", "maxFp", "maxStamina"];
+const LEVELS = Array.from({ length: 15 }, (_, index) => String(index + 1));
 
 function dataTable(heads, rows, tableClass) {
   const head = el("thead", {}, el("tr", {}, ...heads.map((text) => el("th", {}, text))));
@@ -797,11 +801,100 @@ function abilityRow(data, kind, ability) {
   );
 }
 
-// 等級列：有參數列的等級 (錨點) 以粗體標示，其他等級是插值計算值。
-function levelRow(nightfarer, level) {
-  const values = nightfarer.levels[level];
-  const label = nightfarer.anchorLevels.includes(Number(level)) ? el("strong", {}, level) : level;
-  return el("tr", {}, el("td", {}, label), ...LEVEL_STATS.map((stat) => el("td", {}, String(values[stat]))));
+// 等級資料：頁面載入時先檢查全部角色，切換時不會遇到格式錯誤。
+function checkLevels(key, nightfarer) {
+  const { levels, anchorLevels } = nightfarer;
+  const keys = Object.keys(levels ?? {});
+  if (keys.length !== LEVELS.length || !LEVELS.every((level) => keys.includes(level))) throw new Error(`角色 ${key} 的等級必須恰為 1–15`);
+  for (const level of LEVELS) {
+    const values = levels[level];
+    if (Object.keys(values ?? {}).length !== LEVEL_STATS.length || !LEVEL_STATS.every((stat) => Number.isFinite(values[stat]))) {
+      throw new Error(`角色 ${key} 等級 ${level} 必須恰有 ${LEVEL_STATS.join("、")}，且皆為數字`);
+    }
+  }
+  const valid = (level) => Number.isInteger(level) && level >= 1 && level <= LEVELS.length;
+  if (!Array.isArray(anchorLevels) || !anchorLevels.length || new Set(anchorLevels).size !== anchorLevels.length || !anchorLevels.every(valid)) {
+    throw new Error(`角色 ${key} 的參數等級必須是不重複的 1–15 整數清單`);
+  }
+}
+
+// 各等級能力表，兩種模式的列都是等級 1–15：
+// 單一角色：欄為 11 個數值，參數等級的等級數字以粗體標示。
+// 全部角色比較：欄為各角色的同一項數值；基本能力值在該角色參數等級的格子以粗體標示，三項上限不加粗。
+function levelTable(data, keys, mode, pick) {
+  const labels = data.labels.nightfarers;
+  const isAnchor = (nightfarer, level) => nightfarer.anchorLevels.includes(Number(level));
+  if (mode === "character") {
+    const nightfarer = data.nightfarers[pick];
+    const rows = LEVELS.map((level) => {
+      const label = isAnchor(nightfarer, level) ? el("strong", {}, level) : level;
+      return el("tr", {}, el("td", {}, label), ...LEVEL_STATS.map((stat) => el("td", {}, String(nightfarer.levels[level][stat]))));
+    });
+    return dataTable([labels.level, ...LEVEL_STATS.map((stat) => statName(data, stat))], rows);
+  }
+  const bold = !CAP_STATS.includes(pick);
+  const cell = (key, level) => {
+    const nightfarer = data.nightfarers[key];
+    const value = String(nightfarer.levels[level][pick]);
+    return el("td", {}, bold && isAnchor(nightfarer, level) ? el("strong", {}, value) : value);
+  };
+  const rows = LEVELS.map((level) => el("tr", {}, el("td", {}, level), ...keys.map((key) => cell(key, level))));
+  return dataTable([labels.level, ...keys.map((key) => lookup(data.characters, key, "角色").name.zh)], rows);
+}
+
+// 各等級能力表的控制項：「單一角色／全部角色比較」單選鈕，下方的選單依模式選角色或能力值；兩個選單各自保留選擇。
+// 原本各角色小節的 id character-<角色>-levels 留在容器開頭的空元素上：網址是這些錨點時 (載入或 hashchange，
+// 含上一頁／下一頁)，切到該角色的單一角色模式。手動切換後，網址若仍是這類錨點，改為 #levels，避免指向其他角色。
+// 切換時出錯：移除控制項與表格並顯示載入失敗，不留下與選單不符的表格。
+function levelChapter(data, keys, container) {
+  const labels = data.labels.nightfarers;
+  const characterName = (key) => lookup(data.characters, key, "角色").name.zh;
+  const radio = (value, text) => el("label", {}, el("input", { type: "radio", name: "level-mode", value }), text);
+  const modes = el("fieldset", { class: "level-controls" }, el("legend", {}, labels.levelMode), radio("character", labels.levelSingle), radio("stat", labels.levelCompare));
+  const select = (values, name) => el("select", {}, ...values.map((value) => el("option", { value }, name(value))));
+  const characterSelect = select(keys, characterName);
+  const statSelect = select(LEVEL_STATS, (stat) => statName(data, stat));
+  const characterPick = el("label", { class: "level-pick" }, labels.character, characterSelect);
+  const statPick = el("label", { class: "level-pick" }, labels.stat, statSelect);
+  const status = el("p", { class: "level-view", role: "status" });
+  const slot = el("div");
+  const anchors = keys.map((key) => el("div", { id: `character-${key}-levels` }));
+  container.replaceChildren(...anchors, modes, characterPick, statPick, status, slot);
+  const setMode = (mode) => (modes.querySelector(`input[value="${mode}"]`).checked = true);
+  const oldAnchor = /^#character-(.+)-levels$/;
+  function show() {
+    const compare = modes.querySelector("input:checked").value === "stat";
+    const pick = compare ? statSelect.value : characterSelect.value;
+    characterPick.hidden = compare;
+    statPick.hidden = !compare;
+    status.textContent = compare ? `${statName(data, pick)}：${labels.levelCompare}` : `${characterName(pick)}：${labels.levels}`;
+    slot.replaceChildren(levelTable(data, keys, compare ? "stat" : "character", pick));
+    labelTableCells();
+  }
+  function fromHash() {
+    const key = oldAnchor.exec(location.hash)?.[1];
+    if (!keys.includes(key)) return;
+    setMode("character");
+    characterSelect.value = key;
+    show();
+  }
+  function onChange() {
+    if (oldAnchor.test(location.hash)) history.replaceState(null, "", "#levels");
+    show();
+  }
+  const guarded = (handler) => () => {
+    try {
+      handler();
+    } catch (error) {
+      container.replaceChildren();
+      showError(error);
+    }
+  };
+  for (const control of [modes, characterSelect, statSelect]) control.addEventListener("change", guarded(onChange));
+  addEventListener("hashchange", guarded(fromHash));
+  setMode("character");
+  show();
+  fromHash();
 }
 
 // 能力加成表：每名角色一列，依角色章節順序；列 id 沿用原本各角色小節的 character-<角色>-grades，舊連結仍可使用。
@@ -817,25 +910,26 @@ function gradeRow(data, key, nightfarer) {
   return el("tr", { id: `character-${key}-grades` }, el("td", { class: "item" }, iconNode(data, character.icon, "48"), name), ...cells);
 }
 
-// 角色章節放在 <div data-nightfarer-list> 內 (角色頁)；其他頁面沒有此容器，也不可有角色章節或能力加成表。
-// 角色頁恰有一個能力加成表容器。
+// 角色章節放在 <div data-nightfarer-list> 內 (角色頁)；其他頁面沒有此容器，也不可有角色章節、能力加成表或各等級能力表。
+// 角色頁恰有一個能力加成表容器與一個各等級能力表容器。
 function nightfarerChapters(data) {
   const list = document.querySelector("[data-nightfarer-list]");
   const sections = [...document.querySelectorAll("[data-nightfarer]")];
   const gradeTables = document.querySelectorAll("[data-nightfarer-grades]");
+  const levelTables = document.querySelectorAll("[data-nightfarer-levels]");
   if (!list) {
     if (sections.length) throw new Error("角色章節必須放在 data-nightfarer-list 內");
-    if (gradeTables.length) throw new Error("能力加成表只能放在角色頁");
+    if (gradeTables.length || levelTables.length) throw new Error("能力加成表與各等級能力表只能放在角色頁");
     return;
   }
   if (gradeTables.length !== 1) throw new Error("角色頁必須恰有一個能力加成表");
+  if (levelTables.length !== 1) throw new Error("角色頁必須恰有一個各等級能力表");
   if (sections.some((section) => !list.contains(section))) throw new Error("角色章節必須放在 data-nightfarer-list 內");
   const keys = sections.map((section) => section.dataset.nightfarer);
   for (const key of Object.keys(data.characters)) {
     if (keys.filter((k) => k === key).length !== 1) throw new Error(`角色 ${key} 必須恰有一個章節`);
   }
   const labels = data.labels.nightfarers;
-  const statName = (stat) => lookup(data.stats, stat, "能力值").name.zh;
   for (const section of sections) {
     const key = section.dataset.nightfarer;
     const character = lookup(data.characters, key, "角色");
@@ -848,13 +942,13 @@ function nightfarerChapters(data) {
     section.append(
       sub("abilities", labels.abilities),
       dataTable([labels.name, labels.kind, labels.description, labels.effects], ABILITY_KINDS.map((kind) => abilityRow(data, kind, nightfarer[kind])), "abilities"),
-      sub("levels", labels.levels),
-      dataTable([labels.level, ...LEVEL_STATS.map(statName)], Object.keys(nightfarer.levels).map((level) => levelRow(nightfarer, level))),
       el("p", {}, `${labels.relics}：`, relics)
     );
   }
   const gradeRows = keys.map((key) => gradeRow(data, key, data.nightfarers[key]));
-  gradeTables[0].replaceChildren(dataTable([labels.character, ...GRADE_STATS.map(statName)], gradeRows));
+  gradeTables[0].replaceChildren(dataTable([labels.character, ...GRADE_STATS.map((stat) => statName(data, stat))], gradeRows));
+  for (const key of keys) checkLevels(key, data.nightfarers[key]);
+  levelChapter(data, keys, levelTables[0]);
 }
 
 // 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；
