@@ -842,10 +842,129 @@ function levelTable(data, keys, mode, pick) {
   return dataTable([labels.level, ...keys.map((key) => lookup(data.characters, key, "角色").name.zh)], rows);
 }
 
+// 各等級能力表的圖表。單一角色：三張折線圖，第三張的 HP 上限用右側縱軸、FP 與精力上限用左側縱軸。
+// 全部角色比較：選定等級的排序橫條圖。刻度由全部角色、全部等級的資料推算，切換角色或等級時不變，才能比較高低。
+const LEVEL_CHARTS = [
+  { left: ["vigor", "mind", "endurance"], right: [] },
+  { left: ["strength", "dexterity", "intelligence", "faith", "arcane"], right: [] },
+  { left: ["maxFp", "maxStamina"], right: ["maxHp"] },
+];
+// 線型是顏色以外的第二種區分方式，依系列順序對應色票 --series-1 起
+const DASHES = ["", "6 4", "2 3", "8 3 2 3", "12 4"];
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+function svgEl(tag, attrs = {}, ...children) {
+  const node = document.createElementNS(SVG_NS, tag);
+  for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
+  node.append(...children);
+  return node;
+}
+
+// 刻度：約 4 格，每格是 1、2、5 乘以 10 的次方，上限取能容納最大值的格數
+function axisScale(max) {
+  const raw = Math.max(max, 1) / 4;
+  const power = 10 ** Math.floor(Math.log10(raw));
+  const step = [1, 2, 5, 10].map((factor) => factor * power).find((value) => value >= raw);
+  return { step, top: Math.ceil(Math.max(max, 1) / step) * step };
+}
+
+function statMax(data, keys, stats) {
+  return Math.max(...keys.flatMap((key) => LEVELS.flatMap((level) => stats.map((stat) => data.nightfarers[key].levels[level][stat]))));
+}
+
+// 圖例兼讀值：線型樣本、名稱 (右軸系列加註)、所選等級的數值
+function chartLegend(data, chart, values) {
+  const series = [...chart.right, ...chart.left];
+  return el(
+    "ul",
+    { class: "chart-legend" },
+    ...series.map((stat, index) => {
+      const key = svgEl("svg", { width: "24", height: "10", "aria-hidden": "true" });
+      key.append(svgEl("line", { x1: "0", y1: "5", x2: "24", y2: "5", class: `series series-${index + 1}`, "stroke-dasharray": DASHES[index] }));
+      const name = chart.right.includes(stat) ? `${statName(data, stat)}${data.labels.nightfarers.rightAxis}` : statName(data, stat);
+      return el("li", {}, key, name, " ", el("strong", {}, String(values[stat])));
+    })
+  );
+}
+
+// 折線圖：15 個等級的已存數值以直線相連；基本能力值在參數等級畫實心點，三項上限不畫；直線標示所選等級。
+// 在圖上移動或點按會選最近的等級 (onLevel)。
+function lineChart(data, nightfarer, chart, scales, level, width, onLevel) {
+  const series = [...chart.right, ...chart.left];
+  // 三張圖的左右邊距相同 (右側都保留右軸刻度的寬度)，上下對齊時同一等級在同一位置
+  const margin = { top: 10, right: 40, bottom: 26, left: 34 };
+  const plotH = 170;
+  const plotW = Math.max(width - margin.left - margin.right, 120);
+  const svgW = plotW + margin.left + margin.right;
+  const svgH = plotH + margin.top + margin.bottom;
+  const x = (lvl) => margin.left + ((Number(lvl) - 1) / (LEVELS.length - 1)) * plotW;
+  const y = (scale, value) => margin.top + plotH * (1 - value / scale.top);
+  const names = series.map((stat) => statName(data, stat)).join("、");
+  const svg = svgEl("svg", { class: "level-chart", width: String(svgW), height: String(svgH), viewBox: `0 0 ${svgW} ${svgH}`, role: "img", "aria-label": names });
+  const ticks = (scale) => Array.from({ length: scale.top / scale.step + 1 }, (_, index) => index * scale.step);
+  for (const value of ticks(scales.left)) {
+    const at = y(scales.left, value);
+    svg.append(svgEl("line", { class: "grid", x1: String(margin.left), x2: String(margin.left + plotW), y1: String(at), y2: String(at) }));
+    svg.append(svgEl("text", { class: "tick", x: String(margin.left - 6), y: String(at), "text-anchor": "end", "dominant-baseline": "middle" }, String(value)));
+  }
+  if (chart.right.length) {
+    for (const value of ticks(scales.right)) {
+      const at = y(scales.right, value);
+      svg.append(svgEl("text", { class: "tick", x: String(margin.left + plotW + 6), y: String(at), "dominant-baseline": "middle" }, String(value)));
+    }
+  }
+  // 等級刻度：空間不足時只標 1、5、10、15
+  const dense = plotW / (LEVELS.length - 1) >= 20;
+  for (const lvl of LEVELS.filter((value) => dense || ["1", "5", "10", "15"].includes(value))) {
+    svg.append(svgEl("text", { class: "tick", x: String(x(lvl)), y: String(margin.top + plotH + 18), "text-anchor": "middle" }, lvl));
+  }
+  svg.append(svgEl("line", { class: "level-marker", x1: String(x(level)), x2: String(x(level)), y1: String(margin.top), y2: String(margin.top + plotH) }));
+  series.forEach((stat, index) => {
+    const scale = chart.right.includes(stat) ? scales.right : scales.left;
+    const points = LEVELS.map((lvl) => `${x(lvl)},${y(scale, nightfarer.levels[lvl][stat])}`).join(" ");
+    svg.append(svgEl("polyline", { class: `series series-${index + 1}`, points, "stroke-dasharray": DASHES[index] }));
+    if (CAP_STATS.includes(stat)) return;
+    for (const lvl of nightfarer.anchorLevels) {
+      svg.append(svgEl("circle", { class: `dot series-${index + 1}`, cx: String(x(lvl)), cy: String(y(scale, nightfarer.levels[lvl][stat])), r: "4" }));
+    }
+  });
+  const hit = svgEl("rect", { class: "hit", x: String(margin.left - 10), y: "0", width: String(plotW + 20), height: String(svgH) });
+  const pick = (event) => {
+    const bounds = svg.getBoundingClientRect();
+    const at = ((event.clientX - bounds.left) * svgW) / bounds.width;
+    const nearest = Math.round(((at - margin.left) / plotW) * (LEVELS.length - 1)) + 1;
+    onLevel(String(Math.min(Math.max(nearest, 1), LEVELS.length)));
+  };
+  hit.addEventListener("pointermove", pick);
+  hit.addEventListener("pointerdown", pick);
+  svg.append(hit);
+  const values = Object.fromEntries(series.map((stat) => [stat, nightfarer.levels[level][stat]]));
+  return el("div", { class: "level-figure" }, chartLegend(data, chart, values), svg);
+}
+
+// 排序橫條圖：所選等級的數值由高到低，同值依角色章節順序；橫條長度以該能力值的共同刻度計算。
+function barChart(data, keys, stat, level, scale) {
+  const rows = keys
+    .map((key, index) => ({ key, index, value: data.nightfarers[key].levels[level][stat] }))
+    .sort((a, b) => b.value - a.value || a.index - b.index);
+  return el(
+    "ol",
+    { class: "bar-chart" },
+    ...rows.map(({ key, value }) => {
+      const bar = el("span", { class: "bar" });
+      bar.style.width = `${(value / scale.top) * 100}%`;
+      const name = lookup(data.characters, key, "角色").name.zh;
+      return el("li", {}, el("span", { class: "bar-name" }, name), el("span", { class: "bar-value" }, String(value)), el("span", { class: "bar-track" }, bar));
+    })
+  );
+}
+
 // 各等級能力表的控制項：「單一角色／全部角色比較」單選鈕，下方的選單依模式選角色或能力值；兩個選單各自保留選擇。
+// 等級控制條兩種模式共用，預設 15 級：單一角色時決定圖例顯示的數值與標示線，比較時決定橫條圖的等級。
+// 圖表下方是收合的數值表 (15 級精確數值)，切換時保留展開狀態。
 // 原本各角色小節的 id character-<角色>-levels 留在容器開頭的空元素上：網址是這些錨點時 (載入或 hashchange，
 // 含上一頁／下一頁)，切到該角色的單一角色模式。手動切換後，網址若仍是這類錨點，改為 #levels，避免指向其他角色。
-// 切換時出錯：移除控制項與表格並顯示載入失敗，不留下與選單不符的表格。
+// 切換時出錯：移除控制項與圖表並顯示載入失敗，不留下與選單不符的內容。
 function levelChapter(data, keys, container) {
   const labels = data.labels.nightfarers;
   const characterName = (key) => lookup(data.characters, key, "角色").name.zh;
@@ -856,20 +975,46 @@ function levelChapter(data, keys, container) {
   const statSelect = select(LEVEL_STATS, (stat) => statName(data, stat));
   const characterPick = el("label", { class: "level-pick" }, labels.character, characterSelect);
   const statPick = el("label", { class: "level-pick" }, labels.stat, statSelect);
+  const levelInput = el("input", { type: "range", min: "1", max: String(LEVELS.length), step: "1", value: String(LEVELS.length) });
+  const levelOutput = el("output", {}, String(LEVELS.length));
+  const levelPick = el("label", { class: "level-pick" }, labels.level, levelInput, levelOutput);
   const status = el("p", { class: "level-view", role: "status" });
-  const slot = el("div");
+  const charts = el("div", { class: "level-charts" });
+  const tableSlot = el("div");
+  const table = el("details", { class: "level-table" }, el("summary", {}, labels.valueTable), tableSlot);
   const anchors = keys.map((key) => el("div", { id: `character-${key}-levels` }));
-  container.replaceChildren(...anchors, modes, characterPick, statPick, status, slot);
+  container.replaceChildren(...anchors, modes, characterPick, statPick, levelPick, status, charts, table);
+  const scales = new Map(LEVEL_CHARTS.map((chart) => [chart, { left: axisScale(statMax(data, keys, chart.left)), right: chart.right.length ? axisScale(statMax(data, keys, chart.right)) : null }]));
+  const statScales = new Map(LEVEL_STATS.map((stat) => [stat, axisScale(statMax(data, keys, [stat]))]));
   const setMode = (mode) => (modes.querySelector(`input[value="${mode}"]`).checked = true);
+  const compare = () => modes.querySelector("input:checked").value === "stat";
   const oldAnchor = /^#character-(.+)-levels$/;
+  let drawnWidth = 0;
+  function draw() {
+    const level = levelInput.value;
+    levelOutput.textContent = level;
+    drawnWidth = charts.clientWidth;
+    if (compare()) {
+      charts.replaceChildren(barChart(data, keys, statSelect.value, level, statScales.get(statSelect.value)));
+      return;
+    }
+    const nightfarer = data.nightfarers[characterSelect.value];
+    const onLevel = guarded((value) => {
+      if (value === levelInput.value) return;
+      levelInput.value = value;
+      draw();
+    });
+    charts.replaceChildren(...LEVEL_CHARTS.map((chart) => lineChart(data, nightfarer, chart, scales.get(chart), level, drawnWidth, onLevel)));
+  }
   function show() {
-    const compare = modes.querySelector("input:checked").value === "stat";
-    const pick = compare ? statSelect.value : characterSelect.value;
-    characterPick.hidden = compare;
-    statPick.hidden = !compare;
-    status.textContent = compare ? `${statName(data, pick)}：${labels.levelCompare}` : `${characterName(pick)}：${labels.levels}`;
-    slot.replaceChildren(levelTable(data, keys, compare ? "stat" : "character", pick));
+    const stat = compare();
+    const pick = stat ? statSelect.value : characterSelect.value;
+    characterPick.hidden = stat;
+    statPick.hidden = !stat;
+    status.textContent = stat ? `${statName(data, pick)}：${labels.levelCompare}` : `${characterName(pick)}：${labels.levels}`;
+    tableSlot.replaceChildren(levelTable(data, keys, stat ? "stat" : "character", pick));
     labelTableCells();
+    draw();
   }
   function fromHash() {
     const key = oldAnchor.exec(location.hash)?.[1];
@@ -882,19 +1027,31 @@ function levelChapter(data, keys, container) {
     if (oldAnchor.test(location.hash)) history.replaceState(null, "", "#levels");
     show();
   }
-  const guarded = (handler) => () => {
-    try {
-      handler();
-    } catch (error) {
-      container.replaceChildren();
-      showError(error);
-    }
-  };
+  // 出錯一次後停止本章所有處理 (hashchange、寬度改變等仍會觸發)，不重複顯示錯誤
+  let stopped = false;
+  function guarded(handler) {
+    return (...args) => {
+      if (stopped) return;
+      try {
+        handler(...args);
+      } catch (error) {
+        stopped = true;
+        container.replaceChildren();
+        showError(error);
+      }
+    };
+  }
   for (const control of [modes, characterSelect, statSelect]) control.addEventListener("change", guarded(onChange));
+  levelInput.addEventListener("input", guarded(draw));
   addEventListener("hashchange", guarded(fromHash));
+  // 寬度改變時重畫圖表 (文字大小不變，不把整張圖縮放)
+  new ResizeObserver(guarded(() => charts.isConnected && charts.clientWidth !== drawnWidth && draw())).observe(charts);
   setMode("character");
-  show();
-  fromHash();
+  // 首次繪製也走同一錯誤處理：出錯時同樣移除控制項、圖表與表格
+  guarded(() => {
+    show();
+    fromHash();
+  })();
 }
 
 // 能力加成表：每名角色一列，依角色章節順序；列 id 沿用原本各角色小節的 character-<角色>-grades，舊連結仍可使用。

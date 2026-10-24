@@ -12,6 +12,12 @@
   --tone-solo: oklch(0.5 0.13 150);
   --tone-stack: oklch(0.5 0.14 255);
   --tone-debuff: oklch(0.52 0.18 25);
+  /* 圖表類別色 (各等級能力表)：dataviz 參考色票前五色，已對本站淺色 --surface 驗證 */
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +35,12 @@
     --tone-solo: oklch(0.8 0.15 150);
     --tone-stack: oklch(0.78 0.12 245);
     --tone-debuff: oklch(0.72 0.16 25);
+    /* 同上五色的深色版本，已對本站深色 --surface 驗證 */
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --series-5: #d55181;
   }
 }
 
@@ -571,6 +583,10 @@ td.caption {
   gap: 6px;
 }
 
+.level-pick {
+  margin: 4px 16px 4px 0;
+}
+
 .level-controls input {
   margin: 0;
   accent-color: var(--accent);
@@ -593,6 +609,156 @@ td.caption {
 .level-view {
   margin: 12px 0 0;
   font-weight: 600;
+}
+
+.level-pick input[type="range"] {
+  accent-color: var(--accent);
+}
+
+.level-pick output {
+  min-width: 2ch;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 各等級能力表的圖表：圖例兼讀值在上、折線圖在下；線條 2px，參數等級的實心點外圍留一圈背景色 */
+.level-charts {
+  margin-top: 12px;
+}
+
+.level-figure {
+  margin: 0 0 24px;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.chart-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.level-chart {
+  display: block;
+  overflow: visible;
+  touch-action: pan-y;
+}
+
+.level-chart .grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.level-chart .tick {
+  fill: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.level-chart .level-marker {
+  stroke: var(--text);
+  stroke-width: 1;
+  opacity: 0.45;
+}
+
+.level-chart .hit {
+  fill: transparent;
+  cursor: crosshair;
+}
+
+.series-1 {
+  --series: var(--series-1);
+}
+
+.series-2 {
+  --series: var(--series-2);
+}
+
+.series-3 {
+  --series: var(--series-3);
+}
+
+.series-4 {
+  --series: var(--series-4);
+}
+
+.series-5 {
+  --series: var(--series-5);
+}
+
+.series {
+  fill: none;
+  stroke: var(--series);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.level-chart .dot {
+  fill: var(--series);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+/* 排序橫條圖：窄螢幕名稱與數值在上、橫條在下；寬螢幕三者同列 */
+.bar-chart {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bar-chart li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 8px;
+  align-items: center;
+}
+
+.bar-value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.bar-track {
+  grid-column: 1 / -1;
+  height: 12px;
+}
+
+.bar {
+  display: block;
+  min-width: 2px;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  background: var(--series-1);
+}
+
+@media screen and (min-width: 641px) {
+  .bar-chart li {
+    grid-template-columns: 7em 1fr 3.5em;
+  }
+
+  .bar-track {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .bar-value {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.level-table summary {
+  color: var(--accent);
+  cursor: pointer;
 }
 
 td.caption p,

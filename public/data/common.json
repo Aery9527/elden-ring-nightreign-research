@@ -697,6 +697,8 @@
       "levelMode": "顯示方式",
       "levelSingle": "單一角色",
       "levelCompare": "全部角色比較",
+      "rightAxis": "（右軸）",
+      "valueTable": "數值表（等級 1–15）",
       "levels": "各等級能力值",
       "level": "等級",
       "relics": "角色專屬遺物詞條"
