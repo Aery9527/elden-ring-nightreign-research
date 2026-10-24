@@ -745,12 +745,14 @@ function skillChapters(data) {
 }
 
 // ---------- 角色頁 ----------
-// <section data-nightfarer="<角色鍵>">：h2 填角色圖示與名稱，其後依角色資料產生三張表 (能力、技藝與絕活；能力加成；
+// <section data-nightfarer="<角色鍵>">：h2 填角色圖示與名稱，其後依角色資料產生兩張表 (能力、技藝與絕活；
 // 等級 1–15 的能力值與上限) 與該角色專屬遺物詞條章節的連結。每名角色恰好一個章節。
+// <div data-nightfarer-grades>：能力加成表，全部角色各一列。
 // 名稱與說明是本站依官方簡體中文轉寫的繁體中文；錨點以外的等級與三項上限是匯入程式的計算值 (見 LORE)。
 const ABILITY_KINDS = ["passive", "skill", "art"];
 const GRADE_STATS = ["maxHp", "maxFp", "maxStamina", "strength", "dexterity", "intelligence", "faith", "arcane"];
 const LEVEL_STATS = ["vigor", "mind", "endurance", "strength", "dexterity", "intelligence", "faith", "arcane", "maxHp", "maxFp", "maxStamina"];
+const GRADES = ["S", "A", "B", "C", "D"];
 
 function dataTable(heads, rows, tableClass) {
   const head = el("thead", {}, el("tr", {}, ...heads.map((text) => el("th", {}, text))));
@@ -802,14 +804,31 @@ function levelRow(nightfarer, level) {
   return el("tr", {}, el("td", {}, label), ...LEVEL_STATS.map((stat) => el("td", {}, String(values[stat]))));
 }
 
-// 角色章節放在 <div data-nightfarer-list> 內 (角色頁)；其他頁面沒有此容器，也不可有角色章節。
+// 能力加成表：每名角色一列，依角色章節順序；列 id 沿用原本各角色小節的 character-<角色>-grades，舊連結仍可使用。
+function gradeRow(data, key, nightfarer) {
+  const grades = nightfarer.grades;
+  const keys = Object.keys(grades ?? {});
+  if (keys.length !== GRADE_STATS.length || !GRADE_STATS.every((stat) => GRADES.includes(grades[stat]))) {
+    throw new Error(`角色 ${key} 的能力加成必須恰有 ${GRADE_STATS.join("、")}，且評級為 ${GRADES.join("、")}`);
+  }
+  const character = lookup(data.characters, key, "角色");
+  const name = el("a", { href: `#character-${key}` }, character.name.zh);
+  const cells = GRADE_STATS.map((stat) => el("td", {}, grades[stat]));
+  return el("tr", { id: `character-${key}-grades` }, el("td", { class: "item" }, iconNode(data, character.icon, "48"), name), ...cells);
+}
+
+// 角色章節放在 <div data-nightfarer-list> 內 (角色頁)；其他頁面沒有此容器，也不可有角色章節或能力加成表。
+// 角色頁恰有一個能力加成表容器。
 function nightfarerChapters(data) {
   const list = document.querySelector("[data-nightfarer-list]");
   const sections = [...document.querySelectorAll("[data-nightfarer]")];
+  const gradeTables = document.querySelectorAll("[data-nightfarer-grades]");
   if (!list) {
     if (sections.length) throw new Error("角色章節必須放在 data-nightfarer-list 內");
+    if (gradeTables.length) throw new Error("能力加成表只能放在角色頁");
     return;
   }
+  if (gradeTables.length !== 1) throw new Error("角色頁必須恰有一個能力加成表");
   if (sections.some((section) => !list.contains(section))) throw new Error("角色章節必須放在 data-nightfarer-list 內");
   const keys = sections.map((section) => section.dataset.nightfarer);
   for (const key of Object.keys(data.characters)) {
@@ -829,13 +848,13 @@ function nightfarerChapters(data) {
     section.append(
       sub("abilities", labels.abilities),
       dataTable([labels.name, labels.kind, labels.description, labels.effects], ABILITY_KINDS.map((kind) => abilityRow(data, kind, nightfarer[kind])), "abilities"),
-      sub("grades", labels.grade),
-      dataTable([labels.grades, ...GRADE_STATS.map(statName)], [el("tr", {}, el("td", {}, labels.gradeRow), ...GRADE_STATS.map((stat) => el("td", {}, nightfarer.grades[stat])))]),
       sub("levels", labels.levels),
       dataTable([labels.level, ...LEVEL_STATS.map(statName)], Object.keys(nightfarer.levels).map((level) => levelRow(nightfarer, level))),
       el("p", {}, `${labels.relics}：`, relics)
     );
   }
+  const gradeRows = keys.map((key) => gradeRow(data, key, data.nightfarers[key]));
+  gradeTables[0].replaceChildren(dataTable([labels.character, ...GRADE_STATS.map(statName)], gradeRows));
 }
 
 // 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；

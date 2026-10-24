@@ -692,9 +692,7 @@
       "noCooldown": "無冷卻",
       "note": "註",
       "abilities": "能力、技藝與絕活",
-      "grades": "項目",
-      "grade": "能力加成",
-      "gradeRow": "評級",
+      "character": "角色",
       "levels": "各等級能力值",
       "level": "等級",
       "relics": "角色專屬遺物詞條"
