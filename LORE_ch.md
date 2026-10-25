@@ -4,124 +4,145 @@
 
 - `艾爾登法環 - 黑夜君臨` 這款遊戲的知識與遊戲內未提及具體數值的研究紀錄
 
-## 專案基本守則
+## 文件守則
 
-- AI agent 文件維持雙語且內容等價 (無後綴即英文版)，例如 SKILL.md=SKILL_ch.md、AGENTS.md=AGENTS_ch.md 等等。
-- AI agent 文件中維持語言對應連結：英文檔案連到英文目標，繁體中文檔案在有 _ch 目標時連到 _ch 目標。
-- 網站以 Netlify 發佈，[netlify.toml](netlify.toml) 指定發佈 `public/` 目錄，不需建置指令：
-  - 網站檔案 (HTML、CSS、圖片) 一律放在 `public/` 下；`public/` 以外的檔案不會出現在網站上。
-  - 頁面間以相對路徑連到 `.html` 檔，不依賴 Netlify 的 pretty URL。
-  - 頁面以 `fetch` 載入遊戲資料，本機預覽須透過 HTTP 伺服器 (例如 `python -m http.server -d public`)；直接開啟本機檔案 (`file://`) 無法載入資料。
-  - 新增主題頁面時，同時在首頁 [public/index.html](public/index.html) 該主題的表格新增一列；新主題在首頁另立一個 `h2` 章節。
-  - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址，並保留原標題 id，讓舊錨點仍可使用。已上線的章節移到其他頁面時，在 [public/nav.js](public/nav.js) 的舊錨點表 (`moved`) 把「頁名#id」導向新頁面；章節在同頁內移除或合併時，把舊 id 保留在接手內容的元素上。
-  - 每個頁面在 [public/render.js](public/render.js) 之前載入 [public/nav.js](public/nav.js)，讓頁首在渲染內容對準網址錨點前就已存在，並使用與現有頁面相同的固定頁首 `<header class="site-header">` 標記。頁首是全站的導覽：讀者在任何章節都能看到本頁全部章節並直接跳過去，不必回到頁面頂端，因此嚴禁在頁面另寫手寫目錄。腳本依頁面本身產生頁首的兩行：
-    - 階層列：網站首頁、本頁 `h1` (首頁本身省略，因首頁連結已代表該頁)，以及讀者目前所在的 `h3`，每層連到該層開頭。窄螢幕時換行，不橫向捲動。
-    - 章節列：依文件順序列出本頁全部 `h2`，名稱取自渲染後的標題文字；目前章節以 `aria-current="location"` 標示，位於第一個 `h2` 之前的導言時不標示任何章節。寬螢幕時章節列換行，全部章節保持可見。寬度 640px 以下或高度 500px 以下 (橫向手機) 時，章節列改為顯示目前章節的按鈕 (「章節：<章節>」，位於導言時為「本頁章節」)；按下後在頁首下方、正文上方展開直排的章節選單，太長時在選單內捲動，展開時目前章節位於可見範圍。選擇章節、按 Esc 或點選單外側時收合。
-    - 每個頁面以 `h2` 分章，章節列因此列出該頁的大項目。只有帶 `id` 的 `h2` 與 `h3` 會出現在頁首，因此每個章節標題必須有 `id`。章節列依 HTML 中的 `h2` 產生；`h3` 在內容變動時重新收集，因此 render.js 之後加入的 `h3` 也會出現在麵包屑。
-  - 全站引用的來源只在首頁 [public/index.html](public/index.html) 的「資料來源」章 (`#sources`) 列出一次；嚴禁在主題頁另設資料來源章，詞條表嚴禁加入來源欄。頁面開始引用新來源時，在該表新增或更新對應的列。內文中的引用連結與來源分歧候選值標示的來源名稱留在頁面上。
+- AI agent 文件必須維持雙語且內容等價 (無後綴即英文版)，例如 AGENTS.md=AGENTS_ch.md。
+- AI agent 文件中的連結必須與文件語言對應：英文檔案連到英文目標，繁體中文檔案在有 _ch 目標時連到 _ch 目標。
 
-## 遊戲資料守則
+## 網站
 
-- 網站只從 `public/data/` 讀取遊戲數值 (數字與規則標籤)、佔位元素產生的效果、能力值及分類名稱，以及它們的來源；產生其中部分檔案的維護輸入放在 `tools/` (見遺物資料產生)：
-  - [public/data/common.json](public/data/common.json)：所有頁面共用的遊戲版本、能力值 (`stats`)、圖示、角色、標籤 (`tags`)、戰技分組 (`skillGroups`)、介面文字 (`labels`) 與來源。
-  - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)，記錄該大類、其子分類及效果。
-  - `public/data/armaments/weapons.json` 與 `public/data/armaments/spells.json`：以遊戲內 ID (`EquipParamWeapon` 的列，或武器槽位引用的法術 ID) 為鍵的武器與法術，各有 `name` (`zh` 與 `en`，沒有來源提供名稱時為 `null`)、`icon`、`tags` 與來源。武器另保留 `sortId`；搭載法術的武器以 `spells` 記錄各槽位 (`R1`、`R2`) 的法術 ID。具名武器另保留原始參數值 (見武器與法術資料產生)：`attack` (`physical`、`magic`、`fire`、`lightning`、`holy`)、`scaling` (鍵為 `stats` 的 `strength`、`dexterity`、`intelligence`、`faith`、`arcane`)、`critical`、`passive` (`zh` 與 `en`，或 `null`)、`buildup` (異常狀態鍵對應累積值，沒有時為 `{}`) 與 `skill`：`default` (參數預設戰技 ID) 與 `pool` (生成池候選戰技 ID，沒有時為 `[]`)。有 `Magic` 列的法術另保留原始消耗參數：`cost` (`fp`、`stamina`) 與 `chargeCost` (`fp`、`stamina`，或 `null`)。每一列武器都是獨立的項目，即使與其他列的 `sortId` 相同也不合併；嚴禁把其他列的名稱套到未具名的列。
-  - `public/data/armaments/skills.json`：以 `SwordArtsParam` ID 為鍵的戰技，各有 `name` (`zh` 與 `en`)、`textId`、`icon`、`group` (`skillGroups` 的鍵)、`fp` (`L1`、`L2`、`R1`、`R2`)、`caption` (`zh` 與 `en`) 與來源。共用同一 `textId` 的戰技仍是各自獨立的項目，保留各自的 `fp` 與 `icon`。
-  - `public/data/characters/nightfarers.json`：以 common.json 的 `characters` 鍵為鍵的夜渡者，各有 `heroId` (`HeroParam` ID)、`grades` (鍵為 `stats` 的 `maxHp`、`maxFp`、`maxStamina`、`strength`、`dexterity`、`intelligence`、`faith`、`arcane`，值為 `S` 到 `D`)、`anchorLevels` (有 `HeroStatusParam` 列的等級)、`levels` (`1` 到 `15`，各有八項基本能力值與 `maxHp`、`maxFp`、`maxStamina`)、`passive`、`skill` 與 `art` (各有 `zh` 與 `en` 的 `name`、`summary`、`description`、`icon`，以及 `effects`：`{ zh, sources, note? }` 的清單，`note` 為 `{ zh, sources }`；`skill` 另有以秒為單位的 `cooldown`，`0` 表示沒有冷卻，以及形式與 `note` 相同、可省略的 `cooldownNote`) 與來源 (見角色資料產生)。角色名稱與圖示留在 common.json 的 `characters`。
-  - 其他遊戲主題的資料放在 `public/data/` 下以主題命名的檔案或目錄，並依遊戲本身的分組拆分，如同 `relics/` 依遊戲內遺物篩選拆分；多個主題共用的定義留在 `common.json`。
-  - 每個頁面在 `<body data-load>` 列出要載入的檔案，例如 `common relics/general`。[public/render.js](public/render.js) 會區分遺物大類檔 (`category`)、武器檔 (`weapons`)、法術檔 (`spells`)、戰技檔 (`skills`) 與角色檔 (`nightfarers`)，其他檔案以錯誤停止；遇到重複的效果鍵、效果或等級的 `gameId`、子分類鍵、武器 ID、法術 ID 或戰技 ID (各種類分別檢查)，物品標籤或效果 `targets` 的鍵未在 `tags` 定義 (`targets` 的 ID 清單 `spell` 與 `skill` 除外)，效果 `stats` 的鍵或能力值的 `base` 未在 `stats` 定義，有載入法術檔時武器搭載的法術或 `targets.spell` 的 ID 不存在，以及有載入戰技檔時具名武器沒有 `skill.default` 與 `skill.pool`，或武器或 `targets.skill` 引用的戰技 ID 不存在，以及有載入角色檔時其角色與 common.json 的 `characters` 不同，皆以錯誤停止；嚴禁讓後載入的檔案覆蓋先載入的檔案。
-- HTML 放 `data-*` 佔位元素，由 [public/render.js](public/render.js) 填入；禁止在 HTML 寫死遊戲數值，內文例子中的數值也一樣。內文敘述 (例如角色名稱) 與 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。`<span data-character="<角色>:<等級>:<能力值>">` 顯示角色檔的等級數值，因此使用它的頁面須載入 `characters/nightfarers`。
-- 數值狀態：
-  - 一般值代表該效果 `sources` 的記載。
-  - `null` 代表尚未核實，禁止當成 0 或 false。
-  - `{ "conflict": [{ "value": ..., "sources": [...] }] }` 代表來源分歧；保留所有候選值，不預設採用任何一個。
-  - 這些狀態適用於所有欄位，包括 `stacking.stacks` 等規則欄位；計算只在所需規則全部明確成立時執行，否則顯示阻止計算的狀態。
-  - `sourcesFor` 以欄位路徑 (例如 `stacking.combine`) 對應來源，取代該欄位的效果層級 `sources`。
+- [netlify.toml](netlify.toml) 發佈 `public/` 目錄，不需建置指令。網站檔案 (HTML、CSS、圖片) 必須放在 `public/` 下。頁面間以相對路徑連到 `.html` 檔，嚴禁依賴 Netlify 的 pretty URL。
+- 頁面以 `fetch` 載入資料，本機預覽須透過 HTTP 伺服器 (例如 `python -m http.server -d public`)，不能以 `file://` 開啟。
+- 新增主題頁面時，在首頁 [public/index.html](public/index.html) 該主題的表格新增一列；新主題在首頁另立一個 `h2` 章節。
+- 每個已發佈的「頁名#id」必須持續可用，包括 span、表格列與 render.js 產生的元素上的 id：
+  - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址。
+  - 章節移到其他頁面時，在 [public/nav.js](public/nav.js) 的舊錨點表 (`moved`) 新增對應。
+  - 章節在同頁內移除或合併時，把舊 id 保留在接手內容的元素上。
+- 每個頁面在 [public/render.js](public/render.js) 之前載入 [public/nav.js](public/nav.js)，並使用共用的 `<header class="site-header">` 標記。nav.js 依頁面中帶 `id` 的 `h2` 章節與 `h3` 標題產生頁首，因此頁面必須以 `h2` 分章、每個章節標題必須有 `id`，嚴禁另寫手寫目錄。
+- 全站引用的來源只在首頁 [public/index.html](public/index.html) 的「資料來源」章 (`#sources`) 列出一次；頁面開始引用新來源時，在該表新增或更新對應的列。嚴禁在主題頁另設資料來源章，詞條表嚴禁加入來源欄。內文中的引用連結與來源分歧候選值標示的來源名稱留在頁面上。
+
+## 資料
+
+- 網站只從 `public/data/` 讀取遊戲數值、佔位元素產生的名稱，以及這些數值的來源：
+  - [public/data/common.json](public/data/common.json)：所有頁面共用的定義 (遊戲版本、能力值、圖示、角色、圖例、標籤、戰技分組、介面文字、來源)。
+  - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)。
+  - `public/data/armaments/` (`weapons.json`、`spells.json`、`skills.json`) 與 `public/data/characters/nightfarers.json`。
+  - 其他遊戲主題的資料放在以主題命名的檔案或目錄，並依遊戲本身的分組拆分；多個主題共用的定義留在 common.json。
+- HTML 放章節骨架與 `data-*` 佔位元素，由 render.js 填入。遊戲數值 (內文例子中的數值也一樣)、由資料產生的名稱，以及由資料產生的表格列 (遺物效果、武器、法術、戰技、角色、能力值關聯)，嚴禁手寫在 HTML。靜態的概覽、來源與說明表格、內文敘述，以及 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
+- 每個頁面在 `<body data-load>` 列出要載入的檔案 (例如 `common relics/general`)，且必須載入佔位元素所需的每個檔案：計算遺物詞條反向關聯的頁面載入四個遺物大類檔，有 `targets` 的遺物頁載入 `armaments/weapons`、`armaments/spells` 與 `armaments/skills`，`<span data-character>` 需要 `characters/nightfarers`。嚴禁讓後載入的檔案覆蓋先載入的檔案。
+- 每個引用 (來源、圖示、角色、標籤、能力值或項目 ID) 必須對應到其定義中自身擁有的鍵；嚴禁把繼承來的屬性算作對應。
+- 反向關聯 (與武器、法術、戰技或能力值相符的詞條；引用某戰技的武器) 由頁面計算，嚴禁另存於資料。
+- 研究數值與規則欄位的數值狀態：
+  - 一般值代表其來源的記載。
+  - `null` 代表尚未核實，嚴禁當成 0 或 false。
+  - `{ "conflict": [{ "value": ..., "sources": [...] }] }` 代表來源分歧；保留所有候選值，不預設採用任何一個，且一律連同來源列出候選值。
+  - 計算只在所需規則全部明確成立時執行，否則顯示阻止計算的狀態。
+  - `sourcesFor` 以欄位路徑 (例如 `stacking.combine`) 對應來源，取代該欄位的項目層級 `sources`。
+  - 另有載明 `null` 意義的欄位維持該意義：`icon` (沒有符合圖片守則的圖片)、`chargeCost` (兩個蓄力參數皆為 0)、武器的 `passive` (武器沒有固定效果) 與武器或法術的 `name` (沒有來源提供名稱)。
 - 百分比以有號數字儲存 (例如 `10`、`-5`)，倍率由程式推導。
-- 有 +1／+2／+3 等級的效果是一個效果加 `tiers` 陣列；每級保留遊戲內 `gameId`。名稱沒有 `+N` 後綴的等級為 `tier: 0`。各級不同的規則欄位記在各級，不記在效果上。
 - 每個效果的資源增量依來源記載逐筆記錄，不以通用的每點換算推導。
-- 標籤 (tags) 用來分類遊戲物品，讓遺物效果可以比對適用對象。定義放在 [public/data/common.json](public/data/common.json) 的 `tags`，依維度分組 (`weaponType`、`spellType`、`spellSchool`)；每個標籤為 `{ "name": { "zh", "en" }, "param": <值> }`，`param` 是該標籤代表的遊戲參數值 (`EquipParamWeapon.wepType`、`Magic.ezStateBehaviorType`、`Magic.subCategory1`/`subCategory2`)。武器種類名稱取自遊戲內遺物篩選的子分類名稱；法術類型與系別名稱摘自遊戲內遺物詞條名稱 (例如由「強化卡利亞劍的魔法」取「卡利亞劍」)。只有被遺物效果指定為對象的法術系別才建立標籤。
-  - 物品的 `tags` 為 `{ <維度>: [...] }`：標籤鍵的清單，空清單表示已核對且沒有已定義的標籤；`null` 表示未核實；`conflict` 保留每個候選值。
-  - 遺物效果的 `targets` 使用相同的維度，例如 `{ "spellType": ["sorcery"], "spellSchool": ["carian-sword"] }`，另有 `spell` 與 `skill`：指定個別法術與戰技的法術 ID 與戰技 ID 清單；法術以自身 ID 比對 `spell`、戰技以自身 ID 比對 `skill`，因此兩者都不在 `tags` 定義，也不記在物品的 `tags`。`targets` 列出的每個維度中，物品標籤至少有一個相同的鍵時才符合 (維度之間須全部符合，同一維度內符合其一即可)；效果未列出的維度不檢查。任一列出的維度確定不符時判定為不符；否則列出的維度未核實時判定為未核實，來源分歧時顯示分歧。
-  - `targets` 記錄效果的遊戲參數欄位或已核實引用鏈明確指向的物品類別或物品 (見遺物資料產生)。符合只表示存在該參數關聯；作用方式、觸發條件與限制見詞條本身。沒有 `targets` 的效果表示尚未建模，不等於沒有關聯。
-- 遺物效果的 `stats` 依 `stats` 的順序，列出 [public/data/common.json](public/data/common.json) 中該效果的遊戲參數欄位會改變其數值的 `stats` 鍵 (見遺物資料產生)。每個能力值的 `param` 將參數表 (`SpEffectParam`、`HeroStatusParam`) 對應到改變它的欄位所組成的非空清單，其中任一欄位改變即算改變；`poise` 對應 `toughnessDamageCutRate`，即受到削韌的倍率。`attackPower` 合併五種攻擊倍率 (`physicsAttackRate`、`magicAttackRate`、`fireAttackRate`、`thunderAttackRate`、`darkAttackRate`)，`damageNegation` 合併八種減傷倍率 (`slash`、`blow`、`thrust`、`neutral`、`magic`、`fire`、`thunder`、`dark` 加 `DamageCutRate`)，`ailmentResistance` 合併七種抵抗力 (`change` 加 `Poison`、`Disease`、`Blood`、`Freeze`、`Sleep`、`Madness`、`Curse` 加 `ResistPoint`)。上限 (`maxHp`、`maxFp`、`maxStamina`) 有 `base`，即同樣會改變它的基礎能力值 (`vigor`、`mind`、`endurance`)。與 `targets` 相同，符合只表示存在該參數關聯，沒有 `stats` 的效果表示尚未建模，且 `stats` 屬於規則欄位。`stats` 只來自遊戲參數，因此沒有未核實或來源分歧的狀態：不是清單時 [public/render.js](public/render.js) 以錯誤停止。
-- 遺物效果依遊戲內遺物篩選的分類樹歸類：每個效果都有 `subcategory`，每個大類與子分類保留遊戲參數 `gameId`。不是取自遊戲文字的分類中文名稱為本站暫譯，頁面必須註明。
-- 每個效果都有 `name` (`zh` 與 `en`) 與 `icon`。`icon: null` 表示沒有符合圖片守則的遊戲內圖片，嚴禁改用其他圖片替代。
-- 武器頁 (`weapons.html`)、魔法頁 (`sorceries.html`) 與禱告頁 (`incantations.html`) 的章節名稱、章首詞條與表格列由資料產生；HTML 只放章節骨架，嚴禁手寫名稱與表格列：
-  - 武器頁：每個 `weaponType` 標籤一個 `<section data-weapon-type="<type>">`，`h2` 的 id 為 `weapon-type-<type>`；不是每個標籤恰有一章時頁面以錯誤停止。章內表格依 `sortId` 列出該種類的具名武器，欄位為「基礎攻擊」與「能力補正」(非 0 的值每項一行，以攻擊屬性標籤與能力值名稱命名) 與「特殊效果」(`critical` 不是 1 時先列「致命補正 <值>」，多數武器為 1；接著 `passive` 名稱；接著每個 `buildup` 項目一行「命中累積<異常狀態> <值>」) 與「戰技」：`skill.pool` 只有 `skill.default` 時只列該戰技；否則列「參數預設：<戰技>」，`pool` 不是空的時再列「生成池候選」。每個戰技列出圖示與名稱，連到 `skills.html#skill-<id>`。清單只有一項時顯示為「生成池候選：<戰技>」；兩項以上時為收合的 `<details>`，標題附數量，例如「生成池候選 44 種」。數量只計 `pool`，`pool` 可能不含預設戰技。頁面載入 `armaments/skills`，沒有時以錯誤停止。沒有內容的欄顯示「—」，只表示收錄的欄位沒有內容，不表示武器沒有其他效果。這些數值只來自遊戲參數，沒有未核實或來源分歧的狀態：缺鍵、多鍵或不是數字時頁面以錯誤停止。頁面註明這些是原始參數值，不是遊戲內顯示值。每列 id 為 `weapon-<id>`，是遺物頁「相關武器、法術與戰技」連結的目標。`h1` 保留 id `weapons`；`#limitations` 章節的 `<tbody data-unlisted-spells>` 列出類型未核實或來源分歧的每個被引用法術，含類型、系別、搭載法器與「相關遺物詞條」欄。這些法術不依名稱或搭載的法器分類。
-  - 魔法頁與禱告頁：`<section data-spell-type="<type>">` 為類型章節 (`h2` id 為 `sorceries` 或 `incantations`)，只列 `targets` 僅以該類型即相符的詞條。每個 `<section data-spell-type="<type>" data-spell-school="<school>">` 為系別章節 (`h2` id 為 `spell-school-<school>`)；系別為空字串者是「無已定義系別」章節 (`h2` id 為 `<type>-no-school`)。系別章節依 ID 列出該類型中 `spellSchool` 恰為該系別的法術 (空字串對應 `[]`)，欄位為「FP 消耗」與「耐力消耗」(`cost` 的值；`chargeCost` 不是 `null` 時第二行為「蓄力參數 <值>」) 及「搭載法器」；每列 id 為 `spell-<id>`。這兩頁的法術 `cost` 不是兩個數字，或 `chargeCost` 既不是 `null` 也不是兩個數字時，頁面以錯誤停止。該類型的每個法術不是恰好出現在一章時頁面以錯誤停止。`spellType` 恰為魔法或禱告其中之一的法術在該頁，其餘在武器頁；`spellType` 清單不是恰好一個鍵時頁面以錯誤停止。
-  - 相關詞條依上述比對規則分層列出，同一詞條只出現在最上層的相符層：類型章節，其次系別章節 (略過只以類型即相符的詞條)，再其次法術列的法術名稱下方 (略過在系別章節也相符的詞條，即剩下 `spell` 加成對象)。武器章節列出與其 `weaponType` 相符的詞條。章節與列顯示「相關遺物詞條（依參數關聯）」後接詞條連結；比對結果為未核實或來源分歧的詞條只以粗體列出數量；沒有相符詞條的章節顯示「本次建模範圍內無符合詞條」，沒有專屬詞條的法術列不顯示。由頁面計算 (頁面載入四個遺物大類檔與兩個武器法術檔)，資料不另存反向清單。符合只表示存在參數關聯，不表示詞條對章內每一項都生效。「搭載法器」欄列出具名法器與搭載該法術的槽位 (`R1`、`R2`)，未具名的法器依槽位只列出不同武器 ID 的數量。記在各級的 `targets` 尚未支援顯示：頁面以錯誤停止，不合併各級結果。
-  - 原本合併的 `armaments.html` 在 [netlify.toml](netlify.toml) 轉到 `weapons.html`，瀏覽器保留錨點。在武器頁上，[public/nav.js](public/nav.js) 把 `#sorceries`、`#incantations` 轉到新頁面，[public/render.js](public/render.js) 把本頁沒有的 `#spell-<id>` 轉到該法術類型所在的頁面，因此舊錨點仍可使用。已移除的落葉格鬥術與丹恩流踢擊術在查證限制的收錄規則項目中，以名稱保留 `weapon-<id>` id。
-- 戰技頁 (`skills.html`，`h1` id 為 `skills`)：載入 `armaments/weapons` 與 `armaments/skills`。依 `skillGroups` 的順序，每個鍵一個 `<section data-skill-group="<group>">`，`h2` 的 id 為 `skill-group-<group>`；頁面在 `h2` 填入分組的 `name.zh`，並在該章的 `<tbody data-skill-rows>` 依 ID 列出 `group` 為該鍵的戰技。分組章節可改為包含 `<section data-skill-weapon-type="<type>">` 小節 (「專用戰技」組如此，`h3` 的 id 為 `skill-unique-<type>`)：各小節在 `h3` 填入武器種類名稱，列出該組中參數預設武器屬於該種類的戰技。每個分組不是恰有一章、小節與該組戰技的武器種類不是一一對應、這種戰技的參數預設武器不是各自恰有一個 `weaponType` 標籤且彼此相同，或任一戰技不是恰好出現一次時，頁面以錯誤停止。`<tbody data-skill-rows>` 位於這些章節之外時，頁面同樣停止。章節骨架留在 HTML，名稱與表格列由資料產生，嚴禁手寫。全部章節位於 `<div id="skill-list">` 內，保留原本單一章節的 id。每列 id 為 `skill-<id>`，是武器頁「戰技」連結與遺物頁戰技連結的目標。頁面另載入四個遺物大類檔，在戰技名稱下方顯示「相關遺物詞條（依參數關聯）」，後接 `targets.skill` 含該戰技的詞條，顯示與計數方式與法術列相同；沒有這種詞條的戰技不顯示。欄位為「FP 消耗」(依 `L1`、`L2`、`R1`、`R2` 的順序，每個 `fp` 鍵一行「<鍵> <值>」，略過 -1；全部為 -1 時顯示「—」，不表示不消耗 FP；`fp` 不是恰好這四個數字鍵時頁面以錯誤停止)、「說明」(`caption.zh` 的文字，保留換行) 與「相關武器」：`skill.default` 為該戰技的具名武器列在「參數預設」，`skill.pool` 含該戰技的列在「生成池候選」，皆依 `sortId`，一項與收合清單的顯示方式與武器頁相同 (單位為「把」)。由頁面計算，資料不另存反向清單；沒有任何具名武器引用的戰技使頁面以錯誤停止。頁面註明：範圍是具名武器依參數引用的戰技，不是遊戲中全部的戰技；章節依參數的戰技分組，主要分區與 Eldenpedia 黑夜君臨戰技列表相同 (該頁把無戰技列在盾，另有本站未收錄的火把戰技)，不表示戰技的傷害屬性或可用的武器，且「無屬性」為本站命名；「參數預設」與「生成池候選」是參數上的關係，不表示撿到的武器帶哪個戰技或各戰技的機率；名稱與說明是尚未確認與黑夜君臨一致的本篇文字；哪些繁中名稱是官方名稱 (取自戰灰名稱)，哪些名稱與全部說明是本站依官方簡體中文的轉寫。武器頁與有 `targets` 的遺物頁說明一次部分戰技名稱為本站轉寫，並連到戰技頁。
-- 角色頁 (`characters.html`，`h1` id 為 `characters`)：載入 `characters/nightfarers`。每個 `characters` 鍵各有一個 `<section data-nightfarer="<角色>">`，`h2` id 為 `character-<角色>`，全部放在 `<div id="character-list" data-nightfarer-list>` 內；除非每名角色恰有一個章節，否則頁面以錯誤停止，任何頁面有角色章節在該容器外時也以錯誤停止。頁面在 `h2` 填入角色圖示與名稱，並在 `h3` (id 為 `character-<角色>-abilities`) 之後加入能力、技藝與絕活表 (附圖示的名稱、類別 能力、技藝或絕活，說明：先簡介、後說明，各自保留換行；以及具體數值：技藝先列「冷卻 <cooldown> 秒」，為 0 時列「無冷卻」，再每筆 `effects` 一段；來源不只 `game-params` 的條目在句末附來源連結，`note` 或 `cooldownNote` 以次要文字「註：<zh>」接在後面並附來源連結；`effects` 不是非空清單、條目或註記缺少非空的 `zh` 或非空的 `sources`，或技藝的 `cooldown` 不是不小於 0 的數字時，頁面以錯誤停止)；最後連到角色專屬遺物頁中該角色的章節 (`relics-character.html#character-<角色>`)。角色清單之後的能力加成章節 (`h2` id 為 `grades`) 放 `<div data-nightfarer-grades>`，頁面在其中填入一張表：依章節順序每名角色一列，先列圖示與連到該角色章節的名稱，再列 `maxHp`、`maxFp`、`maxStamina`、`strength`、`dexterity`、`intelligence`、`faith` 與 `arcane` 的評級。每列保留原本各角色小節的 id `character-<角色>-grades`，舊連結仍可使用。角色的 `grades` 不是恰好這八個鍵、且各為 `S`、`A`、`B`、`C` 或 `D`，角色頁沒有恰好一個此容器，或其他頁面有此容器時，頁面以錯誤停止。其後是各等級能力表章節 (`h2` id 為 `levels`)。其 `<div data-nightfarer-levels>` 依序放入：圖例「顯示方式」下的單選鈕「單一角色」與「全部角色比較」；其下一個依目前模式顯示的選單 (角色：依章節順序列出角色，預設第一名；能力值：八項基本能力值與三項上限，預設生命力；頁面開啟期間兩個選單各自保留選擇) 與兩種模式共用、範圍 1 到 15、預設 15 的「等級」控制條；說明目前檢視的狀態列 (「<角色>：各等級能力值」或「<能力值>：全部角色比較」)；圖表；以及收合的 `<details>`「數值表（等級 1–15）」，內含一張等級 1 到 15 每級一列的表，切換時保留展開或收合狀態。單一角色模式的圖表是三張橫軸為等級的折線圖：`strength`、`dexterity`、`intelligence`、`faith` 與 `arcane`；`vigor`、`mind` 與 `endurance`；以及左軸的 `maxFp` 與 `maxStamina`，加上右軸的 `maxHp`。三張圖的邊距相同，同一等級在各圖的位置相同。每條線以直線連接全部 15 級的已存數值；基本能力值在每個錨點等級畫實心點，三項上限在每個等級都是本站計算值，不畫點。直線標示所選等級。每張圖上方的圖例列出線型樣本、名稱 (右軸系列後接「（右軸）」) 與所選等級的數值；在圖上移動或按下時選擇最近的等級。各圖的系列依序使用 `--series-1` 起的顏色；除右軸系列用虛線外，全部為實線。同一縱軸的兩項在等級 l 與 l+1 的數值都相同時，該線段重疊；圖表有重疊線段時，圖例下方一行依起始等級順序列出每對重疊的項目與等級範圍 (重疊線段：<名稱>＝<名稱>（<起>–<迄> 級、…）；…。)。兩項在全部 15 級的數值都相同時，先畫的系列在圖表與圖例改用後畫系列的顏色，讓圖上唯一可見的線與兩項圖例同色。每個縱軸從 0 到依該軸各項在全部角色、全部等級的資料計算的上限 (約四格，每格為 1、2 或 5 乘以 10 的次方)，切換角色或等級時縱軸不變。全部角色比較模式的圖表依所選能力值在所選等級的數值由高到低列出角色，同值依章節順序，每列有名稱、數值，以及長度相對於以相同方式由該能力值在全部角色、全部等級的資料計算之上限的橫條。單一角色模式的表格欄位是所選角色的八項基本能力值與三項上限，錨點等級以粗體標示。全部角色比較模式的表格欄位是依章節順序的各角色，各列出所選數值；基本能力值的格子在該等級是該角色的錨點等級時以粗體標示，三項上限一律不加粗。容器開頭是保留原本各角色小節 id `character-<角色>-levels` 的空元素。網址錨點是其中之一時，在載入或 `hashchange` (含上一頁與下一頁) 時，頁面切到該角色的單一角色模式；手動切換後，網址中的這類錨點改為 `#levels`。顯示任何圖表或表格前，頁面檢查全部角色，不只所選角色：`levels` 不是恰好有 `1` 到 `15` 的鍵、且每級恰有八項基本能力值與三項上限並皆為數字，或 `anchorLevels` 不是 1 到 15 之間不重複整數的非空清單時，頁面以錯誤停止。角色頁沒有恰好一個此容器，或其他頁面有此容器時，頁面也以錯誤停止。首次繪製或切換後繪製時發生錯誤，則移除控制項、圖表與表格並顯示載入失敗，本章之後不再處理任何事件。章節骨架留在 HTML，名稱、文字與數值由資料產生，嚴禁手寫。頁面說明：名稱與文字是本站依官方簡中選單文字的轉寫，不是官方繁中；評級取自遊戲參數；粗體標示直接取自參數列的數值 (各等級能力表章節說明兩種模式的標示方式，以及三項上限一律不加粗)，其他等級與三項上限是本站計算值，已與 Eldenpedia 能力值表核對，不同處保留本站依參數的數值；數值不含遺物等改變能力值的效果；具體數值依遺物詞條依參數說明的寫法列出參數中的倍率、秒數、半徑與冷卻時間，招式只列同一招內的補正比值，不寫成傷害比，社群的機制摘要以來源連結標示，與社群記載不同時保留參數值並以「註」列出。其 `#limitations` 章節說明：文字來源是沒有文字 ID、也沒有載明遊戲版本的社群保存；執行者技藝只收錄基本文字；冷卻時間取自參數的冷卻欄位，與 Eldenpedia 不同處加註，使用次數欄位不列出；比參數版本新的 Smithbox 列名稱用來判定參數列屬於哪項能力，並以參數引用與 Eldenpedia 的數字核對，無法確認歸屬的列不列出，不依推測補上；欄位意義依本篇參數欄位定義的官方日文說明，《黑夜君臨》新增、沒有官方說明的欄位不列出；學者的道具升級效果、隱士的混合魔法，以及按等級或深夜模式深度分段的完整數值表不列，分段表只列首尾兩段或最高一段。
-- 能力值頁每個能力值列的「相關遺物詞條」欄 (`<td data-stat-effects="<stat>">`) 列出 `stats` 含該能力值的遺物效果，各自連到詞條列；上限列接著在「經由<基礎能力值名稱>」下列出 `stats` 含其 `base` 但不含該上限的效果。由頁面計算 (頁面載入四個遺物大類檔)，資料不另存反向清單。記在各級的 `stats` 尚未支援顯示：頁面以錯誤停止。每個能力值列的 id 為 `stat-<stat>`，是遺物頁「相關能力值」連結的目標。
-- 遺物詞條表的效果列以 `<tbody data-relic-table="<subcategory>">` 由資料產生；嚴禁在 HTML 手寫效果列。效果欄先列說明，再列規則行；由結構化數值 (`modifier`) 產生的數值行只在效果沒有說明時列出，因為說明已含相同數字。來源分歧的候選值一律連同來源列出。既沒有說明也沒有結構化數值的效果，依其色調顯示「未載明數值」。規則行不列取得方式 (由「種類」欄呈現) 與增益的自身可否疊加 (由色調呈現)；藍色也代表多份數值相加，因此增益的合成方式只在不是 `add` 時列出，不同等級是否同時生效只在不是 `true` 時列出；自身可否疊加來源分歧時仍列出各候選說法。負面效果一律為紅色，因此其規則行保留自身可否疊加的狀態。「種類」欄依 `availability` 列出「一般」及／或「深層」；固定遺物詞條 (`relics`) 列出每個遺物的圖示與名稱；分級詞條出現在兩種以上的種類時，每一行都列出該種類的等級 (例如「一般：+1、+2、+3」與「深層：+3」)，只出現在一種時只寫種類 (例如「一般」)；取得方式尚未核實或來源分歧時顯示對應狀態。有 `targets` 的效果，效果欄接著顯示「相關武器、法術與戰技」：依上述比對規則，列出標籤 (戰技為自身 ID) 與 `targets` 比對結果為符合的具名武器 (依 `sortId`)、具名法術 (依 ID) 與戰技 (依 ID)，各附圖示與名稱並連到該項目的列 (`weapons.html#weapon-<id>`、依上述規則在法術類型所在頁的 `#spell-<id>`，或 `skills.html#skill-<id>`)。比對結果為未核實或來源分歧的項目與未具名的項目不列出；沒有可列項目時不顯示此行。不是清單的值或記在各級的 `targets`，頁面以錯誤停止。有 `targets` 的遺物頁載入 `armaments/weapons`、`armaments/spells` 與 `armaments/skills`，缺少任一檔時以錯誤停止，並註明名稱為本篇參考名稱。效果欄最後一行只在效果有 `stats` 時出現：「相關能力值」後依 `stats` 順序列出各能力值的圖示與名稱，各自連到能力值頁的該列 (`attributes.html#stat-<stat>`)；只列 `stats` 中的鍵，不依 `base` 補列上限；記在各級的 `stats` 使頁面以錯誤停止。
-- [public/render.js](public/render.js) 依色調顯示資料產生的說明、數值行與內文例子：負面效果大類的詞條為紅色 (`tone-debuff`)；其他詞條自身可疊加 (`stacks: true`) 為藍色 (`tone-stack`)，不可疊加 (`stacks: false`) 為綠色 (`tone-solo`)；可否疊加尚未核實或來源分歧時維持預設顏色並以粗體標示 (`tone-unverified`)。遺物詞條表中，狀態為尚未核實或來源分歧的規則標籤，以及分歧候選值的「來源分歧」標籤，也以粗體標示 (`tone-unverified`)。規則行中的等同值 (例如「等同生命力 +5」) 採用詞條的色調。說明中列為代價的片段在該說明的色調中以紅色標示。確定必伴隨負面效果 (`requiresCurse: true`) 的規則標籤為紅色。各遺物頁在視窗底部固定顯示顏色圖例 (`<aside class="tone-legend" data-legend>`)，依 [public/data/common.json](public/data/common.json) 的 `legend` 產生：每一項有 `tone` (class 後綴)、`label` 與滑鼠移上或聚焦時顯示的 `tip`；各項為「不可疊加」(綠)、「可疊加」(藍)、「負面」(紅) 與「未核實」(粗體)。嚴禁在 HTML 手動設定色調 class。
-- 效果的每一級說明結尾都有相同的括號附註時 (例如「（不適用於隱士、復仇者、執行者）」)，頁面從每一級移除該附註，改在各級之後以「各等級：<附註>」列一次；資料保留完整原文。
-- `detail` 記錄效果或等級的社群詳細說明：`en` 是來源原文，`zh` 是譯文。數字、物品或地點與鎖定版本遊戲參數矛盾的說明，改依參數撰寫中英文，並帶有自己的 `sources`。資料集沒有說明的效果，只有在 AttachEffectParam 列能以明確的引用關係給出數值，且說明提供名稱以外的資訊時，才依參數撰寫說明；否則不寫說明。
+- 有 +1／+2／+3 等級的效果是一個效果加 `tiers` 陣列；每級保留遊戲內 `gameId`，名稱沒有 `+N` 後綴的等級為 `tier: 0`。規則欄位 (`availability`、`requiresCurse`、`stacking`、`targets`、`stats`) 各級相同時記在效果上，否則記在各級，嚴禁兩處都記。嚴禁默默捨棄或合併各級不同的值。
+- 遺物效果依遊戲內遺物篩選的分類樹歸類：每個效果都有 `subcategory`，每個大類與子分類保留遊戲內 `gameId`。不是取自遊戲文字的分類中文名稱為本站暫譯，頁面必須註明。
+- 每個效果都有 `name` (`zh` 與 `en`) 與 `icon`。嚴禁以其他圖片替代 `icon: null`。
+- `detail` 記錄效果或等級的社群詳細說明：`en` 是經匯入腳本去除前後空白的來源原文，`zh` 是譯文。數字、物品或地點與鎖定版本遊戲參數矛盾的說明，改依參數撰寫中英文，並帶有自己的 `sources`。資料集沒有說明的效果，只有在 AttachEffectParam 列能以明確的引用關係給出數值，且說明提供名稱以外的資訊時，才依參數撰寫說明。
+- 每一列武器都是獨立的項目，即使與其他列的 `sortId` 相同也不合併；嚴禁把其他列的名稱套到未具名的列。共用同一 `textId` 的戰技仍是各自獨立的項目，保留各自的 `fp` 與 `icon`。
 
-## 遺物資料產生
+### 標籤、加成對象與相關能力值
 
-- `public/data/relics/*.json` 由 [tools/import-relics.mjs](tools/import-relics.mjs) 產生 (在專案根目錄執行 `node tools/import-relics.mjs [category ...]`)；嚴禁手動編輯。修改輸入檔後重新執行：
-  - [tools/relics-config.json](tools/relics-config.json)：各來源鎖定的 commit、分類樹、渡夜者欄位，圖示編號 → 圖示鍵的對應 (`null` 表示沒有相符的授權圖片)，以及遺物圖示編號 → 圖示鍵的對應。
-  - [tools/relics-curated.json](tools/relics-curated.json)：人工整理的效果，以 `gameId` 對應產生的效果；其欄位覆寫產生值，腳本會列出每個被覆寫的差異。
-  - [tools/relic-details-zh.json](tools/relic-details-zh.json)：各社群詳細說明的繁體中文譯文，以 `gameId` 為鍵並保存英文原文。
-  - [tools/relic-stacking.json](tools/relic-stacking.json)：資料集未載明的等級之自身可否疊加，以 `gameId` 為鍵，只取自明確寫出的社群來源 (社群試算表或 Fextralife)；每筆保存 `stacks` (布林值，來源不同時為 `conflict`)、`sources`，以及 `quotes` 中引用的來源原文。腳本只填入未知的值，並在效果的 `sourcesFor["stacking.stacks"]` 列出這些來源，連同資料集已給值之等級的來源。
-  - [tools/relic-details-params.json](tools/relic-details-params.json)：依遊戲參數撰寫的說明，以 `gameId` 為鍵；每筆保存社群原文 `source` (資料集沒有說明時為 `null`)、重寫的 `en` 與 `zh`、參數證據 `params`，以及可省略的 `sources` (預設 `game-params`)。同一 `gameId` 嚴禁同時出現在兩個說明檔。
-  - [tools/relic-penalties.json](tools/relic-penalties.json)：增益詞條繁中說明中屬於負面代價的片段，以擁有該說明的 `gameId` 為鍵；值為完全相符的子字串陣列 (例如 `"生命力 -5"`)，寫入 `detail.penalties`。必須列出說明中的每個代價，包括各等級的數字。
-- 人工整理的效果、譯文、效果或遺物圖示、角色或來源引用 (`sources`、`sourcesFor`、conflict 候選) 找不到對應；兩個人工整理的效果對應相同的 `gameId`；來源欄位出現未知的列舉值；譯文保存的英文原文或參數重寫的 `source` 與來源不同；同一 `gameId` 同時有譯文與參數重寫；參數重寫缺少 `en`、`zh` 或 `params`、`sources` 為空陣列，或找不到對應的效果；效果的規則欄位 (`availability`、`requiresCurse`、`stacking`、`targets`、`stats`) 同時記在效果層與等級；效果產生多組不同的 `targets` 條件、`startMagicId` 不是任何武器槽位引用的法術，或 `startSwordArtsId` 不是 `public/data/armaments/skills.json` 收錄的戰技；疊加補值找不到對應的效果、指向資料集已給值的等級、引用社群試算表與 Fextralife 以外的來源、未對每個來源附一句引用原文，或 `stacks` 不合法 (conflict 需至少兩個值不同的布林候選，且各自引用已列出的來源)；代價條目不是非空字串組成的非空陣列、找不到對應的說明、列出說明中沒有的片段，或以數字結尾的片段只對到較長數字的一部分且該位置沒有較長的已列片段；或任一說明檔、疊加檔或代價檔的鍵重複或不等於 `JSON.stringify` 2 空格縮排的標準輸出時，腳本停止且不寫檔。必須修正輸入檔，嚴禁繞過檢查。
-- 腳本依效果的 `passiveSpEffectId_1`–`_3` 所指的 SpEffectParam 列，以及這些列透過 `analyzeSelfLevel1_effectId`–`3_effectId` 引用的列產生 `targets`：`triggerOnWepType`、`wepTypeTriggerCount` 大於 0 時的 `wepTypeTrigger` (裝備數量條件) 與 `weaponTypeDiscovery` 產生 `weaponType`；`magicSubCategoryChange1` 為已定義系別，且 `magParamChange` (魔法) 與 `miracleParamChange` (禱告) 只有一個為 1 時，產生 `spellType` 與 `spellSchool`；只有其中一個旗標、三個 `magicSubCategoryChange` 皆為 0 且沒有武器種類時，產生 `spellType`；`magicConsumptionRate` 或 `miracleConsumptionRate` 不是 1 時，產生 `sorcery` 或 `incantation`；`startMagicId` 產生 `spell`，該法術必須是某個武器槽位引用的法術；`startSwordArtsId` 產生 `skill`，該戰技必須收錄在 `public/data/armaments/skills.json`，因此須先執行 `node tools/import-armaments.mjs`；腳本略過 -1 與 0 (`SwordArtsParam` 的 0 列沒有名稱與說明)。只有在 `tags` 中有定義的參數值會產生標籤；沒有這種標籤，也沒有 `spell` 或 `skill` ID 的效果不產生 `targets`。重複出現的相同條件只保留一次。`targets` 屬於規則欄位：各級相同時記在效果層，否則記在各級；來源記為 `sourcesFor.targets: ["game-params"]`。效果產生多組不同的條件時腳本停止。
-- 腳本從效果的 `passiveSpEffectId_1`–`_3` 與 `permanentSpEffectId` 出發，經 `replaceSpEffectId`、`cycleOccurrenceSpEffectId`、`atkOccurrenceSpEffectId`、`accumuOverFireId`、`accumuUnderFireId` 與 `analyzeSelfLevel1_effectId`–`3_effectId` 找到的 SpEffectParam 列產生 `stats`。找到的列中，能力值的任一 `SpEffectParam` 欄位不等於中性值 (已對應的欄位中，欄位名以 `Rate` 結尾者為 1，其餘為 0)，或從找到的列的 `heroStatusModifier` X 起連號的 X、X+1… 列 (人物詞條的各等級節點) 中，任一列的 `HeroStatusParam` 欄位不是 0，即算改變該能力值。沒有改變任何能力值的效果不產生 `stats`。`param` 的值不是非空清單、已對應的欄位不在參數表標頭，或找到的列中已對應欄位的值不是數字時，腳本停止且不寫檔。`stats` 各級相同時記在效果層，否則記在各級；來源記為 `sourcesFor.stats: ["game-params"]`。
-- 更新來源時，修改設定檔中的 commit，重新執行腳本，並在提交前檢查列出的差異與需要重譯的項目。遊戲參數更新後，必須以新參數重新核對每一筆參數重寫。
+- 標籤用來分類遊戲物品，讓遺物效果可以比對適用對象。定義放在 common.json 的 `tags`，依維度分組 (`weaponType`、`spellType`、`spellSchool`)；每個標籤的 `param` 是它代表的遊戲參數值。武器種類名稱取自遊戲內遺物篩選的子分類名稱；法術類型與系別名稱摘自遊戲內遺物詞條名稱 (例如由「強化卡利亞劍的魔法」取「卡利亞劍」)。只有被遺物效果指定為對象的法術系別才建立標籤。
+- 物品的 `tags` 為 `{ <維度>: [...] }`：空清單表示已核對且沒有已定義的標籤，`null` 表示未核實，`conflict` 保留每個候選值。
+- 遺物效果的 `targets` 使用相同的維度，另有 `spell` 與 `skill`：法術 ID 與戰技 ID 的清單，以物品自身 ID 比對，不記在 `tags`。`targets` 的每個值都是清單。`targets` 列出的每個維度中，物品標籤至少有一個相同的鍵時才符合 (維度之間須全部符合，同一維度內符合其一即可)；未列出的維度不檢查。任一列出的維度確定不符時判定為不符；否則列出的維度未核實時判定為未核實，來源分歧時顯示分歧。頁面只把比對結果為符合的項目列為相符；未核實或來源分歧的比對結果不列為相符 (武器、法術與戰技頁只列出數量)；遺物詞條的相關項目清單另不列出未具名的項目。
+- 遺物效果的 `stats` 依 `stats` 的順序，列出 common.json 中該效果的遊戲參數欄位會改變其數值的 `stats` 鍵；每個能力值的 `param` 列出改變它的欄位，任一欄位改變即算改變。上限 (`maxHp`、`maxFp`、`maxStamina`) 有 `base`，即同樣會改變它的基礎能力值。`stats` 只來自遊戲參數，因此沒有未核實或來源分歧的狀態。
+- `targets` 與 `stats` 只記錄效果的遊戲參數欄位或已核實引用鏈明確指向的物品類別、物品與能力值。符合只表示存在該參數關聯，不表示詞條的作用方式、觸發時機，也不表示對每個列出的項目都生效。沒有 `targets` 的效果表示物品關聯尚未建模，沒有 `stats` 的效果表示能力值關聯尚未建模，不等於沒有關聯。顯示這些關聯的每個頁面必須說明它們是參數關聯 (例如「相關遺物詞條（依參數關聯）」)。
+
+## 資料產生
+
+- 下列檔案由腳本產生，嚴禁手動編輯：
+  - `public/data/relics/*.json`：[tools/import-relics.mjs](tools/import-relics.mjs) (`node tools/import-relics.mjs [category ...]`)。
+  - `public/data/armaments/*.json`：[tools/import-armaments.mjs](tools/import-armaments.mjs) (`node tools/import-armaments.mjs`)。
+  - `public/data/characters/nightfarers.json`：[tools/import-characters.mjs](tools/import-characters.mjs) (`node tools/import-characters.mjs`)。
+- 修改 `tools/` 與 `public/data/common.json` 中相關的輸入，在專案根目錄重新執行腳本，並檢查腳本印出的訊息與產生檔的 diff。import-armaments 必須在 import-relics 之前執行，因為遺物的 `targets.skill` 必須指向 `armaments/skills.json` 收錄的戰技。驗證失敗時，腳本在寫出產生檔前停止；必須修正回報的輸入，嚴禁繞過或削弱檢查。render.js 也以同樣方式驗證載入的資料。
+- 三支腳本都透過 [tools/sources.mjs](tools/sources.mjs) 讀取 [tools/relics-config.json](tools/relics-config.json) 鎖定的來源，因此遺物、武器與角色來自同一份遊戲參數。更新來源時，修改設定檔中的 commit 或 revision，重新執行腳本，並在提交前檢查差異與受影響的譯文。遊戲參數更新後，必須以新參數重新核對每一筆參數重寫。
+- 執行 import-armaments 或 import-characters 後，執行 `python tools/fetch-icons.py`，下載 `public/images/` 尚未有的武器、法術、戰技與角色能力圖示。
+
+### 遺物輸入檔
+
+- [tools/relics-config.json](tools/relics-config.json)：鎖定的來源、分類樹、渡夜者欄位、狀態圖示編號 → 圖示鍵與遺物圖示編號 → 圖示鍵的對應 (`null` 表示沒有相符的授權圖片)，以及 `heroes`。
+- [tools/relics-curated.json](tools/relics-curated.json)：人工整理的效果，以 `gameId` 對應產生的效果；其欄位覆寫產生值。
+- [tools/relic-details-zh.json](tools/relic-details-zh.json)：各社群詳細說明的繁體中文譯文，以 `gameId` 為鍵並保存英文原文。
+- [tools/relic-details-params.json](tools/relic-details-params.json)：依遊戲參數重寫的說明，以 `gameId` 為鍵，並保存社群原文與參數證據。同一 `gameId` 嚴禁同時出現在兩個說明檔。
+- [tools/relic-stacking.json](tools/relic-stacking.json)：資料集未載明的等級之自身可否疊加，只取自明確寫出的社群來源 (社群試算表或 Fextralife)，並保存引用的來源原文。
+- [tools/relic-penalties.json](tools/relic-penalties.json)：增益詞條繁中說明中屬於負面代價的片段，為完全相符的子字串。必須列出說明中的每個代價，包括各等級的數字。
+- 腳本依效果引用的 SpEffectParam 列推導 `targets` 與 `stats`；只有在 `tags` 中有定義的參數值會產生標籤。
 - 翻譯詳細說明：
   - 每個數字保持相同的數字字元；嚴禁計算、四捨五入或換算單位。
   - 使用該效果的官方中文名稱與遊戲用語；沒有官方中文名稱的用語保留英文。
   - 原文的 `TODO` 等註記譯為「（原文註記：……）」；原文與效果名稱矛盾時照譯並加「（原文如此）」。譯文中嚴禁修正原文；與遊戲參數的矛盾改記在參數重寫檔。
 
-## 武器與法術資料產生
+### 武器、法術與戰技研究
 
-- `public/data/armaments/*.json` 由 [tools/import-armaments.mjs](tools/import-armaments.mjs) 產生 (`node tools/import-armaments.mjs`，在專案根目錄執行)；嚴禁手動編輯。兩支匯入腳本都透過 [tools/sources.mjs](tools/sources.mjs) 讀取 [tools/relics-config.json](tools/relics-config.json) 鎖定的來源，遺物、武器、法術與戰技一律來自同一份遊戲參數。
-  - 武器：`EquipParamWeapon` 中 ID 為 10000 的倍數、`wepType` 有 `weaponType` 標籤、有名稱、`sortId` 不是 9999999，且有 `EquipParamCustomWeapon` 列以 `targetWeaponId` 指向 (《黑夜君臨》的武器生成參數，含武器等級與附加效果表) 的每一列；以及每一列搭載法術 (`equippedSpell_R1`/`equippedSpell_R2`) 的武器，不論是否具名。本篇有、《黑夜君臨》沒有的武器 (例如落葉格鬥術、丹恩流踢擊術) 仍有 `EquipParamWeapon` 列，但沒有 `EquipParamCustomWeapon` 列，因此只有名稱與種類不足以表示武器存在於遊戲中。
-  - 法術：武器法術槽位引用的每個 ID。`spellType` 取自 `Magic.ezStateBehaviorType`，`spellSchool` 取自 `Magic.subCategory1`/`subCategory2`，只保留有定義標籤的值 (沒有時為 `[]`)。被引用但沒有 `Magic` 列的 ID 兩者皆為 `null`，嚴禁依名稱、搭載的武器或所在的本篇清單推定分類。
-  - 名稱：遊戲參數沒有名稱，也沒有可用的黑夜君臨武器、法術文字，因此名稱取自鎖定為 `erText` 的《艾爾登法環》本篇文字 (soarqin/ERTools)：武器依武器 ID 取 `WeaponName`；法術只依 ID 取本篇的魔法與禱告清單，嚴禁取自 `GoodsName`，因為其 ID 會與鑰匙等道具重疊。空白、`%null%` 與 `[ERROR]` 開頭的文字不算名稱。兩種語言都沒有名稱的項目 `name` 為 `null`。名稱記錄 `sourcesFor.name: ["er-base-text"]`，頁面必須註明這些是本篇參考名稱，尚未確認與黑夜君臨一致。
-  - 武器數值，只收具名武器：`attack` 取自 `attackBasePhysics`、`attackBaseMagic`、`attackBaseFire`、`attackBaseThunder`、`attackBaseDark`；`scaling` 取自 `correctStrength`、`correctAgility`、`correctMagic`、`correctFaith`、`correctLuck`；`critical` 取自 `criticalAtkRate` (不是 `throwAtkRate`)。這些是原始參數：《黑夜君臨》的攻擊力另隨等級與稀有度變化，計算方式尚未核實，因此嚴禁呈現為遊戲內攻擊力或補正等級。`passive` 是 `attachEffectId` 引用的 `AttachEffectParam` 列的名稱，依其 `attachTextId` 查《黑夜君臨》詞條文字 (`game-text`)；只存名稱，其效果的數值與作用條件 (經 `passiveSpEffectId_1`–`3`、`onHitSpEffect`、`permanentSpEffectId`) 尚未收錄。`buildup` 只取 `spEffectBehaviorId0`–`2` 引用的 `SpEffectParam` 列中的異常狀態累積欄位 (`poizonAttackPower`、`diseaseAttackPower`、`bloodAttackPower`、`freezeAttackPower`、`sleepAttackPower`、`madnessAttackPower`、`curseAttackPower`，依序為 `poison`、`rot`、`blood`、`frost`、`sleep`、`madness`、`deathBlight`)，略過 0；這些列的其他欄位不收錄。盾的減傷率與 `heroID` 不收錄。
-  - 武器戰技，只收具名武器：`skill.default` 為 `swordArtsParamId`。`skill.pool` 是武器的 `EquipParamCustomWeapon` 列以 `swordArtsTableId` 引用的 `SwordArtsTableParam` 戰技池中，`chanceWeight` 大於 0 的戰技聯集，依 ID 排序。`swordArtsTableId` 為 -1 的生成列沒有戰技池；參數無法說明此時武器帶哪個戰技，因此不推定為預設戰技，也不加入 `pool`。預設戰技可能不在 `pool` 中。這些是參數上的關係，不證明撿到的武器帶哪個戰技或各戰技的機率，因此頁面稱預設戰技為「參數預設」，嚴禁呈現為武器的固定戰技。
-  - 戰技：具名武器的 `skill.default` 或 `skill.pool` 引用的每個 `SwordArtsParam` 列。`name.en` 與 `caption.en` 依 `textId` 取自鎖定為 `erArts` 的本篇 `ArtsName` 與 `ArtsCaption` (EldenRingTextExplorer)；`name.zh` 取自 `erText` 的本篇戰灰名稱 (`ashesofwar`)：英文名稱去掉 `Ash of War: ` 前綴後與戰技英文名稱相同的戰灰，提供去掉 `戰灰：` 前綴的繁體中文名稱。戰灰 ID 多為戰技 ID 的 100 倍，但有例外 (戰灰 30900 是戰技 10，31000 是戰技 309)，因此嚴禁以 ID 對應。沒有這種戰灰的戰技 (例如武器專屬戰技) 的 `name.zh` 取自下述本站轉寫；嚴禁由英文翻譯或自行編造繁體中文名稱。`caption.zh` 一律為本站轉寫。轉寫存於 [tools/skill-text-zh.json](tools/skill-text-zh.json)，以 `textId` 為鍵：`cn` 逐字保存 `erArtsCn` 來源 (heroboy/EldenRingMapTranslate，社群保存的遊戲文字) 中本篇官方簡體中文的 `name` 與 `caption`，`zh` 為本站的繁體中文轉寫。轉寫規則：先依《黑夜君臨》官方繁中用語替換詞組 (例如 血量 → ＨＰ、专注值 → ＦＰ、通过 → 透過)；其餘每個字依上下文選用繁體字形 (例如 回旋 → 迴旋，精通 仍為 精通，红发 → 紅髮)；標點依官方繁中 (“” → 「」、· → ‧)；不增刪內容，數字與換行不變。《黑夜君臨》官方簡中與繁中文字只是這些選擇的參考，不證明官方繁中等於這種轉寫，因此頁面稱其為本站轉寫。有戰灰名稱時 `zh.name` 必須與之相同，藉此檢查轉寫。名稱記錄 `sourcesFor` 的 `name.en: ["er-arts-text"]`，`name.zh` 為 `["er-base-text"]` (戰灰) 或 `["er-arts-cn-text"]` (轉寫)；說明記錄 `caption.en: ["er-arts-text"]` 與 `caption.zh: ["er-arts-cn-text"]`。`fp` 取原始的 `useMagicPoint_L1`、`useMagicPoint_L2`、`useMagicPoint_R1` 與 `useMagicPoint_R2`；-1 照原值保留，嚴禁解讀為不消耗。`group` 是 [public/data/common.json](public/data/common.json) 的 `skillGroups` 中唯一符合的項目的鍵：該項目的 `sortGroupId` 清單含戰技的 `SwordArtsParam.sortGroupId`，且該項目有 `defaultWepAttr` 清單時也含戰技的 `defaultWepAttr`。每個項目有 `name` (`zh` 與 `en`)。分組依參數的排序分組，主要分區與 Eldenpedia 黑夜君臨戰技列表相同，差異只在該頁把無戰技列在盾，以及另有本站未收錄的火把戰技：排序分組 10、20、30 與 120 (本篇厚重、鋒利、優質與神秘的戰灰，《黑夜君臨》已移除這些質變) 合為「無屬性」(本站對 Eldenpedia No Affinity 的命名)，排序分組 50 依 `defaultWepAttr` 分為「火焰」與「雷電」。其他名稱取自官方的屬性與武器種類用語，以及說明開頭的「專用戰技」；分組表示參數如何排序戰技，不表示戰技的傷害屬性或可用的武器。
-  - 法術消耗，只收有 `Magic` 列的法術：`cost` 取自 `mp` 與 `stamina`；`chargeCost` 取自 `mp_charge` 與 `stamina_charge`，兩者皆為 0 時為 `null`。這些是尚未套用減少消耗效果的原始參數。頁面照原值列出 `chargeCost`，嚴禁呈現為法術能否蓄力：非 0 值不足以說明蓄力施放的方式，0 不代表不消耗，兩行也不可相加。持續施放的消耗 `consumeLoopMP_forMenu` 不收錄。
-  - 圖示：腳本在 Eldenpedia 尋找 `File:ER SB Icon <weapon|shield|Spell> <去除冒號的英文名稱>.png` (三種盾牌用 `shield`)，只有檔案存在且檔案頁標示 `{{License|game}}` 時才設定 `icon: { "src", "page" }`，否則為 `icon: null`。戰技使用《黑夜君臨》圖示 `File:ERN Icon skill <去除冒號的英文名稱>.png`，授權檢查相同。在完整的 `SwordArtsParam` 中多列共用同一 `textId`，或在完整的 `ArtsName` 中同一英文名稱屬於多個 `textId` 時，不論這些列是否收錄 (例如 302 與 304 都是 Parry)，無法依名稱判斷圖示屬於哪一列，這些戰技為 `icon: null`。查詢結果快取在 `tools/.cache/eldenpedia/files.json`。之後執行 `python tools/fetch-icons.py`，下載資料引用但 `public/images/` 尚未有的圖示，並縮為 96px。
-- 武器或法術名稱只有單一語言、搭載的法術未收錄、具名武器沒有預設戰技、生成列引用不存在的戰技池、戰技池中權重大於 0 的列沒有戰技、引用的戰技不在 `SwordArtsParam` 或沒有英文名稱或說明、戰技英文名稱對到多個戰灰、戰灰名稱缺少前綴、戰技不符合任何戰技分組或符合多個、`tools/skill-text-zh.json` 不是 `JSON.stringify` 2 空格縮排的標準輸出、缺少收錄的 `textId`、有不是收錄 `textId` 的鍵，或有項目不是恰好 `cn` 與 `zh` 且各有非空的 `name` 與 `caption`、`cn` 的文字與 `erArtsCn` 來源不同、兩份來源的英文不同、轉寫名稱與戰灰名稱不同、搭載法術的武器 `wepType` 沒有標籤、法術的 `ezStateBehaviorType` 沒有標籤、武器數值或法術消耗不是數字、武器引用不存在的 `SpEffectParam` 或 `AttachEffectParam` 列、固定效果沒有兩種語言的名稱、同一武器的兩個命中效果累積同一種異常狀態、兩個圖示檔名相同，或引用的來源不在 common.json 時，腳本停止且不寫出資料檔。
+- 武器：`EquipParamWeapon` 中 ID 為 10000 的倍數、`wepType` 有 `weaponType` 標籤、兩種語言都有名稱、`sortId` 不是 9999999，且有 `EquipParamCustomWeapon` 列 (《黑夜君臨》的武器生成參數) 指向的每一列；以及每一列搭載法術的武器，不論是否具名。只有名稱與種類不足以表示武器存在於《黑夜君臨》：本篇有、《黑夜君臨》沒有的武器仍有 `EquipParamWeapon` 列，但沒有生成列。
+- 法術：武器法術槽位引用的每個 ID。`spellType` 取自 `Magic.ezStateBehaviorType`，`spellSchool` 取自 `Magic.subCategory1`/`subCategory2`。被引用但沒有 `Magic` 列的 ID 兩者皆為 `null`，嚴禁依名稱、搭載的武器或所在的本篇清單推定法術分類。`spellType` 恰有一個已知類型的法術列在魔法頁或禱告頁；類型未核實或來源分歧的法術列在武器頁的查證限制章節。
+- 名稱：武器與法術名稱取自《艾爾登法環》本篇文字 (`erText`)：武器依武器 ID 取 `WeaponName`；法術只依 ID 取本篇的魔法與禱告清單，嚴禁取自 `GoodsName`，因為其 ID 會與鑰匙等道具重疊。空白、`%null%` 與 `[ERROR]` 不算名稱。頁面必須註明這些是本篇參考名稱，尚未確認與《黑夜君臨》一致。
+- 武器數值 (`attack`、`scaling`、取自 `criticalAtkRate` 的 `critical`、異常狀態 `buildup`) 是原始參數。《黑夜君臨》的攻擊力另隨等級與稀有度變化，因此嚴禁呈現為遊戲內攻擊力或補正等級，頁面必須註明這些是原始參數。`passive` 只存 `attachEffectId` 引用的 `AttachEffectParam` 列的名稱，依其 `attachTextId` 查《黑夜君臨》詞條文字 (`game-text`)。沒有內容的欄只表示收錄的欄位沒有內容，不表示武器沒有其他效果。
+- 武器戰技：`skill.default` 為 `swordArtsParamId`；`skill.pool` 是武器生成列引用的 `SwordArtsTableParam` 戰技池中，`chanceWeight` 大於 0 的戰技聯集。`swordArtsTableId` 為 -1 的生成列沒有戰技池，嚴禁推定為預設戰技或把預設戰技加入 `pool`。這些是參數上的關係，不證明撿到的武器帶哪個戰技或各戰技的機率，因此頁面稱之為「參數預設」與「生成池候選」，必須說明這些是參數上的關係，嚴禁把預設戰技呈現為武器的固定戰技。
+- 戰技：具名武器引用的每個 `SwordArtsParam` 列。`fp` 保留原始的 `useMagicPoint_*`；嚴禁把 -1 解讀為不消耗。`group` 是唯一符合戰技 `sortGroupId` (該項目列有 `defaultWepAttr` 時也須符合) 的 `skillGroups` 項目。分組名稱取自官方的屬性與武器種類用語，以及說明開頭的「專用戰技」，只有「無屬性」為本站命名。顯示分組的頁面必須說明：分組表示參數如何排序戰技，不表示戰技的傷害屬性或可用的武器，且「無屬性」為本站命名。
+- 法術消耗：`cost` 與 `chargeCost` 是尚未套用減少消耗效果的原始參數。嚴禁把 `chargeCost` 呈現為法術能否蓄力：非 0 值不足以說明蓄力施放的方式，0 不代表不消耗，兩行嚴禁相加。
+- 圖示：武器、法術與戰技圖示依圖片守則取自 Eldenpedia。無法依名稱判斷圖示屬於哪一個 `SwordArtsParam` 列時 (多列共用同一 `textId`，或同一英文名稱屬於多個 `textId`)，該戰技為 `icon: null`。
 
-## 角色資料產生
+### 角色研究
 
-- `public/data/characters/nightfarers.json` 由 [tools/import-characters.mjs](tools/import-characters.mjs) 產生 (在專案根目錄執行 `node tools/import-characters.mjs`)，嚴禁手動編輯。腳本透過 [tools/sources.mjs](tools/sources.mjs) 讀取 [tools/relics-config.json](tools/relics-config.json) 鎖定版本的來源，因此角色與遺物、武器來自同一份遊戲參數。之後執行 `python tools/fetch-icons.py`，它也會下載角色圖示。
-  - 角色：設定檔的 `heroes` 把 common.json 的每個 `characters` 鍵對應到其 `HeroParam` ID 與 `HeroMenuParam` ID，兩邊的鍵集合必須相同。`HeroMenuParam` 沒有角色欄位，因此依 ID 順序對應；已逐一比對每項評級與 Eldenpedia 來核對此對應。
-  - 等級：錨點是從角色的 `heroStatusParamId` 開始、ID 連續的 `HeroStatusParam` 列，各列的等級為其 `totalLevel`；錨點等級必須從 1 遞增到 15。沒有列的等級取前後最近錨點的線性插值並向下取整。參數沒有載明這條規則；它已與 Eldenpedia Nightreign:Attributes 頁的等級表核對，少數不同的格子 (包含錨點列) 一律保留本站依參數的數值；頁面必須說明錨點之間的等級是本站計算值。
-  - 上限：`maxHp`、`maxFp` 與 `maxStamina` 由 `vigor`、`mind` 與 `endurance` 代入 `CalcCorrectGraph` 的 100、101 與 104 列，在五個節點 `stageMaxVal` → `stageMaxGrowVal` 之間線性計算。參數沒有載明遊戲用哪一列；這三列已與同一份 Eldenpedia 表中的 HP、FP 與精力核對，頁面必須說明上限是本站計算值。腳本不做取整：曲線不是直線段 (`adjPt_maxGrowVal` 不是 1)、能力值超出該列範圍，或結果不是整數時停止。
-  - 評級：`HeroMenuParam` 的 `hpGrade`、`fpGrade`、`staminaGrade`、`strengthGrade`、`dexterityGrade`、`intelligenceGrade`、`faithGrade` 與 `arcaneGrade`。值 0 到 4 為 S 到 D，已逐角色與 Eldenpedia 核對；其他值使腳本停止。
-  - 文字：沒有帶文字 ID 的來源收錄《黑夜君臨》的角色文字，因此 [tools/character-text-zh.json](tools/character-text-zh.json) (以角色為鍵，其下為 `passive`、`skill` 與 `art`，各有 `cn` 與 `zh`，內含 `name`、`summary` 與 `description`) 的 `cn` 逐字保存 BWIKI 三語選單文字頁上的官方簡中選單文字；該頁以 revision 鎖定為 `bwikiMenu` (遊戲文字的社群保存，本篇與 DLC 各一頁)。每筆 `cn` 文字必須出現在某頁的簡中段落；出現在多行時，這些行必須在同一頁且英文相同。`en` 取英文段落同一行號的文字，英文段落的行數與簡中相同。頁面沒有文字 ID，因此由人工整理的 `cn` 文字把文字對應到角色；選單文字依 ID 排列，角色的文字 ID 隨 `HeroParam` ID 遞增，因此腳本檢查每個欄位中，同一頁角色的行號隨 `HeroParam` ID 遞增。`zh` 是本站依戰技轉寫規則 (見武器與法術資料產生) 的繁中轉寫，另加入官方《黑夜君臨》用語 绝招 → 絕活，頁面因此稱之為本站轉寫。選單文字另有執行者技藝更名後的攫陽 (攫阳，Suncatcher) 及其簡介與說明；只收錄基本名稱與文字。每項能力依文字所在頁面記錄 `sourcesFor` `["bwiki-menu-text"]` 或 `["bwiki-menu-text-dlc"]`。
-  - 圖示：Eldenpedia 的 `File:ERN Passive Ability Icon <name>.png`、`File:ERN Character Skill Icon <name>.png` 與 `File:ERN Ultimate Art Icon <name>.png`，`<name>` 為角色英文名稱，授權檢查與武器圖示相同。
-  - 冷卻時間：`HeroParam` 的 `characterAbilityCooldown`，存為技藝的 `cooldown`。鐵之眼、女爵、送葬者，以及三名沒有冷卻 (0) 的角色與 Eldenpedia 相同；追蹤者 (8 對 10) 與守護者 (13.5 對 13) 不同，因此其 `cooldownNote` 引用 Eldenpedia 的數值；無賴與學者沒有社群數值。使用次數欄位不收錄。
-  - 具體數值：[tools/character-effects.json](tools/character-effects.json) 依角色存放 `passive`、`skill` 與 `art` 各一份非空清單，以及可省略的 `cooldownNote`。條目二選一：依參數撰寫的 `{ zh, checks, note? }`，存入時來源為 `["game-params"]`；或社群的機制摘要 `{ zh, sources }`，引用以 revision 鎖定的 Eldenpedia 角色頁 (common.json 的 `eldenpedia-<角色>`)。機制摘要只用在參數沒有該機制數字之處，且不可重複官方說明。社群數字嚴禁寫進依參數撰寫的條目，只能出現在機制摘要或 `note`。
-    - 每個檢查項讀一個值：`{ ref }` 讀取 `SpEffectParam`、`AtkParam_Pc` 或 `Bullet` 的 `[參數表, ID, 欄位]`；`ratio` 為 `a ÷ b` 四捨五入到小數 2 位；`sum` 為 `terms` 的總和；`scale` 為 `a` × `factor`。欄位可以是群組，群組內所有欄位必須數值相同：`DamageCutRate*` (八種傷害類型)、`AttackRate*`、`AttackPowerRate*` (五種攻擊屬性)、`AtkCorrection*` (五個 `atk…Correction`) 與 `AilmentDefRate*` (七種異常狀態)。該值 (有 `round` 時先四捨五入到該小數位數) 必須等於 `value`；檢查項有 `display` 時，`zh` 必須含該文字；每筆條目至少要有一個含 `display` 的檢查項，使頁面上的數字與參數綁定。
-    - 參數列：參數沒有列名稱，因此由 Smithbox 列名稱 (`smithbox-row-names`，commit c647be21，比參數版本新) 判定參數列屬於哪項能力。只有在列名稱指名該能力，且符合下列之一時才採用該列：該列或其引用鏈有數值與 Eldenpedia 一致；由已採用的列、或該能力的行為 (`BehaviorParam_PC` 技藝 6000000xx、絕活 7000000xx，依 `HeroParam` 順序每名角色 50 個 ID) 經參數引用到達；或沒有數字可比時，效果的種類與方向符合官方說明或 Eldenpedia 的文字描述 (例如能減免傷害的架式對應減傷)。只是 ID 與具名列相鄰、或列名稱本身標示不確定的列不採用。
-    - 寫法：欄位意義依本篇參數欄位定義 (`smithbox-er-paramdef`) 的官方日文說明，用詞與 [tools/relic-details-params.json](tools/relic-details-params.json) 相同：`*AttackRate` 為「傷害 ×」，五種全部為「所有來源的傷害」；`*AttackPowerRate` 為「攻擊力 ×」；`*DamageCutRate` 為「受到的…傷害 ×」，八種全部為「受到的所有傷害」；`toughnessDamageCutRate` 為「受到的削韌」；`*DefDamageRate` 為「受到的異常累積」；`changeHpRate`、`changeMpPoint`、`changeStaminaRate` 為負值時為「恢復」；`hitRadius` 與 `hitRadiusMax` 為以公尺計的「半徑」與「最大半徑」；`AtkParam_Pc` 的補正值是乘在基礎值上的倍率，因此只列同一招內的比值，稱為「攻擊力補正」(`atk…Correction`)、「削韌補正」(`atkSuperArmorCorrection`) 與「精力削減補正」(`atkStamCorrection`)，不寫成傷害比，因為各段攻擊的攻擊類型也可能不同；`itemDropRate` × 100 為「觀察力」，因為學者的醃製鳥腳列 (0.3 與 0.4) 與 Eldenpedia 記載的 30% 與 40% 相符。《黑夜君臨》新增、沒有官方說明的欄位 (`guardStaminaMult`、`changeGuardAngle`) 不列出。傷害值 (`atkMag` 等) 不列出，只列比值。
-    - 核對：與 Eldenpedia 頁面上同一數量的值比較 26 個，其中 20 個一致。不一致的 6 個保留參數值並以 `note` 或 `cooldownNote` 註記：圖騰碑石提升全部五種攻擊屬性 (Eldenpedia 記為物理)、堅忍的精力恢復為 15 (Eldenpedia 記為每秒 +8)、恍惚受到的傷害為 ×0.65 (Eldenpedia 記為減傷 30%)、匯流的期限為 4 秒 (Eldenpedia 記為 3 秒)，以及上述兩項冷卻時間。不同數量的社群記載不計入，但仍可作為 `note` (死靈術：Eldenpedia 記為跟隨 1 分鐘，參數為亡靈每秒失去 2% HP 上限；強化版反擊：Eldenpedia 記為傷害 +50%，參數為攻擊力補正比 1.69)。
-- `heroes` 與 `characters` 不同、參數表 ID 重複、引用的參數列不存在、參數值不是數字、選單文字頁缺少簡中或英文段落或兩者行數不同、錨點等級不合法、評級不是 0 到 4、`CalcCorrectGraph` 的列不是直線段或算出超出範圍或非整數的值、文字檔不等於 `JSON.stringify` 2 空格縮排的標準輸出、有項目不是恰有 `cn` 與 `zh` 且各有非空的 `name`、`summary` 與 `description`，或有不是角色的鍵、`cn` 文字不在頁面中或出現在多頁或英文不同、行號順序檢查不通過、同一項能力的文字來自不同頁面，或引用的來源不在 common.json；或具體數值檔有不是角色的鍵、角色不是恰有 `passive`、`skill`、`art` 與可省略的 `cooldownNote`、清單為空、條目有不認得的欄位或不屬於兩種形式、`note` 不是恰有 `zh` 與非空的 `sources`、檢查項的參數列或欄位不存在、群組數值不一致、運算不認得、數值不符或 `display` 不在 `zh` 中，或依參數撰寫的條目沒有含 `display` 的檢查項時，腳本停止且不寫出資料檔。
+- 設定檔的 `heroes` 把 common.json 的每個 `characters` 鍵對應到其 `HeroParam` 與 `HeroMenuParam` ID。`HeroMenuParam` 沒有角色欄位，依 ID 順序對應，因此必須以 Eldenpedia 的評級核對此對應。
+- 評級：`HeroMenuParam` 的 `*Grade` 值 0 到 4 為 S 到 D。
+- 等級：錨點是從角色的 `heroStatusParamId` 開始、ID 連續的 `HeroStatusParam` 列，各列的等級為其 `totalLevel`。錨點之間的等級取前後最近錨點的線性插值並向下取整。參數沒有載明這條規則，因此這是本站計算值。
+- 上限：`maxHp`、`maxFp` 與 `maxStamina` 由 `vigor`、`mind` 與 `endurance` 代入 `CalcCorrectGraph` 的 100、101 與 104 列，不做取整。參數沒有載明遊戲用哪一列，因此上限是本站計算值。
+- 等級或上限的算法或參數變動時，必須與 Eldenpedia Nightreign:Attributes 頁的等級表核對結果；格子不同時保留依參數的數值。
+- 冷卻時間：`HeroParam` 的 `characterAbilityCooldown`，0 表示沒有冷卻；與 Eldenpedia 不同時，以 `cooldownNote` 引用其數值。使用次數欄位不列出。
+- 文字：[tools/character-text-zh.json](tools/character-text-zh.json) 的 `cn` 逐字保存 BWIKI 三語選單文字頁 (以 revision 鎖定、沒有文字 ID 的社群保存) 上的官方簡中選單文字，`en` 取英文段落同一行號的文字。
+- 具體數值：[tools/character-effects.json](tools/character-effects.json) 依能力列出條目，二選一：依參數撰寫的 `{ zh, checks, note? }` (來源 `game-params`)，或社群的機制摘要 `{ zh, sources }`，引用以 revision 鎖定的 Eldenpedia 角色頁。
+  - 依參數撰寫的條目所顯示的每個數字，必須以含 `display` 的檢查項與參數綁定。
+  - 機制摘要只用在參數沒有該機制數字之處，且嚴禁重複官方說明。
+  - 社群數字嚴禁寫進依參數撰寫的條目，只能出現在機制摘要或 `note`。與社群記載不同時，保留參數值，並在 `note` 引用社群數值。
+  - 角色頁必須以來源連結標示社群機制摘要，並在保留的參數值之後，以附來源的註記列出不同的社群記載。
+- 參數列：參數沒有列名稱，因此由 Smithbox 列名稱 (`smithbox-row-names`) 判定參數列屬於哪項能力。只有在列名稱指名該能力，且符合下列之一時才採用該列：該列或其引用鏈有數值與 Eldenpedia 一致；由已採用的列、或該能力的行為 (`BehaviorParam_PC` 技藝 6000000xx、絕活 7000000xx，依 `HeroParam` 順序每名角色 50 個 ID) 經參數引用到達；或沒有數字可比時，效果的種類與方向符合官方說明或 Eldenpedia 的文字描述。只是 ID 與具名列相鄰、或列名稱本身標示不確定的列不採用，嚴禁推測參數列的歸屬。
+- 寫法：欄位意義依本篇參數欄位定義 (`smithbox-er-paramdef`) 的官方日文說明，用詞與 [tools/relic-details-params.json](tools/relic-details-params.json) 相同：
+  - `*AttackRate` 為「傷害 ×」，五種全部為「所有來源的傷害」；`*AttackPowerRate` 為「攻擊力 ×」；`*DamageCutRate` 為「受到的…傷害 ×」，八種全部為「受到的所有傷害」；`toughnessDamageCutRate` 為「受到的削韌」；`*DefDamageRate` 為「受到的異常累積」；`changeHpRate`、`changeMpPoint`、`changeStaminaRate` 為負值時為「恢復」；`hitRadius` 與 `hitRadiusMax` 為以公尺計的「半徑」與「最大半徑」；`itemDropRate` × 100 為「觀察力」。
+  - `AtkParam_Pc` 的補正值是乘在基礎值上的倍率，因此只列同一招內的比值，稱為「攻擊力補正」(`atk…Correction`)、「削韌補正」(`atkSuperArmorCorrection`) 與「精力削減補正」(`atkStamCorrection`)，嚴禁寫成傷害比。傷害值 (`atkMag` 等) 不列出。
+  - 《黑夜君臨》新增、沒有官方說明的欄位不列出。
+  - 按等級或深夜模式深度分段的數值表，只列首尾兩段或最高一段。
 
-## 遊戲撰寫守則
+### 戰技與角色文字轉寫
 
-- 引導外部資源時使用開新視窗，禁止本頁跳轉
-- RWD 原則，支援手機、平板、桌機等多種裝置；螢幕寬度 280px 以上 (目前最窄的手機：摺疊手機的外螢幕) 時，頁面 (包含頁首) 都不需橫向捲動
-  - 表格：螢幕寬度 900px 以下時，所有表格逐列直排，不需橫向捲動。每列一塊，第一格為標題；其他格各占一行依序往下排，旁邊以小字顯示欄名。更寬的螢幕與列印維持表格。頁面渲染完成後，[public/render.js](public/render.js) 把每個欄位的表頭文字寫入該欄各格的 `data-label` (第一欄除外)，並設定 `table`、`rowgroup`、`row`、`columnheader`、`cell` 角色，保留表格語意；表頭列只在視覺上隱藏。每個表格必須在 `thead` 有一列表頭，且每列的格數必須與表頭相同，否則頁面以錯誤停止。
-  - 關係圖：以會隨螢幕換行的 HTML 方塊與文字製作，不用固定寬度的圖片，讓關係圖不需橫向捲動，文字也不會為了塞進畫面而縮小。
-  - 數值圖表：折線圖在頁面渲染時依容器寬度以 SVG 繪製，寬度改變時重畫；橫條圖以 HTML 元素製作，橫條寬度是所在列的百分比；讓圖表不需橫向捲動，文字也維持原大小。每張圖表都有數值相同的表格。類別色是 [public/styles.css](public/styles.css) 的 `--series-*` 變數，淺色與深色的值已用 dataviz 技能的色票驗證工具對本站 `--surface` 驗證；修改後必須重新驗證。
-- 提及遊戲內項目時，必須找到該遊戲內對應的圖片，圖片來源為 [Eldenpedia](https://eldenring.wiki.gg/)
-  - 只採用檔案頁授權標示為遊戲素材 (`{{License|game}}`) 的圖片；社群編修圖 (例如檔名含 `Custom`) 不算遊戲內圖片。
-  - 圖片下載至 `public/images/`，由首頁的資料來源列出 wiki 檔案頁。大於 96px 的圖片可縮小為 96px，嚴禁其他修改。
-  - [public/data/common.json](public/data/common.json) 的每個圖示以 `page` 記錄 wiki 檔案頁；武器、法術與戰技的圖示改記在 `public/data/armaments/` 各項目的 `icon` (見武器與法術資料產生)，角色的能力、技藝與絕活圖示改記在 `public/data/characters/` (見角色資料產生)。首頁以 `<span data-icon-sources>` 列出 common.json 中每個圖示的檔案頁，並說明一次武器與法術圖示取自 Eldenpedia 的 ER SB Icon 系列、戰技圖示取自《黑夜君臨》的 ERN Icon skill 系列，角色的能力、技藝與絕活圖示取自《黑夜君臨》的 ERN Passive Ability Icon、ERN Character Skill Icon 與 ERN Ultimate Art Icon 系列，各檔案頁記錄在項目與角色資料中。
-  - 同一種編排位置的圖片維持相同大小；圖片一律使用 `.icon` class，尺寸只在 `public/styles.css` 依位置設定，不在個別圖片上另外調整：
-    - 表格內：48px (`td .icon`)。
-    - 表格內的名稱清單 (效果說明、種類欄)：24px (`td .entry .icon`)。
-    - 正文內：24px (`.icon`)。
-    - 出現新的編排方式時，先在 `public/styles.css` 新增該位置的尺寸規則。
-    - `<img>` 的 `width`/`height` 屬性與該位置的尺寸一致。
+- 戰技的 `name.en` 與 `caption.en` 取自本篇 `ArtsName` 與 `ArtsCaption` (`erArts`)。`name.zh` 取自本篇戰灰名稱 (`erText` 的 `ashesofwar`)：英文名稱去掉 `Ash of War: ` 前綴後與戰技英文名稱相同的戰灰，提供去掉 `戰灰：` 前綴的名稱；嚴禁以戰灰 ID 對應。戰技名稱與說明是尚未確認與《黑夜君臨》一致的本篇文字，頁面必須註明。沒有這種戰灰的戰技，以及所有 `caption.zh`，採用本站轉寫；嚴禁由英文翻譯或自行編造繁體中文名稱。
+- 本站轉寫存於 [tools/skill-text-zh.json](tools/skill-text-zh.json) (以 `textId` 為鍵，`cn` 取自社群保存的 `erArtsCn`) 與 [tools/character-text-zh.json](tools/character-text-zh.json)：`cn` 逐字保存官方簡體中文，`zh` 為轉寫。轉寫規則：
+  - 先依《黑夜君臨》官方繁中用語替換詞組 (例如 血量 → ＨＰ、专注值 → ＦＰ、通过 → 透過，角色文字另有 绝招 → 絕活)。
+  - 其餘每個字依上下文選用繁體字形 (例如 回旋 → 迴旋，精通 仍為 精通，红发 → 紅髮)。
+  - 標點依官方繁中 (“” → 「」、· → ‧)。
+  - 不增刪內容，數字與換行不變。
+  - 有戰灰名稱時，`zh.name` 必須與之相同。
+- 《黑夜君臨》官方文字只是這些選擇的參考，不證明官方繁中等於這種轉寫，因此頁面必須稱其為本站轉寫，不是官方繁中。
+
+## 頁面
+
+- 武器頁 (`weapons.html`，`h1` id 為 `weapons`)：每個 `weaponType` 標籤一個 `<section data-weapon-type="<type>">`，`h2` id 為 `weapon-type-<type>`；每列 id 為 `weapon-<id>`。`#limitations` 章節的 `<tbody data-unlisted-spells>` 列出類型未核實或來源分歧的法術。
+- 魔法頁與禱告頁：`<section data-spell-type="<type>">` 為類型章節 (`h2` id 為 `sorceries` 或 `incantations`)；每個 `<section data-spell-type="<type>" data-spell-school="<school>">` 為系別章節 (`h2` id 為 `spell-school-<school>`，空系別為 `<type>-no-school`)。每列 id 為 `spell-<id>`。相關詞條只出現在最上層的相符層：類型章節，其次系別章節，再其次法術列。
+- 戰技頁 (`skills.html`，`h1` id 為 `skills`)：依 `skillGroups` 的順序，每個鍵一個 `<section data-skill-group="<group>">`，`h2` id 為 `skill-group-<group>`，全部放在 `<div id="skill-list">` 內；分組可包含 `<section data-skill-weapon-type="<type>">` 小節 (`h3` id 為 `skill-unique-<type>`)。每列 id 為 `skill-<id>`。除了「武器、法術與戰技研究」與「戰技與角色文字轉寫」要求的說明之外，頁面必須註明：範圍是具名武器引用的戰技，不是遊戲中全部的戰技；分組與 Eldenpedia 黑夜君臨戰技列表的異同；哪些繁中名稱是官方名稱 (取自戰灰名稱)，哪些名稱與全部說明是本站轉寫。武器頁與有 `targets` 的遺物頁說明一次部分戰技名稱為本站轉寫，並連到戰技頁。
+- 角色頁 (`characters.html`，`h1` id 為 `characters`)：每個 `characters` 鍵一個 `<section data-nightfarer="<角色>">`，`h2` id 為 `character-<角色>`，放在 `#character-list[data-nightfarer-list]` 內；`#grades` 章節放 `[data-nightfarer-grades]`，`#levels` 章節放 `[data-nightfarer-levels]`。
+  - 頁面必須說明：名稱與文字是本站依官方簡中選單文字的轉寫，不是官方繁中；評級是參數值；錨點之間的等級與三項上限是本站計算值 (見角色研究)，直接取自參數的數值要有可辨識的標示，上限一律不標示為直接值；數值不含遺物等改變能力值的效果。
+  - 其 `#limitations` 章節必須說明：文字來源的限制、冷卻時間的來源、參數列歸屬與欄位用語的判定方式，以及沒有收錄的內容。
+- 能力值頁：每個能力值列的 id 為 `stat-<stat>`，其 `<td data-stat-effects="<stat>">` 列出 `stats` 含該能力值的遺物效果；上限列另在「經由<基礎能力值名稱>」下列出 `stats` 含其 `base` 但不含該上限的效果。
+- 遺物頁：效果列由 `<tbody data-relic-table="<subcategory>">` 產生。有 `targets` 的效果把相符的具名武器、法術與戰技連到其列 (`weapons.html#weapon-<id>`、法術類型所在頁的 `#spell-<id>`、`skills.html#skill-<id>`)；有 `stats` 的效果把能力值連到 `attributes.html#stat-<stat>`。
+- 色調：render.js 依資料決定色調 class。負面效果為紅色 (`tone-debuff`)；其他效果自身可疊加為藍色 (`tone-stack`)，不可疊加為綠色 (`tone-solo`)，可否疊加未核實、來源分歧或各級不同時為粗體 (`tone-unverified`)。可疊加的效果另外列出不是相加、未核實或來源分歧的合成方式；負面效果保留其疊加規則。代價片段與確定必伴隨負面效果 (`requiresCurse: true`) 的標籤為紅色。各遺物頁顯示依 common.json 的 `legend` 產生的顏色圖例。嚴禁在 HTML 手動設定色調 class。
+
+## 撰寫守則
+
+- 引導外部資源時使用開新視窗，禁止本頁跳轉。
+- 依 RWD 原則：螢幕寬度 280px 以上時，頁面 (包含頁首) 都不需橫向捲動。
+  - 表格：每個表格放在 `.table-wrap` 內，在 `thead` 有一列表頭，且每列的格數與表頭相同。
+  - 關係圖：以會隨螢幕換行的 HTML 方塊與文字製作，不用固定寬度的圖片。
+  - 數值圖表：折線圖依容器寬度以 SVG 繪製，寬度改變時重畫；橫條圖以 HTML 元素製作，橫條寬度是所在列的百分比；每張圖表都有數值相同的表格。類別色是 [public/styles.css](public/styles.css) 的 `--series-*` 變數；修改後必須以 dataviz 技能的色票驗證工具，對 `--surface` 驗證淺色與深色的值。
+- 提及遊戲內項目時，必須在 [Eldenpedia](https://eldenring.wiki.gg/) 找到該項目的遊戲內圖片：
+  - 只採用檔案頁授權標示為遊戲素材 (`{{License|game}}`) 的圖片；社群編修圖 (例如檔名含 `Custom`) 不算。
+  - 圖片下載至 `public/images/`。大於 96px 的圖片可縮小為 96px，嚴禁其他修改。
+  - 出處：common.json 的每個圖示以 `page` 記錄檔案頁，首頁以 `<span data-icon-sources>` 列出。武器、法術、戰技與角色能力的圖示，檔案頁記在項目或角色資料中，首頁說明一次其 Eldenpedia 系列。
+- 同一種編排位置的圖片必須維持相同大小。圖片一律使用 `.icon` class，尺寸只在 `public/styles.css` 依位置設定，嚴禁在個別圖片上調整：表格內 48px (`td .icon`)、表格內的名稱清單 24px (`td .entry .icon`)、正文內 24px (`.icon`)。出現新的編排方式時，先在 `public/styles.css` 新增該位置的尺寸規則。`<img>` 的 `width`/`height` 屬性與該位置的尺寸一致。
