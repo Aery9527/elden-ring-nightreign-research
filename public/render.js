@@ -872,15 +872,52 @@ function statMax(data, keys, stats) {
   return Math.max(...keys.flatMap((key) => LEVELS.flatMap((level) => stats.map((stat) => data.nightfarers[key].levels[level][stat]))));
 }
 
+// 同一縱軸上數值相同的線段會互相蓋住。pairs 列出每對系列重疊的等級範圍 (線段兩端都相同才算)，依起始等級排序；
+// 1–15 級全部相同時，先畫的系列改用後畫那項的顏色 (colors)，讓圖上那條線與兩項圖例同色。
+function seriesOverlaps(nightfarer, chart) {
+  const series = [...chart.right, ...chart.left];
+  const colors = series.map((_, index) => index + 1);
+  const pairs = [];
+  for (const axis of [chart.right, chart.left]) {
+    axis.forEach((first, index) => {
+      for (const second of axis.slice(index + 1)) {
+        const same = (lvl) => nightfarer.levels[lvl][first] === nightfarer.levels[lvl][second];
+        const ranges = [];
+        for (let lvl = 1; lvl < LEVELS.length; lvl++) {
+          if (!same(String(lvl)) || !same(String(lvl + 1))) continue;
+          const last = ranges.at(-1);
+          if (last && last[1] === lvl) last[1] = lvl + 1;
+          else ranges.push([lvl, lvl + 1]);
+        }
+        if (!ranges.length) continue;
+        pairs.push({ stats: [first, second], ranges });
+        if (LEVELS.every(same)) colors[series.indexOf(first)] = colors[series.indexOf(second)];
+      }
+    });
+  }
+  pairs.sort((a, b) => a.ranges[0][0] - b.ranges[0][0]);
+  return { colors, pairs };
+}
+
+// 重疊線段：智力＝信仰（1–15 級）；力氣＝信仰（8–12 級）。
+function overlapNote(data, pairs) {
+  const labels = data.labels.nightfarers;
+  const groups = pairs.map(({ stats, ranges }) => {
+    const levels = ranges.map(([from, to]) => `${from}–${to} ${labels.levelUnit}`).join("、");
+    return `${stats.map((stat) => statName(data, stat)).join("＝")}（${levels}）`;
+  });
+  return el("p", { class: "overlap-note" }, `${labels.overlap}：${groups.join("；")}。`);
+}
+
 // 圖例兼讀值：線型樣本、名稱 (右軸系列加註)、所選等級的數值
-function chartLegend(data, chart, values) {
+function chartLegend(data, chart, values, colors) {
   const series = [...chart.right, ...chart.left];
   return el(
     "ul",
     { class: "chart-legend" },
     ...series.map((stat, index) => {
       const key = svgEl("svg", { width: "24", height: "10", "aria-hidden": "true" });
-      key.append(svgEl("line", { x1: "0", y1: "5", x2: "24", y2: "5", class: `series series-${index + 1}`, "stroke-dasharray": dash(chart, stat) }));
+      key.append(svgEl("line", { x1: "0", y1: "5", x2: "24", y2: "5", class: `series series-${colors[index]}`, "stroke-dasharray": dash(chart, stat) }));
       const name = chart.right.includes(stat) ? `${statName(data, stat)}${data.labels.nightfarers.rightAxis}` : statName(data, stat);
       return el("li", {}, key, name, " ", el("strong", {}, String(values[stat])));
     })
@@ -891,6 +928,7 @@ function chartLegend(data, chart, values) {
 // 在圖上移動或點按會選最近的等級 (onLevel)。
 function lineChart(data, nightfarer, chart, scales, level, width, onLevel) {
   const series = [...chart.right, ...chart.left];
+  const { colors, pairs } = seriesOverlaps(nightfarer, chart);
   // 三張圖的左右邊距相同 (右側都保留右軸刻度的寬度)，上下對齊時同一等級在同一位置
   const margin = { top: 10, right: 40, bottom: 26, left: 34 };
   const plotH = 170;
@@ -922,10 +960,10 @@ function lineChart(data, nightfarer, chart, scales, level, width, onLevel) {
   series.forEach((stat, index) => {
     const scale = chart.right.includes(stat) ? scales.right : scales.left;
     const points = LEVELS.map((lvl) => `${x(lvl)},${y(scale, nightfarer.levels[lvl][stat])}`).join(" ");
-    svg.append(svgEl("polyline", { class: `series series-${index + 1}`, points, "stroke-dasharray": dash(chart, stat) }));
+    svg.append(svgEl("polyline", { class: `series series-${colors[index]}`, points, "stroke-dasharray": dash(chart, stat) }));
     if (CAP_STATS.includes(stat)) return;
     for (const lvl of nightfarer.anchorLevels) {
-      svg.append(svgEl("circle", { class: `dot series-${index + 1}`, cx: String(x(lvl)), cy: String(y(scale, nightfarer.levels[lvl][stat])), r: "4" }));
+      svg.append(svgEl("circle", { class: `dot series-${colors[index]}`, cx: String(x(lvl)), cy: String(y(scale, nightfarer.levels[lvl][stat])), r: "4" }));
     }
   });
   const hit = svgEl("rect", { class: "hit", x: String(margin.left - 10), y: "0", width: String(plotW + 20), height: String(svgH) });
@@ -939,7 +977,8 @@ function lineChart(data, nightfarer, chart, scales, level, width, onLevel) {
   hit.addEventListener("pointerdown", pick);
   svg.append(hit);
   const values = Object.fromEntries(series.map((stat) => [stat, nightfarer.levels[level][stat]]));
-  return el("div", { class: "level-figure" }, chartLegend(data, chart, values), svg);
+  const note = pairs.length ? [overlapNote(data, pairs)] : [];
+  return el("div", { class: "level-figure" }, chartLegend(data, chart, values, colors), ...note, svg);
 }
 
 // 排序橫條圖：所選等級的數值由高到低，同值依角色章節順序；橫條長度以該能力值的共同刻度計算。

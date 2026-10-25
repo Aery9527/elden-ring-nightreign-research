@@ -698,6 +698,8 @@
       "levelSingle": "單一角色",
       "levelCompare": "全部角色比較",
       "rightAxis": "（右軸）",
+      "overlap": "重疊線段",
+      "levelUnit": "級",
       "valueTable": "數值表（等級 1–15）",
       "levels": "各等級能力值",
       "level": "等級",

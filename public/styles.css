@@ -644,6 +644,11 @@ td.caption {
   gap: 6px;
 }
 
+.overlap-note {
+  margin: 0 0 4px;
+  color: var(--muted);
+}
+
 .level-chart {
   display: block;
   overflow: visible;
