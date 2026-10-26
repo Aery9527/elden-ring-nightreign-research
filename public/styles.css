@@ -160,6 +160,30 @@ main {
   display: none;
 }
 
+/* 「全部展開／全部收合」：章節清單的第一項，以分隔線與章節連結區隔 */
+.chapters .fold-all {
+  display: flex;
+  gap: 4px;
+  padding-right: 8px;
+  border-right: 1px solid var(--border);
+}
+
+.fold-all button {
+  padding: 0 6px;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.fold-all button:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 640px), screen and (max-height: 500px) {
   .site-header .chapters {
     position: relative;
@@ -204,11 +228,26 @@ main {
     max-height: calc(100vh - var(--header-h, 52px) - 16px);
     max-height: calc(100dvh - var(--header-h, 52px) - 16px);
     overflow-y: auto;
-    padding: 6px 0;
+    padding: 0 0 6px;
     border: 1px solid var(--border);
     border-radius: 8px;
     background: var(--surface);
     box-shadow: 0 2px 8px oklch(0 0 0 / 0.15);
+  }
+
+  /* 展開與收合按鈕固定在選單頂端，捲動清單時不會捲走 */
+  .chapters .fold-all {
+    position: sticky;
+    top: 0;
+    padding: 0 6px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .fold-all button {
+    flex: 1;
+    padding: 10px 6px;
   }
 
   .chapters.open a {
@@ -254,6 +293,43 @@ h2 {
 h3 {
   margin: 32px 0 12px;
   font-size: 1.15rem;
+}
+
+/* 章節收合 (nav.js)：標題整列是按鈕，三角形表示收起或展開；收起的內容不留下邊距 */
+.fold-toggle {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.fold-toggle::before {
+  content: "▸";
+  color: var(--muted);
+  font-size: 0.9em;
+  transition: transform 0.15s;
+}
+
+.fold-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.fold-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+h2:has(> .fold-toggle[aria-expanded="false"]) {
+  margin: 24px 0 0;
+}
+
+/* 收起的元素原本的邊距與框線 (例如 .table-wrap) 不保留 */
+[data-folded][hidden] {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
 }
 
 a {

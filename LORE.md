@@ -24,6 +24,10 @@
   - A section moved to another page gets an entry in the old-anchor table (`moved`) of [public/nav.js](public/nav.js).
   - A section removed or merged within a page leaves its old id on the element that takes over its content.
 - Every page loads [public/nav.js](public/nav.js) before [public/render.js](public/render.js) and uses the shared `<header class="site-header">` markup. nav.js builds the header from the page's `h2` chapters and `h3` headings that have an `id`, so pages MUST divide their content into `h2` chapters, every section heading MUST have an `id`, and pages MUST NOT keep a hand-written table of contents.
+- nav.js collapses every chapter by default: a `section` whose only direct `h2` is its first child. The HTML keeps the full content; nav.js wraps the `h2` text in a toggle button and hides the section's other children with `hidden="until-found"`. On a page with collapsible chapters, the chapter list starts with 「全部展開」 and 「全部收合」. A same-page link, a URL anchor, back/forward, or an in-page search match inside a collapsed chapter expands it. Without JavaScript every chapter stays expanded.
+  - A chapter's content MUST sit inside its `section`, after its `h2`, to fold with it. Content before the first chapter always stays visible. A `section` with several direct `h2` (the home page) does not fold.
+  - The browser skips rendering the content of a collapsed chapter, so browser interactions MUST NOT depend on the size or position of that content before it is expanded (the level charts redraw when their width changes).
+  - nav.js does not expand chapters for printing, and browsers without `hidden="until-found"` cannot search the hidden content of collapsed chapters; use 「全部展開」 first when needed.
 - Every cited source is listed once in the 資料來源 chapter (`#sources`) of [public/index.html](public/index.html); when a page starts citing a new source, add or update its row there. Topic pages MUST NOT have their own sources section, and relic tables MUST NOT have a source column. Inline citation links and the source names of conflicting candidates stay on the pages.
 
 ## Data

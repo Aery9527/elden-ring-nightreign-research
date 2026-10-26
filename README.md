@@ -19,7 +19,7 @@
 | [public/data/common.json](public/data/common.json) | 所有頁面共用的遊戲版本、能力值、圖示、角色、標籤與來源。 |
 | `public/data/relics/<category>.json` | 遊戲內遺物篩選各大類 (`general`、`character`、`armament`、`demerit`) 的分類定義與遺物效果，由產生腳本輸出。 |
 | [public/render.js](public/render.js) | 依頁面宣告載入資料檔並填入頁面佔位元素、產生遺物詞條表；建置時產生靜態內容；瀏覽器開啟 `dist/` 時只處理角色頁圖表與錨點，開啟 `public/` 模板時在瀏覽器完整渲染。 |
-| [public/nav.js](public/nav.js) | 在固定頁首顯示讀者目前所在的頁面、章節與小節。 |
+| [public/nav.js](public/nav.js) | 在固定頁首顯示讀者目前所在的頁面、章節與小節；預設收起各章節，提供全部展開與全部收合。 |
 | [tools/build-site.mjs](tools/build-site.mjs) | 以 jsdom 執行 render.js，把 `public/` 建置成 `dist/`；`--check` 只比對不寫檔。 |
 | `dist/` | 建置產物，即 Netlify 發佈的內容，不手動編輯。 |
 | [.githooks/pre-push](.githooks/pre-push) | push 到 `main` 前確認 `dist/` 是目前原始碼的建置結果。 |
