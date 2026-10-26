@@ -103,7 +103,7 @@ render.js 沒有使用時間或亂數。輸入 bytes、lockfile 鎖定的依賴�
 `.githooks/pre-push`，只檢查推送到 `refs/heads/main` 的更新：
 
 - 被推送的 commit 必須是目前的 HEAD，否則拒絕（例如 `git push origin 舊分支:main`）。刪除 main 的推送一律拒絕。
-- 建置輸入與產物沒有未 commit 的變更：`public/`、`dist/`、`tools/build-site.mjs`、`tools/package.json`、`tools/package-lock.json`、`.gitattributes`。
+- 建置輸入與產物沒有未 commit 的變更：`public/`、`dist/`、`tools/build-site.mjs`、`tools/package.json`、`tools/package-lock.json`、`.gitattributes`（未追蹤與被 ignore 的檔案也算；`build-site.mjs` 不匯入其他工具檔，所以這就是全部建置輸入）。無法取得狀態時拒絕。
 - `npm run check` 通過。
 - 其他分支的推送不檢查。hook 只能擋本機 push，不涵蓋在網頁上的合併。
 

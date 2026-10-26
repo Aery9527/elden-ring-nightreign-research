@@ -15,6 +15,7 @@
 - [tools/build-site.mjs](tools/build-site.mjs) 以 jsdom 對每個 `public/*.html` 執行 render.js，把渲染後的頁面寫到 `dist/`，`public/` 的其他檔案逐 byte 複製過去。以 `npm --prefix tools ci` 安裝依賴，`npm --prefix tools run build` 建置，`npm --prefix tools run check` 驗證。
 - `dist/` 是產物，嚴禁手動編輯。每個 commit 的 `dist/` 必須等於該 commit 的 `public/`、build 腳本與鎖定依賴的建置結果，因此修改其中任何一項時，必須在同一個 commit 提交重新建置的 `dist/`。渲染錯誤或 check 回報的差異必須修正，嚴禁繞過。
 - 在本機合併進 `main`，並在合併結果上通過 check 後才 push `main`。嚴禁透過主機網站上的合併發佈，因為那裡不會執行本機檢查。
+- 每個 clone 必須執行一次 `git config core.hooksPath .githooks` 啟用 pre-push hook。[.githooks/pre-push](.githooks/pre-push) 在推送到 `main` 的 commit 不是目前的 HEAD、建置輸入或 `dist/` 有未 commit 的變更，或 check 失敗時拒絕推送；嚴禁繞過 (例如 `--no-verify`)。
 - 本機預覽必須透過 HTTP 伺服器，不能以 `file://` 開啟：`python -m http.server -d public` 在瀏覽器以 `fetch` 渲染模板，`python -m http.server -d dist` 提供發佈的頁面。
 - render.js 分為三段：載入資料、靜態渲染、瀏覽器互動。build 只執行前兩段，因此靜態渲染嚴禁依賴排版、捲動、導覽或事件。發佈的頁面 (`<html data-prerendered>`) 只執行瀏覽器互動，且只為互動載入資料。
 - 新增主題頁面時，在首頁 [public/index.html](public/index.html) 該主題的表格新增一列；新主題在首頁另立一個 `h2` 章節。

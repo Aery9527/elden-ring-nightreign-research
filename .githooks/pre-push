@@ -1,0 +1,38 @@
+#!/bin/sh
+# push 到 main 之前確認發佈的 dist/ 等於建置結果；其他分支不檢查。
+# 每個 clone 啟用一次：git config core.hooksPath .githooks
+# 本 hook 只檢查、不自動建置：push 進行中無法再加入新的 commit。
+
+check_main=0
+while read -r local_ref local_oid remote_ref remote_oid; do
+  [ "$remote_ref" = "refs/heads/main" ] || continue
+  case "$local_oid" in
+    *[!0]*) ;;
+    *) echo "pre-push：拒絕刪除 main。" >&2; exit 1 ;;
+  esac
+  # check 檢查的是工作目錄，所以推送到 main 的必須是目前 checkout 的 commit
+  if [ "$local_oid" != "$(git rev-parse HEAD)" ]; then
+    echo "pre-push：推送到 main 的 commit 必須是目前的 HEAD，請先 checkout 該 commit 再 push。" >&2
+    exit 1
+  fi
+  check_main=1
+done
+[ "$check_main" = 1 ] || exit 0
+
+# 工作目錄中未 commit 的建置輸入或產物，不能替已 commit 的版本背書
+# 未追蹤與被 ignore 的檔案也算 (build 會複製 public/ 的全部檔案)，不受 status.showUntrackedFiles 設定影響
+if ! dirty=$(git status --porcelain --untracked-files=all --ignored -- public dist tools/build-site.mjs tools/package.json tools/package-lock.json .gitattributes); then
+  echo "pre-push：無法取得工作目錄狀態，拒絕推送。" >&2
+  exit 1
+fi
+if [ -n "$dirty" ]; then
+  echo "pre-push：下列建置輸入或產物有未 commit 的變更，請先 commit 或還原：" >&2
+  echo "$dirty" >&2
+  exit 1
+fi
+
+if ! npm --prefix "$(git rev-parse --show-toplevel)/tools" run --silent check; then
+  echo "pre-push：dist/ 不是目前原始碼的建置結果（或建置失敗）。請執行 npm --prefix tools run build，commit dist/ 後再 push。" >&2
+  echo "（尚未安裝依賴時，先執行 npm --prefix tools ci。）" >&2
+  exit 1
+fi

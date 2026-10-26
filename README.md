@@ -2,6 +2,7 @@
 
 - 集中記錄《艾爾登法環 黑夜君臨》（ELDEN RING NIGHTREIGN）的能力值、遊戲機制與研究來源。
 - 網站原始碼位於 `public/`；發佈前在本機建置成含完整內容的靜態頁 `dist/`，連同原始碼一起 commit。Netlify 依 `netlify.toml` 直接發佈 `dist/`，不執行建置指令。
+- 第一次 clone 後執行 `git config core.hooksPath .githooks`，啟用 push 到 `main` 前的檢查 ([.githooks/pre-push](.githooks/pre-push))。
 - 建置 (需要 Node.js)：第一次先 `npm --prefix tools ci` 安裝依賴，之後 `npm --prefix tools run build` 產生 `dist/`；`npm --prefix tools run check` 檢查 `dist/` 是否與原始碼一致。
 - 本機預覽：`python -m http.server -d dist` 預覽發佈的頁面；`python -m http.server -d public` 預覽未建置的模板 (由瀏覽器載入資料渲染)。再開啟 `http://localhost:8000/`。直接開啟本機檔案時，模板無法顯示數值，`dist/` 的角色頁圖表與法術錨點轉址也無法運作。
 
@@ -21,6 +22,7 @@
 | [public/nav.js](public/nav.js) | 在固定頁首顯示讀者目前所在的頁面、章節與小節。 |
 | [tools/build-site.mjs](tools/build-site.mjs) | 以 jsdom 執行 render.js，把 `public/` 建置成 `dist/`；`--check` 只比對不寫檔。 |
 | `dist/` | 建置產物，即 Netlify 發佈的內容，不手動編輯。 |
+| [.githooks/pre-push](.githooks/pre-push) | push 到 `main` 前確認 `dist/` 是目前原始碼的建置結果。 |
 | [tools/import-relics.mjs](tools/import-relics.mjs) | 由鎖定版本的遊戲參數、遊戲文字與社群資料集產生 `public/data/relics/*.json`，不在網站上發佈。 |
 
 ## 資料記錄方式

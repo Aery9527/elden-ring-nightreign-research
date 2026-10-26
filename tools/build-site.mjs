@@ -6,10 +6,12 @@
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, sep } from "node:path";
+import { fileURLToPath } from "node:url";
 import { gzipSync } from "node:zlib";
 import { JSDOM, VirtualConsole } from "jsdom";
-import { ROOT } from "./sources.mjs";
 
+// 不匯入其他工具檔：建置輸入只有 public/、本檔與 tools/ 的 package 檔 (.githooks/pre-push 依此檢查)
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const PUBLIC = join(ROOT, "public");
 const DIST = join(ROOT, "dist");
 const RENDER_JS = readFileSync(join(PUBLIC, "render.js"), "utf8");
