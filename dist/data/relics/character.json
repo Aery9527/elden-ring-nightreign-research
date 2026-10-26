@@ -1,0 +1,2327 @@
+{
+  "category": {
+    "id": "character",
+    "gameId": "10",
+    "name": {
+      "zh": "角色專屬",
+      "en": "Character-specific"
+    },
+    "subcategories": [
+      {
+        "id": "character-wylder",
+        "gameId": "10000",
+        "name": {
+          "zh": "追蹤者",
+          "en": "Wylder"
+        },
+        "character": "wylder"
+      },
+      {
+        "id": "character-guardian",
+        "gameId": "10010",
+        "name": {
+          "zh": "守護者",
+          "en": "Guardian"
+        },
+        "character": "guardian"
+      },
+      {
+        "id": "character-ironeye",
+        "gameId": "10020",
+        "name": {
+          "zh": "鐵之眼",
+          "en": "Ironeye"
+        },
+        "character": "ironeye"
+      },
+      {
+        "id": "character-duchess",
+        "gameId": "10030",
+        "name": {
+          "zh": "女爵",
+          "en": "Duchess"
+        },
+        "character": "duchess"
+      },
+      {
+        "id": "character-raider",
+        "gameId": "10040",
+        "name": {
+          "zh": "無賴",
+          "en": "Raider"
+        },
+        "character": "raider"
+      },
+      {
+        "id": "character-revenant",
+        "gameId": "10050",
+        "name": {
+          "zh": "復仇者",
+          "en": "Revenant"
+        },
+        "character": "revenant"
+      },
+      {
+        "id": "character-recluse",
+        "gameId": "10060",
+        "name": {
+          "zh": "隱士",
+          "en": "Recluse"
+        },
+        "character": "recluse"
+      },
+      {
+        "id": "character-executor",
+        "gameId": "10070",
+        "name": {
+          "zh": "執行者",
+          "en": "Executor"
+        },
+        "character": "executor"
+      },
+      {
+        "id": "character-scholar",
+        "gameId": "10080",
+        "name": {
+          "zh": "學者",
+          "en": "Scholar"
+        },
+        "character": "scholar"
+      },
+      {
+        "id": "character-undertaker",
+        "gameId": "10090",
+        "name": {
+          "zh": "送葬者",
+          "en": "Undertaker"
+        },
+        "character": "undertaker"
+      }
+    ]
+  },
+  "effects": {
+    "wylder-art-gauge-greatly-filled-when-ability-is-activated": {
+      "subcategory": "character-wylder",
+      "gameId": "11002",
+      "name": {
+        "zh": "【追蹤者】發動能力時，能累積絕活量表",
+        "en": "[Wylder] Art gauge greatly filled when ability is activated"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "wylder"
+      ],
+      "relics": [
+        {
+          "zh": "銀色淚滴",
+          "en": "Silver Tear",
+          "icon": "relic-silver-tear"
+        }
+      ],
+      "detail": {
+        "zh": "發動能力時，獲得 18 絕活量表累積量。",
+        "en": "Upon activating the ability, gain 18 ultimate charge",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "specific-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
+    },
+    "wylder-art-gauge-greatly-filled-when-ability-is-activated-7032400": {
+      "subcategory": "character-wylder",
+      "gameId": "7032400",
+      "name": {
+        "zh": "【追蹤者】發動能力時，能累積絕活量表",
+        "en": "[Wylder] Art gauge greatly filled when ability is activated"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "wylder"
+      ],
+      "detail": {
+        "zh": "觸發能力（Sixth Sense）時，獲得 18% 絕活量表累積量。",
+        "en": "Upon triggering Sixth Sense, gain 18% ultimate charge"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "wylder-standard-attacks-enhanced-with-fiery-follow-ups-when-using-character-skill-greatsword-only": {
+      "subcategory": "character-wylder",
+      "gameId": "7020000",
+      "name": {
+        "zh": "【追蹤者】發動技藝時，輕攻擊能使出纏繞火焰的追加攻擊（僅限大劍）",
+        "en": "[Wylder] Standard attacks enhanced with fiery follow-ups when using Character Skill (greatsword only)"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "wylder"
+      ],
+      "detail": {
+        "zh": "技藝（Claw Shot）命中後進行輕攻擊，觸發專屬追加攻擊：為所用大劍附加 12 火屬性傷害增益，持續 20 秒，並造成 [大劍攻擊力 ×1.55] 傷害、16.5 削韌，累積 10 accumuVal。",
+        "en": "Performing a light attack after landing Claw Shot triggers a unique followup, applying a buff of 12 fire damage for 20 seconds to the greatsword used and dealing [1.55x greatsword AR] damage, 16.5 stance damage, and building up 10 accumuVal"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "wylder-1-additional-character-skill-use": {
+      "subcategory": "character-wylder",
+      "gameId": "11000",
+      "name": {
+        "zh": "【追蹤者】技藝的使用次數 +1",
+        "en": "[Wylder] +1 additional Character Skill use"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "wylder"
+      ],
+      "relics": [
+        {
+          "zh": "追蹤者的耳環",
+          "en": "The Wylder's Earring",
+          "icon": "relic-the-wylder-s-earring"
+        }
+      ],
+      "availability": "specific-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
+    },
+    "wylder-1-additional-character-skill-use-7033200": {
+      "subcategory": "character-wylder",
+      "gameId": "7033200",
+      "name": {
+        "zh": "【追蹤者】技藝的使用次數 +1",
+        "en": "[Wylder] +1 additional Character Skill use"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "wylder"
+      ],
+      "detail": {
+        "zh": "讓追蹤者可額外儲存 +1 次技藝（Claw Shot）使用次數。",
+        "en": "Allows Wylder to store +1 additional use of Claw Shot"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "wylder-art-activation-spreads-fire-in-area": {
+      "subcategory": "character-wylder",
+      "gameId": "7010500",
+      "name": {
+        "zh": "【追蹤者】發動絕活時，能燃起火焰、蔓延周圍",
+        "en": "[Wylder] Art activation spreads fire in area"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "wylder"
+      ],
+      "detail": {
+        "zh": "絕活（Onslaught Stake）改為在地面留下火焰區域，等級 1 時造成 31 火屬性傷害，等級 15 時造成 63 火屬性傷害（隨等級成長的技藝與絕活，從等級 1 至等級 15 線性成長）。",
+        "en": "Onslaught Stake now leaves a pool of fire on the ground, dealing 31 fire damage at level 1 and 63 fire damage at level 15 (skills and ultimates that scale with level scale linearly from level 1 to level 15)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "wylder-improved-mind-reduced-vigor": {
+      "subcategory": "character-wylder",
+      "gameId": "6640000",
+      "name": {
+        "zh": "【追蹤者】提升集中力，但降低生命力",
+        "en": "[Wylder] Improved Mind, Reduced Vigor"
+      },
+      "icon": "fp-up",
+      "characters": [
+        "wylder"
+      ],
+      "detail": {
+        "zh": "等級 12-15：集中力 +10、生命力 -5；等級 1：集中力 +1、生命力 -1（等級 1-12 間線性成長）。",
+        "en": "+10 mind, -5 vigor at level 12-15\n+1 mind, -1 vigor at level 1\n(scales linearly from level 1-12)",
+        "penalties": [
+          "生命力 -5",
+          "生命力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "mind"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "wylder-improved-intelligence-and-faith-reduced-strength-and-dexterity": {
+      "subcategory": "character-wylder",
+      "gameId": "6640100",
+      "name": {
+        "zh": "【追蹤者】提升智力、信仰，但降低力氣、靈巧",
+        "en": "[Wylder] Improved Intelligence and Faith, Reduced Strength and Dexterity"
+      },
+      "icon": "spell-up",
+      "characters": [
+        "wylder"
+      ],
+      "detail": {
+        "zh": "等級 12-15：智力 +15、信仰 +15、力氣 -7、靈巧 -5；等級 1：智力 +1、信仰 +1、力氣 -1、靈巧 -1。",
+        "en": "+15 intellignce, +15 faith, -7 strength, - 5 dex at level 12-15\n+1 intelligence, +1 faith, -1 strength, -1 dexterity at level 1",
+        "penalties": [
+          "力氣 -7",
+          "靈巧 -5",
+          "力氣 -1",
+          "靈巧 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "strength",
+        "dexterity",
+        "intelligence",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "wylder-character-skill-inflicts-blood-loss": {
+      "subcategory": "character-wylder",
+      "gameId": "6500000",
+      "name": {
+        "zh": "【追蹤者】技藝會附加引發異常狀態出血的效果",
+        "en": "[Wylder] Character Skill inflicts Blood Loss"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "wylder"
+      ],
+      "detail": {
+        "zh": "技藝（Claw Shot）射出時額外累積 6 accumuVal 與 60 出血累積值，拉回時額外累積 6 accumuVal 與 55 出血累積值。",
+        "en": "Claw Shot builds up an additional 6 accumuVal and 60 blood loss when going out and builds up an additional 6 accumuVal and 55 blood loss when pulling"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "guardian-successful-guards-send-out-shockwaves-while-ability-is-active": {
+      "subcategory": "character-guardian",
+      "gameId": "7033400",
+      "name": {
+        "zh": "【守護者】在能力發動期間，防禦成功時能形成衝擊波",
+        "en": "[Guardian] Successful guards send out shockwaves while ability is active"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "guardian"
+      ],
+      "detail": {
+        "zh": "能力（Steel Guard）發動期間防禦時，發出近距離衝擊波，造成 100 基礎物理傷害（每次發動冷卻：3 秒）。",
+        "en": "Upon guarding while Steel Guard is active, fire a close range shockwave, dealing 100 base physical damage (cooldown per activation: 3 seconds)",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "guardian-increased-duration-for-character-skill": {
+      "subcategory": "character-guardian",
+      "gameId": "7011000",
+      "name": {
+        "zh": "【守護者】延長技藝的有效時間",
+        "en": "[Guardian] Increased duration for Character Skill"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "guardian"
+      ],
+      "detail": {
+        "zh": "技藝（Whirlwind）改為在中等範圍內持續造成傷害：每次命中造成物理傷害，等級 1 時 13 點、等級 15 時 26 點；並每 0.5 秒造成 0.75 削韌。未蓄力時持續 4 秒，蓄力時持續 7 秒（命中時傷害等級為 2）。",
+        "en": "Whirlwind now deals constant damage in a medium radius, dealing 13 physical damage per hit at level 1 and 26 physical damage per hit at level 15 as well as 0.75 stance damage every 0.5 seconds, lasting 4 seconds if uncharged and 7 seconds if charged (damage level of 2 on hit)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "guardian-slowly-restores-nearby-allies-hp-while-art-is-active": {
+      "subcategory": "character-guardian",
+      "gameId": "12002",
+      "name": {
+        "zh": "【守護者】發動絕活時，能緩慢恢復周圍我方人物的 HP",
+        "en": "[Guardian] Slowly restores nearby allies' HP while Art is active"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "guardian"
+      ],
+      "relics": [
+        {
+          "zh": "魔女胸針",
+          "en": "Witch's Brooch",
+          "icon": "relic-witch-s-brooch"
+        },
+        {
+          "zh": "碎裂的魔女胸針",
+          "en": "Cracked Witch's Brooch",
+          "icon": "relic-cracked-witch-s-brooch"
+        }
+      ],
+      "availability": "specific-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
+    },
+    "guardian-slowly-restores-nearby-allies-hp-while-art-is-active-7012000": {
+      "subcategory": "character-guardian",
+      "gameId": "7012000",
+      "name": {
+        "zh": "【守護者】發動絕活時，能緩慢恢復周圍我方人物的 HP",
+        "en": "[Guardian] Slowly restores nearby allies' HP while Art is active"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "guardian"
+      ],
+      "detail": {
+        "zh": "絕活（Wings of Salvation）維持防禦架勢期間，持續為自身與周圍我方人物恢復 [HP 上限 ×0.1 + 12] HP。",
+        "en": "While Wings of Salvation is being held in its defensive stance, repeatedly heal self and nearby allies by [0.1x max HP + 12] HP",
+        "sources": [
+          "game-params",
+          "community-sheet"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "guardian-creates-whirlwind-when-charging-halberd-attacks": {
+      "subcategory": "character-guardian",
+      "gameId": "7011600",
+      "name": {
+        "zh": "【守護者】以戟蓄力攻擊時，能引發旋風",
+        "en": "[Guardian] Creates whirlwind when charging halberd attacks"
+      },
+      "icon": "basic-action",
+      "characters": [
+        "guardian"
+      ],
+      "detail": {
+        "zh": "以戟命中蓄力攻擊時，引發小型旋風，造成物理傷害（等級 1 時 36 點、等級 15 時 71 點）及 5 削韌。",
+        "en": "Landing a charged attack with a halberd triggers a small Whirlwind, dealing 36 physical damage at level 1 and 71 physical damage at level 15 as well as 5 stance damage"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "guardian-improved-strength-and-dexterity-reduced-vigor": {
+      "subcategory": "character-guardian",
+      "gameId": "6641000",
+      "name": {
+        "zh": "【守護者】提升力氣、靈巧，但降低生命力",
+        "en": "[Guardian] Improved Strength and Dexterity, Reduced Vigor"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "guardian"
+      ],
+      "detail": {
+        "zh": "等級 12-15：力氣 +9、靈巧 +19、生命力 -8；等級 1：力氣 +1、靈巧 +2、生命力 -1。",
+        "en": "+9 strength, +19 dexterity, -8 vigor at level 12-15\n+1 strength, +2 dexterity, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -8",
+          "生命力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "strength",
+        "dexterity"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "guardian-improved-mind-and-faith-reduced-vigor": {
+      "subcategory": "character-guardian",
+      "gameId": "6641100",
+      "name": {
+        "zh": "【守護者】提升集中力、信仰，但降低生命力",
+        "en": "[Guardian] Improved Mind and Faith, Reduced Vigor"
+      },
+      "icon": "spell-up",
+      "characters": [
+        "guardian"
+      ],
+      "detail": {
+        "zh": "等級 12-15：集中力 +8、信仰 +17、生命力 -6；等級 1：集中力 +1、信仰 +2、生命力 -1。",
+        "en": "+8 mind, +17 faith, -6 vigor at level 12-15\n+1 mind, +2 faith, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -6",
+          "生命力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "mind",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "guardian-character-skill-boosts-damage-negation-of-nearby-allies": {
+      "subcategory": "character-guardian",
+      "gameId": "6500100",
+      "name": {
+        "zh": "【守護者】發動技藝時，能提升周圍我方人物的減傷率",
+        "en": "[Guardian] Character Skill Boosts Damage Negation of Nearby Allies"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "guardian"
+      ],
+      "detail": {
+        "zh": "技藝（Whirlwind）使周圍我方人物受到的所有來源傷害 ×0.82，持續 30 秒。",
+        "en": "Whirlwind buffs nearby allies with 0.82x damage taken from all sources for 30 seconds"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "ironeye-1-additional-character-skill-use": {
+      "subcategory": "character-ironeye",
+      "gameId": "7270100",
+      "name": {
+        "zh": "【鐵之眼】技藝的使用次數 +1",
+        "en": "[Ironeye] +1 additional Character Skill use"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "ironeye"
+      ],
+      "detail": {
+        "zh": "讓鐵之眼可額外儲存 +1 次技藝（Marking）使用次數。",
+        "en": "Allows Ironeye to store +1 additional use of Marking"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "ironeye-art-charge-activation-adds-poison-effect": {
+      "subcategory": "character-ironeye",
+      "gameId": "7034600",
+      "name": {
+        "zh": "【鐵之眼】蓄力發動絕活時，附加異常狀態中毒",
+        "en": "[Ironeye] Art Charge Activation Adds Poison Effect"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "ironeye"
+      ],
+      "detail": {
+        "zh": "絕活（Single Shot）的箭矢命中時，施加 300 中毒累積值。",
+        "en": "Single Shot applies 300 poison buildup when hitting with the arrow"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "ironeye-boosts-thrusting-counterattacks-after-executing-art": {
+      "subcategory": "character-ironeye",
+      "gameId": "7034700",
+      "name": {
+        "zh": "【鐵之眼】發動絕活後，強化突刺反擊",
+        "en": "[Ironeye] Boosts thrusting counterattacks after executing Art"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "ironeye"
+      ],
+      "detail": {
+        "zh": "絕活（Single Shot）使自身突刺反擊傷害 ×1.2，持續 30 秒。",
+        "en": "Single Shot buffs self with 1.2x damage to thrusting counterattacks for 30 seconds"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "ironeye-extends-duration-of-weak-point": {
+      "subcategory": "character-ironeye",
+      "gameId": "7280000",
+      "name": {
+        "zh": "【鐵之眼】延長弱點顯露的時間",
+        "en": "[Ironeye] Extends duration of weak point"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "ironeye"
+      ],
+      "detail": {
+        "zh": "技藝（Marking）造成的弱點顯露時間延長至 22 秒。",
+        "en": "Increases the duration of the weak point from Marking to 22 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "ironeye-improved-vigor-and-strength-reduced-dexterity": {
+      "subcategory": "character-ironeye",
+      "gameId": "6642100",
+      "name": {
+        "zh": "【鐵之眼】提升生命力、力氣，但降低靈巧",
+        "en": "[Ironeye] Improved Vigor and Strength, Reduced Dexterity"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "ironeye"
+      ],
+      "detail": {
+        "zh": "等級 12-15：生命力 +5、力氣 +20、靈巧 -13；等級 1：生命力 +1、力氣 +2、靈巧 -2。",
+        "en": "+5 vigor, +20 strength, -13 dexterity at level 12-15\n+1 vigor, +2 strength, -2 dexterity at level 1",
+        "penalties": [
+          "靈巧 -13",
+          "靈巧 -2"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "strength",
+        "dexterity"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "ironeye-improved-arcane-reduced-dexterity": {
+      "subcategory": "character-ironeye",
+      "gameId": "6642000",
+      "name": {
+        "zh": "【鐵之眼】提升感應，但降低靈巧",
+        "en": "[Ironeye] Improved Arcane, Reduced Dexterity"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "ironeye"
+      ],
+      "detail": {
+        "zh": "等級 12-15：感應 +15、靈巧 -9；等級 1：感應 +2、靈巧 -1。",
+        "en": "+15 arcane, -9 dexterity at level 12-15\n+2 arcane, -1 dexterity at level 1",
+        "penalties": [
+          "靈巧 -9",
+          "靈巧 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "dexterity",
+        "arcane"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "ironeye-character-skill-inflicts-heavy-poison-damage-on-poisoned-enemies": {
+      "subcategory": "character-ironeye",
+      "gameId": "6500200",
+      "name": {
+        "zh": "【鐵之眼】技藝會附加引發異常狀態中毒的效果對上陷入中毒的敵人，能給予大傷害",
+        "en": "[Ironeye] Character Skill Inflicts Heavy Poison Damage on Poisoned Enemies"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "ironeye"
+      ],
+      "detail": {
+        "zh": "技藝（Marking）額外累積 6 accumuVal 與 70 中毒累積值；若目標已中毒，則受到 [250 + HP 上限 ×0.0025] 傷害。",
+        "en": "Marking builds up an additional 6 accumuVal and 70 poison buildup, and if target is poisoned, they take [250 + 0.0025x max HP] damage"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "duchess-improved-character-skill-attack-power": {
+      "subcategory": "character-duchess",
+      "gameId": "7290000",
+      "name": {
+        "zh": "【女爵】提升技藝造成的傷害",
+        "en": "[Duchess] Improved Character Skill Attack Power"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "duchess"
+      ],
+      "detail": {
+        "zh": "技藝（Restage）改為重現過去 3 秒內造成的直接傷害、削韌與異常狀態累積值 ×0.6，原為 ×0.5。",
+        "en": "Restage now repeats 0.6x direct damage, stance damage, and status buildup dealt over the past 3 seconds instead of 0.5x"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "duchess-defeating-enemies-while-art-is-active-ups-attack-power": {
+      "subcategory": "character-duchess",
+      "gameId": "7032700",
+      "name": {
+        "zh": "【女爵】在絕活發動期間，打倒敵人時能提升攻擊力",
+        "en": "[Duchess] Defeating enemies while Art is active ups attack power"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "duchess"
+      ],
+      "detail": {
+        "zh": "使用絕活（Finale）後的 12.5 秒內，每次打倒敵人時，自身所有來源的傷害 ×1.15，持續 30 秒；每次擊殺的增益以乘算疊加，且各自獨立計時。",
+        "en": "Upon using Finale, for the next 12.5 seconds, enemies killed buff self with 1.15x damage of all sources for 30 seconds, stacking multiplicatively with each kill and with every buff having an independent timer"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "duchess-reprise-events-upon-nearby-enemies-by-landing-the-final-blow-of-a-chain-attack-with-dagger": {
+      "subcategory": "character-duchess",
+      "gameId": "7010700",
+      "name": {
+        "zh": "【女爵】短劍連擊的最後攻擊命中時，能對著周圍的敵人，再次上演最近做過的行動",
+        "en": "[Duchess] Reprise events upon nearby enemies by landing the final blow of a chain attack with dagger"
+      },
+      "icon": "basic-action",
+      "characters": [
+        "duchess"
+      ],
+      "detail": {
+        "zh": "以短劍命中輕攻擊連擊或雙手各持攻擊連擊的最後一擊時，觸發技藝（Restage），重現過去 3 秒內造成的直接傷害、削韌與異常狀態累積值 ×0.4（會覆蓋最近使用的技藝效果；觸發後若再使用技藝，此效果會被覆蓋）。",
+        "en": "Landing the final attack of a light attack chain or powerstanced attack chain with daggers triggers Restage, repeating 0.4x of direct damage, stance damage, and status buildup dealt over the past 3 seconds (overriding a recently used Restage skill and being overrided if Restage skill is used after it's triggered)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "duchess-become-difficult-to-spot-and-silence-footsteps-after-landing-critical-from-behind": {
+      "subcategory": "character-duchess",
+      "gameId": "7031800",
+      "name": {
+        "zh": "【女爵】從背後使出致命一擊後自己的身影會變得難以辨識，並消除腳步聲",
+        "en": "[Duchess] Become difficult to spot and silence footsteps after landing critical from behind"
+      },
+      "icon": "basic-action",
+      "characters": [
+        "duchess"
+      ],
+      "detail": {
+        "zh": "使出背刺時，施加隱匿效果：敵人對自身的視覺 ×0.01、聽覺 ×0.00，持續 10 秒。（原文註記：待進一步測試以理解此效果的實際意義）",
+        "en": "Upon performing a backstab, apply a concealment effect, adjust enemy vision of self by 0.01x and enemy hearing of self by 0.00x for 10 seconds \n(TODO: test more to understand what this actually means)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "duchess-improved-vigor-and-strength-reduced-mind": {
+      "subcategory": "character-duchess",
+      "gameId": "6643000",
+      "name": {
+        "zh": "【女爵】提升生命力、力氣，但降低集中力",
+        "en": "[Duchess] Improved Vigor and Strength, Reduced Mind"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "duchess"
+      ],
+      "detail": {
+        "zh": "等級 12-15：生命力 +3、力氣 +24、集中力 -14；等級 1：生命力 +1、力氣 +2、集中力 -2。",
+        "en": "+3 vigor, +24 strength, -14 mind at level 12-15\n+1 vigor, +2 strength, -2 mind at level 1",
+        "penalties": [
+          "集中力 -14",
+          "集中力 -2"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "mind",
+        "strength"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "duchess-improved-mind-and-faith-reduced-intelligence": {
+      "subcategory": "character-duchess",
+      "gameId": "6643100",
+      "name": {
+        "zh": "【女爵】提升集中力、信仰，但降低智力",
+        "en": "[Duchess] Improved Mind and Faith, Reduced Intelligence"
+      },
+      "icon": "spell-up",
+      "characters": [
+        "duchess"
+      ],
+      "detail": {
+        "zh": "等級 12-15：集中力 +3、信仰 +13、智力 -5；等級 1：集中力 +1、信仰 +2、智力 -1。",
+        "en": "+3 mind, +13 faith, -5 intelligence at level 12-15\n+1 mind, +2 faith, -1 intelligence at level 1",
+        "penalties": [
+          "智力 -5",
+          "智力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "mind",
+        "intelligence",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "duchess-use-character-skill-for-brief-invulnerability": {
+      "subcategory": "character-duchess",
+      "gameId": "6500300",
+      "name": {
+        "zh": "【女爵】發動技藝時，能進入短暫無敵狀態",
+        "en": "[Duchess] Use Character Skill for Brief Invulnerability"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "duchess"
+      ],
+      "detail": {
+        "zh": "技藝（Restage）給予無敵效果，0.4 秒內不會被命中或受到傷害。",
+        "en": "Restage grants invulnerability, preventing the user from getting hit or taking damage for 0.4 seconds"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "raider-damage-taken-while-using-character-skill-improves-attack-power-and-stamina": {
+      "subcategory": "character-raider",
+      "gameId": "7031300",
+      "name": {
+        "zh": "【無賴】在技藝發動期間，受到攻擊時能提升攻擊力與精力上限",
+        "en": "[Raider] Damage taken while using Character Skill improves attack power and stamina"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "raider"
+      ],
+      "detail": {
+        "zh": "使用技藝（Retaliate）期間受到攻擊時，自身所有來源的傷害 ×1.1、精力上限 ×1.2，持續 20 秒。",
+        "en": "Getting hit while using Retaliate buffs self with 1.1x damage of all sources and 1.2x maximum stamina for 20 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "raider-duration-of-ultimate-art-extended": {
+      "subcategory": "character-raider",
+      "gameId": "7310000",
+      "name": {
+        "zh": "【無賴】延長絕活的有效時間",
+        "en": "[Raider] Duration of Ultimate Art extended"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "raider"
+      ],
+      "detail": {
+        "zh": "絕活「圖騰碑石」及其施加的遺物增益持續時間從 20 秒延長至 30 秒，並將對所有非魔法、禱告來源的傷害 ×1.15 增益從 30 秒延長至 45 秒。（原文註記：待核實圖騰碑石持續時間與攻擊力增益持續時間的差異）",
+        "en": "Increases the duration of Totem Stela and relic buffs applied by it from 20 seconds to 30 seconds, and extends the 1.15x damage buff to all non-spell sources from 30 seconds to 45 seconds\n(TODO: verify discrepancy between Totem Stela duration and attack buff duration)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "defeating-enemies-near-totem-stela-restores-hp": {
+      "subcategory": "character-raider",
+      "gameId": "7090300",
+      "name": {
+        "zh": "在圖騰碑石周圍打倒敵人時，能恢復 HP",
+        "en": "Defeating enemies near Totem Stela restores HP"
+      },
+      "icon": "ultimate-art",
+      "detail": {
+        "zh": "使用圖騰碑石時，自身與周圍我方人物獲得增益：在絕活持續期間打倒敵人時，恢復 [HP 上限 ×0.2] HP。（原文註記：待進一步測試與我方人物的互動）",
+        "en": "When Totem Stela is used, self and nearby allies are buffed, healing [0.2x max HP] HP when an enemy is killed during the duration of the ultimate\n(TODO: test more interactions with allies)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "improved-poise-near-totem-stela": {
+      "subcategory": "character-raider",
+      "gameId": "7030000",
+      "name": {
+        "zh": "身在圖騰碑石周圍時，能提升強韌度",
+        "en": "Improved Poise Near Totem Stela"
+      },
+      "icon": "ultimate-art",
+      "detail": {
+        "zh": "使用圖騰碑石時，自身與周圍我方人物在絕活持續期間受到的削韌 ×0.1。",
+        "en": "When Totem Stela is used, self and nearby allies are buffed with 0.1x poise damage taken for the duration of the ultimate",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "raider-improved-mind-and-intelligence-reduced-vigor-and-endurance": {
+      "subcategory": "character-raider",
+      "gameId": "6644000",
+      "name": {
+        "zh": "【無賴】提升集中力、智力，但降低生命力、耐力",
+        "en": "[Raider] Improved Mind and Intelligence, Reduced Vigor and Endurance"
+      },
+      "icon": "spell-up",
+      "characters": [
+        "raider"
+      ],
+      "detail": {
+        "zh": "等級 12-15：集中力 +9、智力 +35、生命力 -8、耐力 -4；等級 1：集中力 +1、智力 +2、生命力 -1、耐力 -1。",
+        "en": "+9 mind, +35 intelligence, -8 vigor, -4 endurance at level 12-15\n+1 mind, +2 intelligence, -1 vigor, -1 endurance at level 1",
+        "penalties": [
+          "生命力 -8",
+          "耐力 -4",
+          "生命力 -1",
+          "耐力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "mind",
+        "endurance",
+        "intelligence"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "raider-improved-arcane-reduced-vigor": {
+      "subcategory": "character-raider",
+      "gameId": "6644100",
+      "name": {
+        "zh": "【無賴】提升感應，但降低生命力",
+        "en": "[Raider] Improved Arcane, Reduced Vigor"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "raider"
+      ],
+      "detail": {
+        "zh": "等級 12-15：感應 +17、生命力 -4；等級 1：感應 +2、生命力 -1。",
+        "en": "+17 arcane, -4 vigor at level 12-15\n+2 arcane, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -4",
+          "生命力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "arcane"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "raider-hit-with-character-skill-to-reduce-enemy-attack-power": {
+      "subcategory": "character-raider",
+      "gameId": "6500400",
+      "name": {
+        "zh": "【無賴】技藝命中敵人時，能降低對方的攻擊力",
+        "en": "[Raider] Hit With Character Skill to Reduce Enemy Attack Power"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "raider"
+      ],
+      "detail": {
+        "zh": "技藝（Retaliate）預設額外累積 12 accumuVal，全力時額外累積 18 accumuVal；並使命中的目標所有來源的傷害 ×0.87，持續 13 秒。",
+        "en": "Retaliate builds up an additional 12 accumuVal by default and 18 accumuVal at full power, and debuffs targets hit with 0.87x all sources of damage for 13 seconds"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "revenant-trigger-ghostflame-explosion-during-ultimate-art-activation": {
+      "subcategory": "character-revenant",
+      "gameId": "7011200",
+      "name": {
+        "zh": "【復仇者】發動絕活時，能引發靈火爆炸",
+        "en": "[Revenant] Trigger ghostflame explosion during Ultimate Art activation"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "revenant"
+      ],
+      "detail": {
+        "zh": "絕活（Immortal March）改為引發靈火爆炸，等級 1 時造成 240 魔力傷害，等級 15 時造成 475 傷害。",
+        "en": "Immortal March now triggers a ghostflame explosion, dealing magic 240 damage at level 1 and 475 damage at level 15"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "revenant-expend-own-hp-to-fully-heal-nearby-allies-when-activating-art": {
+      "subcategory": "character-revenant",
+      "gameId": "16002",
+      "name": {
+        "zh": "【復仇者】發動絕活時，能以自己的 HP 為代價完全恢復周圍我方人物的 HP",
+        "en": "[Revenant] Expend own HP to fully heal nearby allies when activating Art"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "revenant"
+      ],
+      "relics": [
+        {
+          "zh": "老舊袖珍畫",
+          "en": "Old Portrait",
+          "icon": "relic-old-portrait"
+        }
+      ],
+      "availability": "specific-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
+    },
+    "revenant-expend-own-hp-to-fully-heal-nearby-allies-when-activating-art-7010900": {
+      "subcategory": "character-revenant",
+      "gameId": "7010900",
+      "name": {
+        "zh": "【復仇者】發動絕活時，能以自己的 HP 為代價完全恢復周圍我方人物的 HP",
+        "en": "[Revenant] Expend own HP to fully heal nearby allies when activating Art"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "revenant"
+      ],
+      "detail": {
+        "zh": "絕活（Immortal March）改為對自身造成 [HP 上限 ×0.5] 傷害，並為目標我方人物恢復 [HP 上限 ×1] HP。",
+        "en": "Immortal March now deals [0.5x max HP] damage to self and heals targeted allies for [1x max HP] HP",
+        "penalties": [
+          "對自身造成 [HP 上限 ×0.5] 傷害"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "revenant-strengthens-family-and-allies-when-ultimate-art-is-activated": {
+      "subcategory": "character-revenant",
+      "gameId": "7031200",
+      "name": {
+        "zh": "【復仇者】發動絕活時，能強化家人與我方人物",
+        "en": "[Revenant] Strengthens family and allies when Ultimate Art is activated"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "revenant"
+      ],
+      "detail": {
+        "zh": "絕活（Immortal March）同時使受影響的我方人物所有來源的傷害 ×1.25，持續 30 秒。",
+        "en": "Immortal March also buffs allies affected with 1.25x damage of all sources for 30 seconds"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "revenant-power-up-while-fighting-alongside-family": {
+      "subcategory": "character-revenant",
+      "gameId": "7220000",
+      "name": {
+        "zh": "【復仇者】與家人並肩戰鬥期間，能強化自身",
+        "en": "[Revenant] Power up while fighting alongside family"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "revenant"
+      ],
+      "detail": {
+        "zh": "技藝（Summon Spirit）依當前出現的靈魂給予自身不同的獨特增益：Helen 使自身每 1 秒恢復 1 HP；Fredrick 使自身所有來源的傷害 ×1.1；Sebastian 使自身受到的魔力、火、雷、聖屬性傷害 ×0.8。",
+        "en": "Summon Spirit grants a unique buff to self depending on which spirit is active. Helen buffs self with 1 HP restored every 1 second, Fredrick buffs self with 1.1x damage of all sources, and Sebastian buffs self with 0.8x magic, fire, lightning, and holy damage taken",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "attackPower",
+        "damageNegation"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "revenant-improved-vigor-and-endurance-reduced-mind": {
+      "subcategory": "character-revenant",
+      "gameId": "6645000",
+      "name": {
+        "zh": "【復仇者】提升生命力、耐力，但降低集中力",
+        "en": "[Revenant] Improved Vigor and Endurance, Reduced Mind"
+      },
+      "icon": "hp-up",
+      "characters": [
+        "revenant"
+      ],
+      "detail": {
+        "zh": "等級 12-15：生命力 +5、耐力 +5、集中力 -11；等級 1：生命力 +1、耐力 +1、集中力 -1。",
+        "en": "+5 vigor, +5 endurance, -11 mind at level 12-15\n+1 vigor, +1 endurance, -1 mind at level 1",
+        "sources": [
+          "game-params"
+        ],
+        "penalties": [
+          "集中力 -11",
+          "集中力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "mind",
+        "endurance"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "revenant-improved-strength-reduced-faith": {
+      "subcategory": "character-revenant",
+      "gameId": "6645100",
+      "name": {
+        "zh": "【復仇者】提升力氣，但降低信仰",
+        "en": "[Revenant] Improved Strength, Reduced Faith"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "revenant"
+      ],
+      "detail": {
+        "zh": "等級 12-15：力氣 +25、信仰 -6；等級 1：力氣 +2、信仰 -1。",
+        "en": "+25 strength, -6 faith at level 12-15\n+2 strength, -1 fath at level 1",
+        "penalties": [
+          "信仰 -6",
+          "信仰 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "strength",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "revenant-increased-max-fp-upon-ability-activation": {
+      "subcategory": "character-revenant",
+      "gameId": "6500500",
+      "name": {
+        "zh": "【復仇者】發動能力時，能提升 FP 上限",
+        "en": "[Revenant] Increased Max FP upon Ability Activation"
+      },
+      "icon": "fp-up-diamond",
+      "characters": [
+        "revenant"
+      ],
+      "detail": {
+        "zh": "能力（Necromancy）觸發時（被動能力：召喚近期被打倒敵人的靈魂），永久提升 FP 上限：1 層為 FP 上限 ×1.0075，最多 60 層時為 FP 上限 ×1.51。",
+        "en": "When Necromancy is triggered (passive spawning a spirit of recently killed enemy), permanently increase max FP, providing 1.0075x max FP for 1 stack and 1.51x max FP at a max of 60 stacks"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "maxFp"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "recluse-suffer-blood-loss-and-increase-attack-power-upon-art-activation": {
+      "subcategory": "character-recluse",
+      "gameId": "17002",
+      "name": {
+        "zh": "【隱士】發動絕活時自己陷入異常狀態出血，提升攻擊力",
+        "en": "[Recluse] Suffer blood loss and increase attack power upon Art activation"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "recluse"
+      ],
+      "relics": [
+        {
+          "zh": "似骨石",
+          "en": "Bone-Like Stone",
+          "icon": "relic-bone-like-stone"
+        }
+      ],
+      "detail": {
+        "zh": "發動絕活時，對自己施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害，之後所有來源的傷害 ×1.16，持續 30 秒。",
+        "en": "Upon Art activation, apply 9999 blood loss buildup to self, dealing [0.2x max HP] damage, then 1.16x all sources of damage for 30 seconds",
+        "sources": [
+          "game-params"
+        ],
+        "penalties": [
+          "對自己施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害"
+        ]
+      },
+      "availability": "specific-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet",
+          "fextralife-relic-effects"
+        ]
+      }
+    },
+    "recluse-suffer-blood-loss-and-increase-attack-power-upon-art-activation-7032900": {
+      "subcategory": "character-recluse",
+      "gameId": "7032900",
+      "name": {
+        "zh": "【隱士】發動絕活時自己陷入異常狀態出血，提升攻擊力",
+        "en": "[Recluse] Suffer blood loss and increase attack power upon Art activation"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "recluse"
+      ],
+      "detail": {
+        "zh": "絕活（Soulblood Song）對自身施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害，並使自身所有來源的傷害 ×1.16，持續 30 秒。",
+        "en": "Soulblood Song applies 9999 blood loss to self, dealing [0.2x max HP] damage, and buffs self with 1.16x damage of all sources for 30 seconds",
+        "penalties": [
+          "對自身施加 9999 出血累積值，造成 [HP 上限 ×0.2] 傷害"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "recluse-activating-ultimate-art-raises-max-hp": {
+      "subcategory": "character-recluse",
+      "gameId": "7034100",
+      "name": {
+        "zh": "【隱士】發動絕活時，能提升 HP 上限",
+        "en": "[Recluse] Activating Ultimate Art raises Max HP"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "recluse"
+      ],
+      "detail": {
+        "zh": "絕活（Soulblood Song）使自身 HP 上限 ×1.5。30 秒後，受到傷害時會失去此增益。",
+        "en": "Soulblood Song buffs self with 1.5x maximum HP. After 30 seconds, buff is lost upon taking damage"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "recluse-collecting-affinity-residue-activates-terra-magica": {
+      "subcategory": "character-recluse",
+      "gameId": "7032800",
+      "name": {
+        "zh": "【隱士】收集屬性痕時，能觸發「魔法之境」",
+        "en": "[Recluse] Collecting affinity residue activates Terra Magica"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "recluse"
+      ],
+      "detail": {
+        "zh": "以技藝（Magic Cocktail）收集屬性痕時，生成持續 30 秒的「魔法之境」，使範圍內目標所有來源的魔力傷害 ×1.15；離開範圍後效果殘留 1.5 秒（每次發動冷卻：30 秒）。",
+        "en": "Upon collecting affinity residue using Magic Cocktail, spawn Terra Magica that lasts for 30 seconds, buffing targets in its radius with 1.15x magic damage of all sources, lingering for 1.5 seconds after leaving the radius (cooldown per activation: 30 seconds)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "recluse-improved-vigor-endurance-and-dexterity-reduced-intelligence-and-faith": {
+      "subcategory": "character-recluse",
+      "gameId": "6646000",
+      "name": {
+        "zh": "【隱士】提升生命力、耐力、靈巧，但降低智力、信仰",
+        "en": "[Recluse] Improved Vigor, Endurance, and Dexterity, Reduced Intelligence and Faith"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "recluse"
+      ],
+      "detail": {
+        "zh": "等級 12-15：生命力 +4、耐力 +5、靈巧 +20、智力 -10、信仰 -10；等級 1：生命力 +1、耐力 +1、靈巧 +2、智力 -1、信仰 -1。",
+        "en": "+4 vigor, +5 endurance, +20 dexterity, -10 intelligence, -10 faith at level 12-15\n+1 vigor, +1 endurance, +2 dexterity, -1 intelligence, -1 faith at level 1",
+        "penalties": [
+          "智力 -10",
+          "信仰 -10",
+          "智力 -1",
+          "信仰 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "endurance",
+        "dexterity",
+        "intelligence",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "recluse-improved-intelligence-and-faith-reduced-mind": {
+      "subcategory": "character-recluse",
+      "gameId": "6646100",
+      "name": {
+        "zh": "【隱士】提升智力、信仰，但降低集中力",
+        "en": "[Recluse] Improved Intelligence and Faith, Reduced Mind"
+      },
+      "icon": "spell-up",
+      "characters": [
+        "recluse"
+      ],
+      "detail": {
+        "zh": "等級 12-15：智力 +12、信仰 +12、集中力 -13；等級 1：智力 +2、信仰 +2、集中力 -2。",
+        "en": "+12 intelligence, +12 faith, -13 mind at level 12-15\n+2 intelligence, +2 faith, -2 mind at level 1",
+        "penalties": [
+          "集中力 -13",
+          "集中力 -2"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "mind",
+        "intelligence",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "recluse-collect-affinity-residues-to-negate-affinity": {
+      "subcategory": "character-recluse",
+      "gameId": "6500600",
+      "name": {
+        "zh": "【隱士】收集屬性痕時，能提升該屬性的減傷率",
+        "en": "[Recluse] Collect Affinity Residues to Negate Affinity"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "recluse"
+      ],
+      "detail": {
+        "zh": "以技藝（Magic Cocktail）收集屬性時，自身獲得所吸收對應屬性的減傷率 ×0.8 增益，持續 30 秒。",
+        "en": "When collecting an affinity with Magic Cocktail, buffs self with 0.8x damage negation of corresponding affinity absorbed for 30 seconds"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "executor-character-skill-boosts-attack-but-lowers-damage-negation-while-attacking": {
+      "subcategory": "character-executor",
+      "gameId": "7034400",
+      "name": {
+        "zh": "【執行者】提升技藝發動期間的攻擊力但攻擊時會降低減傷率",
+        "en": "[Executor] Character Skill Boosts Attack but Lowers Damage Negation While Attacking"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "executor"
+      ],
+      "detail": {
+        "zh": "裝備技藝（Suncatcher）期間，自身所有來源的傷害 ×1.35，持續 6 秒；以該技藝命中攻擊時，自身受到的所有來源傷害 ×1.4，持續 5 秒。",
+        "en": "While Suncatcher is equipped, buff self with 1.35x damage of all sources for 6 seconds, and landing attacks with Suncatcher buffs self with 1.4x damage taken from all sources for 5 seconds",
+        "sources": [
+          "game-params"
+        ],
+        "penalties": [
+          "自身受到的所有來源傷害 ×1.4，持續 5 秒"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "executor-while-character-skill-is-active-unlocking-use-of-cursed-sword-restores-hp": {
+      "subcategory": "character-executor",
+      "gameId": "7034500",
+      "name": {
+        "zh": "【執行者】在技藝發動期間妖刀進入解放狀態時，能恢復 HP",
+        "en": "[Executor] While Character Skill is active, unlocking use of cursed sword restores HP"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "executor"
+      ],
+      "detail": {
+        "zh": "技藝（Suncatcher）發動期間，妖刀進入解放狀態時，恢復 [HP 上限 ×0.05 + 100] HP。",
+        "en": "While Suncatcher is active, unlocking the cursed sword restores [0.05x max HP + 100] HP",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "executor-roaring-restores-hp-while-art-is-active": {
+      "subcategory": "character-executor",
+      "gameId": "7011700",
+      "name": {
+        "zh": "【執行者】在絕活發動期間，能以咆哮恢復 HP",
+        "en": "[Executor] Roaring restores HP while Art is active"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "executor"
+      ],
+      "detail": {
+        "zh": "絕活（Aspects of the Crucible: Beast）發動期間咆哮時，為自身與被咆哮命中的我方人物恢復 [HP 上限 ×0.15] HP。",
+        "en": "Roaring while Aspects of the Crucible: Beast is active heals self and allies hit by the roar by [0.15x max HP] HP"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "executor-improved-vigor-and-endurance-reduced-arcane": {
+      "subcategory": "character-executor",
+      "gameId": "6647000",
+      "name": {
+        "zh": "【執行者】提升生命力、耐力，但降低感應",
+        "en": "[Executor] Improved Vigor and Endurance, Reduced Arcane"
+      },
+      "icon": "hp-up",
+      "characters": [
+        "executor"
+      ],
+      "detail": {
+        "zh": "等級 12-15：生命力 +5、耐力 +6、感應 -13；等級 1：生命力 +1、耐力 +1、感應 -2。",
+        "en": "+5 vigor, +6 endurance, -13 arcane at level 12-15\n+1 vigor, +1 endurance, -2 arcane at level 1",
+        "penalties": [
+          "感應 -13",
+          "感應 -2"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "endurance",
+        "arcane"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "executor-improved-dexterity-and-arcane-reduced-vigor": {
+      "subcategory": "character-executor",
+      "gameId": "6647100",
+      "name": {
+        "zh": "【執行者】提升靈巧、感應，但降低生命力",
+        "en": "[Executor] Improved Dexterity and Arcane, Reduced Vigor"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "executor"
+      ],
+      "detail": {
+        "zh": "等級 12-15：靈巧 +12、感應 +9、生命力 -7；等級 1：靈巧 +1、感應 +1、生命力 -1。",
+        "en": "+12 dexterity, +9 arcane, -7 vigor at level 12-15\n+1 dexterity, +1 arcane, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -7",
+          "生命力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "dexterity",
+        "arcane"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "executor-slowly-restore-hp-upon-ability-activation": {
+      "subcategory": "character-executor",
+      "gameId": "6500700",
+      "name": {
+        "zh": "【執行者】發動能力時，能緩慢恢復 HP",
+        "en": "[Executor] Slowly Restore HP upon Ability Activation"
+      },
+      "icon": "hp-up-diamond",
+      "characters": [
+        "executor"
+      ],
+      "detail": {
+        "zh": "能力（Tenacity）觸發時（被動能力：陷入異常狀態後獲得增益），每 1 秒恢復 [3 + HP 上限 ×0.0027] HP，持續 60 秒（參數為 1.5 + 58.5 秒）。",
+        "en": "When Tenacity is triggered (passive buff after getting afflicted with status), restore [3 + 0.0027 max HP] HP every 1 second for 60 seconds (1.5 + 58.5 seconds in params)",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "scholar-prevent-slowing-of-character-skill-progress": {
+      "subcategory": "character-scholar",
+      "gameId": "7036200",
+      "name": {
+        "zh": "【學者】減緩技藝進行率的下降幅度",
+        "en": "[Scholar] Prevent slowing of Character Skill progress"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "scholar"
+      ],
+      "detail": {
+        "zh": "大幅降低技藝（Analyze）進行率的衰減速度。（原文註記：待查明並核實具體數值）",
+        "en": "Greatly reduces the rate of which progress for Analyze decays \n(TODO: find and verify specific numbers for this)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "scholar-allies-targeted-by-character-skill-gain-boosted-attack": {
+      "subcategory": "character-scholar",
+      "gameId": "19001",
+      "name": {
+        "zh": "【學者】使用技藝時，提升目標我方人物的攻擊力",
+        "en": "[Scholar] Allies targeted by Character Skill gain boosted attack"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "scholar"
+      ],
+      "relics": [
+        {
+          "zh": "記錄「致繼承人」",
+          "en": "Note \"My Dear Successor\"",
+          "icon": "relic-note-my-dear-successor"
+        }
+      ],
+      "availability": "specific-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "stacking.stacks": [
+          "community-sheet"
+        ]
+      }
+    },
+    "scholar-allies-targeted-by-character-skill-gain-boosted-attack-7036300": {
+      "subcategory": "character-scholar",
+      "gameId": "7036300",
+      "name": {
+        "zh": "【學者】使用技藝時，提升目標我方人物的攻擊力",
+        "en": "[Scholar] Allies targeted by Character Skill gain boosted attack"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "scholar"
+      ],
+      "detail": {
+        "zh": "技藝（Analyze）可指定範圍內的我方人物；使用時，使其所有來源的物理傷害 ×1.2、屬性傷害 ×1.15，持續 30 秒。",
+        "en": "Analyze can now target allies in its radius, and when used, buffs them with 1.2x physical damage and 1.15x affinity damage of all sources for 30 seconds"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "scholar-earn-runes-for-each-additional-specimen-acquired-with-character-skill": {
+      "subcategory": "character-scholar",
+      "gameId": "7036500",
+      "name": {
+        "zh": "【學者】每次使用技藝增加樣本，能獲得盧恩",
+        "en": "[Scholar] Earn runes for each additional specimen acquired with Character Skill"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "scholar"
+      ],
+      "detail": {
+        "zh": "首次對某種獨特敵人使用技藝（Analyze）時，獲得 1300 盧恩。（原文註記：待釐清哪些敵人視為彼此不同）",
+        "en": "Upon using Analyze on a unique enemy for the first time, gain 1300 runes\n(TODO: figure out what enemies count as being different from one another)"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "scholar-continuous-damage-inflicted-on-targets-threaded-by-ultimate-art": {
+      "subcategory": "character-scholar",
+      "gameId": "7036400",
+      "name": {
+        "zh": "【學者】對上已用絕活連結的敵人，持續給予傷害",
+        "en": "[Scholar] Continuous damage inflicted on targets threaded by Ultimate Art"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "scholar"
+      ],
+      "detail": {
+        "zh": "絕活（Communion）對敵人施加持續傷害效果，每 1 秒造成 15 傷害，持續 20 秒。",
+        "en": "Communion applies a damage over time effect on enemies, dealing 15 damage per 1 second for a 20 second duration"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "scholar-improved-mind-reduced-vigor": {
+      "subcategory": "character-scholar",
+      "gameId": "6647200",
+      "name": {
+        "zh": "【學者】提升集中力，但降低生命力",
+        "en": "[Scholar] Improved Mind, Reduced Vigor"
+      },
+      "icon": "spell-up",
+      "characters": [
+        "scholar"
+      ],
+      "detail": {
+        "zh": "等級 12-15：集中力 +9、生命力 -3；等級 1：集中力 +1、生命力 -1。",
+        "en": "+9 mind, -3 vigor at level 12-15\n+1 mind, -1 vigor at level 1",
+        "penalties": [
+          "生命力 -3",
+          "生命力 -1"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "mind"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "scholar-improved-endurance-and-dexterity-reduced-intelligence-and-arcane": {
+      "subcategory": "character-scholar",
+      "gameId": "6647300",
+      "name": {
+        "zh": "【學者】提升耐力、靈巧，但降低智力、感應",
+        "en": "[Scholar] Improved Endurance and Dexterity, Reduced Intelligence and Arcane"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "scholar"
+      ],
+      "detail": {
+        "zh": "等級 12-15：耐力 +6、靈巧 +40、智力 -4、感應 -20；等級 1：耐力 +1、靈巧 +6、智力 -1、感應 -5。",
+        "en": "+6 endurance, +40 dexterity, -4 intelligence, -20 arcane at level 12-15\n+1 endurance, +6 dexterity, -1 intelligence, -5 arcane at level 1",
+        "penalties": [
+          "智力 -4",
+          "感應 -20",
+          "智力 -1",
+          "感應 -5"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "endurance",
+        "dexterity",
+        "intelligence",
+        "arcane"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "scholar-reduced-fp-consumption-when-using-character-skill-on-self": {
+      "subcategory": "character-scholar",
+      "gameId": "6500800",
+      "name": {
+        "zh": "【學者】對自己使用技藝時，能減少消耗的 FP",
+        "en": "[Scholar] Reduced FP consumption when using Character Skill on self"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "scholar"
+      ],
+      "detail": {
+        "zh": "對自身使用技藝（Analyze）時，自身的戰技、魔法、禱告與道具 FP 消耗 ×0.85。",
+        "en": "When Analyze is used on self, buff self with 0.85x FP consumption for skills, spells, and items"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "targets": {
+        "spellType": [
+          "sorcery",
+          "incantation"
+        ]
+      },
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "targets": [
+          "game-params"
+        ]
+      }
+    },
+    "undertaker-activating-ultimate-art-increases-attack-power": {
+      "subcategory": "character-undertaker",
+      "gameId": "7036800",
+      "name": {
+        "zh": "【送葬者】發動絕活時，提升攻擊力",
+        "en": "[Undertaker] Activating Ultimate Art increases attack power"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "undertaker"
+      ],
+      "detail": {
+        "zh": "使用絕活（Loathesome Hex）時，自身所有來源的傷害 ×1.18，持續 40 秒。",
+        "en": "Loathesome Hex buffs self with 1.18x damage of all sources for 40 seconds when used",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "undertaker-contact-with-allies-restores-their-hp-while-ultimate-art-is-activated": {
+      "subcategory": "character-undertaker",
+      "gameId": "7037300",
+      "name": {
+        "zh": "【送葬者】發動絕活時，恢復觸碰到的我方人物的 HP",
+        "en": "[Undertaker] Contact with allies restores their HP while Ultimate Art is activated"
+      },
+      "icon": "ultimate-art",
+      "characters": [
+        "undertaker"
+      ],
+      "detail": {
+        "zh": "絕活（Loathesome Hex）命中我方人物時，為其恢復 [HP 上限 ×0.3 + 100] HP。",
+        "en": "Landing Loathesome Hex on allies heals them for [0.3x max HP + 100] HP"
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "undertaker-attack-power-increased-by-landing-the-final-blow-of-a-chain-attack": {
+      "subcategory": "character-undertaker",
+      "gameId": "7036900",
+      "name": {
+        "zh": "【送葬者】連擊的最後攻擊命中時，提升攻擊力",
+        "en": "[Undertaker] Attack power increased by landing the final blow of a chain attack"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "undertaker"
+      ],
+      "detail": {
+        "zh": "命中輕攻擊連擊或雙手各持攻擊連擊的最後一擊時，自身所有來源的傷害 ×1.16，持續 20 秒。",
+        "en": "Upon landing the last hit of a light attack chain or powerstanced attack chain, buff self with 1.16x damage of all sources for 20 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "attackPower"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "undertaker-physical-attacks-boosted-while-assist-effect-from-incantation-is-active-for-self": {
+      "subcategory": "character-undertaker",
+      "gameId": "7037000",
+      "name": {
+        "zh": "【送葬者】使用禱告將輔助效果附加在自己身上時提升物理攻擊力",
+        "en": "[Undertaker] Physical attacks boosted while assist effect from incantation is active for self"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "undertaker"
+      ],
+      "detail": {
+        "zh": "使用對自身施加增益的禱告時，自身所有來源的物理傷害 ×1.19，持續 60 秒。",
+        "en": "Upon using an incantation that applies a buff to self, buff self with 1.19x physical damage of all sources for 60 seconds",
+        "sources": [
+          "game-params"
+        ]
+      },
+      "availability": "standard-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    },
+    "undertaker-improved-dexterity-reduced-vigor-and-faith": {
+      "subcategory": "character-undertaker",
+      "gameId": "6647400",
+      "name": {
+        "zh": "【送葬者】提升靈巧，但降低生命力、信仰",
+        "en": "[Undertaker] Improved Dexterity, Reduced Vigor and Faith"
+      },
+      "icon": "attack-up",
+      "characters": [
+        "undertaker"
+      ],
+      "detail": {
+        "zh": "等級 12-15：靈巧 +19、生命力 -5、信仰 -13；等級 1：靈巧 +2、生命力 -1、信仰 -2。",
+        "en": "+19 dexterity, -5 vigor, -13 faith at level 12-15\n+2 dexterity, -1 vigor, -2 faith at level 1",
+        "penalties": [
+          "生命力 -5",
+          "信仰 -13",
+          "生命力 -1",
+          "信仰 -2"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "vigor",
+        "dexterity",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "undertaker-improved-mind-and-faith-reduced-strength": {
+      "subcategory": "character-undertaker",
+      "gameId": "6647500",
+      "name": {
+        "zh": "【送葬者】提升集中力、信仰，但降低力氣",
+        "en": "[Undertaker] Improved Mind and Faith, Reduced Strength"
+      },
+      "icon": "spell-up",
+      "characters": [
+        "undertaker"
+      ],
+      "detail": {
+        "zh": "等級 12-15：集中力 +9、信仰 +12、力氣 -15；等級 1：集中力 +1、信仰 +1、力氣 -2。",
+        "en": "+9 mind, +12 faith, -15 strength at level 12-15\n+1 mind, +1 faith, -2 strength at level 1",
+        "sources": [
+          "game-params"
+        ],
+        "penalties": [
+          "力氣 -15",
+          "力氣 -2"
+        ]
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "stats": [
+        "mind",
+        "strength",
+        "faith"
+      ],
+      "sources": [
+        "reliquary-json"
+      ],
+      "sourcesFor": {
+        "stats": [
+          "game-params"
+        ]
+      }
+    },
+    "undertaker-executing-art-readies-character-skill": {
+      "subcategory": "character-undertaker",
+      "gameId": "6500900",
+      "name": {
+        "zh": "【送葬者】發動絕活後，能再次使用技藝",
+        "en": "[Undertaker] Executing Art readies Character Skill"
+      },
+      "icon": "character-skill",
+      "characters": [
+        "undertaker"
+      ],
+      "detail": {
+        "zh": "使用絕活（Loathesome Hex）時，立即重置技藝（Trance）的冷卻時間。（原文註記：待以遊戲內實測核實）",
+        "en": "When Loathesome Hex is used, instantly referesh the cooldown of Trance\n(TODO: verify w/ in-game testing)"
+      },
+      "availability": "deep-relic",
+      "requiresCurse": false,
+      "stacking": {
+        "stacks": false
+      },
+      "sources": [
+        "reliquary-json"
+      ]
+    }
+  }
+}

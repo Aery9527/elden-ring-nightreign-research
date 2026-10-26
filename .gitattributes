@@ -1,0 +1,4 @@
+# 網站原始碼與產物的文字檔固定 LF：build 寫出 LF，check 逐 byte 比對，不受 core.autocrlf 影響
+public/** text=auto eol=lf
+dist/** text=auto eol=lf
+*.png binary

@@ -1144,7 +1144,25 @@ function nightfarerChapters(data) {
   const gradeRows = keys.map((key) => gradeRow(data, key, data.nightfarers[key]));
   gradeTables[0].replaceChildren(dataTable([labels.character, ...GRADE_STATS.map((stat) => statName(data, stat))], gradeRows));
   for (const key of keys) checkLevels(key, data.nightfarers[key]);
-  levelChapter(data, keys, levelTables[0]);
+  // 各等級能力表的靜態內容：每名角色一張數值表，表名為角色名稱，外層保留舊錨點 character-<角色>-levels。
+  // 瀏覽器載入資料後由 initLevels 換成圖表與切換控制項。
+  levelTables[0].replaceChildren(
+    ...keys.map((key) => {
+      const wrap = levelTable(data, keys, "character", key);
+      wrap.querySelector("table").prepend(el("caption", {}, lookup(data.characters, key, "角色").name.zh));
+      return el("div", { id: `character-${key}-levels` }, wrap);
+    })
+  );
+}
+
+// 各等級能力表的互動部分，只在瀏覽器執行 (需要排版寬度與事件)：以圖表與切換控制項取代靜態數值表。
+// 角色順序沿用角色章節順序。已預先渲染的頁面另行載入資料，取代靜態表之前先檢查，格式錯誤時保留靜態表。
+function initLevels(data) {
+  const container = document.querySelector("[data-nightfarer-levels]");
+  if (!container) return;
+  const keys = [...document.querySelectorAll("[data-nightfarer]")].map((section) => section.dataset.nightfarer);
+  for (const key of keys) checkLevels(key, lookup(data.nightfarers, key, "角色資料"));
+  levelChapter(data, keys, container);
 }
 
 // 武器數值欄 (皆為遊戲參數原始值，不是遊戲內顯示值)：基礎攻擊與能力補正每項一行、只列非 0 項；
@@ -1360,9 +1378,9 @@ function labelTableCells() {
   }
 }
 
-function showError(error) {
+function showError(error, message = "遊戲數值載入失敗，頁面中的數值無法顯示。請重新整理頁面。") {
   console.error(error);
-  const notice = el("p", { class: "load-error", role: "alert" }, "遊戲數值載入失敗，頁面中的數值無法顯示。請重新整理頁面。");
+  const notice = el("p", { class: "load-error", role: "alert" }, message);
   document.querySelector("main").prepend(notice);
 }
 
@@ -1469,33 +1487,73 @@ function checkTags(data, spellsLoaded, skillsLoaded) {
   }
 }
 
-// 瀏覽器在資料填入前就跳到網址的錨點，填入後內容變長會讓落點偏移；渲染完成後重新對準。
-// 格式錯誤的錨點 (例如 #%) 無法解碼時直接忽略，不當成資料載入失敗。
-// 舊的武器與法術頁 (armaments.html) 轉到武器頁；本頁沒有的法術列 (#spell-<id>) 依法術類型轉到魔法或禱告頁。
-function scrollToHash(data) {
+// 網址錨點與本頁的目標元素。格式錯誤的錨點 (例如 #%) 無法解碼時視為沒有錨點，不當成資料載入失敗。
+const SPELL_ANCHOR = /^spell-(\d+)$/;
+function hashTarget() {
   let id;
   try {
     id = decodeURIComponent(location.hash.slice(1));
   } catch {
-    return;
+    return { id: "", target: null };
   }
-  const target = id && document.getElementById(id);
+  return { id, target: id ? document.getElementById(id) : null };
+}
+
+// 對準網址錨點：落點的頁首留白 (scroll-margin-top) 依 nav.js 設定的頁首高度，瀏覽器自行跳轉時 nav.js 可能尚未執行。
+// 內容填入後變長也會讓落點偏移，因此渲染完成後重新對準。
+// 舊的武器與法術頁 (armaments.html) 轉到武器頁；本頁沒有的法術列 (#spell-<id>) 依法術類型轉到魔法、禱告或武器頁。
+function scrollToHash(data) {
+  const { id, target } = hashTarget();
   if (target) {
     target.scrollIntoView({ behavior: "instant" });
     return;
   }
-  const spellId = /^spell-(\d+)$/.exec(id)?.[1];
+  const spellId = SPELL_ANCHOR.exec(id)?.[1];
   const spell = spellId && data.spells[spellId];
   if (spell) location.replace(`${spellPage(spellId, spell)}#${id}`);
 }
 
-const files = document.body.dataset.load.split(" ");
-Promise.all(files.map(loadJson))
-  .then(mergeData)
-  .then((data) => {
-    render(data);
-    return data;
-  })
-  // 分開一步：nav.js 先依填入的章節名稱更新頁首高度，再對準錨點
-  .then(scrollToHash)
-  .catch(showError);
+// 依 <body data-load> (或指定的檔案) 載入並合併資料；載入或檢查失敗時 reject，由呼叫端決定如何處理。
+function loadData(load, files = document.body.dataset.load.split(" ")) {
+  return Promise.all(files.map(load)).then(mergeData);
+}
+
+// 已預先渲染的頁面 (tools/build-site.mjs 的產物)：內容已在 HTML 中，不再載入全部資料。
+// 角色頁載入資料後以圖表取代靜態的各等級能力表；本頁沒有的法術錨點才載入法術資料轉址。
+function startPrerendered() {
+  const { id, target } = hashTarget();
+  if (target) target.scrollIntoView({ behavior: "instant" });
+  if (document.querySelector("[data-nightfarer-levels]")) {
+    loadData(loadJson)
+      .then((data) => {
+        initLevels(data);
+        return data;
+      })
+      .then(scrollToHash)
+      .catch((error) => showError(error, "各等級能力圖表載入失敗，圖表與切換功能無法使用，各等級能力表仍可查閱。請重新整理頁面。"));
+  } else if (!target && SPELL_ANCHOR.test(id)) {
+    loadData(loadJson, ["common", "armaments/spells"])
+      .then(scrollToHash)
+      .catch((error) => showError(error, "法術資料載入失敗，無法轉到網址指定的法術。請重新整理頁面。"));
+  }
+}
+
+// 入口：
+// - build：tools/build-site.mjs 先設定 window.prerender 再執行本檔，只做載入與靜態渲染；錯誤原樣交給 build，不在頁面顯示。
+// - 瀏覽器開啟 build 產物 (<html data-prerendered>)：只做互動與錨點 (startPrerendered)。
+// - 瀏覽器直接開啟 public/ 的模板：載入、渲染、互動全部在瀏覽器執行。
+if (window.prerender) {
+  window.prerender.result = loadData(window.prerender.load).then(render);
+} else if (document.documentElement.hasAttribute("data-prerendered")) {
+  startPrerendered();
+} else {
+  loadData(loadJson)
+    .then((data) => {
+      render(data);
+      initLevels(data);
+      return data;
+    })
+    // 分開一步：nav.js 先依填入的章節名稱更新頁首高度，再對準錨點
+    .then(scrollToHash)
+    .catch((error) => showError(error));
+}

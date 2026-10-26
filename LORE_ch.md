@@ -11,8 +11,12 @@
 
 ## 網站
 
-- [netlify.toml](netlify.toml) 發佈 `public/` 目錄，不需建置指令。網站檔案 (HTML、CSS、圖片) 必須放在 `public/` 下。頁面間以相對路徑連到 `.html` 檔，嚴禁依賴 Netlify 的 pretty URL。
-- 頁面以 `fetch` 載入資料，本機預覽須透過 HTTP 伺服器 (例如 `python -m http.server -d public`)，不能以 `file://` 開啟。
+- `public/` 是網站原始碼，`dist/` 是發佈的建置產物：[netlify.toml](netlify.toml) 發佈 `dist/`，不設建置指令。網站原始檔 (HTML、CSS、圖片、資料) 必須放在 `public/` 下。頁面間以相對路徑連到 `.html` 檔，嚴禁依賴 Netlify 的 pretty URL。
+- [tools/build-site.mjs](tools/build-site.mjs) 以 jsdom 對每個 `public/*.html` 執行 render.js，把渲染後的頁面寫到 `dist/`，`public/` 的其他檔案逐 byte 複製過去。以 `npm --prefix tools ci` 安裝依賴，`npm --prefix tools run build` 建置，`npm --prefix tools run check` 驗證。
+- `dist/` 是產物，嚴禁手動編輯。每個 commit 的 `dist/` 必須等於該 commit 的 `public/`、build 腳本與鎖定依賴的建置結果，因此修改其中任何一項時，必須在同一個 commit 提交重新建置的 `dist/`。渲染錯誤或 check 回報的差異必須修正，嚴禁繞過。
+- 在本機合併進 `main`，並在合併結果上通過 check 後才 push `main`。嚴禁透過主機網站上的合併發佈，因為那裡不會執行本機檢查。
+- 本機預覽必須透過 HTTP 伺服器，不能以 `file://` 開啟：`python -m http.server -d public` 在瀏覽器以 `fetch` 渲染模板，`python -m http.server -d dist` 提供發佈的頁面。
+- render.js 分為三段：載入資料、靜態渲染、瀏覽器互動。build 只執行前兩段，因此靜態渲染嚴禁依賴排版、捲動、導覽或事件。發佈的頁面 (`<html data-prerendered>`) 只執行瀏覽器互動，且只為互動載入資料。
 - 新增主題頁面時，在首頁 [public/index.html](public/index.html) 該主題的表格新增一列；新主題在首頁另立一個 `h2` 章節。
 - 每個已發佈的「頁名#id」必須持續可用，包括 span、表格列與 render.js 產生的元素上的 id：
   - 頁面改名或併入其他頁面時，在 [netlify.toml](netlify.toml) 新增舊路徑的 301 轉址。
@@ -23,15 +27,15 @@
 
 ## 資料
 
-- 網站只從 `public/data/` 讀取遊戲數值、佔位元素產生的名稱，以及這些數值的來源：
+- 網站只從權威輸入 `public/data/` 讀取遊戲數值、佔位元素產生的名稱，以及這些數值的來源 (`dist/data/` 是其發佈副本)：
   - [public/data/common.json](public/data/common.json)：所有頁面共用的定義 (遊戲版本、能力值、圖示、角色、圖例、標籤、戰技分組、介面文字、來源)。
   - `public/data/relics/<category>.json`：遊戲內遺物篩選的每個大類一個檔案 (`general`、`character`、`armament`、`demerit`)。
   - `public/data/armaments/` (`weapons.json`、`spells.json`、`skills.json`) 與 `public/data/characters/nightfarers.json`。
   - 其他遊戲主題的資料放在以主題命名的檔案或目錄，並依遊戲本身的分組拆分；多個主題共用的定義留在 common.json。
-- HTML 放章節骨架與 `data-*` 佔位元素，由 render.js 填入。遊戲數值 (內文例子中的數值也一樣)、由資料產生的名稱，以及由資料產生的表格列 (遺物效果、武器、法術、戰技、角色、能力值關聯)，嚴禁手寫在 HTML。靜態的概覽、來源與說明表格、內文敘述，以及 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
-- 每個頁面在 `<body data-load>` 列出要載入的檔案 (例如 `common relics/general`)，且必須載入佔位元素所需的每個檔案：計算遺物詞條反向關聯的頁面載入四個遺物大類檔，有 `targets` 的遺物頁載入 `armaments/weapons`、`armaments/spells` 與 `armaments/skills`，`<span data-character>` 需要 `characters/nightfarers`。嚴禁讓後載入的檔案覆蓋先載入的檔案。
+- `public/` 的 HTML 模板放章節骨架與 `data-*` 佔位元素，由 render.js 填入。遊戲數值 (內文例子中的數值也一樣)、由資料產生的名稱，以及由資料產生的表格列 (遺物效果、武器、法術、戰技、角色、能力值關聯)，嚴禁手寫在 HTML。靜態的概覽、來源與說明表格、內文敘述，以及 `data-*` 屬性中的選取鍵 (例如等級編號) 可以留在 HTML。
+- 每個頁面在 `<body data-load>` 列出渲染時要載入的檔案 (例如 `common relics/general`)，且必須載入佔位元素所需的每個檔案：計算遺物詞條反向關聯的頁面載入四個遺物大類檔，有 `targets` 的遺物頁載入 `armaments/weapons`、`armaments/spells` 與 `armaments/skills`，`<span data-character>` 需要 `characters/nightfarers`。嚴禁讓後載入的檔案覆蓋先載入的檔案。
 - 每個引用 (來源、圖示、角色、標籤、能力值或項目 ID) 必須對應到其定義中自身擁有的鍵；嚴禁把繼承來的屬性算作對應。
-- 反向關聯 (與武器、法術、戰技或能力值相符的詞條；引用某戰技的武器) 由頁面計算，嚴禁另存於資料。
+- 反向關聯 (與武器、法術、戰技或能力值相符的詞條；引用某戰技的武器) 由 render.js 在渲染時計算 (結果可以出現在 `dist/` 的 HTML)，嚴禁另存於資料。
 - 研究數值與規則欄位的數值狀態：
   - 一般值代表其來源的記載。
   - `null` 代表尚未核實，嚴禁當成 0 或 false。
@@ -61,6 +65,7 @@
   - `public/data/relics/*.json`：[tools/import-relics.mjs](tools/import-relics.mjs) (`node tools/import-relics.mjs [category ...]`)。
   - `public/data/armaments/*.json`：[tools/import-armaments.mjs](tools/import-armaments.mjs) (`node tools/import-armaments.mjs`)。
   - `public/data/characters/nightfarers.json`：[tools/import-characters.mjs](tools/import-characters.mjs) (`node tools/import-characters.mjs`)。
+  - `dist/`：[tools/build-site.mjs](tools/build-site.mjs) (見「網站」)；執行任何匯入腳本後都要重新建置。
 - 修改 `tools/` 與 `public/data/common.json` 中相關的輸入，在專案根目錄重新執行腳本，並檢查腳本印出的訊息與產生檔的 diff。import-armaments 必須在 import-relics 之前執行，因為遺物的 `targets.skill` 必須指向 `armaments/skills.json` 收錄的戰技。驗證失敗時，腳本在寫出產生檔前停止；必須修正回報的輸入，嚴禁繞過或削弱檢查。render.js 也以同樣方式驗證載入的資料。
 - 三支腳本都透過 [tools/sources.mjs](tools/sources.mjs) 讀取 [tools/relics-config.json](tools/relics-config.json) 鎖定的來源，因此遺物、武器與角色來自同一份遊戲參數。更新來源時，修改設定檔中的 commit 或 revision，重新執行腳本，並在提交前檢查差異與受影響的譯文。遊戲參數更新後，必須以新參數重新核對每一筆參數重寫。
 - 執行 import-armaments 或 import-characters 後，執行 `python tools/fetch-icons.py`，下載 `public/images/` 尚未有的武器、法術、戰技與角色能力圖示。
@@ -127,7 +132,7 @@
 - 武器頁 (`weapons.html`，`h1` id 為 `weapons`)：每個 `weaponType` 標籤一個 `<section data-weapon-type="<type>">`，`h2` id 為 `weapon-type-<type>`；每列 id 為 `weapon-<id>`。`#limitations` 章節的 `<tbody data-unlisted-spells>` 列出類型未核實或來源分歧的法術。
 - 魔法頁與禱告頁：`<section data-spell-type="<type>">` 為類型章節 (`h2` id 為 `sorceries` 或 `incantations`)；每個 `<section data-spell-type="<type>" data-spell-school="<school>">` 為系別章節 (`h2` id 為 `spell-school-<school>`，空系別為 `<type>-no-school`)。每列 id 為 `spell-<id>`。相關詞條只出現在最上層的相符層：類型章節，其次系別章節，再其次法術列。
 - 戰技頁 (`skills.html`，`h1` id 為 `skills`)：依 `skillGroups` 的順序，每個鍵一個 `<section data-skill-group="<group>">`，`h2` id 為 `skill-group-<group>`，全部放在 `<div id="skill-list">` 內；分組可包含 `<section data-skill-weapon-type="<type>">` 小節 (`h3` id 為 `skill-unique-<type>`)。每列 id 為 `skill-<id>`。除了「武器、法術與戰技研究」與「戰技與角色文字轉寫」要求的說明之外，頁面必須註明：範圍是具名武器引用的戰技，不是遊戲中全部的戰技；分組與 Eldenpedia 黑夜君臨戰技列表的異同；哪些繁中名稱是官方名稱 (取自戰灰名稱)，哪些名稱與全部說明是本站轉寫。武器頁與有 `targets` 的遺物頁說明一次部分戰技名稱為本站轉寫，並連到戰技頁。
-- 角色頁 (`characters.html`，`h1` id 為 `characters`)：每個 `characters` 鍵一個 `<section data-nightfarer="<角色>">`，`h2` id 為 `character-<角色>`，放在 `#character-list[data-nightfarer-list]` 內；`#grades` 章節放 `[data-nightfarer-grades]`，`#levels` 章節放 `[data-nightfarer-levels]`。
+- 角色頁 (`characters.html`，`h1` id 為 `characters`)：每個 `characters` 鍵一個 `<section data-nightfarer="<角色>">`，`h2` id 為 `character-<角色>`，放在 `#character-list[data-nightfarer-list]` 內；`#grades` 章節放 `[data-nightfarer-grades]`，`#levels` 章節放 `[data-nightfarer-levels]`。靜態渲染在 `[data-nightfarer-levels]` 為每名角色放一張等級數值表，以角色名稱為表名，外層元素的 id 為 `character-<角色>-levels`；瀏覽器以互動圖表取代這些表，圖表資料載入失敗時保留數值表。
   - 頁面必須說明：名稱與文字是本站依官方簡中選單文字的轉寫，不是官方繁中；評級是參數值；錨點之間的等級與三項上限是本站計算值 (見角色研究)，直接取自參數的數值要有可辨識的標示，上限一律不標示為直接值；數值不含遺物等改變能力值的效果。
   - 其 `#limitations` 章節必須說明：文字來源的限制、冷卻時間的來源、參數列歸屬與欄位用語的判定方式，以及沒有收錄的內容。
 - 能力值頁：每個能力值列的 id 為 `stat-<stat>`，其 `<td data-stat-effects="<stat>">` 列出 `stats` 含該能力值的遺物效果；上限列另在「經由<基礎能力值名稱>」下列出 `stats` 含其 `base` 但不含該上限的效果。

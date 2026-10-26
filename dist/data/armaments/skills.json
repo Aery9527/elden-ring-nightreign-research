@@ -1,0 +1,6973 @@
+{
+  "skills": {
+    "10": {
+      "name": {
+        "zh": "無戰技",
+        "en": "No Skill"
+      },
+      "textId": "10",
+      "icon": null,
+      "group": "none",
+      "fp": {
+        "L1": -1,
+        "L2": -1,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：無戰技\n\n武器沒有戰技。\n如果另一邊的武器具備戰技，\n會使用那一邊的戰技。",
+        "en": "No skill.\n\nThis armament has no skill.\nIf the armament in the other hand has a skill, that skill will be used instead."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "100": {
+      "name": {
+        "zh": "獅子斬",
+        "en": "Lion's Claw"
+      },
+      "textId": "100",
+      "icon": {
+        "src": "images/skill-lion-s-claw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lion's_Claw.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：獅子斬\n\n與拉塔恩將軍並肩作戰的\n紅獅子軍隊所使用的戰技。\n能朝前方跳躍，一邊旋身一邊以武器敲擊。",
+        "en": "Skill: Lion's Claw\n\nSkill of the Redmanes, who fought alongside General Radahn.\nSomersault forwards, striking foes with armament."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "101": {
+      "name": {
+        "zh": "貫穿",
+        "en": "Impaling Thrust"
+      },
+      "textId": "101",
+      "icon": {
+        "src": "images/skill-impaling-thrust.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Impaling_Thrust.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：貫穿\n\n突刺武器對付持盾敵人時的戰技。\n蓄力之後，大幅度向前跨出\n使出渾身一刺，從正面突破防禦。",
+        "en": "Skill: Impaling Thrust\n\nSkill that lets piercing armaments overcome enemy shields. Build power, then lunge forward for a strong thrust that pierces an enemy's guard."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "102": {
+      "name": {
+        "zh": "突刺",
+        "en": "Piercing Fang"
+      },
+      "textId": "102",
+      "icon": {
+        "src": "images/skill-piercing-fang.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Piercing_Fang.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：突刺\n\n「血指獵人」尤拉的戰技。\n舉起武器與地面平行，再一口氣貫穿敵人。\n此戰技無法用防禦擋下。",
+        "en": "Skill: Piercing Fang\n\nSkill used by Yura, the Bloody Finger Hunter.\nStarting with the blade held horizontally, make a powerful thrust that cannot be blocked."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "103": {
+      "name": {
+        "zh": "迴旋斬",
+        "en": "Spinning Slash"
+      },
+      "textId": "103",
+      "icon": null,
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "zh": "戰技：迴旋斬\n\n擁有高靈巧的劍士們使用的戰技。\n能大幅旋轉身體，砍向敵人。\n再次發動能使出追擊。",
+        "en": "Skill: Spinning Slash\n\nSkill favored by dexterous warriors.\nSlash foes as your body spins. Additional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "105": {
+      "name": {
+        "zh": "突擊",
+        "en": "Charge Forth"
+      },
+      "textId": "105",
+      "icon": {
+        "src": "images/skill-charge-forth.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Charge_Forth.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：突擊\n\n武器及腰擺出架式，再一口氣向前衝的戰技。\n前進到極限後能使出突刺攻擊。\n持續發動能增加移動距離。",
+        "en": "Skill: Charge Forth\n\nQuickly charge forward with the armament at the hip, carrying the momentum into a thrust.\nHold to cover a greater distance."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "106": {
+      "name": {
+        "zh": "箭步（上砍）",
+        "en": "Stamp (Upward Cut)"
+      },
+      "textId": "106",
+      "icon": {
+        "src": "images/skill-stamp-upward-cut.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stamp_(Upward_Cut).png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 8
+      },
+      "caption": {
+        "zh": "戰技：箭步（上砍）\n\n舉起武器擺出架式，穩住姿勢壓低身形，\n瞬間提升強韌度的戰技。\n發動後接著使出重攻擊，能上砍攻擊。",
+        "en": "Skill: Stamp (Upward Cut)\n\nBrace armament and step into a low stance that prevents recoil from most enemy attacks.\nFollow up with a strong attack for an upward strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "107": {
+      "name": {
+        "zh": "箭步（迴旋斬）",
+        "en": "Stamp (Sweep)"
+      },
+      "textId": "107",
+      "icon": {
+        "src": "images/skill-stamp-sweep.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stamp_(Sweep).png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 8
+      },
+      "caption": {
+        "zh": "戰技：箭步（迴旋斬）\n\n舉起武器擺出架式，穩住姿勢壓低身形，\n瞬間提升強韌度的戰技。\n發動後接著使出重攻擊，能迴旋斬。",
+        "en": "Skill: Stamp (Sweep)\n\nBrace armament and step into a low stance that prevents recoil from most enemy attacks.\nFollow up with a strong attack for a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "108": {
+      "name": {
+        "zh": "鮮血徵收",
+        "en": "Blood Tax"
+      },
+      "textId": "108",
+      "icon": {
+        "src": "images/skill-blood-tax.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blood_Tax.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：鮮血徵收\n\n鮮血君王分享的力量，血盟戰技之一。\n旋身之後，使出多重的突刺連擊。\n能奪取受攻擊對象的鮮血與ＨＰ。",
+        "en": "Skill: Blood Tax\n\nBlood Oath skill granted by the Lord of Blood.\nTwist to build power, then unleash a flurry of thrusts that rob the target of both their blood and their HP."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "109": {
+      "name": {
+        "zh": "連擊",
+        "en": "Repeating Thrust"
+      },
+      "textId": "109",
+      "icon": {
+        "src": "images/skill-repeating-thrust.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Repeating_Thrust.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 7,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：連擊\n\n旋身之後，使出連續突刺的戰技。",
+        "en": "Skill: Repeating Thrust\n\nTwist to build power, then unleash a flurry of thrusts."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "110": {
+      "name": {
+        "zh": "盲擊",
+        "en": "Wild Strikes"
+      },
+      "textId": "110",
+      "icon": {
+        "src": "images/skill-wild-strikes.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wild_Strikes.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 2,
+        "R1": 10,
+        "R2": 15
+      },
+      "caption": {
+        "zh": "戰技：盲擊\n\n不間斷、任意揮動武器的戰技。\n持續發動的期間能一直攻擊，\n接著使出輕攻擊或重攻擊，能追加攻擊。",
+        "en": "Skill: Wild Strikes\n\nSwing armament with wild abandon.\nHold to continue swinging. Can be followed up with a normal or strong attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "111": {
+      "name": {
+        "zh": "迴旋擊",
+        "en": "Spinning Strikes"
+      },
+      "textId": "111",
+      "icon": {
+        "src": "images/skill-spinning-strikes.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Strikes.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 2,
+        "R1": 10,
+        "R2": 15
+      },
+      "caption": {
+        "zh": "戰技：迴旋擊\n\n大幅度旋轉長柄武器的戰技。\n持續發動的期間能一直攻擊，\n接著使出輕攻擊或重攻擊，能追加攻擊。\n旋轉武器時，能撥開箭等等的遠攻道具。",
+        "en": "Skill: Spinning Strikes\n\nPolearm skill that performs continuous spinning attacks. Hold to continue the attack. Can be followed up with a normal or strong attack. Nullifies projectiles such as arrows while spinning."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "112": {
+      "name": {
+        "zh": "二連斬",
+        "en": "Double Slash"
+      },
+      "textId": "112",
+      "icon": {
+        "src": "images/skill-double-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Double_Slash.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 3
+      },
+      "caption": {
+        "zh": "戰技：二連斬\n\n傑出劍士的戰技。\n壓低身形後，使出連續的交錯斬擊。\n再次發動能使出最多兩次的追擊。",
+        "en": "Skill: Double Slash\n\nSkill of superior swordsmen.\nPerform a crossing slash attack from a low stance.\nRepeated inputs allow for up to two follow-up attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "113": {
+      "name": {
+        "zh": "主教衝鋒",
+        "en": "Prelate's Charge"
+      },
+      "textId": "113",
+      "icon": {
+        "src": "images/skill-prelate-s-charge.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Prelate's_Charge.png"
+      },
+      "group": "fire",
+      "fp": {
+        "L1": -1,
+        "L2": 7,
+        "R1": -1,
+        "R2": 7
+      },
+      "caption": {
+        "zh": "戰技：主教衝鋒\n\n將武器敲向地面，形成猛烈燃燒的火焰，\n再順勢向前推進的戰技。\n持續發動的期間能一直向前推進。",
+        "en": "Skill: Prelate's Charge\n\nSlam armament into the ground to create a surge of flames, then charge in.\nHold to continue the charge."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "114": {
+      "name": {
+        "zh": "居合",
+        "en": "Unsheathe"
+      },
+      "textId": "114",
+      "icon": {
+        "src": "images/skill-unsheathe.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Unsheathe.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 10,
+        "R2": 15
+      },
+      "caption": {
+        "zh": "戰技：居合\n\n蘆葦之地的劍客繼承而來的戰技。\n收刀入腰間刀鞘，擺出架式後靜止不動，\n接著使出輕攻擊或重攻擊，能高速斬擊。",
+        "en": "Skill: Unsheathe\n\nSkill of swordsmen from the Land of Reeds.\nSheathe blade, holding it at the hip in a composed stance.\nFollow up with a normal or strong attack to perform a swift slash attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "115": {
+      "name": {
+        "zh": "準備架式",
+        "en": "Square Off"
+      },
+      "textId": "115",
+      "icon": {
+        "src": "images/skill-square-off.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Square_Off.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 6,
+        "R2": 8
+      },
+      "caption": {
+        "zh": "戰技：準備架式\n\n舉起劍與地面平行，接著使出攻擊的戰技。\n輕攻擊能使出由下而上，突破防禦的斬擊。\n重攻擊能向前衝刺、突刺攻擊。",
+        "en": "Skill: Square Off\n\nThis skill starts with the sword held level.\nFollow up with a normal attack to slash upwards through enemy's guard, or a strong attack to perform a running thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "116": {
+      "name": {
+        "zh": "狩獵巨人",
+        "en": "Giant Hunt"
+      },
+      "textId": "116",
+      "icon": {
+        "src": "images/skill-giant-hunt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Giant_Hunt.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：狩獵巨人\n\n挑戰體型比自己大的敵人而有的戰技。\n壓低身形穩住姿勢，向前踏出，\n接著順勢由下而上突刺敵人。",
+        "en": "Skill: Giant Hunt\n\nSkill developed for confronting gigantic foes.\nStep forward from a low stance, carrying the momentum into a sudden upward thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "118": {
+      "name": {
+        "zh": "羅蕾塔的斬擊",
+        "en": "Loretta's Slash"
+      },
+      "textId": "118",
+      "icon": null,
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：羅蕾塔的斬擊\n\n禁衛騎士羅蕾塔的戰技。\n向前跳的同時，將輝石的魔力灌入劍身，\n再加快速度瞬間斬下。",
+        "en": "Skill: Loretta's Slash\n\nSkill of Loretta the Royal Knight.\nLeap forward, imbuing the blade with glintstone, then descend, accelerating into a sweeping slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "119": {
+      "name": {
+        "zh": "雙吻毒蛾",
+        "en": "Poison Moth Flight"
+      },
+      "textId": "119",
+      "icon": {
+        "src": "images/skill-poison-moth-flight.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Poison_Moth_Flight.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 7,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：雙吻毒蛾\n\n在劍刃塗上強效毒，砍向敵人的戰技。\n對上陷入中毒狀態的敵人，\n如果成功使出追擊，能一口氣給予大傷害。",
+        "en": "Skill: Poison Moth Flight\n\nSlash with a poison-infused blade.\nIf the follow-up strike lands on a poisoned foe, it will deal significant damage."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "120": {
+      "name": {
+        "zh": "轉啊轉",
+        "en": "Spinning Weapon"
+      },
+      "textId": "120",
+      "icon": null,
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：轉啊轉\n\n卡利亞公主們防身用的戰技。\n將武器浮在自身前方高速旋轉，\n觸碰到的人物會受到連擊。",
+        "en": "Skill: Spinning Weapon\n\nDefensive skill employed by Carian princesses.\nLifts armament into mid-air, then makes it spin violently. Those it touches will suffer successive attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "122": {
+      "name": {
+        "zh": "風暴襲擊",
+        "en": "Storm Assault"
+      },
+      "textId": "122",
+      "icon": {
+        "src": "images/skill-storm-assault.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Assault.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 22,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：風暴襲擊\n\n史東薇爾的風暴戰技之一。\n纏繞著風暴向前跳，將武器向下刺。\n突刺攻擊後也會形成風暴。",
+        "en": "Skill: Storm Assault\n\nOne of the skills that channel the tempests of Stormveil.\nLeap forward through surrounding storm winds and thrust armament downward. The attack will produce more storm winds at the point of impact."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "123": {
+      "name": {
+        "zh": "喚起風暴",
+        "en": "Stormcaller"
+      },
+      "textId": "123",
+      "icon": {
+        "src": "images/skill-stormcaller.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Stormcaller.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": 11
+      },
+      "caption": {
+        "zh": "戰技：喚起風暴\n\n史東薇爾的風暴戰技之一。\n能揮舞武器，在自身周圍喚起風暴。\n再次發動能使出最多兩次的追擊。",
+        "en": "Skill: Stormcaller\n\nOne of the skills that channel the tempests of Stormveil. Spin armament to create surrounding storm winds. Repeated inputs allow for up to two follow-up attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "124": {
+      "name": {
+        "zh": "劍舞",
+        "en": "Sword Dance"
+      },
+      "textId": "124",
+      "icon": {
+        "src": "images/skill-sword-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sword_Dance.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "戰技：劍舞\n\n一邊迅速向前推進，\n一邊使出連續旋身上砍的戰技。\n再次發動能使出迅速下砍。",
+        "en": "Skill: Sword Dance\n\nQuickly close in to perform a series of spinning upward slashes.\nFollow up with an additional input to finish with a downward slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "125": {
+      "name": {
+        "zh": "迴旋鎖鍊",
+        "en": "Spinning Chain"
+      },
+      "textId": "125",
+      "icon": {
+        "src": "images/skill-spinning-chain.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Chain.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": 8,
+        "R2": 10
+      },
+      "caption": {
+        "zh": "戰技：迴旋鎖鍊\n\n高速旋轉連枷打擊部位的戰技。\n發動後使出輕攻擊或重攻擊，能順勢追擊。",
+        "en": "Skill: Spinning Chain\n\nSpins the striking part of a flail at high speed to attack.\nFollow up with a normal or strong attack to link the momentum of this skill into a successive attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "200": {
+      "name": {
+        "zh": "輝劍圓陣",
+        "en": "Glintblade Phalanx"
+      },
+      "textId": "200",
+      "icon": {
+        "src": "images/skill-glintblade-phalanx.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintblade_Phalanx.png"
+      },
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 4
+      },
+      "caption": {
+        "zh": "戰技：輝劍圓陣\n\n侍奉卡利亞王室的魔法騎士們使用的戰技。\n讓魔力輝劍浮空圍成半圓，自動攻擊敵人。\n發動後接著使出重攻擊，\n能向前大幅跨出、突刺攻擊。",
+        "en": "Skill: Glintblade Phalanx\n\nSkill used by the enchanted knights who served the Carian royal family. Form an arch of magic glintblades overhead, which will attack foes automatically. Follow up with a strong attack to chain this skill into a lunging thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "201": {
+      "name": {
+        "zh": "神聖刀刃",
+        "en": "Sacred Blade"
+      },
+      "textId": "201",
+      "icon": {
+        "src": "images/skill-sacred-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Blade.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 19,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：神聖刀刃\n\n讓武器附加聖屬性攻擊力，\n並且順勢釋放黃金刀刃的戰技。\n附加聖屬性攻擊力的效果會暫時延續。",
+        "en": "Skill: Sacred Blade\n\nGrants armament's attacks holy essence and fires off a golden blade projectile.\nThe armament retains its holy essence for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "202": {
+      "name": {
+        "zh": "冰槍",
+        "en": "Ice Spear"
+      },
+      "textId": "202",
+      "icon": {
+        "src": "images/skill-ice-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ice_Spear.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：冰槍\n\n侍奉「月之公主」菈妮的戰士使用的戰技。\n旋轉武器之餘喚出寒氣，\n再順勢使出突刺，釋放冰槍。",
+        "en": "Skill: Ice Spear\n\nSkill of the warriors who served Lunar Princess Ranni.\nSpin armament to release cold magic, then channel it into a piercing spear of ice."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "203": {
+      "name": {
+        "zh": "輝石魔礫",
+        "en": "Glintstone Pebble"
+      },
+      "textId": "203",
+      "icon": {
+        "src": "images/skill-glintstone-pebble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintstone_Pebble.png"
+      },
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": 4
+      },
+      "caption": {
+        "zh": "戰技：輝石魔礫\n\n能施展同名輝石魔法的戰技。\n發動後接著使出重攻擊，能大幅向前跨出，\n使出含有輝石魔力的突刺攻擊。",
+        "en": "Skill: Glintstone Pebble\n\nSkill that employs the glintstone sorcery of the same name.\nFollow up with a strong attack to chain this skill into a lunging thrust, performed while the armament is still imbued with glintstone."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "204": {
+      "name": {
+        "zh": "鮮血斬擊",
+        "en": "Bloody Slash"
+      },
+      "textId": "204",
+      "icon": {
+        "src": "images/skill-bloody-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloody_Slash.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：鮮血斬擊\n\n鮮血君王分享的力量，血盟戰技之一。\n壓低身形，將自身的血液布滿劍身，\n使出大範圍撕裂敵人的血刃。",
+        "en": "Skill: Bloody Slash\n\nBlood Oath skill granted by the Lord of Blood.\nFrom a low stance, coat the blade in your own blood to unleash a rending blood slash in a wide arc."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "205": {
+      "name": {
+        "zh": "奪命拳",
+        "en": "Lifesteal Fist"
+      },
+      "textId": "205",
+      "icon": {
+        "src": "images/skill-lifesteal-fist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lifesteal_Fist.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：奪命拳\n\n精通氣的專家使用的戰技。\n只對有著人類之身的敵人有效。\n將氣緩慢纏繞拳頭之後再出拳，\n能讓碰觸的人昏倒，奪取ＨＰ。",
+        "en": "Skill: Lifesteal Fist\n\nSkill that demonstrates mastery of the art of controlling vital energies.\nA slow, controlled punch with an energy-infused fist that renders foes unconscious and steals their HP. Only effective against foes of human build."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "207": {
+      "name": {
+        "zh": "熔岩火漿",
+        "en": "Eruption"
+      },
+      "textId": "207",
+      "icon": {
+        "src": "images/skill-eruption.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Eruption.png"
+      },
+      "group": "fire",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：熔岩火漿\n\n侍奉火山官邸的騎士們使用的戰技。\n將武器敲向地面，形成滾燙熔岩，\n在拔起武器的同時，熔岩隨之噴出。",
+        "en": "Skill: Eruption\n\nSkill of the knights who serve at Volcano Manor.\nSlam armament into the ground, spawning roiling lava which spouts up upon release."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "208": {
+      "name": {
+        "zh": "祈禱一擊",
+        "en": "Prayerful Strike"
+      },
+      "textId": "208",
+      "icon": {
+        "src": "images/skill-prayerful-strike.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Prayerful_Strike.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：祈禱一擊\n\n伴隨祈禱高舉武器，再敲向地面的戰技。\n當那一記誠摯的攻擊命中敵人，\n能恢復包含周圍我方人物的ＨＰ。",
+        "en": "Skill: Prayerful Strike\n\nRaise armament aloft in prayer, then slam it into the ground.\nThis inspired blow restores HP to the self and nearby allies if it successfully hits."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "209": {
+      "name": {
+        "zh": "重力",
+        "en": "Gravitas"
+      },
+      "textId": "209",
+      "icon": {
+        "src": "images/skill-gravitas.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gravitas.png"
+      },
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 13,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：重力\n\n源自擁有石質皮膚的白王的戰技。\n將武器刺入地面，產生重力波，\n能給予敵人傷害，同時將對方拉近自己。",
+        "en": "Skill: Gravitas\n\nSkill originating from the Alabaster Lords, who had skin of stone.\nThrust the armament into the ground to create a gravity well.\nIn addition to dealing damage, this attack pulls enemies in."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "210": {
+      "name": {
+        "zh": "風暴刃",
+        "en": "Storm Blade"
+      },
+      "textId": "210",
+      "icon": {
+        "src": "images/skill-storm-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Blade.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "戰技：風暴刃\n\n史東薇爾的失傳戰技。\n將武器纏繞風暴刃，朝前方釋放風暴。\n可以連續施放。",
+        "en": "Skill: Storm Blade\n\nLost skill of Stormveil.\nSurround armament with shearing storm winds that can be fired forward.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "212": {
+      "name": {
+        "zh": "撼地",
+        "en": "Earthshaker"
+      },
+      "textId": "212",
+      "icon": {
+        "src": "images/skill-earthshaker.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Earthshaker.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "zh": "戰技：撼地\n\n將武器刺入地面後，再向下使力\n產生衝擊波，引發劇烈搖晃的戰技。\n發動後接著使出重攻擊，\n能迴旋橫掃攻擊。",
+        "en": "Skill: Earthshaker\n\nThrust armament into the ground, then gather strength to unleash an earth-shaking shockwave.\nFollow up with a strong attack to swing the armament in a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "213": {
+      "name": {
+        "zh": "黃金大地",
+        "en": "Golden Land"
+      },
+      "textId": "213",
+      "icon": {
+        "src": "images/skill-golden-land.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Land.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "zh": "戰技：黃金大地\n\n將武器刺入地面後，再向下使力\n引發神聖爆炸，形成黃金石礫的戰技。\n發動後接著使出重攻擊，\n能迴旋橫掃攻擊。",
+        "en": "Skill: Golden Land\n\nThrust armament into the ground, then gather strength to unleash a blast of sacred energy that coalesces into golden darts. Follow up with a strong attack to swing the armament in a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "214": {
+      "name": {
+        "zh": "炎擊",
+        "en": "Flaming Strike"
+      },
+      "textId": "214",
+      "icon": {
+        "src": "images/skill-flaming-strike.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flaming_Strike.png"
+      },
+      "group": "fire",
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": 10
+      },
+      "caption": {
+        "zh": "戰技：炎擊\n\n朝前方大範圍釋放火焰的戰技。\n發動後接著使出重攻擊，\n能向前跨出、橫掃攻擊，並讓武器纏繞火焰。",
+        "en": "Skill: Flaming Strike\n\nSkill that emits flame in a wide frontward arc.\nFollow up with a strong attack to perform a lunging, sweeping strike.\nThis will also coat the armament in fire."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "216": {
+      "name": {
+        "zh": "落雷",
+        "en": "Thunderbolt"
+      },
+      "textId": "216",
+      "icon": {
+        "src": "images/skill-thunderbolt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thunderbolt.png"
+      },
+      "group": "lightning",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 10
+      },
+      "caption": {
+        "zh": "戰技：落雷\n\n王城古龍信仰的戰技之一。\n武器指向天之後會蘊藏雷電，召喚落雷。\n可以連續施放。",
+        "en": "Skill: Thunderbolt\n\nSkill used by the capital's ancient dragon cult.\nRaise armament aloft to call down a bolt of lightning.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "217": {
+      "name": {
+        "zh": "雷擊斬",
+        "en": "Lightning Slash"
+      },
+      "textId": "217",
+      "icon": {
+        "src": "images/skill-lightning-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lightning_Slash.png"
+      },
+      "group": "lightning",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：雷擊斬\n\n讓雷電打在武器上，再向下揮舞，\n形成強力雷擊的戰技。\n纏繞武器上的雷電會暫時延續。",
+        "en": "Skill: Lightning Slash\n\nCall down a bolt of lightning into armament, then swing it down to create an explosive shock.\nThe armament retains the lightning enchantment for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "218": {
+      "name": {
+        "zh": "偉哉卡利亞",
+        "en": "Carian Grandeur"
+      },
+      "textId": "218",
+      "icon": {
+        "src": "images/skill-carian-grandeur.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Grandeur.png"
+      },
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 26,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：偉哉卡利亞\n\n喻為卡利亞王室象徵的戰技。\n將劍身化為魔力大劍，再向下揮舞。\n藉由蓄力發動，能提升兩個階段。",
+        "en": "Skill: Carian Grandeur\n\nCarian royal prestige embodied in a skill.\nTransform blade into a magical greatsword and swing it down.\nCan be charged to increase its power by up to two levels."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "219": {
+      "name": {
+        "zh": "卡利亞大劍",
+        "en": "Carian Greatsword"
+      },
+      "textId": "219",
+      "icon": {
+        "src": "images/skill-carian-greatsword.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Greatsword.png"
+      },
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：卡利亞大劍\n\n喻為卡利亞王室象徵的戰技。\n將劍身化為魔力大劍，再向下揮舞。\n藉由蓄力發動，能提升威力。",
+        "en": "Skill: Carian Greatsword\n\nCarian royal prestige embodied in a skill.\nTransform blade into a magical greatsword and swing it down.\nCan be charged to increase its power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "220": {
+      "name": {
+        "zh": "真空斬",
+        "en": "Vacuum Slice"
+      },
+      "textId": "220",
+      "icon": {
+        "src": "images/skill-vacuum-slice.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Vacuum_Slice.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：真空斬\n\n古英雄們的失傳戰技。\n高舉劍身形成真空狀態，\n再化為真空刃，朝前方釋放。",
+        "en": "Skill: Vacuum Slice\n\nLost skill of ancient heroes.\nHold the armament aloft to surround it with a shearing vacuum, then launch it forwards as a blade-like projectile."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "221": {
+      "name": {
+        "zh": "黑焰漩渦",
+        "en": "Black Flame Tornado"
+      },
+      "textId": "221",
+      "icon": {
+        "src": "images/skill-black-flame-tornado.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Black_Flame_Tornado.png"
+      },
+      "group": "fire",
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：黑焰漩渦\n\n旋轉武器再刺向地面，\n喚出漩渦狀黑焰的戰技。\n持續發動的期間，\n在旋轉時也能形成黑焰漩渦。",
+        "en": "Skill: Black Flame Tornado\n\nSpin armament overhead and then plunge it into the ground to summon a raging vortex of black flames.\nHold to create an initial flame tornado while spinning the armament."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "222": {
+      "name": {
+        "zh": "神聖光環",
+        "en": "Sacred Ring of Light"
+      },
+      "textId": "222",
+      "icon": {
+        "src": "images/skill-sacred-ring-of-light.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Ring_of_Light.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": 9
+      },
+      "caption": {
+        "zh": "戰技：神聖光環\n\n尊腐騎士的指揮官使用的戰技。\n讓武器形成神聖光環，朝前方釋放。\n可以連續施放。",
+        "en": "Skill: Sacred Ring of Light\n\nSkill used by the commanders of the Cleanrot Knights. Gather a sacred ring of light in the armament, then fire it forwards.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "224": {
+      "name": {
+        "zh": "血刃",
+        "en": "Blood Blade"
+      },
+      "textId": "224",
+      "icon": {
+        "src": "images/skill-blood-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blood_Blade.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": 3
+      },
+      "caption": {
+        "zh": "戰技：血刃\n\n自傷後用血液沾染武器，\n釋放能引發出血的血刃的戰技。\n可以連續施放。",
+        "en": "Skill: Blood Blade\n\nWound self to coat the armament with blood, then unleash an airborne blood blade that causes hemorrhaging.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "225": {
+      "name": {
+        "zh": "幻影共擊",
+        "en": "Phantom Slash"
+      },
+      "textId": "225",
+      "icon": {
+        "src": "images/skill-phantom-slash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Phantom_Slash.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": 8
+      },
+      "caption": {
+        "zh": "戰技：幻影共擊\n\n黑夜騎兵的戀舊戰技。\n能形成過去老師的幻影，一同突擊上砍。\n再次發動能使出追擊。",
+        "en": "Skill: Phantom Slash\n\nSkill inspired by the fond remembrances of the Night's Cavalry. Creates an apparition of the knights' former instructor who guides a joint lunging upward swing. Additional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "226": {
+      "name": {
+        "zh": "幻影槍",
+        "en": "Spectral Lance"
+      },
+      "textId": "226",
+      "icon": {
+        "src": "images/skill-spectral-lance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spectral_Lance.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：幻影槍\n\n無頭靈廟騎士使用的戰技。\n能形成幻影槍，投擲攻擊。",
+        "en": "Skill: Spectral Lance\n\nSkill of the headless Mausoleum Knights.\nHurl a phantasmic spear at foes."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "227": {
+      "name": {
+        "zh": "寒氣凍霧",
+        "en": "Chilling Mist"
+      },
+      "textId": "227",
+      "icon": {
+        "src": "images/skill-chilling-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Chilling_Mist.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：寒氣凍霧\n\n讓武器纏繞寒氣後使出斬擊，\n並在前方形成凍霧的戰技。\n纏繞武器上的寒氣會暫時延續。",
+        "en": "Skill: Chilling Mist\n\nCoat armament in frost, and then slash, spreading frigid mist forwards.\nThe armament retains its frost for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "228": {
+      "name": {
+        "zh": "毒霧",
+        "en": "Poisonous Mist"
+      },
+      "textId": "228",
+      "icon": {
+        "src": "images/skill-poisonous-mist.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Poisonous_Mist.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：毒霧\n\n讓武器纏繞毒之後使出斬擊，\n並在前方形成毒霧的戰技，\n纏繞武器上的毒會暫時延續。",
+        "en": "Skill: Poisonous Mist\n\nBathe armament in poison, and then slash, spreading toxic mist forwards.\nThe armament retains its poison for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "300": {
+      "name": {
+        "zh": "盾牌衝擊",
+        "en": "Shield Bash"
+      },
+      "textId": "300",
+      "icon": {
+        "src": "images/skill-shield-bash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shield_Bash.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：盾牌衝擊\n\n架穩盾牌、防禦的同時，\n利用全身的重量向前衝撞的戰技。\n對弱小的敵人使出，能讓對方失去平衡。",
+        "en": "Skill: Shield Bash\n\nBrace behind shield before using bodyweight to ram foes while maintaining guarding stance.\nWeaker enemies will be shoved backwards, and can even be staggered."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "301": {
+      "name": {
+        "zh": "鐵壁盾防",
+        "en": "Barricade Shield"
+      },
+      "textId": "301",
+      "icon": {
+        "src": "images/skill-barricade-shield.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barricade_Shield.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：鐵壁盾防\n\n因騎士奈德哈特而聞名的戰技。\n將力量集中至盾牌，暫時強化盾牌的堅硬度，\n能抵禦更為強大的攻擊。",
+        "en": "Skill: Barricade Shield\n\nSkill made famous by Sir Neidhardt.\nFocus your energy into the shield, temporarily hardening it to deflect greater blows."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "302": {
+      "name": {
+        "zh": "格擋",
+        "en": "Parry"
+      },
+      "textId": "302",
+      "icon": null,
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：格擋\n\n撥開攻擊的同時，讓敵人失去平衡的戰技。\n需要在敵人近距離攻擊時配合使用。\n失去平衡後，使出「致命一擊」的機會隨之到來。",
+        "en": "Skill: Parry\n\nUse this skill in time with a foe's melee attack to deflect it and break that foe's stance.\nThis provides an opening to perform a critical hit."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "303": {
+      "name": {
+        "zh": "小圓盾格擋",
+        "en": "Buckler Parry"
+      },
+      "textId": "303",
+      "icon": {
+        "src": "images/skill-buckler-parry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Buckler_Parry.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：小圓盾格擋\n\n撥開攻擊的同時，讓敵人失去平衡的戰技。\n需要在敵人近距離攻擊時配合使用。\n發動速度比戰技「格擋」還快。",
+        "en": "Skill: Buckler Parry\n\nUse this skill in time with a foe's melee attack to deflect it and break that foe's stance.\nThis is faster than a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "305": {
+      "name": {
+        "zh": "卡利亞式奉還",
+        "en": "Carian Retaliation"
+      },
+      "textId": "305",
+      "icon": {
+        "src": "images/skill-carian-retaliation.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Carian_Retaliation.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：卡利亞式奉還\n\n揮動盾牌消除魔法、禱告的效用，\n再用承受的力量化為浮空輝劍的戰技。\n也能發揮與戰技「格擋」相同的功能。",
+        "en": "Skill: Carian Retaliation\n\nSwing the shield to dispel incoming sorceries and incantations, transforming the magic into retaliatory glintblades.\nCan also be used in the same way as a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "306": {
+      "name": {
+        "zh": "風暴障壁",
+        "en": "Storm Wall"
+      },
+      "textId": "306",
+      "icon": {
+        "src": "images/skill-storm-wall.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Wall.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：風暴障壁\n\n揮動盾牌，在自身前方形成風暴障壁，\n讓箭之類的遠攻道具偏移的戰技。\n也能發揮與戰技「格擋」相同的功能。",
+        "en": "Skill: Storm Wall\n\nSwing the shield to create a wall of storm winds in front of you, deflecting arrows and other such physical projectiles.\nCan also be used in the same way as a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "307": {
+      "name": {
+        "zh": "黃金格擋",
+        "en": "Golden Parry"
+      },
+      "textId": "307",
+      "icon": {
+        "src": "images/skill-golden-parry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Parry.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：黃金格擋\n\n執行黃金樹禱告的同時揮動盾牌，\n讓敵人的攻擊偏移，並失去平衡的戰技。\n與敵人有些距離也能產生效用。",
+        "en": "Skill: Golden Parry\n\nPerform an Erdtree incantation and swing the shield to deflect enemy attacks and break their stance.\nEffective even at a slight distance."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "308": {
+      "name": {
+        "zh": "突進衝擊",
+        "en": "Shield Crash"
+      },
+      "textId": "308",
+      "icon": {
+        "src": "images/skill-shield-crash.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shield_Crash.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：突進衝擊\n\n用雙手共持盾牌，\n防禦的同時，向前突進的戰技。\n對弱小的敵人使出，能讓對方失去平衡。\n持續發動能增加移動距離。",
+        "en": "Skill: Shield Crash\n\nTwo-hand the shield and charge forwards while maintaining guard. Weaker enemies will be shoved backwards and can even be staggered.\nHold to extend the duration of the charge forwards."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "309": {
+      "name": {
+        "zh": "托普斯的力場",
+        "en": "Thops's Barrier"
+      },
+      "textId": "309",
+      "icon": {
+        "src": "images/skill-thops-s-barrier.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thops's_Barrier.png"
+      },
+      "group": "shield",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：托普斯的力場\n\n張開魔力力場的同時揮動盾牌，\n能撥開魔法、禱告的戰技。\n也能發揮與戰技「格擋」相同的功能。",
+        "en": "Skill: Thops's Barrier\n\nErect a magical forcefield while swinging the shield to deflect sorceries and incantations.\nCan also be used in the same way as a regular parry."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "400": {
+      "name": {
+        "zh": "貫穿射擊",
+        "en": "Through and Through"
+      },
+      "textId": "400",
+      "icon": {
+        "src": "images/skill-through-and-through.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Through_and_Through.png"
+      },
+      "group": "bow",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 9,
+        "R2": 9
+      },
+      "caption": {
+        "zh": "戰技：貫穿射擊\n\n能側身拉開大弓，強大的射手戰技。\n拉開大弓的同時也扭轉弓弦，\n增加大箭的旋轉度，藉此貫穿敵人的身體。",
+        "en": "Skill: Through and Through\n\nPowerful archery skill using a greatbow held in an oblique stance.\nReady the greatbow, then twist the bowstring to fire a mighty greatarrow that can penetrate through enemies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "401": {
+      "name": {
+        "zh": "連續射擊",
+        "en": "Barrage"
+      },
+      "textId": "401",
+      "icon": {
+        "src": "images/skill-barrage.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barrage.png"
+      },
+      "group": "bow",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 2,
+        "R2": 2
+      },
+      "caption": {
+        "zh": "戰技：連續射擊\n\n能水平拉弓的射手戰技。\n擺出架式後，能以肉眼難以追上的速度，\n連續射出箭。",
+        "en": "Skill: Barrage\n\nArchery skill using a bow held horizontally.\nReady the bow, then fire off a rapid succession of shots faster than the eye can see."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "402": {
+      "name": {
+        "zh": "拉滿弓",
+        "en": "Mighty Shot"
+      },
+      "textId": "402",
+      "icon": {
+        "src": "images/skill-mighty-shot.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Mighty_Shot.png"
+      },
+      "group": "bow",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 6,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "戰技：拉滿弓\n\n能側身拉弓的射手戰技。\n擺出架式後，用力拉滿弓，\n能提升箭的攻擊威力，突破敵人防禦。",
+        "en": "Skill: Mighty Shot\n\nArchery skill performed from an oblique stance.\nReady the bow, then pull the bowstring to its limit to enhance the power of the shot, penetrating the enemy's guard."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "404": {
+      "name": {
+        "zh": "宿靈射擊",
+        "en": "Enchanted Shot"
+      },
+      "textId": "404",
+      "icon": {
+        "src": "images/skill-enchanted-shot.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Enchanted_Shot.png"
+      },
+      "group": "bow",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 8,
+        "R2": 8
+      },
+      "caption": {
+        "zh": "戰技：宿靈射擊\n\n擺出架式，讓靈魂寄宿在箭之上，\n再射擊的戰技。飛行速度比一般的箭更快。\n仿佛會追蹤目標，飛行軌道會隨之調整。",
+        "en": "Skill: Enchanted Shot\n\nArchery skill that enlivens the arrow with spiritual essence.\nThe resulting shot will fly faster than regular shots and change its trajectory to follow the target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "405": {
+      "name": {
+        "zh": "對空射擊",
+        "en": "Sky Shot"
+      },
+      "textId": "405",
+      "icon": {
+        "src": "images/skill-sky-shot.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sky_Shot.png"
+      },
+      "group": "bow",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 3,
+        "R2": 3
+      },
+      "caption": {
+        "zh": "戰技：對空射擊\n\n壓低身形拉弓的射手戰技。\n擺出架式後，朝天空射出箭，\n箭會從敵人上方落下。",
+        "en": "Skill: Sky Shot\n\nArchery skill performed from a low stance.\nReady the bow, then fire an arrow high up into the air, arcing so as to strike the enemy from above when it comes down."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "406": {
+      "name": {
+        "zh": "箭雨",
+        "en": "Rain of Arrows"
+      },
+      "textId": "406",
+      "icon": {
+        "src": "images/skill-rain-of-arrows.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rain_of_Arrows.png"
+      },
+      "group": "bow",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 20,
+        "R2": 20
+      },
+      "caption": {
+        "zh": "戰技：箭雨\n\n壓低身形拉弓的戰技。\n擺出架式後，朝天空一口氣射出多支箭，\n箭會如雨一般，從敵人上方傾注而下。",
+        "en": "Skill: Rain of Arrows\n\nArchery skill performed from a low stance.\nReady the bow, then fire a burst of arrows into the sky to shower the enemy with projectiles."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "501": {
+      "name": {
+        "zh": "凍霜踏地",
+        "en": "Hoarfrost Stomp"
+      },
+      "textId": "501",
+      "icon": {
+        "src": "images/skill-hoarfrost-stomp.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Hoarfrost_Stomp.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：凍霜踏地\n\n大力踏向地面，讓凍霜隨之擴散的戰技。\n凍霜會引發異常狀態凍傷。",
+        "en": "Skill: Hoarfrost Stomp\n\nStomp hard to spread a trail of freezing mist on the ground.\nThe mist applies the frost status effect."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "502": {
+      "name": {
+        "zh": "風暴足",
+        "en": "Storm Stomp"
+      },
+      "textId": "502",
+      "icon": {
+        "src": "images/skill-storm-stomp.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Stomp.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：風暴足\n\n史東薇爾的風暴戰技之一。\n能大力踏向地面，在自身周圍引發瞬間的風暴。",
+        "en": "Skill: Storm Stomp\n\nOne of the skills that channel the tempests of Stormveil.\nStomp hard on the ground to kick up a momentary storm."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "503": {
+      "name": {
+        "zh": "踢擊",
+        "en": "Kick"
+      },
+      "textId": "503",
+      "icon": {
+        "src": "images/skill-kick.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Kick.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：踢擊\n\n大幅抬起腳向前踢的戰技。\n對正在防禦的敵人很有效，能使對方失去平衡。\n樸實卻又實用的戰技。",
+        "en": "Skill: Kick\n\nPush an enemy back with a high kick.\nEffective against enemies who are guarding, and can break a foe's stance.\nSometimes a simple tool is the most effective."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "504": {
+      "name": {
+        "zh": "雷電羊球",
+        "en": "Lightning Ram"
+      },
+      "textId": "504",
+      "icon": {
+        "src": "images/skill-lightning-ram.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Lightning_Ram.png"
+      },
+      "group": "lightning",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "zh": "戰技：雷電羊球\n\n仿效向前滾的羊而出現的戰技。\n發出叫聲後，能纏繞雷電向前滾動，\n可以連續滾動。",
+        "en": "Skill: Lightning Ram\n\nSkill inspired by tumbling rams.\nLet out a bleat, then tumble forwards, clad in lightning.\nTumbles can be repeated in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "505": {
+      "name": {
+        "zh": "紅獅子火焰",
+        "en": "Flame of the Redmanes"
+      },
+      "textId": "505",
+      "icon": {
+        "src": "images/skill-flame-of-the-redmanes.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_of_the_Redmanes.png"
+      },
+      "group": "fire",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：紅獅子火焰\n\n與拉塔恩將軍並肩作戰的\n紅獅子軍隊所使用的戰技。\n能朝前方釋放大範圍的強烈火焰。",
+        "en": "Skill: Flame of the Redmanes\n\nSkill of the Redmanes, who fought alongside General Radahn.\nProduce a powerful burst of flames in a wide frontward arc."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "506": {
+      "name": {
+        "zh": "墜落震擊",
+        "en": "Ground Slam"
+      },
+      "textId": "506",
+      "icon": {
+        "src": "images/skill-ground-slam.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ground_Slam.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：墜落震擊\n\n輕盈向前跳，再順勢用臀部\n用力向下墜落的戰技。\n此攻擊能引發劇烈的衝擊波。",
+        "en": "Skill: Ground Slam\n\nJump up high into the air and crash down on the ground ahead.\nThe resulting pratfall sends a powerful shockwave in all directions."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "507": {
+      "name": {
+        "zh": "黃金墜落震擊",
+        "en": "Golden Slam"
+      },
+      "textId": "507",
+      "icon": {
+        "src": "images/skill-golden-slam.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Slam.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 22,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：黃金墜落震擊\n\n守護小黃金樹的化身使用的戰技。\n能輕盈向前跳，用臀部用力向下墜落，\n此攻擊能引發黃金衝擊波。",
+        "en": "Skill: Golden Slam\n\nSkill of the avatars who protect Minor Erdtrees.\nJump up high into the air and crash down on the ground ahead.\nThe resulting pratfall sends golden shockwaves in all directions."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "508": {
+      "name": {
+        "zh": "黑暗波動",
+        "en": "Waves of Darkness"
+      },
+      "textId": "508",
+      "icon": {
+        "src": "images/skill-waves-of-darkness.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Waves_of_Darkness.png"
+      },
+      "group": "magic",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "zh": "戰技：黑暗波動\n\n將武器刺入地面後，在自身周圍\n產生三道黑暗波動的戰技。\n發動後接著使出重攻擊，能迴旋橫掃攻擊。",
+        "en": "Skill: Waves of Darkness\n\nPlunge armament into the ground to release three waves of darkness.\nFollow up with a strong attack to swing the armament in a sweeping strike."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "509": {
+      "name": {
+        "zh": "荷萊‧露的撼地",
+        "en": "Hoarah Loux's Earthshaker"
+      },
+      "textId": "509",
+      "icon": {
+        "src": "images/skill-hoarah-loux-s-earthshaker.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Hoarah_Loux's_Earthshaker.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 16
+      },
+      "caption": {
+        "zh": "戰技：荷萊‧露的撼地\n\n以張開的雙臂敲向地面，\n產生衝擊波，引發劇烈搖晃的戰技。\n再次發動能再一次敲擊地面。",
+        "en": "Skill: Hoarah Loux's Earthshaker\n\nSlam both hands onto the ground to violently shake the earth and unleash a shockwave.\nFollow up with an additional input to slam the ground again."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "600": {
+      "name": {
+        "zh": "決心",
+        "en": "Determination"
+      },
+      "textId": "600",
+      "icon": {
+        "src": "images/skill-determination.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Determination.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：決心\n\n騎士們的戰技。\n將武器移向眼前、指向天空，堅定決心，\n提升下一記攻擊的威力。",
+        "en": "Skill: Determination\n\nA knightly skill.\nHold the flat of the armament to your face and pledge your resolve, powering up your next attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "601": {
+      "name": {
+        "zh": "侍王騎士的決心",
+        "en": "Royal Knight's Resolve"
+      },
+      "textId": "601",
+      "icon": {
+        "src": "images/skill-royal-knight-s-resolve.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Royal_Knight's_Resolve.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：侍王騎士的決心\n\n過去侍奉艾爾登之王的騎士們使用的戰技。\n將武器移向眼前、指向天空，堅定決心，\n大幅提升下一記攻擊的威力。",
+        "en": "Skill: Royal Knight's Resolve\n\nSkill of the knights who once served the Elden Lord.\nHold the flat of the armament to your face and pledge your resolve, greatly powering up your next attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "602": {
+      "name": {
+        "zh": "暗殺辦法",
+        "en": "Assassin's Gambit"
+      },
+      "textId": "602",
+      "icon": {
+        "src": "images/skill-assassin-s-gambit.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Assassin's_Gambit.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：暗殺辦法\n\n自傷之後，消除自身存在的戰技。\n能讓施放者的身影難以辨認，\n也能消除施放者的腳步聲。",
+        "en": "Skill: Assassin's Gambit\n\nSkill that masks the user's presence at the cost of a self-inflicted wound.\nGrants near-invisibility and silences footsteps."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "603": {
+      "name": {
+        "zh": "黃金樹立誓",
+        "en": "Golden Vow"
+      },
+      "textId": "603",
+      "icon": {
+        "src": "images/skill-golden-vow.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Vow.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 40,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：黃金樹立誓\n\n王城騎士們自古繼承而來的戰技。\n將武器指向天空，發誓為黃金樹而戰，\n提升自己與周圍我方人物的攻擊力與防禦力。",
+        "en": "Skill: Golden Vow\n\nSkill passed down from antiquity among the knights of the capital. Raise armament aloft and pledge to honor the Erdtree in battle, granting self and nearby allies increased attack power and defense."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "604": {
+      "name": {
+        "zh": "聖律",
+        "en": "Sacred Order"
+      },
+      "textId": "604",
+      "icon": {
+        "src": "images/skill-sacred-order.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Order.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 18,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：聖律\n\n黃金律法基本主義者的騎士們使用的戰技。\n敬禮的同時，能替武器附加神聖性。\n對死誕者的傷害尤為巨大。",
+        "en": "Skill: Sacred Order\n\nSkill of the Golden Order fundamentalist knights.\nPerform a salute and grant the armament holy essence.\nHighly effective against Those Who Live in Death."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "605": {
+      "name": {
+        "zh": "共享聖律",
+        "en": "Shared Order"
+      },
+      "textId": "605",
+      "icon": {
+        "src": "images/skill-shared-order.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shared_Order.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：共享聖律\n\n黃金律法基本主義者的騎士們使用的戰技。\n能替自身與周圍我方人物的武器附加神聖性。\n對死誕者的傷害尤為巨大。",
+        "en": "Skill: Shared Order\n\nSkill of the Golden Order fundamentalist knights.\nGrant the armament and those of nearby allies holy essence.\nHighly effective against Those Who Live in Death."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "606": {
+      "name": {
+        "zh": "切腹",
+        "en": "Seppuku"
+      },
+      "textId": "606",
+      "icon": {
+        "src": "images/skill-seppuku.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Seppuku.png"
+      },
+      "group": "ailment",
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：切腹\n\n蘆葦之地的劍客，禁用的奧義。\n將武器深深刺入自己的腹部，染上鮮血，\n能提升攻擊力、強化異常狀態出血的效果。",
+        "en": "Skill: Seppuku\n\nA forbidden technique used by swordsmen from the Land of Reeds. Plunge the blade into your stomach to stain it with blood. Increases attack power and improves ability to inflict blood loss."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "607": {
+      "name": {
+        "zh": "岩石劍",
+        "en": "Cragblade"
+      },
+      "textId": "607",
+      "icon": {
+        "src": "images/skill-cragblade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Cragblade.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：岩石劍\n\n以重力招式為人知曉的戰技。\n將武器敲向地面，讓岩石攀附其上。\n能提升攻擊力，也容易讓敵人失去平衡。",
+        "en": "Skill: Cragblade\n\nSkill that manipulates gravity.\nBury the armament in the ground, pulling rocks from the earth to reinforce it. Increases attack power and makes it easier to break enemy stance."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "650": {
+      "name": {
+        "zh": "野蠻咆哮",
+        "en": "Barbaric Roar"
+      },
+      "textId": "650",
+      "icon": {
+        "src": "images/skill-barbaric-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Barbaric_Roar.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：野蠻咆哮\n\n發出野獸般的咆哮，\n藉此激勵自己，提升攻擊力的戰技。\n在戰技有效期間內，重攻擊會變成野蠻連擊。",
+        "en": "Skill: Barbaric Roar\n\nLet loose a bestial roar to rally the spirit and increase attack power.\nWhile active, strong attacks change to savage combo attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "651": {
+      "name": {
+        "zh": "戰吼",
+        "en": "War Cry"
+      },
+      "textId": "651",
+      "icon": {
+        "src": "images/skill-war-cry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_War_Cry.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：戰吼\n\n透過咆哮激勵自己，提升攻擊力的戰技。\n在戰技有效期間內，重攻擊會變成突進攻擊。",
+        "en": "Skill: War Cry\n\nGive a war cry to rally the spirit and increase attack power.\nWhile active, strong attacks change to charging attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "652": {
+      "name": {
+        "zh": "野獸咆哮",
+        "en": "Beast's Roar"
+      },
+      "textId": "652",
+      "icon": {
+        "src": "images/skill-beast-s-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Beast's_Roar.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：野獸咆哮\n\n發出野獸般的咆哮，劃破空氣，\n將咆哮聲化成球體釋放的戰技。",
+        "en": "Skill: Beast's Roar\n\nUnleash a beastly roar, rending the air as a forward-travelling projectile."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "653": {
+      "name": {
+        "zh": "山妖咆哮",
+        "en": "Troll's Roar"
+      },
+      "textId": "653",
+      "icon": {
+        "src": "images/skill-troll-s-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Troll's_Roar.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "戰技：山妖咆哮\n\n望向遠方發出咆哮，\n能彈飛周圍人物，產生衝擊波。\n發動後接著使出重攻擊，能激烈敲擊。",
+        "en": "Skill: Troll's Roar\n\nLook into the distance and let out an intense roar, generating a powerful shockwave that blows back surrounding foes.\nFollow up with a strong attack to slam the armament down."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "654": {
+      "name": {
+        "zh": "誇耀咆哮",
+        "en": "Braggart's Roar"
+      },
+      "textId": "654",
+      "icon": {
+        "src": "images/skill-braggart-s-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Braggart's_Roar.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：誇耀咆哮\n\n猶如誇耀自我般發出咆哮，\n能提升攻擊力、防禦力、精力恢復速度的戰技。",
+        "en": "Skill: Braggart's Roar\n\nDeclare your presence with a boastful roar.\nRaises attack power, defense, and stamina recovery speed."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "700": {
+      "name": {
+        "zh": "忍耐",
+        "en": "Endure"
+      },
+      "textId": "700",
+      "icon": {
+        "src": "images/skill-endure.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Endure.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：忍耐\n\n心中做好準備放低重心，站穩步伐，\n能瞬間提升強韌度的戰技。\n在戰技有效期間內，能減輕受到的損傷。",
+        "en": "Skill: Endure\n\nAssume an anchored stance to brace for incoming attacks, briefly boosting poise.\nDamage taken while using this skill is reduced."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "701": {
+      "name": {
+        "zh": "無敵",
+        "en": "Vow of the Indomitable"
+      },
+      "textId": "701",
+      "icon": {
+        "src": "images/skill-vow-of-the-indomitable.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Vow_of_the_Indomitable.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：無敵\n\n黃金樹的古老戰士們使用的戰技。\n高舉盾牌，讓黃金力量充滿全身，\n能夠瞬間呈現無敵狀態。",
+        "en": "Skill: Vow of the Indomitable\n\nSkill of the ancient warriors of the Erdtree.\nHold shield aloft to imbue yourself with golden power, granting momentary invincibility."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "702": {
+      "name": {
+        "zh": "聖域",
+        "en": "Holy Ground"
+      },
+      "textId": "702",
+      "icon": {
+        "src": "images/skill-holy-ground.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Holy_Ground.png"
+      },
+      "group": "holy",
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：聖域\n\n高舉盾牌，展開黃金樹聖域的戰技。\n能持續恢復ＨＰ，提升防禦力，\n聖域內的我方人物也能蒙受相同效果。",
+        "en": "Skill: Holy Ground\n\nRaise shield to create an Erdtree-consecrated area that continuously restores HP and boosts defense for self and allies inside it."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "800": {
+      "name": {
+        "zh": "碎步",
+        "en": "Quickstep"
+      },
+      "textId": "800",
+      "icon": {
+        "src": "images/skill-quickstep.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Quickstep.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：碎步\n\n以速度干擾敵人的戰鬥者們使用的戰技。\n能以輕盈步伐快速移動。\n在鎖定目標的狀態下使用，能以目標為中心移動。",
+        "en": "Skill: Quickstep\n\nSkill prized by the crafty and fleet of foot.\nPerform a quickstep maneuver that allows for circling around lock-on targets."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "801": {
+      "name": {
+        "zh": "獵犬步法",
+        "en": "Bloodhound's Step"
+      },
+      "textId": "801",
+      "icon": {
+        "src": "images/skill-bloodhound-s-step.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodhound's_Step.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：獵犬步法\n\n能瞬間消失身影，以踏步移動的戰技。\n移動速度快，距離也長。\n在鎖定目標的狀態下使用，能以目標為中心移動。",
+        "en": "Skill: Bloodhound's Step\n\nSkill that allows the user to become temporarily invisible while dodging at high speed. Moves faster and travels farther than a regular quickstep.\nThis skill can be used to circle around lock-on targets."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "802": {
+      "name": {
+        "zh": "潛霧猛禽",
+        "en": "Raptor of the Mists"
+      },
+      "textId": "802",
+      "icon": {
+        "src": "images/skill-raptor-of-the-mists.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Raptor_of_the_Mists.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：潛霧猛禽\n\n壓低身形，瞬間消失身影的戰技。\n受到攻擊時能長出猛禽翅膀，\n瞬間一躍而起。",
+        "en": "Skill: Raptor of the Mists\n\nDuck into a low stance, momentarily vanishing.\nIf an enemy attack connects, avian wings will allow for a quick escape into the air."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "850": {
+      "name": {
+        "zh": "白影誘惑",
+        "en": "White Shadow's Lure"
+      },
+      "textId": "850",
+      "icon": {
+        "src": "images/skill-white-shadow-s-lure.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_White_Shadow's_Lure.png"
+      },
+      "group": "no-affinity",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：白影誘惑\n\n對著武器發願，在自身前方形成白色影子。\n能吸引非戰鬥狀態，為人類之身的敵人注意，\n引誘對方攻擊的戰技。但對上亞人時，\n即使對方在戰鬥狀態，也具有誘敵效用。",
+        "en": "Skill: White Shadow's Lure\n\nHold armament in a brief, silent prayer to create a white shadow.\nThe apparition lures in foes of human build who are not in combat, drawing their aggression. Effective on demi-humans even if they are already in a combat state."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1000": {
+      "name": {
+        "zh": "信仰噴發",
+        "en": "Surge of Faith"
+      },
+      "textId": "1000",
+      "icon": {
+        "src": "images/skill-surge-of-faith.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Surge_of_Faith.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": 15
+      },
+      "caption": {
+        "zh": "專用戰技：信仰噴發\n\n在尊容火杯裡，燃燒彼拉克的信仰火焰，\n再將火杯向上突刺，噴發大量火焰的戰技。\n再次發動能多次向上突刺。",
+        "en": "Unique Skill: Surge of Faith\n\nSet the flames of Birac's faith ablaze in the cranial vessel, then raise it aloft to rain down fireballs in all directions.\nRepeated inputs will continue to raise the armament aloft, continuing the attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1001": {
+      "name": {
+        "zh": "火焰唾球",
+        "en": "Flame Spit"
+      },
+      "textId": "1001",
+      "icon": {
+        "src": "images/skill-flame-spit.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_Spit.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 28,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：火焰唾球\n\n舉起盾牌，從砲管發射火焰球的戰技。\n火焰球會在命中後爆炸。",
+        "en": "Unique Skill: Flame Spit\n\nReady the shield, then launch a fireball from the barrel.\nThe fireball explodes on impact."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1002": {
+      "name": {
+        "zh": "火焰舌柱",
+        "en": "Tongues of Fire"
+      },
+      "textId": "1002",
+      "icon": {
+        "src": "images/skill-tongues-of-fire.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Tongues_of_Fire.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：火焰舌柱\n\n舉起盾牌，從舌尖噴出猛烈火焰的戰技。\n持續發動的期間能持續噴出火焰，\n也能在發動戰技時走動。",
+        "en": "Unique Skill: Tongues of Fire\n\nReady the shield, then spray violent jets of fire from the tongues protruding from its maw.\nHold to continue spraying fire. This skill can be used while walking."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1003": {
+      "name": {
+        "zh": "神諭泡泡",
+        "en": "Oracular Bubble"
+      },
+      "textId": "1003",
+      "icon": {
+        "src": "images/skill-oracular-bubble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Oracular_Bubble.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "專用戰技：神諭泡泡\n\n吹奏笛子，釋放魔力泡泡的戰技。\n泡泡會緩緩飄動，並朝目標飛去。",
+        "en": "Unique Skill: Oracular Bubble\n\nBlow on the horn to release a magic bubble.\nThe bubble floats gently through the air towards its target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1004": {
+      "name": {
+        "zh": "傾注泡泡",
+        "en": "Bubble Shower"
+      },
+      "textId": "1004",
+      "icon": {
+        "src": "images/skill-bubble-shower.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bubble_Shower.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：傾注泡泡\n\n吹奏笛子，釋放大量魔力泡泡的戰技。\n泡泡會緩緩飄動，並朝目標傾注而下。",
+        "en": "Unique Skill: Bubble Shower\n\nBlow on the horn to release a spume of magic bubbles.\nThe bubbles float gently before raining down on the target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1005": {
+      "name": {
+        "zh": "神諭大泡泡",
+        "en": "Great Oracular Bubble"
+      },
+      "textId": "1005",
+      "icon": {
+        "src": "images/skill-great-oracular-bubble.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Great_Oracular_Bubble.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：神諭大泡泡\n\n吹奏笛子，釋放魔力大泡泡的戰技。\n大泡泡會緩緩飄動，並朝目標飛去。",
+        "en": "Unique Skill: Great Oracular Bubble\n\nBlow on the horn to release a massive magic bubble.\nThe bubble floats gently through the air towards its target."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1006": {
+      "name": {
+        "zh": "熔岩海",
+        "en": "Sea of Magma"
+      },
+      "textId": "1006",
+      "icon": {
+        "src": "images/skill-sea-of-magma.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sea_of_Magma.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 5
+      },
+      "caption": {
+        "zh": "專用戰技：熔岩海\n\n能大幅揮動熔岩鞭子，\n暫時在自身周圍形成熔岩海的戰技。\n持續發動的時間，能持續揮舞熔岩鞭子。",
+        "en": "Unique Skill: Sea of Magma\n\nSwing a molten whip overhead to temporarily cover the surrounding area in a sea of magma.\nHold to continue swinging the lava whip."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1007": {
+      "name": {
+        "zh": "毒蛇咬殺",
+        "en": "Viper Bite"
+      },
+      "textId": "1007",
+      "icon": {
+        "src": "images/skill-viper-bite.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Viper_Bite.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：毒蛇咬殺\n\n輕輕搖動盾牌，\n暫時賦予青銅製毒蛇生命，\n讓毒蛇伸長身體，咬向敵人的戰技。",
+        "en": "Unique Skill: Viper Bite\n\nGive the shield a quick shake to temporarily bring the bronze viper to life, inciting it to lash out and bite foes."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1008": {
+      "name": {
+        "zh": "月光劍",
+        "en": "Moonlight Greatsword"
+      },
+      "textId": "1008",
+      "icon": {
+        "src": "images/skill-moonlight-greatsword.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Moonlight_Greatsword.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 32,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：月光劍\n\n高舉劍，讓整把劍發出暗月月光的戰技。\n能暫時提升魔力屬性攻擊力，\n讓劍身纏繞凍傷寒氣。\n蓄力攻擊能釋放月光波。",
+        "en": "Unique Skill: Moonlight Greatsword\n\nRaise the sword aloft, bathing it in the light of the dark moon.\nTemporarily increases magic attack power and imbues blade with frost.\nCharged attacks release blasts of moonlight."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1009": {
+      "name": {
+        "zh": "志留亞的漩渦",
+        "en": "Siluria's Woe"
+      },
+      "textId": "1009",
+      "icon": {
+        "src": "images/skill-siluria-s-woe.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Siluria's_Woe.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：志留亞的漩渦\n\n旋轉樹矛、纏繞風流漩渦，再使出突刺的戰技。\n藉由蓄力發動，會變得具有彈飛敵人的威力，\n也能朝前方釋放風流漩渦。",
+        "en": "Unique Skill: Siluria's Woe\n\nThrust the treespear in a spiraling motion, surrounding it in a vortex of wind.\nCharged attacks have the power to blow away enemies and can fire the tornado forwards."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1010": {
+      "name": {
+        "zh": "歸於麾下",
+        "en": "Rallying Standard"
+      },
+      "textId": "1010",
+      "icon": {
+        "src": "images/skill-rallying-standard.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rallying_Standard.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：歸於麾下\n\n高舉軍旗，以勇猛姿態發出號令的戰技。\n能提升自身與周圍我方人物的攻擊力、防禦力。",
+        "en": "Unique Skill: Rallying Standard\n\nHoist the war banner aloft and give a rallying command.\nRaises attack power and defense for self and nearby allies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1011": {
+      "name": {
+        "zh": "敬請見證！",
+        "en": "Bear Witness!"
+      },
+      "textId": "1011",
+      "icon": {
+        "src": "images/skill-bear-witness.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bear_Witness!.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：敬請見證！\n\n暫時賦予小型龍生命，高舉指向天空，\n朝前方大範圍落下龍焰的戰技。",
+        "en": "Unique Skill: Bear Witness!\n\nGrant the small dragon a fleeting glimpse of life and thrust it skyward, spewing flames over a wide frontward area."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1012": {
+      "name": {
+        "zh": "歐赫劍舞",
+        "en": "Eochaid's Dancing Blade"
+      },
+      "textId": "1012",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：歐赫劍舞\n\n把氣灌入劍中，旋轉之後朝前方釋放的戰技。\n整把劍會劇烈旋轉，給予連續損傷。\n藉由蓄力發動，能提升飛翔距離與旋轉時間。",
+        "en": "Unique Skill: Eochaid's Dancing Blade\n\nInfuse the sword with energy, then fling it forwards in a corkscrew attack. The sword continuously deals damage while violently spinning.\nCharge the attack to increase reach and duration of the spin."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1013": {
+      "name": {
+        "zh": "惡意氣息",
+        "en": "Soul Stifler"
+      },
+      "textId": "1013",
+      "icon": {
+        "src": "images/skill-soul-stifler.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Soul_Stifler.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：惡意氣息\n\n高舉展翼大角，招來惡意氣息的戰技。\n能暫時降低周圍敵人的防禦力。",
+        "en": "Unique Skill: Soul Stifler\n\nRaise the greathorn's wings to summon a soul-sapping miasma.\nEnemies in the affected area will temporarily suffer from reduced defense."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1014": {
+      "name": {
+        "zh": "掠奪火焰",
+        "en": "Taker's Flames"
+      },
+      "textId": "1014",
+      "icon": {
+        "src": "images/skill-taker-s-flames.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Taker's_Flames.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：掠奪火焰\n\n高舉聖劍，燃起褻瀆火焰，\n再朝前方釋放烈火的戰技。\n火焰會奪取ＨＰ。",
+        "en": "Unique Skill: Taker's Flames\n\nRaise the sacred sword aloft to set it ablaze with blasphemous flames, then bring it down to fire off a forward blast.\nThe flames steal HP from those they touch."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1015": {
+      "name": {
+        "zh": "滅洛斯的狂嚎",
+        "en": "Shriek of Milos"
+      },
+      "textId": "1015",
+      "icon": {
+        "src": "images/skill-shriek-of-milos.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Shriek_of_Milos.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 30,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：滅洛斯的狂嚎\n\n發出帶有詛咒的恐怖狂嚎，\n讓周圍的敵人降低所有屬性的減傷率、\n所有異常狀態的抵抗力。\n在戰技有效期間內，重攻擊會變成連擊。",
+        "en": "Unique Skill: Shriek of Milos\n\nLets out a horrific cursed scream that reduces all damage negation and status resistances for nearby foes.\nWhile active, strong attacks will change to a combo attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1016": {
+      "name": {
+        "zh": "逆刺血刃",
+        "en": "Reduvia Blood Blade"
+      },
+      "textId": "1016",
+      "icon": {
+        "src": "images/skill-reduvia-blood-blade.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Reduvia_Blood_Blade.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 6,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "專用戰技：逆刺血刃\n\n將鋸齒狀劍刃上的濕漉鮮血，\n化為引發出血的刀刃，釋放而出的戰技。\n可以連續施放。",
+        "en": "Unique Skill: Reduvia Blood Blade\n\nSlash with the wicked dagger, transforming its never-drying bloodstains into airborne blood blades that cause hemorrhaging.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1017": {
+      "name": {
+        "zh": "輝石彗礫",
+        "en": "Glintstone Dart"
+      },
+      "textId": "1017",
+      "icon": {
+        "src": "images/skill-glintstone-dart.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Glintstone_Dart.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 4
+      },
+      "caption": {
+        "zh": "專用戰技：輝石彗礫\n\n能施展魔法「輝石魔礫」的戰技。\n藉由蓄力發動，能變成「輝石彗礫」。\n發動後接著使出重攻擊，\n能大幅向前跨出，再突刺攻擊，",
+        "en": "Unique Skill: Glintstone Dart\n\nSkill that builds from the Glintstone Pebble sorcery.\nCharge the skill to upgrade it to Glintstone Dart.\nFollow up with a strong attack to chain this skill into a lunging thrust."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1018": {
+      "name": {
+        "zh": "流體化",
+        "en": "Flowing Form"
+      },
+      "textId": "1018",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：流體化\n\n讓武器暫時化為流體的戰技。\n能像軟鞭般揮動，大範圍橫掃敵人。",
+        "en": "Unique Skill: Flowing Form\n\nTemporarily transforms armament into its liquid form.\nSwing the armament like a whip to perform a sweeping slice over a wide area."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1019": {
+      "name": {
+        "zh": "夜與火的架式",
+        "en": "Night-and-Flame Stance"
+      },
+      "textId": "1019",
+      "icon": {
+        "src": "images/skill-night-and-flame-stance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Night-and-Flame_Stance.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 26,
+        "R2": 32
+      },
+      "caption": {
+        "zh": "專用戰技：夜與火的架式\n\n舉起劍與地面平行，接著施展魔法的戰技。\n輕攻擊能將魔力化為「黑夜彗星」釋放；\n重攻擊能用火焰大範圍橫掃前方。",
+        "en": "Unique Skill: Night-and-Flame Stance\n\nHold the sword level and prepare to cast a sorcery.\nFollow up with a normal attack to cast the Night Comet sorcery, or a strong attack to sweep forward with a burst of flames."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1020": {
+      "name": {
+        "zh": "黃金波動",
+        "en": "Wave of Gold"
+      },
+      "textId": "1020",
+      "icon": {
+        "src": "images/skill-wave-of-gold.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wave_of_Gold.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 42,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：黃金波動\n\n將劍身寄宿舊時的黃金，接著釋放的戰技。\n黃金波動會朝前方扇狀大幅擴散，\n橫掃所有敵人。",
+        "en": "Unique Skill: Wave of Gold\n\nImbue the sword with bygone golden glory, then fire it at foes.\nA wide, golden wave fans out forwards, sweeping through all enemies caught in its path."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1021": {
+      "name": {
+        "zh": "毀滅靈火",
+        "en": "Ruinous Ghostflame"
+      },
+      "textId": "1021",
+      "icon": {
+        "src": "images/skill-ruinous-ghostflame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ruinous_Ghostflame.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：毀滅靈火\n\n揮動劍，讓劍身纏繞靈火的戰技。\n靈火能給予魔力屬性傷害。\n此外，靈火非常地冰冷。",
+        "en": "Unique Skill: Ruinous Ghostflame\n\nSwing the sword to bathe its blade in ghostflame.\nThe ghostflame adds magic damage to attacks, and also has a bitterly cold bite."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1022": {
+      "name": {
+        "zh": "高舉黃金律法",
+        "en": "Establish Order"
+      },
+      "textId": "1022",
+      "icon": {
+        "src": "images/skill-establish-order.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Establish_Order.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "zh": "專用戰技：高舉黃金律法\n\n敬禮的同時高舉武器，\n形成黃金爆炸的戰技。\n再次發動，能釋放黃金光波。",
+        "en": "Unique Skill: Establish Order\n\nRaise the armament in a salute, releasing a golden explosion.\nRepeated inputs send out waves of golden light."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1023": {
+      "name": {
+        "zh": "催眠煙霧",
+        "en": "Mists of Slumber"
+      },
+      "textId": "1023",
+      "icon": {
+        "src": "images/skill-mists-of-slumber.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Mists_of_Slumber.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：催眠煙霧\n\n朝前方形成大範圍淡紫色煙霧的戰技。\n淡紫色煙霧具有引發異常狀態催眠的效果。",
+        "en": "Unique Skill: Mists of Slumber\n\nReleases a faint purple mist that spreads across a wide frontwards area.\nThis mist inflicts the sleep ailment upon foes."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1024": {
+      "name": {
+        "zh": "喚矛儀式",
+        "en": "Spearcall Ritual"
+      },
+      "textId": "1024",
+      "icon": {
+        "src": "images/skill-spearcall-ritual.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spearcall_Ritual.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：喚矛儀式\n\n祈禱的同時高舉矛，指向天空，\n召喚傾注而下的無數靈矛的戰技。",
+        "en": "Unique Skill: Spearcall Ritual\n\nThrust the spear high, bearing prayers into the sky to summon a downpour of spectral spears."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1025": {
+      "name": {
+        "zh": "狼襲",
+        "en": "Wolf's Assault"
+      },
+      "textId": "1025",
+      "icon": {
+        "src": "images/skill-wolf-s-assault.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wolf's_Assault.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：狼襲\n\n劍身纏繞寒氣，一邊旋身一邊向前跳，\n再順勢將大劍刺入地面的戰技。\n拔起大劍的同時，會引發寒氣爆炸。",
+        "en": "Unique Skill: Wolf's Assault\n\nInfuse the greatsword with frost, then perform a forward somersault to plunge it into the ground. Then, pull it out to release a cold blast."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1026": {
+      "name": {
+        "zh": "雷雲化身",
+        "en": "Thundercloud Form"
+      },
+      "textId": "1026",
+      "icon": {
+        "src": "images/skill-thundercloud-form.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thundercloud_Form.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 28,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：雷雲化身\n\n自己暫時化為紅色雷雲，飛上空中，\n再用纏繞雷電的劍身貫穿敵人的戰技。\n持續發動能增加在空中移動的距離。",
+        "en": "Unique Skill: Thundercloud Form\n\nTemporarily transform into a red thundercloud and fly through the air, then plunge down with a lightning-infused blade.\nHold to increase the reach of the thundercloud form."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1027": {
+      "name": {
+        "zh": "咒血斬擊",
+        "en": "Cursed-Blood Slice"
+      },
+      "textId": "1027",
+      "icon": {
+        "src": "images/skill-cursed-blood-slice.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Cursed-Blood_Slice.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "zh": "專用戰技：咒血斬擊\n\n擺出架式後一口氣向前衝，使出下砍的戰技。\n下砍後的鮮血劍光會伴隨較晚引發的火焰爆炸。\n再次發動能使出追擊。",
+        "en": "Unique Skill: Cursed-Blood Slice\n\nBrace, then charge forward to deliver a downward diagonal slice.\nThe bloody trail of the blade is followed by a burst of flame.\nAdditional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1028": {
+      "name": {
+        "zh": "水鳥亂舞",
+        "en": "Waterfowl Dance"
+      },
+      "textId": "1028",
+      "icon": {
+        "src": "images/skill-waterfowl-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Waterfowl_Dance.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": 9
+      },
+      "caption": {
+        "zh": "專用戰技：水鳥亂舞\n\n猶如水鳥般單腳跳躍，\n再使出超高速連斬的戰技。\n再次發動，能使出最多兩次的追擊。",
+        "en": "Unique Skill: Waterfowl Dance\n\nPerform a series of one-footed leaps in the manner of a waterfowl to unleash a swift yet graceful slashing combo.\nRepeated inputs allow for up to two follow-up attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1029": {
+      "name": {
+        "zh": "黃金碎擊",
+        "en": "Gold Breaker"
+      },
+      "textId": "1029",
+      "icon": {
+        "src": "images/skill-gold-breaker.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gold_Breaker.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 26,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：黃金碎擊\n\n輕盈跳起，讓盧恩碎片蘊藏光芒，\n再從空中用力敲下的戰技。\n拉達岡英雄般的敲擊。",
+        "en": "Unique Skill: Gold Breaker\n\nLeap up high and, while suspended in midair, imbue the rune shard with light before smashing it down hard onto the ground.\nThe heroic Radagon's signature attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1030": {
+      "name": {
+        "zh": "跪下吧！",
+        "en": "I Command Thee, Kneel!"
+      },
+      "textId": "1030",
+      "icon": {
+        "src": "images/skill-i-command-thee-kneel.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_I_Command_Thee,_Kneel!.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": 15
+      },
+      "caption": {
+        "zh": "專用戰技：跪下吧！\n\n將王斧連續刺向地面，產生衝擊波之餘，\n也撼動地面兩次的戰技。\n再次發動，能再一次劇烈撼動地面。",
+        "en": "Unique Skill: I Command Thee, Kneel!\n\nRepeatedly smash the Axe of Godrick into the ground, unleashing two earth-shaking shockwaves.\nFollow up with an additional input to produce a third shockwave."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1031": {
+      "name": {
+        "zh": "王者嘶吼",
+        "en": "Regal Roar"
+      },
+      "textId": "1031",
+      "icon": {
+        "src": "images/skill-regal-roar.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Regal_Roar.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：王者嘶吼\n\n發出嘶吼，提升攻擊力的戰技。\n踏地時的衝擊波無法用防禦擋下。\n在戰技有效時間內，\n重攻擊會變成前踏斬擊。",
+        "en": "Unique Skill: Regal Roar\n\nLet loose a mighty war cry, raising attack power, while sending out a shockwave that cannot be guarded against by stomping the ground. While active, strong attack becomes a lunging slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1032": {
+      "name": {
+        "zh": "喚星",
+        "en": "Starcaller Cry"
+      },
+      "textId": "1032",
+      "icon": {
+        "src": "images/skill-starcaller-cry.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Starcaller_Cry.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "zh": "專用戰技：喚星\n\n雙劍交錯、指向天空的同時發出嘶吼，\n利用重力波拉近敵人的戰技。\n再次發動，能用纏繞重力的劍使出敲擊。",
+        "en": "Unique Skill: Starcaller Cry\n\nBring the two swords together and roar into the skies, pulling in enemies with a gravitational wave.\nFollow up with an additional input to slam down with gravity-infused swords."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1033": {
+      "name": {
+        "zh": "崩壞波",
+        "en": "Wave of Destruction"
+      },
+      "textId": "1033",
+      "icon": {
+        "src": "images/skill-wave-of-destruction.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Wave_of_Destruction.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：崩壞波\n\n高舉劍之後向下敲，\n釋放於地面爬行的重力波的戰技。",
+        "en": "Unique Skill: Wave of Destruction\n\nRaise the sword up high, then strike it against the ground to fire off a wave of gravitational force."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1034": {
+      "name": {
+        "zh": "授血儀式",
+        "en": "Bloodboon Ritual"
+      },
+      "textId": "1034",
+      "icon": {
+        "src": "images/skill-bloodboon-ritual.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodboon_Ritual.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "zh": "專用戰技：授血儀式\n\n高舉聖矛，刺進無形之母體內的戰技。\n最多能刺三次，每次都會引發鮮血爆炸。\n纏繞聖矛上的血焰會暫時延續。",
+        "en": "Unique Skill: Bloodboon Ritual\n\nRaise the sacred spear and pierce the body of the Formless Mother. Stab up to three times, creating explosions of blood with each thrust.\nThis skill will coat the armament with bloodflame for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1035": {
+      "name": {
+        "zh": "流體化",
+        "en": "Flowing Form"
+      },
+      "textId": "1035",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：流體化\n\n讓武器暫時化為流體的戰技。\n能大幅揮動，大範圍橫掃敵人，\n再用淚滴狀的打擊部位向下敲。",
+        "en": "Unique Skill: Flowing Form\n\nTemporarily transforms armament into its liquid form. Swing the armament like a whip to strike surroundings before slamming its teardrop-shaped head down."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1036": {
+      "name": {
+        "zh": "死亡刀刃",
+        "en": "Blade of Death"
+      },
+      "textId": "1036",
+      "icon": {
+        "src": "images/skill-blade-of-death.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blade_of_Death.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：死亡刀刃\n\n解放死亡盧恩的力量，\n將力量化為刀刃後釋放的戰技。\n給予敵人傷害的同時，也會減少ＨＰ上限，\n並且在一定時間內，ＨＰ會持續減少。",
+        "en": "Unique Skill: Blade of Death\n\nUnleash the power of the Rune of Death to fire off a blade-like projectile.\nIn addition to dealing immediate damage, the blade reduces the enemy's maximum HP and continues to wear down HP for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1037": {
+      "name": {
+        "zh": "黃金刀刃",
+        "en": "Blade of Gold"
+      },
+      "textId": "1037",
+      "icon": {
+        "src": "images/skill-blade-of-gold.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Blade_of_Gold.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：黃金刀刃\n\n跳至空中，讓武器纏繞黃金火焰，\n將火焰化為刀刃後釋放的戰技。\n能給予聖屬性傷害。",
+        "en": "Unique Skill: Blade of Gold\n\nLeap into the air, charging the armament with golden flames that are then shot at the enemy as a single, blade-like projectile.\nInflicts holy damage."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1038": {
+      "name": {
+        "zh": "命定之死",
+        "en": "Destined Death"
+      },
+      "textId": "1038",
+      "icon": {
+        "src": "images/skill-destined-death.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Destined_Death.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 40,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：命定之死\n\n解放命定之死殘留的碎屑，\n將大劍刺向地面，形成無數刀刃的戰技。\n給予敵人傷害的同時，也會減少ＨＰ上限，\n並且在短暫時間內，ＨＰ會些微持續減少。",
+        "en": "Unique Skill: Destined Death\n\nSet free the remnants of Destined Death, plunging the greatsword into the ground to summon a myriad of blades. In addition to dealing immediate damage, this attack reduces the enemy's maximum HP and continues to wear down HP for a short time."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1039": {
+      "name": {
+        "zh": "旋轉刺輪",
+        "en": "Spinning Wheel"
+      },
+      "textId": "1039",
+      "icon": {
+        "src": "images/skill-spinning-wheel.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Spinning_Wheel.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 3,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：旋轉刺輪\n\n摩擦地面，讓刺輪高速旋轉的戰技。\n持續發動能讓刺輪維持高速旋轉，\n也能直接移動，將刺輪推向敵人。",
+        "en": "Unique Skill: Spinning Wheel\n\nStrike the wheel against the ground to set it spinning at top speed. Hold to keep the wheel spinning. Can be used while walking to push the armament into enemies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1040": {
+      "name": {
+        "zh": "白王引力波",
+        "en": "Alabaster Lords' Pull"
+      },
+      "textId": "1040",
+      "icon": {
+        "src": "images/skill-alabaster-lords-pull.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Alabaster_Lords'_Pull.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：白王引力波\n\n將武器刺入地面，產生重力波，\n能給予敵人傷害，同時將對方拉近自己的戰技。\n與戰技「重力」相比，有效範圍更廣。",
+        "en": "Unique Skill: Alabaster Lord's Pull\n\nThrust the armament into the ground to create a gravity well. In addition to dealing damage, this attack pulls enemies in.\nHas a greater area of effect than Gravitas."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1041": {
+      "name": {
+        "zh": "黑王推力波",
+        "en": "Onyx Lords' Repulsion"
+      },
+      "textId": "1041",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 27,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：黑王推力波\n\n將武器刺入地面，產生重力波，\n能給予敵人傷害，同時將對方彈飛的戰技。",
+        "en": "Unique Skill: Onyx Lord's Repulsion\n\nThrust the armament into the ground to create a gravity well. In addition to dealing damage, this attack sends enemies flying away."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1042": {
+      "name": {
+        "zh": "復仇誓言",
+        "en": "Oath of Vengeance"
+      },
+      "textId": "1042",
+      "icon": {
+        "src": "images/skill-oath-of-vengeance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Oath_of_Vengeance.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：復仇誓言\n\n對大劍立下為一族復仇的誓言，\n一定時間內，提升所有能力值的戰技。\n在立誓的那一瞬間，也會提升強韌度。",
+        "en": "Unique Skill: Oath of Vengeance\n\nSwear an oath upon the greatsword to avenge the clan, temporarily raising all attributes for a certain duration. While the oath's effects are active, poise will also be increased."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1043": {
+      "name": {
+        "zh": "冰雷劍",
+        "en": "Ice Lightning Sword"
+      },
+      "textId": "1043",
+      "icon": {
+        "src": "images/skill-ice-lightning-sword.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ice_Lightning_Sword.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：冰雷劍\n\n高舉刀身召喚冰雷，再一斬而下的戰技。\n纏繞刀身上的冰雷會暫時延續。",
+        "en": "Unique Skill: Ice Lightning Sword\n\nCall down a bolt of ice lightning into the blade and bring it down upon a foe.\nThe ice lightning effect will persist for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1044": {
+      "name": {
+        "zh": "獸王爪",
+        "en": "Regal Beastclaw"
+      },
+      "textId": "1044",
+      "icon": {
+        "src": "images/skill-regal-beastclaw.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Regal_Beastclaw.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：獸王爪\n\n將大鎚敲向地面，\n讓五隻獸爪大幅撕裂大地的戰技。",
+        "en": "Unique Skill: Regal Beastclaw\n\nSlam the hammer into the ground, rending the land asunder with the armament's five bestial claws."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1045": {
+      "name": {
+        "zh": "火焰舞",
+        "en": "Flame Dance"
+      },
+      "textId": "1045",
+      "icon": {
+        "src": "images/skill-flame-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Flame_Dance.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：火焰舞\n\n在紅髮鞭點燃巨人火焰，流水一般地\n使出連續大範圍橫掃攻擊的戰技。",
+        "en": "Unique Skill: Flame Dance\n\nImbue the red braid with the Giants' Flame and lash out in a wide range with a series of agile swings."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1046": {
+      "name": {
+        "zh": "彈指",
+        "en": "Claw Flick"
+      },
+      "textId": "1046",
+      "icon": {
+        "src": "images/skill-claw-flick.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Claw_Flick.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：彈指\n\n讓手指膨脹變大，彎曲蓄滿力量，\n再用指尖彈飛敵人的戰技。",
+        "en": "Unique Skill: Claw Flick\n\nCause the finger to swell, then flex to build up strength before giving enemies an almighty flick."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1047": {
+      "name": {
+        "zh": "星雲",
+        "en": "Nebula"
+      },
+      "textId": "1047",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：星雲\n\n對棄子的星星們灌入魔力，\n使出橫掃攻擊的同時，形成黑暗星雲的戰技。\n星雲會在短時間內爆炸消失。",
+        "en": "Unique Skill: Nebula\n\nImbue the Naturalborn's stars with magic to perform a sweeping strike.\nThis attack leaves a dark cloud of stars in its wake that lingers briefly before exploding."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1048": {
+      "name": {
+        "zh": "點燃靈火",
+        "en": "Ghostflame Ignition"
+      },
+      "textId": "1048",
+      "icon": {
+        "src": "images/skill-ghostflame-ignition.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ghostflame_Ignition.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": 10,
+        "R2": 10
+      },
+      "caption": {
+        "zh": "專用戰技：點燃靈火\n\n從鉤狀前端產生靈火的戰技。\n發動後接著使出輕攻擊，能釋放爬行地面的靈火。\n使出重攻擊能引爆靈火，形成大爆炸。",
+        "en": "Unique Skill: Ghostflame Ignition\n\nThrust out the barbed rod and set its tip alight with ghostflame.\nFollow up with a normal attack to set the ground ablaze with ghostflame, or a strong attack to trigger a massive explosion."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1049": {
+      "name": {
+        "zh": "古雷電槍",
+        "en": "Ancient Lightning Spear"
+      },
+      "textId": "1049",
+      "icon": {
+        "src": "images/skill-ancient-lightning-spear.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ancient_Lightning_Spear.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 24,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：古雷電槍\n\n將古龍的武器──紅色雷電纏繞在武器上，\n再將雷電化成槍，投擲而出的戰技。\n藉由蓄力發動，能提升威力。",
+        "en": "Unique Skill: Ancient Lightning Spear\n\nImbue the armament with the ancient dragons' red lightning, then throw it as a spear.\nCan be charged to increase its power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1050": {
+      "name": {
+        "zh": "癲火突擊",
+        "en": "Frenzyflame Thrust"
+      },
+      "textId": "1050",
+      "icon": {
+        "src": "images/skill-frenzyflame-thrust.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Frenzyflame_Thrust.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：癲火突擊\n\n將癲火纏繞矛之後向前跳，\n向下刺出的同時，引發劇烈爆炸的戰技。\n施放者也會累積發狂量表。",
+        "en": "Unique Skill: Frenzyflame Thrust\n\nImbue the spear with the flame of frenzy and leap forwards, plunging it into the ground and setting off a maddening explosion.\nThe skill inflicts both the enemy and the user with madness."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1051": {
+      "name": {
+        "zh": "米凱拉的光環",
+        "en": "Miquella's Ring of Light"
+      },
+      "textId": "1051",
+      "icon": {
+        "src": "images/skill-miquella-s-ring-of-light.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Miquella's_Ring_of_Light.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 11,
+        "R1": -1,
+        "R2": 11
+      },
+      "caption": {
+        "zh": "專用戰技：米凱拉的光環\n\n形成米凱拉的閃耀光環，再向前釋放的戰技。\n可以連續施放。",
+        "en": "Unique Skill: Miquella's Ring of Light\n\nSummon Miquella's shining halo and fire it forwards.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1052": {
+      "name": {
+        "zh": "黃金劍技",
+        "en": "Golden Tempering"
+      },
+      "textId": "1052",
+      "icon": {
+        "src": "images/skill-golden-tempering.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Tempering.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 24,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：黃金劍技\n\n將兩把劍交叉，附加聖屬性攻擊力的戰技。\n在戰技有效時間內，\n重攻擊會變成雙劍連擊。",
+        "en": "Unique Skill: Golden Tempering\n\nCross the two swords to grant their attacks holy essence.\nWhile in effect, strong attack performs a dual-wielding combo attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1053": {
+      "name": {
+        "zh": "哀悼墓碑",
+        "en": "Last Rites"
+      },
+      "textId": "1053",
+      "icon": {
+        "src": "images/skill-last-rites.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Last_Rites.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：哀悼墓碑\n\n高舉墓碑，包含周圍我方人物\n附加聖律力量的戰技。\n對死誕者的哀悼效果特別卓越。",
+        "en": "Unique Skill: Last Rites\n\nRaise the epitaph to grant the effect of Sacred Order to yourself and allies in the vicinity.\nParticularly effective at laying to rest Those Who Live in Death."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1054": {
+      "name": {
+        "zh": "不可擋之刃",
+        "en": "Unblockable Blade"
+      },
+      "textId": "1054",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 18,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：不可擋之刃\n\n讓祕文劍刃蘊藏光芒，\n增加劍身長度，使出大範圍斬擊的戰技。\n此攻擊無法用防禦擋下。",
+        "en": "Unique Skill: Unblockable Blade\n\nImbue the cipher blade with light, extending its length, then strike with a sudden sweeping attack.\nThis attack cannot be blocked."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1055": {
+      "name": {
+        "zh": "歐赫劍舞",
+        "en": "Eochaid's Dancing Blade"
+      },
+      "textId": "1055",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：歐赫劍舞\n\n把氣灌入劍中，旋轉之後朝前方釋放的戰技。\n整把劍會劇烈旋轉，給予連續損傷。\n藉由蓄力發動，能提升飛翔距離與旋轉時間。",
+        "en": "Unique Skill: Eochaid's Dancing Blade\n\nInfuse the sword with energy, then fling it forwards in a corkscrew attack. The sword continuously deals damage while violently spinning.\nCharge the attack to increase reach and duration of the spin."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1165": {
+      "name": {
+        "zh": "羅蕾塔的斬擊",
+        "en": "Loretta's Slash"
+      },
+      "textId": "118",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 14,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "戰技：羅蕾塔的斬擊\n\n禁衛騎士羅蕾塔的戰技。\n向前跳的同時，將輝石的魔力灌入劍身，\n再加快速度瞬間斬下。",
+        "en": "Skill: Loretta's Slash\n\nSkill of Loretta the Royal Knight.\nLeap forward, imbuing the blade with glintstone, then descend, accelerating into a sweeping slash."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1166": {
+      "name": {
+        "zh": "迴旋斬",
+        "en": "Spinning Slash"
+      },
+      "textId": "103",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": 11
+      },
+      "caption": {
+        "zh": "戰技：迴旋斬\n\n擁有高靈巧的劍士們使用的戰技。\n能大幅旋轉身體，砍向敵人。\n再次發動能使出追擊。",
+        "en": "Skill: Spinning Slash\n\nSkill favored by dexterous warriors.\nSlash foes as your body spins. Additional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-base-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1167": {
+      "name": {
+        "zh": "屍蠟斬擊",
+        "en": "Corpse Wax Cutter"
+      },
+      "textId": "1167",
+      "icon": {
+        "src": "images/skill-corpse-wax-cutter.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Corpse_Wax_Cutter.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：屍蠟斬擊\n\n古英雄們的失傳戰技。\n高舉劍身，解放屍蠟的力量，\n將力量化為刀刃，朝前方釋放。",
+        "en": "Unique Skill: Corpse Wax Cutter\n\nLost skill of ancient heroes.\nLift the sword up high to release the power of corpse wax and launch it forwards as a blade-like projectile."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1168": {
+      "name": {
+        "zh": "薩米爾冰風暴",
+        "en": "Zamor Ice Storm"
+      },
+      "textId": "1168",
+      "icon": {
+        "src": "images/skill-zamor-ice-storm.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Zamor_Ice_Storm.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：薩米爾冰風暴\n\n將彎刀刺入地面，向下使力，\n在周圍形成寒氣風暴的戰技。",
+        "en": "Unique Skill: Zamor Ice Storm\n\nPlunge the curved sword into the ground, building power before unleashing a freezing storm that batters the surroundings."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1169": {
+      "name": {
+        "zh": "拉塔恩的驟雨",
+        "en": "Radahn's Rain"
+      },
+      "textId": "1169",
+      "icon": {
+        "src": "images/skill-radahn-s-rain.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Radahn's_Rain.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 32,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：拉塔恩的驟雨\n\n壓低身形拉弓的戰技。\n擺出架式後，朝天空一口氣射出大量的箭，\n箭會如驟雨一般，從敵人上方傾注而下。",
+        "en": "Unique Skill: Radahn's Rain\n\nArchery skill performed from a low stance.\nReady the bow and fire a sudden flurry of arrows up into the sky. The arrows will pour on foes like rain."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1170": {
+      "name": {
+        "zh": "女王黑焰",
+        "en": "The Queen's Black Flame"
+      },
+      "textId": "1170",
+      "icon": {
+        "src": "images/skill-the-queen-s-black-flame.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_The_Queen's_Black_Flame.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": 15
+      },
+      "caption": {
+        "zh": "專用戰技：女王黑焰\n\n在劍身點燃狩獵神祇的黑焰，\n使出斬擊的戰技。再次發動能使出追擊。\n黑焰會在一定時間內，讓ＨＰ持續減少。",
+        "en": "Unique Skill: The Queen's Black Flame\n\nSet the blade ablaze with the god-slaying black flame before delivering a sweeping slash. Additional input allows for a follow-up attack. The black flames will continue to wear down HP for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1171": {
+      "name": {
+        "zh": "王朝劍技",
+        "en": "Dynast's Finesse"
+      },
+      "textId": "1171",
+      "icon": {
+        "src": "images/skill-dynast-s-finesse.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Dynast's_Finesse.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 5,
+        "R1": -1,
+        "R2": 7
+      },
+      "caption": {
+        "zh": "專用戰技：王朝劍技\n\n優雅地閃避攻擊，與敵人拉開距離的戰技。\n發動後接著使出重攻擊，\n能一口氣向前推進，突刺攻擊。\n再次使出重攻擊，能橫掃攻擊。",
+        "en": "Unique Skill: Dynast's Finesse\n\nNimbly avoid an attack, securing some distance from foes. Follow up with strong attack to perform a sudden lunge, and press strong attack again to perform a sweeping slice."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1172": {
+      "name": {
+        "zh": "潑灑熔岩",
+        "en": "Magma Shower"
+      },
+      "textId": "1172",
+      "icon": {
+        "src": "images/skill-magma-shower.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Magma_Shower.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "zh": "專用戰技：潑灑熔岩\n\n旋身砍向敵人的同時，\n朝周圍噴灑熔岩的戰技。\n再次發動能使出追擊。",
+        "en": "Unique Skill: Magma Shower\n\nSlash at foes in a twirling motion while scattering magma all around.\nAdditional input allows for a follow-up attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1173": {
+      "name": {
+        "zh": "星雲",
+        "en": "Nebula"
+      },
+      "textId": "1173",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：星雲\n\n對棄子的薄翼灌入魔力，\n在前方形成黑暗星雲的戰技。\n星雲會在短時間內爆炸消失。",
+        "en": "Unique Skill: Nebula\n\nImbue the Naturalborn's wings with magic to send forth a dark cloud of stars that lingers briefly before exploding."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1174": {
+      "name": {
+        "zh": "死亡閃焰",
+        "en": "Death Flare"
+      },
+      "textId": "1174",
+      "icon": {
+        "src": "images/skill-death-flare.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Death_Flare.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 16,
+        "R1": -1,
+        "R2": 16
+      },
+      "caption": {
+        "zh": "專用戰技：死亡閃焰\n\n讓失色的太陽蘊藏死王子火焰的戰技。\n能夠引發異常狀態死亡。\n再次發動能使出下砍，引爆火焰。",
+        "en": "Unique Skill: Death Flare\n\nSet the lusterless sun ablaze with the Prince of Death's flames, inflicting the death ailment upon foes.\nFollow up with an additional input to bring down the armament, triggering an explosion."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1175": {
+      "name": {
+        "zh": "獵犬劍技",
+        "en": "Bloodhound's Finesse"
+      },
+      "textId": "1175",
+      "icon": {
+        "src": "images/skill-bloodhound-s-finesse.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodhound's_Finesse.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 8,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "zh": "專用戰技：獵犬劍技\n\n用長牙大幅上砍的同時，\n旋身與敵人拉開距離的戰技。\n發動後接著使出重攻擊，\n能踩出「獵犬步法」向前追擊。",
+        "en": "Unique Skill: Bloodhound's Finesse\n\nSlash upwards with the Bloodhound's Fang, using the momentum of the strike to perform a backwards somersault and gain some distance from foes. Follow up with a strong attack to perform the Bloodhound's Step attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1176": {
+      "name": {
+        "zh": "熔岩斷首",
+        "en": "Magma Guillotine"
+      },
+      "textId": "1176",
+      "icon": {
+        "src": "images/skill-magma-guillotine.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Magma_Guillotine.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 20,
+        "R1": -1,
+        "R2": 10
+      },
+      "caption": {
+        "zh": "專用戰技：熔岩斷首\n\n橫擺鱗劍、劍鋒下轉往前跳，\n向下敲擊的同時，引爆熔岩的戰技。\n再次發動能使出拉近追擊。",
+        "en": "Unique Skill: Magma Guillotine\n\nGrab the scalesword with both hands, as a wyrm would hold it in its mouth, and leap forwards, smashing it into the ground and triggering a blast of magma. Follow up with an additional input to perform a chopping attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1177": {
+      "name": {
+        "zh": "屍橫遍野",
+        "en": "Corpse Piler"
+      },
+      "textId": "1177",
+      "icon": {
+        "src": "images/skill-corpse-piler.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Corpse_Piler.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": 9
+      },
+      "caption": {
+        "zh": "戰技：屍橫遍野\n\n將詛咒之血化為刀刃，\n形成交叉連擊的戰技。\n再次發動能使出更多連擊。",
+        "en": "Unique Skill: Corpse Piler\n\nForms a blade of cursed blood for repeated, interweaving successive attacks. Follow up with an additional input for further successive attacks."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1178": {
+      "name": {
+        "zh": "隙間月影",
+        "en": "Transient Moonlight"
+      },
+      "textId": "1178",
+      "icon": {
+        "src": "images/skill-transient-moonlight.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Transient_Moonlight.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 0,
+        "R1": 15,
+        "R2": 20
+      },
+      "caption": {
+        "zh": "專用戰技：隙間月影\n\n收刀入腰間刀鞘，\n擺出架式後靜止不動的戰技。\n發動後接著使出輕攻擊或重攻擊，\n能在高速斬擊之餘，也釋放光波。",
+        "en": "Unique Skill: Transient Moonlight\n\nSheathe blade, holding it at the hip in a composed stance.\nFollow up with either a normal or a strong attack to draw the blade at great speed for an instant slash attack. Both attacks fire off a wave of light."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1179": {
+      "name": {
+        "zh": "血刃亂舞",
+        "en": "Bloodblade Dance"
+      },
+      "textId": "1179",
+      "icon": {
+        "src": "images/skill-bloodblade-dance.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Bloodblade_Dance.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 11,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "專用戰技：血刃亂舞\n\n跳起之後，猶如旋風般使出連擊的戰技。\n再次發動能在追擊之後，與敵人拉開距離。",
+        "en": "Unique Skill: Bloodblade Dance\n\nLeap at foe to perform a flurry of tornado-like attacks.\nFollow up with an additional input to perform an attack that ends in an evasive maneuver."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1182": {
+      "name": {
+        "zh": "百智的世界",
+        "en": "Knowledge Above All"
+      },
+      "textId": "1182",
+      "icon": {
+        "src": "images/skill-knowledge-above-all.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Knowledge_Above_All.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 35,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：百智的世界\n\n高舉權杖，在周圍展開百智領域的戰技。\n包含自身與領域內的人物\n降低魔力、聖屬性減傷率。",
+        "en": "Unique Skill: Knowledge Above All\n\nRaise the scepter to manifest the realm of the All-Knowing. Enemy magic and holy damage negation will be reduced for all within the area, including the caster."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1183": {
+      "name": {
+        "zh": "吞世",
+        "en": "Devourer of Worlds"
+      },
+      "textId": "1183",
+      "icon": {
+        "src": "images/skill-devourer-of-worlds.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Devourer_of_Worlds.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 35,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：吞世\n\n將灌入魔力的權杖佇立地面，\n從周圍所有敵人身上奪取ＨＰ的戰技。",
+        "en": "Unique Skill: Devourer of Worlds\n\nCharge the scepter with magic and strike it against the ground to steal the HP of all nearby enemies."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1184": {
+      "name": {
+        "zh": "家族怨魂",
+        "en": "Familal Rancor"
+      },
+      "textId": "1184",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 25,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：家族怨魂\n\n一邊輕晃紅銅製的頭顱，\n一邊召喚窮追不捨的怨魂群的戰技。\n妻與子的苦痛是怨魂作祟的源頭。",
+        "en": "Unique Skill: Familial Rancor\n\nGently rattle the copper heads to summon vengeful spirits that chase down foes.\nThe anguish of a spouse and children invites accursed wrath."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1185": {
+      "name": {
+        "zh": "羅澤司的喚聲",
+        "en": "Rosus's Summons"
+      },
+      "textId": "1185",
+      "icon": {
+        "src": "images/skill-rosus-s-summons.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Rosus's_Summons.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：羅澤司的喚聲\n\n高舉斧，召喚迷途死者們的戰技。\n三位死者會在遠方現身，\n配合施放者一起攻擊後，消失蹤影。",
+        "en": "Unique Skill: Rosus's Summons\n\nRaise the axe aloft to summon those lost in death.\nThree skeletons will appear at a distance and attack in tandem before vanishing."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1186": {
+      "name": {
+        "zh": "雷電風暴",
+        "en": "Thunderstorm"
+      },
+      "textId": "1186",
+      "icon": {
+        "src": "images/skill-thunderstorm.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Thunderstorm.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 19,
+        "R1": -1,
+        "R2": 12
+      },
+      "caption": {
+        "zh": "專用戰技：雷電風暴\n\n讓羽翼斧刃纏繞雷電，\n在周圍形成雷電風暴的戰技。\n再次發動，能使出最多兩次的旋身追擊。\n纏繞斧刃上的雷電會暫時延續。",
+        "en": "Unique Skill: Thunderstorm\n\nImbue the armament's wing-blade with lightning and swing it around to create a tempestuous lightning storm. Follow up with an additional input to perform up to two spinning attacks.\nThe lightning will stay on the blade for a while."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1187": {
+      "name": {
+        "zh": "聖矛障壁",
+        "en": "Sacred Phalanx"
+      },
+      "textId": "1187",
+      "icon": {
+        "src": "images/skill-sacred-phalanx.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sacred_Phalanx.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 12,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：聖矛障壁\n\n釋放蘊藏的禱告力量，\n在前方展開黃金矛陣的戰技。",
+        "en": "Unique Skill: Sacred Phalanx\n\nRelease the power of a hidden incantation to erect a palisade of golden spears frontwards."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1188": {
+      "name": {
+        "zh": "狩獵大蛇",
+        "en": "Great-Serpent Hunt"
+      },
+      "textId": "1188",
+      "icon": {
+        "src": "images/skill-great-serpent-hunt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Great-Serpent_Hunt.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 10,
+        "R1": -1,
+        "R2": 20
+      },
+      "caption": {
+        "zh": "專用戰技：狩獵大蛇\n\n能全力突刺，再次發動後\n會向上突刺攻擊的戰技。\n對上大蛇時會產生長形光刃，\n展現出真正的力量。",
+        "en": "Unique Skill: Great-Serpent Hunt\n\nPerform a powerful forward lunge and follow up with an upward thrust via additional input. When fighting a great serpent, a long blade of light will appear, revealing the armament's true power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1189": {
+      "name": {
+        "zh": "天使羽翼",
+        "en": "Angel's Wings"
+      },
+      "textId": "1189",
+      "icon": {
+        "src": "images/skill-angel-s-wings.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Angel's_Wings.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：天使羽翼\n\n跳起的同時，讓羽翼鐮刃蘊藏白光，\n再順勢斬下的戰技。\n白色羽翼能妨礙聖杯瓶的恢復效用。",
+        "en": "Unique Skill: Angel's Wings\n\nJump and imbue the wing-blade of the armament with light, then deliver a slashing attack on the enemy.\nThe white wings impede recovery actions using a flask of tears."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1190": {
+      "name": {
+        "zh": "風暴踢擊",
+        "en": "Storm Kick"
+      },
+      "textId": "1190",
+      "icon": {
+        "src": "images/skill-storm-kick.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Storm_Kick.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": 6
+      },
+      "caption": {
+        "zh": "專用戰技：風暴踢擊\n\n將義足的刀刃刺入地面，形成風暴的戰技。\n發動後接著使出重攻擊，\n能讓刀刃纏繞雷電，再跳躍攻擊。",
+        "en": "Unique Skill: Storm Kick\n\nThrust the prosthetic leg blade into the ground, creating a storm.\nFollow up with a strong attack to perform a lightning-infused jumping attack."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1191": {
+      "name": {
+        "zh": "不可擋之刃",
+        "en": "Unblockable Blade"
+      },
+      "textId": "1191",
+      "icon": null,
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 17,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：不可擋之刃\n\n讓祕文劍刃蘊藏光芒，\n再一口氣推進，貫穿敵人的戰技。\n此攻擊無法用防禦擋下。",
+        "en": "Unique Skill: Unblockable Blade\n\nImbue the cipher blade with light, then lunge forward with a sudden piercing attack.\nThis attack cannot be blocked."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1192": {
+      "name": {
+        "zh": "錫杖魔法",
+        "en": "Sorcery of the Crozier"
+      },
+      "textId": "1192",
+      "icon": {
+        "src": "images/skill-sorcery-of-the-crozier.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Sorcery_of_the_Crozier.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：錫杖魔法\n\n將輝石灌入魔力，觸發古老魔法的戰技。\n周圍會出現自動飛向敵人的浮空魔法球。",
+        "en": "Unique Skill: Sorcery of the Crozier\n\nChannel magic into the glintstone to activate an ancient sorcery, producing floating magic projectiles that chase enemies automatically."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1193": {
+      "name": {
+        "zh": "黃金樹墜落震擊",
+        "en": "Erdtree Slam"
+      },
+      "textId": "1193",
+      "icon": {
+        "src": "images/skill-erdtree-slam.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Erdtree_Slam.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 19,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：黃金樹墜落震擊\n\n輕盈向前跳，用臀部用力向下墜落，\n引發黃金衝擊波的戰技。\n在墜落震擊的戰技中，威力最為強大。",
+        "en": "Unique Skill: Erdtree Slam\n\nJump up high into the air and crash down on the ground ahead. The resulting pratfall sends golden shockwaves in all directions.\nThis is the most powerful of all the Ground Slam skills."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1194": {
+      "name": {
+        "zh": "重力雷電",
+        "en": "Gravity Bolt"
+      },
+      "textId": "1194",
+      "icon": {
+        "src": "images/skill-gravity-bolt.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Gravity_Bolt.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 13,
+        "R1": -1,
+        "R2": 13
+      },
+      "caption": {
+        "zh": "專用戰技：重力雷電\n\n讓星獸半顎蘊藏重力雷電，\n藉此在遠方召喚落雷的戰技。\n可以連續施放。",
+        "en": "Unique Skill: Gravity Bolt\n\nImbue the jaw of fallingstar beast with gravitational lightning, sending a bolt crashing down a short distance away.\nCan be fired in rapid succession."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1196": {
+      "name": {
+        "zh": "黃金式奉還",
+        "en": "Golden Retaliation"
+      },
+      "textId": "1196",
+      "icon": {
+        "src": "images/skill-golden-retaliation.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Golden_Retaliation.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 4,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：黃金式奉還\n\n手持盾牌，釋放守護禱告的戰技。\n能消除魔法、禱告的效用，以黃金力量奉還。",
+        "en": "Unique Skill: Golden Retaliation\n\nReady the shield to unleash its protective incantation.\nThis will dispel sorceries and incantations, retaliating with golden power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1197": {
+      "name": {
+        "zh": "共鳴憤怒",
+        "en": "Contagious Fury"
+      },
+      "textId": "1197",
+      "icon": {
+        "src": "images/skill-contagious-fury.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Contagious_Fury.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 9,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：共鳴憤怒\n\n誘發水母的憤怒，\n讓自己也感同身受的戰技。\n一定時間內，提升攻擊力。",
+        "en": "Unique Skill: Contagious Fury\n\nIncite the jellyfish's wrath and allow its fury to flow through you.\nRaises attack power for a certain duration."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    },
+    "1198": {
+      "name": {
+        "zh": "奧陶琵斯的漩渦",
+        "en": "Ordovis's Vortex"
+      },
+      "textId": "1198",
+      "icon": {
+        "src": "images/skill-ordovis-s-vortex.png",
+        "page": "https://eldenring.wiki.gg/wiki/File:ERN_Icon_skill_Ordovis's_Vortex.png"
+      },
+      "group": "unique",
+      "fp": {
+        "L1": -1,
+        "L2": 15,
+        "R1": -1,
+        "R2": -1
+      },
+      "caption": {
+        "zh": "專用戰技：奧陶琵斯的漩渦\n\n用熔爐的漩渦力量激烈旋轉整個劍身，\n再順勢敲向地面的戰技。\n藉由蓄力發動，能提升威力。",
+        "en": "Unique Skill: Ordovis's Vortex\n\nChannel the power of the crucible to spin the entire sword in midair, building momentum before slamming the blade down onto the ground.\nThis skill can be charged to increase its power."
+      },
+      "sources": [
+        "game-params"
+      ],
+      "sourcesFor": {
+        "name.en": [
+          "er-arts-text"
+        ],
+        "name.zh": [
+          "er-arts-cn-text"
+        ],
+        "caption.en": [
+          "er-arts-text"
+        ],
+        "caption.zh": [
+          "er-arts-cn-text"
+        ]
+      }
+    }
+  }
+}

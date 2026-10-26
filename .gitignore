@@ -3,3 +3,6 @@ tools/.cache/
 
 # 編輯器設定
 .idea/
+
+# build 工具的依賴 (npm --prefix tools ci 安裝)
+tools/node_modules/

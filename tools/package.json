@@ -1,0 +1,12 @@
+{
+  "name": "nrdb-tools",
+  "private": true,
+  "description": "網站 build 工具；放在 tools/ 而非 repo 根目錄，部署端不會偵測到 package.json 而安裝依賴。",
+  "scripts": {
+    "build": "node build-site.mjs",
+    "check": "node build-site.mjs --check"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.3"
+  }
+}

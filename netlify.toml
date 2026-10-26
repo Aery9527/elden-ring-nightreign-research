@@ -1,5 +1,6 @@
+# 發佈本機建置好的 dist/ (npm --prefix tools run build 產生，與原始碼一起 commit)，部署時不執行建置指令。
 [build]
-  publish = "public"
+  publish = "dist"
 
 # 武器與法術頁拆成武器、魔法、禱告三頁：舊網址轉到武器頁 (瀏覽器保留錨點)，
 # 其中的法術錨點由頁面依法術類型再轉到魔法或禱告頁 (public/render.js 的 scrollToHash)。

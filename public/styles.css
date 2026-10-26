@@ -311,6 +311,13 @@ th {
   white-space: nowrap;
 }
 
+/* 表名 (例如角色頁各等級能力表的角色名稱)：與儲存格左緣對齊 */
+caption {
+  padding: 10px 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
 tbody tr:nth-child(even) {
   background: var(--row-alt);
 }
@@ -888,6 +895,7 @@ body:has(.tone-legend) main {
    寬度 901px 以上時，各表格的儲存格換行後可完整顯示 (已量測：最寬的武器表與戰技表在 901px 都放得下)，維持表格。列印維持表格。 */
 @media screen and (max-width: 900px) {
   .table-wrap table,
+  .table-wrap caption,
   .table-wrap tbody,
   .table-wrap tr,
   .table-wrap td {

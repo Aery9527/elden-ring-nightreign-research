@@ -15,7 +15,7 @@
 - 目標：在網站放 AdSense **手動版位**，取得廣告收入，並用 AdSense 報表的網頁瀏覽量與 Page RPM 量測流量。
 - 範圍內：隱私權政策頁、`ads.txt`、AdSense 載入程式碼、手動版位與其尺寸 CSS、LORE 中英文規則、README 頁面表。
 - 範圍外：自動廣告、其他廣告聯播網、直售贊助、聯盟連結、CSP header、移除遊戲圖示。
-- 嚴禁啟用自動廣告的頁內格式：[render.js](../public/render.js) 的 `scrollToHash` 只在資料渲染後捲動一次，之後插入的廣告會把錨點目標推離落點。
+- 嚴禁啟用自動廣告的頁內格式：[render.js](../public/render.js) 只在頁面載入時對準錨點（角色頁在圖表載入後再對準一次），之後插入的廣告會把錨點目標推離落點。
 - AdSense 載入程式碼只放在有版位的頁面。沒有版位的頁面載入它，只會多載入 Google 的程式與 cookie，沒有收益。
 
 [Back to top](#quick-navigation)
@@ -124,7 +124,7 @@ flowchart TD
 ## 已知風險
 
 - **遊戲素材權利**：FromSoftware 與 Bandai Namco 的指引只放寬平台官方收益功能，自架網站的廣告不在例外內。
-- **審核爬蟲與 JS**：研究數值由 [render.js](../public/render.js) 以 `fetch` 載入，原始 HTML 有 142 個空的 `<tbody>`。AdSense 審核爬蟲是否執行 JS 未查證；若被判內容不足，可修改後重新送審。
+- **審核爬蟲與 JS**：[預先渲染計畫](PRERENDER_PLAN.md) 讓發佈的 HTML 直接含研究數值，主要內容不再依賴 JS。這不保證審核通過；若被判內容不足，可修改後重新送審。
 - **報表低估流量**：使用廣告封鎖器的讀者不會載入 AdSense 程式碼，不計入網頁瀏覽量。
 
 [Back to top](#quick-navigation)

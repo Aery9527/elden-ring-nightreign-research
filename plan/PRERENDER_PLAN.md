@@ -86,7 +86,7 @@ render.js 沒有使用時間或亂數。輸入 bytes、lockfile 鎖定的依賴�
 
 ### 角色頁等級章節
 
-- 靜態渲染：用現有 `levelTable()` 為每名角色各輸出一張數值表，每張表以 `<caption>` 顯示由資料產生的角色名稱；保留全部 `character-<角色>-levels` 空錨點。
+- 靜態渲染：用現有 `levelTable()` 為每名角色各輸出一張數值表，每張表以 `<caption>` 顯示由資料產生的角色名稱，外層元素保留 `character-<角色>-levels` 錨點。
 - 瀏覽器：載入 `common` 與 `characters/nightfarers` 後，只呼叫 `levelChapter` 取代本章，不重跑 `nightfarerChapters()`（否則能力表會重複附加）。
 - 載入失敗時保留靜態表，提示文字只說明圖表與切換功能無法使用，不沿用「頁面中的數值無法顯示」。
 - 取代後若網址有錨點，沿用現有時序（nav.js 更新頁首高度後）重新對準。
@@ -94,7 +94,7 @@ render.js 沒有使用時間或亂數。輸入 bytes、lockfile 鎖定的依賴�
 
 ### 錨點處理（已預先渲染的頁面）
 
-- 本頁找得到錨點目標：交給瀏覽器原生定位，不呼叫 `scrollIntoView`。角色頁例外，見上節。
+- 本頁找得到錨點目標：載入時呼叫一次 `scrollIntoView`，不需載入資料。落點的頁首留白（`scroll-margin-top`）依 nav.js 設定的 `--header-h`，瀏覽器自行跳轉時 nav.js 可能尚未執行；nav.js 在 render.js 之前載入，render.js 執行時頁首高度已更新。角色頁在圖表取代後再對準一次，見上節。
 - 錨點是 `spell-<數字 ID>` 且本頁找不到：載入 `common` 與 `armaments/spells`，依現有 `spellPage()` 的分類轉址：魔法與禱告轉到各自頁面，類型未核實或分歧轉到 `weapons.html`，不存在的 ID 留在本頁。
 - 錨點無法解碼：直接忽略。
 
@@ -121,6 +121,7 @@ render.js 沒有使用時間或亂數。輸入 bytes、lockfile 鎖定的依賴�
 | --- | --- |
 | [public/render.js](../public/render.js) | 拆成三段；角色靜態表；預先渲染偵測；錨點處理；互動載入失敗提示。 |
 | [public/characters.html](../public/characters.html) | `#levels` 章說明改寫。 |
+| [public/styles.css](../public/styles.css) | 表名 `caption` 的樣式；窄螢幕直排時 `caption` 也改為 block，否則表名會被擠成一字一行。 |
 | `tools/build-site.mjs`（新增） | build 與 check。 |
 | `tools/package.json`、`tools/package-lock.json`（新增） | jsdom 固定版本；`build`、`check` 指令。 |
 | `.gitattributes`（新增） | `public/`、`dist/` 文字檔 LF，圖片 binary；既有檔案依新設定重新正規化。 |
