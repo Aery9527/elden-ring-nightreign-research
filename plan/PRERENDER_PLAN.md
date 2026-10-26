@@ -206,7 +206,10 @@ render.js 沒有使用時間或亂數。輸入 bytes、lockfile 鎖定的依賴�
 
 - **產物過期**：`dist/` 與建置輸入不同步時，網站發布的是舊內容。由 check 與 hook 防範；在網頁上合併 PR 不受 hook 保護。
 - **repo 體積與 diff**：每次改資料或模板，`dist/` 會出現大量 HTML 差異並留在歷史中。圖片與 data json 的內容與 `public/` 相同，git 不會重複儲存同一份內容，但仍增加 tree 項目與工作目錄的副本。
-- **HTML 體積**：武器頁與戰技頁的產物估計各約 1.5 MiB（gzip 後數十至約 100 KiB）。這些 DOM 現況也由瀏覽器建立；首屏是否變快必須實測，優化另議。
+- **HTML 體積**：首次 build（`f043720`）實測，作為之後優化的基準。這些 DOM 原本也由瀏覽器建立；首屏是否變快必須實測，優化另議。
+  - 武器 1654.2 KiB（gzip 54.7 KiB）、戰技 1615.1 KiB（gzip 104.4 KiB）。
+  - 遺物：武器專屬 400.0 KiB（19.1 KiB）、一般 316.1 KiB（30.8 KiB）、角色專屬 110.7 KiB（16.5 KiB）、負面效果 25.9 KiB（4.1 KiB）。
+  - 角色 127.9 KiB（15.1 KiB）、禱告 70.0 KiB（7.5 KiB）、魔法 62.6 KiB（6.7 KiB）、能力值 53.9 KiB（7.6 KiB）、首頁 30.9 KiB（6.7 KiB）。
 - **jsdom 與瀏覽器差異**：jsdom 沒有排版，`clientWidth` 為 0，所以圖表只在瀏覽器繪製。靜態渲染使用的 DOM API 必須以全部頁面實際 build 確認。
 - **平台設定**：[netlify.toml](../netlify.toml) 的 301 redirects 是 Netlify 專屬格式，搬遷平台時必須改寫成新平台的格式。
 
